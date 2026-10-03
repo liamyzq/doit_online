@@ -2,7 +2,20 @@
 
 ## Current decision
 
-The study is complete. All supplied estimator families and targeted extensions
+The user reopened research after an external audit of `c5e4311`. The active
+protocol is [docs/audit-followup.md](docs/audit-followup.md). Ordinary
+high-dimensional CV/SPIDER/proposal grid expansion remains closed. The new
+questions concern low-dimensional real-critic learnability, actual image
+execution displacement, and categorical use of full-future candidate weights.
+The first wave is exp-033/034/035: analytic dimensionality control, historical
+execution-KL recovery, and fixed-state reference/shrinkage diagnostics.
+No new wave has launched yet. Real-critic source/observation discovery is in
+progress; the revised protocol explicitly permits this bounded mechanism study
+before an image success. Final image confirmation uses new reserved seeds.
+
+## Initial study outcome
+
+The initial study is complete. All supplied estimator families and targeted extensions
 have been implemented, tuned, evaluated, and closed under the tested image
 budgets. No new method established a usable image improvement. Strong guidance
 EMA and paired future M8 have positive aggregate results but observed quality

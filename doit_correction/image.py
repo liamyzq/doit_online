@@ -73,8 +73,10 @@ class ImageEngine:
         self.reward_seconds = 0.0
         self.vjp_seconds = 0.0
         model_id = config.get("model", "sd-legacy/stable-diffusion-v1-5")
+        model_revision = config.get("model_revision", "451f4fe16113bff5a5d2269ed5ad43b0592e9a14")
+        clip_revision = "32bd64288804d66eefd0ccbe215aa642df71cc41"
         self.pipe = StableDiffusionPipeline.from_pretrained(
-            model_id, torch_dtype=self.dtype, local_files_only=True,
+            model_id, revision=model_revision, torch_dtype=self.dtype, local_files_only=True,
             safety_checker=None, requires_safety_checker=False)
         self.pipe.scheduler = EulerAncestralDiscreteScheduler.from_config(self.pipe.scheduler.config)
         if self.pipe.scheduler.config.prediction_type != "epsilon":
@@ -88,13 +90,17 @@ class ImageEngine:
         self.sigmas = self.pipe.scheduler.sigmas.float().cpu().tolist()
         self.timesteps = self.pipe.scheduler.timesteps
         self.clip = CLIPModel.from_pretrained(
-            "openai/clip-vit-large-patch14", local_files_only=True).to(self.device).eval()
+            "openai/clip-vit-large-patch14", revision=clip_revision, local_files_only=True).to(self.device).eval()
         self.clip.requires_grad_(False)
-        self.processor = CLIPProcessor.from_pretrained("openai/clip-vit-large-patch14", local_files_only=True)
+        self.processor = CLIPProcessor.from_pretrained("openai/clip-vit-large-patch14", revision=clip_revision, local_files_only=True)
         self.head = torch.nn.Linear(768, 1).to(self.device).eval()
         head_path = config.get("aesthetic_head", "/home/mlw0719/doit_correction_storage/models/sa_0_4_vit_l_14_linear.pth")
         self.head.load_state_dict(torch.load(head_path, map_location=self.device, weights_only=True))
         self.head.requires_grad_(False)
+        self.provenance = {"model": model_id, "model_revision": model_revision,
+                           "clip_model": "openai/clip-vit-large-patch14", "clip_revision": clip_revision,
+                           "aesthetic_head": str(head_path), "dtype": str(self.dtype),
+                           "scheduler": type(self.pipe.scheduler).__name__, "sigmas": self.sigmas}
         self.prompt_cache = {}
         self.current_prompt = None
         self.embeddings = None
@@ -251,6 +257,7 @@ class ImageEngine:
                 else:
                     raise ValueError(oracle)
                 correction = self.correction(transition, estimate.ratio)
+                raw_correction_norm = float(correction.norm())
                 if estimator.kind == "guidance_ema" and previous_guidance is not None:
                     beta = float(estimator_config.get("ema_beta", 0.5))
                     correction = beta * correction + (1 - beta) * previous_guidance
@@ -258,8 +265,18 @@ class ImageEngine:
                 if not torch.isfinite(correction).all():
                     raise FloatingPointError(
                         f"Nonfinite VJP guidance at index {index}: {estimate.diagnostics}")
-                diagnostics.append(dict(index=index, correction_norm=float(correction.norm()), **estimate.diagnostics))
-                mean = transition.mean.detach() + gamma * transition.correction_gain * correction
+                displacement = gamma * transition.correction_gain * correction
+                displacement_norm = float(displacement.double().norm())
+                diagnostics.append(dict(index=index, correction_norm=float(correction.norm()),
+                                        raw_correction_norm=raw_correction_norm,
+                                        sigma=self.sigmas[index], sigma_next=self.sigmas[index + 1],
+                                        noise_std=transition.noise_std,
+                                        correction_gain=transition.correction_gain,
+                                        displacement_norm=displacement_norm,
+                                        displacement_over_noise=displacement_norm / transition.noise_std,
+                                        execution_kl=0.5 * (displacement_norm / transition.noise_std) ** 2,
+                                        **estimate.diagnostics))
+                mean = transition.mean.detach() + displacement
             else:
                 mean = transition.mean.detach()
             noise = torch.randn(latent.shape, device=self.device, generator=generator)

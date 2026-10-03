@@ -1,0 +1,14 @@
+[
+  {
+    "id": "exp-033-learnability-mechanism",
+    "config": "configs/exp-033-learnability-mechanism.json"
+  },
+  {
+    "id": "exp-034-historical-step-diagnostics",
+    "config": "configs/exp-034-historical-step-diagnostics.json"
+  },
+  {
+    "id": "exp-035-reference-and-shrinkage-diagnostics",
+    "config": "configs/exp-035-reference-and-shrinkage-diagnostics.json"
+  }
+]

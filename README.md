@@ -8,7 +8,11 @@ The primary question is whether information from earlier steps reduces current
 correction error and improves generated samples at the same actual reward-query
 budget. Fitting error alone is not a success criterion.
 
-The study is complete. All supplied families and targeted extensions have
+Research has reopened following an external audit of `c5e4311`. See the
+[audit follow-up protocol](docs/audit-followup.md) and current
+[research state](PROGRESS.md) for the active questions and new seed split.
+
+The initial image study is complete. All supplied families and targeted extensions have
 documented closure decisions. None established a usable image improvement;
 strong EMA and paired future M8 have favorable aggregate results but
 visible quality failures. The final comparison contains 512 images, and all

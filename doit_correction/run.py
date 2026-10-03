@@ -3,10 +3,12 @@
 import argparse
 import json
 import os
+import platform
 import subprocess
 import time
 import traceback
 from pathlib import Path
+from importlib.metadata import version
 
 import torch
 
@@ -28,7 +30,12 @@ def main():
     started = time.time()
     metadata = {"commit": commit, "config": args.config, "experiment_id": config["id"],
                 "pid": os.getpid(), "cuda_visible_devices": os.environ.get("CUDA_VISIBLE_DEVICES"),
-                "started_at": started, "status": "running"}
+                "started_at": started, "status": "running",
+                "environment": {"python": platform.python_version(), "torch": torch.__version__,
+                                "cuda": torch.version.cuda, "gpu": torch.cuda.get_device_name(0),
+                                "packages": {name: version(name) for name in
+                                             ["numpy", "diffusers", "transformers", "torchvision",
+                                              "huggingface_hub", "safetensors"]}}}
     write_json(output / "run.json", metadata)
     engine = None
     try:
@@ -47,9 +54,17 @@ def main():
         elif mode == "paired_fit_checks":
             from .extension_checks import run_paired_fit_checks
             metrics = run_paired_fit_checks(output)
+        elif mode == "analytic_mechanism":
+            from .audit import analytic_mechanism
+            metrics = analytic_mechanism(config, output)
+        elif mode == "historical_diagnostics":
+            from .audit import historical_diagnostics
+            metrics = historical_diagnostics(config, output)
         elif mode == "image":
             from .image import ImageEngine
             engine = ImageEngine(config.get("image", {}))
+            metadata["models"] = engine.provenance
+            write_json(output / "run.json", metadata)
             rows = []
             for prompt in config["prompts"]:
                 for seed in config["seeds"]:

@@ -300,8 +300,10 @@ class MomentEstimator:
                 and self.kind not in {"is", "cv_is"}):
             half = len(f) // 2
             pair_difference_mse = float((applied_residual[:half] - applied_residual[half:]).square().mean())
-        # Diagnostic target is held out from the current fit. It is measured
-        # before update, and does not choose the current coefficient.
+        # Prediction residuals are held out from the current fit. The weighted
+        # moment below centers on this SAME batch's estimated ratio; it is not
+        # a variance estimate or confidence score (raw M1 makes it zero).
+        # None of these diagnostics chooses the current coefficient.
         diagnostics = {
             "queries": nqueries, "h": float(h), "raw_h": float(raw_h),
             "denominator_floored": int(h < floor), "ess": float(ess),
@@ -309,7 +311,7 @@ class MomentEstimator:
             "heldout_prediction_mse": float(model_residual_mse),
             "heldout_residual_mse": float(applied_residual.square().mean()),
             "heldout_pair_difference_mse": pair_difference_mse,
-            "weighted_residual_moment": float(((importance * applied_residual).square() * (e - ratio).square().sum(-1)).mean()),
+            "in_sample_weighted_residual_moment": float(((importance * applied_residual).square() * (e - ratio).square().sum(-1)).mean()),
         }
         # All current outputs above use only previously fitted memory.
         update_started = time.perf_counter()

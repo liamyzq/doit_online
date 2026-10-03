@@ -24,8 +24,21 @@ def ratio_from_rewards(eps, rewards, tau, offset=6.0):
     return (weights[:, None] * eps.double()).sum(0) / weights.sum()
 
 
+def vector_diagnostics(estimate, reference, prefix):
+    estimate, reference = estimate.double(), reference.double()
+    norm = float(estimate.square().sum())
+    ref_norm = float(reference.square().sum())
+    dot = float((estimate * reference).sum())
+    return {f"{prefix}_estimate_sq_norm": norm,
+            f"{prefix}_reference_dot": dot,
+            f"{prefix}_direction_cosine": dot / (norm * ref_norm) ** 0.5 if norm > 0 and ref_norm > 0 else None,
+            f"{prefix}_zero_sq_error": ref_norm,
+            f"{prefix}_quarter_shrink_sq_error": float((0.25 * estimate - reference).square().sum())}
+
+
 def capture(config, output):
     engine = ImageEngine(config["image"])
+    dump(Path(output) / "models.json", engine.provenance)
     capture_config = config["capture"]
     bank_n = int(capture_config.get("bank_samples", 256))
     reference_n = int(capture_config.get("reference_samples", 512))
@@ -135,6 +148,7 @@ def probe_future(config, output):
                      if row["index"] in config.get("indices", [10, 16]))
     first = torch.load(paths[0], map_location="cpu", weights_only=False)
     engine = ImageEngine(first["image_config"])
+    dump(Path(output) / "models.json", engine.provenance)
     output, rows = Path(output), []
     n, branches = int(config.get("samples", 64)), int(config.get("branches", 2))
     for path in paths:
@@ -196,6 +210,7 @@ def evaluate(config, output):
     engine = None
     if use_vjp or needs_oracle:
         engine = ImageEngine(torch.load(paths[0], map_location="cpu", weights_only=False)["image_config"])
+        dump(output / "models.json", engine.provenance)
     rows, estimators, previous_guidance = [], {}, {}
     for path in paths:
         state = torch.load(path, map_location="cpu", weights_only=False)
@@ -255,12 +270,23 @@ def evaluate(config, output):
                     "heldout_prediction_mse": result.diagnostics["heldout_prediction_mse"],
                     "heldout_residual_mse": result.diagnostics["heldout_residual_mse"],
                     "heldout_pair_difference_mse": result.diagnostics["heldout_pair_difference_mse"],
-                    "weighted_residual_moment": result.diagnostics["weighted_residual_moment"],
+                    "in_sample_weighted_residual_moment": result.diagnostics["in_sample_weighted_residual_moment"],
                     "proposal_norm": result.diagnostics.get("proposal_norm", 0.0),
                     "estimator_seconds": result.diagnostics["estimator_seconds"],
                     "live_oracle_seconds": result.diagnostics.get("oracle_seconds", 0.0),
                     "elapsed_seconds": time.perf_counter() - start,
                 }
+                row.update(vector_diagnostics(result.ratio, ref["ratio"], "ratio"))
+                row["online_step"] = estimator.calls - 1
+                row["reference_split_ratio_relative_distance"] = ref["split_ratio_sq_distance"] / max(ref_norm, 1e-12)
+                if use_vjp:
+                    row.update(vector_diagnostics(grad, ref["guidance"], "guidance"))
+                    gamma = float(config.get("evaluation_gamma", 0.4))
+                    gain = gamma * transition.correction_gain
+                    row["evaluation_gamma"] = gamma
+                    row["displacement_sq_error"] = gain ** 2 * guidance_error
+                    row["transition_standardized_displacement_sq_error"] = gain ** 2 * guidance_error / transition.noise_std ** 2
+                    row["reference_split_guidance_relative_distance"] = ref["split_guidance_sq_distance"] / max(guidance_norm, 1e-12)
                 rows.append(row)
         del transition
         write_rows(output / "fixed.csv", rows)
@@ -271,11 +297,22 @@ def evaluate(config, output):
     summaries = []
     for name, group in groups.items():
         summary = {"variant": name, "rows": len(group)}
-        for field in ("ratio_relative_sq_error", "guidance_relative_sq_error", "heldout_residual_mse",
-                      "heldout_pair_difference_mse", "weighted_residual_moment", "proposal_norm",
-                      "ess", "queries", "estimator_seconds", "live_oracle_seconds"):
-            vals = [row[field] for row in group if row[field] is not None]
+        fields = ("ratio_relative_sq_error", "guidance_relative_sq_error", "heldout_residual_mse",
+                      "heldout_pair_difference_mse", "in_sample_weighted_residual_moment", "proposal_norm",
+                      "ess", "queries", "estimator_seconds", "live_oracle_seconds",
+                      "ratio_sq_error", "guidance_sq_error", "ratio_direction_cosine", "guidance_direction_cosine",
+                      "ratio_zero_sq_error", "guidance_zero_sq_error", "ratio_quarter_shrink_sq_error",
+                      "guidance_quarter_shrink_sq_error", "reference_split_ratio_sq_distance",
+                      "reference_split_guidance_sq_distance", "reference_split_ratio_relative_distance",
+                      "reference_split_guidance_relative_distance", "displacement_sq_error",
+                      "transition_standardized_displacement_sq_error")
+        for field in fields:
+            vals = [row[field] for row in group if row.get(field) is not None]
             summary[field] = sum(vals) / len(vals) if vals else None
+        summary["post_warmup"] = {}
+        for field in fields:
+            vals = [row[field] for row in group if row["online_step"] > 0 and row.get(field) is not None]
+            summary["post_warmup"][field] = sum(vals) / len(vals) if vals else None
         summary["denominator_events"] = sum(r["denominator_floored"] for r in group)
         summary["total_queries"] = sum(r["queries"] for r in group)
         summaries.append(summary)

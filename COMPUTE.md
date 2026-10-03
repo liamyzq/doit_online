@@ -49,7 +49,7 @@ when recording each completed wave.
 No image or RL training is authorized on the Quest login nodes. Quest and
 Nebula are reference-source locations for this project, not experiment workers.
 
-## Final execution state
+## Initial study execution state
 
 Exp-031 and exp-032 finished all 64 final jobs, producing 512 images. Both queue
 controllers exited, their terminal records and job events were retrieved, and
@@ -57,7 +57,16 @@ no project queue or experiment process remained on Orion. No further run is
 queued. The image study closed without a method meeting the RL gate; no RL
 environment was installed and no RL job was launched.
 
-## RL preparation (read-only; image gate not met)
+## Audit-directed continuation
+
+The user reopened research after the audit of `c5e4311`. Orion GPUs 0--4 and the
+existing stacking policy remain authorized. Read-only inspection found no
+remaining project queue or run process. The first continuation wave is defined
+in `configs/queue-audit-diagnostics.json`; its state belongs in the job ledger
+and PROGRESS. The new protocol permits low-dimensional real-critic mechanism
+experiments before image success. It does not imply a working simulator stack.
+
+## RL source preparation
 
 The complete public evaluation copy is
 `/home/mlw0719/doob_transform/test/Doob_training_free_adaptation`, revision

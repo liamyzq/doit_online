@@ -1,5 +1,9 @@
 # DOIT Correction: final findings
 
+This report records the initial image study. The user subsequently reopened
+research under the [audit follow-up protocol](audit-followup.md); the original
+results and their limitations below are preserved.
+
 The requested image study is complete. Every supplied correction family and the
 targeted extensions received a tuning and closure decision. No new method
 established a usable image improvement under the evaluated budgets, so the
