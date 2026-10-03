@@ -11,6 +11,8 @@ budget. Fitting error alone is not a success criterion.
 Research has reopened following an external audit of `c5e4311`. See the
 [audit follow-up protocol](docs/audit-followup.md) and current
 [research state](PROGRESS.md) for the active questions and new seed split.
+The user has paused this continuation pending verification of Orion; completed
+audit results and the last retrieved job state are published in this repository.
 
 The initial image study is complete. All supplied families and targeted extensions have
 documented closure decisions. None established a usable image improvement;

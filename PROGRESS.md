@@ -2,6 +2,11 @@
 
 ## Current decision
 
+Research is paused at the user's request on 2026-10-03, after publishing the
+retrieved audit results. Resume only after the user verifies Orion and requests
+continuation. Monitoring and automatic follow-up launch are stopped; this does
+not confirm that the already submitted remote queue has stopped.
+
 The user reopened research after an external audit of `c5e4311`. The active
 protocol is [docs/audit-followup.md](docs/audit-followup.md). Ordinary
 high-dimensional CV/SPIDER/proposal grid expansion remains closed. The new
@@ -36,7 +41,7 @@ independently assisted surrogates on moving action paths with fixed observations
 Exp-041 tests the same realized future candidates at eight saved image states.
 No simulator evaluation has run. The exp-040 and calibration queues have exited.
 
-## Active computation checkpoint
+## Paused computation checkpoint
 
 The exp-039/041 nine-job queue was launched on Orion at `d6728de`. The last
 retrieved critic log completed all Hopper discovery paths (16,384 rows), with
@@ -48,9 +53,9 @@ and lighthouse results have not yet been retrieved.
 As of 2026-10-03 18:30 UTC, bounded SSH reads time out, including a fresh
 connection with multiplexing disabled. This prevents a new execution-status
 observation; it is not a recorded experiment failure. Do not mark the remaining
-runs completed or start duplicates. Exp-043 is committed and authorized after
-the nine-job queue completes its counter checks, but its launch is not yet
-confirmed. Keep the remote execution checkout at `d6728de` while that queue is
+runs completed or start duplicates. Exp-043 is committed, but the user's pause
+revokes its automatic follow-up launch. Its launch has not been observed.
+Keep the remote execution checkout at `d6728de` while that queue is
 active, even if documentation and retrieved results advance locally or online.
 
 ## Initial study outcome
