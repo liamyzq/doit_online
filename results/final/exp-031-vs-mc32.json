@@ -1,0 +1,408 @@
+[
+  {
+    "id": "base",
+    "images": 64,
+    "seeds": 8,
+    "baseline": "mc32-g4",
+    "source_runs": [
+      "artifacts/exp-031-confirm-base-s101",
+      "artifacts/exp-031-confirm-base-s113",
+      "artifacts/exp-031-confirm-base-s127",
+      "artifacts/exp-031-confirm-base-s139",
+      "artifacts/exp-031-confirm-base-s151",
+      "artifacts/exp-031-confirm-base-s163",
+      "artifacts/exp-031-confirm-base-s179",
+      "artifacts/exp-031-confirm-base-s191"
+    ],
+    "mean_reward": 6.041003182530403,
+    "paired_reward_delta": -0.2979026660323143,
+    "paired_reward_seed_ci95": [
+      -0.33898082859814166,
+      -0.2573530914261937
+    ],
+    "reward_delta_by_prompt": {
+      "airplane": -0.3575859069824219,
+      "bernese": -0.11419308185577393,
+      "cafe": -0.5265988111495972,
+      "formula1": -0.35569489002227783,
+      "labrador": -0.3039051294326782,
+      "lighthouse": -0.2854430079460144,
+      "mountain": -0.313853919506073,
+      "orchid": -0.12594658136367798
+    },
+    "mean_clip_alignment": 0.2745698671787977,
+    "paired_clip_alignment_delta": -0.0029843535739928484,
+    "paired_clip_alignment_seed_ci95": [
+      -0.0048689897288568314,
+      -0.0010645183501765138
+    ],
+    "clip_alignment_delta_by_prompt": {
+      "airplane": -0.010280279442667961,
+      "bernese": 0.0029777176678180695,
+      "cafe": -0.0010643675923347473,
+      "formula1": -0.0027726739645004272,
+      "labrador": 0.003269460052251816,
+      "lighthouse": -0.006037969142198563,
+      "mountain": -0.002071596682071686,
+      "orchid": -0.007895119488239288
+    },
+    "mean_guidance_queries": 0.0,
+    "mean_score_forwards": 20.0,
+    "mean_seconds": 1.9074371378337673,
+    "mean_reward_seconds": 0.0,
+    "mean_vjp_seconds": 0.0,
+    "mean_oracle_seconds": 0.0,
+    "mean_estimator_seconds": 0.0,
+    "mean_update_seconds": 0.0,
+    "denominator_events": 0,
+    "within_prompt_embedding_distance": 0.12504029886469195
+  },
+  {
+    "id": "mc8-moderate",
+    "images": 64,
+    "seeds": 8,
+    "baseline": "mc32-g4",
+    "source_runs": [
+      "artifacts/exp-031-confirm-mc8-moderate-s101",
+      "artifacts/exp-031-confirm-mc8-moderate-s113",
+      "artifacts/exp-031-confirm-mc8-moderate-s127",
+      "artifacts/exp-031-confirm-mc8-moderate-s139",
+      "artifacts/exp-031-confirm-mc8-moderate-s151",
+      "artifacts/exp-031-confirm-mc8-moderate-s163",
+      "artifacts/exp-031-confirm-mc8-moderate-s179",
+      "artifacts/exp-031-confirm-mc8-moderate-s191"
+    ],
+    "mean_reward": 6.110018886625767,
+    "paired_reward_delta": -0.22888696193695068,
+    "paired_reward_seed_ci95": [
+      -0.2477198839187622,
+      -0.20990117993205787
+    ],
+    "reward_delta_by_prompt": {
+      "airplane": -0.31000977754592896,
+      "bernese": -0.06927913427352905,
+      "cafe": -0.3148036003112793,
+      "formula1": -0.3721895217895508,
+      "labrador": -0.1683925986289978,
+      "lighthouse": -0.214246928691864,
+      "mountain": -0.3326387405395508,
+      "orchid": -0.049535393714904785
+    },
+    "mean_clip_alignment": 0.2748414201196283,
+    "paired_clip_alignment_delta": -0.00271280063316226,
+    "paired_clip_alignment_seed_ci95": [
+      -0.0038813576044049113,
+      -0.0016235616756603126
+    ],
+    "clip_alignment_delta_by_prompt": {
+      "airplane": -0.009866071864962578,
+      "bernese": 0.0013268925249576569,
+      "cafe": -0.0025465600192546844,
+      "formula1": -0.006339540705084801,
+      "labrador": 0.005848288536071777,
+      "lighthouse": -0.003875948488712311,
+      "mountain": 0.000774867832660675,
+      "orchid": -0.007024332880973816
+    },
+    "mean_guidance_queries": 96.0,
+    "mean_score_forwards": 20.0,
+    "mean_seconds": 25.307310300460813,
+    "mean_reward_seconds": 22.247333603649167,
+    "mean_vjp_seconds": 1.1365576468779182,
+    "mean_oracle_seconds": 22.249473831539945,
+    "mean_estimator_seconds": 0.20662093114151503,
+    "mean_update_seconds": 0.02510394389173598,
+    "denominator_events": 0,
+    "within_prompt_embedding_distance": 0.123897282918139
+  },
+  {
+    "id": "mc8-strong",
+    "images": 64,
+    "seeds": 8,
+    "baseline": "mc32-g4",
+    "source_runs": [
+      "artifacts/exp-031-confirm-mc8-strong-s101",
+      "artifacts/exp-031-confirm-mc8-strong-s113",
+      "artifacts/exp-031-confirm-mc8-strong-s127",
+      "artifacts/exp-031-confirm-mc8-strong-s139",
+      "artifacts/exp-031-confirm-mc8-strong-s151",
+      "artifacts/exp-031-confirm-mc8-strong-s163",
+      "artifacts/exp-031-confirm-mc8-strong-s179",
+      "artifacts/exp-031-confirm-mc8-strong-s191"
+    ],
+    "mean_reward": 6.019562348723412,
+    "paired_reward_delta": -0.3193434998393059,
+    "paired_reward_seed_ci95": [
+      -0.43436192721128464,
+      -0.21521027386188507
+    ],
+    "reward_delta_by_prompt": {
+      "airplane": -0.32512742280960083,
+      "bernese": -0.04861646890640259,
+      "cafe": -0.8188057541847229,
+      "formula1": -0.2903752326965332,
+      "labrador": -0.7914794087409973,
+      "lighthouse": 0.10103708505630493,
+      "mountain": -0.34449148178100586,
+      "orchid": -0.03688931465148926
+    },
+    "mean_clip_alignment": 0.28299648966640234,
+    "paired_clip_alignment_delta": 0.00544226891361177,
+    "paired_clip_alignment_seed_ci95": [
+      0.0014922707341611385,
+      0.008845746284350753
+    ],
+    "clip_alignment_delta_by_prompt": {
+      "airplane": 0.03190376050770283,
+      "bernese": -0.010346431285142899,
+      "cafe": 0.013615576550364494,
+      "formula1": 0.010887214913964272,
+      "labrador": -0.005099210888147354,
+      "lighthouse": 0.0017321482300758362,
+      "mountain": 0.003816399723291397,
+      "orchid": -0.0029713064432144165
+    },
+    "mean_guidance_queries": 96.0,
+    "mean_score_forwards": 20.0,
+    "mean_seconds": 25.33397425275325,
+    "mean_reward_seconds": 22.267558028725034,
+    "mean_vjp_seconds": 1.1303445879093488,
+    "mean_oracle_seconds": 22.26979519841916,
+    "mean_estimator_seconds": 0.2075288939740858,
+    "mean_update_seconds": 0.0263450394377287,
+    "denominator_events": 0,
+    "within_prompt_embedding_distance": 0.13439057771207732
+  },
+  {
+    "id": "mc32-g4",
+    "images": 64,
+    "seeds": 8,
+    "baseline": "mc32-g4",
+    "source_runs": [
+      "artifacts/exp-031-confirm-mc32-g4-s101",
+      "artifacts/exp-031-confirm-mc32-g4-s113",
+      "artifacts/exp-031-confirm-mc32-g4-s127",
+      "artifacts/exp-031-confirm-mc32-g4-s139",
+      "artifacts/exp-031-confirm-mc32-g4-s151",
+      "artifacts/exp-031-confirm-mc32-g4-s163",
+      "artifacts/exp-031-confirm-mc32-g4-s179",
+      "artifacts/exp-031-confirm-mc32-g4-s191"
+    ],
+    "mean_reward": 6.338905848562717,
+    "paired_reward_delta": 0.0,
+    "paired_reward_seed_ci95": [
+      0.0,
+      0.0
+    ],
+    "reward_delta_by_prompt": {
+      "airplane": 0.0,
+      "bernese": 0.0,
+      "cafe": 0.0,
+      "formula1": 0.0,
+      "labrador": 0.0,
+      "lighthouse": 0.0,
+      "mountain": 0.0,
+      "orchid": 0.0
+    },
+    "mean_clip_alignment": 0.27755422075279057,
+    "paired_clip_alignment_delta": 0.0,
+    "paired_clip_alignment_seed_ci95": [
+      0.0,
+      0.0
+    ],
+    "clip_alignment_delta_by_prompt": {
+      "airplane": 0.0,
+      "bernese": 0.0,
+      "cafe": 0.0,
+      "formula1": 0.0,
+      "labrador": 0.0,
+      "lighthouse": 0.0,
+      "mountain": 0.0,
+      "orchid": 0.0
+    },
+    "mean_guidance_queries": 288.0,
+    "mean_score_forwards": 20.0,
+    "mean_seconds": 64.04815272763517,
+    "mean_reward_seconds": 61.18313706803383,
+    "mean_vjp_seconds": 1.0427096788007475,
+    "mean_oracle_seconds": 61.185721917318006,
+    "mean_estimator_seconds": 0.18841184644043096,
+    "mean_update_seconds": 0.02363233953656163,
+    "denominator_events": 0,
+    "within_prompt_embedding_distance": 0.1285936112323129
+  },
+  {
+    "id": "gema-reward",
+    "images": 64,
+    "seeds": 8,
+    "baseline": "mc32-g4",
+    "source_runs": [
+      "artifacts/exp-031-confirm-gema-reward-s101",
+      "artifacts/exp-031-confirm-gema-reward-s113",
+      "artifacts/exp-031-confirm-gema-reward-s127",
+      "artifacts/exp-031-confirm-gema-reward-s139",
+      "artifacts/exp-031-confirm-gema-reward-s151",
+      "artifacts/exp-031-confirm-gema-reward-s163",
+      "artifacts/exp-031-confirm-gema-reward-s179",
+      "artifacts/exp-031-confirm-gema-reward-s191"
+    ],
+    "mean_reward": 6.253296501934528,
+    "paired_reward_delta": -0.08560934662818909,
+    "paired_reward_seed_ci95": [
+      -0.15965719372034073,
+      -0.006164177693426659
+    ],
+    "reward_delta_by_prompt": {
+      "airplane": 0.10371452569961548,
+      "bernese": 0.08113569021224976,
+      "cafe": -0.27274250984191895,
+      "formula1": -0.2740941047668457,
+      "labrador": -0.12186765670776367,
+      "lighthouse": -0.05103945732116699,
+      "mountain": -0.025280356407165527,
+      "orchid": -0.12470090389251709
+    },
+    "mean_clip_alignment": 0.28037854097783566,
+    "paired_clip_alignment_delta": 0.002824320225045085,
+    "paired_clip_alignment_seed_ci95": [
+      0.0004651488270610571,
+      0.005183491623029113
+    ],
+    "clip_alignment_delta_by_prompt": {
+      "airplane": 0.005656341090798378,
+      "bernese": -0.006945926696062088,
+      "cafe": 0.010560493916273117,
+      "formula1": 0.006812334060668945,
+      "labrador": 0.00154905766248703,
+      "lighthouse": -0.0020820945501327515,
+      "mountain": 0.005408544093370438,
+      "orchid": 0.001635812222957611
+    },
+    "mean_guidance_queries": 96.0,
+    "mean_score_forwards": 20.0,
+    "mean_seconds": 24.838139550298365,
+    "mean_reward_seconds": 21.826538224613614,
+    "mean_vjp_seconds": 1.1166107098142675,
+    "mean_oracle_seconds": 21.82869120610485,
+    "mean_estimator_seconds": 0.20110580756590934,
+    "mean_update_seconds": 0.024786968704574974,
+    "denominator_events": 0,
+    "within_prompt_embedding_distance": 0.1271930198375526
+  },
+  {
+    "id": "future4-independent",
+    "images": 64,
+    "seeds": 8,
+    "baseline": "mc32-g4",
+    "source_runs": [
+      "artifacts/exp-031-confirm-future4-independent-s101",
+      "artifacts/exp-031-confirm-future4-independent-s113",
+      "artifacts/exp-031-confirm-future4-independent-s127",
+      "artifacts/exp-031-confirm-future4-independent-s139",
+      "artifacts/exp-031-confirm-future4-independent-s151",
+      "artifacts/exp-031-confirm-future4-independent-s163",
+      "artifacts/exp-031-confirm-future4-independent-s179",
+      "artifacts/exp-031-confirm-future4-independent-s191"
+    ],
+    "mean_reward": 6.178216449916363,
+    "paired_reward_delta": -0.16068939864635468,
+    "paired_reward_seed_ci95": [
+      -0.23598033655434847,
+      -0.09130040537565952
+    ],
+    "reward_delta_by_prompt": {
+      "airplane": -0.04612720012664795,
+      "bernese": -0.01428985595703125,
+      "cafe": -0.22444719076156616,
+      "formula1": -0.29920679330825806,
+      "labrador": -0.39302492141723633,
+      "lighthouse": -0.10363626480102539,
+      "mountain": -0.1938905119895935,
+      "orchid": -0.01089245080947876
+    },
+    "mean_clip_alignment": 0.2778429053723812,
+    "paired_clip_alignment_delta": 0.00028868461959064007,
+    "paired_clip_alignment_seed_ci95": [
+      -0.0033087655901908875,
+      0.0038493305910378695
+    ],
+    "clip_alignment_delta_by_prompt": {
+      "airplane": 0.0017612278461456299,
+      "bernese": 0.0025529712438583374,
+      "cafe": 0.009193208068609238,
+      "formula1": -0.0015581678599119186,
+      "labrador": -0.0021630562841892242,
+      "lighthouse": -0.0016472674906253815,
+      "mountain": 0.0015756525099277496,
+      "orchid": -0.00740509107708931
+    },
+    "mean_guidance_queries": 40.0,
+    "mean_score_forwards": 236.0,
+    "mean_seconds": 26.379759270836075,
+    "mean_reward_seconds": 10.469550560381322,
+    "mean_vjp_seconds": 1.028068047893612,
+    "mean_oracle_seconds": 23.59828853502404,
+    "mean_estimator_seconds": 0.17089306200432475,
+    "mean_update_seconds": 0.020511722872470273,
+    "denominator_events": 0,
+    "within_prompt_embedding_distance": 0.1272217565673892
+  },
+  {
+    "id": "future8-paired",
+    "images": 64,
+    "seeds": 8,
+    "baseline": "mc32-g4",
+    "source_runs": [
+      "artifacts/exp-031-confirm-future8-paired-s101",
+      "artifacts/exp-031-confirm-future8-paired-s113",
+      "artifacts/exp-031-confirm-future8-paired-s127",
+      "artifacts/exp-031-confirm-future8-paired-s139",
+      "artifacts/exp-031-confirm-future8-paired-s151",
+      "artifacts/exp-031-confirm-future8-paired-s163",
+      "artifacts/exp-031-confirm-future8-paired-s179",
+      "artifacts/exp-031-confirm-future8-paired-s191"
+    ],
+    "mean_reward": 6.336112387478352,
+    "paired_reward_delta": -0.0027934610843658447,
+    "paired_reward_seed_ci95": [
+      -0.0557730121538043,
+      0.04868935272097587
+    ],
+    "reward_delta_by_prompt": {
+      "airplane": 0.2765660881996155,
+      "bernese": 0.07845526933670044,
+      "cafe": -0.6897724270820618,
+      "formula1": 0.042305171489715576,
+      "labrador": 0.0038063526153564453,
+      "lighthouse": 0.17061340808868408,
+      "mountain": 0.11859667301177979,
+      "orchid": -0.022918224334716797
+    },
+    "mean_clip_alignment": 0.27704920060932636,
+    "paired_clip_alignment_delta": -0.0005050201434642076,
+    "paired_clip_alignment_seed_ci95": [
+      -0.003291503869695589,
+      0.0025394924450665712
+    ],
+    "clip_alignment_delta_by_prompt": {
+      "airplane": 0.004186134785413742,
+      "bernese": -0.0020418651401996613,
+      "cafe": -0.003530789166688919,
+      "formula1": -0.001240389421582222,
+      "labrador": 0.004431098699569702,
+      "lighthouse": -0.0033265314996242523,
+      "mountain": 0.0006810761988162994,
+      "orchid": -0.0031988956034183502
+    },
+    "mean_guidance_queries": 80.0,
+    "mean_score_forwards": 452.0,
+    "mean_seconds": 50.0057076761841,
+    "mean_reward_seconds": 21.050694302510237,
+    "mean_vjp_seconds": 1.0134460014633078,
+    "mean_oracle_seconds": 47.20756148383953,
+    "mean_estimator_seconds": 0.17619842327258084,
+    "mean_update_seconds": 0.021408486678410554,
+    "denominator_events": 0,
+    "within_prompt_embedding_distance": 0.12862905668682303
+  }
+]

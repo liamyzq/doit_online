@@ -8,3 +8,4 @@ artifacts/
 *.safetensors
 *.png
 *.npz
+!results/final/**/*.png

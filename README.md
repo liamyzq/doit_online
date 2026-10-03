@@ -19,6 +19,8 @@ Start with [the final findings](docs/findings.md),
 [PROGRESS.md](PROGRESS.md), [the study protocol](docs/study.md), and
 [COMPUTE.md](COMPUTE.md). Experimental outcomes are in `experiments/results.tsv`;
 job events are in `jobs/jobs.jsonl`. Large artifacts live on Orion.
+The final aggregate JSON files and report image evidence are included in
+[`results/final/`](results/final/) for viewing directly on GitHub.
 Commands for running a committed configuration and analyzing paired image
 groups are in [the reproduction guide](docs/reproduction.md).
 The [estimator note](docs/estimators.md) explains the implemented moment

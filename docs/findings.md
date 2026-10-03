@@ -87,12 +87,12 @@ Strong guidance EMA's positive reward effect survives reserved-seed evaluation,
 but the lighthouse at seed 113 reproduces the severe grain, block artifacts,
 and posterization seen at discovery seed 53. The reward and average alignment
 metrics do not exclude this failure. The raw
-[strong EMA image](../artifacts/exp-031-confirm-gema-reward-s113/lighthouse/113/image.png)
+[strong EMA image](../results/final/exp-031-confirm-gema-reward-s113/lighthouse/113/image.png)
 and the same-seed
-[moderate MC8 image](../artifacts/exp-031-confirm-mc8-moderate-s113/lighthouse/113/image.png)
+[moderate MC8 image](../results/final/exp-031-confirm-mc8-moderate-s113/lighthouse/113/image.png)
 are retained. The eight reserved lighthouse examples were inspected in the
-[first](../artifacts/exp-031-ema-lighthouse-quality-1.png) and
-[second](../artifacts/exp-031-ema-lighthouse-quality-2.png) comparison sheets.
+[first](../results/final/exp-031-ema-lighthouse-quality-1.png) and
+[second](../results/final/exp-031-ema-lighthouse-quality-2.png) comparison sheets.
 
 Paired future M8 has higher mean reward than MC32 on six of eight prompts, but
 its cafe mean is 0.6898 lower. At cafe seeds 127 and 139, it produces severe
@@ -102,8 +102,8 @@ favorable aggregate cost result is insufficient.
 
 | Cafe seed | Paired future M8 | MC32 |
 | --- | --- | --- |
-| 127 | [Raw image](../artifacts/exp-031-confirm-future8-paired-s127/cafe/127/image.png) | [Raw image](../artifacts/exp-031-confirm-mc32-g4-s127/cafe/127/image.png) |
-| 139 | [Raw image](../artifacts/exp-031-confirm-future8-paired-s139/cafe/139/image.png) | [Raw image](../artifacts/exp-031-confirm-mc32-g4-s139/cafe/139/image.png) |
+| 127 | [Raw image](../results/final/exp-031-confirm-future8-paired-s127/cafe/127/image.png) | [Raw image](../results/final/exp-031-confirm-mc32-g4-s127/cafe/127/image.png) |
+| 139 | [Raw image](../results/final/exp-031-confirm-future8-paired-s139/cafe/139/image.png) | [Raw image](../results/final/exp-031-confirm-mc32-g4-s139/cafe/139/image.png) |
 
 These are direct qualitative observations, not a blinded quality score or an
 estimated failure rate. The raw images are unmodified. An average reward gain
@@ -147,13 +147,13 @@ query count.
 [results.tsv](../experiments/results.tsv) records formal outcomes and decisions;
 [jobs.jsonl](../jobs/jobs.jsonl) records execution events. Final aggregation uses
 [analysis-exp-032-combined.json](../configs/analysis-exp-032-combined.json), with
-the output in [exp-032-combined-summary.json](../artifacts/exp-032-combined-summary.json).
+the output in [exp-032-combined-summary.json](../results/final/exp-032-combined-summary.json).
 The separate MC32 comparison is
-[exp-031-vs-mc32.json](../artifacts/exp-031-vs-mc32.json).
+[exp-031-vs-mc32.json](../results/final/exp-031-vs-mc32.json).
 
 Original images, embeddings, and small result files are available in local
 `artifacts/`; complete run artifacts, including stored tensor banks, remain at
-`orion:/home/mlw0719/doit_correction_storage/runs/`. Large artifacts are excluded
-from Git. The [reproduction guide](reproduction.md) and [compute record](../COMPUTE.md)
+`orion:/home/mlw0719/doit_correction_storage/runs/`. Final aggregate JSON files and the image evidence linked above are included
+in `results/final/` for online reading. Full run artifacts are excluded from Git. The [reproduction guide](reproduction.md) and [compute record](../COMPUTE.md)
 document how to use them. The code remains available for reuse, with no active
 experiment queue and no scheduled follow-up.
