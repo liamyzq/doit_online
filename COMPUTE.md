@@ -78,6 +78,16 @@ real states with random vectors. Model construction through `diffusion_SDE.model
 works without Gym; the normal `search.ddim` module imports Gym/D4RL and is not
 used for the bounded mechanism loader.
 
+On 2026-10-03, exp-036/037, all 30 exp-040 jobs, and exp-038 calibration completed
+successfully. The next nine-job exp-039/041 queue runs at `d6728de`, controller
+PID 1206101, with log `controllers/critic-common-candidates.log` below storage.
+Later shared-device free memory became too low for broad stacking under the
+11,000 MiB plus 2048 MiB reserve policy, so the queue waited between submissions.
+At 18:30 UTC, bounded SSH reads were timing out even with multiplexing disabled.
+No terminal failure was observed through that connection delay. Recover status
+and existing outputs before any restart or duplicate submission; `PROGRESS.md`
+records the last retrieved experiment milestones.
+
 ## RL source preparation
 
 The complete public evaluation copy is

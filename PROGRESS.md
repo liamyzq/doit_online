@@ -36,6 +36,23 @@ independently assisted surrogates on moving action paths with fixed observations
 Exp-041 tests the same realized future candidates at eight saved image states.
 No simulator evaluation has run. The exp-040 and calibration queues have exited.
 
+## Active computation checkpoint
+
+The exp-039/041 nine-job queue was launched on Orion at `d6728de`. The last
+retrieved critic log completed all Hopper discovery paths (16,384 rows), with
+no estimator error. All four cafe common-candidate probes completed and passed
+their expected four rows, 120 reward queries and 961/121 score-forward counts
+for steps 11/18. Their small outputs are present locally. The remaining critic
+and lighthouse results have not yet been retrieved.
+
+As of 2026-10-03 18:30 UTC, bounded SSH reads time out, including a fresh
+connection with multiplexing disabled. This prevents a new execution-status
+observation; it is not a recorded experiment failure. Do not mark the remaining
+runs completed or start duplicates. Exp-043 is committed and authorized after
+the nine-job queue completes its counter checks, but its launch is not yet
+confirmed. Keep the remote execution checkout at `d6728de` while that queue is
+active, even if documentation and retrieved results advance locally or online.
+
 ## Initial study outcome
 
 The initial study is complete. All supplied estimator families and targeted extensions
