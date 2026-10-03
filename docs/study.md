@@ -146,3 +146,29 @@ Exp-024 confirms the smallest nonzero mixture tilt on independent paths, using
 scale1 reduced normalized ratio error by about0.9%, while larger scales worsened
 it. This small effect requires consistent independent evidence before keeping
 AIS; KL settings that never clip are not separate effective algorithms.
+
+### Pair-contrast fitting extension (exp-025--026)
+
+Pointwise residual reduction without pair-contrast reduction motivates one
+additional CV extension: fit slopes directly to the plus/minus reward (or
+log-weight) difference and fit the intercept separately. This removes the
+moving Gaussian mean from the slope update's normalization. The surrogate stays
+affine or exponential-affine, its Gaussian moments remain analytic, and fitting
+still follows estimation. Exp-025 detects wrong pair ordering, difference
+scaling and intercept handling using an exactly known function at a moved mean.
+Exp-026 tests learning rates0.05/0.1/0.5/1 and coefficients0.25/0.5/1 on the same
+discovery banks, with a paired MC8 control. A material gain requires independent
+validation; a failure closes this extension without further parameter expansion.
+
+### Bounded temperature/strength extension (exp-027--029)
+
+The initial endpoint screen reaches gamma4 at the selected temperature for MC8,
+MC32 and the highest-reward EMA setting. Exp-027 tests gamma8 at tau0.6 and1.0
+for these three estimators, on the original discovery images only. This is one
+bounded expansion before locking parameters for broader prompt/seed evaluation.
+Exp-028 tests direct full-future M4/M8 at tau0.6 and gamma1/4, because the initial
+tau0.3 strong-guidance failures resemble the temperature-sensitive proxy-MC8
+failure. Exp-029 tests the two-level fixed1 and previous-mass-times0.25 variants
+at tau0.6/gamma1. These12 conditions add48 discovery images, not confirmation
+data. No further broad grid follows; use them to choose settings for the fresh
+prompt/seed comparison.

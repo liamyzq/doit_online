@@ -129,3 +129,35 @@ def run_fidelity_checks(output):
     if failed:
         raise AssertionError(f"{failed} fidelity checks failed; repair before fidelity experiments")
     return {"checks_passed": len(cases), "checks_failed": 0}
+
+
+def run_paired_fit_checks(output):
+    """Expose pair ordering, difference scaling, and slope/intercept separation."""
+    device = torch.device("cuda")
+
+    def fit_known_function():
+        center = torch.tensor([0.2, -0.1, 0.05, 0.1], device=device)
+        mean = torch.tensor([-0.1, 0.2, 0.4, 0.7], device=device)
+        slope = torch.tensor([0.1, -0.15, 0.2, 0.08], device=device)
+        eps = 2 * torch.cat([torch.eye(4, device=device), -torch.eye(4, device=device)])
+        z = mean + 0.4 * eps
+        results = {}
+        for kind in ["affine", "exponential"]:
+            config = {"surrogate": kind, "update": "paired_lms", "learning_rate": 1.0,
+                      "ridge": 0.0, "tau": 0.3, "reward_offset": 6.0}
+            model = IntegrableSurrogate(center, 0.7, config,
+                                        torch.Generator(device=device).manual_seed(607))
+            values = 2 + z.double() @ slope.double()
+            weights = values.exp() if kind == "exponential" else values
+            rewards = 6 + 0.3 * weights.log()
+            model.update(z, rewards, weights)
+            results[kind] = _assert_close(model.slope(), slope, atol=2e-7, label="paired slope")
+            _assert_close(model.predict(z), weights, atol=2e-6, label="paired mean and slope fit")
+        return results
+
+    cases = [_check("paired_surrogate_fit", "wrong plus/minus pairing, slope scaling, or intercept fit",
+                    fit_known_function)]
+    Path(output, "checks.json").write_text(json.dumps(cases, indent=2) + "\n")
+    if not cases[0]["passed"]:
+        raise AssertionError("Paired-fit check failed; repair before the contrast regression experiment")
+    return {"checks_passed": 1, "checks_failed": 0}

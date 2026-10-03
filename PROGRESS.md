@@ -156,3 +156,75 @@ difference for current-minus-previous is0.534--2.225 times the current-only
 quantity; Formula1 ranges0.663--15.389. Even the best observed reduction does
 not compensate for halving the fresh pair count, before including accumulated
 historical error. The exact ratio error comparison remains the decision metric.
+
+## Independent SPIDER closure and budget ablations
+
+`exp-017` completed on the two independent gamma0.4 paths without denominator
+events. Its normalized ratio errors are89.448/82.318/174.710 for warmup32-r3,
+warmup64-r3 and warmup128-r2 (M16 difference-query budgets), compared with
+27.421/24.893/19.632 for exactly matched MC. Post-warmup absolute error is worse
+on each prompt separately. Close SPIDER under the tested schedules and budgets;
+its failure is not explained solely by negative denominators or a corrupted
+trajectory. Keep its implementation as a reproducible comparison.
+
+Across M4/M16 and tau0.3/0.4/0.6 in `exp-015`, full affine/exponential CV changes
+normalized error by less than0.4%; projected and spatial models usually worsen
+it. At M1, some memory controls reduce the reward-independent raw-MC error,
+but errors remain thousands versus roughly82--108 for M4. A raw-M1 improvement
+does not make M1 useful. Random/spatial exponential RLS also has M1 denominator
+events at tau0.3. The final CV decision still uses independent VJP confirmation.
+
+`exp-016` independently confirms the ordinary CV failure: normalized VJP error
+is53.418 for MC8,53.436 for frozen affine,53.893 for exponential LMS,53.471 for
+affine projected RLS,59.392 for exponential projected RLS and54.205 for spatial
+exponential RLS. No setting improves both paths consistently. Close the ordinary
+LMS/RLS/spatial variants under this study's budgets. The pair-contrast fitting
+extension is the only remaining surrogate branch.
+
+Gradient EMA beta0.25 independently gives normalized VJP error8.981 versus
+MC32's18.029. Post-warmup absolute error relative to MC8 is0.115 on Formula1 and
+0.132 on lighthouse. This confirms error suppression, but the initial endpoint
+screen has not shown a clear advantage over separately tuned MC. Its image
+success decision remains open until expanded prompt/seed evaluation.
+
+The endpoint screen encountered a real instability in
+`exp-023-tuning-mf-mass-c025-g0.4`: the second image failed with nonfinite VJP
+guidance, after one successful image. Preserve this as a failed configuration;
+the first image cannot stand in for the four-image condition. The current log
+does not identify the failing moment values. The next revision includes the
+step and estimator diagnostics in this existing error message, so future
+failures can be attributed without an extra diagnostic rerun.
+
+## Live proposal and initial endpoint decisions
+
+Independent `exp-024` closes the mixture AIS branch: normalized ratio error
+changes from47.041 to47.213 for IS and47.105 to47.256 for CV-IS. Post-warmup
+absolute error improves about2% on lighthouse but worsens about1.5% on Formula1.
+The small discovery improvement did not reproduce consistently. `exp-018` also
+shows no useful pure-tilt benefit. At unclipped scale1 with complete antithetic
+pairs, pure IS and CV-IS are numerically identical: `p*u/q=H_u`, the paired mean
+of base-coordinate epsilon is the tilt `rho*b`, and the analytic CV terms cancel
+the sampled surrogate moments. This is expected algebra, not a separate gain.
+
+The first endpoint wave has39 complete four-image conditions and3 failed image
+conditions. Tuned MC8 (tau0.6/gamma4) averages reward5.6115 and alignment0.2777;
+MC32 at the same parameters gives5.8147 and0.2779. Gradient EMA beta0.25 at
+those parameters gives5.6344 but alignment0.2704. The strongest EMA reward
+setting has no established quality/cost benefit. Ordinary exponential CV and
+ratio EMA do not beat the tuned MC8 screen.
+
+Direct paired-future M4/M8 at gamma1 gives reward5.4652/5.4491. The independent
+continuation-noise M4 control gives5.6519, but its difference from proxy MC8 is
+mixed across seeds and mainly driven by one Formula1 image. It needs a fresh
+prompt/seed comparison. Fixed-coefficient two-level runs complete at reward
+5.4844/5.4881 (gamma0.4/1), using176 reward queries plus236 score evaluations per
+image. Three historical-mass settings fail with nonfinite guidance; the one
+remaining setting has a denominator event and reward4.8162. No fidelity method
+is validated yet. The predeclared bounded temperature/strength extension and
+pair-contrast fit check/grid run next, followed by broader endpoint confirmation.
+
+Failure records retain partial images without treating them as complete
+conditions. Exact oracle counts inside the failing image were not saved by the
+old failure path; do not claim a precise total research-query count from those
+partial files. Future image failures now preserve the engine's query and score
+counters, and include the failing step/moment diagnostics in the error text.

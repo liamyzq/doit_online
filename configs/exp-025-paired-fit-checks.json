@@ -1,0 +1,5 @@
+{
+  "id": "exp-025-paired-fit-checks",
+  "mode": "paired_fit_checks",
+  "purpose": "Detect incorrect antithetic ordering, factor-of-two mistakes, or mean contamination when fitting slopes from pair contrasts. Repair a failure before exp026."
+}

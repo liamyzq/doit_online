@@ -1,0 +1,34 @@
+{
+  "id": "exp-028-future-temperature-m4-t0.6-g4.0",
+  "mode": "image",
+  "purpose": "Test whether a higher temperature repairs the strong-guidance degradation of direct full-future MC, as it did for proxy MC8. Both sample budgets and gamma1/4 are compared with the existing tau0.3 conditions.",
+  "image": {
+    "size": 512,
+    "steps": 20,
+    "guided_steps": 10,
+    "proxy": "euler",
+    "reward_batch": 2,
+    "future_batch": 2
+  },
+  "prompts": [
+    "bernese",
+    "formula1"
+  ],
+  "seeds": [
+    11,
+    23
+  ],
+  "estimator": {
+    "kind": "mc",
+    "antithetic": true,
+    "samples": 4,
+    "warmup_samples": 8,
+    "warmup_steps": 1,
+    "refresh_every": 0,
+    "tau": 0.6,
+    "reward_offset": 6.0,
+    "oracle": "future",
+    "gamma": 4.0,
+    "paired_future": true
+  }
+}

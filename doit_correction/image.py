@@ -255,7 +255,8 @@ class ImageEngine:
                     correction = beta * correction + (1 - beta) * previous_guidance
                 previous_guidance = correction.detach().clone()
                 if not torch.isfinite(correction).all():
-                    raise FloatingPointError("Nonfinite VJP guidance")
+                    raise FloatingPointError(
+                        f"Nonfinite VJP guidance at index {index}: {estimate.diagnostics}")
                 diagnostics.append(dict(index=index, correction_norm=float(correction.norm()), **estimate.diagnostics))
                 mean = transition.mean.detach() + gamma * transition.correction_gain * correction
             else:

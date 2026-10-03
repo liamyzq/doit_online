@@ -123,6 +123,19 @@ class IntegrableSurrogate:
             ridge = float(self.config.get("ridge", 1.0))
             for xi, yi in zip(x, y):
                 self.theta += rate * (yi - xi @ self.theta) * xi / (ridge + xi.square().sum())
+        elif self.update_rule == "paired_lms":
+            if len(x) % 2:
+                raise ValueError("Paired LMS requires complete antithetic pairs")
+            half = len(x) // 2
+            contrasts = (x[:half, 1:] - x[half:, 1:]) / 2
+            targets = (y[:half] - y[half:]) / 2
+            rate = float(self.config.get("learning_rate", 0.5))
+            ridge = float(self.config.get("ridge", 1.0))
+            for xi, yi in zip(contrasts, targets):
+                self.theta[1:] += rate * (yi - xi @ self.theta[1:]) * xi / (ridge + xi.square().sum())
+            # The mean is fitted separately so moving rollout centers cannot
+            # dominate the slope update's normalization or regression loss.
+            self.theta[0] = (y - x[:, 1:] @ self.theta[1:]).mean()
         elif self.update_rule == "rls":
             forgetting = float(self.config.get("forgetting", 1.0))
             self.gram = forgetting * self.gram + x.T @ x

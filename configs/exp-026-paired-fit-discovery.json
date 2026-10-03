@@ -1,0 +1,434 @@
+{
+  "id": "exp-026-paired-fit-discovery",
+  "mode": "fixed",
+  "purpose": "Directly learn antithetic reward/log-weight contrasts after pointwise fits failed to reduce guidance error. Separate slope and mean fits; current estimates still use only prior-step memory. Close this targeted extension if no material ratio or pair-residual improvement.",
+  "captures": [
+    "/home/mlw0719/doit_correction_storage/runs/exp-002-capture-bernese",
+    "/home/mlw0719/doit_correction_storage/runs/exp-003-capture-formula1"
+  ],
+  "repeats": 16,
+  "with_vjp": false,
+  "variants": [
+    {
+      "name": "anti-m8",
+      "estimator": {
+        "kind": "mc",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0
+      }
+    },
+    {
+      "name": "paired-affine-lr0.05-c0.25",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "surrogate": "affine",
+        "update": "paired_lms",
+        "learning_rate": 0.05,
+        "cv_coefficient": 0.25
+      }
+    },
+    {
+      "name": "paired-affine-lr0.05-c0.5",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "surrogate": "affine",
+        "update": "paired_lms",
+        "learning_rate": 0.05,
+        "cv_coefficient": 0.5
+      }
+    },
+    {
+      "name": "paired-affine-lr0.05-c1.0",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "surrogate": "affine",
+        "update": "paired_lms",
+        "learning_rate": 0.05,
+        "cv_coefficient": 1.0
+      }
+    },
+    {
+      "name": "paired-affine-lr0.1-c0.25",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "surrogate": "affine",
+        "update": "paired_lms",
+        "learning_rate": 0.1,
+        "cv_coefficient": 0.25
+      }
+    },
+    {
+      "name": "paired-affine-lr0.1-c0.5",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "surrogate": "affine",
+        "update": "paired_lms",
+        "learning_rate": 0.1,
+        "cv_coefficient": 0.5
+      }
+    },
+    {
+      "name": "paired-affine-lr0.1-c1.0",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "surrogate": "affine",
+        "update": "paired_lms",
+        "learning_rate": 0.1,
+        "cv_coefficient": 1.0
+      }
+    },
+    {
+      "name": "paired-affine-lr0.5-c0.25",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "surrogate": "affine",
+        "update": "paired_lms",
+        "learning_rate": 0.5,
+        "cv_coefficient": 0.25
+      }
+    },
+    {
+      "name": "paired-affine-lr0.5-c0.5",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "surrogate": "affine",
+        "update": "paired_lms",
+        "learning_rate": 0.5,
+        "cv_coefficient": 0.5
+      }
+    },
+    {
+      "name": "paired-affine-lr0.5-c1.0",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "surrogate": "affine",
+        "update": "paired_lms",
+        "learning_rate": 0.5,
+        "cv_coefficient": 1.0
+      }
+    },
+    {
+      "name": "paired-affine-lr1.0-c0.25",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "surrogate": "affine",
+        "update": "paired_lms",
+        "learning_rate": 1.0,
+        "cv_coefficient": 0.25
+      }
+    },
+    {
+      "name": "paired-affine-lr1.0-c0.5",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "surrogate": "affine",
+        "update": "paired_lms",
+        "learning_rate": 1.0,
+        "cv_coefficient": 0.5
+      }
+    },
+    {
+      "name": "paired-affine-lr1.0-c1.0",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "surrogate": "affine",
+        "update": "paired_lms",
+        "learning_rate": 1.0,
+        "cv_coefficient": 1.0
+      }
+    },
+    {
+      "name": "paired-exponential-lr0.05-c0.25",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "surrogate": "exponential",
+        "update": "paired_lms",
+        "learning_rate": 0.05,
+        "cv_coefficient": 0.25
+      }
+    },
+    {
+      "name": "paired-exponential-lr0.05-c0.5",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "surrogate": "exponential",
+        "update": "paired_lms",
+        "learning_rate": 0.05,
+        "cv_coefficient": 0.5
+      }
+    },
+    {
+      "name": "paired-exponential-lr0.05-c1.0",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "surrogate": "exponential",
+        "update": "paired_lms",
+        "learning_rate": 0.05,
+        "cv_coefficient": 1.0
+      }
+    },
+    {
+      "name": "paired-exponential-lr0.1-c0.25",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "surrogate": "exponential",
+        "update": "paired_lms",
+        "learning_rate": 0.1,
+        "cv_coefficient": 0.25
+      }
+    },
+    {
+      "name": "paired-exponential-lr0.1-c0.5",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "surrogate": "exponential",
+        "update": "paired_lms",
+        "learning_rate": 0.1,
+        "cv_coefficient": 0.5
+      }
+    },
+    {
+      "name": "paired-exponential-lr0.1-c1.0",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "surrogate": "exponential",
+        "update": "paired_lms",
+        "learning_rate": 0.1,
+        "cv_coefficient": 1.0
+      }
+    },
+    {
+      "name": "paired-exponential-lr0.5-c0.25",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "surrogate": "exponential",
+        "update": "paired_lms",
+        "learning_rate": 0.5,
+        "cv_coefficient": 0.25
+      }
+    },
+    {
+      "name": "paired-exponential-lr0.5-c0.5",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "surrogate": "exponential",
+        "update": "paired_lms",
+        "learning_rate": 0.5,
+        "cv_coefficient": 0.5
+      }
+    },
+    {
+      "name": "paired-exponential-lr0.5-c1.0",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "surrogate": "exponential",
+        "update": "paired_lms",
+        "learning_rate": 0.5,
+        "cv_coefficient": 1.0
+      }
+    },
+    {
+      "name": "paired-exponential-lr1.0-c0.25",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "surrogate": "exponential",
+        "update": "paired_lms",
+        "learning_rate": 1.0,
+        "cv_coefficient": 0.25
+      }
+    },
+    {
+      "name": "paired-exponential-lr1.0-c0.5",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "surrogate": "exponential",
+        "update": "paired_lms",
+        "learning_rate": 1.0,
+        "cv_coefficient": 0.5
+      }
+    },
+    {
+      "name": "paired-exponential-lr1.0-c1.0",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "surrogate": "exponential",
+        "update": "paired_lms",
+        "learning_rate": 1.0,
+        "cv_coefficient": 1.0
+      }
+    }
+  ]
+}

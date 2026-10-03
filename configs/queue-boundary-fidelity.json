@@ -1,0 +1,50 @@
+[
+  {
+    "id": "exp-027-boundary-mc8-t0.6-g8.0",
+    "config": "configs/exp-027-boundary-mc8-t0.6-g8.0.json"
+  },
+  {
+    "id": "exp-027-boundary-mc8-t1.0-g8.0",
+    "config": "configs/exp-027-boundary-mc8-t1.0-g8.0.json"
+  },
+  {
+    "id": "exp-027-boundary-mc32-t0.6-g8.0",
+    "config": "configs/exp-027-boundary-mc32-t0.6-g8.0.json"
+  },
+  {
+    "id": "exp-027-boundary-mc32-t1.0-g8.0",
+    "config": "configs/exp-027-boundary-mc32-t1.0-g8.0.json"
+  },
+  {
+    "id": "exp-027-boundary-gema025-t0.6-g8.0",
+    "config": "configs/exp-027-boundary-gema025-t0.6-g8.0.json"
+  },
+  {
+    "id": "exp-027-boundary-gema025-t1.0-g8.0",
+    "config": "configs/exp-027-boundary-gema025-t1.0-g8.0.json"
+  },
+  {
+    "id": "exp-028-future-temperature-m4-t0.6-g1.0",
+    "config": "configs/exp-028-future-temperature-m4-t0.6-g1.0.json"
+  },
+  {
+    "id": "exp-028-future-temperature-m4-t0.6-g4.0",
+    "config": "configs/exp-028-future-temperature-m4-t0.6-g4.0.json"
+  },
+  {
+    "id": "exp-028-future-temperature-m8-t0.6-g1.0",
+    "config": "configs/exp-028-future-temperature-m8-t0.6-g1.0.json"
+  },
+  {
+    "id": "exp-028-future-temperature-m8-t0.6-g4.0",
+    "config": "configs/exp-028-future-temperature-m8-t0.6-g4.0.json"
+  },
+  {
+    "id": "exp-029-mf-temperature-fixed-c1-t0.6-g1.0",
+    "config": "configs/exp-029-mf-temperature-fixed-c1-t0.6-g1.0.json"
+  },
+  {
+    "id": "exp-029-mf-temperature-mass-c025-t0.6-g1.0",
+    "config": "configs/exp-029-mf-temperature-mass-c025-t0.6-g1.0.json"
+  }
+]

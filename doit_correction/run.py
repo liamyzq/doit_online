@@ -30,6 +30,7 @@ def main():
                 "pid": os.getpid(), "cuda_visible_devices": os.environ.get("CUDA_VISIBLE_DEVICES"),
                 "started_at": started, "status": "running"}
     write_json(output / "run.json", metadata)
+    engine = None
     try:
         torch.set_num_threads(int(os.environ.get("OMP_NUM_THREADS", 2)))
         torch.cuda.reset_peak_memory_stats()
@@ -43,6 +44,9 @@ def main():
         elif mode == "fidelity_checks":
             from .extension_checks import run_fidelity_checks
             metrics = run_fidelity_checks(output)
+        elif mode == "paired_fit_checks":
+            from .extension_checks import run_paired_fit_checks
+            metrics = run_paired_fit_checks(output)
         elif mode == "image":
             from .image import ImageEngine
             engine = ImageEngine(config.get("image", {}))
@@ -76,6 +80,8 @@ def main():
         print(json.dumps(metrics), flush=True)
     except Exception as exc:
         metadata.update(status="failed", error=repr(exc), elapsed_seconds=time.time() - started)
+        if engine is not None:
+            metadata.update(reward_queries=engine.reward_queries, score_forwards=engine.score_forwards)
         write_json(output / "run.json", metadata)
         traceback.print_exc()
         raise

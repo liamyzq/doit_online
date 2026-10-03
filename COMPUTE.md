@@ -48,3 +48,23 @@ when recording each completed wave.
 
 No image or RL training is authorized on the Quest login nodes. Quest and
 Nebula are reference-source locations for this project, not experiment workers.
+
+## RL preparation (not yet executed)
+
+The complete public evaluation copy is
+`/home/mlw0719/doob_transform/test/Doob_training_free_adaptation`, revision
+`0bc6f95`. It has actor/critic checkpoint pairs for all nine locomotion tasks.
+Only base and `masklaw_plot_20260720` are registered Conda environments; neither
+has the Gym/D4RL/MuJoCo Python stack. No RL environment is validated yet.
+Existing `~/.mujoco/mujoco210` contains MuJoCo2.1 shared objects, whose direct
+system links resolve. An old build log failed on incompatible generated C
+pointer types; that is not evidence of a currently working mujoco-py build.
+
+The source's online evaluation does not load offline datasets. It builds a
+Gym/D4RL environment, loads `behavior_ckpt600.pth` and `critic_ckpt100.pth`, and
+passes raw observations to the policy. State normalization must not be invented
+when reusing these checkpoints. `search/ddim.py:11-32` constructs the model;
+`search/doob_search.py:289-320` constructs action candidates; `utils.py:30-58`
+runs episodes and obtains D4RL normalized scores. A new isolated RL environment
+and a representative checkpoint/simulator smoke remain required if image
+results justify scaling. Do not start RL evaluation before that decision.
