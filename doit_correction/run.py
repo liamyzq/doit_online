@@ -35,7 +35,7 @@ def main():
                                 "cuda": torch.version.cuda, "gpu": torch.cuda.get_device_name(0),
                                 "packages": {name: version(name) for name in
                                              ["numpy", "diffusers", "transformers", "torchvision",
-                                              "huggingface_hub", "safetensors"]}}}
+                                              "huggingface_hub", "safetensors", "h5py"]}}}
     write_json(output / "run.json", metadata)
     engine = None
     try:
@@ -54,6 +54,9 @@ def main():
         elif mode == "paired_fit_checks":
             from .extension_checks import run_paired_fit_checks
             metrics = run_paired_fit_checks(output)
+        elif mode == "execution_checks":
+            from .extension_checks import run_execution_checks
+            metrics = run_execution_checks(output)
         elif mode == "analytic_mechanism":
             from .audit import analytic_mechanism
             metrics = analytic_mechanism(config, output)

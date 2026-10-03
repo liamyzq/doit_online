@@ -13,6 +13,76 @@ from .fidelity import estimate_fidelity, two_level_moments
 from .estimators import MomentEstimator
 
 
+def run_execution_checks(output):
+    from .execution import categorical_transition, gaussian_displacement
+    from .image import euler_coefficients
+
+    device = torch.device("cuda")
+
+    def gaussian_cap():
+        correction = torch.tensor([[3.0, -4.0]], device=device)
+        delta, free = gaussian_displacement(correction, 2.0, 3.0, 0.5)
+        assert torch.equal(delta, 6 * correction)
+        capped, stats = gaussian_displacement(correction, 2.0, 3.0, 0.5, max_kl=8.0)
+        _assert_close(capped, torch.tensor([[1.2, -1.6]], device=device), atol=2e-6, label="bounded displacement")
+        _assert_close(stats["execution_kl"], 8.0, atol=2e-6, label="applied KL cap")
+        assert stats["execution_clipped"] == 1 and free["execution_clipped"] == 0
+        for sigma, next_sigma in [(2.0, 1.5), (0.7, 0.3), (0.34, 0.03)]:
+            up, _, dt = euler_coefficients(sigma, next_sigma)
+            _assert_close((-dt * sigma) / up ** 2, (sigma / next_sigma) ** 2,
+                          atol=1e-10, label="Euler gain/noise relation")
+        return {"raw_kl": free["execution_kl"], "applied_kl": stats["execution_kl"]}
+
+    def resample_realized_candidate():
+        mean = torch.tensor([[0.2, -0.1]], device=device)
+        eps = torch.tensor([[1., 2.], [-1., -2.], [0.3, -0.4]], device=device)
+        log_weights = torch.tensor([0.0, 0.2, -0.1], device=device)
+        choices = []
+        for seed in range(16):
+            generator = torch.Generator(device=device).manual_seed(36101 + seed)
+            value, stats = categorical_transition(mean, 0.7, eps, log_weights, generator)
+            expected = mean + 0.7 * eps[stats["selected_candidate"]].reshape_as(mean)
+            assert torch.equal(value, expected), "selected candidate was shifted or given extra noise"
+            shifted, shifted_stats = categorical_transition(
+                mean, 0.7, eps, log_weights.double() + 20,
+                torch.Generator(device=device).manual_seed(36101 + seed))
+            assert torch.equal(value, shifted), "categorical selection depends on reward offset"
+            assert stats["execution_kl"] is None
+            choices.append(stats["selected_candidate"])
+        assert len(set(choices)) > 1, "selection appears to use argmax instead of a categorical draw"
+        return {"selected_indices": choices}
+
+    def future_candidate_reuse():
+        config = {"kind": "mc", "oracle": "future", "warmup_steps": 0,
+                  "samples": 8, "tau": 0.6, "reward_offset": 6.0}
+        estimator = MomentEstimator(config, 36203, device)
+        observed = []
+
+        def future(eps):
+            observed.append(eps.detach().clone())
+            return 6 + 0.1 * eps[:, 0]
+
+        result = estimate_fidelity(estimator, torch.zeros(4, device=device), 0.7,
+                                   lambda z: (_ for _ in ()).throw(AssertionError("unexpected proxy queries")), future)
+        assert len(observed) == 1 and estimator.queries == 8
+        assert torch.equal(result.eps, observed[0])
+        expected = (0.1 * observed[0][:, 0]).double() / 0.6
+        _assert_close(result.log_weights, expected, atol=1e-6, label="future candidate log weights")
+        _assert_close(torch.softmax(result.log_weights, 0) @ result.eps.double(),
+                      result.ratio.double(), atol=1e-6, label="same weights for ratio and categorical execution")
+        return {"future_calls": len(observed), "reward_queries": estimator.queries}
+
+    cases = [
+        _check("gaussian_execution_cap", "wrong gain/noise KL, changed uncapped displacement, or a violated cap", gaussian_cap),
+        _check("categorical_execution", "extra transition noise, wrong candidate, offset dependence, or argmax selection", resample_realized_candidate),
+        _check("same_future_information", "different candidates/weights or additional oracle calls between execution rules", future_candidate_reuse),
+    ]
+    Path(output, "checks.json").write_text(json.dumps(cases, indent=2) + "\n")
+    if any(not case["passed"] for case in cases):
+        raise AssertionError("Execution checks failed; repair before the image kernel experiments")
+    return {"checks_passed": len(cases), "checks_failed": 0}
+
+
 def check_dct(device):
     dimension, k, rho = 256, 16, 0.7
     projection = spatial_dct_projection(dimension, k, device)

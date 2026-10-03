@@ -1,0 +1,10 @@
+[
+  {
+    "id": "exp-037-kernel-smoke-mc8-moderate-k8192",
+    "config": "configs/exp-037-kernel-smoke-mc8-moderate-k8192.json"
+  },
+  {
+    "id": "exp-037-kernel-smoke-future8-resample-paired",
+    "config": "configs/exp-037-kernel-smoke-future8-resample-paired.json"
+  }
+]

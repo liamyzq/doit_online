@@ -7,11 +7,26 @@ protocol is [docs/audit-followup.md](docs/audit-followup.md). Ordinary
 high-dimensional CV/SPIDER/proposal grid expansion remains closed. The new
 questions concern low-dimensional real-critic learnability, actual image
 execution displacement, and categorical use of full-future candidate weights.
-The first wave is exp-033/034/035: analytic dimensionality control, historical
-execution-KL recovery, and fixed-state reference/shrinkage diagnostics.
-No new wave has launched yet. Real-critic source/observation discovery is in
-progress; the revised protocol explicitly permits this bounded mechanism study
-before an image success. Final image confirmation uses new reserved seeds.
+Exp-033/034/035 all completed at `25936fc`. With 96 queries, analytic online CV
+has MSE/MC 0.00450 in dimension 6 but 0.99843 in dimension 16384; an externally
+supplied exact surrogate works in both. The high-dimensional image references
+remain too noisy to resolve direction: zero and quarter-shrinkage controls
+outperform the larger estimates in reference MSE. These findings support the
+audit's learnability and shrinkage concerns without changing the old endpoint
+results.
+
+Recovered KL shows future cafe failures with early displacement spikes, but a
+failed EMA lighthouse has lower maximum KL than clean comparators. Magnitude
+is not a sufficient failure explanation. Next: validate the new execution paths
+with exp-036/037, then run exp-040's 15 matched groups (240 discovery images),
+using one common KL cap, equal-setting M8 continuation controls, and categorical
+resampling. Record the existing negative evidence if a cap does not help.
+
+Hopper and HalfCheetah actor/critic pairs load without Gym/D4RL. Official medium-v2
+datasets are downloaded for true observation states; a committed split separates
+calibration, discovery, and confirmation by episode. The revised protocol permits
+this bounded low-dimensional mechanism study before image success. No simulator
+evaluation has run. All initial diagnostic queues have exited.
 
 ## Initial study outcome
 

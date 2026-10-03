@@ -1,0 +1,122 @@
+[
+  {
+    "id": "exp-040-kernel-discovery-ema-strong-free-s211",
+    "config": "configs/exp-040-kernel-discovery-ema-strong-free-s211.json"
+  },
+  {
+    "id": "exp-040-kernel-discovery-mc8-strong-k8192-s211",
+    "config": "configs/exp-040-kernel-discovery-mc8-strong-k8192-s211.json"
+  },
+  {
+    "id": "exp-040-kernel-discovery-mc32-free-s223",
+    "config": "configs/exp-040-kernel-discovery-mc32-free-s223.json"
+  },
+  {
+    "id": "exp-040-kernel-discovery-future8-resample-independent-s223",
+    "config": "configs/exp-040-kernel-discovery-future8-resample-independent-s223.json"
+  },
+  {
+    "id": "exp-040-kernel-discovery-ema-strong-k8192-s211",
+    "config": "configs/exp-040-kernel-discovery-ema-strong-k8192-s211.json"
+  },
+  {
+    "id": "exp-040-kernel-discovery-future8-paired-free-s211",
+    "config": "configs/exp-040-kernel-discovery-future8-paired-free-s211.json"
+  },
+  {
+    "id": "exp-040-kernel-discovery-mc8-strong-free-s211",
+    "config": "configs/exp-040-kernel-discovery-mc8-strong-free-s211.json"
+  },
+  {
+    "id": "exp-040-kernel-discovery-base-s211",
+    "config": "configs/exp-040-kernel-discovery-base-s211.json"
+  },
+  {
+    "id": "exp-040-kernel-discovery-future8-independent-free-s211",
+    "config": "configs/exp-040-kernel-discovery-future8-independent-free-s211.json"
+  },
+  {
+    "id": "exp-040-kernel-discovery-mc8-strong-free-s223",
+    "config": "configs/exp-040-kernel-discovery-mc8-strong-free-s223.json"
+  },
+  {
+    "id": "exp-040-kernel-discovery-mc8-strong-k8192-s223",
+    "config": "configs/exp-040-kernel-discovery-mc8-strong-k8192-s223.json"
+  },
+  {
+    "id": "exp-040-kernel-discovery-future8-resample-paired-s211",
+    "config": "configs/exp-040-kernel-discovery-future8-resample-paired-s211.json"
+  },
+  {
+    "id": "exp-040-kernel-discovery-future8-paired-k8192-s223",
+    "config": "configs/exp-040-kernel-discovery-future8-paired-k8192-s223.json"
+  },
+  {
+    "id": "exp-040-kernel-discovery-ema-strong-k8192-s223",
+    "config": "configs/exp-040-kernel-discovery-ema-strong-k8192-s223.json"
+  },
+  {
+    "id": "exp-040-kernel-discovery-future8-paired-k8192-s211",
+    "config": "configs/exp-040-kernel-discovery-future8-paired-k8192-s211.json"
+  },
+  {
+    "id": "exp-040-kernel-discovery-future8-independent-free-s223",
+    "config": "configs/exp-040-kernel-discovery-future8-independent-free-s223.json"
+  },
+  {
+    "id": "exp-040-kernel-discovery-mc8-moderate-free-s223",
+    "config": "configs/exp-040-kernel-discovery-mc8-moderate-free-s223.json"
+  },
+  {
+    "id": "exp-040-kernel-discovery-mc32-k8192-s211",
+    "config": "configs/exp-040-kernel-discovery-mc32-k8192-s211.json"
+  },
+  {
+    "id": "exp-040-kernel-discovery-mc8-moderate-free-s211",
+    "config": "configs/exp-040-kernel-discovery-mc8-moderate-free-s211.json"
+  },
+  {
+    "id": "exp-040-kernel-discovery-future8-independent-k8192-s223",
+    "config": "configs/exp-040-kernel-discovery-future8-independent-k8192-s223.json"
+  },
+  {
+    "id": "exp-040-kernel-discovery-mc8-moderate-k8192-s223",
+    "config": "configs/exp-040-kernel-discovery-mc8-moderate-k8192-s223.json"
+  },
+  {
+    "id": "exp-040-kernel-discovery-mc32-k8192-s223",
+    "config": "configs/exp-040-kernel-discovery-mc32-k8192-s223.json"
+  },
+  {
+    "id": "exp-040-kernel-discovery-future8-resample-independent-s211",
+    "config": "configs/exp-040-kernel-discovery-future8-resample-independent-s211.json"
+  },
+  {
+    "id": "exp-040-kernel-discovery-future8-resample-paired-s223",
+    "config": "configs/exp-040-kernel-discovery-future8-resample-paired-s223.json"
+  },
+  {
+    "id": "exp-040-kernel-discovery-mc32-free-s211",
+    "config": "configs/exp-040-kernel-discovery-mc32-free-s211.json"
+  },
+  {
+    "id": "exp-040-kernel-discovery-future8-paired-free-s223",
+    "config": "configs/exp-040-kernel-discovery-future8-paired-free-s223.json"
+  },
+  {
+    "id": "exp-040-kernel-discovery-base-s223",
+    "config": "configs/exp-040-kernel-discovery-base-s223.json"
+  },
+  {
+    "id": "exp-040-kernel-discovery-mc8-moderate-k8192-s211",
+    "config": "configs/exp-040-kernel-discovery-mc8-moderate-k8192-s211.json"
+  },
+  {
+    "id": "exp-040-kernel-discovery-ema-strong-free-s223",
+    "config": "configs/exp-040-kernel-discovery-ema-strong-free-s223.json"
+  },
+  {
+    "id": "exp-040-kernel-discovery-future8-independent-k8192-s211",
+    "config": "configs/exp-040-kernel-discovery-future8-independent-k8192-s211.json"
+  }
+]

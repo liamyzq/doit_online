@@ -1,0 +1,22 @@
+{
+  "seed": 41041,
+  "split_sizes": {
+    "calibration": 16,
+    "discovery": 16,
+    "confirmation": 32
+  },
+  "tasks": [
+    {
+      "name": "hopper-medium-v2",
+      "dataset": "/home/mlw0719/doit_correction_storage/data/d4rl/hopper-medium-v2.hdf5",
+      "dataset_url": "http://rail.eecs.berkeley.edu/datasets/offline_rl/gym_mujoco_v2/hopper_medium-v2.hdf5",
+      "output": "/home/mlw0719/doit_correction_storage/data/critic-states/hopper-medium-v2"
+    },
+    {
+      "name": "halfcheetah-medium-v2",
+      "dataset": "/home/mlw0719/doit_correction_storage/data/d4rl/halfcheetah-medium-v2.hdf5",
+      "dataset_url": "http://rail.eecs.berkeley.edu/datasets/offline_rl/gym_mujoco_v2/halfcheetah_medium-v2.hdf5",
+      "output": "/home/mlw0719/doit_correction_storage/data/critic-states/halfcheetah-medium-v2"
+    }
+  ]
+}

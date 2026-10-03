@@ -32,6 +32,9 @@ def estimate_fidelity(estimator, m, rho, proxy_reward, future_reward):
         rewards = future_reward(eps)
         elapsed = time.perf_counter() - started
         result = estimator.from_samples(m, rho, eps, rewards)
+        result.eps = eps
+        result.log_weights = ((rewards.double() - float(config.get("reward_offset", 6.0))) /
+                              float(config.get("tau", 0.3)))
         result.diagnostics.update(oracle_seconds=elapsed, proposal_norm=0.0, future_queries=n,
                                   proxy_queries=0, oracle="future")
         return result

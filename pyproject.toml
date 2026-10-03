@@ -3,7 +3,7 @@ name = "doit-correction"
 version = "0.1.0"
 description = "Online variance reduction for DOIT diffusion guidance"
 requires-python = ">=3.10"
-dependencies = ["torch>=2.6", "numpy", "diffusers==0.32.2", "transformers==4.49.0", "accelerate==1.4.0", "Pillow", "scipy"]
+dependencies = ["torch>=2.6", "numpy", "diffusers==0.32.2", "transformers==4.49.0", "accelerate==1.4.0", "Pillow", "scipy", "h5py==3.14.0"]
 
 [tool.setuptools.packages.find]
 include = ["doit_correction*"]

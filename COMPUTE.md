@@ -66,6 +66,18 @@ in `configs/queue-audit-diagnostics.json`; its state belongs in the job ledger
 and PROGRESS. The new protocol permits low-dimensional real-critic mechanism
 experiments before image success. It does not imply a working simulator stack.
 
+Exp-033/034/035 completed at `25936fc` with no runtime failures. The new package
+`h5py==3.14.0` was then installed with `--no-deps` in the project venv; existing
+packages were preserved. Installation output is in storage `setup-h5py.log`.
+Official Hopper/HalfCheetah medium-v2 HDF5 datasets are in `data/d4rl/` below
+storage, with source URLs and byte sizes in `acquisition.json`. They each have
+one million observations and 2186/1000 complete episode boundaries respectively.
+Use `scripts/data/prepare_critic_states.py --config configs/critic-observation-split.json`
+for the committed 64-observation episode-disjoint split. Do not replace these
+real states with random vectors. Model construction through `diffusion_SDE.model`
+works without Gym; the normal `search.ddim` module imports Gym/D4RL and is not
+used for the bounded mechanism loader.
+
 ## RL source preparation
 
 The complete public evaluation copy is

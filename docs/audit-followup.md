@@ -113,3 +113,66 @@ model revisions, and image sigma schedules. Publish small per-image and step
 records and reference-disagreement summaries alongside final findings; retain
 large tensor banks and model weights on Orion. Use existing commit/config/run
 provenance rather than adding content hashes.
+
+## First diagnostic results and next locked wave
+
+All exp-033/034/035 jobs completed at `25936fc`. Exp-033 finds online
+exponential-CV MSE/MC ratios of 0.00450, 0.61691, 0.93695, and 0.99843 as
+dimension increases from 6 to 64, 512, and 16384. At 16384 dimensions the 95%
+interval is [0.99492, 1.00197]. The externally supplied exponential surrogate
+is accurate to numerical precision in every dimension. This reproduces the
+audit's qualitative learning limitation with this repository's explicit
+learning rate, repetitions, and seeds; it does not claim to match its exact
+unavailable experiment. All three new identity/diagnostic checks pass.
+
+Exp-034 recovers 4032 guided steps across the 512 images. Median maximum step KL
+is 4883 for moderate MC8, 39173 for MC32, 24691 for strong EMA, and 96830 for
+future M8. Large final guided-step KL occurs in coherent images as well as
+failed ones. Future cafe seed 127 has a step-11 KL of 36266 versus MC32's 2646;
+seed 139 has 12528 versus 714. In contrast, the failed EMA lighthouse seed 113
+has maximum KL 27093, below the clean future comparator's 123914. Displacement
+size therefore cannot be a sufficient quality explanation. A single matched
+cap is a discriminating experiment, not a presumed repair or grounds for an
+unrestricted adaptive-damping search.
+
+Exp-035 makes the reference limitation concrete. After warm-up, mean
+split-reference squared distances are 81.25 for the ratio and 614.41 for VJP,
+while zero-estimate squared errors are 20.50 and 158.19. Mean direction cosines
+with these references are close to zero. EMA 0.25 lowers VJP squared error from
+9203.45 to 1102.74, but zero guidance is still 158.19 and quarter-shrinking EMA
+is 217.28. These data support strong variance shrinkage; they do not resolve
+the true high-dimensional steering direction or replace endpoint evaluation.
+
+**Exp-036/037 gate the changed execution code.** Three focused checks verify
+the Euler gain/noise identity and KL bound, actual categorical selection without
+additional Gaussian noise, and reuse of exactly the same future candidates,
+weights, and queries. Two one-image Orion smokes then exercise capped MC8 and
+categorical future M8. Check their counters and new diagnostics; stop and repair
+on a failure. These smoke images are excluded from method selection.
+
+**Exp-040 is a 240-image discovery comparison.** At seeds 211/223, run the eight
+prompts for moderate MC8, strong MC8, MC32, strong EMA, paired future M8, and
+independent future M8, each with no execution cap and with the same cap 8192.
+This cap equals half the latent dimension: the applied displacement has at most
+the transition noise's per-coordinate RMS. No second cap is selected now.
+Add paired/independent categorical future M8 and an unguided reference, giving
+15 groups. The M8 future comparisons share tau 0.6, candidate/warmup budgets
+8/16, and the same continuation window; gradient methods use gamma 4, while
+categorical execution has no gamma parameter. All groups save latents at steps
+11 and 18 for a subsequent common-state information-use probe.
+
+Categorical resampling follows the established idea in
+[Soft Value-Based Decoding](https://arxiv.org/html/2408.08252v2), with sampled
+future rewards here. The conditional finite candidate set is discrete; do not
+report the Gaussian mean-shift KL as its kernel KL. Record selected candidate,
+probability, candidate ESS, and VJP/query/score costs instead.
+
+Official [D4RL dataset URLs](https://raw.githubusercontent.com/Farama-Foundation/D4RL/master/d4rl/infos.py)
+provide genuine Hopper and HalfCheetah medium-v2 observations without simulator
+installation. Their original actor/critic pairs load in the existing Torch
+environment. The committed selection procedure takes one nonterminal observation
+from each of 64 distinct complete episodes per task, shuffled with seed 41041:
+16 calibration, 16 discovery, and 32 confirmation. The episode sets are disjoint,
+observations remain unnormalized, and each selected row retains its dataset
+index, episode bounds, paired recorded action, and source URL. No confirmation
+critic outcome is used to select temperature or surrogate settings.

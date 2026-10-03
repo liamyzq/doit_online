@@ -16,6 +16,7 @@ from PIL import Image
 from transformers import CLIPModel, CLIPProcessor
 
 from .estimators import MomentEstimator
+from .execution import categorical_transition, gaussian_displacement
 
 
 PROMPTS = {
@@ -228,10 +229,16 @@ class ImageEngine:
     def generate(self, prompt, seed, estimator_config, output, capture_callback=None):
         self.use_prompt(prompt)
         generator = torch.Generator(device=self.device).manual_seed(seed)
+        selection_generator = torch.Generator(device=self.device).manual_seed(seed + 2000003)
         estimator = MomentEstimator(estimator_config, seed + 1000003, self.device)
         latent = torch.randn((1, 4, self.size // 8, self.size // 8), device=self.device,
                              generator=generator) * self.sigmas[0]
         gamma = float(estimator_config.get("gamma", 4.0))
+        execution = estimator_config.get("execution", "gradient")
+        if execution not in {"gradient", "resample"}:
+            raise ValueError(execution)
+        if execution == "resample" and (estimator_config.get("oracle") != "future" or estimator.kind != "mc"):
+            raise ValueError("Categorical execution requires fresh MC full-future candidates")
         start_index = self.steps - int(self.config.get("guided_steps", 10))
         diagnostics = []
         previous_guidance = None
@@ -239,10 +246,17 @@ class ImageEngine:
         times_before = self.reward_seconds, self.vjp_seconds
         started = time.perf_counter()
         for index in range(self.steps):
-            guided = index >= start_index and index < self.steps - 1 and gamma != 0
-            transition = self.transition(latent, index, with_grad=guided or capture_callback is not None)
+            guided = index >= start_index and index < self.steps - 1 and (gamma != 0 or execution == "resample")
+            transition = self.transition(latent, index,
+                                         with_grad=(guided and execution == "gradient") or capture_callback is not None)
             if capture_callback is not None and index >= start_index and index < self.steps - 1:
                 capture_callback(transition, prompt, seed)
+            if index in self.config.get("trace_indices", []):
+                trace_dir = Path(output) / "states"
+                trace_dir.mkdir(parents=True, exist_ok=True)
+                torch.save({"latent": transition.x.detach().cpu(), "index": index,
+                            "prompt": prompt, "seed": seed, "image_config": self.config,
+                            "estimator_config": estimator_config}, trace_dir / f"step{index:02d}.pt")
             if guided:
                 oracle = estimator_config.get("oracle", "proxy")
                 if oracle == "proxy":
@@ -256,31 +270,37 @@ class ImageEngine:
                                                  self.reward, future_reward)
                 else:
                     raise ValueError(oracle)
-                correction = self.correction(transition, estimate.ratio)
-                raw_correction_norm = float(correction.norm())
-                if estimator.kind == "guidance_ema" and previous_guidance is not None:
-                    beta = float(estimator_config.get("ema_beta", 0.5))
-                    correction = beta * correction + (1 - beta) * previous_guidance
-                previous_guidance = correction.detach().clone()
-                if not torch.isfinite(correction).all():
-                    raise FloatingPointError(
-                        f"Nonfinite VJP guidance at index {index}: {estimate.diagnostics}")
-                displacement = gamma * transition.correction_gain * correction
-                displacement_norm = float(displacement.double().norm())
-                diagnostics.append(dict(index=index, correction_norm=float(correction.norm()),
-                                        raw_correction_norm=raw_correction_norm,
+                if execution == "resample":
+                    selected_latent, execution_diagnostics = categorical_transition(
+                        transition.mean.detach(), transition.noise_std,
+                        estimate.eps, estimate.log_weights, selection_generator)
+                else:
+                    correction = self.correction(transition, estimate.ratio)
+                    raw_correction_norm = float(correction.norm())
+                    if estimator.kind == "guidance_ema" and previous_guidance is not None:
+                        beta = float(estimator_config.get("ema_beta", 0.5))
+                        correction = beta * correction + (1 - beta) * previous_guidance
+                    previous_guidance = correction.detach().clone()
+                    if not torch.isfinite(correction).all():
+                        raise FloatingPointError(
+                            f"Nonfinite VJP guidance at index {index}: {estimate.diagnostics}")
+                    displacement, execution_diagnostics = gaussian_displacement(
+                        correction, transition.correction_gain, gamma, transition.noise_std,
+                        estimator_config.get("execution_kl_limit"))
+                    execution_diagnostics.update(correction_norm=float(correction.norm()),
+                                                 raw_correction_norm=raw_correction_norm)
+                    mean = transition.mean.detach() + displacement
+                diagnostics.append(dict(index=index, execution=execution,
                                         sigma=self.sigmas[index], sigma_next=self.sigmas[index + 1],
                                         noise_std=transition.noise_std,
                                         correction_gain=transition.correction_gain,
-                                        displacement_norm=displacement_norm,
-                                        displacement_over_noise=displacement_norm / transition.noise_std,
-                                        execution_kl=0.5 * (displacement_norm / transition.noise_std) ** 2,
-                                        **estimate.diagnostics))
-                mean = transition.mean.detach() + displacement
+                                        **execution_diagnostics, **estimate.diagnostics))
             else:
                 mean = transition.mean.detach()
             noise = torch.randn(latent.shape, device=self.device, generator=generator)
-            latent = mean + transition.noise_std * noise
+            # Advance the base RNG once per step for aligned streams. A selected
+            # candidate already contains its transition noise and gets no extra noise.
+            latent = selected_latent if guided and execution == "resample" else mean + transition.noise_std * noise
             del transition
         images = self.decode(latent.flatten(1))
         scores, embeddings, alignment = self.score_images(images, return_embeddings=True)

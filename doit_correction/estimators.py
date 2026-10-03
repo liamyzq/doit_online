@@ -21,6 +21,8 @@ class Estimate:
     h: torch.Tensor
     u: torch.Tensor
     diagnostics: dict
+    eps: torch.Tensor | None = None
+    log_weights: torch.Tensor | None = None
 
 
 def gaussian_noise(n, dimension, generator, device, antithetic=True):

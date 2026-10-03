@@ -1,0 +1,6 @@
+{
+  "id": "exp-036-execution-checks",
+  "mode": "execution_checks",
+  "seed": 360001,
+  "purpose": "Detect incorrect Gaussian displacement/KL, extra noise or argmax in categorical execution, and mismatched full-future candidates, weights or costs. Stop image kernel runs on any failure."
+}
