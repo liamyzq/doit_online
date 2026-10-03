@@ -13,6 +13,8 @@ Start with [PROGRESS.md](PROGRESS.md), [the study protocol](docs/study.md), and
 job events are in `jobs/jobs.jsonl`. Large artifacts live on Orion.
 Commands for running a committed configuration and analyzing paired image
 groups are in [the reproduction guide](docs/reproduction.md).
+The [estimator note](docs/estimators.md) explains the implemented moment
+identities, the biased EMA controls, and the costs of future sampling.
 
 The user authorized Orion GPUs 0--4, including concurrent use with other users
 when free memory permits. Image correctness and effectiveness precede RL scaling.

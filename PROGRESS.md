@@ -13,14 +13,18 @@ Exp-030 completed all 160 images with no denominator events. Keep gradient EMA
 beta 0.25 at tau 1 / gamma 8 and both direct-future settings for independent
 confirmation. Their discovery gains do not establish success. Stronger guidance
 at tau 0.6 failed on new prompts/seeds for both EMA and MC32. The moderate EMA
-has only a small gain and is weaker than the retained EMA on reward/alignment.
+has only a small gain, but discovery image review finds it cleaner than the
+high-reward EMA. Include it in a bounded confirmation follow-up, exp-032.
 
-The next wave, `exp-031`, locks seven groups: unguided, both MC8 settings, selected
+The active wave, `exp-031`, locks seven groups: unguided, both MC8 settings, selected
 MC32, retained EMA, and independent/paired full-future sampling. Each gets eight
 prompts and the reserved seeds 101/113/127/139/151/163/179/191, for 448 images.
-These seeds remain unused. No further image hyperparameter tuning follows this
-confirmation. Its reward/cost, alignment and diversity evidence decides the RL
-gate; mixed final results close under the evaluated budget.
+The queue is active at commit 19c1bf7; its first guided outputs validate the new
+timing fields. Exp-032 adds 64 images with the already tested moderate EMA
+parameters after this finite queue exits, for 512 confirmation images in total.
+No further image hyperparameter tuning follows these comparisons. Their
+reward/cost, alignment and diversity evidence decides the RL gate; mixed final
+results close under the evaluated budget.
 
 ## Validated implementation and baseline
 
@@ -161,7 +165,8 @@ Both MC8 settings remain as comparators because the moderate setting has higher
 reward and the strong setting higher alignment. MC32 gamma 8 averages only
 6.0708 reward; select gamma 4 for confirmation. EMA at tau 0.6 / gamma 8 falls to
 5.0380 reward. Moderate EMA averages 6.2228 reward and 0.2690 alignment, weaker
-than the retained EMA; close those two EMA settings.
+than the high-reward EMA on these two metrics. Close the tau 0.6 / gamma 8 setting.
+The visual review below motivates keeping moderate EMA for exp-032.
 
 The retained EMA gains 0.1329 reward over moderate MC8 at the same query budget,
 but its two-seed embedding distance is lower. Independent future M4 gains
@@ -174,3 +179,19 @@ Grouped details are in `artifacts/exp-030-summary.json`, derived from the
 original exp-030 grouping with `mc8-moderate` selected as the primary baseline.
 The new per-image timing fields persist existing VJP/reward counters and sums
 of step timers for exp-031. They do not recover missing historical VJP timings.
+
+Visual review of all selected groups at discovery seed 53 finds a concrete EMA
+failure: the lighthouse image has strong high-frequency texture and block-like
+artifacts, although its aesthetic reward remains 6.348 versus unguided 6.360.
+The paired-future M8 image is visibly cleaner at reward 6.92. MC8 strong also
+damages the lighthouse and airplane images. Record this mismatch between reward
+and visible quality when judging confirmation; an average reward gain alone
+cannot override it. The raw lighthouse images and contact sheets are retained
+under the exp-030 artifact directories.
+
+Exp-032 is a bounded addition of the already tested moderate EMA configuration,
+motivated by this discovery-image quality difference. It is selected after the
+first ten exp-031 shards arrived; its parameters are not selected from those
+partial confirmation means. Its new eight-run manifest remains separate from
+the active exp-031 queue, and its wall-clock comparison will acknowledge the
+different execution wave. No further EMA setting follows it.

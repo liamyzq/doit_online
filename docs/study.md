@@ -224,3 +224,21 @@ total image time includes it. Earlier image records lack the VJP/reward timing
 fields, so the grouped analysis reports these unrecorded fields as null. The
 first confirmation results must contain finite nonnegative timing fields; a
 failure would trigger a metadata repair, not a change to sampling parameters.
+
+### Moderate EMA confirmation after discovery image review (exp-032)
+
+The discovery image review finds visible artifacts in the higher-reward EMA
+setting on lighthouse seed 53. The already tested moderate setting (beta 0.25,
+tau 0.3, gamma 1) remains clean in the inspected lighthouse and airplane images.
+Its smaller aggregate reward/alignment values therefore do not establish that
+it is inferior when visible quality is included. Add this existing setting to
+the reserved comparison without changing its parameters: eight seed shards,
+64 images, and the same paired baseline artifacts from exp-031.
+
+This bounded addition is chosen from discovery visual evidence after the first
+ten exp-031 shards became available. Do not use partial confirmation means to
+select its parameters or change the active exp-031 manifest. Run its separate
+finite queue after exp-031 exits, and preserve this selection timing in the
+research record. Interpret cross-wave wall-clock differences cautiously; the
+query and score budgets are exactly matched to MC8. No further EMA setting is
+added after this comparison.

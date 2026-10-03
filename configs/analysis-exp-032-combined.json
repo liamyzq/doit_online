@@ -1,0 +1,85 @@
+{
+  "baseline": "mc8-moderate",
+  "groups": {
+    "base": [
+      "artifacts/exp-031-confirm-base-s101",
+      "artifacts/exp-031-confirm-base-s113",
+      "artifacts/exp-031-confirm-base-s127",
+      "artifacts/exp-031-confirm-base-s139",
+      "artifacts/exp-031-confirm-base-s151",
+      "artifacts/exp-031-confirm-base-s163",
+      "artifacts/exp-031-confirm-base-s179",
+      "artifacts/exp-031-confirm-base-s191"
+    ],
+    "mc8-moderate": [
+      "artifacts/exp-031-confirm-mc8-moderate-s101",
+      "artifacts/exp-031-confirm-mc8-moderate-s113",
+      "artifacts/exp-031-confirm-mc8-moderate-s127",
+      "artifacts/exp-031-confirm-mc8-moderate-s139",
+      "artifacts/exp-031-confirm-mc8-moderate-s151",
+      "artifacts/exp-031-confirm-mc8-moderate-s163",
+      "artifacts/exp-031-confirm-mc8-moderate-s179",
+      "artifacts/exp-031-confirm-mc8-moderate-s191"
+    ],
+    "mc8-strong": [
+      "artifacts/exp-031-confirm-mc8-strong-s101",
+      "artifacts/exp-031-confirm-mc8-strong-s113",
+      "artifacts/exp-031-confirm-mc8-strong-s127",
+      "artifacts/exp-031-confirm-mc8-strong-s139",
+      "artifacts/exp-031-confirm-mc8-strong-s151",
+      "artifacts/exp-031-confirm-mc8-strong-s163",
+      "artifacts/exp-031-confirm-mc8-strong-s179",
+      "artifacts/exp-031-confirm-mc8-strong-s191"
+    ],
+    "mc32-g4": [
+      "artifacts/exp-031-confirm-mc32-g4-s101",
+      "artifacts/exp-031-confirm-mc32-g4-s113",
+      "artifacts/exp-031-confirm-mc32-g4-s127",
+      "artifacts/exp-031-confirm-mc32-g4-s139",
+      "artifacts/exp-031-confirm-mc32-g4-s151",
+      "artifacts/exp-031-confirm-mc32-g4-s163",
+      "artifacts/exp-031-confirm-mc32-g4-s179",
+      "artifacts/exp-031-confirm-mc32-g4-s191"
+    ],
+    "gema-reward": [
+      "artifacts/exp-031-confirm-gema-reward-s101",
+      "artifacts/exp-031-confirm-gema-reward-s113",
+      "artifacts/exp-031-confirm-gema-reward-s127",
+      "artifacts/exp-031-confirm-gema-reward-s139",
+      "artifacts/exp-031-confirm-gema-reward-s151",
+      "artifacts/exp-031-confirm-gema-reward-s163",
+      "artifacts/exp-031-confirm-gema-reward-s179",
+      "artifacts/exp-031-confirm-gema-reward-s191"
+    ],
+    "future4-independent": [
+      "artifacts/exp-031-confirm-future4-independent-s101",
+      "artifacts/exp-031-confirm-future4-independent-s113",
+      "artifacts/exp-031-confirm-future4-independent-s127",
+      "artifacts/exp-031-confirm-future4-independent-s139",
+      "artifacts/exp-031-confirm-future4-independent-s151",
+      "artifacts/exp-031-confirm-future4-independent-s163",
+      "artifacts/exp-031-confirm-future4-independent-s179",
+      "artifacts/exp-031-confirm-future4-independent-s191"
+    ],
+    "future8-paired": [
+      "artifacts/exp-031-confirm-future8-paired-s101",
+      "artifacts/exp-031-confirm-future8-paired-s113",
+      "artifacts/exp-031-confirm-future8-paired-s127",
+      "artifacts/exp-031-confirm-future8-paired-s139",
+      "artifacts/exp-031-confirm-future8-paired-s151",
+      "artifacts/exp-031-confirm-future8-paired-s163",
+      "artifacts/exp-031-confirm-future8-paired-s179",
+      "artifacts/exp-031-confirm-future8-paired-s191"
+    ],
+    "gema-moderate": [
+      "artifacts/exp-032-confirm-gema-moderate-s101",
+      "artifacts/exp-032-confirm-gema-moderate-s113",
+      "artifacts/exp-032-confirm-gema-moderate-s127",
+      "artifacts/exp-032-confirm-gema-moderate-s139",
+      "artifacts/exp-032-confirm-gema-moderate-s151",
+      "artifacts/exp-032-confirm-gema-moderate-s163",
+      "artifacts/exp-032-confirm-gema-moderate-s179",
+      "artifacts/exp-032-confirm-gema-moderate-s191"
+    ]
+  }
+}

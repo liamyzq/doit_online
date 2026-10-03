@@ -1,0 +1,34 @@
+[
+  {
+    "id": "exp-032-confirm-gema-moderate-s101",
+    "config": "configs/exp-032-confirm-gema-moderate-s101.json"
+  },
+  {
+    "id": "exp-032-confirm-gema-moderate-s113",
+    "config": "configs/exp-032-confirm-gema-moderate-s113.json"
+  },
+  {
+    "id": "exp-032-confirm-gema-moderate-s127",
+    "config": "configs/exp-032-confirm-gema-moderate-s127.json"
+  },
+  {
+    "id": "exp-032-confirm-gema-moderate-s139",
+    "config": "configs/exp-032-confirm-gema-moderate-s139.json"
+  },
+  {
+    "id": "exp-032-confirm-gema-moderate-s151",
+    "config": "configs/exp-032-confirm-gema-moderate-s151.json"
+  },
+  {
+    "id": "exp-032-confirm-gema-moderate-s163",
+    "config": "configs/exp-032-confirm-gema-moderate-s163.json"
+  },
+  {
+    "id": "exp-032-confirm-gema-moderate-s179",
+    "config": "configs/exp-032-confirm-gema-moderate-s179.json"
+  },
+  {
+    "id": "exp-032-confirm-gema-moderate-s191",
+    "config": "configs/exp-032-confirm-gema-moderate-s191.json"
+  }
+]

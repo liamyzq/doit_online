@@ -1,0 +1,39 @@
+{
+  "id": "exp-032-confirm-gema-moderate-s113",
+  "mode": "image",
+  "purpose": "Confirm the already tested moderate EMA setting after visual review of discovery images found artifacts in the higher-reward EMA setting. Parameters are fixed from discovery and are not tuned on confirmation outcomes.",
+  "image": {
+    "size": 512,
+    "steps": 20,
+    "guided_steps": 10,
+    "proxy": "euler",
+    "reward_batch": 2,
+    "future_batch": 2
+  },
+  "prompts": [
+    "bernese",
+    "formula1",
+    "airplane",
+    "labrador",
+    "lighthouse",
+    "cafe",
+    "orchid",
+    "mountain"
+  ],
+  "seeds": [
+    113
+  ],
+  "estimator": {
+    "kind": "guidance_ema",
+    "antithetic": true,
+    "samples": 8,
+    "warmup_samples": 32,
+    "warmup_steps": 1,
+    "refresh_every": 0,
+    "tau": 0.3,
+    "reward_offset": 6.0,
+    "ema_beta": 0.25,
+    "gamma": 1.0
+  },
+  "source_config": "configs/exp-030-expanded-gema-moderate-s41.json"
+}
