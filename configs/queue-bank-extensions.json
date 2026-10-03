@@ -1,0 +1,10 @@
+[
+  {
+    "id": "exp-007-fixed-spatial-dct",
+    "config": "configs/exp-007-fixed-spatial-dct.json"
+  },
+  {
+    "id": "exp-012-spider-refresh",
+    "config": "configs/exp-012-spider-refresh.json"
+  }
+]

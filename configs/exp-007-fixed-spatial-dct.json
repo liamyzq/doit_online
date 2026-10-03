@@ -1,0 +1,545 @@
+{
+  "mode": "fixed",
+  "captures": [
+    "/home/mlw0719/doit_correction_storage/runs/exp-002-capture-bernese",
+    "/home/mlw0719/doit_correction_storage/runs/exp-003-capture-formula1"
+  ],
+  "repeats": 16,
+  "with_vjp": false,
+  "id": "exp-007-fixed-spatial-dct",
+  "purpose": "Test whether low spatial frequencies address the high-dimensional information limit of full and random-projection online surrogates. Same fresh and reference banks as the discovery grid; not an independent confirmation.",
+  "variants": [
+    {
+      "name": "dct-affine-k4-r1.0-c0.25",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "update": "rls",
+        "projection_kind": "spatial_dct",
+        "surrogate": "affine",
+        "projection_dim": 4,
+        "ridge": 1.0,
+        "cv_coefficient": 0.25
+      }
+    },
+    {
+      "name": "dct-affine-k4-r1.0-c1.0",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "update": "rls",
+        "projection_kind": "spatial_dct",
+        "surrogate": "affine",
+        "projection_dim": 4,
+        "ridge": 1.0,
+        "cv_coefficient": 1.0
+      }
+    },
+    {
+      "name": "dct-affine-k4-r10.0-c0.25",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "update": "rls",
+        "projection_kind": "spatial_dct",
+        "surrogate": "affine",
+        "projection_dim": 4,
+        "ridge": 10.0,
+        "cv_coefficient": 0.25
+      }
+    },
+    {
+      "name": "dct-affine-k4-r10.0-c1.0",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "update": "rls",
+        "projection_kind": "spatial_dct",
+        "surrogate": "affine",
+        "projection_dim": 4,
+        "ridge": 10.0,
+        "cv_coefficient": 1.0
+      }
+    },
+    {
+      "name": "dct-affine-k16-r1.0-c0.25",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "update": "rls",
+        "projection_kind": "spatial_dct",
+        "surrogate": "affine",
+        "projection_dim": 16,
+        "ridge": 1.0,
+        "cv_coefficient": 0.25
+      }
+    },
+    {
+      "name": "dct-affine-k16-r1.0-c1.0",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "update": "rls",
+        "projection_kind": "spatial_dct",
+        "surrogate": "affine",
+        "projection_dim": 16,
+        "ridge": 1.0,
+        "cv_coefficient": 1.0
+      }
+    },
+    {
+      "name": "dct-affine-k16-r10.0-c0.25",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "update": "rls",
+        "projection_kind": "spatial_dct",
+        "surrogate": "affine",
+        "projection_dim": 16,
+        "ridge": 10.0,
+        "cv_coefficient": 0.25
+      }
+    },
+    {
+      "name": "dct-affine-k16-r10.0-c1.0",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "update": "rls",
+        "projection_kind": "spatial_dct",
+        "surrogate": "affine",
+        "projection_dim": 16,
+        "ridge": 10.0,
+        "cv_coefficient": 1.0
+      }
+    },
+    {
+      "name": "dct-affine-k64-r1.0-c0.25",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "update": "rls",
+        "projection_kind": "spatial_dct",
+        "surrogate": "affine",
+        "projection_dim": 64,
+        "ridge": 1.0,
+        "cv_coefficient": 0.25
+      }
+    },
+    {
+      "name": "dct-affine-k64-r1.0-c1.0",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "update": "rls",
+        "projection_kind": "spatial_dct",
+        "surrogate": "affine",
+        "projection_dim": 64,
+        "ridge": 1.0,
+        "cv_coefficient": 1.0
+      }
+    },
+    {
+      "name": "dct-affine-k64-r10.0-c0.25",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "update": "rls",
+        "projection_kind": "spatial_dct",
+        "surrogate": "affine",
+        "projection_dim": 64,
+        "ridge": 10.0,
+        "cv_coefficient": 0.25
+      }
+    },
+    {
+      "name": "dct-affine-k64-r10.0-c1.0",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "update": "rls",
+        "projection_kind": "spatial_dct",
+        "surrogate": "affine",
+        "projection_dim": 64,
+        "ridge": 10.0,
+        "cv_coefficient": 1.0
+      }
+    },
+    {
+      "name": "dct-affine-k16-forget0.5",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "update": "rls",
+        "projection_kind": "spatial_dct",
+        "surrogate": "affine",
+        "projection_dim": 16,
+        "ridge": 1.0,
+        "forgetting": 0.5
+      }
+    },
+    {
+      "name": "dct-affine-k16-forget0.8",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "update": "rls",
+        "projection_kind": "spatial_dct",
+        "surrogate": "affine",
+        "projection_dim": 16,
+        "ridge": 1.0,
+        "forgetting": 0.8
+      }
+    },
+    {
+      "name": "dct-exponential-k4-r1.0-c0.25",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "update": "rls",
+        "projection_kind": "spatial_dct",
+        "surrogate": "exponential",
+        "projection_dim": 4,
+        "ridge": 1.0,
+        "cv_coefficient": 0.25
+      }
+    },
+    {
+      "name": "dct-exponential-k4-r1.0-c1.0",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "update": "rls",
+        "projection_kind": "spatial_dct",
+        "surrogate": "exponential",
+        "projection_dim": 4,
+        "ridge": 1.0,
+        "cv_coefficient": 1.0
+      }
+    },
+    {
+      "name": "dct-exponential-k4-r10.0-c0.25",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "update": "rls",
+        "projection_kind": "spatial_dct",
+        "surrogate": "exponential",
+        "projection_dim": 4,
+        "ridge": 10.0,
+        "cv_coefficient": 0.25
+      }
+    },
+    {
+      "name": "dct-exponential-k4-r10.0-c1.0",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "update": "rls",
+        "projection_kind": "spatial_dct",
+        "surrogate": "exponential",
+        "projection_dim": 4,
+        "ridge": 10.0,
+        "cv_coefficient": 1.0
+      }
+    },
+    {
+      "name": "dct-exponential-k16-r1.0-c0.25",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "update": "rls",
+        "projection_kind": "spatial_dct",
+        "surrogate": "exponential",
+        "projection_dim": 16,
+        "ridge": 1.0,
+        "cv_coefficient": 0.25
+      }
+    },
+    {
+      "name": "dct-exponential-k16-r1.0-c1.0",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "update": "rls",
+        "projection_kind": "spatial_dct",
+        "surrogate": "exponential",
+        "projection_dim": 16,
+        "ridge": 1.0,
+        "cv_coefficient": 1.0
+      }
+    },
+    {
+      "name": "dct-exponential-k16-r10.0-c0.25",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "update": "rls",
+        "projection_kind": "spatial_dct",
+        "surrogate": "exponential",
+        "projection_dim": 16,
+        "ridge": 10.0,
+        "cv_coefficient": 0.25
+      }
+    },
+    {
+      "name": "dct-exponential-k16-r10.0-c1.0",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "update": "rls",
+        "projection_kind": "spatial_dct",
+        "surrogate": "exponential",
+        "projection_dim": 16,
+        "ridge": 10.0,
+        "cv_coefficient": 1.0
+      }
+    },
+    {
+      "name": "dct-exponential-k64-r1.0-c0.25",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "update": "rls",
+        "projection_kind": "spatial_dct",
+        "surrogate": "exponential",
+        "projection_dim": 64,
+        "ridge": 1.0,
+        "cv_coefficient": 0.25
+      }
+    },
+    {
+      "name": "dct-exponential-k64-r1.0-c1.0",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "update": "rls",
+        "projection_kind": "spatial_dct",
+        "surrogate": "exponential",
+        "projection_dim": 64,
+        "ridge": 1.0,
+        "cv_coefficient": 1.0
+      }
+    },
+    {
+      "name": "dct-exponential-k64-r10.0-c0.25",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "update": "rls",
+        "projection_kind": "spatial_dct",
+        "surrogate": "exponential",
+        "projection_dim": 64,
+        "ridge": 10.0,
+        "cv_coefficient": 0.25
+      }
+    },
+    {
+      "name": "dct-exponential-k64-r10.0-c1.0",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "update": "rls",
+        "projection_kind": "spatial_dct",
+        "surrogate": "exponential",
+        "projection_dim": 64,
+        "ridge": 10.0,
+        "cv_coefficient": 1.0
+      }
+    },
+    {
+      "name": "dct-exponential-k16-forget0.5",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "update": "rls",
+        "projection_kind": "spatial_dct",
+        "surrogate": "exponential",
+        "projection_dim": 16,
+        "ridge": 1.0,
+        "forgetting": 0.5
+      }
+    },
+    {
+      "name": "dct-exponential-k16-forget0.8",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "update": "rls",
+        "projection_kind": "spatial_dct",
+        "surrogate": "exponential",
+        "projection_dim": 16,
+        "ridge": 1.0,
+        "forgetting": 0.8
+      }
+    }
+  ]
+}

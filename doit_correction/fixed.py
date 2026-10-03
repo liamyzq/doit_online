@@ -127,6 +127,52 @@ def sample_indices(bank_n, n, anti, seed):
     return torch.randperm(half, generator=generator)[:n]
 
 
+def probe_future(config, output):
+    """Couple later noises to resolve conditional-future variation."""
+    paths = []
+    for directory in config["captures"]:
+        paths.extend(row["path"] for row in json.loads((Path(directory) / "states.json").read_text())
+                     if row["index"] in config.get("indices", [10, 16]))
+    first = torch.load(paths[0], map_location="cpu", weights_only=False)
+    engine = ImageEngine(first["image_config"])
+    output, rows = Path(output), []
+    n, branches = int(config.get("samples", 64)), int(config.get("branches", 2))
+    for path in paths:
+        state = torch.load(path, map_location="cpu", weights_only=False)
+        engine.use_prompt(state["prompt"])
+        transition = engine.transition(state["latent"].to(engine.device), state["index"], True)
+        seed = state["seed"] * 700001 + state["index"] * 1009 + 11000009
+        eps = gaussian_noise(n, engine.dimension,
+                             torch.Generator(device=engine.device).manual_seed(seed), engine.device)
+        proxy = engine.reward(transition.endpoint_mean[None] + transition.endpoint_std * eps)
+        futures = torch.stack([engine.future_reward(transition, eps, seed + 7919 * (branch + 1),
+                                                    paired_future=True) for branch in range(branches)])
+        ratios = {}
+        for tau in config.get("taus", [0.3, 0.4, 0.6]):
+            proxy_weights = ((proxy.double() - 6) / tau).exp()
+            full_weights = ((futures.double() - 6) / tau).exp().mean(0)
+            proxy_ratio = (proxy_weights[:, None] * eps.double()).sum(0) / proxy_weights.sum()
+            full_ratio = (full_weights[:, None] * eps.double()).sum(0) / full_weights.sum()
+            proxy_guidance = engine.correction(transition, proxy_ratio.float(), retain_graph=True)
+            full_guidance = engine.correction(transition, full_ratio.float(), retain_graph=True)
+            ratios[str(tau)] = {"proxy_ratio": proxy_ratio.cpu(), "future_ratio": full_ratio.cpu(),
+                                "proxy_guidance": proxy_guidance.cpu(), "future_guidance": full_guidance.cpu()}
+        filename = f'{state["prompt"]}-{state["seed"]}-step{state["index"]:02d}.pt'
+        torch.save({"capture_path": path, "eps": eps.cpu(), "proxy_rewards": proxy.cpu(),
+                    "future_rewards": futures.cpu(), "ratios": ratios, "seed": seed,
+                    "paired_future": True}, output / filename)
+        row = {"path": str(output / filename), "capture_path": path, "samples": n, "branches": branches,
+               "proxy_mean_reward": float(proxy.mean()), "future_mean_reward": float(futures.mean()),
+               "score_forwards": engine.score_forwards, "reward_queries": engine.reward_queries}
+        rows.append(row)
+        dump(output / "probes.json", rows)
+        print(json.dumps(row), flush=True)
+        del transition
+    return {"states": len(rows), "reward_queries": engine.reward_queries,
+            "score_forwards": engine.score_forwards, "reward_seconds": engine.reward_seconds,
+            "vjp_seconds": engine.vjp_seconds}
+
+
 def write_rows(path, rows):
     if not rows:
         return
@@ -208,7 +254,9 @@ def evaluate(config, output):
                     "ess": result.diagnostics["ess"],
                     "heldout_prediction_mse": result.diagnostics["heldout_prediction_mse"],
                     "heldout_residual_mse": result.diagnostics["heldout_residual_mse"],
+                    "heldout_pair_difference_mse": result.diagnostics["heldout_pair_difference_mse"],
                     "weighted_residual_moment": result.diagnostics["weighted_residual_moment"],
+                    "proposal_norm": result.diagnostics.get("proposal_norm", 0.0),
                     "estimator_seconds": result.diagnostics["estimator_seconds"],
                     "live_oracle_seconds": result.diagnostics.get("oracle_seconds", 0.0),
                     "elapsed_seconds": time.perf_counter() - start,
@@ -224,7 +272,8 @@ def evaluate(config, output):
     for name, group in groups.items():
         summary = {"variant": name, "rows": len(group)}
         for field in ("ratio_relative_sq_error", "guidance_relative_sq_error", "heldout_residual_mse",
-                      "weighted_residual_moment", "queries", "estimator_seconds", "live_oracle_seconds"):
+                      "heldout_pair_difference_mse", "weighted_residual_moment", "proposal_norm",
+                      "ess", "queries", "estimator_seconds", "live_oracle_seconds"):
             vals = [row[field] for row in group if row[field] is not None]
             summary[field] = sum(vals) / len(vals) if vals else None
         summary["denominator_events"] = sum(r["denominator_floored"] for r in group)

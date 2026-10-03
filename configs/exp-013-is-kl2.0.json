@@ -1,0 +1,127 @@
+{
+  "id": "exp-013-is-kl2.0",
+  "mode": "fixed",
+  "purpose": "Live importance-corrected Gaussian-mixture proposals fitted to log weights. Tune tilt scale, KL radius and base mass at the same query budget; compare no-CV and residual-CV versions. Scale-zero controls share the proposal RNG schedule.",
+  "captures": [
+    "/home/mlw0719/doit_correction_storage/runs/exp-002-capture-bernese",
+    "/home/mlw0719/doit_correction_storage/runs/exp-003-capture-formula1"
+  ],
+  "repeats": 4,
+  "with_vjp": false,
+  "variants": [
+    {
+      "name": "is-kl2.0-s1.0-base0.2",
+      "estimator": {
+        "kind": "is",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "surrogate": "exponential",
+        "learning_rate": 1.0,
+        "cv_coefficient": 0.5,
+        "proposal_kl": 2.0,
+        "proposal_scale": 1.0,
+        "base_mass": 0.2
+      }
+    },
+    {
+      "name": "is-kl2.0-s1.0-base0.5",
+      "estimator": {
+        "kind": "is",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "surrogate": "exponential",
+        "learning_rate": 1.0,
+        "cv_coefficient": 0.5,
+        "proposal_kl": 2.0,
+        "proposal_scale": 1.0,
+        "base_mass": 0.5
+      }
+    },
+    {
+      "name": "is-kl2.0-s8.0-base0.2",
+      "estimator": {
+        "kind": "is",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "surrogate": "exponential",
+        "learning_rate": 1.0,
+        "cv_coefficient": 0.5,
+        "proposal_kl": 2.0,
+        "proposal_scale": 8.0,
+        "base_mass": 0.2
+      }
+    },
+    {
+      "name": "is-kl2.0-s8.0-base0.5",
+      "estimator": {
+        "kind": "is",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "surrogate": "exponential",
+        "learning_rate": 1.0,
+        "cv_coefficient": 0.5,
+        "proposal_kl": 2.0,
+        "proposal_scale": 8.0,
+        "base_mass": 0.5
+      }
+    },
+    {
+      "name": "is-kl2.0-s32.0-base0.2",
+      "estimator": {
+        "kind": "is",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "surrogate": "exponential",
+        "learning_rate": 1.0,
+        "cv_coefficient": 0.5,
+        "proposal_kl": 2.0,
+        "proposal_scale": 32.0,
+        "base_mass": 0.2
+      }
+    },
+    {
+      "name": "is-kl2.0-s32.0-base0.5",
+      "estimator": {
+        "kind": "is",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "surrogate": "exponential",
+        "learning_rate": 1.0,
+        "cv_coefficient": 0.5,
+        "proposal_kl": 2.0,
+        "proposal_scale": 32.0,
+        "base_mass": 0.5
+      }
+    }
+  ]
+}

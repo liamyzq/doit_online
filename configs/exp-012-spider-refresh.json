@@ -1,0 +1,325 @@
+{
+  "id": "exp-012-spider-refresh",
+  "mode": "fixed",
+  "purpose": "Test whether larger refresh batches repair observed negative SPIDER denominators. Include matched MC schedules and total-budget controls. At refresh128 the whole stored bank is used, so repeats do not resample refresh noise; independent confirmation is required.",
+  "captures": [
+    "/home/mlw0719/doit_correction_storage/runs/exp-002-capture-bernese",
+    "/home/mlw0719/doit_correction_storage/runs/exp-003-capture-formula1"
+  ],
+  "repeats": 16,
+  "with_vjp": false,
+  "variants": [
+    {
+      "name": "spider-warm64-r2-m8",
+      "estimator": {
+        "kind": "spider",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 64,
+        "warmup_steps": 1,
+        "refresh_every": 2,
+        "tau": 0.3,
+        "reward_offset": 6.0
+      }
+    },
+    {
+      "name": "mc-warm64-r2-m8",
+      "estimator": {
+        "kind": "mc",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 64,
+        "warmup_steps": 1,
+        "refresh_every": 2,
+        "tau": 0.3,
+        "reward_offset": 6.0
+      }
+    },
+    {
+      "name": "spider-warm64-r2-m16",
+      "estimator": {
+        "kind": "spider",
+        "antithetic": true,
+        "samples": 16,
+        "warmup_samples": 64,
+        "warmup_steps": 1,
+        "refresh_every": 2,
+        "tau": 0.3,
+        "reward_offset": 6.0
+      }
+    },
+    {
+      "name": "mc-warm64-r2-m16",
+      "estimator": {
+        "kind": "mc",
+        "antithetic": true,
+        "samples": 16,
+        "warmup_samples": 64,
+        "warmup_steps": 1,
+        "refresh_every": 2,
+        "tau": 0.3,
+        "reward_offset": 6.0
+      }
+    },
+    {
+      "name": "spider-warm64-r3-m8",
+      "estimator": {
+        "kind": "spider",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 64,
+        "warmup_steps": 1,
+        "refresh_every": 3,
+        "tau": 0.3,
+        "reward_offset": 6.0
+      }
+    },
+    {
+      "name": "mc-warm64-r3-m8",
+      "estimator": {
+        "kind": "mc",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 64,
+        "warmup_steps": 1,
+        "refresh_every": 3,
+        "tau": 0.3,
+        "reward_offset": 6.0
+      }
+    },
+    {
+      "name": "spider-warm64-r3-m16",
+      "estimator": {
+        "kind": "spider",
+        "antithetic": true,
+        "samples": 16,
+        "warmup_samples": 64,
+        "warmup_steps": 1,
+        "refresh_every": 3,
+        "tau": 0.3,
+        "reward_offset": 6.0
+      }
+    },
+    {
+      "name": "mc-warm64-r3-m16",
+      "estimator": {
+        "kind": "mc",
+        "antithetic": true,
+        "samples": 16,
+        "warmup_samples": 64,
+        "warmup_steps": 1,
+        "refresh_every": 3,
+        "tau": 0.3,
+        "reward_offset": 6.0
+      }
+    },
+    {
+      "name": "spider-warm64-r4-m8",
+      "estimator": {
+        "kind": "spider",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 64,
+        "warmup_steps": 1,
+        "refresh_every": 4,
+        "tau": 0.3,
+        "reward_offset": 6.0
+      }
+    },
+    {
+      "name": "mc-warm64-r4-m8",
+      "estimator": {
+        "kind": "mc",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 64,
+        "warmup_steps": 1,
+        "refresh_every": 4,
+        "tau": 0.3,
+        "reward_offset": 6.0
+      }
+    },
+    {
+      "name": "spider-warm64-r4-m16",
+      "estimator": {
+        "kind": "spider",
+        "antithetic": true,
+        "samples": 16,
+        "warmup_samples": 64,
+        "warmup_steps": 1,
+        "refresh_every": 4,
+        "tau": 0.3,
+        "reward_offset": 6.0
+      }
+    },
+    {
+      "name": "mc-warm64-r4-m16",
+      "estimator": {
+        "kind": "mc",
+        "antithetic": true,
+        "samples": 16,
+        "warmup_samples": 64,
+        "warmup_steps": 1,
+        "refresh_every": 4,
+        "tau": 0.3,
+        "reward_offset": 6.0
+      }
+    },
+    {
+      "name": "spider-warm128-r2-m8",
+      "estimator": {
+        "kind": "spider",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 128,
+        "warmup_steps": 1,
+        "refresh_every": 2,
+        "tau": 0.3,
+        "reward_offset": 6.0
+      }
+    },
+    {
+      "name": "mc-warm128-r2-m8",
+      "estimator": {
+        "kind": "mc",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 128,
+        "warmup_steps": 1,
+        "refresh_every": 2,
+        "tau": 0.3,
+        "reward_offset": 6.0
+      }
+    },
+    {
+      "name": "spider-warm128-r2-m16",
+      "estimator": {
+        "kind": "spider",
+        "antithetic": true,
+        "samples": 16,
+        "warmup_samples": 128,
+        "warmup_steps": 1,
+        "refresh_every": 2,
+        "tau": 0.3,
+        "reward_offset": 6.0
+      }
+    },
+    {
+      "name": "mc-warm128-r2-m16",
+      "estimator": {
+        "kind": "mc",
+        "antithetic": true,
+        "samples": 16,
+        "warmup_samples": 128,
+        "warmup_steps": 1,
+        "refresh_every": 2,
+        "tau": 0.3,
+        "reward_offset": 6.0
+      }
+    },
+    {
+      "name": "spider-warm128-r3-m8",
+      "estimator": {
+        "kind": "spider",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 128,
+        "warmup_steps": 1,
+        "refresh_every": 3,
+        "tau": 0.3,
+        "reward_offset": 6.0
+      }
+    },
+    {
+      "name": "mc-warm128-r3-m8",
+      "estimator": {
+        "kind": "mc",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 128,
+        "warmup_steps": 1,
+        "refresh_every": 3,
+        "tau": 0.3,
+        "reward_offset": 6.0
+      }
+    },
+    {
+      "name": "spider-warm128-r3-m16",
+      "estimator": {
+        "kind": "spider",
+        "antithetic": true,
+        "samples": 16,
+        "warmup_samples": 128,
+        "warmup_steps": 1,
+        "refresh_every": 3,
+        "tau": 0.3,
+        "reward_offset": 6.0
+      }
+    },
+    {
+      "name": "mc-warm128-r3-m16",
+      "estimator": {
+        "kind": "mc",
+        "antithetic": true,
+        "samples": 16,
+        "warmup_samples": 128,
+        "warmup_steps": 1,
+        "refresh_every": 3,
+        "tau": 0.3,
+        "reward_offset": 6.0
+      }
+    },
+    {
+      "name": "spider-warm128-r4-m8",
+      "estimator": {
+        "kind": "spider",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 128,
+        "warmup_steps": 1,
+        "refresh_every": 4,
+        "tau": 0.3,
+        "reward_offset": 6.0
+      }
+    },
+    {
+      "name": "mc-warm128-r4-m8",
+      "estimator": {
+        "kind": "mc",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 128,
+        "warmup_steps": 1,
+        "refresh_every": 4,
+        "tau": 0.3,
+        "reward_offset": 6.0
+      }
+    },
+    {
+      "name": "spider-warm128-r4-m16",
+      "estimator": {
+        "kind": "spider",
+        "antithetic": true,
+        "samples": 16,
+        "warmup_samples": 128,
+        "warmup_steps": 1,
+        "refresh_every": 4,
+        "tau": 0.3,
+        "reward_offset": 6.0
+      }
+    },
+    {
+      "name": "mc-warm128-r4-m16",
+      "estimator": {
+        "kind": "mc",
+        "antithetic": true,
+        "samples": 16,
+        "warmup_samples": 128,
+        "warmup_steps": 1,
+        "refresh_every": 4,
+        "tau": 0.3,
+        "reward_offset": 6.0
+      }
+    }
+  ]
+}

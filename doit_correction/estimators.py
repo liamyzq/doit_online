@@ -34,6 +34,24 @@ def gaussian_noise(n, dimension, generator, device, antithetic=True):
     return torch.cat(pieces)
 
 
+def spatial_dct_projection(dimension, k, device):
+    """Low spatial frequencies in each of the four image latent channels."""
+    side, band = math.isqrt(dimension // 4), math.isqrt(k // 4)
+    if 4 * side**2 != dimension or 4 * band**2 != k or band > side:
+        raise ValueError("Image DCT dimensions must be 4 * side**2 and 4 * band**2")
+    positions = torch.arange(side, device=device, dtype=torch.float64) + 0.5
+    frequencies = torch.arange(band, device=device, dtype=torch.float64)
+    basis = torch.cos(math.pi * positions[:, None] * frequencies[None] / side)
+    basis *= math.sqrt(2 / side)
+    basis[:, 0] /= math.sqrt(2)
+    spatial = torch.einsum("hi,wj->hwij", basis, basis).reshape(side**2, band**2)
+    projection = torch.zeros(dimension, k, device=device, dtype=torch.float64)
+    for channel in range(4):
+        projection[channel * side**2:(channel + 1) * side**2,
+                   channel * band**2:(channel + 1) * band**2] = spatial
+    return projection.float()
+
+
 class IntegrableSurrogate:
     """Affine or exponential-affine model with exact Gaussian moments.
 
@@ -50,8 +68,11 @@ class IntegrableSurrogate:
         k = int(config.get("projection_dim", 0))
         self.projection = None
         if k and k < m.numel():
-            matrix = torch.randn(m.numel(), k, device=m.device, generator=generator)
-            self.projection = torch.linalg.qr(matrix, mode="reduced").Q
+            if config.get("projection_kind", "random") == "spatial_dct":
+                self.projection = spatial_dct_projection(m.numel(), k, m.device)
+            else:
+                matrix = torch.randn(m.numel(), k, device=m.device, generator=generator)
+                self.projection = torch.linalg.qr(matrix, mode="reduced").Q
         self.k = k if self.projection is not None else m.numel()
         if self.update_rule == "rls" and self.k > 512:
             raise ValueError("Use a projection of at most 512 dimensions for RLS")
@@ -261,6 +282,11 @@ class MomentEstimator:
             applied_residual = f - predictions
         elif self.kind == "spider" and previous_rewards is not None:
             applied_residual = f - self.weights(previous_rewards)
+        pair_difference_mse = None
+        if (self.config.get("antithetic", True) and len(f) % 2 == 0
+                and self.kind not in {"is", "cv_is"}):
+            half = len(f) // 2
+            pair_difference_mse = float((applied_residual[:half] - applied_residual[half:]).square().mean())
         # Diagnostic target is held out from the current fit. It is measured
         # before update, and does not choose the current coefficient.
         diagnostics = {
@@ -269,6 +295,7 @@ class MomentEstimator:
             "ratio_norm": float(ratio.norm()), "raw_ratio_norm": float((raw_u / raw_h).norm()),
             "heldout_prediction_mse": float(model_residual_mse),
             "heldout_residual_mse": float(applied_residual.square().mean()),
+            "heldout_pair_difference_mse": pair_difference_mse,
             "weighted_residual_moment": float(((importance * applied_residual).square() * (e - ratio).square().sum(-1)).mean()),
         }
         # All current outputs above use only previously fitted memory.

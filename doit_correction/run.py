@@ -37,6 +37,9 @@ def main():
         if mode == "checks":
             from .checks import run_checks
             metrics = run_checks(output)
+        elif mode == "extension_checks":
+            from .extension_checks import run_extension_checks
+            metrics = run_extension_checks(output)
         elif mode == "image":
             from .image import ImageEngine
             engine = ImageEngine(config.get("image", {}))
@@ -58,6 +61,9 @@ def main():
         elif mode == "fixed":
             from .fixed import evaluate
             metrics = evaluate(config, output)
+        elif mode == "future_probe":
+            from .fixed import probe_future
+            metrics = probe_future(config, output)
         else:
             raise ValueError(mode)
         metrics.update(peak_allocated_mib=torch.cuda.max_memory_allocated() / 2**20,

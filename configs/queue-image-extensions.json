@@ -1,0 +1,46 @@
+[
+  {
+    "id": "exp-009-confirmation-capture-lighthouse",
+    "config": "configs/exp-009-confirmation-capture-lighthouse.json"
+  },
+  {
+    "id": "exp-010-confirmation-capture-formula1",
+    "config": "configs/exp-010-confirmation-capture-formula1.json"
+  },
+  {
+    "id": "exp-008-coupled-future-bernese",
+    "config": "configs/exp-008-coupled-future-bernese.json"
+  },
+  {
+    "id": "exp-008-coupled-future-formula1",
+    "config": "configs/exp-008-coupled-future-formula1.json"
+  },
+  {
+    "id": "exp-011-vjp-discovery",
+    "config": "configs/exp-011-vjp-discovery.json"
+  },
+  {
+    "id": "exp-013-is-kl0.1",
+    "config": "configs/exp-013-is-kl0.1.json"
+  },
+  {
+    "id": "exp-013-is-kl0.5",
+    "config": "configs/exp-013-is-kl0.5.json"
+  },
+  {
+    "id": "exp-013-is-kl2.0",
+    "config": "configs/exp-013-is-kl2.0.json"
+  },
+  {
+    "id": "exp-013-cv_is-kl0.1",
+    "config": "configs/exp-013-cv_is-kl0.1.json"
+  },
+  {
+    "id": "exp-013-cv_is-kl0.5",
+    "config": "configs/exp-013-cv_is-kl0.5.json"
+  },
+  {
+    "id": "exp-013-cv_is-kl2.0",
+    "config": "configs/exp-013-cv_is-kl2.0.json"
+  }
+]

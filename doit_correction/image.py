@@ -187,25 +187,37 @@ class ImageEngine:
         return torch.cat(results)
 
     @torch.no_grad()
-    def future_reward(self, transition, eps, seed):
+    def future_reward(self, transition, eps, seed, paired_future=False):
         """One full future rollout for each first-transition candidate.
 
-        The first transition uses supplied eps. Future noises are independent;
-        no guidance is applied while estimating the base conditional reward.
+        The first transition uses supplied eps. Optionally share all later
+        noises within each antithetic pair; each marginal is still the base
+        conditional rollout. No guidance is applied to these futures.
         """
         generator = torch.Generator(device=self.device).manual_seed(seed)
         rewards = []
         mean = transition.mean.detach()
         shape = mean.shape[1:]
-        for batch in eps.split(int(self.config.get("future_batch", 2))):
+        chunk = int(self.config.get("future_batch", 2))
+        if paired_future:
+            if len(eps) % 2:
+                raise ValueError("Paired futures require an even antithetic batch")
+            half = len(eps) // 2
+            eps = torch.stack([eps[:half], eps[half:]], dim=1).flatten(0, 1)
+            chunk = 2 * max(1, chunk // 2)
+        for batch in eps.split(chunk):
             x = mean + transition.noise_std * batch.reshape(-1, *shape)
             for index in range(transition.index + 1, self.steps):
                 prediction = self.predict_epsilon(x, index)
                 up, _, dt = euler_coefficients(*self.sigmas[index:index + 2])
-                noise = torch.randn(x.shape, device=self.device, generator=generator)
+                noise_shape = (len(x) // 2, *shape) if paired_future else x.shape
+                noise = torch.randn(noise_shape, device=self.device, generator=generator)
+                if paired_future:
+                    noise = noise.repeat_interleave(2, dim=0)
                 x = x + dt * prediction + up * noise
             rewards.append(self.reward(x.flatten(1)))
-        return torch.cat(rewards)
+        rewards = torch.cat(rewards)
+        return rewards.reshape(-1, 2).T.flatten() if paired_future else rewards
 
     def generate(self, prompt, seed, estimator_config, output, capture_callback=None):
         self.use_prompt(prompt)

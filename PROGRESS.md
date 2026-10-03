@@ -40,12 +40,68 @@ any successful method is scaled to the existing D4RL/QGPO RL setup.
    final reward without a loss of diversity or text alignment?
 3. Is practical-endpoint bias larger than the Monte Carlo error being reduced?
 
+## Current discovery observations
+
+The first saved state (step 10) shows that even a 512-sample reference has large
+direction noise. At tau 0.3, Bernese reference ratio squared norm is 25.55 and
+one quarter of the independent half-reference squared difference is 25.06;
+the corresponding Formula 1 values are 55.91 and 53.42. These are precision
+diagnostics, not exact debiased norms for the nonlinear ratio. Use paired method
+comparisons and the reference disagreement; do not claim the true direction is
+resolved by these references.
+
+For 32 first-transition candidates, proxy/full-future mean rewards at step 10
+are 4.439/5.791 (Bernese) and 2.950/4.643 (Formula 1). Reward correlations are
+0.203 and -0.240. These probes include independent later rollout noise, so they
+do not by themselves establish that guidance bias dominates. A targeted extension
+will share later noises within antithetic pairs and average two branches per
+candidate to distinguish conditional-future variation from continuation noise.
+Structured low-frequency latent projections will test whether a small spatial
+model can learn useful information that a random projection misses.
+
+Both captures completed with nine states and 7,201 total oracle queries each.
+The Formula 1 gamma-4 path ended visibly corrupted (reward 3.2103, alignment
+0.2521), although the Bernese path was coherent (6.2122, 0.2943). Confirmation
+captures therefore use gamma 0.4 with fresh seeds 37 and 59, including a new
+lighthouse prompt. Keep the unstable path as an observed failure condition.
+
+The Bernese capture and earlier same-seed calibration have identical first-step
+weights and ratio, but their first VJP norms differ by 0.00014; later trajectories
+diverge and final rewards differ by 0.104. The FP16 guided trajectory is sensitive
+to these small numerical changes. Paired seeds control random draws, not exact
+bitwise trajectories; endpoint conclusions require multiple seeds and replication
+when an effect is marginal. Capture wall-clock also includes reference/probe
+queries and must never be used as generation runtime.
+
+## First complete estimator comparison
+
+All 81 `exp-005` configurations completed on the two discovery paths. Ordinary
+affine LMS does not materially reduce ratio error. The best exponential LMS
+reduces post-warmup squared error by only 0.17% on Bernese and 0.26% on Formula 1,
+while its pointwise residual MSE falls by roughly 75%. Random-projection RLS
+is worse; two exponential settings also floor their denominators. A constant
+control is exactly redundant with paired antithetic samples, as expected.
+
+Every SPIDER refresh-32 configuration had denominator events (2--65 among 288
+state/repeat rows per configuration), making its mean error unusable. Try
+refresh64/128 with matched MC costs before closing this branch. Ratio EMA with
+beta0.25 reduces post-warmup error to 23.1% and 19.2% of M8 MC on the two paths,
+but it is a biased control and has not passed VJP or endpoint validation.
+
+The pointwise fit/error mismatch is consistent with learning the mean weight
+while antithetic MC already cancels constant numerator contributions. The next
+wave records residual differences within antithetic pairs, tests low spatial
+frequency regressors, and makes actual importance-corrected oracle queries.
+
 ## Next experiments
 
-1. Capture nine guided states per M32/gamma4 trajectory for Bernese seed 23 and
-   Formula 1 seed 11. Use 128-sample tuning banks and independent 512-sample
-   references, plus 32 coupled full-future probes at steps 10 and 16.
-2. Compare all proposed families and controls on frozen image states, including
-   held-out references and true query costs; tune only on discovery seeds.
-3. Evaluate retained methods on independent image rollouts. Evolve candidates
-   in response to measured failures, then scale successful methods to RL.
+1. Run focused DCT-moment and future-pairing checks; a failure stops the new
+   extensions until repaired. Then evaluate 28 spatial regression configurations
+   and 24 SPIDER/matched-MC configurations with larger refresh batches.
+2. Measure actual VJP error for 14 representative estimators/controls and run
+   38 live AIS/CV-AIS configurations across proposal scales, KL radii and mixture
+   masses. Query counts and actual proposal norms determine the comparison.
+3. Capture independent gamma0.4 states (lighthouse37 and formula1-59), and probe
+   coupled full futures on the initial captures. Confirm retained methods on
+   these states before endpoint image tuning and reserved-seed evaluation.
+4. Scale only image successes to RL; no correction method is validated yet.

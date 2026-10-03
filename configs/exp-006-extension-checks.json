@@ -1,0 +1,5 @@
+{
+  "id": "exp-006-extension-checks",
+  "mode": "extension_checks",
+  "purpose": "Detect incorrect DCT projection/moments or future-pair noise/order before any formal extension runs. Repair failures before launching spatial-surrogate or coupled-future experiments."
+}

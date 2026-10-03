@@ -1,0 +1,10 @@
+[
+  {
+    "id": "exp-008-coupled-future-bernese",
+    "config": "configs/exp-008-coupled-future-bernese.json"
+  },
+  {
+    "id": "exp-008-coupled-future-formula1",
+    "config": "configs/exp-008-coupled-future-formula1.json"
+  }
+]

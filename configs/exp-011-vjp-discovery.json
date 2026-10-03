@@ -1,0 +1,217 @@
+{
+  "mode": "fixed",
+  "captures": [
+    "/home/mlw0719/doit_correction_storage/runs/exp-002-capture-bernese",
+    "/home/mlw0719/doit_correction_storage/runs/exp-003-capture-formula1"
+  ],
+  "repeats": 8,
+  "with_vjp": true,
+  "id": "exp-011-vjp-discovery",
+  "purpose": "Test actual VJP error for representative learned candidates and ratio EMA, and distinguish averaging actual guidance from averaging moment ratios. Unstable SPIDER variants are excluded here and receive a higher-refresh-budget comparison separately.",
+  "variants": [
+    {
+      "name": "anti-m8",
+      "estimator": {
+        "kind": "mc",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0
+      }
+    },
+    {
+      "name": "anti-m16",
+      "estimator": {
+        "kind": "mc",
+        "antithetic": true,
+        "samples": 16,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0
+      }
+    },
+    {
+      "name": "anti-m32",
+      "estimator": {
+        "kind": "mc",
+        "antithetic": true,
+        "samples": 32,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0
+      }
+    },
+    {
+      "name": "constant-anti-m8",
+      "estimator": {
+        "kind": "constant",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0
+      }
+    },
+    {
+      "name": "ratio-ema-b0.25",
+      "estimator": {
+        "kind": "ema",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "ema_beta": 0.25
+      }
+    },
+    {
+      "name": "ratio-ema-b0.5",
+      "estimator": {
+        "kind": "ema",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "ema_beta": 0.5
+      }
+    },
+    {
+      "name": "ratio-ema-b0.75",
+      "estimator": {
+        "kind": "ema",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "ema_beta": 0.75
+      }
+    },
+    {
+      "name": "affine-frozen",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "surrogate": "affine",
+        "learning_rate": 0.5,
+        "freeze_after_steps": 1
+      }
+    },
+    {
+      "name": "exponential-lms-lr1.0-c0.5",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "surrogate": "exponential",
+        "learning_rate": 1.0,
+        "cv_coefficient": 0.5
+      }
+    },
+    {
+      "name": "affine-rls-k16-r10.0-c0.25",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "surrogate": "affine",
+        "update": "rls",
+        "projection_dim": 16,
+        "ridge": 10.0,
+        "cv_coefficient": 0.25
+      }
+    },
+    {
+      "name": "exponential-rls-k64-r10.0-c0.25",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "surrogate": "exponential",
+        "update": "rls",
+        "projection_dim": 64,
+        "ridge": 10.0,
+        "cv_coefficient": 0.25
+      }
+    },
+    {
+      "name": "guidance-ema-b0.25",
+      "estimator": {
+        "kind": "guidance_ema",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "ema_beta": 0.25
+      }
+    },
+    {
+      "name": "guidance-ema-b0.5",
+      "estimator": {
+        "kind": "guidance_ema",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "ema_beta": 0.5
+      }
+    },
+    {
+      "name": "guidance-ema-b0.75",
+      "estimator": {
+        "kind": "guidance_ema",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "ema_beta": 0.75
+      }
+    }
+  ]
+}

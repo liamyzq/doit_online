@@ -80,6 +80,12 @@ backbone/reward preprocessing, and discovery/confirmation seeds split in advance
 Report aesthetic reward, CLIP text alignment, within-prompt embedding diversity,
 query count, score forwards, VJP/update time, and total wall-clock. Include a
 source-convention baseline separately from the consistent-Euler baseline.
+Reserve fixed-state confirmation seeds 37 and 59, and final image confirmation
+seeds 101, 113, 127, 139, 151, 163, 179, and 191. Image tuning may use seeds
+11, 23, 41, and 53, never these reserved seeds.
+Tune the fresh-MC baseline's gamma and temperature at each query budget on the
+same discovery split used by learned methods. An endpoint gain over an
+overguided M=8 baseline alone is insufficient; compare to the tuned baseline.
 An image success requires an independent reward/cost improvement, supported by
 the fixed-state mechanism, without an evident loss of diversity or alignment.
 Marginal results receive a discriminating replication instead of being called

@@ -1,0 +1,19 @@
+{
+  "id": "exp-008-coupled-future-formula1",
+  "mode": "future_probe",
+  "purpose": "Resolve proxy versus conditional-future variation with two branches per first-transition candidate and shared later noise within each antithetic pair. Marginals remain exact base futures; this is a bias/variance probe, not an endpoint success claim.",
+  "captures": [
+    "/home/mlw0719/doit_correction_storage/runs/exp-003-capture-formula1"
+  ],
+  "indices": [
+    10,
+    16
+  ],
+  "samples": 64,
+  "branches": 2,
+  "taus": [
+    0.3,
+    0.4,
+    0.6
+  ]
+}
