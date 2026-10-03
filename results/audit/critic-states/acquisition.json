@@ -1,0 +1,93 @@
+{
+  "acquired_at_utc": "2026-10-03T17:30:00.132923+00:00",
+  "files": [
+    {
+      "name": "hopper-medium-v2.hdf5",
+      "url": "http://rail.eecs.berkeley.edu/datasets/offline_rl/gym_mujoco_v2/hopper_medium-v2.hdf5",
+      "status": "downloaded",
+      "partial_path": "/home/mlw0719/doit_correction_storage/data/d4rl/.hopper-medium-v2.1128358.part",
+      "curl_returncode": 0,
+      "effective_url": "http://rail.eecs.berkeley.edu/datasets/offline_rl/gym_mujoco_v2/hopper_medium-v2.hdf5",
+      "partial_size_bytes": 152756557,
+      "partial_first8_hex": "894844460d0a1a0a",
+      "partial_hdf5_signature": true,
+      "size_bytes": 152756557,
+      "first8_hex": "894844460d0a1a0a",
+      "hdf5_signature": true,
+      "signature_validation_note": "first8_hex rechecked against canonical HDF5 signature; initial boolean comparison used an incorrectly escaped literal"
+    },
+    {
+      "name": "halfcheetah-medium-v2.hdf5",
+      "url": "http://rail.eecs.berkeley.edu/datasets/offline_rl/gym_mujoco_v2/halfcheetah_medium-v2.hdf5",
+      "partial_path": "/home/mlw0719/doit_correction_storage/data/d4rl/.halfcheetah-medium-v2.1131433.part",
+      "curl_returncode": 0,
+      "effective_url": "http://rail.eecs.berkeley.edu/datasets/offline_rl/gym_mujoco_v2/halfcheetah_medium-v2.hdf5",
+      "partial_size_bytes": 237727262,
+      "partial_first8_hex": "894844460d0a1a0a",
+      "status": "downloaded",
+      "size_bytes": 237727262,
+      "first8_hex": "894844460d0a1a0a",
+      "hdf5_signature": true
+    }
+  ],
+  "preparation": {
+    "prepared_at_utc": "2026-10-03T17:45:21.883415+00:00",
+    "commit": "8886d3bf4664a007482f82acb518d1db36770107",
+    "command": ".venv/bin/python scripts/data/prepare_critic_states.py --config configs/critic-observation-split.json",
+    "script": "scripts/data/prepare_critic_states.py",
+    "config": "configs/critic-observation-split.json",
+    "selection_rule": "one nonterminal observation per distinct complete episode",
+    "normalization": "none",
+    "critic_outcomes_evaluated": false,
+    "tasks": {
+      "hopper-medium-v2": {
+        "observations": {
+          "shape": [
+            64,
+            11
+          ],
+          "dtype": "float32"
+        },
+        "actions": {
+          "shape": [
+            64,
+            3
+          ],
+          "dtype": "float32"
+        },
+        "split_counts": {
+          "calibration": 16,
+          "discovery": 16,
+          "confirmation": 32
+        },
+        "selection_file": "artifacts/critic-states/hopper-medium-v2/selection.json",
+        "observations_file": "artifacts/critic-states/hopper-medium-v2/observations.npy",
+        "actions_file": "artifacts/critic-states/hopper-medium-v2/actions.npy"
+      },
+      "halfcheetah-medium-v2": {
+        "observations": {
+          "shape": [
+            64,
+            17
+          ],
+          "dtype": "float32"
+        },
+        "actions": {
+          "shape": [
+            64,
+            6
+          ],
+          "dtype": "float32"
+        },
+        "split_counts": {
+          "calibration": 16,
+          "discovery": 16,
+          "confirmation": 32
+        },
+        "selection_file": "artifacts/critic-states/halfcheetah-medium-v2/selection.json",
+        "observations_file": "artifacts/critic-states/halfcheetah-medium-v2/observations.npy",
+        "actions_file": "artifacts/critic-states/halfcheetah-medium-v2/actions.npy"
+      }
+    }
+  }
+}

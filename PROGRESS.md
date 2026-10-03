@@ -17,16 +17,24 @@ results.
 
 Recovered KL shows future cafe failures with early displacement spikes, but a
 failed EMA lighthouse has lower maximum KL than clean comparators. Magnitude
-is not a sufficient failure explanation. Next: validate the new execution paths
-with exp-036/037, then run exp-040's 15 matched groups (240 discovery images),
-using one common KL cap, equal-setting M8 continuation controls, and categorical
-resampling. Record the existing negative evidence if a cap does not help.
+is not a sufficient failure explanation. Exp-036/037 passed the new execution
+checks and two counter-checked image smokes. Exp-040 completed all 240 discovery
+images: the common cap improves paired-future mean reward, but clear cafe,
+lighthouse and dog-texture failures remain in the strong guidance families.
+That cap repair is closed. Categorical resampling produces cleaner images with
+small unresolved reward gains and lower alignment. Exp-043 locks both
+categorical couplings, moderate MC8 with/without the cap, MC32 and base on eight
+new reserved seeds (384 images), with no further parameter selection.
 
 Hopper and HalfCheetah actor/critic pairs load without Gym/D4RL. Official medium-v2
 datasets are downloaded for true observation states; a committed split separates
-calibration, discovery, and confirmation by episode. The revised protocol permits
-this bounded low-dimensional mechanism study before image success. No simulator
-evaluation has run. All initial diagnostic queues have exited.
+calibration, discovery, and confirmation by episode. Exp-038 completed 9248 Q
+queries and passed both tasks' source-adapter identities with errors below 1e-6.
+Exp-039 fixes temperatures at calibration median local Q standard deviations:
+5.14282 for Hopper and 2.12394 for HalfCheetah. It next compares online versus
+independently assisted surrogates on moving action paths with fixed observations.
+Exp-041 tests the same realized future candidates at eight saved image states.
+No simulator evaluation has run. The exp-040 and calibration queues have exited.
 
 ## Initial study outcome
 

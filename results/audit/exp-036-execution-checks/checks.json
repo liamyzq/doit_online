@@ -1,0 +1,45 @@
+[
+  {
+    "name": "gaussian_execution_cap",
+    "failure_detected": "wrong gain/noise KL, changed uncapped displacement, or a violated cap",
+    "passed": true,
+    "stats": {
+      "raw_kl": 1800.0,
+      "applied_kl": 8.000001144409223
+    }
+  },
+  {
+    "name": "categorical_execution",
+    "failure_detected": "extra transition noise, wrong candidate, offset dependence, or argmax selection",
+    "passed": true,
+    "stats": {
+      "selected_indices": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        2,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0
+      ]
+    }
+  },
+  {
+    "name": "same_future_information",
+    "failure_detected": "different candidates/weights or additional oracle calls between execution rules",
+    "passed": true,
+    "stats": {
+      "future_calls": 1,
+      "reward_queries": 8
+    }
+  }
+]

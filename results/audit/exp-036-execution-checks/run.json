@@ -1,0 +1,25 @@
+{
+  "commit": "8886d3bf4664a007482f82acb518d1db36770107",
+  "config": "/home/mlw0719/doit_correction/configs/exp-036-execution-checks.json",
+  "experiment_id": "exp-036-execution-checks",
+  "pid": 1145586,
+  "cuda_visible_devices": "2",
+  "started_at": 1791049360.9377587,
+  "status": "completed",
+  "environment": {
+    "python": "3.12.9",
+    "torch": "2.6.0+cu124",
+    "cuda": "12.4",
+    "gpu": "NVIDIA RTX A6000",
+    "packages": {
+      "numpy": "1.26.4",
+      "diffusers": "0.32.2",
+      "transformers": "4.49.0",
+      "torchvision": "0.21.0",
+      "huggingface_hub": "0.36.0",
+      "safetensors": "0.8.0",
+      "h5py": "3.14.0"
+    }
+  },
+  "elapsed_seconds": 4.310924530029297
+}

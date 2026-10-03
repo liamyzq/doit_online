@@ -66,6 +66,12 @@ def main():
         elif mode == "critic_calibration":
             from .critic import calibrate
             metrics = calibrate(config, output)
+        elif mode == "critic_fixed":
+            from .critic import evaluate_fixed
+            metrics = evaluate_fixed(config, output)
+        elif mode == "kernel_probe":
+            from .kernel_probe import run_probe
+            metrics = run_probe(config, output)
         elif mode == "image":
             from .image import ImageEngine
             engine = ImageEngine(config.get("image", {}))

@@ -1,0 +1,7 @@
+{
+  "affine_denominator_abs_error": 2.346931537999808e-10,
+  "affine_numerator_max_abs_error": 9.25829458930938e-09,
+  "m1_in_sample_weighted_residual_moment": 0.0,
+  "m1_true_ratio_sq_error": 7.520717620849609,
+  "oracle_max_ratio_sq_error": 6.66286875331358e-12
+}

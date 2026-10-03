@@ -1,0 +1,194 @@
+[
+  {
+    "id": "exp-043-kernel-confirmation-mc32-free-s331",
+    "config": "configs/exp-043-kernel-confirmation-mc32-free-s331.json"
+  },
+  {
+    "id": "exp-043-kernel-confirmation-future8-resample-independent-s307",
+    "config": "configs/exp-043-kernel-confirmation-future8-resample-independent-s307.json"
+  },
+  {
+    "id": "exp-043-kernel-confirmation-mc8-moderate-k8192-s359",
+    "config": "configs/exp-043-kernel-confirmation-mc8-moderate-k8192-s359.json"
+  },
+  {
+    "id": "exp-043-kernel-confirmation-mc8-moderate-k8192-s311",
+    "config": "configs/exp-043-kernel-confirmation-mc8-moderate-k8192-s311.json"
+  },
+  {
+    "id": "exp-043-kernel-confirmation-mc8-moderate-free-s347",
+    "config": "configs/exp-043-kernel-confirmation-mc8-moderate-free-s347.json"
+  },
+  {
+    "id": "exp-043-kernel-confirmation-future8-resample-paired-s401",
+    "config": "configs/exp-043-kernel-confirmation-future8-resample-paired-s401.json"
+  },
+  {
+    "id": "exp-043-kernel-confirmation-base-s373",
+    "config": "configs/exp-043-kernel-confirmation-base-s373.json"
+  },
+  {
+    "id": "exp-043-kernel-confirmation-mc8-moderate-free-s401",
+    "config": "configs/exp-043-kernel-confirmation-mc8-moderate-free-s401.json"
+  },
+  {
+    "id": "exp-043-kernel-confirmation-future8-resample-independent-s401",
+    "config": "configs/exp-043-kernel-confirmation-future8-resample-independent-s401.json"
+  },
+  {
+    "id": "exp-043-kernel-confirmation-base-s307",
+    "config": "configs/exp-043-kernel-confirmation-base-s307.json"
+  },
+  {
+    "id": "exp-043-kernel-confirmation-mc8-moderate-k8192-s373",
+    "config": "configs/exp-043-kernel-confirmation-mc8-moderate-k8192-s373.json"
+  },
+  {
+    "id": "exp-043-kernel-confirmation-mc8-moderate-k8192-s347",
+    "config": "configs/exp-043-kernel-confirmation-mc8-moderate-k8192-s347.json"
+  },
+  {
+    "id": "exp-043-kernel-confirmation-future8-resample-independent-s311",
+    "config": "configs/exp-043-kernel-confirmation-future8-resample-independent-s311.json"
+  },
+  {
+    "id": "exp-043-kernel-confirmation-base-s311",
+    "config": "configs/exp-043-kernel-confirmation-base-s311.json"
+  },
+  {
+    "id": "exp-043-kernel-confirmation-mc8-moderate-k8192-s389",
+    "config": "configs/exp-043-kernel-confirmation-mc8-moderate-k8192-s389.json"
+  },
+  {
+    "id": "exp-043-kernel-confirmation-mc8-moderate-free-s373",
+    "config": "configs/exp-043-kernel-confirmation-mc8-moderate-free-s373.json"
+  },
+  {
+    "id": "exp-043-kernel-confirmation-mc32-free-s401",
+    "config": "configs/exp-043-kernel-confirmation-mc32-free-s401.json"
+  },
+  {
+    "id": "exp-043-kernel-confirmation-base-s331",
+    "config": "configs/exp-043-kernel-confirmation-base-s331.json"
+  },
+  {
+    "id": "exp-043-kernel-confirmation-mc8-moderate-k8192-s331",
+    "config": "configs/exp-043-kernel-confirmation-mc8-moderate-k8192-s331.json"
+  },
+  {
+    "id": "exp-043-kernel-confirmation-mc32-free-s307",
+    "config": "configs/exp-043-kernel-confirmation-mc32-free-s307.json"
+  },
+  {
+    "id": "exp-043-kernel-confirmation-future8-resample-paired-s359",
+    "config": "configs/exp-043-kernel-confirmation-future8-resample-paired-s359.json"
+  },
+  {
+    "id": "exp-043-kernel-confirmation-mc32-free-s359",
+    "config": "configs/exp-043-kernel-confirmation-mc32-free-s359.json"
+  },
+  {
+    "id": "exp-043-kernel-confirmation-future8-resample-independent-s347",
+    "config": "configs/exp-043-kernel-confirmation-future8-resample-independent-s347.json"
+  },
+  {
+    "id": "exp-043-kernel-confirmation-future8-resample-independent-s373",
+    "config": "configs/exp-043-kernel-confirmation-future8-resample-independent-s373.json"
+  },
+  {
+    "id": "exp-043-kernel-confirmation-mc32-free-s373",
+    "config": "configs/exp-043-kernel-confirmation-mc32-free-s373.json"
+  },
+  {
+    "id": "exp-043-kernel-confirmation-future8-resample-paired-s373",
+    "config": "configs/exp-043-kernel-confirmation-future8-resample-paired-s373.json"
+  },
+  {
+    "id": "exp-043-kernel-confirmation-mc8-moderate-k8192-s307",
+    "config": "configs/exp-043-kernel-confirmation-mc8-moderate-k8192-s307.json"
+  },
+  {
+    "id": "exp-043-kernel-confirmation-future8-resample-paired-s331",
+    "config": "configs/exp-043-kernel-confirmation-future8-resample-paired-s331.json"
+  },
+  {
+    "id": "exp-043-kernel-confirmation-mc32-free-s347",
+    "config": "configs/exp-043-kernel-confirmation-mc32-free-s347.json"
+  },
+  {
+    "id": "exp-043-kernel-confirmation-mc32-free-s389",
+    "config": "configs/exp-043-kernel-confirmation-mc32-free-s389.json"
+  },
+  {
+    "id": "exp-043-kernel-confirmation-base-s389",
+    "config": "configs/exp-043-kernel-confirmation-base-s389.json"
+  },
+  {
+    "id": "exp-043-kernel-confirmation-mc32-free-s311",
+    "config": "configs/exp-043-kernel-confirmation-mc32-free-s311.json"
+  },
+  {
+    "id": "exp-043-kernel-confirmation-base-s401",
+    "config": "configs/exp-043-kernel-confirmation-base-s401.json"
+  },
+  {
+    "id": "exp-043-kernel-confirmation-mc8-moderate-free-s331",
+    "config": "configs/exp-043-kernel-confirmation-mc8-moderate-free-s331.json"
+  },
+  {
+    "id": "exp-043-kernel-confirmation-mc8-moderate-free-s307",
+    "config": "configs/exp-043-kernel-confirmation-mc8-moderate-free-s307.json"
+  },
+  {
+    "id": "exp-043-kernel-confirmation-future8-resample-independent-s389",
+    "config": "configs/exp-043-kernel-confirmation-future8-resample-independent-s389.json"
+  },
+  {
+    "id": "exp-043-kernel-confirmation-mc8-moderate-free-s359",
+    "config": "configs/exp-043-kernel-confirmation-mc8-moderate-free-s359.json"
+  },
+  {
+    "id": "exp-043-kernel-confirmation-future8-resample-paired-s307",
+    "config": "configs/exp-043-kernel-confirmation-future8-resample-paired-s307.json"
+  },
+  {
+    "id": "exp-043-kernel-confirmation-future8-resample-independent-s359",
+    "config": "configs/exp-043-kernel-confirmation-future8-resample-independent-s359.json"
+  },
+  {
+    "id": "exp-043-kernel-confirmation-future8-resample-paired-s389",
+    "config": "configs/exp-043-kernel-confirmation-future8-resample-paired-s389.json"
+  },
+  {
+    "id": "exp-043-kernel-confirmation-mc8-moderate-k8192-s401",
+    "config": "configs/exp-043-kernel-confirmation-mc8-moderate-k8192-s401.json"
+  },
+  {
+    "id": "exp-043-kernel-confirmation-base-s359",
+    "config": "configs/exp-043-kernel-confirmation-base-s359.json"
+  },
+  {
+    "id": "exp-043-kernel-confirmation-future8-resample-paired-s311",
+    "config": "configs/exp-043-kernel-confirmation-future8-resample-paired-s311.json"
+  },
+  {
+    "id": "exp-043-kernel-confirmation-base-s347",
+    "config": "configs/exp-043-kernel-confirmation-base-s347.json"
+  },
+  {
+    "id": "exp-043-kernel-confirmation-future8-resample-independent-s331",
+    "config": "configs/exp-043-kernel-confirmation-future8-resample-independent-s331.json"
+  },
+  {
+    "id": "exp-043-kernel-confirmation-mc8-moderate-free-s311",
+    "config": "configs/exp-043-kernel-confirmation-mc8-moderate-free-s311.json"
+  },
+  {
+    "id": "exp-043-kernel-confirmation-future8-resample-paired-s347",
+    "config": "configs/exp-043-kernel-confirmation-future8-resample-paired-s347.json"
+  },
+  {
+    "id": "exp-043-kernel-confirmation-mc8-moderate-free-s389",
+    "config": "configs/exp-043-kernel-confirmation-mc8-moderate-free-s389.json"
+  }
+]

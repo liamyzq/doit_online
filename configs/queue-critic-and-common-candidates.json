@@ -1,0 +1,38 @@
+[
+  {
+    "id": "exp-039-critic-fixed-discovery",
+    "config": "configs/exp-039-critic-fixed-discovery.json"
+  },
+  {
+    "id": "exp-041-common-candidates-cafe-s211-step11",
+    "config": "configs/exp-041-common-candidates-cafe-s211-step11.json"
+  },
+  {
+    "id": "exp-041-common-candidates-cafe-s211-step18",
+    "config": "configs/exp-041-common-candidates-cafe-s211-step18.json"
+  },
+  {
+    "id": "exp-041-common-candidates-cafe-s223-step11",
+    "config": "configs/exp-041-common-candidates-cafe-s223-step11.json"
+  },
+  {
+    "id": "exp-041-common-candidates-cafe-s223-step18",
+    "config": "configs/exp-041-common-candidates-cafe-s223-step18.json"
+  },
+  {
+    "id": "exp-041-common-candidates-lighthouse-s211-step11",
+    "config": "configs/exp-041-common-candidates-lighthouse-s211-step11.json"
+  },
+  {
+    "id": "exp-041-common-candidates-lighthouse-s211-step18",
+    "config": "configs/exp-041-common-candidates-lighthouse-s211-step18.json"
+  },
+  {
+    "id": "exp-041-common-candidates-lighthouse-s223-step11",
+    "config": "configs/exp-041-common-candidates-lighthouse-s223-step11.json"
+  },
+  {
+    "id": "exp-041-common-candidates-lighthouse-s223-step18",
+    "config": "configs/exp-041-common-candidates-lighthouse-s223-step18.json"
+  }
+]

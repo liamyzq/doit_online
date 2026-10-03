@@ -1,0 +1,42 @@
+{
+  "id": "exp-043-kernel-confirmation-base-s389",
+  "mode": "image",
+  "purpose": "Locked audit-directed independent confirmation after complete exp040 metric and visual review. Preserve exact discovery parameters; compare both categorical continuation couplings with base, moderate MC8 with/without the shared KL cap, and MC32. No further parameter selection on these seeds.",
+  "image": {
+    "size": 512,
+    "steps": 20,
+    "guided_steps": 10,
+    "proxy": "euler",
+    "reward_batch": 2,
+    "future_batch": 2,
+    "trace_indices": [
+      11,
+      18
+    ]
+  },
+  "prompts": [
+    "bernese",
+    "formula1",
+    "airplane",
+    "labrador",
+    "lighthouse",
+    "cafe",
+    "orchid",
+    "mountain"
+  ],
+  "seeds": [
+    389
+  ],
+  "estimator": {
+    "kind": "mc",
+    "antithetic": true,
+    "samples": 8,
+    "warmup_samples": 32,
+    "warmup_steps": 1,
+    "refresh_every": 0,
+    "tau": 0.3,
+    "reward_offset": 6.0,
+    "gamma": 0
+  },
+  "source_config": "configs/exp-040-kernel-discovery-base-s211.json"
+}

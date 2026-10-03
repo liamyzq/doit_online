@@ -1,0 +1,8 @@
+{
+  "variants": 5,
+  "states": 18,
+  "rows": 720,
+  "actual_new_oracle_queries": 0,
+  "peak_allocated_mib": 5348.83544921875,
+  "peak_reserved_mib": 5524.0
+}

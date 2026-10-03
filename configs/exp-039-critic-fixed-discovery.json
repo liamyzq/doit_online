@@ -1,0 +1,172 @@
+{
+  "id": "exp-039-critic-fixed-discovery",
+  "mode": "critic_fixed",
+  "tasks": [
+    {
+      "name": "hopper-medium-v2",
+      "source": "/home/mlw0719/doob_transform/test/Doob_training_free_adaptation",
+      "states": "/home/mlw0719/doit_correction_storage/data/critic-states/hopper-medium-v2",
+      "actor": "models_rl/hopper-medium-v20large_actor/behavior_ckpt600.pth",
+      "critic": "models_rl/hopper-medium-v20large_actor/critic_ckpt100.pth",
+      "eta": 0.6,
+      "guidance_end_index": 8,
+      "steps": 15,
+      "tau": 5.1428186893463135
+    },
+    {
+      "name": "halfcheetah-medium-v2",
+      "source": "/home/mlw0719/doob_transform/test/Doob_training_free_adaptation",
+      "states": "/home/mlw0719/doit_correction_storage/data/critic-states/halfcheetah-medium-v2",
+      "actor": "models_rl/halfcheetah-medium-v20large_actor/behavior_ckpt600.pth",
+      "critic": "models_rl/halfcheetah-medium-v20large_actor/critic_ckpt100.pth",
+      "eta": 0.2,
+      "guidance_end_index": 10,
+      "steps": 15,
+      "tau": 2.1239386796951294
+    }
+  ],
+  "state_rows": [
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23
+  ],
+  "path_seeds": [
+    41051,
+    41057
+  ],
+  "repeats": 16,
+  "reference_samples": 8192,
+  "pilot_samples": 128,
+  "variants": [
+    {
+      "name": "mc8",
+      "estimator": {
+        "kind": "mc",
+        "surrogate": "exponential",
+        "update": "lms",
+        "learning_rate": 1.0,
+        "ridge": 1.0,
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "denominator_floor": 1e-08
+      }
+    },
+    {
+      "name": "mc32",
+      "estimator": {
+        "kind": "mc",
+        "surrogate": "exponential",
+        "update": "lms",
+        "learning_rate": 1.0,
+        "ridge": 1.0,
+        "antithetic": true,
+        "samples": 32,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "denominator_floor": 1e-08
+      }
+    },
+    {
+      "name": "exponential-lms",
+      "estimator": {
+        "kind": "cv",
+        "surrogate": "exponential",
+        "update": "lms",
+        "learning_rate": 1.0,
+        "ridge": 1.0,
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "denominator_floor": 1e-08
+      }
+    },
+    {
+      "name": "exponential-rls",
+      "estimator": {
+        "kind": "cv",
+        "surrogate": "exponential",
+        "update": "rls",
+        "learning_rate": 1.0,
+        "ridge": 0.01,
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "denominator_floor": 1e-08
+      }
+    },
+    {
+      "name": "exponential-rls-frozen",
+      "estimator": {
+        "kind": "cv",
+        "surrogate": "exponential",
+        "update": "rls",
+        "learning_rate": 1.0,
+        "ridge": 0.01,
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "denominator_floor": 1e-08,
+        "freeze_after_steps": 1
+      }
+    },
+    {
+      "name": "affine-rls",
+      "estimator": {
+        "kind": "cv",
+        "surrogate": "affine",
+        "update": "rls",
+        "learning_rate": 1.0,
+        "ridge": 0.01,
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "denominator_floor": 1e-08
+      }
+    },
+    {
+      "name": "pilot128-exponential",
+      "assistance": "pilot",
+      "estimator": {
+        "kind": "cv",
+        "surrogate": "exponential",
+        "update": "lms",
+        "learning_rate": 1.0,
+        "ridge": 1.0,
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "denominator_floor": 1e-08,
+        "freeze_after_steps": 0
+      }
+    },
+    {
+      "name": "critic-tangent",
+      "assistance": "tangent",
+      "estimator": {
+        "kind": "cv",
+        "surrogate": "exponential",
+        "update": "lms",
+        "learning_rate": 1.0,
+        "ridge": 1.0,
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "denominator_floor": 1e-08,
+        "freeze_after_steps": 0
+      }
+    }
+  ]
+}

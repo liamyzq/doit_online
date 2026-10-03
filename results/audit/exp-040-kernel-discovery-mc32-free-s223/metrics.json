@@ -1,0 +1,10 @@
+{
+  "images": 8,
+  "mean_reward": 6.4036396741867065,
+  "mean_alignment": 0.27840929105877876,
+  "guidance_queries": 2304,
+  "mean_seconds": 54.09909222886199,
+  "denominator_events": 0,
+  "peak_allocated_mib": 6248.3232421875,
+  "peak_reserved_mib": 7290.0
+}

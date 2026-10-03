@@ -1,0 +1,7 @@
+{
+  "images": 512,
+  "guided_steps": 4032,
+  "new_reward_queries": 0,
+  "peak_allocated_mib": 0.0,
+  "peak_reserved_mib": 0.0
+}

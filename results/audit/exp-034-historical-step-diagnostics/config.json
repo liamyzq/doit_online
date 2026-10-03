@@ -1,0 +1,9 @@
+{
+  "id": "exp-034-historical-step-diagnostics",
+  "mode": "historical_diagnostics",
+  "purpose": "Recover actual Gaussian execution KL from all 512 original final images and the applied correction norms. Publish per-image and per-step scalars; inspect known quality failures against their paired baseline and prompt peers without generating new images or treating these seen seeds as fresh confirmation.",
+  "seed": 0,
+  "manifest": "configs/analysis-exp-032-combined.json",
+  "run_root": "/home/mlw0719/doit_correction_storage/runs",
+  "model_revision": "451f4fe16113bff5a5d2269ed5ad43b0592e9a14"
+}

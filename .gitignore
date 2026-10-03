@@ -9,3 +9,4 @@ artifacts/
 *.png
 *.npz
 !results/final/**/*.png
+!results/audit/quality/*.png

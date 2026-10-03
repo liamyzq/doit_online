@@ -1,0 +1,426 @@
+[
+  {
+    "group": "base",
+    "images": 64,
+    "max_step_kl_quantiles": {
+      "min": 0.0,
+      "median": 0.0,
+      "p90": 0.0,
+      "p95": 0.0,
+      "max": 0.0
+    },
+    "per_prompt": {
+      "airplane": {
+        "mean_reward": 5.302681922912598,
+        "mean_max_step_kl": 0.0,
+        "max_step_kl": 0.0
+      },
+      "bernese": {
+        "mean_reward": 6.205629348754883,
+        "mean_max_step_kl": 0.0,
+        "max_step_kl": 0.0
+      },
+      "cafe": {
+        "mean_reward": 6.481127858161926,
+        "mean_max_step_kl": 0.0,
+        "max_step_kl": 0.0
+      },
+      "formula1": {
+        "mean_reward": 4.9176008105278015,
+        "mean_max_step_kl": 0.0,
+        "max_step_kl": 0.0
+      },
+      "labrador": {
+        "mean_reward": 5.925046145915985,
+        "mean_max_step_kl": 0.0,
+        "max_step_kl": 0.0
+      },
+      "lighthouse": {
+        "mean_reward": 6.638157844543457,
+        "mean_max_step_kl": 0.0,
+        "max_step_kl": 0.0
+      },
+      "mountain": {
+        "mean_reward": 6.969240844249725,
+        "mean_max_step_kl": 0.0,
+        "max_step_kl": 0.0
+      },
+      "orchid": {
+        "mean_reward": 5.888540685176849,
+        "mean_max_step_kl": 0.0,
+        "max_step_kl": 0.0
+      }
+    }
+  },
+  {
+    "group": "mc8-moderate",
+    "images": 64,
+    "max_step_kl_quantiles": {
+      "min": 428.66611121469435,
+      "median": 4882.546917830625,
+      "p90": 17195.544184209084,
+      "p95": 20380.944230249996,
+      "max": 101250.88483721743
+    },
+    "per_prompt": {
+      "airplane": {
+        "mean_reward": 5.350258052349091,
+        "mean_max_step_kl": 5850.211928202653,
+        "max_step_kl": 14799.833083347872
+      },
+      "bernese": {
+        "mean_reward": 6.250543296337128,
+        "mean_max_step_kl": 2233.0270655396066,
+        "max_step_kl": 4580.629219023163
+      },
+      "cafe": {
+        "mean_reward": 6.692923069000244,
+        "mean_max_step_kl": 14196.447863312811,
+        "max_step_kl": 41410.39704337981
+      },
+      "formula1": {
+        "mean_reward": 4.901106178760529,
+        "mean_max_step_kl": 7104.657557870899,
+        "max_step_kl": 18294.260689149716
+      },
+      "labrador": {
+        "mean_reward": 6.0605586767196655,
+        "mean_max_step_kl": 19592.433328960702,
+        "max_step_kl": 101250.88483721743
+      },
+      "lighthouse": {
+        "mean_reward": 6.709353923797607,
+        "mean_max_step_kl": 7086.012079016113,
+        "max_step_kl": 16867.113591793757
+      },
+      "mountain": {
+        "mean_reward": 6.950456023216248,
+        "mean_max_step_kl": 8634.279047383741,
+        "max_step_kl": 20699.73393395846
+      },
+      "orchid": {
+        "mean_reward": 5.964951872825623,
+        "mean_max_step_kl": 3924.240616290675,
+        "max_step_kl": 9584.26806690632
+      }
+    }
+  },
+  {
+    "group": "mc8-strong",
+    "images": 64,
+    "max_step_kl_quantiles": {
+      "min": 7445.883564010611,
+      "median": 207843.957479473,
+      "p90": 772982.4233587477,
+      "p95": 970221.3099862486,
+      "max": 1445671.7448298177
+    },
+    "per_prompt": {
+      "airplane": {
+        "mean_reward": 5.335140407085419,
+        "mean_max_step_kl": 400818.61989507836,
+        "max_step_kl": 790319.255618498
+      },
+      "bernese": {
+        "mean_reward": 6.271205961704254,
+        "mean_max_step_kl": 182904.96640921134,
+        "max_step_kl": 381991.3767118414
+      },
+      "cafe": {
+        "mean_reward": 6.1889209151268005,
+        "mean_max_step_kl": 606289.268049761,
+        "max_step_kl": 1315875.26789226
+      },
+      "formula1": {
+        "mean_reward": 4.982920467853546,
+        "mean_max_step_kl": 349746.8763358529,
+        "max_step_kl": 798399.9255572822
+      },
+      "labrador": {
+        "mean_reward": 5.437471866607666,
+        "mean_max_step_kl": 387214.9511108616,
+        "max_step_kl": 1445671.7448298177
+      },
+      "lighthouse": {
+        "mean_reward": 7.024637937545776,
+        "mean_max_step_kl": 172007.0742988618,
+        "max_step_kl": 427882.3048086091
+      },
+      "mountain": {
+        "mean_reward": 6.9386032819747925,
+        "mean_max_step_kl": 348262.4237301616,
+        "max_step_kl": 1313879.5344617707
+      },
+      "orchid": {
+        "mean_reward": 5.977597951889038,
+        "mean_max_step_kl": 79306.64703611145,
+        "max_step_kl": 221572.01457279088
+      }
+    }
+  },
+  {
+    "group": "mc32-g4",
+    "images": 64,
+    "max_step_kl_quantiles": {
+      "min": 6808.767970133625,
+      "median": 39173.20685498258,
+      "p90": 136544.92216821518,
+      "p95": 247557.8678401462,
+      "max": 474391.46512706176
+    },
+    "per_prompt": {
+      "airplane": {
+        "mean_reward": 5.6602678298950195,
+        "mean_max_step_kl": 55711.10021140914,
+        "max_step_kl": 79533.04672208744
+      },
+      "bernese": {
+        "mean_reward": 6.319822430610657,
+        "mean_max_step_kl": 19709.990568179986,
+        "max_step_kl": 65923.56725736326
+      },
+      "cafe": {
+        "mean_reward": 7.007726669311523,
+        "mean_max_step_kl": 145993.81824308878,
+        "max_step_kl": 285957.6511252442
+      },
+      "formula1": {
+        "mean_reward": 5.273295700550079,
+        "mean_max_step_kl": 104008.3946429179,
+        "max_step_kl": 258654.9154242385
+      },
+      "labrador": {
+        "mean_reward": 6.228951275348663,
+        "mean_max_step_kl": 97520.3706226552,
+        "max_step_kl": 474391.46512706176
+      },
+      "lighthouse": {
+        "mean_reward": 6.923600852489471,
+        "mean_max_step_kl": 39350.315823681995,
+        "max_step_kl": 66840.12487275545
+      },
+      "mountain": {
+        "mean_reward": 7.283094763755798,
+        "mean_max_step_kl": 54750.71467549532,
+        "max_step_kl": 183617.42582789354
+      },
+      "orchid": {
+        "mean_reward": 6.014487266540527,
+        "mean_max_step_kl": 19512.84556238843,
+        "max_step_kl": 30107.428504384647
+      }
+    }
+  },
+  {
+    "group": "gema-reward",
+    "images": 64,
+    "max_step_kl_quantiles": {
+      "min": 3334.4434040066376,
+      "median": 24691.31430760146,
+      "p90": 74711.53024783394,
+      "p95": 87721.84544882525,
+      "max": 216890.8503549052
+    },
+    "per_prompt": {
+      "airplane": {
+        "mean_reward": 5.763982355594635,
+        "mean_max_step_kl": 35009.586017239664,
+        "max_step_kl": 58099.62027430996
+      },
+      "bernese": {
+        "mean_reward": 6.4009581208229065,
+        "mean_max_step_kl": 14876.589273195066,
+        "max_step_kl": 35477.62132258697
+      },
+      "cafe": {
+        "mean_reward": 6.7349841594696045,
+        "mean_max_step_kl": 66040.91052886914,
+        "max_step_kl": 200732.696179891
+      },
+      "formula1": {
+        "mean_reward": 4.999201595783234,
+        "mean_max_step_kl": 33340.149287603606,
+        "max_step_kl": 65326.49947383408
+      },
+      "labrador": {
+        "mean_reward": 6.1070836186409,
+        "mean_max_step_kl": 69087.23098818424,
+        "max_step_kl": 216890.8503549052
+      },
+      "lighthouse": {
+        "mean_reward": 6.872561395168304,
+        "mean_max_step_kl": 24845.08027670429,
+        "max_step_kl": 80617.49487842504
+      },
+      "mountain": {
+        "mean_reward": 7.257814407348633,
+        "mean_max_step_kl": 35149.85802297566,
+        "max_step_kl": 78574.01552378689
+      },
+      "orchid": {
+        "mean_reward": 5.88978636264801,
+        "mean_max_step_kl": 8312.878941119183,
+        "max_step_kl": 14337.025133823387
+      }
+    }
+  },
+  {
+    "group": "future4-independent",
+    "images": 64,
+    "max_step_kl_quantiles": {
+      "min": 746.5776165437735,
+      "median": 48498.67989761263,
+      "p90": 395476.28854705405,
+      "p95": 876860.5172989315,
+      "max": 2181216.4442077265
+    },
+    "per_prompt": {
+      "airplane": {
+        "mean_reward": 5.614140629768372,
+        "mean_max_step_kl": 111331.32911769145,
+        "max_step_kl": 547092.245939073
+      },
+      "bernese": {
+        "mean_reward": 6.3055325746536255,
+        "mean_max_step_kl": 26833.684520003924,
+        "max_step_kl": 64220.92510483653
+      },
+      "cafe": {
+        "mean_reward": 6.783279478549957,
+        "mean_max_step_kl": 421758.5140109997,
+        "max_step_kl": 2181216.4442077265
+      },
+      "formula1": {
+        "mean_reward": 4.974088907241821,
+        "mean_max_step_kl": 138754.6473560675,
+        "max_step_kl": 495280.6964147215
+      },
+      "labrador": {
+        "mean_reward": 5.835926353931427,
+        "mean_max_step_kl": 362214.14311618207,
+        "max_step_kl": 1240881.9537677171
+      },
+      "lighthouse": {
+        "mean_reward": 6.819964587688446,
+        "mean_max_step_kl": 38724.037625310026,
+        "max_step_kl": 75220.38378450015
+      },
+      "mountain": {
+        "mean_reward": 7.089204251766205,
+        "mean_max_step_kl": 242314.67576914883,
+        "max_step_kl": 1353876.8378158638
+      },
+      "orchid": {
+        "mean_reward": 6.003594815731049,
+        "mean_max_step_kl": 14086.574848517384,
+        "max_step_kl": 42783.58473430679
+      }
+    }
+  },
+  {
+    "group": "future8-paired",
+    "images": 64,
+    "max_step_kl_quantiles": {
+      "min": 1870.2325795214676,
+      "median": 96829.83672518365,
+      "p90": 345222.1016572897,
+      "p95": 545104.6187481951,
+      "max": 952911.7886890318
+    },
+    "per_prompt": {
+      "airplane": {
+        "mean_reward": 5.936833918094635,
+        "mean_max_step_kl": 222343.06022680597,
+        "max_step_kl": 782603.7448365226
+      },
+      "bernese": {
+        "mean_reward": 6.398277699947357,
+        "mean_max_step_kl": 57260.03978489801,
+        "max_step_kl": 131395.0782525058
+      },
+      "cafe": {
+        "mean_reward": 6.317954242229462,
+        "mean_max_step_kl": 288700.2927126314,
+        "max_step_kl": 711658.1525935272
+      },
+      "formula1": {
+        "mean_reward": 5.315600872039795,
+        "mean_max_step_kl": 241410.9252342658,
+        "max_step_kl": 434324.7417763668
+      },
+      "labrador": {
+        "mean_reward": 6.23275762796402,
+        "mean_max_step_kl": 288734.20543282013,
+        "max_step_kl": 952911.7886890318
+      },
+      "lighthouse": {
+        "mean_reward": 7.0942142605781555,
+        "mean_max_step_kl": 59584.552304492834,
+        "max_step_kl": 123913.71551775679
+      },
+      "mountain": {
+        "mean_reward": 7.401691436767578,
+        "mean_max_step_kl": 134939.6816470623,
+        "max_step_kl": 337221.60529456945
+      },
+      "orchid": {
+        "mean_reward": 5.9915690422058105,
+        "mean_max_step_kl": 50641.75627348542,
+        "max_step_kl": 103752.46648918142
+      }
+    }
+  },
+  {
+    "group": "gema-moderate",
+    "images": 64,
+    "max_step_kl_quantiles": {
+      "min": 596.4878332263961,
+      "median": 2880.2677034814233,
+      "p90": 10007.519358980864,
+      "p95": 15654.354414507683,
+      "max": 67576.15590233063
+    },
+    "per_prompt": {
+      "airplane": {
+        "mean_reward": 5.358195126056671,
+        "mean_max_step_kl": 5354.681001800269,
+        "max_step_kl": 10039.696315654848
+      },
+      "bernese": {
+        "mean_reward": 6.2344266176223755,
+        "mean_max_step_kl": 1415.2212095215828,
+        "max_step_kl": 2207.837643187704
+      },
+      "cafe": {
+        "mean_reward": 6.677105367183685,
+        "mean_max_step_kl": 10615.262265010866,
+        "max_step_kl": 15814.383699666929
+      },
+      "formula1": {
+        "mean_reward": 5.0773555636405945,
+        "mean_max_step_kl": 6845.436189509712,
+        "max_step_kl": 25093.443633440824
+      },
+      "labrador": {
+        "mean_reward": 6.00661039352417,
+        "mean_max_step_kl": 12740.86161500776,
+        "max_step_kl": 67576.15590233063
+      },
+      "lighthouse": {
+        "mean_reward": 6.713015675544739,
+        "mean_max_step_kl": 2449.117069940201,
+        "max_step_kl": 3698.833441092887
+      },
+      "mountain": {
+        "mean_reward": 6.965340971946716,
+        "mean_max_step_kl": 5270.335723656512,
+        "max_step_kl": 20102.87186036387
+      },
+      "orchid": {
+        "mean_reward": 6.025820195674896,
+        "mean_max_step_kl": 1275.7352034408023,
+        "max_step_kl": 2042.7571044823474
+      }
+    }
+  }
+]

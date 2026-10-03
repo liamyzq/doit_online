@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import functools
+import csv
 import json
 import subprocess
 import sys
@@ -14,7 +15,7 @@ from types import SimpleNamespace
 import numpy as np
 import torch
 
-from .estimators import gaussian_noise
+from .estimators import IntegrableSurrogate, MomentEstimator, gaussian_noise
 
 
 def dump(path, value):
@@ -214,3 +215,177 @@ def calibrate(config, output):
     return {"tasks": len(summaries), "guided_states": len(rows),
             "adapter_checks_passed": sum(r["adapter_checks"]["passed"] for r in summaries),
             "reward_queries": sum(r["reward_queries"] for r in summaries)}
+
+
+def ratio_from_samples(eps, q, tau):
+    weights = torch.softmax(q.double() / tau, dim=0)
+    return (weights[:, None] * eps.double()).sum(0).float()
+
+
+def write_csv(path, rows):
+    with Path(path).open("w", newline="") as handle:
+        writer = csv.DictWriter(handle, fieldnames=list(rows[0]))
+        writer.writeheader()
+        writer.writerows(rows)
+
+
+def error_record(ratio, reference, jacobian, transition):
+    ratio, reference = ratio.double(), reference.double()
+    guidance = jacobian.double().T @ ratio / transition.noise_std
+    reference_guidance = jacobian.double().T @ reference / transition.noise_std
+    result = {}
+    for label, estimate, truth in [("ratio", ratio, reference),
+                                    ("guidance", guidance, reference_guidance)]:
+        error = float((estimate - truth).square().sum())
+        estimate_norm = float(estimate.square().sum())
+        reference_norm = float(truth.square().sum())
+        result.update({f"{label}_sq_error": error,
+                       f"{label}_reference_sq_norm": reference_norm,
+                       f"{label}_relative_sq_error": error / max(reference_norm, 1e-20),
+                       f"{label}_zero_sq_error": reference_norm,
+                       f"{label}_quarter_shrink_sq_error": float((.25 * estimate - truth).square().sum()),
+                       f"{label}_direction_cosine": float(estimate @ truth) / (estimate_norm * reference_norm) ** .5
+                       if estimate_norm > 0 and reference_norm > 0 else None})
+    result["unit_gamma_displacement_sq_error"] = transition.correction_gain ** 2 * result["guidance_sq_error"]
+    return result
+
+
+def summarize_fixed(rows, config):
+    result = []
+    for task in config["tasks"]:
+        task_rows = [r for r in rows if r["task"] == task["name"] and r["online_step"] > 0]
+        baseline = [r for r in task_rows if r["variant"] == "mc8"]
+        for variant in config["variants"]:
+            group = [r for r in task_rows if r["variant"] == variant["name"]]
+            summary = {"task": task["name"], "variant": variant["name"], "post_warmup_rows": len(group),
+                       "denominator_events": sum(r["denominator_floored"] for r in group)}
+            for field in ["ratio_sq_error", "guidance_sq_error", "ratio_zero_sq_error", "guidance_zero_sq_error",
+                          "ratio_quarter_shrink_sq_error", "guidance_quarter_shrink_sq_error",
+                          "ratio_direction_cosine", "guidance_direction_cosine", "reference_split_ratio_sq_distance",
+                          "reference_split_guidance_sq_distance", "reference_ess", "queries",
+                          "pilot_queries", "critic_gradients", "estimator_seconds", "heldout_prediction_mse",
+                          "heldout_pair_difference_mse", "unit_gamma_displacement_sq_error"]:
+                values = [r[field] for r in group if r[field] is not None]
+                summary[field] = float(np.mean(values)) if values else None
+            for field in ["ratio_sq_error", "guidance_sq_error", "unit_gamma_displacement_sq_error"]:
+                numerator = np.array([np.mean([r[field] for r in group if r["state_row"] == index])
+                                      for index in config["state_rows"]])
+                denominator = np.array([np.mean([r[field] for r in baseline if r["state_row"] == index])
+                                        for index in config["state_rows"]])
+                generator = np.random.default_rng(41047)
+                indices = generator.integers(0, len(numerator), size=(4000, len(numerator)))
+                values = numerator[indices].mean(1) / denominator[indices].mean(1)
+                summary[field + "_over_mc8"] = float(numerator.mean() / denominator.mean())
+                summary[field + "_over_mc8_ci95"] = np.quantile(values, [.025, .975]).tolist()
+            result.append(summary)
+    return result
+
+
+def evaluate_fixed(config, output):
+    """Shared unguided paths, independent reference/pilot/current query streams."""
+    rows, task_counts = [], []
+    for task in config["tasks"]:
+        engine = CriticEngine(task)
+        dump(Path(output) / f'{task["name"]}-models.json', engine.provenance)
+        tau = float(task["tau"])
+        for state_row in config["state_rows"]:
+            engine.use_state(state_row)
+            for path_seed in config["path_seeds"]:
+                seed = int(path_seed) + state_row * 100003
+                path_generator = torch.Generator(device=engine.device).manual_seed(seed)
+                x = torch.randn(engine.dimension, generator=path_generator, device=engine.device)
+                estimators = {}
+                online_step = 0
+                for index in range(len(engine.timesteps) - 1):
+                    guided = 0 < index <= task["guidance_end_index"]
+                    transition = engine.transition(x, index, with_grad=guided)
+                    if guided:
+                        m, rho = transition.endpoint_mean, transition.endpoint_std
+                        if online_step == 0:
+                            # Fix the offset at the first guided mean. It scales
+                            # weights without fitting a direction or using future data.
+                            offset = float(engine.reward(m[None])[0])
+                            for variant in config["variants"]:
+                                settings = dict(variant["estimator"], tau=tau, reward_offset=offset)
+                                for repeat in range(config["repeats"]):
+                                    estimators[variant["name"], repeat] = MomentEstimator(
+                                        settings, seed + repeat * 7919, engine.device)
+                        jacobian = engine.jacobian(transition).detach()
+                        reference_seed = seed + index * 65537 + 11000009
+                        reference_generator = torch.Generator(device=engine.device).manual_seed(reference_seed)
+                        ref_eps = gaussian_noise(config["reference_samples"], engine.dimension,
+                                                 reference_generator, engine.device)
+                        ref_q = engine.reward(m[None] + rho * ref_eps)
+                        reference = ratio_from_samples(ref_eps, ref_q, tau)
+                        half, quarter = len(ref_eps) // 2, len(ref_eps) // 4
+                        part_a = torch.cat([torch.arange(quarter), torch.arange(half, half + quarter)]).to(engine.device)
+                        part_b = torch.cat([torch.arange(quarter, half), torch.arange(half + quarter, len(ref_eps))]).to(engine.device)
+                        split_a = ratio_from_samples(ref_eps[part_a], ref_q[part_a], tau)
+                        split_b = ratio_from_samples(ref_eps[part_b], ref_q[part_b], tau)
+                        split_delta = split_a - split_b
+                        reference_ess = float(1 / torch.softmax(ref_q.double() / tau, 0).square().sum())
+                        pilot_generator = torch.Generator(device=engine.device).manual_seed(reference_seed + 500000003)
+                        pilot_eps = gaussian_noise(config["pilot_samples"], engine.dimension, pilot_generator, engine.device)
+                        pilot_z = m[None] + rho * pilot_eps
+                        pilot_q = engine.reward(pilot_z)
+                        tangent_m = m.detach().clone().requires_grad_(True)
+                        tangent_q = engine.reward(tangent_m[None], with_grad=True)[0]
+                        tangent_slope = torch.autograd.grad(tangent_q, tangent_m)[0].detach()
+                        for repeat in range(config["repeats"]):
+                            current_generator = torch.Generator(device=engine.device).manual_seed(
+                                seed + index * 1009 + repeat * 15485863 + 17000023)
+                            bank_eps = gaussian_noise(32, engine.dimension, current_generator, engine.device)
+                            bank_q = engine.reward(m[None] + rho * bank_eps)
+                            for variant in config["variants"]:
+                                estimator = estimators[variant["name"], repeat]
+                                n = estimator.budget(online_step)
+                                selection = torch.cat([torch.arange(n // 2), torch.arange(16, 16 + n // 2)]).to(engine.device)
+                                eps, q = bank_eps[selection], bank_q[selection]
+                                assistance = variant.get("assistance")
+                                if assistance:
+                                    surrogate = IntegrableSurrogate(m, rho, estimator.config, estimator.feature_generator)
+                                    if assistance == "pilot":
+                                        features = surrogate.features(pilot_z)
+                                        target = (pilot_q.double() - offset) / tau
+                                        surrogate.theta = torch.linalg.lstsq(features, target).solution
+                                    elif assistance == "tangent":
+                                        surrogate.theta[0] = (tangent_q.detach().double() - offset) / tau
+                                        surrogate.theta[1:] = tangent_slope.double() * surrogate.scale / tau
+                                    else:
+                                        raise ValueError(assistance)
+                                    surrogate.fitted = True
+                                    estimator.surrogate = surrogate
+                                estimate = estimator.from_samples(m, rho, eps, q)
+                                row = {"task": task["name"], "variant": variant["name"],
+                                       "state_row": state_row, "path_seed": path_seed, "index": index,
+                                       "online_step": online_step, "repeat": repeat, "tau": tau,
+                                       "reward_offset": offset, "rho": rho,
+                                       "queries": n, "cumulative_queries": estimator.queries,
+                                       "offset_queries_per_path": 1,
+                                       "pilot_queries": config["pilot_samples"] if assistance == "pilot" else (1 if assistance == "tangent" else 0),
+                                       "critic_gradients": int(assistance == "tangent"),
+                                       "reference_samples": len(ref_eps), "reference_ess": reference_ess,
+                                       "reference_split_ratio_sq_distance": float(split_delta.double().square().sum()),
+                                       "reference_split_guidance_sq_distance": float((jacobian.T @ split_delta / transition.noise_std).double().square().sum()),
+                                       "denominator_floored": estimate.diagnostics["denominator_floored"],
+                                       "heldout_prediction_mse": estimate.diagnostics["heldout_prediction_mse"],
+                                       "heldout_pair_difference_mse": estimate.diagnostics["heldout_pair_difference_mse"],
+                                       "estimator_seconds": estimate.diagnostics["estimator_seconds"]}
+                                row.update(error_record(estimate.ratio, reference, jacobian, transition))
+                                rows.append(row)
+                        online_step += 1
+                    x = transition.mean.detach() + transition.noise_std * torch.randn(
+                        engine.dimension, generator=path_generator, device=engine.device)
+                write_csv(Path(output) / "fixed.csv", rows)
+                print(json.dumps({"task": task["name"], "state_row": state_row,
+                                  "path_seed": path_seed, "rows": len(rows)}), flush=True)
+        task_counts.append({"task": task["name"], **engine.counts()})
+        dump(Path(output) / "counts.json", task_counts)
+        del engine
+        torch.cuda.empty_cache()
+    dump(Path(output) / "summary.json", summarize_fixed(rows, config))
+    return {"tasks": len(task_counts), "rows": len(rows), "variants": len(config["variants"]),
+            "actual_reward_queries": sum(r["reward_queries"] for r in task_counts),
+            "reference_samples_per_state": config["reference_samples"],
+            "pilot_samples_per_state": config["pilot_samples"],
+            "denominator_events": sum(r["denominator_floored"] for r in rows)}

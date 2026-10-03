@@ -1,0 +1,8 @@
+{
+  "tasks": 2,
+  "guided_states": 288,
+  "adapter_checks_passed": 2,
+  "reward_queries": 9248,
+  "peak_allocated_mib": 40.73779296875,
+  "peak_reserved_mib": 46.0
+}

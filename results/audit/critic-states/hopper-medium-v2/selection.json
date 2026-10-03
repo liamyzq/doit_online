@@ -1,0 +1,591 @@
+{
+  "task": "hopper-medium-v2",
+  "dataset": "/home/mlw0719/doit_correction_storage/data/d4rl/hopper-medium-v2.hdf5",
+  "dataset_url": "http://rail.eecs.berkeley.edu/datasets/offline_rl/gym_mujoco_v2/hopper_medium-v2.hdf5",
+  "seed": 41041,
+  "normalization": "none",
+  "selection": "one nonterminal observation per distinct complete episode",
+  "split_sizes": {
+    "calibration": 16,
+    "discovery": 16,
+    "confirmation": 32
+  },
+  "rows": [
+    {
+      "array_index": 0,
+      "split": "calibration",
+      "split_index": 0,
+      "episode": 1918,
+      "dataset_index": 877482,
+      "episode_start": 877043,
+      "episode_end": 877827
+    },
+    {
+      "array_index": 1,
+      "split": "calibration",
+      "split_index": 1,
+      "episode": 506,
+      "dataset_index": 233422,
+      "episode_start": 233368,
+      "episode_end": 233645
+    },
+    {
+      "array_index": 2,
+      "split": "calibration",
+      "split_index": 2,
+      "episode": 1572,
+      "dataset_index": 717364,
+      "episode_start": 717191,
+      "episode_end": 717859
+    },
+    {
+      "array_index": 3,
+      "split": "calibration",
+      "split_index": 3,
+      "episode": 34,
+      "dataset_index": 16642,
+      "episode_start": 16542,
+      "episode_end": 17118
+    },
+    {
+      "array_index": 4,
+      "split": "calibration",
+      "split_index": 4,
+      "episode": 633,
+      "dataset_index": 291113,
+      "episode_start": 290935,
+      "episode_end": 291379
+    },
+    {
+      "array_index": 5,
+      "split": "calibration",
+      "split_index": 5,
+      "episode": 697,
+      "dataset_index": 320393,
+      "episode_start": 320288,
+      "episode_end": 320579
+    },
+    {
+      "array_index": 6,
+      "split": "calibration",
+      "split_index": 6,
+      "episode": 1383,
+      "dataset_index": 630526,
+      "episode_start": 630464,
+      "episode_end": 630875
+    },
+    {
+      "array_index": 7,
+      "split": "calibration",
+      "split_index": 7,
+      "episode": 1257,
+      "dataset_index": 574289,
+      "episode_start": 574094,
+      "episode_end": 574519
+    },
+    {
+      "array_index": 8,
+      "split": "calibration",
+      "split_index": 8,
+      "episode": 1960,
+      "dataset_index": 896619,
+      "episode_start": 896475,
+      "episode_end": 897054
+    },
+    {
+      "array_index": 9,
+      "split": "calibration",
+      "split_index": 9,
+      "episode": 1419,
+      "dataset_index": 646363,
+      "episode_start": 646279,
+      "episode_end": 646686
+    },
+    {
+      "array_index": 10,
+      "split": "calibration",
+      "split_index": 10,
+      "episode": 1103,
+      "dataset_index": 503342,
+      "episode_start": 503048,
+      "episode_end": 503357
+    },
+    {
+      "array_index": 11,
+      "split": "calibration",
+      "split_index": 11,
+      "episode": 543,
+      "dataset_index": 249889,
+      "episode_start": 249729,
+      "episode_end": 250057
+    },
+    {
+      "array_index": 12,
+      "split": "calibration",
+      "split_index": 12,
+      "episode": 419,
+      "dataset_index": 193173,
+      "episode_start": 193113,
+      "episode_end": 193384
+    },
+    {
+      "array_index": 13,
+      "split": "calibration",
+      "split_index": 13,
+      "episode": 830,
+      "dataset_index": 378447,
+      "episode_start": 378055,
+      "episode_end": 378464
+    },
+    {
+      "array_index": 14,
+      "split": "calibration",
+      "split_index": 14,
+      "episode": 59,
+      "dataset_index": 28997,
+      "episode_start": 28658,
+      "episode_end": 29204
+    },
+    {
+      "array_index": 15,
+      "split": "calibration",
+      "split_index": 15,
+      "episode": 747,
+      "dataset_index": 341932,
+      "episode_start": 341838,
+      "episode_end": 342312
+    },
+    {
+      "array_index": 16,
+      "split": "discovery",
+      "split_index": 0,
+      "episode": 1795,
+      "dataset_index": 819590,
+      "episode_start": 819443,
+      "episode_end": 819781
+    },
+    {
+      "array_index": 17,
+      "split": "discovery",
+      "split_index": 1,
+      "episode": 45,
+      "dataset_index": 22441,
+      "episode_start": 22255,
+      "episode_end": 22527
+    },
+    {
+      "array_index": 18,
+      "split": "discovery",
+      "split_index": 2,
+      "episode": 210,
+      "dataset_index": 97768,
+      "episode_start": 97413,
+      "episode_end": 97909
+    },
+    {
+      "array_index": 19,
+      "split": "discovery",
+      "split_index": 3,
+      "episode": 1902,
+      "dataset_index": 869451,
+      "episode_start": 869261,
+      "episode_end": 869663
+    },
+    {
+      "array_index": 20,
+      "split": "discovery",
+      "split_index": 4,
+      "episode": 350,
+      "dataset_index": 161484,
+      "episode_start": 160962,
+      "episode_end": 161498
+    },
+    {
+      "array_index": 21,
+      "split": "discovery",
+      "split_index": 5,
+      "episode": 936,
+      "dataset_index": 426883,
+      "episode_start": 426543,
+      "episode_end": 426959
+    },
+    {
+      "array_index": 22,
+      "split": "discovery",
+      "split_index": 6,
+      "episode": 2116,
+      "dataset_index": 967712,
+      "episode_start": 967235,
+      "episode_end": 967831
+    },
+    {
+      "array_index": 23,
+      "split": "discovery",
+      "split_index": 7,
+      "episode": 2009,
+      "dataset_index": 919828,
+      "episode_start": 919349,
+      "episode_end": 919848
+    },
+    {
+      "array_index": 24,
+      "split": "discovery",
+      "split_index": 8,
+      "episode": 1364,
+      "dataset_index": 622031,
+      "episode_start": 621480,
+      "episode_end": 622170
+    },
+    {
+      "array_index": 25,
+      "split": "discovery",
+      "split_index": 9,
+      "episode": 1629,
+      "dataset_index": 744416,
+      "episode_start": 744383,
+      "episode_end": 744792
+    },
+    {
+      "array_index": 26,
+      "split": "discovery",
+      "split_index": 10,
+      "episode": 1133,
+      "dataset_index": 517126,
+      "episode_start": 517014,
+      "episode_end": 517504
+    },
+    {
+      "array_index": 27,
+      "split": "discovery",
+      "split_index": 11,
+      "episode": 283,
+      "dataset_index": 130523,
+      "episode_start": 130397,
+      "episode_end": 130740
+    },
+    {
+      "array_index": 28,
+      "split": "discovery",
+      "split_index": 12,
+      "episode": 705,
+      "dataset_index": 323867,
+      "episode_start": 323668,
+      "episode_end": 324037
+    },
+    {
+      "array_index": 29,
+      "split": "discovery",
+      "split_index": 13,
+      "episode": 1527,
+      "dataset_index": 697830,
+      "episode_start": 697337,
+      "episode_end": 697884
+    },
+    {
+      "array_index": 30,
+      "split": "discovery",
+      "split_index": 14,
+      "episode": 1345,
+      "dataset_index": 614083,
+      "episode_start": 614000,
+      "episode_end": 614483
+    },
+    {
+      "array_index": 31,
+      "split": "discovery",
+      "split_index": 15,
+      "episode": 2023,
+      "dataset_index": 926135,
+      "episode_start": 925803,
+      "episode_end": 926278
+    },
+    {
+      "array_index": 32,
+      "split": "confirmation",
+      "split_index": 0,
+      "episode": 1184,
+      "dataset_index": 540716,
+      "episode_start": 540531,
+      "episode_end": 540975
+    },
+    {
+      "array_index": 33,
+      "split": "confirmation",
+      "split_index": 1,
+      "episode": 1987,
+      "dataset_index": 909955,
+      "episode_start": 909569,
+      "episode_end": 910107
+    },
+    {
+      "array_index": 34,
+      "split": "confirmation",
+      "split_index": 2,
+      "episode": 2119,
+      "dataset_index": 969141,
+      "episode_start": 968812,
+      "episode_end": 969309
+    },
+    {
+      "array_index": 35,
+      "split": "confirmation",
+      "split_index": 3,
+      "episode": 911,
+      "dataset_index": 415299,
+      "episode_start": 415293,
+      "episode_end": 415840
+    },
+    {
+      "array_index": 36,
+      "split": "confirmation",
+      "split_index": 4,
+      "episode": 945,
+      "dataset_index": 430752,
+      "episode_start": 430556,
+      "episode_end": 430956
+    },
+    {
+      "array_index": 37,
+      "split": "confirmation",
+      "split_index": 5,
+      "episode": 1521,
+      "dataset_index": 694357,
+      "episode_start": 694076,
+      "episode_end": 694481
+    },
+    {
+      "array_index": 38,
+      "split": "confirmation",
+      "split_index": 6,
+      "episode": 2124,
+      "dataset_index": 971613,
+      "episode_start": 971263,
+      "episode_end": 971750
+    },
+    {
+      "array_index": 39,
+      "split": "confirmation",
+      "split_index": 7,
+      "episode": 1211,
+      "dataset_index": 553058,
+      "episode_start": 552740,
+      "episode_end": 553392
+    },
+    {
+      "array_index": 40,
+      "split": "confirmation",
+      "split_index": 8,
+      "episode": 1530,
+      "dataset_index": 699074,
+      "episode_start": 698830,
+      "episode_end": 699121
+    },
+    {
+      "array_index": 41,
+      "split": "confirmation",
+      "split_index": 9,
+      "episode": 1617,
+      "dataset_index": 738549,
+      "episode_start": 738510,
+      "episode_end": 739046
+    },
+    {
+      "array_index": 42,
+      "split": "confirmation",
+      "split_index": 10,
+      "episode": 1407,
+      "dataset_index": 641278,
+      "episode_start": 641183,
+      "episode_end": 641574
+    },
+    {
+      "array_index": 43,
+      "split": "confirmation",
+      "split_index": 11,
+      "episode": 560,
+      "dataset_index": 257604,
+      "episode_start": 257549,
+      "episode_end": 257822
+    },
+    {
+      "array_index": 44,
+      "split": "confirmation",
+      "split_index": 12,
+      "episode": 837,
+      "dataset_index": 381513,
+      "episode_start": 381400,
+      "episode_end": 381957
+    },
+    {
+      "array_index": 45,
+      "split": "confirmation",
+      "split_index": 13,
+      "episode": 1189,
+      "dataset_index": 542765,
+      "episode_start": 542602,
+      "episode_end": 542900
+    },
+    {
+      "array_index": 46,
+      "split": "confirmation",
+      "split_index": 14,
+      "episode": 826,
+      "dataset_index": 375989,
+      "episode_start": 375969,
+      "episode_end": 376699
+    },
+    {
+      "array_index": 47,
+      "split": "confirmation",
+      "split_index": 15,
+      "episode": 918,
+      "dataset_index": 418661,
+      "episode_start": 418290,
+      "episode_end": 418842
+    },
+    {
+      "array_index": 48,
+      "split": "confirmation",
+      "split_index": 16,
+      "episode": 792,
+      "dataset_index": 361785,
+      "episode_start": 361764,
+      "episode_end": 362165
+    },
+    {
+      "array_index": 49,
+      "split": "confirmation",
+      "split_index": 17,
+      "episode": 1086,
+      "dataset_index": 495134,
+      "episode_start": 494839,
+      "episode_end": 495332
+    },
+    {
+      "array_index": 50,
+      "split": "confirmation",
+      "split_index": 18,
+      "episode": 1380,
+      "dataset_index": 629261,
+      "episode_start": 628880,
+      "episode_end": 629299
+    },
+    {
+      "array_index": 51,
+      "split": "confirmation",
+      "split_index": 19,
+      "episode": 436,
+      "dataset_index": 201286,
+      "episode_start": 200855,
+      "episode_end": 201341
+    },
+    {
+      "array_index": 52,
+      "split": "confirmation",
+      "split_index": 20,
+      "episode": 348,
+      "dataset_index": 160093,
+      "episode_start": 159803,
+      "episode_end": 160390
+    },
+    {
+      "array_index": 53,
+      "split": "confirmation",
+      "split_index": 21,
+      "episode": 408,
+      "dataset_index": 188147,
+      "episode_start": 187743,
+      "episode_end": 188243
+    },
+    {
+      "array_index": 54,
+      "split": "confirmation",
+      "split_index": 22,
+      "episode": 332,
+      "dataset_index": 152208,
+      "episode_start": 152187,
+      "episode_end": 152782
+    },
+    {
+      "array_index": 55,
+      "split": "confirmation",
+      "split_index": 23,
+      "episode": 269,
+      "dataset_index": 123960,
+      "episode_start": 123938,
+      "episode_end": 124302
+    },
+    {
+      "array_index": 56,
+      "split": "confirmation",
+      "split_index": 24,
+      "episode": 2054,
+      "dataset_index": 940058,
+      "episode_start": 939986,
+      "episode_end": 940238
+    },
+    {
+      "array_index": 57,
+      "split": "confirmation",
+      "split_index": 25,
+      "episode": 1799,
+      "dataset_index": 821274,
+      "episode_start": 821046,
+      "episode_end": 821452
+    },
+    {
+      "array_index": 58,
+      "split": "confirmation",
+      "split_index": 26,
+      "episode": 241,
+      "dataset_index": 112308,
+      "episode_start": 111862,
+      "episode_end": 112376
+    },
+    {
+      "array_index": 59,
+      "split": "confirmation",
+      "split_index": 27,
+      "episode": 1195,
+      "dataset_index": 545465,
+      "episode_start": 545168,
+      "episode_end": 545773
+    },
+    {
+      "array_index": 60,
+      "split": "confirmation",
+      "split_index": 28,
+      "episode": 674,
+      "dataset_index": 310177,
+      "episode_start": 309605,
+      "episode_end": 310181
+    },
+    {
+      "array_index": 61,
+      "split": "confirmation",
+      "split_index": 29,
+      "episode": 1413,
+      "dataset_index": 644073,
+      "episode_start": 643923,
+      "episode_end": 644276
+    },
+    {
+      "array_index": 62,
+      "split": "confirmation",
+      "split_index": 30,
+      "episode": 2100,
+      "dataset_index": 961167,
+      "episode_start": 961067,
+      "episode_end": 961533
+    },
+    {
+      "array_index": 63,
+      "split": "confirmation",
+      "split_index": 31,
+      "episode": 2143,
+      "dataset_index": 980250,
+      "episode_start": 979958,
+      "episode_end": 980384
+    }
+  ]
+}

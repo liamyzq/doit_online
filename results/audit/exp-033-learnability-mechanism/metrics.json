@@ -1,0 +1,8 @@
+{
+  "dimensions": 4,
+  "repeats": 64,
+  "rows": 9216,
+  "identity_checks_passed": 3,
+  "peak_allocated_mib": 0.0,
+  "peak_reserved_mib": 0.0
+}

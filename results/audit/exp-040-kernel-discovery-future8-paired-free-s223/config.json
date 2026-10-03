@@ -1,0 +1,45 @@
+{
+  "id": "exp-040-kernel-discovery-future8-paired-free-s223",
+  "mode": "image",
+  "purpose": "Audit-directed fresh-seed discovery. Compare one common execution-KL cap (8192 = latent dimension/2) with no cap for matched MC8, MC32, EMA and full-future settings. Isolate M8 continuation pairing and categorical versus gradient execution with the same future-query budget. Do not claim confirmation from these two seeds.",
+  "image": {
+    "size": 512,
+    "steps": 20,
+    "guided_steps": 10,
+    "proxy": "euler",
+    "reward_batch": 2,
+    "future_batch": 2,
+    "trace_indices": [
+      11,
+      18
+    ]
+  },
+  "prompts": [
+    "bernese",
+    "formula1",
+    "airplane",
+    "labrador",
+    "lighthouse",
+    "cafe",
+    "orchid",
+    "mountain"
+  ],
+  "seeds": [
+    223
+  ],
+  "estimator": {
+    "kind": "mc",
+    "antithetic": true,
+    "samples": 8,
+    "warmup_samples": 16,
+    "warmup_steps": 1,
+    "refresh_every": 0,
+    "tau": 0.6,
+    "reward_offset": 6.0,
+    "oracle": "future",
+    "gamma": 4.0,
+    "paired_future": true,
+    "execution": "gradient"
+  },
+  "source_config": "configs/exp-031-confirm-future8-paired-s101.json"
+}

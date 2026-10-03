@@ -187,4 +187,91 @@ not a method or an endpoint improvement. Four adapter identities per task
 compare source epsilon, simulated endpoint, VJP, and corrected execution mean;
 any discrepancy above 2e-4 stops the calibration. These checks detect a source
 port error and require repair before the critic results can be interpreted.
-No simulator return is measured.
+No simulator return is measured. The source centers each current reward batch
+and divides it by that batch's population standard deviation times its tau
+(Hopper 0.4, HalfCheetah 0.5). This study instead fixes the calibrated temperature
+so online memory and fresh estimates share a defined target. Source endpoint
+strengths are 0.75 and 0.25 respectively; the adapter does not add action clipping.
+
+**Exp-039 isolates low-dimensional estimation.** On eight discovery observations
+per task and two unguided action paths per observation, compare MC8/MC32,
+exponential LMS at learning rate 1, exponential RLS, frozen warm-up RLS, affine
+RLS, an independently fitted local exponential surrogate (128 extra queries per
+state), and a local critic-gradient exponential tangent (one extra Q query and
+one critic backward pass). The last two are diagnostic assistance, not claims
+at the online query budget. Online methods retain their original coordinate
+anchor as means and scales move. The same complete current antithetic pairs are
+used across methods; 16 current-query repetitions use independent noise, with
+32 warm-up queries and then 8, or 32 throughout for MC32. There are no shared
+samples between current, pilot and 8192-query practical-reference streams.
+One Q query at the first guided mean supplies a fixed offset per path; its cost
+is explicit and it does not fit a direction. Record denominator events, zero
+and quarter-shrinkage error, reference split disagreement, ratio and VJP error,
+and direction agreement. Bootstrap observations, preserving all path/repetition
+pairings. A fixed-state critic gain is not a simulator-return claim.
+
+**Exp-041 compares the same realized candidates.** Reuse eight saved discovery
+states (cafe/lighthouse, seeds 211/223, steps 11/18 on paired-future free paths).
+Each of two candidate repetitions uses M8 with both paired and independent
+future continuation. Feed exactly each realized candidate/reward set into the
+free gradient, cap-8192 gradient, and stochastic categorical kernels. Use the
+same independent execution noise for the two Gaussian shifts and their base.
+Reevaluate every resulting next state with two new shared continuation-noise
+branches. Report the selected categorical outcome and the probability-weighted
+mean over reevaluated candidates, alongside the uniform candidate mean. This
+separates useful selection information from favorable noise in the selection
+reward itself. Each state costs 120 image-reward evaluations, giving 960 total
+and 4328 candidate-counted score forwards, including eight current-state
+transitions. These conditional-state diagnostics do not replace full endpoint
+confirmation or establish an exact Doob kernel.
+
+## Completed discovery and locked confirmation
+
+Exp-038 passed all source-adapter identities on both tasks (maximum observed
+error 9.54e-7), with 288 guided-state records and 9248 Q queries. Local Q
+variation changes considerably over the path: the median standard deviations
+are 5.1428186893 for Hopper and 2.1239386797 for HalfCheetah, while their 90th
+percentiles are 33.75 and 20.71. Fix each task's exp-039 temperature to its
+calibration median. This gives a typical local log-weight change of order one
+and deliberately exposes the larger early-step variation; it is not a
+claim that one temperature matches the source's batch normalization at all
+times. Discovery and confirmation observations remain unseen at this decision.
+
+All 30 exp-040 jobs succeeded, producing 240 images with no denominator events.
+The complete metric comparison is in `results/audit/exp-040-summary.json`.
+The cap changes reward by +0.0474 for moderate MC8, +0.1873 for strong MC8,
+-0.0872 for MC32, -0.0301 for strong EMA, +0.1253 for paired future M8, and
++0.0035 for independent future M8. These are discovery means from two seeds,
+not confirmation intervals. Paired future M8 reaches 6.4447 with the cap,
+compared with MC32's 6.4351 without it and 6.3479 with it.
+
+All 240 images were reviewed in prompt contact sheets, with full-resolution
+inspection of the main counterexamples. The cap preserves visible failures:
+paired future cafe seed 223 remains strongly oversharpened and posterized
+compared with capped MC32; capped EMA lighthouse seed 211 retains blocky sky
+and harsh rock texture; capped independent future labrador seed 211 retains
+strong artificial texture. Strong MC8 also retains conspicuous airplane/cafe
+artifacts. These are concrete quality counterexamples, not a measured failure
+rate. Published raw examples include
+[paired-future cafe](../results/audit/quality/exp-040-future8-paired-k8192-cafe-s223.png),
+[matched capped MC32 cafe](../results/audit/quality/exp-040-mc32-k8192-cafe-s223.png),
+[capped EMA lighthouse](../results/audit/quality/exp-040-ema-strong-k8192-lighthouse-s211.png),
+and [capped independent-future labrador](../results/audit/quality/exp-040-future8-independent-k8192-labrador-s211.png).
+Close this common-cap repair for strong MC8, EMA and both gradient-future
+couplings; do not keep reducing caps in search of a favorable result. The
+same-candidate probe remains useful for interpreting information versus execution.
+
+Categorical paired/independent futures give discovery mean rewards 6.0966 and
+6.0417, versus 6.0279 for moderate MC8 and 5.9702 for base. Their alignment
+means are lower (0.26925/0.27013 versus 0.27311 for moderate MC8), and their
+images resemble the cleaner base outputs. Both are unresolved, not validated
+improvements. Moderate MC8's shared-cap variant is also unresolved and costs
+the same 96 guidance queries as its uncapped control.
+
+**Exp-043 locks six groups on all eight reserved image seeds**: base, moderate
+MC8 without/with cap 8192, MC32 without a cap, and paired/independent categorical
+future M8. Every model, estimator and image parameter is copied unchanged from
+its exp-040 config; only experiment metadata and seeds change. This is 48 jobs,
+384 images. Compare paired reward intervals conditional on the fixed prompts,
+alignment, within-prompt embedding distances, lower tails, actual costs and
+image quality. No further image parameter selection follows this confirmation.

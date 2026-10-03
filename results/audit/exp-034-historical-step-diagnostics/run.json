@@ -1,0 +1,24 @@
+{
+  "commit": "25936fc85703948e284ad3e9a9321b01c5e26376",
+  "config": "/home/mlw0719/doit_correction/configs/exp-034-historical-step-diagnostics.json",
+  "experiment_id": "exp-034-historical-step-diagnostics",
+  "pid": 1121652,
+  "cuda_visible_devices": "2",
+  "started_at": 1791048397.6170578,
+  "status": "completed",
+  "environment": {
+    "python": "3.12.9",
+    "torch": "2.6.0+cu124",
+    "cuda": "12.4",
+    "gpu": "NVIDIA RTX A6000",
+    "packages": {
+      "numpy": "1.26.4",
+      "diffusers": "0.32.2",
+      "transformers": "4.49.0",
+      "torchvision": "0.21.0",
+      "huggingface_hub": "0.36.0",
+      "safetensors": "0.8.0"
+    }
+  },
+  "elapsed_seconds": 6.854250431060791
+}
