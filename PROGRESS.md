@@ -105,3 +105,54 @@ frequency regressors, and makes actual importance-corrected oracle queries.
    coupled full futures on the initial captures. Confirm retained methods on
    these states before endpoint image tuning and reserved-seed evaluation.
 4. Scale only image successes to RL; no correction method is validated yet.
+
+## Extensions and remaining decisions
+
+`exp-006` passed the two focused checks for DCT Gaussian moments and shared
+continuation noise within antithetic pairs. All 28 DCT variants in `exp-007`
+failed to improve the discovery-bank ratio error: the best normalized squared
+error was 47.680 versus MC8 at 47.484. Three settings had denominator events.
+All 12 larger-refresh SPIDER variants in `exp-012` still had denominator events
+(1--16 per variant); all 12 exactly cost-matched MC controls had none.
+Independent moderate-strength paths will determine whether these failures depend
+on the initially unstable discovery path.
+
+Actual VJP evaluation in `exp-011` confirms essentially no improvement from
+exponential CV: mean normalized squared error 46.872 versus MC8 46.943. Gradient
+EMA beta0.25 gives 8.011, ratio EMA beta0.25 gives 22.778, and MC32 gives 15.788.
+Gradient EMA is a promising biased control, not a validated method: zero
+guidance itself has normalized error 1 by definition, so noisy-reference MSE
+alone can favor shrinkage without useful reward steering. Endpoint comparisons
+must tune MC strength and temperature independently and include an unguided
+reference.
+
+Paired full-future probes in `exp-008` share continuation noise only within
+antithetic pairs and average two branches. At step10, proxy/future weight
+contrast correlations are -0.149 (Bernese) and 0.111 (Formula1); at step16 they
+are 0.354 and 0.558. At tau0.3 the future-to-proxy mean weight ratio ranges from
+63.4/203.4 early to 2.68/1.11 late. These small probes do not resolve precise
+high-dimensional guidance bias. They do show enough proxy/future discrepancy to
+justify direct future and two-level moment experiments with explicit denoiser
+costs. A historical mass coefficient is tested because proxy and future weights
+have substantially different scales.
+
+The next committed wave includes focused two-level algebra/query/history checks,
+M1/M4/M16 and temperature comparisons on discovery banks, locked independent VJP
+and SPIDER confirmation, pure Gaussian tilt controls, and a paired endpoint
+sweep. Surrogate failure is not rescued by pointwise reward regression accuracy;
+a useful method must improve guidance or endpoint outcomes at its actual cost.
+
+All 38 live mixture AIS/CV-AIS settings in `exp-013` completed without denominator
+events. At scale1/base-mass0.2, IS normalized ratio error is 51.215 versus its
+RNG-matched zero-tilt control51.685 (0.91% lower); CV-IS is 51.276 versus51.965
+(1.33% lower). The average proposal displacement is only0.0188 in standardized
+noise coordinates. Larger displacements worsen error. Several KL settings give
+identical results because they never bind. Exp-024 tests the small effect on
+independent paths before a decision.
+
+Stored-bank analysis explains why paying twice for SPIDER differences is poor
+here. Across the eight post-warmup Bernese steps, the squared antithetic weight
+difference for current-minus-previous is0.534--2.225 times the current-only
+quantity; Formula1 ranges0.663--15.389. Even the best observed reduction does
+not compensate for halving the fresh pair count, before including accumulated
+historical error. The exact ratio error comparison remains the decision metric.

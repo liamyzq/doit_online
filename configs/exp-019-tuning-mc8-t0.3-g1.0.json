@@ -1,0 +1,32 @@
+{
+  "id": "exp-019-tuning-mc8-t0.3-g1.0",
+  "mode": "image",
+  "purpose": "Tune MC strength and temperature independently at each sample budget. Judge aesthetic reward with text alignment, visible corruption, measured runtime and true oracle costs.",
+  "image": {
+    "size": 512,
+    "steps": 20,
+    "guided_steps": 10,
+    "proxy": "euler",
+    "reward_batch": 2,
+    "future_batch": 2
+  },
+  "prompts": [
+    "bernese",
+    "formula1"
+  ],
+  "seeds": [
+    11,
+    23
+  ],
+  "estimator": {
+    "kind": "mc",
+    "antithetic": true,
+    "samples": 8,
+    "warmup_samples": 32,
+    "warmup_steps": 1,
+    "refresh_every": 0,
+    "tau": 0.3,
+    "reward_offset": 6.0,
+    "gamma": 1.0
+  }
+}

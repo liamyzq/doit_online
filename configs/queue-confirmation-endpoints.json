@@ -1,0 +1,190 @@
+[
+  {
+    "id": "exp-015-budget-temperature",
+    "config": "configs/exp-015-budget-temperature.json"
+  },
+  {
+    "id": "exp-016-vjp-confirmation",
+    "config": "configs/exp-016-vjp-confirmation.json"
+  },
+  {
+    "id": "exp-017-spider-confirmation",
+    "config": "configs/exp-017-spider-confirmation.json"
+  },
+  {
+    "id": "exp-018-pure-tilt",
+    "config": "configs/exp-018-pure-tilt.json"
+  },
+  {
+    "id": "exp-024-ais-confirmation",
+    "config": "configs/exp-024-ais-confirmation.json"
+  },
+  {
+    "id": "exp-019-tuning-base",
+    "config": "configs/exp-019-tuning-base.json"
+  },
+  {
+    "id": "exp-019-tuning-mc8-t0.3-g0.4",
+    "config": "configs/exp-019-tuning-mc8-t0.3-g0.4.json"
+  },
+  {
+    "id": "exp-019-tuning-mc8-t0.3-g1.0",
+    "config": "configs/exp-019-tuning-mc8-t0.3-g1.0.json"
+  },
+  {
+    "id": "exp-019-tuning-mc8-t0.3-g4.0",
+    "config": "configs/exp-019-tuning-mc8-t0.3-g4.0.json"
+  },
+  {
+    "id": "exp-019-tuning-mc8-t0.6-g0.4",
+    "config": "configs/exp-019-tuning-mc8-t0.6-g0.4.json"
+  },
+  {
+    "id": "exp-019-tuning-mc8-t0.6-g1.0",
+    "config": "configs/exp-019-tuning-mc8-t0.6-g1.0.json"
+  },
+  {
+    "id": "exp-019-tuning-mc8-t0.6-g4.0",
+    "config": "configs/exp-019-tuning-mc8-t0.6-g4.0.json"
+  },
+  {
+    "id": "exp-019-tuning-mc32-t0.3-g0.4",
+    "config": "configs/exp-019-tuning-mc32-t0.3-g0.4.json"
+  },
+  {
+    "id": "exp-019-tuning-mc32-t0.3-g1.0",
+    "config": "configs/exp-019-tuning-mc32-t0.3-g1.0.json"
+  },
+  {
+    "id": "exp-019-tuning-mc32-t0.3-g4.0",
+    "config": "configs/exp-019-tuning-mc32-t0.3-g4.0.json"
+  },
+  {
+    "id": "exp-019-tuning-mc32-t0.6-g0.4",
+    "config": "configs/exp-019-tuning-mc32-t0.6-g0.4.json"
+  },
+  {
+    "id": "exp-019-tuning-mc32-t0.6-g1.0",
+    "config": "configs/exp-019-tuning-mc32-t0.6-g1.0.json"
+  },
+  {
+    "id": "exp-019-tuning-mc32-t0.6-g4.0",
+    "config": "configs/exp-019-tuning-mc32-t0.6-g4.0.json"
+  },
+  {
+    "id": "exp-020-tuning-gema-b0.25-t0.3-g0.4",
+    "config": "configs/exp-020-tuning-gema-b0.25-t0.3-g0.4.json"
+  },
+  {
+    "id": "exp-020-tuning-gema-b0.25-t0.3-g1.0",
+    "config": "configs/exp-020-tuning-gema-b0.25-t0.3-g1.0.json"
+  },
+  {
+    "id": "exp-020-tuning-gema-b0.25-t0.3-g4.0",
+    "config": "configs/exp-020-tuning-gema-b0.25-t0.3-g4.0.json"
+  },
+  {
+    "id": "exp-020-tuning-gema-b0.25-t0.6-g0.4",
+    "config": "configs/exp-020-tuning-gema-b0.25-t0.6-g0.4.json"
+  },
+  {
+    "id": "exp-020-tuning-gema-b0.25-t0.6-g1.0",
+    "config": "configs/exp-020-tuning-gema-b0.25-t0.6-g1.0.json"
+  },
+  {
+    "id": "exp-020-tuning-gema-b0.25-t0.6-g4.0",
+    "config": "configs/exp-020-tuning-gema-b0.25-t0.6-g4.0.json"
+  },
+  {
+    "id": "exp-020-tuning-gema-b0.5-t0.3-g0.4",
+    "config": "configs/exp-020-tuning-gema-b0.5-t0.3-g0.4.json"
+  },
+  {
+    "id": "exp-020-tuning-gema-b0.5-t0.3-g1.0",
+    "config": "configs/exp-020-tuning-gema-b0.5-t0.3-g1.0.json"
+  },
+  {
+    "id": "exp-020-tuning-gema-b0.5-t0.3-g4.0",
+    "config": "configs/exp-020-tuning-gema-b0.5-t0.3-g4.0.json"
+  },
+  {
+    "id": "exp-020-tuning-gema-b0.5-t0.6-g0.4",
+    "config": "configs/exp-020-tuning-gema-b0.5-t0.6-g0.4.json"
+  },
+  {
+    "id": "exp-020-tuning-gema-b0.5-t0.6-g1.0",
+    "config": "configs/exp-020-tuning-gema-b0.5-t0.6-g1.0.json"
+  },
+  {
+    "id": "exp-020-tuning-gema-b0.5-t0.6-g4.0",
+    "config": "configs/exp-020-tuning-gema-b0.5-t0.6-g4.0.json"
+  },
+  {
+    "id": "exp-021-tuning-exp-cv-g0.4",
+    "config": "configs/exp-021-tuning-exp-cv-g0.4.json"
+  },
+  {
+    "id": "exp-021-tuning-exp-cv-g1.0",
+    "config": "configs/exp-021-tuning-exp-cv-g1.0.json"
+  },
+  {
+    "id": "exp-021-tuning-ratio-ema-g0.4",
+    "config": "configs/exp-021-tuning-ratio-ema-g0.4.json"
+  },
+  {
+    "id": "exp-021-tuning-ratio-ema-g1.0",
+    "config": "configs/exp-021-tuning-ratio-ema-g1.0.json"
+  },
+  {
+    "id": "exp-022-tuning-future4-g0.4",
+    "config": "configs/exp-022-tuning-future4-g0.4.json"
+  },
+  {
+    "id": "exp-022-tuning-future4-g1.0",
+    "config": "configs/exp-022-tuning-future4-g1.0.json"
+  },
+  {
+    "id": "exp-022-tuning-future4-g4.0",
+    "config": "configs/exp-022-tuning-future4-g4.0.json"
+  },
+  {
+    "id": "exp-022-tuning-future8-g0.4",
+    "config": "configs/exp-022-tuning-future8-g0.4.json"
+  },
+  {
+    "id": "exp-022-tuning-future8-g1.0",
+    "config": "configs/exp-022-tuning-future8-g1.0.json"
+  },
+  {
+    "id": "exp-022-tuning-future8-g4.0",
+    "config": "configs/exp-022-tuning-future8-g4.0.json"
+  },
+  {
+    "id": "exp-023-tuning-mf-fixed-c1-g0.4",
+    "config": "configs/exp-023-tuning-mf-fixed-c1-g0.4.json"
+  },
+  {
+    "id": "exp-023-tuning-mf-fixed-c1-g1.0",
+    "config": "configs/exp-023-tuning-mf-fixed-c1-g1.0.json"
+  },
+  {
+    "id": "exp-023-tuning-mf-mass-c025-g0.4",
+    "config": "configs/exp-023-tuning-mf-mass-c025-g0.4.json"
+  },
+  {
+    "id": "exp-023-tuning-mf-mass-c025-g1.0",
+    "config": "configs/exp-023-tuning-mf-mass-c025-g1.0.json"
+  },
+  {
+    "id": "exp-023-tuning-mf-mass-c1-g0.4",
+    "config": "configs/exp-023-tuning-mf-mass-c1-g0.4.json"
+  },
+  {
+    "id": "exp-023-tuning-mf-mass-c1-g1.0",
+    "config": "configs/exp-023-tuning-mf-mass-c1-g1.0.json"
+  },
+  {
+    "id": "exp-022-tuning-future4-independent-g1.0",
+    "config": "configs/exp-022-tuning-future4-independent-g1.0.json"
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "id": "exp-015-budget-temperature",
+    "config": "configs/exp-015-budget-temperature.json"
+  },
+  {
+    "id": "exp-016-vjp-confirmation",
+    "config": "configs/exp-016-vjp-confirmation.json"
+  },
+  {
+    "id": "exp-017-spider-confirmation",
+    "config": "configs/exp-017-spider-confirmation.json"
+  },
+  {
+    "id": "exp-018-pure-tilt",
+    "config": "configs/exp-018-pure-tilt.json"
+  },
+  {
+    "id": "exp-024-ais-confirmation",
+    "config": "configs/exp-024-ais-confirmation.json"
+  }
+]

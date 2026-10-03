@@ -1,0 +1,859 @@
+{
+  "id": "exp-015-budget-temperature",
+  "mode": "fixed",
+  "purpose": "Test whether the representative surrogate failure changes at M1 after warmup, M4 or M16 and three temperatures. Match every setting to its own MC/constant control; use discovery banks only.",
+  "captures": [
+    "/home/mlw0719/doit_correction_storage/runs/exp-002-capture-bernese",
+    "/home/mlw0719/doit_correction_storage/runs/exp-003-capture-formula1"
+  ],
+  "repeats": 16,
+  "with_vjp": false,
+  "variants": [
+    {
+      "name": "mc-m1-tau0.3",
+      "estimator": {
+        "kind": "mc",
+        "antithetic": true,
+        "samples": 1,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0
+      }
+    },
+    {
+      "name": "constant-m1-tau0.3",
+      "estimator": {
+        "kind": "constant",
+        "antithetic": true,
+        "samples": 1,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0
+      }
+    },
+    {
+      "name": "affine-lms-m1-tau0.3",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 1,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "surrogate": "affine",
+        "learning_rate": 0.5
+      }
+    },
+    {
+      "name": "exponential-lms-m1-tau0.3",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 1,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "surrogate": "exponential",
+        "learning_rate": 1.0,
+        "cv_coefficient": 0.5
+      }
+    },
+    {
+      "name": "exponential-rls-m1-tau0.3",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 1,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "surrogate": "exponential",
+        "update": "rls",
+        "projection_dim": 64,
+        "ridge": 10.0,
+        "cv_coefficient": 0.25
+      }
+    },
+    {
+      "name": "exponential-dct-m1-tau0.3",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 1,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "surrogate": "exponential",
+        "update": "rls",
+        "projection_kind": "spatial_dct",
+        "projection_dim": 4,
+        "ridge": 1.0,
+        "cv_coefficient": 0.25
+      }
+    },
+    {
+      "name": "mc-m4-tau0.3",
+      "estimator": {
+        "kind": "mc",
+        "antithetic": true,
+        "samples": 4,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0
+      }
+    },
+    {
+      "name": "constant-m4-tau0.3",
+      "estimator": {
+        "kind": "constant",
+        "antithetic": true,
+        "samples": 4,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0
+      }
+    },
+    {
+      "name": "affine-lms-m4-tau0.3",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 4,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "surrogate": "affine",
+        "learning_rate": 0.5
+      }
+    },
+    {
+      "name": "exponential-lms-m4-tau0.3",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 4,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "surrogate": "exponential",
+        "learning_rate": 1.0,
+        "cv_coefficient": 0.5
+      }
+    },
+    {
+      "name": "exponential-rls-m4-tau0.3",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 4,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "surrogate": "exponential",
+        "update": "rls",
+        "projection_dim": 64,
+        "ridge": 10.0,
+        "cv_coefficient": 0.25
+      }
+    },
+    {
+      "name": "exponential-dct-m4-tau0.3",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 4,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "surrogate": "exponential",
+        "update": "rls",
+        "projection_kind": "spatial_dct",
+        "projection_dim": 4,
+        "ridge": 1.0,
+        "cv_coefficient": 0.25
+      }
+    },
+    {
+      "name": "mc-m16-tau0.3",
+      "estimator": {
+        "kind": "mc",
+        "antithetic": true,
+        "samples": 16,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0
+      }
+    },
+    {
+      "name": "constant-m16-tau0.3",
+      "estimator": {
+        "kind": "constant",
+        "antithetic": true,
+        "samples": 16,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0
+      }
+    },
+    {
+      "name": "affine-lms-m16-tau0.3",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 16,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "surrogate": "affine",
+        "learning_rate": 0.5
+      }
+    },
+    {
+      "name": "exponential-lms-m16-tau0.3",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 16,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "surrogate": "exponential",
+        "learning_rate": 1.0,
+        "cv_coefficient": 0.5
+      }
+    },
+    {
+      "name": "exponential-rls-m16-tau0.3",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 16,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "surrogate": "exponential",
+        "update": "rls",
+        "projection_dim": 64,
+        "ridge": 10.0,
+        "cv_coefficient": 0.25
+      }
+    },
+    {
+      "name": "exponential-dct-m16-tau0.3",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 16,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "surrogate": "exponential",
+        "update": "rls",
+        "projection_kind": "spatial_dct",
+        "projection_dim": 4,
+        "ridge": 1.0,
+        "cv_coefficient": 0.25
+      }
+    },
+    {
+      "name": "mc-m1-tau0.4",
+      "estimator": {
+        "kind": "mc",
+        "antithetic": true,
+        "samples": 1,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.4,
+        "reward_offset": 6.0
+      }
+    },
+    {
+      "name": "constant-m1-tau0.4",
+      "estimator": {
+        "kind": "constant",
+        "antithetic": true,
+        "samples": 1,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.4,
+        "reward_offset": 6.0
+      }
+    },
+    {
+      "name": "affine-lms-m1-tau0.4",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 1,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.4,
+        "reward_offset": 6.0,
+        "surrogate": "affine",
+        "learning_rate": 0.5
+      }
+    },
+    {
+      "name": "exponential-lms-m1-tau0.4",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 1,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.4,
+        "reward_offset": 6.0,
+        "surrogate": "exponential",
+        "learning_rate": 1.0,
+        "cv_coefficient": 0.5
+      }
+    },
+    {
+      "name": "exponential-rls-m1-tau0.4",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 1,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.4,
+        "reward_offset": 6.0,
+        "surrogate": "exponential",
+        "update": "rls",
+        "projection_dim": 64,
+        "ridge": 10.0,
+        "cv_coefficient": 0.25
+      }
+    },
+    {
+      "name": "exponential-dct-m1-tau0.4",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 1,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.4,
+        "reward_offset": 6.0,
+        "surrogate": "exponential",
+        "update": "rls",
+        "projection_kind": "spatial_dct",
+        "projection_dim": 4,
+        "ridge": 1.0,
+        "cv_coefficient": 0.25
+      }
+    },
+    {
+      "name": "mc-m4-tau0.4",
+      "estimator": {
+        "kind": "mc",
+        "antithetic": true,
+        "samples": 4,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.4,
+        "reward_offset": 6.0
+      }
+    },
+    {
+      "name": "constant-m4-tau0.4",
+      "estimator": {
+        "kind": "constant",
+        "antithetic": true,
+        "samples": 4,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.4,
+        "reward_offset": 6.0
+      }
+    },
+    {
+      "name": "affine-lms-m4-tau0.4",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 4,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.4,
+        "reward_offset": 6.0,
+        "surrogate": "affine",
+        "learning_rate": 0.5
+      }
+    },
+    {
+      "name": "exponential-lms-m4-tau0.4",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 4,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.4,
+        "reward_offset": 6.0,
+        "surrogate": "exponential",
+        "learning_rate": 1.0,
+        "cv_coefficient": 0.5
+      }
+    },
+    {
+      "name": "exponential-rls-m4-tau0.4",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 4,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.4,
+        "reward_offset": 6.0,
+        "surrogate": "exponential",
+        "update": "rls",
+        "projection_dim": 64,
+        "ridge": 10.0,
+        "cv_coefficient": 0.25
+      }
+    },
+    {
+      "name": "exponential-dct-m4-tau0.4",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 4,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.4,
+        "reward_offset": 6.0,
+        "surrogate": "exponential",
+        "update": "rls",
+        "projection_kind": "spatial_dct",
+        "projection_dim": 4,
+        "ridge": 1.0,
+        "cv_coefficient": 0.25
+      }
+    },
+    {
+      "name": "mc-m16-tau0.4",
+      "estimator": {
+        "kind": "mc",
+        "antithetic": true,
+        "samples": 16,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.4,
+        "reward_offset": 6.0
+      }
+    },
+    {
+      "name": "constant-m16-tau0.4",
+      "estimator": {
+        "kind": "constant",
+        "antithetic": true,
+        "samples": 16,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.4,
+        "reward_offset": 6.0
+      }
+    },
+    {
+      "name": "affine-lms-m16-tau0.4",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 16,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.4,
+        "reward_offset": 6.0,
+        "surrogate": "affine",
+        "learning_rate": 0.5
+      }
+    },
+    {
+      "name": "exponential-lms-m16-tau0.4",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 16,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.4,
+        "reward_offset": 6.0,
+        "surrogate": "exponential",
+        "learning_rate": 1.0,
+        "cv_coefficient": 0.5
+      }
+    },
+    {
+      "name": "exponential-rls-m16-tau0.4",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 16,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.4,
+        "reward_offset": 6.0,
+        "surrogate": "exponential",
+        "update": "rls",
+        "projection_dim": 64,
+        "ridge": 10.0,
+        "cv_coefficient": 0.25
+      }
+    },
+    {
+      "name": "exponential-dct-m16-tau0.4",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 16,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.4,
+        "reward_offset": 6.0,
+        "surrogate": "exponential",
+        "update": "rls",
+        "projection_kind": "spatial_dct",
+        "projection_dim": 4,
+        "ridge": 1.0,
+        "cv_coefficient": 0.25
+      }
+    },
+    {
+      "name": "mc-m1-tau0.6",
+      "estimator": {
+        "kind": "mc",
+        "antithetic": true,
+        "samples": 1,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.6,
+        "reward_offset": 6.0
+      }
+    },
+    {
+      "name": "constant-m1-tau0.6",
+      "estimator": {
+        "kind": "constant",
+        "antithetic": true,
+        "samples": 1,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.6,
+        "reward_offset": 6.0
+      }
+    },
+    {
+      "name": "affine-lms-m1-tau0.6",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 1,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.6,
+        "reward_offset": 6.0,
+        "surrogate": "affine",
+        "learning_rate": 0.5
+      }
+    },
+    {
+      "name": "exponential-lms-m1-tau0.6",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 1,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.6,
+        "reward_offset": 6.0,
+        "surrogate": "exponential",
+        "learning_rate": 1.0,
+        "cv_coefficient": 0.5
+      }
+    },
+    {
+      "name": "exponential-rls-m1-tau0.6",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 1,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.6,
+        "reward_offset": 6.0,
+        "surrogate": "exponential",
+        "update": "rls",
+        "projection_dim": 64,
+        "ridge": 10.0,
+        "cv_coefficient": 0.25
+      }
+    },
+    {
+      "name": "exponential-dct-m1-tau0.6",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 1,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.6,
+        "reward_offset": 6.0,
+        "surrogate": "exponential",
+        "update": "rls",
+        "projection_kind": "spatial_dct",
+        "projection_dim": 4,
+        "ridge": 1.0,
+        "cv_coefficient": 0.25
+      }
+    },
+    {
+      "name": "mc-m4-tau0.6",
+      "estimator": {
+        "kind": "mc",
+        "antithetic": true,
+        "samples": 4,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.6,
+        "reward_offset": 6.0
+      }
+    },
+    {
+      "name": "constant-m4-tau0.6",
+      "estimator": {
+        "kind": "constant",
+        "antithetic": true,
+        "samples": 4,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.6,
+        "reward_offset": 6.0
+      }
+    },
+    {
+      "name": "affine-lms-m4-tau0.6",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 4,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.6,
+        "reward_offset": 6.0,
+        "surrogate": "affine",
+        "learning_rate": 0.5
+      }
+    },
+    {
+      "name": "exponential-lms-m4-tau0.6",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 4,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.6,
+        "reward_offset": 6.0,
+        "surrogate": "exponential",
+        "learning_rate": 1.0,
+        "cv_coefficient": 0.5
+      }
+    },
+    {
+      "name": "exponential-rls-m4-tau0.6",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 4,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.6,
+        "reward_offset": 6.0,
+        "surrogate": "exponential",
+        "update": "rls",
+        "projection_dim": 64,
+        "ridge": 10.0,
+        "cv_coefficient": 0.25
+      }
+    },
+    {
+      "name": "exponential-dct-m4-tau0.6",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 4,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.6,
+        "reward_offset": 6.0,
+        "surrogate": "exponential",
+        "update": "rls",
+        "projection_kind": "spatial_dct",
+        "projection_dim": 4,
+        "ridge": 1.0,
+        "cv_coefficient": 0.25
+      }
+    },
+    {
+      "name": "mc-m16-tau0.6",
+      "estimator": {
+        "kind": "mc",
+        "antithetic": true,
+        "samples": 16,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.6,
+        "reward_offset": 6.0
+      }
+    },
+    {
+      "name": "constant-m16-tau0.6",
+      "estimator": {
+        "kind": "constant",
+        "antithetic": true,
+        "samples": 16,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.6,
+        "reward_offset": 6.0
+      }
+    },
+    {
+      "name": "affine-lms-m16-tau0.6",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 16,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.6,
+        "reward_offset": 6.0,
+        "surrogate": "affine",
+        "learning_rate": 0.5
+      }
+    },
+    {
+      "name": "exponential-lms-m16-tau0.6",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 16,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.6,
+        "reward_offset": 6.0,
+        "surrogate": "exponential",
+        "learning_rate": 1.0,
+        "cv_coefficient": 0.5
+      }
+    },
+    {
+      "name": "exponential-rls-m16-tau0.6",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 16,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.6,
+        "reward_offset": 6.0,
+        "surrogate": "exponential",
+        "update": "rls",
+        "projection_dim": 64,
+        "ridge": 10.0,
+        "cv_coefficient": 0.25
+      }
+    },
+    {
+      "name": "exponential-dct-m16-tau0.6",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 16,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.6,
+        "reward_offset": 6.0,
+        "surrogate": "exponential",
+        "update": "rls",
+        "projection_kind": "spatial_dct",
+        "projection_dim": 4,
+        "ridge": 1.0,
+        "cv_coefficient": 0.25
+      }
+    }
+  ]
+}

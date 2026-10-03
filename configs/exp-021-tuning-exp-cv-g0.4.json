@@ -1,0 +1,35 @@
+{
+  "id": "exp-021-tuning-exp-cv-g0.4",
+  "mode": "image",
+  "purpose": "Compare representative exponential CV and ratio EMA at moderate guidance strengths on the same discovery seeds; fixed-state results alone do not establish endpoint benefit.",
+  "image": {
+    "size": 512,
+    "steps": 20,
+    "guided_steps": 10,
+    "proxy": "euler",
+    "reward_batch": 2,
+    "future_batch": 2
+  },
+  "prompts": [
+    "bernese",
+    "formula1"
+  ],
+  "seeds": [
+    11,
+    23
+  ],
+  "estimator": {
+    "kind": "cv",
+    "antithetic": true,
+    "samples": 8,
+    "warmup_samples": 32,
+    "warmup_steps": 1,
+    "refresh_every": 0,
+    "tau": 0.3,
+    "reward_offset": 6.0,
+    "surrogate": "exponential",
+    "learning_rate": 1.0,
+    "cv_coefficient": 0.5,
+    "gamma": 0.4
+  }
+}

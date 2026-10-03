@@ -40,6 +40,9 @@ def main():
         elif mode == "extension_checks":
             from .extension_checks import run_extension_checks
             metrics = run_extension_checks(output)
+        elif mode == "fidelity_checks":
+            from .extension_checks import run_fidelity_checks
+            metrics = run_fidelity_checks(output)
         elif mode == "image":
             from .image import ImageEngine
             engine = ImageEngine(config.get("image", {}))

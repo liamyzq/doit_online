@@ -1,0 +1,91 @@
+{
+  "id": "exp-017-spider-confirmation",
+  "mode": "fixed",
+  "purpose": "Check whether SPIDER denominator failures and error inflation persist on independent moderate-strength paths at original and generous refresh budgets, with exactly matched MC query schedules.",
+  "captures": [
+    "/home/mlw0719/doit_correction_storage/runs/exp-009-confirmation-capture-lighthouse",
+    "/home/mlw0719/doit_correction_storage/runs/exp-010-confirmation-capture-formula1"
+  ],
+  "repeats": 16,
+  "with_vjp": false,
+  "variants": [
+    {
+      "name": "spider-w32-r3-m16",
+      "estimator": {
+        "kind": "spider",
+        "antithetic": true,
+        "samples": 16,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 3,
+        "tau": 0.3,
+        "reward_offset": 6.0
+      }
+    },
+    {
+      "name": "mc-w32-r3-m16",
+      "estimator": {
+        "kind": "mc",
+        "antithetic": true,
+        "samples": 16,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 3,
+        "tau": 0.3,
+        "reward_offset": 6.0
+      }
+    },
+    {
+      "name": "spider-w64-r3-m16",
+      "estimator": {
+        "kind": "spider",
+        "antithetic": true,
+        "samples": 16,
+        "warmup_samples": 64,
+        "warmup_steps": 1,
+        "refresh_every": 3,
+        "tau": 0.3,
+        "reward_offset": 6.0
+      }
+    },
+    {
+      "name": "mc-w64-r3-m16",
+      "estimator": {
+        "kind": "mc",
+        "antithetic": true,
+        "samples": 16,
+        "warmup_samples": 64,
+        "warmup_steps": 1,
+        "refresh_every": 3,
+        "tau": 0.3,
+        "reward_offset": 6.0
+      }
+    },
+    {
+      "name": "spider-w128-r2-m16",
+      "estimator": {
+        "kind": "spider",
+        "antithetic": true,
+        "samples": 16,
+        "warmup_samples": 128,
+        "warmup_steps": 1,
+        "refresh_every": 2,
+        "tau": 0.3,
+        "reward_offset": 6.0
+      }
+    },
+    {
+      "name": "mc-w128-r2-m16",
+      "estimator": {
+        "kind": "mc",
+        "antithetic": true,
+        "samples": 16,
+        "warmup_samples": 128,
+        "warmup_steps": 1,
+        "refresh_every": 2,
+        "tau": 0.3,
+        "reward_offset": 6.0
+      }
+    }
+  ]
+}

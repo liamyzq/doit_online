@@ -110,3 +110,39 @@ validation. The goal closes only when all required decisions and records exist.
 - https://arxiv.org/abs/1505.01874
 - https://arxiv.org/abs/2408.08252
 - https://arxiv.org/abs/2601.21104
+
+### Confirmation and endpoint wave (exp-014--023)
+
+The focused fidelity checks detect wrong signs/scales in two-level H/U,
+under-counted reward queries, and a coefficient fitted on its own correction
+batch. A failure stops fidelity image runs until repaired. Previously settled
+Gaussian, DCT, and continuation-pairing checks are not repeated.
+
+Exp-015 tests representative affine/exponential LMS, projected exponential RLS,
+and spatial exponential RLS at M1, M4, M16 and tau0.3/0.4/0.6, with MC and constant
+controls. This is discovery-bank tuning, not independent confirmation. Exp-016
+locks retained settings before independent VJP evaluation on lighthouse37 and
+formula1-59; exp-017 repeats the SPIDER comparison there at three matched costs.
+Exp-018 covers pure exponential-affine proposals with scale-zero RNG controls.
+
+Exp-019--023 use Bernese and Formula1 seeds11/23 for a first endpoint screen.
+MC8 and MC32 each receive gamma0.4/1/4 and tau0.3/0.6. Gradient EMA beta0.25/0.5
+receives the same strength/temperature grid. Representative exponential CV and
+ratio EMA receive gamma0.4/1. Direct future M4/M8 receives gamma0.4/1/4 with
+warmup2M; a separate M4 condition removes shared continuation noise. Two-level
+estimators use cheap M8, fine M4, warmup32/8, and coefficients fixed1 or
+previous-mass times0.25/1 at gamma0.4/1. Every fine correction counts both its
+proxy and full reward queries; every future denoiser evaluation is recorded.
+
+The screen uses 168 images across 42 conditions. Choose candidates from paired
+reward, alignment, visible quality, denominator behavior and actual runtime,
+then expand to fresh prompts/discovery seeds before reserved-seed confirmation.
+Do not select from final-confirmation seeds101/113/127/139/151/163/179/191.
+A lower guidance MSE alone does not establish image success: a zero estimate has
+normalized squared error1, whereas all discovery estimates still exceed that.
+
+Exp-024 confirms the smallest nonzero mixture tilt on independent paths, using
+8 repeats for IS and CV-IS and a scale-zero control for each. Discovery IS
+scale1 reduced normalized ratio error by about0.9%, while larger scales worsened
+it. This small effect requires consistent independent evidence before keeping
+AIS; KL settings that never clip are not separate effective algorithms.

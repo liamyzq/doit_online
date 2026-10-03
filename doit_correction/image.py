@@ -237,7 +237,18 @@ class ImageEngine:
             if capture_callback is not None and index >= start_index and index < self.steps - 1:
                 capture_callback(transition, prompt, seed)
             if guided:
-                estimate = estimator.estimate(transition.endpoint_mean, transition.endpoint_std, self.reward)
+                oracle = estimator_config.get("oracle", "proxy")
+                if oracle == "proxy":
+                    estimate = estimator.estimate(transition.endpoint_mean, transition.endpoint_std, self.reward)
+                elif oracle in {"future", "multifidelity"}:
+                    from .fidelity import estimate_fidelity
+                    future_seed = seed * 100003 + index * 997 + 15000001
+                    future_reward = lambda eps: self.future_reward(
+                        transition, eps, future_seed, paired_future=estimator_config.get("paired_future", True))
+                    estimate = estimate_fidelity(estimator, transition.endpoint_mean, transition.endpoint_std,
+                                                 self.reward, future_reward)
+                else:
+                    raise ValueError(oracle)
                 correction = self.correction(transition, estimate.ratio)
                 if estimator.kind == "guidance_ema" and previous_guidance is not None:
                     beta = float(estimator_config.get("ema_beta", 0.5))

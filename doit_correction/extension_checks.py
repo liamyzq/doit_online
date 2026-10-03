@@ -9,6 +9,8 @@ import torch
 from .checks import _assert_close, _check
 from .estimators import IntegrableSurrogate, spatial_dct_projection
 from .image import ImageEngine
+from .fidelity import estimate_fidelity, two_level_moments
+from .estimators import MomentEstimator
 
 
 def check_dct(device):
@@ -70,4 +72,60 @@ def run_extension_checks(output):
     failed = sum(not case["passed"] for case in cases)
     if failed:
         raise AssertionError(f"{failed} extension checks failed; repair before using the extensions")
+    return {"checks_passed": len(cases), "checks_failed": 0}
+
+
+def check_two_level_moments(device):
+    d = 4
+    eps = d**0.5 * torch.cat([torch.eye(d, device=device), -torch.eye(d, device=device)])
+    cheap_slope = torch.tensor([0.1, -0.05, 0.03, 0.07], device=device)
+    full_slope = torch.tensor([-0.08, 0.12, 0.06, 0.03], device=device)
+    cheap = 2 + eps @ cheap_slope
+    full = 3 + eps @ full_slope
+    h, u, _ = two_level_moments(eps, cheap, eps, cheap, full, 1.3)
+    return {"h": _assert_close(h, 3.0, atol=2e-7, label="two-level H"),
+            "u": _assert_close(u, full_slope, atol=2e-7, label="two-level U")}
+
+
+def check_fidelity_cost_and_history(device):
+    m, rho = torch.zeros(4, device=device), 0.7
+    counts = {"proxy": 0, "future": 0}
+
+    def proxy(z):
+        counts["proxy"] += len(z)
+        return 6 + 0.3 * (torch.log(torch.tensor(2.0, device=device)) + 0.05 * z[:, 0] / rho)
+
+    def future(eps):
+        counts["future"] += len(eps)
+        return 6 + 0.3 * (torch.log(torch.tensor(3.0, device=device)) + 0.05 * eps[:, 0])
+
+    config = {"kind": "mc", "oracle": "multifidelity", "samples": 4, "warmup_steps": 0,
+              "future_samples": 2, "tau": 0.3, "reward_offset": 6.0,
+              "coefficient_mode": "previous_mass", "proxy_coefficient": 0.5}
+    estimator = MomentEstimator(config, 7051, device)
+    first = estimate_fidelity(estimator, m, rho, proxy, future)
+    second = estimate_fidelity(estimator, m, rho, proxy, future)
+    _assert_close(first.diagnostics["proxy_coefficient"], 0.5, atol=1e-7, label="first coefficient is fixed")
+    _assert_close(second.diagnostics["proxy_coefficient"], 0.75, atol=2e-6, label="next coefficient uses previous mass")
+    assert counts == {"proxy": 12, "future": 4} and estimator.queries == 16, (counts, estimator.queries)
+    counts["proxy"] = counts["future"] = 0
+    full = MomentEstimator(dict(config, oracle="future"), 7052, device)
+    estimate_fidelity(full, m, rho, proxy, future)
+    assert counts == {"proxy": 0, "future": 4} and full.queries == 4, (counts, full.queries)
+    return {"two_level_queries_per_step": first.diagnostics["queries"],
+            "full_future_queries": full.queries, "next_coefficient": second.diagnostics["proxy_coefficient"]}
+
+
+def run_fidelity_checks(output):
+    device = torch.device("cuda")
+    cases = [
+        _check("two_level_moments", "wrong sign, scaling, or Gaussian score in two-level moments",
+               lambda: check_two_level_moments(device)),
+        _check("fidelity_cost_and_history", "omitted proxy/full queries or fitting the current coefficient on current samples",
+               lambda: check_fidelity_cost_and_history(device)),
+    ]
+    Path(output, "checks.json").write_text(json.dumps(cases, indent=2) + "\n")
+    failed = sum(not case["passed"] for case in cases)
+    if failed:
+        raise AssertionError(f"{failed} fidelity checks failed; repair before fidelity experiments")
     return {"checks_passed": len(cases), "checks_failed": 0}

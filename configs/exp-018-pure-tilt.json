@@ -1,0 +1,127 @@
+{
+  "id": "exp-018-pure-tilt",
+  "mode": "fixed",
+  "purpose": "Test the proposed pure exponential-affine Gaussian tilt as well as mixture AIS already measured. Each kind includes scale-zero RNG-matched control; original base epsilon and exact p/q remain in the estimator.",
+  "captures": [
+    "/home/mlw0719/doit_correction_storage/runs/exp-002-capture-bernese",
+    "/home/mlw0719/doit_correction_storage/runs/exp-003-capture-formula1"
+  ],
+  "repeats": 4,
+  "with_vjp": false,
+  "variants": [
+    {
+      "name": "is-pure-s0.0",
+      "estimator": {
+        "kind": "is",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "surrogate": "exponential",
+        "learning_rate": 1.0,
+        "cv_coefficient": 0.5,
+        "proposal_kl": 0.5,
+        "proposal_scale": 0.0,
+        "base_mass": 0.0
+      }
+    },
+    {
+      "name": "is-pure-s1.0",
+      "estimator": {
+        "kind": "is",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "surrogate": "exponential",
+        "learning_rate": 1.0,
+        "cv_coefficient": 0.5,
+        "proposal_kl": 0.5,
+        "proposal_scale": 1.0,
+        "base_mass": 0.0
+      }
+    },
+    {
+      "name": "is-pure-s8.0",
+      "estimator": {
+        "kind": "is",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "surrogate": "exponential",
+        "learning_rate": 1.0,
+        "cv_coefficient": 0.5,
+        "proposal_kl": 0.5,
+        "proposal_scale": 8.0,
+        "base_mass": 0.0
+      }
+    },
+    {
+      "name": "cv_is-pure-s0.0",
+      "estimator": {
+        "kind": "cv_is",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "surrogate": "exponential",
+        "learning_rate": 1.0,
+        "cv_coefficient": 0.5,
+        "proposal_kl": 0.5,
+        "proposal_scale": 0.0,
+        "base_mass": 0.0
+      }
+    },
+    {
+      "name": "cv_is-pure-s1.0",
+      "estimator": {
+        "kind": "cv_is",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "surrogate": "exponential",
+        "learning_rate": 1.0,
+        "cv_coefficient": 0.5,
+        "proposal_kl": 0.5,
+        "proposal_scale": 1.0,
+        "base_mass": 0.0
+      }
+    },
+    {
+      "name": "cv_is-pure-s8.0",
+      "estimator": {
+        "kind": "cv_is",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "surrogate": "exponential",
+        "learning_rate": 1.0,
+        "cv_coefficient": 0.5,
+        "proposal_kl": 0.5,
+        "proposal_scale": 8.0,
+        "base_mass": 0.0
+      }
+    }
+  ]
+}

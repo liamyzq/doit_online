@@ -1,0 +1,38 @@
+{
+  "id": "exp-023-tuning-mf-mass-c025-g1.0",
+  "mode": "image",
+  "purpose": "Test the two-level full-future correction with independent cheap/correction batches and either fixed or historical mass scaling. Compare direct future MC at its actual cost; report signed-denominator failures.",
+  "image": {
+    "size": 512,
+    "steps": 20,
+    "guided_steps": 10,
+    "proxy": "euler",
+    "reward_batch": 2,
+    "future_batch": 2
+  },
+  "prompts": [
+    "bernese",
+    "formula1"
+  ],
+  "seeds": [
+    11,
+    23
+  ],
+  "estimator": {
+    "kind": "mc",
+    "antithetic": true,
+    "samples": 8,
+    "warmup_samples": 32,
+    "warmup_steps": 1,
+    "refresh_every": 0,
+    "tau": 0.3,
+    "reward_offset": 6.0,
+    "coefficient_mode": "previous_mass",
+    "proxy_coefficient": 0.25,
+    "oracle": "multifidelity",
+    "future_samples": 4,
+    "warmup_future_samples": 8,
+    "gamma": 1.0,
+    "paired_future": true
+  }
+}

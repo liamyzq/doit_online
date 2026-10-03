@@ -1,0 +1,5 @@
+{
+  "id": "exp-014-fidelity-checks",
+  "mode": "fidelity_checks",
+  "purpose": "Detect incorrect two-level moment algebra, omitted queries, or current-batch coefficient fitting. Stop full-future and multifidelity image runs if either focused check fails."
+}
