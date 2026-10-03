@@ -172,3 +172,20 @@ failure. Exp-029 tests the two-level fixed1 and previous-mass-times0.25 variants
 at tau0.6/gamma1. These12 conditions add48 discovery images, not confirmation
 data. No further broad grid follows; use them to choose settings for the fresh
 prompt/seed comparison.
+
+### Broader endpoint comparison (exp-030)
+
+Lock ten groups from the completed discovery screen and bounded extension:
+unguided; MC8 moderate/strong; MC32 gamma4/gamma8 at tau0.6; three beta0.25
+EMA settings covering the observed reward/alignment tradeoff; independent-future
+M4; and paired-future M8 at tau0.6/gamma4. The exact source configs are recorded
+in each new config. Evaluate all eight prompts with fresh discovery seeds41/53,
+160 images total. Separate jobs by seed and interleave their order with a fixed
+shuffle, so expensive methods do not all occupy one time interval or one GPU.
+
+`analysis-exp-030-expanded.json` maps the actual run shards to comparison groups;
+analysis rejects duplicate prompt/seed rows or mixed estimator/image settings.
+The analysis preserves each row's source artifact directory. This broader
+comparison selects settings for reserved-seed confirmation if any candidate is
+promising or marginal. Clearly dominated methods can close here; two seeds do
+not support a precision claim or a positive success declaration.

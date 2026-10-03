@@ -1,0 +1,45 @@
+{
+  "baseline": "mc8-strong",
+  "groups": {
+    "base": [
+      "artifacts/exp-030-expanded-base-s41",
+      "artifacts/exp-030-expanded-base-s53"
+    ],
+    "mc8-moderate": [
+      "artifacts/exp-030-expanded-mc8-moderate-s41",
+      "artifacts/exp-030-expanded-mc8-moderate-s53"
+    ],
+    "mc8-strong": [
+      "artifacts/exp-030-expanded-mc8-strong-s41",
+      "artifacts/exp-030-expanded-mc8-strong-s53"
+    ],
+    "mc32-g4": [
+      "artifacts/exp-030-expanded-mc32-g4-s41",
+      "artifacts/exp-030-expanded-mc32-g4-s53"
+    ],
+    "mc32-g8": [
+      "artifacts/exp-030-expanded-mc32-g8-s41",
+      "artifacts/exp-030-expanded-mc32-g8-s53"
+    ],
+    "gema-moderate": [
+      "artifacts/exp-030-expanded-gema-moderate-s41",
+      "artifacts/exp-030-expanded-gema-moderate-s53"
+    ],
+    "gema-alignment": [
+      "artifacts/exp-030-expanded-gema-alignment-s41",
+      "artifacts/exp-030-expanded-gema-alignment-s53"
+    ],
+    "gema-reward": [
+      "artifacts/exp-030-expanded-gema-reward-s41",
+      "artifacts/exp-030-expanded-gema-reward-s53"
+    ],
+    "future4-independent": [
+      "artifacts/exp-030-expanded-future4-independent-s41",
+      "artifacts/exp-030-expanded-future4-independent-s53"
+    ],
+    "future8-paired": [
+      "artifacts/exp-030-expanded-future8-paired-s41",
+      "artifacts/exp-030-expanded-future8-paired-s53"
+    ]
+  }
+}

@@ -1,0 +1,82 @@
+[
+  {
+    "id": "exp-030-expanded-base-s53",
+    "config": "configs/exp-030-expanded-base-s53.json"
+  },
+  {
+    "id": "exp-030-expanded-mc32-g4-s41",
+    "config": "configs/exp-030-expanded-mc32-g4-s41.json"
+  },
+  {
+    "id": "exp-030-expanded-mc8-moderate-s53",
+    "config": "configs/exp-030-expanded-mc8-moderate-s53.json"
+  },
+  {
+    "id": "exp-030-expanded-future4-independent-s41",
+    "config": "configs/exp-030-expanded-future4-independent-s41.json"
+  },
+  {
+    "id": "exp-030-expanded-gema-moderate-s53",
+    "config": "configs/exp-030-expanded-gema-moderate-s53.json"
+  },
+  {
+    "id": "exp-030-expanded-future4-independent-s53",
+    "config": "configs/exp-030-expanded-future4-independent-s53.json"
+  },
+  {
+    "id": "exp-030-expanded-gema-alignment-s53",
+    "config": "configs/exp-030-expanded-gema-alignment-s53.json"
+  },
+  {
+    "id": "exp-030-expanded-mc32-g8-s41",
+    "config": "configs/exp-030-expanded-mc32-g8-s41.json"
+  },
+  {
+    "id": "exp-030-expanded-future8-paired-s41",
+    "config": "configs/exp-030-expanded-future8-paired-s41.json"
+  },
+  {
+    "id": "exp-030-expanded-gema-reward-s53",
+    "config": "configs/exp-030-expanded-gema-reward-s53.json"
+  },
+  {
+    "id": "exp-030-expanded-mc8-strong-s41",
+    "config": "configs/exp-030-expanded-mc8-strong-s41.json"
+  },
+  {
+    "id": "exp-030-expanded-gema-reward-s41",
+    "config": "configs/exp-030-expanded-gema-reward-s41.json"
+  },
+  {
+    "id": "exp-030-expanded-mc8-strong-s53",
+    "config": "configs/exp-030-expanded-mc8-strong-s53.json"
+  },
+  {
+    "id": "exp-030-expanded-gema-alignment-s41",
+    "config": "configs/exp-030-expanded-gema-alignment-s41.json"
+  },
+  {
+    "id": "exp-030-expanded-future8-paired-s53",
+    "config": "configs/exp-030-expanded-future8-paired-s53.json"
+  },
+  {
+    "id": "exp-030-expanded-gema-moderate-s41",
+    "config": "configs/exp-030-expanded-gema-moderate-s41.json"
+  },
+  {
+    "id": "exp-030-expanded-base-s41",
+    "config": "configs/exp-030-expanded-base-s41.json"
+  },
+  {
+    "id": "exp-030-expanded-mc8-moderate-s41",
+    "config": "configs/exp-030-expanded-mc8-moderate-s41.json"
+  },
+  {
+    "id": "exp-030-expanded-mc32-g8-s53",
+    "config": "configs/exp-030-expanded-mc32-g8-s53.json"
+  },
+  {
+    "id": "exp-030-expanded-mc32-g4-s53",
+    "config": "configs/exp-030-expanded-mc32-g4-s53.json"
+  }
+]

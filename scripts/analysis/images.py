@@ -22,13 +22,29 @@ def read_run(path):
     if config.get("mode", "image") != "image":
         raise ValueError(f"Capture timings are not image-generation timings: {path}")
     rows = json.loads((path / "images.json").read_text())
-    return {(r["prompt"], r["seed"]): r for r in rows}, config
+    return {(r["prompt"], r["seed"]): dict(r, artifact_dir=str(path)) for r in rows}, config
 
 
-def diversity(path, keys):
+def read_group(paths):
+    combined = {}
+    first_config = None
+    for path in paths:
+        rows, config = read_run(path)
+        if first_config is None:
+            first_config = config
+        if (config["estimator"] != first_config["estimator"]
+                or config["image"] != first_config["image"]):
+            raise ValueError(f"A comparison group mixes estimator or image settings: {path}")
+        if combined.keys() & rows.keys():
+            raise ValueError(f"Repeated prompt/seed within a comparison group: {path}")
+        combined.update(rows)
+    return combined
+
+
+def diversity(rows, keys):
     prompt_values = []
     for prompt in sorted({p for p, _ in keys}):
-        features = np.stack([np.load(Path(path) / p / str(s) / "embedding.npy")
+        features = np.stack([np.load(Path(rows[(p, s)]["artifact_dir"]) / p / str(s) / "embedding.npy")
                              for p, s in sorted(keys) if p == prompt]).astype(np.float64)
         if len(features) < 2:
             continue
@@ -49,16 +65,16 @@ def paired_interval(differences, keys):
     return np.quantile(bootstrap, [0.025, 0.975]).tolist()
 
 
-def summarize(paths, baseline):
-    reference, _ = read_run(baseline)
+def summarize(groups, baseline):
+    reference = read_group(groups[baseline])
     results = []
-    for path in paths:
-        rows, config = read_run(path)
+    for name, paths in groups.items():
+        rows = read_group(paths)
         if rows.keys() != reference.keys():
-            raise ValueError(f"Paired prompt/seed sets differ: {path}")
+            raise ValueError(f"Paired prompt/seed sets differ: {name}")
         keys = sorted(rows)
-        result = {"id": config["id"], "images": len(keys), "seeds": len({s for _, s in keys}),
-                  "baseline": Path(baseline).name}
+        result = {"id": name, "images": len(keys), "seeds": len({s for _, s in keys}),
+                  "baseline": baseline, "source_runs": [str(p) for p in paths]}
         for metric in ["reward", "clip_alignment"]:
             values = np.array([rows[k][metric] for k in keys])
             differences = values - np.array([reference[k][metric] for k in keys])
@@ -71,18 +87,18 @@ def summarize(paths, baseline):
         for metric in ["guidance_queries", "score_forwards", "seconds"]:
             result[f"mean_{metric}"] = float(np.mean([rows[k][metric] for k in keys]))
         result["denominator_events"] = sum(rows[k]["denominator_events"] for k in keys)
-        result["within_prompt_embedding_distance"] = diversity(path, keys)
+        result["within_prompt_embedding_distance"] = diversity(rows, keys)
         results.append(result)
     return results
 
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--baseline", required=True)
+    parser.add_argument("--manifest", required=True, help="JSON with baseline group name and groups of run directories")
     parser.add_argument("--output")
-    parser.add_argument("runs", nargs="+")
     args = parser.parse_args()
-    output = json.dumps(summarize(args.runs, args.baseline), indent=2, allow_nan=False) + "\n"
+    manifest = json.loads(Path(args.manifest).read_text())
+    output = json.dumps(summarize(manifest["groups"], manifest["baseline"]), indent=2, allow_nan=False) + "\n"
     if args.output:
         Path(args.output).write_text(output)
     else:
