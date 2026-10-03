@@ -1,0 +1,5 @@
+{
+  "id": "exp-000-checks",
+  "mode": "checks",
+  "purpose": "Detect incorrect Gaussian moments, update order, importance ratios, SPIDER query accounting, Euler transitions, and VJP mapping before scientific runs. Repair any failure before comparing methods."
+}

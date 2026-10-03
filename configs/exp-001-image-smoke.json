@@ -1,0 +1,25 @@
+{
+  "id": "exp-001-image-smoke",
+  "mode": "image",
+  "purpose": "Verify SD1.5 model loading, decoded LAION rewards, finite correction, and output artifacts. Measure peak memory to determine stacking. This single image is not evidence of method efficacy.",
+  "image": {
+    "size": 512,
+    "steps": 20,
+    "guided_steps": 10,
+    "proxy": "euler",
+    "reward_batch": 2
+  },
+  "prompts": ["bernese"],
+  "seeds": [11],
+  "estimator": {
+    "kind": "mc",
+    "antithetic": true,
+    "samples": 8,
+    "warmup_samples": 32,
+    "warmup_steps": 1,
+    "refresh_every": 0,
+    "tau": 0.3,
+    "reward_offset": 6.0,
+    "gamma": 4.0
+  }
+}
