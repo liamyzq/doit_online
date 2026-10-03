@@ -1,0 +1,26 @@
+[
+  {
+    "id": "exp-004-calibration-base",
+    "config": "configs/exp-004-calibration-base.json"
+  },
+  {
+    "id": "exp-004-calibration-euler-g01",
+    "config": "configs/exp-004-calibration-euler-g01.json"
+  },
+  {
+    "id": "exp-004-calibration-euler-g04",
+    "config": "configs/exp-004-calibration-euler-g04.json"
+  },
+  {
+    "id": "exp-004-calibration-euler-g1",
+    "config": "configs/exp-004-calibration-euler-g1.json"
+  },
+  {
+    "id": "exp-004-calibration-euler-g4",
+    "config": "configs/exp-004-calibration-euler-g4.json"
+  },
+  {
+    "id": "exp-004-calibration-source-g04",
+    "config": "configs/exp-004-calibration-source-g04.json"
+  }
+]

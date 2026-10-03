@@ -151,7 +151,7 @@ def evaluate(config, output):
     rows, estimators = [], {}
     for path in paths:
         state = torch.load(path, map_location="cpu", weights_only=False)
-        trajectory = state["prompt"], state["seed"]
+        trajectory = str(Path(path).parent), state["prompt"], state["seed"]
         m, rho = state["m"], state["rho"]
         transition = None
         if engine is not None:

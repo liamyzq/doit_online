@@ -1,1 +1,3 @@
 experiment_id	completed_at	commit	config	seed	machine	job_id	metric	value	run_status	decision	artifact_dir	description
+exp-000-checks	2026-10-03T04:59:12Z	6c9021c	configs/exp-000-checks.json	0	orion	267157	checks_passed	11	success	keep	/home/mlw0719/doit_correction_storage/runs/exp-000-checks	All analytic, importance-weight, update-order, Euler-transition and VJP checks passed.
+exp-001-image-smoke	2026-10-03T05:01:07Z	6c9021c	configs/exp-001-image-smoke.json	11	orion	270799	peak_reserved_mib	7298	success	calibrate	/home/mlw0719/doit_correction_storage/runs/exp-001-image-smoke	End-to-end execution passed, but visible oversaturation and broken detail require strength calibration before research capture; reward 4.1543, alignment 0.20635.

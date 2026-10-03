@@ -265,7 +265,8 @@ class MomentEstimator:
         }
         # All current outputs above use only previously fitted memory.
         update_started = time.perf_counter()
-        if use_surrogate:
+        freeze_after = int(self.config.get("freeze_after_steps", -1))
+        if use_surrogate and (freeze_after < 0 or step < freeze_after):
             self.surrogate.update(m[None] + float(rho) * eps, rewards, f)
         self.constant = float(f.mean()) if self.constant is None else 0.5 * self.constant + 0.5 * float(f.mean())
         self.previous = (m.detach().clone(), float(rho), h.detach().clone(), u.detach().clone())

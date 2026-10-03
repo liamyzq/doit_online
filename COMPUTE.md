@@ -29,9 +29,10 @@ Setup and download logs are in storage as `setup.log` and `download.log`.
 
 ## Launch policy
 
-Use `scripts/compute/orion/env.sh` and `queue.py`. Run one image smoke first and
-measure peak allocated/reserved memory. Set the per-job reservation from that
-measurement, with a margin, and retain at least 2 GiB of free memory per device.
+Use `scripts/compute/orion/env.sh` and `queue.py`. The first 512-pixel image smoke
+measured 6,240 MiB allocated and 7,298 MiB reserved. Use 11,000 MiB per image job
+for subsequent waves, allowing extra stored samples and VJP work. Retain at
+least 2 GiB of free memory per device and allow at most two jobs per GPU.
 The queue handles only this project's jobs. Each queue is finite. Refresh
 memory readings while waiting; high utilization is expected on this shared
 machine. Report wall-clock under this contention rather than treating it as a

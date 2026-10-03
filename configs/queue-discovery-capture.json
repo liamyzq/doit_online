@@ -1,0 +1,10 @@
+[
+  {
+    "id": "exp-002-capture-bernese",
+    "config": "configs/exp-002-capture-bernese.json"
+  },
+  {
+    "id": "exp-003-capture-formula1",
+    "config": "configs/exp-003-capture-formula1.json"
+  }
+]

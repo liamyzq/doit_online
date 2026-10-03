@@ -1,0 +1,30 @@
+{
+  "id": "exp-004-calibration-source-g04",
+  "mode": "image",
+  "purpose": "Calibrate correction strength on discovery seeds after the M8 gamma4 smoke produced visible oversaturation. Compare consistent Euler and source VP conventions; do not credit their differences to control variates.",
+  "image": {
+    "size": 512,
+    "steps": 20,
+    "guided_steps": 10,
+    "proxy": "source_vp",
+    "reward_batch": 2
+  },
+  "prompts": [
+    "bernese"
+  ],
+  "seeds": [
+    11,
+    23
+  ],
+  "estimator": {
+    "kind": "mc",
+    "antithetic": true,
+    "samples": 32,
+    "warmup_samples": 32,
+    "warmup_steps": 1,
+    "refresh_every": 0,
+    "tau": 0.3,
+    "reward_offset": 6.0,
+    "gamma": 0.4
+  }
+}
