@@ -1,0 +1,211 @@
+{
+  "id": "exp-005-fixed-controls",
+  "mode": "fixed",
+  "purpose": "Discovery-only tuning of fresh ratio error on two independent image trajectories; query budgets include warm-up and periodic refresh. Stored Gaussian banks are independent of the reference. Promising candidates require actual VJP and new-trajectory confirmation.",
+  "captures": [
+    "/home/mlw0719/doit_correction_storage/runs/exp-002-capture-bernese",
+    "/home/mlw0719/doit_correction_storage/runs/exp-003-capture-formula1"
+  ],
+  "repeats": 16,
+  "with_vjp": false,
+  "variants": [
+    {
+      "name": "anti-m1",
+      "estimator": {
+        "kind": "mc",
+        "antithetic": true,
+        "samples": 1,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0
+      }
+    },
+    {
+      "name": "iid-m1",
+      "estimator": {
+        "kind": "mc",
+        "antithetic": false,
+        "samples": 1,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0
+      }
+    },
+    {
+      "name": "anti-m4",
+      "estimator": {
+        "kind": "mc",
+        "antithetic": true,
+        "samples": 4,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0
+      }
+    },
+    {
+      "name": "iid-m4",
+      "estimator": {
+        "kind": "mc",
+        "antithetic": false,
+        "samples": 4,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0
+      }
+    },
+    {
+      "name": "anti-m8",
+      "estimator": {
+        "kind": "mc",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0
+      }
+    },
+    {
+      "name": "iid-m8",
+      "estimator": {
+        "kind": "mc",
+        "antithetic": false,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0
+      }
+    },
+    {
+      "name": "anti-m16",
+      "estimator": {
+        "kind": "mc",
+        "antithetic": true,
+        "samples": 16,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0
+      }
+    },
+    {
+      "name": "iid-m16",
+      "estimator": {
+        "kind": "mc",
+        "antithetic": false,
+        "samples": 16,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0
+      }
+    },
+    {
+      "name": "anti-m32",
+      "estimator": {
+        "kind": "mc",
+        "antithetic": true,
+        "samples": 32,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0
+      }
+    },
+    {
+      "name": "iid-m32",
+      "estimator": {
+        "kind": "mc",
+        "antithetic": false,
+        "samples": 32,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0
+      }
+    },
+    {
+      "name": "constant-anti-m8",
+      "estimator": {
+        "kind": "constant",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0
+      }
+    },
+    {
+      "name": "constant-iid-m8",
+      "estimator": {
+        "kind": "constant",
+        "antithetic": false,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0
+      }
+    },
+    {
+      "name": "ratio-ema-b0.25",
+      "estimator": {
+        "kind": "ema",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "ema_beta": 0.25
+      }
+    },
+    {
+      "name": "ratio-ema-b0.5",
+      "estimator": {
+        "kind": "ema",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "ema_beta": 0.5
+      }
+    },
+    {
+      "name": "ratio-ema-b0.75",
+      "estimator": {
+        "kind": "ema",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "ema_beta": 0.75
+      }
+    }
+  ]
+}

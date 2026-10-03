@@ -144,11 +144,13 @@ def evaluate(config, output):
         paths.extend(row["path"] for row in json.loads((Path(directory) / "states.json").read_text()))
     output = Path(output)
     use_vjp = bool(config.get("with_vjp", False))
+    if not use_vjp and any(v["estimator"]["kind"] == "guidance_ema" for v in variants):
+        raise ValueError("Guidance EMA requires an actual VJP comparison")
     needs_oracle = any(v["estimator"]["kind"] in {"is", "cv_is"} for v in variants)
     engine = None
     if use_vjp or needs_oracle:
         engine = ImageEngine(torch.load(paths[0], map_location="cpu", weights_only=False)["image_config"])
-    rows, estimators = [], {}
+    rows, estimators, previous_guidance = [], {}, {}
     for path in paths:
         state = torch.load(path, map_location="cpu", weights_only=False)
         trajectory = str(Path(path).parent), state["prompt"], state["seed"]
@@ -186,6 +188,10 @@ def evaluate(config, output):
                 guidance_error, guidance_norm = None, None
                 if use_vjp:
                     grad = engine.correction(transition, result.ratio.to(engine.device), retain_graph=True).cpu()
+                    if estimator.kind == "guidance_ema" and key in previous_guidance:
+                        beta = float(vconfig.get("ema_beta", 0.5))
+                        grad = beta * grad + (1 - beta) * previous_guidance[key]
+                    previous_guidance[key] = grad.clone()
                     guidance_error = float((grad - ref["guidance"]).double().square().sum())
                     guidance_norm = float(ref["guidance"].double().square().sum())
                 row = {
@@ -200,6 +206,7 @@ def evaluate(config, output):
                     "reference_split_guidance_sq_distance": ref["split_guidance_sq_distance"],
                     "denominator_floored": result.diagnostics["denominator_floored"],
                     "ess": result.diagnostics["ess"],
+                    "heldout_prediction_mse": result.diagnostics["heldout_prediction_mse"],
                     "heldout_residual_mse": result.diagnostics["heldout_residual_mse"],
                     "weighted_residual_moment": result.diagnostics["weighted_residual_moment"],
                     "estimator_seconds": result.diagnostics["estimator_seconds"],

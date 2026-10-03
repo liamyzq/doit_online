@@ -1,0 +1,26 @@
+[
+  {
+    "id": "exp-005-fixed-controls",
+    "config": "configs/exp-005-fixed-controls.json"
+  },
+  {
+    "id": "exp-005-fixed-affine-lms",
+    "config": "configs/exp-005-fixed-affine-lms.json"
+  },
+  {
+    "id": "exp-005-fixed-exponential-lms",
+    "config": "configs/exp-005-fixed-exponential-lms.json"
+  },
+  {
+    "id": "exp-005-fixed-affine-rls",
+    "config": "configs/exp-005-fixed-affine-rls.json"
+  },
+  {
+    "id": "exp-005-fixed-exponential-rls",
+    "config": "configs/exp-005-fixed-exponential-rls.json"
+  },
+  {
+    "id": "exp-005-fixed-spider",
+    "config": "configs/exp-005-fixed-spider.json"
+  }
+]

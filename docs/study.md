@@ -24,7 +24,8 @@ corrections as observations rather than silently replacing them with a baseline.
 ## Required method coverage
 
 - Independent and antithetic fresh MC, including the original M=32 budget.
-- A historical constant control variate and a guidance EMA control.
+- A historical constant control variate, a moment-ratio EMA control, and an
+  actual guidance EMA after the VJP. Ratio EMA is not labeled guidance EMA.
 - Affine online control variates using normalized LMS and projected RLS.
 - Exponential-affine control variates fitted to log weights.
 - SPIDER-style coupled moment differences with periodic refresh. A difference
@@ -59,7 +60,12 @@ base-Gaussian methods; adaptive proposals require actual new oracle calls.
 Initial tuning varies fresh query budgets 4/8/16, learning rates or ridge
 regularization, memory coefficient, refresh interval, and proposal strength.
 Warm-up and refresh count toward the total budget. Controls receive the same
-query schedule. Small M=1 is a separate ablation after warm-up, not a default.
+query schedule. The initial stored-bank grid has 81 configurations at tau 0.3;
+learned-method tuning starts at M=8, then retained variants are checked at M=4
+and M=16 and other temperatures. M=1 is measured separately. Diagnostic
+prediction error is distinct from the residual actually used after multiplying
+the control-variate coefficient; proposal diagnostics include squared importance
+weights in the residual second moment. Small M=1 is a separate ablation after warm-up, not a default.
 
 Retain candidates only if an independent comparison supports lower ratio and
 guidance error at the same query budget, or comparable error with fewer queries.

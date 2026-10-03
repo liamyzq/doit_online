@@ -216,6 +216,7 @@ class ImageEngine:
         gamma = float(estimator_config.get("gamma", 4.0))
         start_index = self.steps - int(self.config.get("guided_steps", 10))
         diagnostics = []
+        previous_guidance = None
         counts_before = self.reward_queries, self.score_forwards
         started = time.perf_counter()
         for index in range(self.steps):
@@ -226,6 +227,10 @@ class ImageEngine:
             if guided:
                 estimate = estimator.estimate(transition.endpoint_mean, transition.endpoint_std, self.reward)
                 correction = self.correction(transition, estimate.ratio)
+                if estimator.kind == "guidance_ema" and previous_guidance is not None:
+                    beta = float(estimator_config.get("ema_beta", 0.5))
+                    correction = beta * correction + (1 - beta) * previous_guidance
+                previous_guidance = correction.detach().clone()
                 if not torch.isfinite(correction).all():
                     raise FloatingPointError("Nonfinite VJP guidance")
                 diagnostics.append(dict(index=index, correction_norm=float(correction.norm()), **estimate.diagnostics))

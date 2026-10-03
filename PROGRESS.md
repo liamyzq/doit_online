@@ -13,8 +13,13 @@ any successful method is scaled to the existing D4RL/QGPO RL setup.
 - `exp-001-image-smoke` completed at 512 pixels with 7,298 MiB peak reserved
   memory and 21.94 seconds per image. It had no denominator events. However,
   consistent-Euler correction at gamma 4 and M=8 visibly oversaturated the
-  image (reward 4.1543, CLIP alignment 0.20635). This is a real calibration
-  problem, so fixed-state capture waits for an M=32 strength comparison.
+  image (reward 4.1543, CLIP alignment 0.20635). This prompted an M=32 strength comparison before fixed-state capture.
+- All six `exp-004` calibration runs completed. At M=32, mean reward increased
+  from 6.1129 (gamma 0) to 6.1485 (0.4), 6.2088 (1), and 6.4681 (4); gamma 4
+  alignment was 0.3085 versus 0.3122 without guidance. Seed 11 at gamma 4 was
+  visually coherent with M=32, unlike the M=8 smoke. Retain gamma 4 for the
+  discovery capture to test this query-budget sensitivity. Two seeds do not
+  establish an endpoint improvement; confirmation will include gamma 1 and 4.
 - Confirmed by source inspection: the available image implementation already
   uses fixed temperature (reward centering, without division by batch standard
   deviation). The proposal's batch-normalization concern must be checked
@@ -37,9 +42,9 @@ any successful method is scaled to the existing D4RL/QGPO RL setup.
 
 ## Next experiments
 
-1. Calibrate baseline correction strength on Bernese discovery seeds 11 and 23:
-   gamma 0, 0.1, 0.4, 1, 4 with consistent Euler and gamma 0.4 with the source
-   convention. Use M=32 and judge reward, alignment, and visible image quality.
+1. Capture nine guided states per M32/gamma4 trajectory for Bernese seed 23 and
+   Formula 1 seed 11. Use 128-sample tuning banks and independent 512-sample
+   references, plus 32 coupled full-future probes at steps 10 and 16.
 2. Compare all proposed families and controls on frozen image states, including
    held-out references and true query costs; tune only on discovery seeds.
 3. Evaluate retained methods on independent image rollouts. Evolve candidates

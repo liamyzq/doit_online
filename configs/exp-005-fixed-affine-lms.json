@@ -1,0 +1,188 @@
+{
+  "id": "exp-005-fixed-affine-lms",
+  "mode": "fixed",
+  "purpose": "Discovery-only tuning of fresh ratio error on two independent image trajectories; query budgets include warm-up and periodic refresh. Stored Gaussian banks are independent of the reference. Promising candidates require actual VJP and new-trajectory confirmation.",
+  "captures": [
+    "/home/mlw0719/doit_correction_storage/runs/exp-002-capture-bernese",
+    "/home/mlw0719/doit_correction_storage/runs/exp-003-capture-formula1"
+  ],
+  "repeats": 16,
+  "with_vjp": false,
+  "variants": [
+    {
+      "name": "affine-lms-lr0.1-c0.25",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "surrogate": "affine",
+        "learning_rate": 0.1,
+        "cv_coefficient": 0.25
+      }
+    },
+    {
+      "name": "affine-lms-lr0.1-c0.5",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "surrogate": "affine",
+        "learning_rate": 0.1,
+        "cv_coefficient": 0.5
+      }
+    },
+    {
+      "name": "affine-lms-lr0.1-c1.0",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "surrogate": "affine",
+        "learning_rate": 0.1,
+        "cv_coefficient": 1.0
+      }
+    },
+    {
+      "name": "affine-lms-lr0.5-c0.25",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "surrogate": "affine",
+        "learning_rate": 0.5,
+        "cv_coefficient": 0.25
+      }
+    },
+    {
+      "name": "affine-lms-lr0.5-c0.5",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "surrogate": "affine",
+        "learning_rate": 0.5,
+        "cv_coefficient": 0.5
+      }
+    },
+    {
+      "name": "affine-lms-lr0.5-c1.0",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "surrogate": "affine",
+        "learning_rate": 0.5,
+        "cv_coefficient": 1.0
+      }
+    },
+    {
+      "name": "affine-lms-lr1.0-c0.25",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "surrogate": "affine",
+        "learning_rate": 1.0,
+        "cv_coefficient": 0.25
+      }
+    },
+    {
+      "name": "affine-lms-lr1.0-c0.5",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "surrogate": "affine",
+        "learning_rate": 1.0,
+        "cv_coefficient": 0.5
+      }
+    },
+    {
+      "name": "affine-lms-lr1.0-c1.0",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "surrogate": "affine",
+        "learning_rate": 1.0,
+        "cv_coefficient": 1.0
+      }
+    },
+    {
+      "name": "affine-reset",
+      "estimator": {
+        "kind": "cv_reset",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "surrogate": "affine",
+        "learning_rate": 0.5
+      }
+    },
+    {
+      "name": "affine-frozen",
+      "estimator": {
+        "kind": "cv",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "surrogate": "affine",
+        "learning_rate": 0.5,
+        "freeze_after_steps": 1
+      }
+    }
+  ]
+}

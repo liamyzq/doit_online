@@ -241,7 +241,7 @@ class MomentEstimator:
             _, _, ph, pu = self.previous
             h = ph + difference.mean()
             u = pu + (difference[:, None] * e).mean(0)
-        elif self.kind not in {"mc", "ema", "spider", "is", "constant"}:
+        elif self.kind not in {"mc", "ema", "guidance_ema", "spider", "is", "constant"}:
             raise ValueError(self.kind)
         floor = float(self.config.get("denominator_floor", 1e-8))
         ratio = u / h.clamp_min(floor)
@@ -253,15 +253,23 @@ class MomentEstimator:
         nqueries = len(rewards) + (0 if previous_rewards is None else len(previous_rewards))
         normalized = importance * f
         ess = normalized.sum().square() / normalized.square().sum().clamp_min(1e-30)
-        residual_mse = (f - predictions).square().mean()
+        model_residual_mse = (f - predictions).square().mean()
+        applied_residual = f
+        if self.kind in {"cv", "cv_reset", "cv_is"}:
+            applied_residual = f - coefficient * predictions
+        elif self.kind == "constant":
+            applied_residual = f - predictions
+        elif self.kind == "spider" and previous_rewards is not None:
+            applied_residual = f - self.weights(previous_rewards)
         # Diagnostic target is held out from the current fit. It is measured
         # before update, and does not choose the current coefficient.
         diagnostics = {
             "queries": nqueries, "h": float(h), "raw_h": float(raw_h),
             "denominator_floored": int(h < floor), "ess": float(ess),
             "ratio_norm": float(ratio.norm()), "raw_ratio_norm": float((raw_u / raw_h).norm()),
-            "heldout_residual_mse": float(residual_mse),
-            "weighted_residual_moment": float(((f - predictions).square() * (e - ratio).square().sum(-1)).mean()),
+            "heldout_prediction_mse": float(model_residual_mse),
+            "heldout_residual_mse": float(applied_residual.square().mean()),
+            "weighted_residual_moment": float(((importance * applied_residual).square() * (e - ratio).square().sum(-1)).mean()),
         }
         # All current outputs above use only previously fitted memory.
         update_started = time.perf_counter()
