@@ -230,6 +230,7 @@ class ImageEngine:
         diagnostics = []
         previous_guidance = None
         counts_before = self.reward_queries, self.score_forwards
+        times_before = self.reward_seconds, self.vjp_seconds
         started = time.perf_counter()
         for index in range(self.steps):
             guided = index >= start_index and index < self.steps - 1 and gamma != 0
@@ -279,6 +280,11 @@ class ImageEngine:
             "guidance_queries": estimator.queries, "evaluation_queries": 1,
             "all_queries": self.reward_queries - counts_before[0],
             "score_forwards": self.score_forwards - counts_before[1],
+            "reward_seconds": self.reward_seconds - times_before[0],
+            "vjp_seconds": self.vjp_seconds - times_before[1],
+            "oracle_seconds": sum(d.get("oracle_seconds", 0.0) for d in diagnostics),
+            "estimator_seconds": sum(d.get("estimator_seconds", 0.0) for d in diagnostics),
+            "update_seconds": sum(d.get("update_seconds", 0.0) for d in diagnostics),
             "denominator_events": sum(d["denominator_floored"] for d in diagnostics),
             "steps": diagnostics,
         }

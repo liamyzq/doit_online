@@ -86,6 +86,10 @@ def summarize(groups, baseline):
                 for p in sorted({p for p, _ in keys})}
         for metric in ["guidance_queries", "score_forwards", "seconds"]:
             result[f"mean_{metric}"] = float(np.mean([rows[k][metric] for k in keys]))
+        for metric in ["reward_seconds", "vjp_seconds", "oracle_seconds", "estimator_seconds", "update_seconds"]:
+            result[f"mean_{metric}"] = (
+                float(np.mean([rows[k][metric] for k in keys]))
+                if all(metric in rows[k] for k in keys) else None)
         result["denominator_events"] = sum(rows[k]["denominator_events"] for k in keys)
         result["within_prompt_embedding_distance"] = diversity(rows, keys)
         results.append(result)

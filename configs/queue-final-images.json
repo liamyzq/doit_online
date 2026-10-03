@@ -1,0 +1,226 @@
+[
+  {
+    "id": "exp-031-confirm-gema-reward-s151",
+    "config": "configs/exp-031-confirm-gema-reward-s151.json"
+  },
+  {
+    "id": "exp-031-confirm-mc32-g4-s113",
+    "config": "configs/exp-031-confirm-mc32-g4-s113.json"
+  },
+  {
+    "id": "exp-031-confirm-future4-independent-s151",
+    "config": "configs/exp-031-confirm-future4-independent-s151.json"
+  },
+  {
+    "id": "exp-031-confirm-gema-reward-s139",
+    "config": "configs/exp-031-confirm-gema-reward-s139.json"
+  },
+  {
+    "id": "exp-031-confirm-mc8-strong-s191",
+    "config": "configs/exp-031-confirm-mc8-strong-s191.json"
+  },
+  {
+    "id": "exp-031-confirm-future4-independent-s179",
+    "config": "configs/exp-031-confirm-future4-independent-s179.json"
+  },
+  {
+    "id": "exp-031-confirm-base-s113",
+    "config": "configs/exp-031-confirm-base-s113.json"
+  },
+  {
+    "id": "exp-031-confirm-mc8-moderate-s179",
+    "config": "configs/exp-031-confirm-mc8-moderate-s179.json"
+  },
+  {
+    "id": "exp-031-confirm-mc8-moderate-s101",
+    "config": "configs/exp-031-confirm-mc8-moderate-s101.json"
+  },
+  {
+    "id": "exp-031-confirm-mc8-strong-s139",
+    "config": "configs/exp-031-confirm-mc8-strong-s139.json"
+  },
+  {
+    "id": "exp-031-confirm-mc32-g4-s139",
+    "config": "configs/exp-031-confirm-mc32-g4-s139.json"
+  },
+  {
+    "id": "exp-031-confirm-gema-reward-s163",
+    "config": "configs/exp-031-confirm-gema-reward-s163.json"
+  },
+  {
+    "id": "exp-031-confirm-future8-paired-s191",
+    "config": "configs/exp-031-confirm-future8-paired-s191.json"
+  },
+  {
+    "id": "exp-031-confirm-base-s191",
+    "config": "configs/exp-031-confirm-base-s191.json"
+  },
+  {
+    "id": "exp-031-confirm-mc8-strong-s127",
+    "config": "configs/exp-031-confirm-mc8-strong-s127.json"
+  },
+  {
+    "id": "exp-031-confirm-future4-independent-s127",
+    "config": "configs/exp-031-confirm-future4-independent-s127.json"
+  },
+  {
+    "id": "exp-031-confirm-mc8-moderate-s163",
+    "config": "configs/exp-031-confirm-mc8-moderate-s163.json"
+  },
+  {
+    "id": "exp-031-confirm-future4-independent-s139",
+    "config": "configs/exp-031-confirm-future4-independent-s139.json"
+  },
+  {
+    "id": "exp-031-confirm-future8-paired-s179",
+    "config": "configs/exp-031-confirm-future8-paired-s179.json"
+  },
+  {
+    "id": "exp-031-confirm-mc8-strong-s113",
+    "config": "configs/exp-031-confirm-mc8-strong-s113.json"
+  },
+  {
+    "id": "exp-031-confirm-mc32-g4-s179",
+    "config": "configs/exp-031-confirm-mc32-g4-s179.json"
+  },
+  {
+    "id": "exp-031-confirm-mc8-moderate-s151",
+    "config": "configs/exp-031-confirm-mc8-moderate-s151.json"
+  },
+  {
+    "id": "exp-031-confirm-base-s163",
+    "config": "configs/exp-031-confirm-base-s163.json"
+  },
+  {
+    "id": "exp-031-confirm-gema-reward-s101",
+    "config": "configs/exp-031-confirm-gema-reward-s101.json"
+  },
+  {
+    "id": "exp-031-confirm-future8-paired-s151",
+    "config": "configs/exp-031-confirm-future8-paired-s151.json"
+  },
+  {
+    "id": "exp-031-confirm-base-s139",
+    "config": "configs/exp-031-confirm-base-s139.json"
+  },
+  {
+    "id": "exp-031-confirm-mc8-strong-s151",
+    "config": "configs/exp-031-confirm-mc8-strong-s151.json"
+  },
+  {
+    "id": "exp-031-confirm-mc8-moderate-s113",
+    "config": "configs/exp-031-confirm-mc8-moderate-s113.json"
+  },
+  {
+    "id": "exp-031-confirm-mc32-g4-s127",
+    "config": "configs/exp-031-confirm-mc32-g4-s127.json"
+  },
+  {
+    "id": "exp-031-confirm-base-s179",
+    "config": "configs/exp-031-confirm-base-s179.json"
+  },
+  {
+    "id": "exp-031-confirm-mc32-g4-s191",
+    "config": "configs/exp-031-confirm-mc32-g4-s191.json"
+  },
+  {
+    "id": "exp-031-confirm-mc8-strong-s101",
+    "config": "configs/exp-031-confirm-mc8-strong-s101.json"
+  },
+  {
+    "id": "exp-031-confirm-mc8-strong-s179",
+    "config": "configs/exp-031-confirm-mc8-strong-s179.json"
+  },
+  {
+    "id": "exp-031-confirm-base-s101",
+    "config": "configs/exp-031-confirm-base-s101.json"
+  },
+  {
+    "id": "exp-031-confirm-future8-paired-s127",
+    "config": "configs/exp-031-confirm-future8-paired-s127.json"
+  },
+  {
+    "id": "exp-031-confirm-mc8-moderate-s127",
+    "config": "configs/exp-031-confirm-mc8-moderate-s127.json"
+  },
+  {
+    "id": "exp-031-confirm-future8-paired-s113",
+    "config": "configs/exp-031-confirm-future8-paired-s113.json"
+  },
+  {
+    "id": "exp-031-confirm-mc8-moderate-s191",
+    "config": "configs/exp-031-confirm-mc8-moderate-s191.json"
+  },
+  {
+    "id": "exp-031-confirm-gema-reward-s127",
+    "config": "configs/exp-031-confirm-gema-reward-s127.json"
+  },
+  {
+    "id": "exp-031-confirm-mc8-strong-s163",
+    "config": "configs/exp-031-confirm-mc8-strong-s163.json"
+  },
+  {
+    "id": "exp-031-confirm-future8-paired-s101",
+    "config": "configs/exp-031-confirm-future8-paired-s101.json"
+  },
+  {
+    "id": "exp-031-confirm-gema-reward-s179",
+    "config": "configs/exp-031-confirm-gema-reward-s179.json"
+  },
+  {
+    "id": "exp-031-confirm-base-s127",
+    "config": "configs/exp-031-confirm-base-s127.json"
+  },
+  {
+    "id": "exp-031-confirm-gema-reward-s113",
+    "config": "configs/exp-031-confirm-gema-reward-s113.json"
+  },
+  {
+    "id": "exp-031-confirm-base-s151",
+    "config": "configs/exp-031-confirm-base-s151.json"
+  },
+  {
+    "id": "exp-031-confirm-mc32-g4-s151",
+    "config": "configs/exp-031-confirm-mc32-g4-s151.json"
+  },
+  {
+    "id": "exp-031-confirm-future4-independent-s163",
+    "config": "configs/exp-031-confirm-future4-independent-s163.json"
+  },
+  {
+    "id": "exp-031-confirm-future8-paired-s163",
+    "config": "configs/exp-031-confirm-future8-paired-s163.json"
+  },
+  {
+    "id": "exp-031-confirm-mc8-moderate-s139",
+    "config": "configs/exp-031-confirm-mc8-moderate-s139.json"
+  },
+  {
+    "id": "exp-031-confirm-mc32-g4-s101",
+    "config": "configs/exp-031-confirm-mc32-g4-s101.json"
+  },
+  {
+    "id": "exp-031-confirm-future4-independent-s113",
+    "config": "configs/exp-031-confirm-future4-independent-s113.json"
+  },
+  {
+    "id": "exp-031-confirm-gema-reward-s191",
+    "config": "configs/exp-031-confirm-gema-reward-s191.json"
+  },
+  {
+    "id": "exp-031-confirm-future4-independent-s191",
+    "config": "configs/exp-031-confirm-future4-independent-s191.json"
+  },
+  {
+    "id": "exp-031-confirm-future8-paired-s139",
+    "config": "configs/exp-031-confirm-future8-paired-s139.json"
+  },
+  {
+    "id": "exp-031-confirm-mc32-g4-s163",
+    "config": "configs/exp-031-confirm-mc32-g4-s163.json"
+  },
+  {
+    "id": "exp-031-confirm-future4-independent-s101",
+    "config": "configs/exp-031-confirm-future4-independent-s101.json"
+  }
+]

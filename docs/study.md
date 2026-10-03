@@ -189,3 +189,38 @@ The analysis preserves each row's source artifact directory. This broader
 comparison selects settings for reserved-seed confirmation if any candidate is
 promising or marginal. Clearly dominated methods can close here; two seeds do
 not support a precision claim or a positive success declaration.
+
+### Reserved image confirmation (exp-031)
+
+Keep seven groups after the broader comparison: unguided; both MC8 settings
+(moderate for discovery reward, strong for text alignment); MC32 at tau 0.6 and
+gamma 4; guidance EMA beta 0.25 at tau 1 and gamma 8; independent future M4 at
+tau 0.3 and gamma 1; and paired future M8 at tau 0.6 and gamma 4. Close the two
+weaker EMA settings and MC32 gamma 8 after their broader results. Preserve each
+selected estimator and image config exactly; the new configs change only the
+run identity, seed, purpose, and source-config reference.
+
+Each group receives all eight prompts and the reserved seeds 101, 113, 127,
+139, 151, 163, 179, and 191: 64 images per group and 448 total. Use one seed per
+job, with the 56 jobs interleaved by a fixed shuffle. These are confirmation
+results and must not be used for another image hyperparameter search. Evaluate
+paired reward/alignment changes, variation across prompts and seeds, embedding
+diversity, visible quality, actual query/score counts, and measured runtime.
+Report 95% seed-block bootstrap intervals conditional on these eight prompts.
+
+The primary analysis baseline is the MC8 setting with higher discovery reward;
+also compare every candidate with the other MC8 setting and selected MC32.
+Advance a method to RL only when this independent comparison supports a useful
+reward/cost improvement without an evident alignment or diversity loss. A
+mixed or unresolved final comparison is insufficient for advancing that method;
+close it under this study's budget rather than claiming universal failure.
+
+Persist the existing VJP and reward timer differences for each image in this
+wave, plus sums of the recorded oracle, estimator, and memory-update timers.
+The update timer is part of the estimator timer, and reward time is part of
+oracle time. For future methods, oracle time also includes the future score
+network evaluations. The reward timer excludes the single final evaluation;
+total image time includes it. Earlier image records lack the VJP/reward timing
+fields, so the grouped analysis reports these unrecorded fields as null. The
+first confirmation results must contain finite nonnegative timing fields; a
+failure would trigger a metadata repair, not a change to sampling parameters.

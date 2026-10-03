@@ -1,0 +1,38 @@
+{
+  "id": "exp-031-confirm-mc8-strong-s179",
+  "mode": "image",
+  "purpose": "Confirm locked methods on the eight reserved image seeds across all eight prompts. Compare reward, text alignment, within-prompt diversity and actual costs against both MC8 settings and the selected MC32 baseline; these results do not feed further image parameter tuning.",
+  "image": {
+    "size": 512,
+    "steps": 20,
+    "guided_steps": 10,
+    "proxy": "euler",
+    "reward_batch": 2,
+    "future_batch": 2
+  },
+  "prompts": [
+    "bernese",
+    "formula1",
+    "airplane",
+    "labrador",
+    "lighthouse",
+    "cafe",
+    "orchid",
+    "mountain"
+  ],
+  "seeds": [
+    179
+  ],
+  "estimator": {
+    "kind": "mc",
+    "antithetic": true,
+    "samples": 8,
+    "warmup_samples": 32,
+    "warmup_steps": 1,
+    "refresh_every": 0,
+    "tau": 0.6,
+    "reward_offset": 6.0,
+    "gamma": 4.0
+  },
+  "source_config": "configs/exp-030-expanded-mc8-strong-s41.json"
+}

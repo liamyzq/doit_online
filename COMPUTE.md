@@ -68,3 +68,16 @@ when reusing these checkpoints. `search/ddim.py:11-32` constructs the model;
 runs episodes and obtains D4RL normalized scores. A new isolated RL environment
 and a representative checkpoint/simulator smoke remain required if image
 results justify scaling. Do not start RL evaluation before that decision.
+
+The RL source has no dependency lockfile or installation recipe. Its setup.py
+declares package metadata only. No Python 3.10 interpreter or cached Python
+3.10 Conda package was found in the existing registered environments and cache
+roots. The old doob-search environment named in a build log no longer exists.
+
+All nine source task configs use positive DDIM eta (0.2--0.8). The guided
+transitions have positive variance; see `search/doob_search.py:115-129` and
+`:270-286`. Each guided step currently evaluates the score twice, once for the
+base step and once with gradients for the VJP. The source has no full remaining
+future simulation inside the lookahead estimator; adding the image future
+method would require that loop and its score costs, with the fixed state passed
+to the critic for each final action.

@@ -11,6 +11,8 @@ budget. Fitting error alone is not a success criterion.
 Start with [PROGRESS.md](PROGRESS.md), [the study protocol](docs/study.md), and
 [COMPUTE.md](COMPUTE.md). Experimental outcomes are in `experiments/results.tsv`;
 job events are in `jobs/jobs.jsonl`. Large artifacts live on Orion.
+Commands for running a committed configuration and analyzing paired image
+groups are in [the reproduction guide](docs/reproduction.md).
 
 The user authorized Orion GPUs 0--4, including concurrent use with other users
 when free memory permits. Image correctness and effectiveness precede RL scaling.

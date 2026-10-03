@@ -9,11 +9,18 @@ tested image budgets. No image method is validated as a practical improvement.
 Gradient EMA and direct full-future sampling remain for a broader endpoint
 comparison. RL has not started; its required image-success condition is unmet.
 
-The next wave, `exp-030`, contains ten locked groups on all eight prompts with
-fresh discovery seeds41/53 (160 images). It covers tuned MC8/MC32, three gradient
-EMA settings, and the best independent/paired full-future settings. Reserved
-final seeds101/113/127/139/151/163/179/191 remain unused. Promising or marginal
-candidates receive reserved-seed confirmation; clearly dominated ones can close.
+Exp-030 completed all 160 images with no denominator events. Keep gradient EMA
+beta 0.25 at tau 1 / gamma 8 and both direct-future settings for independent
+confirmation. Their discovery gains do not establish success. Stronger guidance
+at tau 0.6 failed on new prompts/seeds for both EMA and MC32. The moderate EMA
+has only a small gain and is weaker than the retained EMA on reward/alignment.
+
+The next wave, `exp-031`, locks seven groups: unguided, both MC8 settings, selected
+MC32, retained EMA, and independent/paired full-future sampling. Each gets eight
+prompts and the reserved seeds 101/113/127/139/151/163/179/191, for 448 images.
+These seeds remain unused. No further image hyperparameter tuning follows this
+confirmation. Its reward/cost, alignment and diversity evidence decides the RL
+gate; mixed final results close under the evaluated budget.
 
 ## Validated implementation and baseline
 
@@ -132,3 +139,38 @@ without reporting their partial means as complete results. Old failures omit
 exact costs within the failing image; future failures now save engine counters
 and include step/moment diagnostics in the error message. Do not claim an exact
 total research-query count from the old partial failure artifacts.
+
+## Broader endpoint results
+
+Exp-030 evaluates eight prompts at seeds 41/53, 16 images per group. All 20 seed
+shards completed successfully. The table reports group means; query counts omit
+the single final evaluation, and seconds are per-image times under shared-GPU
+contention. Two seeds do not support a precision claim.
+
+| Locked setting | Reward | Alignment | Embedding distance | Queries | Score evaluations | Seconds |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| Unguided | 6.1334 | 0.2654 | 0.1229 | 0 | 20 | 2.13 |
+| MC8, tau 0.3, gamma 0.4 | 6.1945 | 0.2659 | 0.1220 | 96 | 20 | 24.16 |
+| MC8, tau 0.6, gamma 4 | 6.1492 | 0.2763 | 0.1142 | 96 | 20 | 26.19 |
+| MC32, tau 0.6, gamma 4 | 6.3942 | 0.2731 | 0.0890 | 288 | 20 | 60.85 |
+| EMA 0.25, tau 1, gamma 8 | 6.3274 | 0.2754 | 0.0971 | 96 | 20 | 26.08 |
+| Independent future M4, tau 0.3, gamma 1 | 6.3334 | 0.2688 | 0.1230 | 40 | 236 | 28.32 |
+| Paired future M8, tau 0.6, gamma 4 | 6.4263 | 0.2694 | 0.1227 | 80 | 452 | 49.77 |
+
+Both MC8 settings remain as comparators because the moderate setting has higher
+reward and the strong setting higher alignment. MC32 gamma 8 averages only
+6.0708 reward; select gamma 4 for confirmation. EMA at tau 0.6 / gamma 8 falls to
+5.0380 reward. Moderate EMA averages 6.2228 reward and 0.2690 alignment, weaker
+than the retained EMA; close those two EMA settings.
+
+The retained EMA gains 0.1329 reward over moderate MC8 at the same query budget,
+but its two-seed embedding distance is lower. Independent future M4 gains
+0.1389 with fewer reward queries and many more score evaluations. Paired future
+M8 is slightly above MC32 on reward while using fewer reward queries and less
+measured wall-clock, but alignment is lower. These are distinct tradeoffs that
+require reserved-seed confirmation, not interchangeable success claims.
+
+Grouped details are in `artifacts/exp-030-summary.json`, derived from the
+original exp-030 grouping with `mc8-moderate` selected as the primary baseline.
+The new per-image timing fields persist existing VJP/reward counters and sums
+of step timers for exp-031. They do not recover missing historical VJP timings.
