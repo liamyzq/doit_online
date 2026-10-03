@@ -49,7 +49,15 @@ when recording each completed wave.
 No image or RL training is authorized on the Quest login nodes. Quest and
 Nebula are reference-source locations for this project, not experiment workers.
 
-## RL preparation (not yet executed)
+## Final execution state
+
+Exp-031 and exp-032 finished all 64 final jobs, producing 512 images. Both queue
+controllers exited, their terminal records and job events were retrieved, and
+no project queue or experiment process remained on Orion. No further run is
+queued. The image study closed without a method meeting the RL gate; no RL
+environment was installed and no RL job was launched.
+
+## RL preparation (read-only; image gate not met)
 
 The complete public evaluation copy is
 `/home/mlw0719/doob_transform/test/Doob_training_free_adaptation`, revision
@@ -81,3 +89,16 @@ base step and once with gradients for the VJP. The source has no full remaining
 future simulation inside the lookahead estimator; adding the image future
 method would require that loop and its score costs, with the fixed state passed
 to the critic for each final action.
+
+Upstream dependency metadata supports using Python 3.10 for this legacy stack:
+[D4RL setup.py](https://raw.githubusercontent.com/Farama-Foundation/D4RL/master/setup.py)
+declares Python `>=3.7,<3.11` and Gym `<0.24.0`, so the existing Python 3.12 image
+environment is outside that range. The
+[mujoco-py README](https://github.com/openai/mujoco-py/blob/master/README.md)
+specifies MuJoCo 2.1.0 and `mujoco-py>=2.1,<2.2`, matching the existing binary
+directory. Its requirements do not cap Cython, but the official
+[mujoco-py issue 773](https://github.com/openai/mujoco-py/issues/773) and
+[D4RL issue 231](https://github.com/Farama-Foundation/D4RL/issues/231) document
+Cython 3 callback compilation failures. These failures justify trying Cython
+below 3 with Python 3.10, but the combination has not been validated on Orion.
+These sources were inspected without installing or validating an RL environment.

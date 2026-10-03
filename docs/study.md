@@ -196,7 +196,9 @@ Keep seven groups after the broader comparison: unguided; both MC8 settings
 (moderate for discovery reward, strong for text alignment); MC32 at tau 0.6 and
 gamma 4; guidance EMA beta 0.25 at tau 1 and gamma 8; independent future M4 at
 tau 0.3 and gamma 1; and paired future M8 at tau 0.6 and gamma 4. Close the two
-weaker EMA settings and MC32 gamma 8 after their broader results. Preserve each
+weaker EMA settings and MC32 gamma 8 after their broader results. The later
+discovery-image review below reopens moderate EMA for one bounded confirmation;
+the tau 0.6 / gamma 8 EMA remains closed. Preserve each
 selected estimator and image config exactly; the new configs change only the
 run identity, seed, purpose, and source-config reference.
 
@@ -242,3 +244,13 @@ finite queue after exp-031 exits, and preserve this selection timing in the
 research record. Interpret cross-wave wall-clock differences cautiously; the
 query and score budgets are exactly matched to MC8. No further EMA setting is
 added after this comparison.
+
+## Final disposition
+
+Exp-031 and exp-032 completed all 512 planned confirmation images. Strong EMA
+and paired future M8 close for observed image quality failures despite positive
+aggregate metrics; moderate EMA and independent future M4 close for unresolved
+improvement at the final budget. All earlier families also have closure
+decisions. The required image-success condition is unmet, so RL scaling does
+not proceed. See [the final findings](findings.md) for the quantitative results,
+quality evidence, limitations, and artifact locations.

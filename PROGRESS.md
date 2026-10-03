@@ -2,29 +2,26 @@
 
 ## Current decision
 
-The goal remains active. All supplied estimator families have been implemented,
-tuned, and evaluated. Ordinary affine/exponential CV, projected RLS, spatial CV,
-pair-contrast CV, SPIDER, and adaptive importance sampling are closed under the
-tested image budgets. No image method is validated as a practical improvement.
-Gradient EMA and direct full-future sampling remain for a broader endpoint
-comparison. RL has not started; its required image-success condition is unmet.
+The study is complete. All supplied estimator families and targeted extensions
+have been implemented, tuned, evaluated, and closed under the tested image
+budgets. No new method established a usable image improvement. Strong guidance
+EMA and paired future M8 have positive aggregate results but observed quality
+failures; moderate EMA and independent future M4 remain unresolved at the final
+budget. These decisions do not assert universal failure of the methods.
 
-Exp-030 completed all 160 images with no denominator events. Keep gradient EMA
-beta 0.25 at tau 1 / gamma 8 and both direct-future settings for independent
-confirmation. Their discovery gains do not establish success. Stronger guidance
-at tau 0.6 failed on new prompts/seeds for both EMA and MC32. The moderate EMA
-has only a small gain, but discovery image review finds it cleaner than the
-high-reward EMA. Include it in a bounded confirmation follow-up, exp-032.
+Exp-030 completed 160 discovery images. Exp-031 completed 448 confirmation
+images at commit 19c1bf7, and exp-032 completed 64 moderate-EMA confirmation
+images at commit 9941276. The combined final comparison contains 512 images
+across eight groups, eight prompts, and reserved seeds
+101/113/127/139/151/163/179/191. All 64 final jobs completed with no denominator
+events or runtime failures; original images, embeddings, and terminal records
+are retained. The first guided exp-031 outputs validated the new timing fields.
 
-The active wave, `exp-031`, locks seven groups: unguided, both MC8 settings, selected
-MC32, retained EMA, and independent/paired full-future sampling. Each gets eight
-prompts and the reserved seeds 101/113/127/139/151/163/179/191, for 448 images.
-The queue is active at commit 19c1bf7; its first guided outputs validate the new
-timing fields. Exp-032 adds 64 images with the already tested moderate EMA
-parameters after this finite queue exits, for 512 confirmation images in total.
-No further image hyperparameter tuning follows these comparisons. Their
-reward/cost, alignment and diversity evidence decides the RL gate; mixed final
-results close under the evaluated budget.
+No project queue or experiment process remains on Orion. No further experiment
+is scheduled. The required image-success condition for RL is unmet, so no RL
+environment was installed and no RL evaluation was run. The stable outcome
+report is [docs/findings.md](docs/findings.md); the sections below preserve how
+the decisions were reached.
 
 ## Validated implementation and baseline
 
@@ -104,7 +101,8 @@ and from53.418 to8.981 independently. Its post-warmup absolute error is11.5%
 (Formula1) and13.2% (lighthouse) of MC8. MC32 independent normalized error is18.029.
 This is a biased control. Zero guidance itself has normalized error1, so noisy
 reference MSE alone favors shrinkage and cannot establish useful reward steering.
-The stronger mechanism result has not produced a clear endpoint benefit yet.
+The stronger mechanism result did not establish a usable endpoint improvement
+in the final comparisons below.
 
 Paired full-future probes in exp008 share later noise only within antithetic
 pairs and average two branches. Proxy/future weight-contrast correlations are
@@ -128,11 +126,11 @@ calls by candidate, consistently across methods.
 | Paired future M8, tau0.6, gamma4 | 5.6157 | 0.2781 | 80 | 452 |
 | Two-level fixed1, tau0.6, gamma1 | 5.5766 | 0.2788 | 176 | 236 |
 
-The independent-future gain over MC8 is mixed across seeds and mainly driven by
-one Formula1 image. Carry it into the broader comparison. The paired M8 method
-has comparable screen reward to MC8 but many more score evaluations; include it
-as the direct comparator rather than declaring a cost benefit from reward
-queries alone. Actual runtime is measured under shared-GPU contention.
+The independent-future gain over MC8 was mixed across seeds and mainly driven
+by one Formula1 image, motivating its broader comparison. The paired M8 method
+had comparable screen reward to MC8 but many more score evaluations; it was
+retained as a direct comparator with actual runtime measured under shared-GPU
+contention.
 
 Close the two-level branch under the tested coefficients, temperatures and
 budgets: fixed coefficients do not improve the reward/cost comparison; three
@@ -192,6 +190,62 @@ under the exp-030 artifact directories.
 Exp-032 is a bounded addition of the already tested moderate EMA configuration,
 motivated by this discovery-image quality difference. It is selected after the
 first ten exp-031 shards arrived; its parameters are not selected from those
-partial confirmation means. Its new eight-run manifest remains separate from
-the active exp-031 queue, and its wall-clock comparison will acknowledge the
-different execution wave. No further EMA setting follows it.
+partial confirmation means. Its eight-run manifest remained separate from
+exp-031 and ran after that queue exited. Its wall-clock comparison therefore
+acknowledges the different execution wave. No further EMA setting followed it.
+
+## Final reserved image evidence
+
+Exp-031 completes 448 images, 64 per group, with no denominator events or
+runtime failures. Seed-block intervals below condition on the fixed eight
+prompts. The records are `artifacts/exp-031-summary.json` and
+`artifacts/exp-031-vs-mc32.json`. Exp-032 completes another 64 images with no
+denominator events or runtime failures. All eight groups are summarized in
+`artifacts/exp-032-combined-summary.json`.
+
+Moderate MC8 has reward 6.1100, alignment 0.27484, embedding distance 0.12390,
+and mean time 25.31 s. MC32 has reward 6.3389, alignment 0.27755, distance
+0.12859, and time 64.05 s. Strong MC8 is worse on reward (6.0196) despite higher
+CLIP alignment (0.28300); its visual instability is consistent with discovery.
+
+High-reward EMA improves over moderate MC8 by 0.1433 reward (95% interval
+[0.0664, 0.2313]) at 24.84 s/image, with improved average alignment and no
+embedding-distance loss. This positive metric result is real, but it does not
+establish a usable image method: lighthouse seed 113 reproduces the severe
+texture/block artifact observed at discovery seed 53. Other reserved lighthouse
+images also show aggressive texture and banding. Close this strong setting for
+visible quality failure; do not describe its reward effect as negative.
+
+Independent future M4 has reward 6.1782, a delta of 0.0682 over moderate MC8
+with interval [-0.0164, 0.1476]. It uses 40 rather than 96 reward queries, but
+236 rather than 20 score evaluations and 26.38 rather than 25.31 seconds.
+Its mean gain remains unresolved at the final budget. This lower-query tradeoff
+does not validate an end-to-end improvement; close it under this budget.
+
+Paired future M8 has reward 6.3361 versus MC32's 6.3389, with paired delta
+-0.0028 and interval [-0.0558, 0.0487]. Alignment and embedding distance are
+also close (0.27705 and 0.12863). Reward queries drop from 288 to 80, score
+evaluations rise from 20 to 452, and measured time drops from 64.05 to 50.01 s.
+The time components explain this tradeoff: reward evaluation takes 21.05 s
+instead of 61.18 s, while future score evaluation adds about 26.16 s to oracle
+time. These shared-GPU measurements are not dedicated-device benchmarks.
+
+However, the aggregate conceals a material prompt failure. Cafe reward is
+0.6898 below MC32, with deltas -1.6294 and -1.4724 at seeds 127 and 139. Raw
+images at both seeds have severe saturation and structural corruption relative
+to their MC32 comparators. Close this strong future setting for quality failure
+despite its useful average cost result. The reserved cafe/lighthouse images and
+EMA comparison sheets are retained as direct evidence. No strong-setting result
+passes the image gate.
+
+Moderate EMA finishes with reward 6.1322 versus moderate MC8's 6.1100, a paired
+delta of 0.0222 with interval [-0.0094, 0.0486]. Alignment is 0.27434, a delta of
+-0.00050 with interval [-0.00209, 0.00114]. Embedding distance is 0.13108, with
+no evident diversity loss. Its reward gain remains unresolved, so close this
+last setting under the final budget. It uses the same 96 reward queries and
+20 score evaluations as MC8; its 22.56 s/image was measured in a different wave
+and does not establish a speedup over MC8's 25.31 s/image.
+
+All image candidates now have closure decisions. The conditional RL phase does
+not proceed because none passes the image-success gate. The final report links
+the raw quality counterexamples, quantitative comparisons, and limitations.

@@ -8,7 +8,15 @@ The primary question is whether information from earlier steps reduces current
 correction error and improves generated samples at the same actual reward-query
 budget. Fitting error alone is not a success criterion.
 
-Start with [PROGRESS.md](PROGRESS.md), [the study protocol](docs/study.md), and
+The study is complete. All supplied families and targeted extensions have
+documented closure decisions. None established a usable image improvement;
+strong EMA and paired future M8 have favorable aggregate results but
+visible quality failures. The final comparison contains 512 images, and all
+16 focused numerical checks passed on Orion. The image-success condition for
+RL scaling was not met, so no RL evaluation was run.
+
+Start with [the final findings](docs/findings.md),
+[PROGRESS.md](PROGRESS.md), [the study protocol](docs/study.md), and
 [COMPUTE.md](COMPUTE.md). Experimental outcomes are in `experiments/results.tsv`;
 job events are in `jobs/jobs.jsonl`. Large artifacts live on Orion.
 Commands for running a committed configuration and analyzing paired image
