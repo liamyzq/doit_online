@@ -63,6 +63,9 @@ def main():
         elif mode == "historical_diagnostics":
             from .audit import historical_diagnostics
             metrics = historical_diagnostics(config, output)
+        elif mode == "critic_calibration":
+            from .critic import calibrate
+            metrics = calibrate(config, output)
         elif mode == "image":
             from .image import ImageEngine
             engine = ImageEngine(config.get("image", {}))

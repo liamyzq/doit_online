@@ -176,3 +176,15 @@ from each of 64 distinct complete episodes per task, shuffled with seed 41041:
 observations remain unnormalized, and each selected row retains its dataset
 index, episode bounds, paired recorded action, and source URL. No confirmation
 critic outcome is used to select temperature or surrogate settings.
+
+**Exp-038 calibrates the real-critic scale.** On the 16 calibration states per
+task, run one unguided 15-step action path and query 32 antithetic actions at
+each guided transition. Use the source eta/window (Hopper 0.6, indices 1--8;
+HalfCheetah 0.2, indices 1--10), the source continuous VP schedule and actor,
+and the minimum of its two q0 heads. Save local Q variation and recorded-action
+Q before choosing one fixed temperature per task. This stage selects a scale,
+not a method or an endpoint improvement. Four adapter identities per task
+compare source epsilon, simulated endpoint, VJP, and corrected execution mean;
+any discrepancy above 2e-4 stops the calibration. These checks detect a source
+port error and require repair before the critic results can be interpreted.
+No simulator return is measured.
