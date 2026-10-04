@@ -1,0 +1,10 @@
+Loading pipeline components...:   0%|          | 0/6 [00:00<?, ?it/s]Loading pipeline components...:  17%|█▋        | 1/6 [00:00<00:00,  6.83it/s]Loading pipeline components...:  50%|█████     | 3/6 [00:00<00:00,  4.72it/s]Loading pipeline components...:  67%|██████▋   | 4/6 [00:01<00:00,  3.04it/s]Loading pipeline components...: 100%|██████████| 6/6 [00:02<00:00,  1.81it/s]Loading pipeline components...: 100%|██████████| 6/6 [00:02<00:00,  2.20it/s]
+{"prompt": "cafe", "seed": 521, "index": 11, "raw_independent_cosine": -0.0009826954501275964, "best_raw_fd_error": 1.806266345680739e-06}
+{"prompt": "cafe", "seed": 521, "index": 18, "raw_independent_cosine": -0.02072928386050212, "best_raw_fd_error": 2.937789949223696e-05}
+{"prompt": "cafe", "seed": 523, "index": 11, "raw_independent_cosine": 0.0034075478456190617, "best_raw_fd_error": 4.699631806079744e-06}
+{"prompt": "cafe", "seed": 523, "index": 18, "raw_independent_cosine": -0.022685480420279482, "best_raw_fd_error": 3.529658508095405e-06}
+{"prompt": "lighthouse", "seed": 521, "index": 11, "raw_independent_cosine": -0.00532970293638755, "best_raw_fd_error": 1.0038006442902882e-07}
+{"prompt": "lighthouse", "seed": 521, "index": 18, "raw_independent_cosine": -0.006595146550943462, "best_raw_fd_error": 1.8775490252649304e-06}
+{"prompt": "lighthouse", "seed": 523, "index": 11, "raw_independent_cosine": 0.007762259519696822, "best_raw_fd_error": 1.4661722267555037e-06}
+{"prompt": "lighthouse", "seed": 523, "index": 18, "raw_independent_cosine": -0.02393622090642323, "best_raw_fd_error": 1.9583563554685277e-05}
+{"states": 8, "rows": 80, "reward_queries": 516, "score_forwards": 408, "vjp_calls": 160, "sensitivity_seconds": 194.9239880895475, "reward_seconds": 351.3396216380643, "vjp_seconds": 128.8694368856959, "peak_allocated_mib": 11757.59814453125, "peak_reserved_mib": 11866.0}

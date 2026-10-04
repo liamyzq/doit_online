@@ -64,6 +64,9 @@ class ImageEngine:
         self.config = config
         self.device = torch.device(device)
         self.dtype = {"float16": torch.float16, "float32": torch.float32}[config.get("dtype", "float16")]
+        if self.dtype == torch.float32:
+            torch.backends.cuda.matmul.allow_tf32 = False
+            torch.backends.cudnn.allow_tf32 = False
         self.steps = int(config.get("steps", 20))
         self.size = int(config.get("size", 512))
         self.chunk = int(config.get("reward_batch", 4))

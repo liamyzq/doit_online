@@ -1,0 +1,66 @@
+[
+  {
+    "prompt": "cafe",
+    "seed": 521,
+    "index": 11,
+    "ratio0_norm": 25.83263211838423,
+    "ratio1_norm": 54.42759732431377,
+    "ratio_cosine": 0.0011222314420836052
+  },
+  {
+    "prompt": "cafe",
+    "seed": 521,
+    "index": 18,
+    "ratio0_norm": 6.45415715384405,
+    "ratio1_norm": 4.368371944538104,
+    "ratio_cosine": 0.0045099817882277736
+  },
+  {
+    "prompt": "cafe",
+    "seed": 523,
+    "index": 11,
+    "ratio0_norm": 24.203513482541798,
+    "ratio1_norm": 25.74169697110037,
+    "ratio_cosine": 0.006426158523896864
+  },
+  {
+    "prompt": "cafe",
+    "seed": 523,
+    "index": 18,
+    "ratio0_norm": 6.23244629255505,
+    "ratio1_norm": 6.948772005711551,
+    "ratio_cosine": -0.007843260593274457
+  },
+  {
+    "prompt": "lighthouse",
+    "seed": 521,
+    "index": 11,
+    "ratio0_norm": 24.065494476654926,
+    "ratio1_norm": 14.502849821038332,
+    "ratio_cosine": -0.004386386369676654
+  },
+  {
+    "prompt": "lighthouse",
+    "seed": 521,
+    "index": 18,
+    "ratio0_norm": 2.269383550408705,
+    "ratio1_norm": 3.2405064858806254,
+    "ratio_cosine": 0.0022644662872391974
+  },
+  {
+    "prompt": "lighthouse",
+    "seed": 523,
+    "index": 11,
+    "ratio0_norm": 19.40769634432694,
+    "ratio1_norm": 22.986206308233584,
+    "ratio_cosine": 0.007997807357243559
+  },
+  {
+    "prompt": "lighthouse",
+    "seed": 523,
+    "index": 18,
+    "ratio0_norm": 2.8873220728580846,
+    "ratio1_norm": 3.142066798240351,
+    "ratio_cosine": -0.005136463220182486
+  }
+]

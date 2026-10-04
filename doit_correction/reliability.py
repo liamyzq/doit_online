@@ -38,12 +38,15 @@ def _sensitivity_correction(engine, transition, ratio, specification, seed, reta
     ratio = ratio.detach()
     if kind == "raw":
         return engine.correction(transition, ratio, retain_graph)
-    if kind == "shrink":
-        if float(specification["coefficient"]) == 0:
+    if kind in {"shrink", "shrink_norm_matched"}:
+        if kind == "shrink" and float(specification["coefficient"]) == 0:
             return ratio.reshape_as(transition.mean) / transition.noise_std
         raw = engine.correction(transition, ratio, retain_graph)
         identity = ratio.reshape_as(raw) / transition.noise_std
-        return identity + float(specification["coefficient"]) * (raw - identity)
+        result = identity + float(specification["coefficient"]) * (raw - identity)
+        if kind == "shrink_norm_matched":
+            result = result * (raw.norm() / result.norm().clamp_min(1e-30))
+        return result
     if kind == "smooth":
         count = int(specification["samples"])
         if count < 2 or count % 2:

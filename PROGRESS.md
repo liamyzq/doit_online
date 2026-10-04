@@ -16,8 +16,16 @@ corruption the raw derivative is exact, while shrinkage introduces MSE 0.01286.
 The numerical adjoint checks pass. This does not establish sensitivity error
 in SD. The exp-045 single-state FP32 smoke passes its expected query, forward
 and VJP counts and has a raw-direction finite-difference error below 1.5e-7.
-Its late-state example shows strong linear/learned cancellation and almost no
-change from local smoothing. The locked eight-state discovery probe is next.
+The locked eight-state discovery probe then completed at `d85d1da`. All raw
+directional finite differences agree within 3e-5 at their best step size. The
+independent vectors are nearly orthogonal before the VJP, and smoothing does
+not materially improve agreement. It costs about 5.1--5.5 s per operation versus
+0.77--0.87 s for raw. Half shrinkage raises KL by about 35% early and 60% late
+because it weakens linear/learned cancellation. Exp-046 therefore tests only a
+raw-norm-matched half shrinkage and the larger predeclared K4 smoothing scale,
+alongside MC8, a comparable-cost MC16 and the prior MC32 strong setting. Its
+five groups, eight prompts and two fresh seeds total 80 FP32 images. No ideal
+Jacobian error or endpoint improvement has been established by these diagnostics.
 
 The user reopened research after an external audit of `c5e4311`. The active
 protocol is [docs/audit-followup.md](docs/audit-followup.md). Ordinary

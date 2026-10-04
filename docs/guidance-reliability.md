@@ -51,7 +51,7 @@ must measure peak GPU memory before concurrency is chosen.
 
 After these diagnostics, choose at most one shrinkage and one smoothing setting
 for a small endpoint comparison with raw MC8 and MC32 at the same fixed reward
-scale. Include a simple global guidance reduction when interpreting shrinkage.
+scale. Control actual displacement magnitude when interpreting shrinkage.
 Count extra smoothing forwards/backwards and compare measured cost with using
 more candidates. Reserve fresh seeds before confirmation; close this branch
 under its tested budget if no useful effect survives quality and cost review.
@@ -90,3 +90,56 @@ follow-up instrumentation change times the full synchronized sensitivity call
 and starts backward timing only after queued forwards complete. It also retains
 probe query/forward counters if a later operation fails. This changes cost
 recording, not the method or the successfully checked numerical result.
+
+## Eight-state diagnosis and locked endpoint wave
+
+Exp-045 discovery completed at `d85d1da`: eight states, 80 vector/method rows,
+516 reward queries, 408 score forwards and 160 VJPs, with no runtime failures.
+At every state, the best raw-direction finite-difference error is below 3e-5;
+the random-direction counterpart is below 0.003. The fixed-network adjoint is
+correct at the tested FP32 states. An unknown ideal model remains unidentified.
+
+The independent candidate-vector cosine averages 0.0028 at index 11 and
+-0.0016 at index 18. After the raw adjoint it is 0.0012 and -0.0185. Both
+smoothing scales leave agreement near zero. This local evidence identifies
+substantial uncertainty already in the vector supplied to the adjoint; it
+does not prove that finite-sample guidance cannot improve endpoints.
+
+Small smoothing changes the vector by 1.17% on average at index 11 and 0.014%
+at index 18. Large smoothing changes it by 5.78% and 0.342%, respectively;
+the largest individual change is 12.5%. Its mean KL ratio to raw is 1.005/1.000.
+Full sensitivity time beyond the common transition forward is about 5.1--5.5 s
+for K4 versus 0.77--0.87 s for raw. These are shared-GPU observations.
+
+Half shrinkage raises mean KL by factors 1.355 and 1.605. The known-linear and
+learned components oppose each other, with cosine from -0.983 to -0.786.
+Consequently the endpoint shrinkage control rescales its modified vector to
+the current raw vector's norm. It uses the raw VJP already required by the
+formula, with no extra queries or backwards. This local norm match removes the
+magnitude confound more directly than a separately tuned global gamma.
+
+Exp-046 fixes eight prompts and seeds 541/547, five groups, 80 images total:
+
+- Raw MC8, tau 0.3 and gamma 0.4: the existing moderate setting.
+- Raw MC16 at the same tau/gamma: an approximate elapsed-cost comparator.
+- Raw MC32, tau 0.3 and gamma 4: the previously selected stronger baseline,
+  rerun here in FP32 instead of reusing a different environment's outputs.
+- MC8 with half learned-component shrinkage and raw-norm matching, gamma 0.4.
+- MC8 with K4 smoothing at delta 0.5 times transition noise, gamma 0.4.
+
+All groups use FP32, disabled TF32, the same frozen models, complete opposite
+candidate pairs, a 32-query first-step warm-up and fixed reward scale. Queries
+per image are 96/160/288/96/96, excluding one common final evaluation.
+Score-forward counts are 20/20/20/20/56 and VJP counts 9/9/9/9/36. MC16's
+64 extra queries cost about 44 s at the measured 0.68 s/query, close to K4's
+roughly 40 s additional sensitivity work over nine steps. Actual complete-image
+time, not this estimate, determines the reported cost comparison.
+
+The larger predeclared smoothing scale is retained because its early-state
+change is measurable; the smaller scale's late-state effect is negligible.
+Do not search additional scales or shrinkage coefficients in this wave.
+Compare paired reward, alignment, embedding diversity and all prompt images.
+An endpoint effect must be useful at its measured cost and free of material
+quality failure before confirmation is warranted. Reserve seeds
+557/563/569/571/577/587/593/599 for any confirmation; they are not used for
+parameter selection. Close unsupported settings under this budget.

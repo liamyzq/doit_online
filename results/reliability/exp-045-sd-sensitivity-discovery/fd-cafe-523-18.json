@@ -1,0 +1,98 @@
+[
+  {
+    "direction": "raw",
+    "rms_fraction": 0.1,
+    "h": 0.3703864261423382,
+    "adjoint": 137.96306989775792,
+    "finite_difference": 137.9500691781775,
+    "relative_error": 9.423333063009453e-05
+  },
+  {
+    "direction": "raw",
+    "rms_fraction": 0.03,
+    "h": 0.11111592784270144,
+    "adjoint": 137.96306989775792,
+    "finite_difference": 137.96116787433675,
+    "relative_error": 1.3786467803131586e-05
+  },
+  {
+    "direction": "raw",
+    "rms_fraction": 0.01,
+    "h": 0.03703864261423381,
+    "adjoint": 137.96306989775792,
+    "finite_difference": 137.96258293523445,
+    "relative_error": 3.529658508095405e-06
+  },
+  {
+    "direction": "raw",
+    "rms_fraction": 0.003,
+    "h": 0.011111592784270145,
+    "adjoint": 137.96306989775792,
+    "finite_difference": 137.95667683675703,
+    "relative_error": 4.6338929726848056e-05
+  },
+  {
+    "direction": "raw",
+    "rms_fraction": 0.001,
+    "h": 0.0037038642614233815,
+    "adjoint": 137.96306989775792,
+    "finite_difference": 138.01391414732473,
+    "relative_error": 0.00036853521456493816
+  },
+  {
+    "direction": "raw",
+    "rms_fraction": 0.0003,
+    "h": 0.0011111592784270143,
+    "adjoint": 137.96306989775792,
+    "finite_difference": 137.72542404368068,
+    "relative_error": 0.001722532372274396
+  },
+  {
+    "direction": "random",
+    "rms_fraction": 0.1,
+    "h": 0.3703864261423382,
+    "adjoint": -0.07226037524308662,
+    "finite_difference": -0.07205274154400086,
+    "relative_error": 0.0028734101973214594
+  },
+  {
+    "direction": "random",
+    "rms_fraction": 0.03,
+    "h": 0.11111592784270144,
+    "adjoint": -0.07226037524308662,
+    "finite_difference": -0.07258407919259345,
+    "relative_error": 0.004479688188967696
+  },
+  {
+    "direction": "random",
+    "rms_fraction": 0.01,
+    "h": 0.03703864261423381,
+    "adjoint": -0.07226037524308662,
+    "finite_difference": -0.07380392182656544,
+    "relative_error": 0.021360899085927313
+  },
+  {
+    "direction": "random",
+    "rms_fraction": 0.003,
+    "h": 0.011111592784270145,
+    "adjoint": -0.07226037524308662,
+    "finite_difference": -0.08854114956437231,
+    "relative_error": 0.2253070824295688
+  },
+  {
+    "direction": "random",
+    "rms_fraction": 0.001,
+    "h": 0.0037038642614233815,
+    "adjoint": -0.07226037524308662,
+    "finite_difference": -0.04816736538281431,
+    "relative_error": 0.3334193848180627
+  },
+  {
+    "direction": "random",
+    "rms_fraction": 0.0003,
+    "h": 0.0011111592784270143,
+    "adjoint": -0.07226037524308662,
+    "finite_difference": -0.20415996264830433,
+    "relative_error": 1.8253377035685536
+  }
+]

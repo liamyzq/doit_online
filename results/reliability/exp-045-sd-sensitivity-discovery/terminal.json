@@ -1,0 +1,15 @@
+{
+  "experiment_id": "exp-045-sd-sensitivity-discovery",
+  "commit": "d85d1da44aa1355134f4cfd106896dcd8aecedc3",
+  "config": "/home/mlw0719/doit_reliability/configs/exp-045-sd-sensitivity-discovery.json",
+  "machine": "nebula",
+  "gpu": 0,
+  "pid": 1036954,
+  "path": "/home/mlw0719/doit_reliability_storage/runs/exp-045-sd-sensitivity-discovery",
+  "log_path": "/home/mlw0719/doit_reliability_storage/artifacts/exp-045-sd-sensitivity-discovery.log",
+  "status": "completed",
+  "timestamp": "2026-10-04T03:38:07.209689+00:00",
+  "started_at": "2026-10-04T03:25:37.205755+00:00",
+  "returncode": 0,
+  "finished_at": "2026-10-04T03:38:07.209729+00:00"
+}

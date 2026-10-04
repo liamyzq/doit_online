@@ -1,0 +1,42 @@
+[
+  {
+    "id": "exp-046-sensitivity-endpoints-shrink-half-matched-s547",
+    "config": "configs/exp-046-sensitivity-endpoints-shrink-half-matched-s547.json"
+  },
+  {
+    "id": "exp-046-sensitivity-endpoints-mc32-strong-s541",
+    "config": "configs/exp-046-sensitivity-endpoints-mc32-strong-s541.json"
+  },
+  {
+    "id": "exp-046-sensitivity-endpoints-mc8-s547",
+    "config": "configs/exp-046-sensitivity-endpoints-mc8-s547.json"
+  },
+  {
+    "id": "exp-046-sensitivity-endpoints-smooth-four-s541",
+    "config": "configs/exp-046-sensitivity-endpoints-smooth-four-s541.json"
+  },
+  {
+    "id": "exp-046-sensitivity-endpoints-mc16-s541",
+    "config": "configs/exp-046-sensitivity-endpoints-mc16-s541.json"
+  },
+  {
+    "id": "exp-046-sensitivity-endpoints-mc32-strong-s547",
+    "config": "configs/exp-046-sensitivity-endpoints-mc32-strong-s547.json"
+  },
+  {
+    "id": "exp-046-sensitivity-endpoints-shrink-half-matched-s541",
+    "config": "configs/exp-046-sensitivity-endpoints-shrink-half-matched-s541.json"
+  },
+  {
+    "id": "exp-046-sensitivity-endpoints-mc16-s547",
+    "config": "configs/exp-046-sensitivity-endpoints-mc16-s547.json"
+  },
+  {
+    "id": "exp-046-sensitivity-endpoints-smooth-four-s547",
+    "config": "configs/exp-046-sensitivity-endpoints-smooth-four-s547.json"
+  },
+  {
+    "id": "exp-046-sensitivity-endpoints-mc8-s541",
+    "config": "configs/exp-046-sensitivity-endpoints-mc8-s541.json"
+  }
+]

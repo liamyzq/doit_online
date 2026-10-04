@@ -1,0 +1,279 @@
+{
+  "scope": "Eight discovery states on four unguided paths; no ideal SD Jacobian reference or endpoint claim.",
+  "methods_by_index": [
+    {
+      "index": 11,
+      "method": "raw",
+      "vectors": 8,
+      "mean_relative_difference": 0.0,
+      "max_relative_difference": 0.0,
+      "mean_raw_cosine": 1.0,
+      "min_raw_cosine": 0.9999999999999999,
+      "mean_independent_group_cosine": 0.001214352244700184,
+      "mean_kl_ratio_to_raw": 1.0,
+      "mean_sensitivity_seconds": 0.8675137639802415,
+      "mean_backward_seconds": 0.8673223970108666,
+      "score_forwards": 0,
+      "vjps": 8
+    },
+    {
+      "index": 11,
+      "method": "shrink-half",
+      "vectors": 8,
+      "mean_relative_difference": 0.17894416861236095,
+      "max_relative_difference": 0.18425020575523376,
+      "mean_raw_cosine": 0.997799751000268,
+      "min_raw_cosine": 0.9950811608754226,
+      "mean_independent_group_cosine": 0.0023359767992939327,
+      "mean_kl_ratio_to_raw": 1.3547098013737344,
+      "mean_sensitivity_seconds": 0.840055259730434,
+      "mean_backward_seconds": 0.8344148769974709,
+      "score_forwards": 0,
+      "vjps": 8
+    },
+    {
+      "index": 11,
+      "method": "identity",
+      "vectors": 8,
+      "mean_relative_difference": 0.3578883409500122,
+      "max_relative_difference": 0.36850041151046753,
+      "mean_raw_cosine": 0.9932180935276561,
+      "min_raw_cosine": 0.9847360634388475,
+      "mean_independent_group_cosine": 0.0027899528948585094,
+      "mean_kl_ratio_to_raw": 1.7734954415407498,
+      "mean_sensitivity_seconds": 0.00498747787787579,
+      "mean_backward_seconds": 0.0,
+      "score_forwards": 0,
+      "vjps": 0
+    },
+    {
+      "index": 11,
+      "method": "smooth-small",
+      "vectors": 8,
+      "mean_relative_difference": 0.011661210024612956,
+      "max_relative_difference": 0.03906621038913727,
+      "mean_raw_cosine": 0.9998339775069316,
+      "min_raw_cosine": 0.9992383504778439,
+      "mean_independent_group_cosine": 0.000607921370043555,
+      "mean_kl_ratio_to_raw": 1.0006037932725835,
+      "mean_sensitivity_seconds": 5.4336239653785015,
+      "mean_backward_seconds": 3.301353937626118,
+      "score_forwards": 32,
+      "vjps": 32
+    },
+    {
+      "index": 11,
+      "method": "smooth-large",
+      "vectors": 8,
+      "mean_relative_difference": 0.05781807273160666,
+      "max_relative_difference": 0.1250084638595581,
+      "mean_raw_cosine": 0.9973982388428603,
+      "min_raw_cosine": 0.9921934943694138,
+      "mean_independent_group_cosine": 0.0017187262421126486,
+      "mean_kl_ratio_to_raw": 1.0045060286734107,
+      "mean_sensitivity_seconds": 5.542042559784022,
+      "mean_backward_seconds": 3.368343590045697,
+      "score_forwards": 32,
+      "vjps": 32
+    },
+    {
+      "index": 18,
+      "method": "raw",
+      "vectors": 8,
+      "mean_relative_difference": 0.0,
+      "max_relative_difference": 0.0,
+      "mean_raw_cosine": 0.9999999999999999,
+      "min_raw_cosine": 0.9999999999999997,
+      "mean_independent_group_cosine": -0.018486532934537073,
+      "mean_kl_ratio_to_raw": 1.0,
+      "mean_sensitivity_seconds": 0.766831879504025,
+      "mean_backward_seconds": 0.7666743315348867,
+      "score_forwards": 0,
+      "vjps": 8
+    },
+    {
+      "index": 18,
+      "method": "shrink-half",
+      "vectors": 8,
+      "mean_relative_difference": 0.5242936946451664,
+      "max_relative_difference": 0.5875230431556702,
+      "mean_raw_cosine": 0.9193947938612954,
+      "min_raw_cosine": 0.9069872889390671,
+      "mean_independent_group_cosine": -0.007616469332522689,
+      "mean_kl_ratio_to_raw": 1.6047746715625948,
+      "mean_sensitivity_seconds": 0.7830845320277149,
+      "mean_backward_seconds": 0.7777067212155089,
+      "score_forwards": 0,
+      "vjps": 8
+    },
+    {
+      "index": 18,
+      "method": "identity",
+      "vectors": 8,
+      "mean_relative_difference": 1.0485874190926552,
+      "max_relative_difference": 1.1750460863113403,
+      "mean_raw_cosine": 0.8003318052135985,
+      "min_raw_cosine": 0.7813214964907629,
+      "mean_independent_group_cosine": -0.0015513190087343286,
+      "mean_kl_ratio_to_raw": 2.7625394330266126,
+      "mean_sensitivity_seconds": 0.005535531265195459,
+      "mean_backward_seconds": 0.0,
+      "score_forwards": 0,
+      "vjps": 0
+    },
+    {
+      "index": 18,
+      "method": "smooth-small",
+      "vectors": 8,
+      "mean_relative_difference": 0.00014193853439792292,
+      "max_relative_difference": 0.00018414818623568863,
+      "mean_raw_cosine": 0.999999989574431,
+      "min_raw_cosine": 0.999999983045232,
+      "mean_independent_group_cosine": -0.01848374599095419,
+      "mean_kl_ratio_to_raw": 1.0000064981482184,
+      "mean_sensitivity_seconds": 5.068340476878802,
+      "mean_backward_seconds": 3.104868126261863,
+      "score_forwards": 32,
+      "vjps": 32
+    },
+    {
+      "index": 18,
+      "method": "smooth-large",
+      "vectors": 8,
+      "mean_relative_difference": 0.0034214596962556243,
+      "max_relative_difference": 0.004632741678506136,
+      "mean_raw_cosine": 0.9999939115887061,
+      "min_raw_cosine": 0.9999893079727025,
+      "mean_independent_group_cosine": -0.018392294836487907,
+      "mean_kl_ratio_to_raw": 1.0001529185975389,
+      "mean_sensitivity_seconds": 5.053483064766624,
+      "mean_backward_seconds": 3.087995630019577,
+      "score_forwards": 32,
+      "vjps": 32
+    }
+  ],
+  "finite_difference": [
+    {
+      "file": "fd-cafe-521-11.json",
+      "raw_minimum_relative_error": 1.806266345680739e-06,
+      "random_minimum_relative_error": 1.2799047239249649e-05
+    },
+    {
+      "file": "fd-cafe-521-18.json",
+      "raw_minimum_relative_error": 2.937789949223696e-05,
+      "random_minimum_relative_error": 0.0012283584943596317
+    },
+    {
+      "file": "fd-cafe-523-11.json",
+      "raw_minimum_relative_error": 4.699631806079744e-06,
+      "random_minimum_relative_error": 0.0009879047344887877
+    },
+    {
+      "file": "fd-cafe-523-18.json",
+      "raw_minimum_relative_error": 3.529658508095405e-06,
+      "random_minimum_relative_error": 0.0028734101973214594
+    },
+    {
+      "file": "fd-lighthouse-521-11.json",
+      "raw_minimum_relative_error": 1.0038006442902882e-07,
+      "random_minimum_relative_error": 0.0015499078520351112
+    },
+    {
+      "file": "fd-lighthouse-521-18.json",
+      "raw_minimum_relative_error": 1.8775490252649304e-06,
+      "random_minimum_relative_error": 0.0001459480812864274
+    },
+    {
+      "file": "fd-lighthouse-523-11.json",
+      "raw_minimum_relative_error": 1.4661722267555037e-06,
+      "random_minimum_relative_error": 1.2958862516900604e-05
+    },
+    {
+      "file": "fd-lighthouse-523-18.json",
+      "raw_minimum_relative_error": 1.9583563554685277e-05,
+      "random_minimum_relative_error": 9.15159976886989e-06
+    }
+  ],
+  "ratio_groups": [
+    {
+      "prompt": "cafe",
+      "seed": 521,
+      "index": 11,
+      "ratio0_norm": 25.83263211838423,
+      "ratio1_norm": 54.42759732431377,
+      "ratio_cosine": 0.0011222314420836052
+    },
+    {
+      "prompt": "cafe",
+      "seed": 521,
+      "index": 18,
+      "ratio0_norm": 6.45415715384405,
+      "ratio1_norm": 4.368371944538104,
+      "ratio_cosine": 0.0045099817882277736
+    },
+    {
+      "prompt": "cafe",
+      "seed": 523,
+      "index": 11,
+      "ratio0_norm": 24.203513482541798,
+      "ratio1_norm": 25.74169697110037,
+      "ratio_cosine": 0.006426158523896864
+    },
+    {
+      "prompt": "cafe",
+      "seed": 523,
+      "index": 18,
+      "ratio0_norm": 6.23244629255505,
+      "ratio1_norm": 6.948772005711551,
+      "ratio_cosine": -0.007843260593274457
+    },
+    {
+      "prompt": "lighthouse",
+      "seed": 521,
+      "index": 11,
+      "ratio0_norm": 24.065494476654926,
+      "ratio1_norm": 14.502849821038332,
+      "ratio_cosine": -0.004386386369676654
+    },
+    {
+      "prompt": "lighthouse",
+      "seed": 521,
+      "index": 18,
+      "ratio0_norm": 2.269383550408705,
+      "ratio1_norm": 3.2405064858806254,
+      "ratio_cosine": 0.0022644662872391974
+    },
+    {
+      "prompt": "lighthouse",
+      "seed": 523,
+      "index": 11,
+      "ratio0_norm": 19.40769634432694,
+      "ratio1_norm": 22.986206308233584,
+      "ratio_cosine": 0.007997807357243559
+    },
+    {
+      "prompt": "lighthouse",
+      "seed": 523,
+      "index": 18,
+      "ratio0_norm": 2.8873220728580846,
+      "ratio1_norm": 3.142066798240351,
+      "ratio_cosine": -0.005136463220182486
+    }
+  ],
+  "identity_learned_cosine_range": [
+    -0.9825810288353065,
+    -0.7857008526059619
+  ],
+  "metrics": {
+    "states": 8,
+    "rows": 80,
+    "reward_queries": 516,
+    "score_forwards": 408,
+    "vjp_calls": 160,
+    "sensitivity_seconds": 194.9239880895475,
+    "reward_seconds": 351.3396216380643,
+    "vjp_seconds": 128.8694368856959,
+    "peak_allocated_mib": 11757.59814453125,
+    "peak_reserved_mib": 11866.0
+  }
+}

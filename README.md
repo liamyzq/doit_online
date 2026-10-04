@@ -11,8 +11,12 @@ budget. Fitting error alone is not a success criterion.
 Research has reopened following an external audit of `c5e4311`. See the
 [audit follow-up protocol](docs/audit-followup.md) and current
 [research state](PROGRESS.md) for the active questions and new seed split.
-The user has paused this continuation pending verification of Orion; completed
-audit results and the last retrieved job state are published in this repository.
+This branch, `codex/doit-guidance-reliability`, adds the user-authorized
+[guidance reliability exploration](docs/guidance-reliability.md) on Nebula while
+Orion remains unreachable. It fixes the reward vector before comparing raw,
+smoothed and regularized sensitivity. A read-only Orion monitor will report
+reconnection so the existing online-update runs can be recovered and continued
+on `codex/doit-correction`.
 
 The initial image study is complete. All supplied families and targeted extensions have
 documented closure decisions. None established a usable image improvement;
@@ -24,7 +28,8 @@ RL scaling was not met, so no RL evaluation was run.
 Start with [the final findings](docs/findings.md),
 [PROGRESS.md](PROGRESS.md), [the study protocol](docs/study.md), and
 [COMPUTE.md](COMPUTE.md). Experimental outcomes are in `experiments/results.tsv`;
-job events are in `jobs/jobs.jsonl`. Large artifacts live on Orion.
+job events are in `jobs/jobs.jsonl`. Large artifacts live on the worker recorded
+in each result. The new branch's small outputs are in `results/reliability/`.
 The final aggregate JSON files and report image evidence are included in
 [`results/final/`](results/final/) for viewing directly on GitHub.
 Commands for running a committed configuration and analyzing paired image
@@ -32,8 +37,9 @@ groups are in [the reproduction guide](docs/reproduction.md).
 The [estimator note](docs/estimators.md) explains the implemented moment
 identities, the biased EMA controls, and the costs of future sampling.
 
-The user authorized Orion GPUs 0--4, including concurrent use with other users
-when free memory permits. Image correctness and effectiveness precede RL scaling.
+The user authorized physical GPUs 0--4 on Orion and Nebula, including concurrent
+use with other users when free memory permits. Full RL scaling still requires
+an image decision; the audit separately authorizes bounded real-critic studies.
 
 ## Sources
 
