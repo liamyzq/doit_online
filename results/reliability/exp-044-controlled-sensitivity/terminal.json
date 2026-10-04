@@ -1,0 +1,15 @@
+{
+  "experiment_id": "exp-044-controlled-sensitivity",
+  "commit": "c8d8fdd4026c9a5c799fad1774733e2d3f761122",
+  "config": "/home/mlw0719/doit_reliability/configs/exp-044-controlled-sensitivity.json",
+  "machine": "nebula",
+  "gpu": 0,
+  "pid": 1023949,
+  "path": "/home/mlw0719/doit_reliability_storage/runs/exp-044-controlled-sensitivity",
+  "log_path": "/home/mlw0719/doit_reliability_storage/artifacts/exp-044-controlled-sensitivity.log",
+  "status": "completed",
+  "timestamp": "2026-10-04T03:17:46.115801+00:00",
+  "started_at": "2026-10-04T03:17:16.115399+00:00",
+  "returncode": 0,
+  "finished_at": "2026-10-04T03:17:46.115833+00:00"
+}

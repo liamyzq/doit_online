@@ -2,6 +2,7 @@
 
 import json
 import math
+import time
 from pathlib import Path
 
 import torch
@@ -17,6 +18,15 @@ def cosine(a, b):
 
 
 def sensitivity_correction(engine, transition, ratio, specification, seed, retain_graph=False):
+    torch.cuda.synchronize(engine.device)
+    started = time.perf_counter()
+    result = _sensitivity_correction(engine, transition, ratio, specification, seed, retain_graph)
+    torch.cuda.synchronize(engine.device)
+    engine.sensitivity_seconds += time.perf_counter() - started
+    return result
+
+
+def _sensitivity_correction(engine, transition, ratio, specification, seed, retain_graph):
     """Keep the reward vector fixed while changing the image mean sensitivity.
 
     Euler's explicit linear coefficient is one. Shrinkage scales only the
@@ -104,13 +114,11 @@ def controlled(config, output):
             "reward_queries": 0, "model_score_forwards": 0}
 
 
-def image_probe(config, output):
+def image_probe(config, output, engine):
     """Audit actual SD states, fixing each vector for every sensitivity variant."""
     from .estimators import gaussian_noise
-    from .image import ImageEngine
     torch.backends.cuda.matmul.allow_tf32 = False
     torch.backends.cudnn.allow_tf32 = False
-    engine = ImageEngine(config["image"])
     dump(Path(output) / "models.json", engine.provenance)
     states = []
     # Capture base trajectories independently of which sensitivity looks best.
@@ -136,7 +144,7 @@ def image_probe(config, output):
         for group, ratio in enumerate(ratios):
             estimates = {}
             for name, specification in config["variants"].items():
-                before = engine.score_forwards, engine.vjp_calls, engine.vjp_seconds
+                before = engine.score_forwards, engine.vjp_calls, engine.vjp_seconds, engine.sensitivity_seconds
                 correction = sensitivity_correction(engine, transition, ratio, specification,
                                                       seed * 997 + index * 97, retain_graph=True)
                 estimates[name] = correction.detach()
@@ -157,6 +165,7 @@ def image_probe(config, output):
                                                                   transition.noise_std * math.sqrt(engine.dimension),
                              "score_forwards": engine.score_forwards - before[0],
                              "vjp_calls": engine.vjp_calls - before[1],
+                             "sensitivity_seconds": engine.sensitivity_seconds - before[3],
                              "vjp_seconds": engine.vjp_seconds - before[2]})
             outputs.append(estimates)
         for row in rows[-2 * len(config["variants"]):]:
@@ -188,4 +197,5 @@ def image_probe(config, output):
         del transition
     return {"states": len(states), "rows": len(rows), "reward_queries": engine.reward_queries,
             "score_forwards": engine.score_forwards, "vjp_calls": engine.vjp_calls,
+            "sensitivity_seconds": engine.sensitivity_seconds,
             "reward_seconds": engine.reward_seconds, "vjp_seconds": engine.vjp_seconds}

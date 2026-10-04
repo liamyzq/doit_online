@@ -65,3 +65,28 @@ a DOIT improvement. [Sobolev training](https://arxiv.org/abs/1706.04859) motivat
 distinguishing value and derivative supervision, but no model training is
 planned without an independent reference. [SVDD](https://arxiv.org/abs/2408.08252)
 provides the existing derivative-free comparator's context.
+
+## First execution results
+
+Exp-044 completed at `c8d8fdd`, with 18 summary rows. Its nonsymmetric adjoint
+identity has maximum error 1.11e-16 and the directional finite-difference sweep
+reaches relative error 3.29e-9. Across dimensions 6/64/512, adding the specified
+sinusoidal error raises raw adjoint MSE to 0.312/0.321/0.318 despite coordinate
+value RMS error about 0.014. Half shrinkage lowers it to 0.090/0.092/0.092 and
+K4 smoothing to 0.076/0.082/0.082. The clean control is exact for the raw method;
+shrinkage instead creates MSE about 0.0129, and smoothing about 1e-8. This is
+evidence for a possible mechanism and its tradeoff, not a fitted explanation
+of the actual diffusion model.
+
+The representative exp-045 smoke also completed at `c8d8fdd`: one state,
+10 rows, 65 reward queries, 61 score forwards and 20 VJPs. Its minimum
+raw-direction finite-difference relative error is 1.46e-7. Random projections
+are much smaller and exhibit cancellation at tiny finite-difference steps;
+their error improves at the larger step sizes. No numerical mismatch blocks
+discovery. Peak reserved memory is 11,894 MiB.
+
+The smoke's `vjp_seconds` does not measure complete smoothing wall time. A
+follow-up instrumentation change times the full synchronized sensitivity call
+and starts backward timing only after queued forwards complete. It also retains
+probe query/forward counters if a later operation fails. This changes cost
+recording, not the method or the successfully checked numerical result.

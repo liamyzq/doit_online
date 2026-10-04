@@ -77,7 +77,9 @@ def main():
             metrics = controlled(config, output)
         elif mode == "sensitivity_probe":
             from .reliability import image_probe
-            metrics = image_probe(config, output)
+            from .image import ImageEngine
+            engine = ImageEngine(config["image"])
+            metrics = image_probe(config, output, engine)
         elif mode == "image":
             from .image import ImageEngine
             engine = ImageEngine(config.get("image", {}))
@@ -114,7 +116,9 @@ def main():
     except Exception as exc:
         metadata.update(status="failed", error=repr(exc), elapsed_seconds=time.time() - started)
         if engine is not None:
-            metadata.update(reward_queries=engine.reward_queries, score_forwards=engine.score_forwards)
+            metadata.update(reward_queries=engine.reward_queries, score_forwards=engine.score_forwards,
+                            vjp_calls=engine.vjp_calls, reward_seconds=engine.reward_seconds,
+                            vjp_seconds=engine.vjp_seconds, sensitivity_seconds=engine.sensitivity_seconds)
         write_json(output / "run.json", metadata)
         traceback.print_exc()
         raise

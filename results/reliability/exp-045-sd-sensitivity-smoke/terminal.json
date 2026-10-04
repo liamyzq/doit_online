@@ -1,0 +1,15 @@
+{
+  "experiment_id": "exp-045-sd-sensitivity-smoke",
+  "commit": "c8d8fdd4026c9a5c799fad1774733e2d3f761122",
+  "config": "/home/mlw0719/doit_reliability/configs/exp-045-sd-sensitivity-smoke.json",
+  "machine": "nebula",
+  "gpu": 0,
+  "pid": 1026067,
+  "path": "/home/mlw0719/doit_reliability_storage/runs/exp-045-sd-sensitivity-smoke",
+  "log_path": "/home/mlw0719/doit_reliability_storage/artifacts/exp-045-sd-sensitivity-smoke.log",
+  "status": "completed",
+  "timestamp": "2026-10-04T03:20:51.104976+00:00",
+  "started_at": "2026-10-04T03:18:21.102208+00:00",
+  "returncode": 0,
+  "finished_at": "2026-10-04T03:20:51.105017+00:00"
+}

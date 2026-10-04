@@ -1,0 +1,9 @@
+{
+  "rows": 18,
+  "adjoint_max_error": 1.1102230246251565e-16,
+  "minimum_fd_relative_error": 3.292601333264538e-09,
+  "reward_queries": 0,
+  "model_score_forwards": 0,
+  "peak_allocated_mib": 20.001953125,
+  "peak_reserved_mib": 36.0
+}

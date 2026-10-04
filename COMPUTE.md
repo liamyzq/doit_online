@@ -59,8 +59,8 @@ The user authorized physical GPUs 0--4 and stacking by free memory on
 
 Use branch `codex/doit-guidance-reliability`, remote checkout
 `/home/mlw0719/doit_reliability`, storage `/home/mlw0719/doit_reliability_storage`,
-and a new isolated `.venv`. Setup is in progress with the Orion package pins;
-do not claim its imports or memory are validated until they pass. Existing
+and a new isolated `.venv`. The Orion package pins, imports, and `pip check`
+passed. Both pinned model snapshots are downloaded. Existing
 source `/home/mlw0719/doob_h_transform/training_free/RCGDM` at `52887f3` and
 its `.venv_reject` are preserved. That environment has newer incompatible
 package provenance and is not the study environment.
@@ -68,11 +68,14 @@ package provenance and is not the study environment.
 Source `scripts/compute/nebula/env.sh`, then run the shared finite queue
 `scripts/compute/orion/queue.py`; it reads `DOIT_REPO`, `DOIT_STORAGE` and
 `DOIT_MACHINE`. Sync committed code with `scripts/compute/nebula/sync.sh` only
-between finite queues. Measure the first FP32 probe's peak memory before
-choosing concurrency; Orion's FP16 memory measurement does not cover this path.
+between finite queues. The exp-045 FP32 smoke used 11,752 MiB allocated and
+11,894 MiB reserved. Reserve 13,000 MiB per FP32 image/probe job plus 2048 MiB
+free memory, with at most one project job per device for the next wave.
 The aesthetic head is copied from
 `/home/mlw0719/.cache/emb_reader/sa_0_4_vit_l_14_linear.pth` into the new storage.
-Pinned SD and CLIP snapshots are being downloaded into its own HF cache.
+Pinned SD and CLIP snapshots are available in its own HF cache. Setup and
+acquisition records are retained in `results/reliability/environment` and the
+exp-044 result folder.
 
 A low-cost agent polls Orion read-only during the Nebula exploration. Upon
 reconnection recover the existing exp-039/041 jobs and outputs before resuming

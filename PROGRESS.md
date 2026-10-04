@@ -9,6 +9,16 @@ Orion monitoring is active again. Its existing exp-039/041 queue must be
 recovered before any duplicate submission or continuation. The online-update
 branch remains `codex/doit-correction`; its results and decisions below stand.
 
+Nebula exp-044 confirms the proposed mechanism only on its known-reference
+model: in dimension 512, a value RMS error of 0.01415 produces raw adjoint MSE
+0.3180; half shrinkage gives 0.09245 and four-point smoothing 0.08242. With no
+corruption the raw derivative is exact, while shrinkage introduces MSE 0.01286.
+The numerical adjoint checks pass. This does not establish sensitivity error
+in SD. The exp-045 single-state FP32 smoke passes its expected query, forward
+and VJP counts and has a raw-direction finite-difference error below 1.5e-7.
+Its late-state example shows strong linear/learned cancellation and almost no
+change from local smoothing. The locked eight-state discovery probe is next.
+
 The user reopened research after an external audit of `c5e4311`. The active
 protocol is [docs/audit-followup.md](docs/audit-followup.md). Ordinary
 high-dimensional CV/SPIDER/proposal grid expansion remains closed. The new

@@ -1,0 +1,202 @@
+{
+  "rows": [
+    {
+      "dimension": 6,
+      "amplitude": 0.0,
+      "method": "raw",
+      "mean_squared_error": 0.0,
+      "squared_error_standard_error": 0.0,
+      "relative_mse": 0.0,
+      "value_error_rms": 0.0,
+      "perturbation_norm_typical": 0.1224744871391589
+    },
+    {
+      "dimension": 6,
+      "amplitude": 0.0,
+      "method": "shrink-half",
+      "mean_squared_error": 0.012875176166581329,
+      "squared_error_standard_error": 0.00029718091576715766,
+      "relative_mse": 0.018064646201407953,
+      "value_error_rms": 0.0,
+      "perturbation_norm_typical": 0.1224744871391589
+    },
+    {
+      "dimension": 6,
+      "amplitude": 0.0,
+      "method": "smooth-four",
+      "mean_squared_error": 8.05026924148351e-09,
+      "squared_error_standard_error": 9.221732704527385e-10,
+      "relative_mse": 1.1295011718048618e-08,
+      "value_error_rms": 0.0,
+      "perturbation_norm_typical": 0.1224744871391589
+    },
+    {
+      "dimension": 6,
+      "amplitude": 0.02,
+      "method": "raw",
+      "mean_squared_error": 0.312080956352701,
+      "squared_error_standard_error": 0.008670906307753792,
+      "relative_mse": 0.43786834368461375,
+      "value_error_rms": 0.014071759677842261,
+      "perturbation_norm_typical": 0.1224744871391589
+    },
+    {
+      "dimension": 6,
+      "amplitude": 0.02,
+      "method": "shrink-half",
+      "mean_squared_error": 0.08972720003616103,
+      "squared_error_standard_error": 0.0028188248497580453,
+      "relative_mse": 0.12589265593921528,
+      "value_error_rms": 0.014071759677842261,
+      "perturbation_norm_typical": 0.1224744871391589
+    },
+    {
+      "dimension": 6,
+      "amplitude": 0.02,
+      "method": "smooth-four",
+      "mean_squared_error": 0.07614537080546632,
+      "squared_error_standard_error": 0.004704768704480217,
+      "relative_mse": 0.10683653300574654,
+      "value_error_rms": 0.014071759677842261,
+      "perturbation_norm_typical": 0.1224744871391589
+    },
+    {
+      "dimension": 64,
+      "amplitude": 0.0,
+      "method": "raw",
+      "mean_squared_error": 0.0,
+      "squared_error_standard_error": 0.0,
+      "relative_mse": 0.0,
+      "value_error_rms": 0.0,
+      "perturbation_norm_typical": 0.4
+    },
+    {
+      "dimension": 64,
+      "amplitude": 0.0,
+      "method": "shrink-half",
+      "mean_squared_error": 0.012839853496700086,
+      "squared_error_standard_error": 9.78057803620423e-05,
+      "relative_mse": 0.018010097044678805,
+      "value_error_rms": 0.0,
+      "perturbation_norm_typical": 0.4
+    },
+    {
+      "dimension": 64,
+      "amplitude": 0.0,
+      "method": "smooth-four",
+      "mean_squared_error": 7.611645946927634e-09,
+      "squared_error_standard_error": 3.161646209658106e-10,
+      "relative_mse": 1.067663912280111e-08,
+      "value_error_rms": 0.0,
+      "perturbation_norm_typical": 0.4
+    },
+    {
+      "dimension": 64,
+      "amplitude": 0.02,
+      "method": "raw",
+      "mean_squared_error": 0.3205451342529557,
+      "squared_error_standard_error": 0.003063350728054251,
+      "relative_mse": 0.4496195362804595,
+      "value_error_rms": 0.014186171632536979,
+      "perturbation_norm_typical": 0.4
+    },
+    {
+      "dimension": 64,
+      "amplitude": 0.02,
+      "method": "shrink-half",
+      "mean_squared_error": 0.09174976410572512,
+      "squared_error_standard_error": 0.0010770850896821016,
+      "relative_mse": 0.12869478267763562,
+      "value_error_rms": 0.014186171632536979,
+      "perturbation_norm_typical": 0.4
+    },
+    {
+      "dimension": 64,
+      "amplitude": 0.02,
+      "method": "smooth-four",
+      "mean_squared_error": 0.08186639833292317,
+      "squared_error_standard_error": 0.0016934874999996602,
+      "relative_mse": 0.11483166681404987,
+      "value_error_rms": 0.014186171632536979,
+      "perturbation_norm_typical": 0.4
+    },
+    {
+      "dimension": 512,
+      "amplitude": 0.0,
+      "method": "raw",
+      "mean_squared_error": 0.0,
+      "squared_error_standard_error": 0.0,
+      "relative_mse": 0.0,
+      "value_error_rms": 0.0,
+      "perturbation_norm_typical": 1.1313708498984762
+    },
+    {
+      "dimension": 512,
+      "amplitude": 0.0,
+      "method": "shrink-half",
+      "mean_squared_error": 0.012860388561578513,
+      "squared_error_standard_error": 3.6627558824836144e-05,
+      "relative_mse": 0.01804263330829032,
+      "value_error_rms": 0.0,
+      "perturbation_norm_typical": 1.1313708498984762
+    },
+    {
+      "dimension": 512,
+      "amplitude": 0.0,
+      "method": "smooth-four",
+      "mean_squared_error": 8.087510077304184e-09,
+      "squared_error_standard_error": 1.5493179714323568e-10,
+      "relative_mse": 1.134646733286506e-08,
+      "value_error_rms": 0.0,
+      "perturbation_norm_typical": 1.1313708498984762
+    },
+    {
+      "dimension": 512,
+      "amplitude": 0.02,
+      "method": "raw",
+      "mean_squared_error": 0.31803904930318266,
+      "squared_error_standard_error": 0.0010392892080848836,
+      "relative_mse": 0.44619662281730177,
+      "value_error_rms": 0.014150646671014165,
+      "perturbation_norm_typical": 1.1313708498984762
+    },
+    {
+      "dimension": 512,
+      "amplitude": 0.02,
+      "method": "shrink-half",
+      "mean_squared_error": 0.092447642055503,
+      "squared_error_standard_error": 0.0003664008736768679,
+      "relative_mse": 0.12970050615786255,
+      "value_error_rms": 0.014150646671014165,
+      "perturbation_norm_typical": 1.1313708498984762
+    },
+    {
+      "dimension": 512,
+      "amplitude": 0.02,
+      "method": "smooth-four",
+      "mean_squared_error": 0.08242345513403376,
+      "squared_error_standard_error": 0.0006126788586194654,
+      "relative_mse": 0.11563695528054525,
+      "value_error_rms": 0.014150646671014165,
+      "perturbation_norm_typical": 1.1313708498984762
+    }
+  ],
+  "directional_differences": [
+    {
+      "h": 0.01,
+      "relative_error": 0.0032751078040683364
+    },
+    {
+      "h": 0.001,
+      "relative_error": 3.284932978736036e-05
+    },
+    {
+      "h": 0.0001,
+      "relative_error": 3.2850285982653846e-07
+    },
+    {
+      "h": 1e-05,
+      "relative_error": 3.292601333264538e-09
+    }
+  ]
+}

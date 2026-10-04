@@ -74,6 +74,7 @@ class ImageEngine:
         self.reward_seconds = 0.0
         self.vjp_seconds = 0.0
         self.vjp_calls = 0
+        self.sensitivity_seconds = 0.0
         model_id = config.get("model", "sd-legacy/stable-diffusion-v1-5")
         model_revision = config.get("model_revision", "451f4fe16113bff5a5d2269ed5ad43b0592e9a14")
         clip_revision = "32bd64288804d66eefd0ccbe215aa642df71cc41"
@@ -156,6 +157,7 @@ class ImageEngine:
         return Transition(x, mean, endpoint_mean.flatten(), endpoint_std, up, gain, index)
 
     def correction(self, transition, ratio, retain_graph=False):
+        torch.cuda.synchronize(self.device)
         started = time.perf_counter()
         vector = ratio.reshape_as(transition.mean) / transition.noise_std
         result = torch.autograd.grad(transition.mean, transition.x, vector,
@@ -246,6 +248,7 @@ class ImageEngine:
         previous_guidance = None
         counts_before = self.reward_queries, self.score_forwards
         times_before = self.reward_seconds, self.vjp_seconds
+        sensitivity_before = self.sensitivity_seconds
         vjps_before = self.vjp_calls
         started = time.perf_counter()
         for index in range(self.steps):
@@ -329,6 +332,7 @@ class ImageEngine:
             "reward_seconds": self.reward_seconds - times_before[0],
             "vjp_seconds": self.vjp_seconds - times_before[1],
             "vjp_calls": self.vjp_calls - vjps_before,
+            "sensitivity_seconds": self.sensitivity_seconds - sensitivity_before,
             "oracle_seconds": sum(d.get("oracle_seconds", 0.0) for d in diagnostics),
             "estimator_seconds": sum(d.get("estimator_seconds", 0.0) for d in diagnostics),
             "update_seconds": sum(d.get("update_seconds", 0.0) for d in diagnostics),

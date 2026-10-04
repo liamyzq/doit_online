@@ -1,0 +1,20 @@
+{
+  "id": "exp-044-controlled-sensitivity",
+  "mode": "sensitivity_controlled",
+  "purpose": "Known-reference mechanism comparison with a zero-corruption control; fixed-vector adjoint identity gates real-model use.",
+  "seed": 44017,
+  "dimensions": [
+    6,
+    64,
+    512
+  ],
+  "repeats": 256,
+  "amplitudes": [
+    0.0,
+    0.02
+  ],
+  "frequency": 40,
+  "smoothing_samples": 4,
+  "noise_fraction": 0.1,
+  "transition_noise_std": 0.5
+}
