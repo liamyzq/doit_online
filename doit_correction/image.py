@@ -63,7 +63,7 @@ class ImageEngine:
     def __init__(self, config, device="cuda:0"):
         self.config = config
         self.device = torch.device(device)
-        self.dtype = torch.float16
+        self.dtype = {"float16": torch.float16, "float32": torch.float32}[config.get("dtype", "float16")]
         self.steps = int(config.get("steps", 20))
         self.size = int(config.get("size", 512))
         self.chunk = int(config.get("reward_batch", 4))
@@ -73,6 +73,7 @@ class ImageEngine:
         self.reward_queries = 0
         self.reward_seconds = 0.0
         self.vjp_seconds = 0.0
+        self.vjp_calls = 0
         model_id = config.get("model", "sd-legacy/stable-diffusion-v1-5")
         model_revision = config.get("model_revision", "451f4fe16113bff5a5d2269ed5ad43b0592e9a14")
         clip_revision = "32bd64288804d66eefd0ccbe215aa642df71cc41"
@@ -161,6 +162,7 @@ class ImageEngine:
                                      retain_graph=retain_graph, create_graph=False)[0]
         torch.cuda.synchronize(self.device)
         self.vjp_seconds += time.perf_counter() - started
+        self.vjp_calls += 1
         return result.detach()
 
     @torch.no_grad()
@@ -244,6 +246,7 @@ class ImageEngine:
         previous_guidance = None
         counts_before = self.reward_queries, self.score_forwards
         times_before = self.reward_seconds, self.vjp_seconds
+        vjps_before = self.vjp_calls
         started = time.perf_counter()
         for index in range(self.steps):
             guided = index >= start_index and index < self.steps - 1 and (gamma != 0 or execution == "resample")
@@ -275,7 +278,13 @@ class ImageEngine:
                         transition.mean.detach(), transition.noise_std,
                         estimate.eps, estimate.log_weights, selection_generator)
                 else:
-                    correction = self.correction(transition, estimate.ratio)
+                    if "sensitivity" in estimator_config:
+                        from .reliability import sensitivity_correction
+                        correction = sensitivity_correction(
+                            self, transition, estimate.ratio, estimator_config["sensitivity"],
+                            seed * 100003 + index * 997 + 43000003)
+                    else:
+                        correction = self.correction(transition, estimate.ratio)
                     raw_correction_norm = float(correction.norm())
                     if estimator.kind == "guidance_ema" and previous_guidance is not None:
                         beta = float(estimator_config.get("ema_beta", 0.5))
@@ -319,6 +328,7 @@ class ImageEngine:
             "score_forwards": self.score_forwards - counts_before[1],
             "reward_seconds": self.reward_seconds - times_before[0],
             "vjp_seconds": self.vjp_seconds - times_before[1],
+            "vjp_calls": self.vjp_calls - vjps_before,
             "oracle_seconds": sum(d.get("oracle_seconds", 0.0) for d in diagnostics),
             "estimator_seconds": sum(d.get("estimator_seconds", 0.0) for d in diagnostics),
             "update_seconds": sum(d.get("update_seconds", 0.0) for d in diagnostics),

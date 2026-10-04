@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Run a finite queue of experiments on Orion GPUs 0 through 4."""
+"""Run a finite queue on authorized GPUs 0 through 4 using the machine env."""
 
 import argparse
 import json
@@ -11,8 +11,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 
-STORAGE = Path("/home/mlw0719/doit_correction_storage")
-REPO = Path("/home/mlw0719/doit_correction")
+STORAGE = Path(os.environ.get("DOIT_STORAGE", "/home/mlw0719/doit_correction_storage"))
+REPO = Path(os.environ.get("DOIT_REPO", "/home/mlw0719/doit_correction"))
 PYTHON = REPO / ".venv/bin/python"
 STARTUP_GRACE_SECONDS = 45
 
@@ -162,6 +162,7 @@ def main():
                 proc = subprocess.Popen(command, cwd=REPO, env=env, stdout=log, stderr=subprocess.STDOUT)
                 event = {
                     "experiment_id": item["id"], "commit": commit, "config": str(config),
+                    "machine": os.environ.get("DOIT_MACHINE", "orion"),
                     "gpu": gpu, "pid": proc.pid, "path": str(output_dir),
                     "log_path": str(log_path), "status": "submitted", "timestamp": now(),
                 }

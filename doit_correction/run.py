@@ -72,6 +72,12 @@ def main():
         elif mode == "kernel_probe":
             from .kernel_probe import run_probe
             metrics = run_probe(config, output)
+        elif mode == "sensitivity_controlled":
+            from .reliability import controlled
+            metrics = controlled(config, output)
+        elif mode == "sensitivity_probe":
+            from .reliability import image_probe
+            metrics = image_probe(config, output)
         elif mode == "image":
             from .image import ImageEngine
             engine = ImageEngine(config.get("image", {}))

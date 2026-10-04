@@ -46,8 +46,38 @@ revision than the queue's recorded commit. The queue writes its event ledger
 to storage `jobs/jobs.jsonl`; pull those events into this repository's ledger
 when recording each completed wave.
 
-No image or RL training is authorized on the Quest login nodes. Quest and
-Nebula are reference-source locations for this project, not experiment workers.
+No image or RL training is authorized on the Quest login nodes. Quest remains
+a reference-source location. The user subsequently authorized Nebula as an
+experiment worker for the separate guidance-reliability exploration below.
+
+## Nebula exploration worker
+
+The user authorized physical GPUs 0--4 and stacking by free memory on
+2026-10-03. SSH alias `nebula` connects as `mlw0719`. These are RTX A6000
+49,140 MiB devices, driver 580.178.04. The initial free-memory snapshot was
+20,848 / 16,635 / 16,695 / 15,620 / 11,387 MiB at high utilization.
+
+Use branch `codex/doit-guidance-reliability`, remote checkout
+`/home/mlw0719/doit_reliability`, storage `/home/mlw0719/doit_reliability_storage`,
+and a new isolated `.venv`. Setup is in progress with the Orion package pins;
+do not claim its imports or memory are validated until they pass. Existing
+source `/home/mlw0719/doob_h_transform/training_free/RCGDM` at `52887f3` and
+its `.venv_reject` are preserved. That environment has newer incompatible
+package provenance and is not the study environment.
+
+Source `scripts/compute/nebula/env.sh`, then run the shared finite queue
+`scripts/compute/orion/queue.py`; it reads `DOIT_REPO`, `DOIT_STORAGE` and
+`DOIT_MACHINE`. Sync committed code with `scripts/compute/nebula/sync.sh` only
+between finite queues. Measure the first FP32 probe's peak memory before
+choosing concurrency; Orion's FP16 memory measurement does not cover this path.
+The aesthetic head is copied from
+`/home/mlw0719/.cache/emb_reader/sa_0_4_vit_l_14_linear.pth` into the new storage.
+Pinned SD and CLIP snapshots are being downloaded into its own HF cache.
+
+A low-cost agent polls Orion read-only during the Nebula exploration. Upon
+reconnection recover the existing exp-039/041 jobs and outputs before resuming
+the online-update study. Do not sync the Nebula branch onto Orion's active
+execution checkout or launch duplicate jobs there.
 
 ## Initial study execution state
 

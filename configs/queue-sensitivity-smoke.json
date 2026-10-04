@@ -1,0 +1,6 @@
+[
+  {
+    "id": "exp-045-sd-sensitivity-smoke",
+    "config": "configs/exp-045-sd-sensitivity-smoke.json"
+  }
+]

@@ -2,10 +2,12 @@
 
 ## Current decision
 
-Research is paused at the user's request on 2026-10-03, after publishing the
-retrieved audit results. Resume only after the user verifies Orion and requests
-continuation. Monitoring and automatic follow-up launch are stopped; this does
-not confirm that the already submitted remote queue has stopped.
+The user resumed work with a separate Nebula exploration while Orion remains
+unreachable. Branch `codex/doit-guidance-reliability` tests fixed-vector
+sensitivity using [docs/guidance-reliability.md](docs/guidance-reliability.md).
+Orion monitoring is active again. Its existing exp-039/041 queue must be
+recovered before any duplicate submission or continuation. The online-update
+branch remains `codex/doit-correction`; its results and decisions below stand.
 
 The user reopened research after an external audit of `c5e4311`. The active
 protocol is [docs/audit-followup.md](docs/audit-followup.md). Ordinary

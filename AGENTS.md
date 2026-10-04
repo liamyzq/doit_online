@@ -5,7 +5,8 @@ changed and why. Commit implementation and experiment configs before formal
 runs. Run representative checks on Orion. Before a check, identify the specific
 failure it detects and how that would change the next action.
 
-Use only Orion GPUs 0--4. Stacking with other users is authorized according to
+Use only physical GPUs 0--4 on Orion or the user-authorized Nebula exploration
+worker. Stacking with other users is authorized according to
 free memory. Never stop or modify other users' jobs. Measure peak memory in a
 smoke run before setting concurrency. Use the project launcher and isolated
 environment; preserve the old DOIT repositories.
