@@ -77,6 +77,13 @@ Pinned SD and CLIP snapshots are available in its own HF cache. Setup and
 acquisition records are retained in `results/reliability/environment` and the
 exp-044 result folder.
 
+The exp-046 finite queue completed all ten jobs and 80 images at `6d1ceca`.
+The controller exited; no further Nebula run is queued. Maximum reserved
+memory was 12,498 MiB, within the 13,000 MiB job allowance. Both sensitivity
+settings are closed at discovery, so no confirmation or larger concurrency
+experiment is planned. All PNGs and embeddings were retrieved
+locally; small records and selected visual evidence are in `results/reliability`.
+
 A low-cost agent polls Orion read-only during the Nebula exploration. Upon
 reconnection recover the existing exp-039/041 jobs and outputs before resuming
 the online-update study. Do not sync the Nebula branch onto Orion's active

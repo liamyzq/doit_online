@@ -1,0 +1,43 @@
+{
+  "id": "exp-046-sensitivity-endpoints-shrink-half-matched-s541",
+  "mode": "image",
+  "purpose": "Locked FP32 endpoint discovery: fixed reward scale; compare biased sensitivity controls with MC8, an approximate wall-time MC16 comparator, and previously selected strong MC32. No new parameter grid.",
+  "image": {
+    "size": 512,
+    "steps": 20,
+    "guided_steps": 10,
+    "proxy": "euler",
+    "reward_batch": 2,
+    "dtype": "float32",
+    "aesthetic_head": "/home/mlw0719/doit_reliability_storage/models/sa_0_4_vit_l_14_linear.pth"
+  },
+  "prompts": [
+    "bernese",
+    "formula1",
+    "airplane",
+    "labrador",
+    "lighthouse",
+    "cafe",
+    "orchid",
+    "mountain"
+  ],
+  "seeds": [
+    541
+  ],
+  "estimator": {
+    "kind": "mc",
+    "antithetic": true,
+    "warmup_samples": 32,
+    "warmup_steps": 1,
+    "refresh_every": 0,
+    "tau": 0.3,
+    "reward_offset": 6.0,
+    "execution": "gradient",
+    "samples": 8,
+    "gamma": 0.4,
+    "sensitivity": {
+      "kind": "shrink_norm_matched",
+      "coefficient": 0.5
+    }
+  }
+}

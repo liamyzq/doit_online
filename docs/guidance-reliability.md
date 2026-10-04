@@ -152,3 +152,82 @@ configs and label the group by its actual parameters. It is a valid common-scale
 control but cannot support a claim against the selected MC32 baseline. If a
 sensitivity candidate warrants confirmation, include the actual selected
 tau-0.6 MC32 setting there before making that comparison.
+
+## Endpoint results and closure
+
+All ten exp-046 jobs completed at `6d1ceca59bdee1c3064edf31e9b49625846173ba`,
+producing 80 images. The controller exited and every run returned zero. All
+per-image query/forward/VJP counters match the locked method settings, all
+recorded rewards and times are finite, and no denominator event occurred.
+The [paired summary](../results/reliability/exp-046-summary.json) and
+[accounting](../results/reliability/exp-046-accounting.json) are derived from
+complete saved runs. Two seeds support discovery decisions, not a seed-block
+confidence interval or a broad equivalence claim.
+
+| Method | Reward | Delta from MC8 | CLIP alignment | Embedding distance | Guidance queries | Score forwards / VJPs | Seconds/image |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| MC8, gamma 0.4 | 5.91513 | 0 | 0.27059 | 0.11053 | 96 | 20 / 9 | 81.46 |
+| MC16, gamma 0.4 | 5.93714 | +0.02201 | 0.27068 | 0.10619 | 160 | 20 / 9 | 98.40 |
+| MC32, gamma 4, tau 0.3 | 6.01186 | +0.09673 | 0.26236 | 0.17656 | 288 | 20 / 9 | 179.39 |
+| Half shrinkage, raw-norm matched | 5.91560 | +0.00046 | 0.26906 | 0.11269 | 96 | 20 / 9 | 85.27 |
+| Four-point smoothing | 5.90488 | -0.01026 | 0.26950 | 0.11227 | 96 | 56 / 36 | 111.32 |
+
+All groups use tau 0.3. Query counts include the first-step 32-query warm-up
+and all subsequent guidance samples; each image has one additional common
+final reward evaluation. The wave uses 11,856 total reward queries, 2,176
+score forwards and 1,152 VJPs. Maximum reserved memory is 12,498 MiB.
+
+Half shrinkage has seed-wise reward deltas -0.01698 and +0.01791. Its aggregate
+delta +0.00046 is negligible in this discovery comparison, and alignment is
+0.00153 lower than MC8. All prompt pairs were inspected: composition and detail
+are close to MC8, with no distinct new quality failure and no clear visible
+improvement. Close this coefficient with raw-norm matching for lack of a useful
+endpoint gain under the tested settings. This does not assert exact equality
+or rule out another scientifically distinct regime.
+
+Four-point smoothing has negative reward deltas on both seeds (-0.00749 and
+-0.01303), and its mean alignment is 0.00109 lower than MC8. The images remain
+visually close to MC8. Smoothing adds 36 score forwards and 27 VJPs per image;
+full measured sensitivity time rises from 6.94 to 41.74 seconds per image.
+MC16 has higher mean reward and alignment with fewer forwards/backwards and
+lower observed elapsed time, although it uses 64 additional reward queries.
+Close the tested smoothing scale for lack of useful benefit at its cost.
+
+Measured elapsed times reflect changing load on shared GPUs. For example,
+MC8 averages 62.02 seconds at seed 541 and 100.91 at seed 547; MC32 averages
+233.41 and 125.37. The mean times above are actual observed costs, not an
+estimate of isolated-device speed or a precise causal timing ratio. Explicit
+operation counts remain interpretable despite that variability.
+
+The stronger MC32 common-temperature control increases aggregate reward but
+has conspicuous quality failures. At seed 541, cafe and Labrador images have
+severe saturation, dense artificial texture and damaged structure; airplane,
+Formula 1 and mountain examples also show degraded texture. The seed-547 cafe
+image becomes strongly outlined and posterized. Its aggregate embedding
+distance must not be interpreted as a diversity improvement when corruption
+changes the embedding. Close this tau-0.3/gamma-4 control for quality. It does
+not revise the earlier selected tau-0.6 baseline's result.
+
+The full visual review covers all eight prompt sheets, with both seeds and all
+five methods in each:
+[Bernese](../results/reliability/quality/exp-046-contact-bernese.jpg),
+[Formula 1](../results/reliability/quality/exp-046-contact-formula1.jpg),
+[airplane](../results/reliability/quality/exp-046-contact-airplane.jpg),
+[Labrador](../results/reliability/quality/exp-046-contact-labrador.jpg),
+[lighthouse](../results/reliability/quality/exp-046-contact-lighthouse.jpg),
+[cafe](../results/reliability/quality/exp-046-contact-cafe.jpg),
+[orchid](../results/reliability/quality/exp-046-contact-orchid.jpg), and
+[mountain](../results/reliability/quality/exp-046-contact-mountain.jpg).
+Unresized examples retain the [MC8 cafe](../results/reliability/quality/exp-046-mc8-cafe-s541.png)
+and [strong MC32 cafe](../results/reliability/quality/exp-046-mc32-strong-cafe-s541.png),
+plus [MC8 Labrador](../results/reliability/quality/exp-046-mc8-labrador-s541.png)
+and [strong MC32 Labrador](../results/reliability/quality/exp-046-mc32-strong-labrador-s541.png).
+
+Neither sensitivity variant warrants confirmation. All eight reserved seeds
+remain unused, no further Nebula wave is queued, and the bounded exploration
+is closed. The controlled-model mechanism is real, the fixed-network FP32
+adjoint is correct at the tested states, and vector uncertainty is present
+before applying it. These results do not identify an ideal SD Jacobian or
+establish an endpoint advantage from smoothing or shrinkage. The original
+online-update audit remains pending recovery of the already submitted Orion
+experiments; it is not closed by this separate branch.

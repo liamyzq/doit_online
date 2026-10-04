@@ -4,7 +4,8 @@
 
 The user resumed work with a separate Nebula exploration while Orion remains
 unreachable. Branch `codex/doit-guidance-reliability` tests fixed-vector
-sensitivity using [docs/guidance-reliability.md](docs/guidance-reliability.md).
+sensitivity using [docs/guidance-reliability.md](docs/guidance-reliability.md);
+that bounded exploration is now complete.
 Orion monitoring is active again. Its existing exp-039/041 queue must be
 recovered before any duplicate submission or continuation. The online-update
 branch remains `codex/doit-correction`; its results and decisions below stand.
@@ -26,10 +27,30 @@ raw-norm-matched half shrinkage and the larger predeclared K4 smoothing scale,
 alongside MC8, a comparable-cost MC16 and an MC32 gamma-4 control at tau 0.3. Its
 five groups, eight prompts and two fresh seeds total 80 FP32 images. No ideal
 Jacobian error or endpoint improvement has been established by these diagnostics.
-The earlier selected MC32 baseline used tau 0.6. The running exp-046 configs
+The earlier selected MC32 baseline used tau 0.6. The executed exp-046 configs
 use tau 0.3 consistently across all five groups; their description of MC32 as
 the previously selected setting was inaccurate. Treat it as a higher-budget
 control at the common temperature, not a rerun of the selected baseline.
+
+Exp-046 is now complete: all ten jobs at `6d1ceca` exited zero and produced
+80 images with correct per-image cost counters and no denominator events.
+Mean reward is 5.91513 for MC8, 5.93714 for MC16, 5.91560 for norm-matched
+shrinkage and 5.90488 for K4 smoothing. Shrinkage's paired delta is +0.00046,
+with opposite signs by seed; smoothing's is -0.01026, negative on both seeds.
+Their alignment deltas are -0.00153 and -0.00109. Full visual review finds no
+distinct new quality failure in either sensitivity variant, but no clear
+improvement. Close both settings for lack of useful endpoint benefit at this
+budget. No confirmation is launched and the reserved seeds remain unused.
+
+The tau-0.3/gamma-4 MC32 control gains 0.09673 mean reward but has severe cafe
+and Labrador saturation/structure failures at seed 541. Close that specific
+control for quality; it is not evidence against the historical tau-0.6 baseline.
+The complete wave uses 11,856 reward queries including final evaluations,
+2,176 score forwards and 1,152 VJPs. Shared-device image times average
+81.46/98.40/179.39/85.27/111.32 s for MC8/MC16/strong MC32/shrinkage/smoothing;
+large timing differences by seed preclude a dedicated-device speed claim.
+The Nebula finite queue has exited. The original Orion work remains pending
+reconnection and recovery of exp-039/041.
 
 The user reopened research after an external audit of `c5e4311`. The active
 protocol is [docs/audit-followup.md](docs/audit-followup.md). Ordinary

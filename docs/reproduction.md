@@ -62,6 +62,40 @@ paired differences from the baseline, and seed-block intervals when there are at
 least four seeds. The intervals condition on the listed prompts and do not
 estimate uncertainty over a wider prompt population.
 
+## Nebula sensitivity exploration
+
+Use the isolated Nebula checkout and environment described in
+[COMPUTE.md](../COMPUTE.md). The committed endpoint wave executed at `6d1ceca`:
+
+```bash
+cd /home/mlw0719/doit_reliability
+source scripts/compute/nebula/env.sh
+.venv/bin/python scripts/compute/orion/queue.py \
+  --queue configs/queue-sensitivity-endpoints.json \
+  --memory-mib 13000 --max-per-gpu 1
+```
+
+Use new experiment IDs and output directories for an intentional reproduction;
+the recorded runs are complete. Do not relaunch them as recovery work.
+`scripts/compute/nebula/sync.sh` syncs the committed exploration branch only
+between queues. Exp-044 and exp-045 configs specify the preceding controlled
+model and frozen-vector diagnostics.
+
+After retrieving complete exp-046 run folders, including images and embeddings,
+run the following from the local repository root:
+
+```bash
+python scripts/analysis/images.py \
+  --manifest configs/analysis-exp-046-sensitivity-endpoints.json \
+  --output artifacts/exp-046-summary.json
+python scripts/analysis/sensitivity_gallery.py
+```
+
+The report retains the exact executed tau-0.3 MC32 configuration; it is not
+the historical selected tau-0.6 baseline. Both discovery seeds are shown in
+every comparison sheet. Summary JSON and image evidence are copied under
+`results/reliability/` for review without access to a worker.
+
 ## Run records and artifacts
 
 Each run directory is stored under

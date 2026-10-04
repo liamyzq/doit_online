@@ -18,6 +18,14 @@ smoothed and regularized sensitivity. A read-only Orion monitor will report
 reconnection so the existing online-update runs can be recovered and continued
 on `codex/doit-correction`.
 
+The bounded Nebula exploration is complete: the fixed-vector FP32 adjoint
+checks pass, but neither norm-matched shrinkage nor four-point smoothing shows
+a useful endpoint gain in 80 discovery images. Their mean reward differences
+from MC8 are +0.00046 and -0.01026; smoothing adds 27 VJPs per image. Both
+settings are closed under this budget, with no confirmation wave. The
+[report](docs/guidance-reliability.md#endpoint-results-and-closure) contains
+the costs, paired results, all prompt comparison sheets, and limitations.
+
 The initial image study is complete. All supplied families and targeted extensions have
 documented closure decisions. None established a usable image improvement;
 strong EMA and paired future M8 have favorable aggregate results but

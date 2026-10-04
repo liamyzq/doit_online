@@ -1,0 +1,15 @@
+{
+  "experiment_id": "exp-046-sensitivity-endpoints-shrink-half-matched-s547",
+  "commit": "6d1ceca59bdee1c3064edf31e9b49625846173ba",
+  "config": "/home/mlw0719/doit_reliability/configs/exp-046-sensitivity-endpoints-shrink-half-matched-s547.json",
+  "machine": "nebula",
+  "gpu": 1,
+  "pid": 1065841,
+  "path": "/home/mlw0719/doit_reliability_storage/runs/exp-046-sensitivity-endpoints-shrink-half-matched-s547",
+  "log_path": "/home/mlw0719/doit_reliability_storage/artifacts/exp-046-sensitivity-endpoints-shrink-half-matched-s547.log",
+  "status": "completed",
+  "timestamp": "2026-10-04T03:57:17.286199+00:00",
+  "started_at": "2026-10-04T03:44:44.486977+00:00",
+  "returncode": 0,
+  "finished_at": "2026-10-04T03:57:17.286233+00:00"
+}
