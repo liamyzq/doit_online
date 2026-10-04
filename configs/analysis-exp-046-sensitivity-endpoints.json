@@ -1,13 +1,28 @@
 {
   "id": "analysis-exp-046-sensitivity-endpoints",
   "queue": "configs/queue-sensitivity-endpoints.json",
-  "groups": [
-    "mc8",
-    "mc16",
-    "mc32-strong",
-    "shrink-half-matched",
-    "smooth-four"
-  ],
+  "groups": {
+    "mc8": [
+      "artifacts/exp-046-sensitivity-endpoints-mc8-s541",
+      "artifacts/exp-046-sensitivity-endpoints-mc8-s547"
+    ],
+    "mc16": [
+      "artifacts/exp-046-sensitivity-endpoints-mc16-s541",
+      "artifacts/exp-046-sensitivity-endpoints-mc16-s547"
+    ],
+    "mc32-strong": [
+      "artifacts/exp-046-sensitivity-endpoints-mc32-strong-s541",
+      "artifacts/exp-046-sensitivity-endpoints-mc32-strong-s547"
+    ],
+    "shrink-half-matched": [
+      "artifacts/exp-046-sensitivity-endpoints-shrink-half-matched-s541",
+      "artifacts/exp-046-sensitivity-endpoints-shrink-half-matched-s547"
+    ],
+    "smooth-four": [
+      "artifacts/exp-046-sensitivity-endpoints-smooth-four-s541",
+      "artifacts/exp-046-sensitivity-endpoints-smooth-four-s547"
+    ]
+  },
   "seeds": [
     541,
     547
@@ -25,5 +40,6 @@
   "primary_comparator": "mc8",
   "elapsed_cost_comparator": "mc16",
   "higher_budget_baseline": "mc32-strong",
-  "scope": "Discovery only; seed-block uncertainty is not resolved by two seeds. Review every prompt image before any confirmation."
+  "scope": "Discovery only; seed-block uncertainty is not resolved by two seeds. Review every prompt image before any confirmation.",
+  "baseline": "mc8"
 }
