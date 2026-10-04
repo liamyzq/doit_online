@@ -122,8 +122,8 @@ Exp-046 fixes eight prompts and seeds 541/547, five groups, 80 images total:
 
 - Raw MC8, tau 0.3 and gamma 0.4: the existing moderate setting.
 - Raw MC16 at the same tau/gamma: an approximate elapsed-cost comparator.
-- Raw MC32, tau 0.3 and gamma 4: the previously selected stronger baseline,
-  rerun here in FP32 instead of reusing a different environment's outputs.
+- Raw MC32, tau 0.3 and gamma 4: a higher-query, stronger-guidance control at
+  the common temperature, generated in FP32 in the same environment.
 - MC8 with half learned-component shrinkage and raw-norm matching, gamma 0.4.
 - MC8 with K4 smoothing at delta 0.5 times transition noise, gamma 0.4.
 
@@ -143,3 +143,12 @@ An endpoint effect must be useful at its measured cost and free of material
 quality failure before confirmation is warranted. Reserve seeds
 557/563/569/571/577/587/593/599 for any confirmation; they are not used for
 parameter selection. Close unsupported settings under this budget.
+
+The exp-046 config purpose text incorrectly calls its MC32 group the previously
+selected strong baseline. The selected exp-031/040/043 setting uses tau 0.6,
+whereas the locked exp-046 execution uses tau 0.3. This discrepancy was found
+while the queue was running, before endpoint analysis. Preserve the executed
+configs and label the group by its actual parameters. It is a valid common-scale
+control but cannot support a claim against the selected MC32 baseline. If a
+sensitivity candidate warrants confirmation, include the actual selected
+tau-0.6 MC32 setting there before making that comparison.

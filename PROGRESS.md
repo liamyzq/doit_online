@@ -23,9 +23,13 @@ not materially improve agreement. It costs about 5.1--5.5 s per operation versus
 0.77--0.87 s for raw. Half shrinkage raises KL by about 35% early and 60% late
 because it weakens linear/learned cancellation. Exp-046 therefore tests only a
 raw-norm-matched half shrinkage and the larger predeclared K4 smoothing scale,
-alongside MC8, a comparable-cost MC16 and the prior MC32 strong setting. Its
+alongside MC8, a comparable-cost MC16 and an MC32 gamma-4 control at tau 0.3. Its
 five groups, eight prompts and two fresh seeds total 80 FP32 images. No ideal
 Jacobian error or endpoint improvement has been established by these diagnostics.
+The earlier selected MC32 baseline used tau 0.6. The running exp-046 configs
+use tau 0.3 consistently across all five groups; their description of MC32 as
+the previously selected setting was inaccurate. Treat it as a higher-budget
+control at the common temperature, not a rerun of the selected baseline.
 
 The user reopened research after an external audit of `c5e4311`. The active
 protocol is [docs/audit-followup.md](docs/audit-followup.md). Ordinary
