@@ -84,10 +84,15 @@ settings are closed at discovery, so no confirmation or larger concurrency
 experiment is planned. All PNGs and embeddings were retrieved
 locally; small records and selected visual evidence are in `results/reliability`.
 
-A low-cost agent polls Orion read-only during the Nebula exploration. Upon
-reconnection recover the existing exp-039/041 jobs and outputs before resuming
-the online-update study. Do not sync the Nebula branch onto Orion's active
-execution checkout or launch duplicate jobs there.
+A low-cost agent polled Orion read-only during the Nebula exploration. Its
+last bounded 15-second probe still timed out and the agent has stopped.
+The active scheduled follow-up `recover-orion-and-resume-doit` now checks
+every 15 minutes in the existing chat. It stays quiet while connectivity is
+unchanged and resumes recovery when Orion is reachable; the local desktop
+application must remain running. Upon reconnection recover the existing
+exp-039/041 jobs and outputs before resuming the online-update study. Do not
+sync the Nebula branch onto Orion's active execution checkout or launch
+duplicate jobs there.
 
 ## Initial study execution state
 

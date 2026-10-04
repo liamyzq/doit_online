@@ -50,7 +50,11 @@ The complete wave uses 11,856 reward queries including final evaluations,
 81.46/98.40/179.39/85.27/111.32 s for MC8/MC16/strong MC32/shrinkage/smoothing;
 large timing differences by seed preclude a dedicated-device speed claim.
 The Nebula finite queue has exited. The original Orion work remains pending
-reconnection and recovery of exp-039/041.
+reconnection and recovery of exp-039/041. The last bounded SSH probe still
+timed out. Scheduled follow-up `recover-orion-and-resume-doit` is active every
+15 minutes in this chat, replacing the completed low-cost monitoring session.
+It stays quiet on unchanged connection failure and resumes the original work
+after recovering existing jobs and results.
 
 The user reopened research after an external audit of `c5e4311`. The active
 protocol is [docs/audit-followup.md](docs/audit-followup.md). Ordinary
@@ -86,7 +90,7 @@ independently assisted surrogates on moving action paths with fixed observations
 Exp-041 tests the same realized future candidates at eight saved image states.
 No simulator evaluation has run. The exp-040 and calibration queues have exited.
 
-## Paused computation checkpoint
+## Orion recovery checkpoint
 
 The exp-039/041 nine-job queue was launched on Orion at `d6728de`. The last
 retrieved critic log completed all Hopper discovery paths (16,384 rows), with
@@ -98,8 +102,10 @@ and lighthouse results have not yet been retrieved.
 As of 2026-10-03 18:30 UTC, bounded SSH reads time out, including a fresh
 connection with multiplexing disabled. This prevents a new execution-status
 observation; it is not a recorded experiment failure. Do not mark the remaining
-runs completed or start duplicates. Exp-043 is committed, but the user's pause
-revokes its automatic follow-up launch. Its launch has not been observed.
+runs completed or start duplicates. Exp-043 is committed, but its automatic
+follow-up launch was revoked during the earlier pause. Its launch has not been
+observed. The user has now resumed research; recover and assess exp-039/041
+before deciding the next submission.
 Keep the remote execution checkout at `d6728de` while that queue is
 active, even if documentation and retrieved results advance locally or online.
 
