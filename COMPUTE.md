@@ -1,5 +1,23 @@
 # Compute
 
+## Current uncertainty study
+
+As of 2026-10-21, both Orion and Nebula are reachable and have no active project
+queue or run. Orion is clean at `d6728de`, Nebula at `6d1ceca`. The old Orion
+exp-039 crash and five completed exp-041 probes have been recovered; see
+`results/recovery/2026-10-21/recovery.json`. Preserve those execution checkouts.
+
+New branch `codex/doit-uncertainty-smc` uses Orion checkout
+`/home/mlw0719/doit_uncertainty` and storage
+`/home/mlw0719/doit_uncertainty_storage`, via
+`scripts/compute/uncertainty/{env.sh,sync.sh}` and the shared finite queue.
+Its `.venv` points to the already isolated project environment in
+`/home/mlw0719/doit_correction/.venv`; no existing package is changed. The new
+storage shares the existing Hugging Face cache by symlink. A fresh smoke
+determines memory allowance before concurrent new runs. The user's latest
+authorization includes bounded RL experiments independently of image success;
+simulator execution still requires a working isolated simulator environment.
+
 ## Authorized machine
 
 - SSH alias: `orion`, user `mlw0719`; it connects through Quest.

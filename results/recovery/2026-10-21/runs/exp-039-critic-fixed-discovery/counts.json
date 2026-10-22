@@ -1,0 +1,9 @@
+[
+  {
+    "task": "hopper-medium-v2",
+    "reward_queries": 1130640,
+    "reward_seconds": 3.259344242978841,
+    "score_forwards": 240,
+    "vjp_seconds": 0.0
+  }
+]

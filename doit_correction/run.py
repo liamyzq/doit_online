@@ -42,7 +42,11 @@ def main():
         torch.set_num_threads(int(os.environ.get("OMP_NUM_THREADS", 2)))
         torch.cuda.reset_peak_memory_stats()
         mode = config.get("mode", "image")
-        if mode == "checks":
+        if mode in {"uncertainty_checks", "uncertainty_toy", "uncertainty_local"}:
+            from .uncertainty_toy import run_checks, run_toys, run_local
+            metrics = {"uncertainty_checks": run_checks, "uncertainty_toy": run_toys,
+                       "uncertainty_local": run_local}[mode](config, output)
+        elif mode == "checks":
             from .checks import run_checks
             metrics = run_checks(output)
         elif mode == "extension_checks":

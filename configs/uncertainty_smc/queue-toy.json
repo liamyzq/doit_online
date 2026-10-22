@@ -1,0 +1,10 @@
+[
+  {
+    "id": "exp-048-uncertainty-toy-discovery",
+    "config": "configs/uncertainty_smc/exp-048-uncertainty-toy-discovery.json"
+  },
+  {
+    "id": "exp-049-fors-local-discovery",
+    "config": "configs/uncertainty_smc/exp-049-fors-local-discovery.json"
+  }
+]

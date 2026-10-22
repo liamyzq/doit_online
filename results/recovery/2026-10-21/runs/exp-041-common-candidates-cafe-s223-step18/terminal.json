@@ -1,0 +1,14 @@
+{
+  "experiment_id": "exp-041-common-candidates-cafe-s223-step18",
+  "commit": "d6728dea0b22cecd414bd80ba3f226a62ab5953e",
+  "config": "/home/mlw0719/doit_correction/configs/exp-041-common-candidates-cafe-s223-step18.json",
+  "gpu": 1,
+  "pid": 1215525,
+  "path": "/home/mlw0719/doit_correction_storage/runs/exp-041-common-candidates-cafe-s223-step18",
+  "log_path": "/home/mlw0719/doit_correction_storage/artifacts/exp-041-common-candidates-cafe-s223-step18.log",
+  "status": "completed",
+  "timestamp": "2026-10-03T18:22:52.084872+00:00",
+  "started_at": "2026-10-03T18:22:01.777528+00:00",
+  "returncode": 0,
+  "finished_at": "2026-10-03T18:22:52.084899+00:00"
+}

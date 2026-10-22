@@ -2,6 +2,25 @@
 
 ## Current decision
 
+The user opened a new uncertainty/SMC/FORS study on 2026-10-21, with toy,
+image, and RL experiments authorized. The active branch is now
+`codex/doit-uncertainty-smc`; its protocol is
+[experiments/uncertainty_smc/PLAN.md](experiments/uncertainty_smc/PLAN.md).
+No new improvement is established yet. The first step separates posterior
+approximation, local sampling, and finite-particle correction on analytic
+models before selecting a bounded real-model experiment. The older studies
+below retain their conclusions at their tested budgets.
+
+Orion connectivity has recovered. Read-only inspection found no active project
+queue or run, and the old checkout remains clean at `d6728de`. Exp-039 actually
+failed with a nonfinite Gaussian moment ratio after 31,744 saved rows; its total
+failed-run costs were not persisted. Five exp-041 probes completed, including
+lighthouse seed211 step11; three other lighthouse probes were not observed
+submitted. The recovered records and ledger corrections are under
+`results/recovery/2026-10-21`. The new study uses a separate remote checkout.
+
+### Previous exploration
+
 The user resumed work with a separate Nebula exploration while Orion remains
 unreachable. Branch `codex/doit-guidance-reliability` tests fixed-vector
 sensitivity using [docs/guidance-reliability.md](docs/guidance-reliability.md);
@@ -99,15 +118,16 @@ their expected four rows, 120 reward queries and 961/121 score-forward counts
 for steps 11/18. Their small outputs are present locally. The remaining critic
 and lighthouse results have not yet been retrieved.
 
-As of 2026-10-03 18:30 UTC, bounded SSH reads time out, including a fresh
-connection with multiplexing disabled. This prevents a new execution-status
-observation; it is not a recorded experiment failure. Do not mark the remaining
-runs completed or start duplicates. Exp-043 is committed, but its automatic
-follow-up launch was revoked during the earlier pause. Its launch has not been
-observed. The user has now resumed research; recover and assess exp-039/041
-before deciding the next submission.
-Keep the remote execution checkout at `d6728de` while that queue is
-active, even if documentation and retrieved results advance locally or online.
+The connection outage began on 2026-10-03. Recovery on 2026-10-21 established
+that the controller and jobs had exited. Exp-039 failed during HalfCheetah
+evaluation with a nonfinite Gaussian moment ratio; Hopper completed all 16,384
+rows and HalfCheetah saved 15,360 rows. Partial counts cannot establish the
+whole failed-run cost. Lighthouse seed211 step11 completed with 120 reward
+queries and 961 score forwards; the three other lighthouse jobs were not
+observed submitted. The old terminal files for these two jobs are stale, so the
+local ledger has explicit reconciliation events based on run records and
+absent processes. Exp-043 remains unlaunched. The old execution checkout is
+preserved while the new study proceeds separately.
 
 ## Initial study outcome
 

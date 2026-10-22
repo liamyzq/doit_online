@@ -1,0 +1,13 @@
+{
+  "id": "exp-041-common-candidates-cafe-s211-step11",
+  "mode": "kernel_probe",
+  "states": [
+    "/home/mlw0719/doit_correction_storage/runs/exp-040-kernel-discovery-future8-paired-free-s211/cafe/211/states/step11.pt"
+  ],
+  "repeats": 2,
+  "samples": 8,
+  "tau": 0.6,
+  "gamma": 4.0,
+  "execution_kl_limit": 8192,
+  "evaluation_branches": 2
+}

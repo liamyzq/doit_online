@@ -11,3 +11,4 @@ artifacts/
 !results/final/**/*.png
 !results/audit/quality/*.png
 !results/reliability/quality/*.png
+results/recovery/**/fixed.csv

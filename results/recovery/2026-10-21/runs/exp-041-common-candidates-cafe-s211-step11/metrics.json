@@ -1,0 +1,10 @@
+{
+  "states": 1,
+  "rows": 4,
+  "reward_queries": 120,
+  "score_forwards": 961,
+  "reward_seconds": 28.01475636009127,
+  "vjp_seconds": 0.43326714634895325,
+  "peak_allocated_mib": 6243.42724609375,
+  "peak_reserved_mib": 7344.0
+}

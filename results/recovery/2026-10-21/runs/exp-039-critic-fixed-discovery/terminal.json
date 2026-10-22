@@ -1,0 +1,11 @@
+{
+  "experiment_id": "exp-039-critic-fixed-discovery",
+  "commit": "d6728dea0b22cecd414bd80ba3f226a62ab5953e",
+  "config": "/home/mlw0719/doit_correction/configs/exp-039-critic-fixed-discovery.json",
+  "gpu": 1,
+  "pid": 1206110,
+  "path": "/home/mlw0719/doit_correction_storage/runs/exp-039-critic-fixed-discovery",
+  "log_path": "/home/mlw0719/doit_correction_storage/artifacts/exp-039-critic-fixed-discovery.log",
+  "status": "submitted",
+  "timestamp": "2026-10-03T18:16:59.639659+00:00"
+}

@@ -1,0 +1,6 @@
+Loading pipeline components...:   0%|          | 0/6 [00:00<?, ?it/s]Loading pipeline components...:  17%|█▋        | 1/6 [00:00<00:00,  6.39it/s]Loading pipeline components...:  50%|█████     | 3/6 [00:00<00:00,  5.51it/s]Loading pipeline components...:  67%|██████▋   | 4/6 [00:01<00:01,  1.94it/s]Loading pipeline components...: 100%|██████████| 6/6 [00:01<00:00,  3.40it/s]
+{"prompt": "cafe", "seed": 211, "index": 11, "repeat": 0, "paired_future": true, "categorical_minus_uniform_reward": 0.01702915567465446, "reward_queries": 30}
+{"prompt": "cafe", "seed": 211, "index": 11, "repeat": 0, "paired_future": false, "categorical_minus_uniform_reward": 0.0062988546362845454, "reward_queries": 30}
+{"prompt": "cafe", "seed": 211, "index": 11, "repeat": 1, "paired_future": true, "categorical_minus_uniform_reward": -0.014892923761822274, "reward_queries": 30}
+{"prompt": "cafe", "seed": 211, "index": 11, "repeat": 1, "paired_future": false, "categorical_minus_uniform_reward": -0.016297328204252004, "reward_queries": 30}
+{"states": 1, "rows": 4, "reward_queries": 120, "score_forwards": 961, "reward_seconds": 28.01475636009127, "vjp_seconds": 0.43326714634895325, "peak_allocated_mib": 6243.42724609375, "peak_reserved_mib": 7344.0}

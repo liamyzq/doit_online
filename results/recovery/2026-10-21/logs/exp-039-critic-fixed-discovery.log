@@ -1,0 +1,56 @@
+/home/mlw0719/doob_transform/test/Doob_training_free_adaptation/diffusion_SDE/schedule.py:5: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  t = torch.tensor(t, device=device)
+{"task": "hopper-medium-v2", "state_row": 16, "path_seed": 41051, "rows": 1024}
+{"task": "hopper-medium-v2", "state_row": 16, "path_seed": 41057, "rows": 2048}
+{"task": "hopper-medium-v2", "state_row": 17, "path_seed": 41051, "rows": 3072}
+{"task": "hopper-medium-v2", "state_row": 17, "path_seed": 41057, "rows": 4096}
+{"task": "hopper-medium-v2", "state_row": 18, "path_seed": 41051, "rows": 5120}
+{"task": "hopper-medium-v2", "state_row": 18, "path_seed": 41057, "rows": 6144}
+{"task": "hopper-medium-v2", "state_row": 19, "path_seed": 41051, "rows": 7168}
+{"task": "hopper-medium-v2", "state_row": 19, "path_seed": 41057, "rows": 8192}
+{"task": "hopper-medium-v2", "state_row": 20, "path_seed": 41051, "rows": 9216}
+{"task": "hopper-medium-v2", "state_row": 20, "path_seed": 41057, "rows": 10240}
+{"task": "hopper-medium-v2", "state_row": 21, "path_seed": 41051, "rows": 11264}
+{"task": "hopper-medium-v2", "state_row": 21, "path_seed": 41057, "rows": 12288}
+{"task": "hopper-medium-v2", "state_row": 22, "path_seed": 41051, "rows": 13312}
+{"task": "hopper-medium-v2", "state_row": 22, "path_seed": 41057, "rows": 14336}
+{"task": "hopper-medium-v2", "state_row": 23, "path_seed": 41051, "rows": 15360}
+{"task": "hopper-medium-v2", "state_row": 23, "path_seed": 41057, "rows": 16384}
+/home/mlw0719/doob_transform/test/Doob_training_free_adaptation/diffusion_SDE/schedule.py:5: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  t = torch.tensor(t, device=device)
+{"task": "halfcheetah-medium-v2", "state_row": 16, "path_seed": 41051, "rows": 17664}
+{"task": "halfcheetah-medium-v2", "state_row": 16, "path_seed": 41057, "rows": 18944}
+{"task": "halfcheetah-medium-v2", "state_row": 17, "path_seed": 41051, "rows": 20224}
+{"task": "halfcheetah-medium-v2", "state_row": 17, "path_seed": 41057, "rows": 21504}
+{"task": "halfcheetah-medium-v2", "state_row": 18, "path_seed": 41051, "rows": 22784}
+{"task": "halfcheetah-medium-v2", "state_row": 18, "path_seed": 41057, "rows": 24064}
+{"task": "halfcheetah-medium-v2", "state_row": 19, "path_seed": 41051, "rows": 25344}
+{"task": "halfcheetah-medium-v2", "state_row": 19, "path_seed": 41057, "rows": 26624}
+{"task": "halfcheetah-medium-v2", "state_row": 20, "path_seed": 41051, "rows": 27904}
+{"task": "halfcheetah-medium-v2", "state_row": 20, "path_seed": 41057, "rows": 29184}
+{"task": "halfcheetah-medium-v2", "state_row": 21, "path_seed": 41051, "rows": 30464}
+{"task": "halfcheetah-medium-v2", "state_row": 21, "path_seed": 41057, "rows": 31744}
+Traceback (most recent call last):
+  File "/home/mlw0719/doit_correction/doit_correction/run.py", line 71, in main
+    metrics = evaluate_fixed(config, output)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mlw0719/doit_correction/doit_correction/critic.py", line 358, in evaluate_fixed
+    estimate = estimator.from_samples(m, rho, eps, q)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mlw0719/doit_correction/doit_correction/estimators.py", line 288, in from_samples
+    raise FloatingPointError("Nonfinite Gaussian moment ratio")
+FloatingPointError: Nonfinite Gaussian moment ratio
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/mlw0719/doit_correction/doit_correction/run.py", line 119, in <module>
+    main()
+  File "/home/mlw0719/doit_correction/doit_correction/run.py", line 71, in main
+    metrics = evaluate_fixed(config, output)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mlw0719/doit_correction/doit_correction/critic.py", line 358, in evaluate_fixed
+    estimate = estimator.from_samples(m, rho, eps, q)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mlw0719/doit_correction/doit_correction/estimators.py", line 288, in from_samples
+    raise FloatingPointError("Nonfinite Gaussian moment ratio")
+FloatingPointError: Nonfinite Gaussian moment ratio

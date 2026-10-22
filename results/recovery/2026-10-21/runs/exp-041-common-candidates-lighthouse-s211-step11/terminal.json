@@ -1,0 +1,11 @@
+{
+  "experiment_id": "exp-041-common-candidates-lighthouse-s211-step11",
+  "commit": "d6728dea0b22cecd414bd80ba3f226a62ab5953e",
+  "config": "/home/mlw0719/doit_correction/configs/exp-041-common-candidates-lighthouse-s211-step11.json",
+  "gpu": 1,
+  "pid": 1216066,
+  "path": "/home/mlw0719/doit_correction_storage/runs/exp-041-common-candidates-lighthouse-s211-step11",
+  "log_path": "/home/mlw0719/doit_correction_storage/artifacts/exp-041-common-candidates-lighthouse-s211-step11.log",
+  "status": "submitted",
+  "timestamp": "2026-10-03T18:22:52.146822+00:00"
+}

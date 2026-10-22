@@ -1,0 +1,202 @@
+{
+  "recovered_at": "2026-10-22T04:41:25.779429+00:00",
+  "machine": "orion",
+  "source_storage": "/home/mlw0719/doit_correction_storage",
+  "execution_commit": "d6728dea0b22cecd414bd80ba3f226a62ab5953e",
+  "remote_checkout_branch": "codex/doit-correction",
+  "remote_checkout_clean": true,
+  "process_evidence": {
+    "source": "Bounded SSH inventory in this recovery session before retrieval",
+    "project_queue_or_experiment_processes": [],
+    "absent_pids": [
+      1206101,
+      1206110,
+      1216066
+    ],
+    "controller_pid": 1206101,
+    "controller_log": "logs/critic-common-candidates-controller.log",
+    "controller_log_bytes": 0
+  },
+  "runs": [
+    {
+      "experiment_id": "exp-039-critic-fixed-discovery",
+      "run_status": "failed",
+      "terminal_status": "submitted",
+      "run_record": "runs/exp-039-critic-fixed-discovery/run.json",
+      "terminal_record": "runs/exp-039-critic-fixed-discovery/terminal.json",
+      "log": "logs/exp-039-critic-fixed-discovery.log",
+      "run_finished_at_derived": "2026-10-03T18:26:27.882332+00:00",
+      "time_source": "run.json started_at plus elapsed_seconds",
+      "remote_last_event_status": "running",
+      "error": "FloatingPointError('Nonfinite Gaussian moment ratio')",
+      "persisted_rows": 31744,
+      "persisted_rows_by_task": {
+        "hopper-medium-v2": 16384,
+        "halfcheetah-medium-v2": 15360
+      },
+      "completed_task_costs": [
+        {
+          "task": "hopper-medium-v2",
+          "reward_queries": 1130640,
+          "reward_seconds": 3.259344242978841,
+          "score_forwards": 240,
+          "vjp_seconds": 0.0
+        }
+      ],
+      "total_reward_queries": null,
+      "total_score_forwards": null,
+      "cost_limitation": "counts.json records only the completed Hopper task; total failed-run cost is unknown. Persisted CSV rows do not cover all work before the crash."
+    },
+    {
+      "experiment_id": "exp-041-common-candidates-cafe-s211-step11",
+      "run_status": "completed",
+      "terminal_status": "completed",
+      "run_record": "runs/exp-041-common-candidates-cafe-s211-step11/run.json",
+      "terminal_record": "runs/exp-041-common-candidates-cafe-s211-step11/terminal.json",
+      "log": "logs/exp-041-common-candidates-cafe-s211-step11.log",
+      "run_finished_at_derived": "2026-10-03T18:19:25.373196+00:00",
+      "time_source": "run.json started_at plus elapsed_seconds",
+      "remote_last_event_status": "completed",
+      "metrics": {
+        "states": 1,
+        "rows": 4,
+        "reward_queries": 120,
+        "score_forwards": 961,
+        "reward_seconds": 28.01475636009127,
+        "vjp_seconds": 0.43326714634895325,
+        "peak_allocated_mib": 6243.42724609375,
+        "peak_reserved_mib": 7344.0
+      },
+      "selection_queries": 32,
+      "evaluation_queries": 88,
+      "per_probe_score_forward_sum": 960
+    },
+    {
+      "experiment_id": "exp-041-common-candidates-cafe-s211-step18",
+      "run_status": "completed",
+      "terminal_status": "completed",
+      "run_record": "runs/exp-041-common-candidates-cafe-s211-step18/run.json",
+      "terminal_record": "runs/exp-041-common-candidates-cafe-s211-step18/terminal.json",
+      "log": "logs/exp-041-common-candidates-cafe-s211-step18.log",
+      "run_finished_at_derived": "2026-10-03T18:20:13.037074+00:00",
+      "time_source": "run.json started_at plus elapsed_seconds",
+      "remote_last_event_status": "completed",
+      "metrics": {
+        "states": 1,
+        "rows": 4,
+        "reward_queries": 120,
+        "score_forwards": 121,
+        "reward_seconds": 26.894336480647326,
+        "vjp_seconds": 0.6075687208212912,
+        "peak_allocated_mib": 6245.55224609375,
+        "peak_reserved_mib": 7346.0
+      },
+      "selection_queries": 32,
+      "evaluation_queries": 88,
+      "per_probe_score_forward_sum": 120
+    },
+    {
+      "experiment_id": "exp-041-common-candidates-cafe-s223-step11",
+      "run_status": "completed",
+      "terminal_status": "completed",
+      "run_record": "runs/exp-041-common-candidates-cafe-s223-step11/run.json",
+      "terminal_record": "runs/exp-041-common-candidates-cafe-s223-step11/terminal.json",
+      "log": "logs/exp-041-common-candidates-cafe-s223-step11.log",
+      "run_finished_at_derived": "2026-10-03T18:21:54.758158+00:00",
+      "time_source": "run.json started_at plus elapsed_seconds",
+      "remote_last_event_status": "completed",
+      "metrics": {
+        "states": 1,
+        "rows": 4,
+        "reward_queries": 120,
+        "score_forwards": 961,
+        "reward_seconds": 27.503326944541186,
+        "vjp_seconds": 0.5077230781316757,
+        "peak_allocated_mib": 6245.55224609375,
+        "peak_reserved_mib": 7346.0
+      },
+      "selection_queries": 32,
+      "evaluation_queries": 88,
+      "per_probe_score_forward_sum": 960
+    },
+    {
+      "experiment_id": "exp-041-common-candidates-cafe-s223-step18",
+      "run_status": "completed",
+      "terminal_status": "completed",
+      "run_record": "runs/exp-041-common-candidates-cafe-s223-step18/run.json",
+      "terminal_record": "runs/exp-041-common-candidates-cafe-s223-step18/terminal.json",
+      "log": "logs/exp-041-common-candidates-cafe-s223-step18.log",
+      "run_finished_at_derived": "2026-10-03T18:22:45.363064+00:00",
+      "time_source": "run.json started_at plus elapsed_seconds",
+      "remote_last_event_status": "completed",
+      "metrics": {
+        "states": 1,
+        "rows": 4,
+        "reward_queries": 120,
+        "score_forwards": 121,
+        "reward_seconds": 26.357937067747116,
+        "vjp_seconds": 0.5525978025980294,
+        "peak_allocated_mib": 6243.42724609375,
+        "peak_reserved_mib": 7344.0
+      },
+      "selection_queries": 32,
+      "evaluation_queries": 88,
+      "per_probe_score_forward_sum": 120
+    },
+    {
+      "experiment_id": "exp-041-common-candidates-lighthouse-s211-step11",
+      "run_status": "completed",
+      "terminal_status": "submitted",
+      "run_record": "runs/exp-041-common-candidates-lighthouse-s211-step11/run.json",
+      "terminal_record": "runs/exp-041-common-candidates-lighthouse-s211-step11/terminal.json",
+      "log": "logs/exp-041-common-candidates-lighthouse-s211-step11.log",
+      "run_finished_at_derived": "2026-10-03T18:24:23.725232+00:00",
+      "time_source": "run.json started_at plus elapsed_seconds",
+      "remote_last_event_status": "running",
+      "metrics": {
+        "states": 1,
+        "rows": 4,
+        "reward_queries": 120,
+        "score_forwards": 961,
+        "reward_seconds": 27.260151556227356,
+        "vjp_seconds": 0.6027481253258884,
+        "peak_allocated_mib": 6247.55224609375,
+        "peak_reserved_mib": 7348.0
+      },
+      "selection_queries": 32,
+      "evaluation_queries": 88,
+      "per_probe_score_forward_sum": 960
+    }
+  ],
+  "not_observed_submitted": [
+    {
+      "experiment_id": "exp-041-common-candidates-lighthouse-s211-step18",
+      "config": "configs/exp-041-common-candidates-lighthouse-s211-step18.json",
+      "observation": "No run output directory and no remote job-ledger event were found; submission was not observed. This is not a cancellation record."
+    },
+    {
+      "experiment_id": "exp-041-common-candidates-lighthouse-s223-step11",
+      "config": "configs/exp-041-common-candidates-lighthouse-s223-step11.json",
+      "observation": "No run output directory and no remote job-ledger event were found; submission was not observed. This is not a cancellation record."
+    },
+    {
+      "experiment_id": "exp-041-common-candidates-lighthouse-s223-step18",
+      "config": "configs/exp-041-common-candidates-lighthouse-s223-step18.json",
+      "observation": "No run output directory and no remote job-ledger event were found; submission was not observed. This is not a cancellation record."
+    }
+  ],
+  "appended_result_ids": [
+    "exp-039-critic-fixed-discovery",
+    "exp-041-common-candidates-lighthouse-s211-step11"
+  ],
+  "appended_reconciliation_ids": [
+    "exp-039-critic-fixed-discovery",
+    "exp-041-common-candidates-lighthouse-s211-step11"
+  ],
+  "existing_results_preserved": [
+    "exp-041-common-candidates-cafe-s211-step11",
+    "exp-041-common-candidates-cafe-s211-step18",
+    "exp-041-common-candidates-cafe-s223-step11",
+    "exp-041-common-candidates-cafe-s223-step18"
+  ]
+}
