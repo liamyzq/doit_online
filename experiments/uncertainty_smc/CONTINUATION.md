@@ -86,3 +86,28 @@ Sources: [FK steering, section 3.3](https://arxiv.org/html/2501.06848v5#S3.SS3),
 [TDS](https://arxiv.org/abs/2306.17775),
 [TMPD](https://arxiv.org/abs/2310.06721). The conditional residual construction
 is a candidate implementation whose novelty and performance are unestablished.
+
+## Exp-059 result and next discrimination
+
+All 76 conditions completed at `6f96363`, with 256 populations per condition.
+The new moment checks passed; total costs are 2,604,032 transition samples and
+838,912 reward evaluations, including 149,504/49,920 for calibration.
+No Gaussian or empirical UC setting meets the endpoint improvement criterion.
+For N8, empirical versus mean-only CDF MSE is 0.01331 versus 0.00963 on the
+Gaussian target and 0.04768 versus 0.04726 on the mixture. N16 does not reverse
+this conclusion. Gaussian reward closure fails particularly badly on the
+Gaussian target: N16 error 0.04666 versus mean-only 0.00519.
+
+There is a distinct value-prediction signal. At checkpoint 5, empirical versus
+mean-only centered log-value MSE is 0.11605 versus 3.83134 (Gaussian) and
+0.002835 versus 0.039963 (mixture). Direct value regression is stronger at the
+early Gaussian checkpoint; empirical transport is stronger at later checkpoints.
+Even the exact-value sparse-N8 diagnostic loses to point-N8 in these finite
+populations, so accurate values alone do not solve the endpoint problem.
+This is evidence for investigating the estimator, not for a sampling success.
+
+The next experiment measures held-out conditional values on real critics.
+It must distinguish transfer of the value-prediction improvement from error in
+the continuation reference. Endpoint expansion is deferred until that result.
+Full per-seed comparisons and all stage costs are in
+`results/uncertainty_smc/exp-059-conditional-reward-toy/analysis.json`.

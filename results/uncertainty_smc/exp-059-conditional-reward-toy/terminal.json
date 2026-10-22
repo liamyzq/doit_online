@@ -1,0 +1,15 @@
+{
+  "experiment_id": "exp-059-conditional-reward-toy",
+  "commit": "6f96363ef2e38c8fdc4a017be527c3ac68c0b76c",
+  "config": "/home/mlw0719/doit_uncertainty/configs/uncertainty_smc/exp-059-conditional-reward-toy.json",
+  "machine": "orion",
+  "gpu": 3,
+  "pid": 1566722,
+  "path": "/home/mlw0719/doit_uncertainty_storage/runs/exp-059-conditional-reward-toy",
+  "log_path": "/home/mlw0719/doit_uncertainty_storage/artifacts/exp-059-conditional-reward-toy.log",
+  "status": "completed",
+  "timestamp": "2026-10-22T16:37:22.648318+00:00",
+  "started_at": "2026-10-22T16:37:02.647505+00:00",
+  "returncode": 0,
+  "finished_at": "2026-10-22T16:37:22.648350+00:00"
+}

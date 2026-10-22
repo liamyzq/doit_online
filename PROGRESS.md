@@ -9,8 +9,14 @@ learned-value variants separate uncertainty from mean-bias correction and
 existing value regression. Exp-059 first tests this mechanism on the analytic
 targets with every calibration cost recorded. See
 [the continuation protocol](experiments/uncertainty_smc/CONTINUATION.md).
+Exp-059 completed all 76 conditions at `6f96363`. Empirical reward UC improves
+held-out value prediction but fails to improve sparse-SMC endpoints over the
+mean-only control. Gaussian reward closure is substantially worse on the
+single-mode target. Even exact values do not ensure better finite-population
+endpoints with this schedule. The next bounded experiment tests conditional
+value prediction on real critics before expanding particle experiments.
 The completed exp-058 result below remains the accepted practical baseline;
-the new development goal is active and has no new positive result yet.
+the new development goal is active and has no new sampling improvement yet.
 
 The user opened a new uncertainty/SMC/FORS study on 2026-10-21, with toy,
 image, and RL experiments authorized. The active branch is now

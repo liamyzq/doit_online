@@ -1,0 +1,184 @@
+{
+  "id": "exp-059-conditional-reward-toy",
+  "mode": "reward_calibration_toy",
+  "purpose": "Test conditional reward-space uncertainty with mean-only and known learned-value controls under sparse SMC. Calibrate independently, preserve within-anchor variance, and compare complete online and calibration costs.",
+  "problems": [
+    {
+      "name": "gaussian",
+      "means": [
+        0.0
+      ],
+      "probabilities": [
+        1.0
+      ],
+      "clean_variance": 1.0,
+      "noise_variances": [
+        0.0,
+        0.08,
+        0.25,
+        0.6,
+        1.2,
+        2.4,
+        5.0,
+        10.0,
+        20.0
+      ],
+      "reward_target": 1.8,
+      "reward_variance": 0.7,
+      "beta": 2.0
+    },
+    {
+      "name": "mixture",
+      "means": [
+        -2.0,
+        2.0
+      ],
+      "probabilities": [
+        0.8,
+        0.2
+      ],
+      "clean_variance": 0.3,
+      "noise_variances": [
+        0.0,
+        0.08,
+        0.25,
+        0.6,
+        1.2,
+        2.4,
+        5.0,
+        10.0,
+        20.0
+      ],
+      "reward_target": 1.5,
+      "reward_variance": 2.0,
+      "beta": 1.0
+    }
+  ],
+  "checkpoints": [
+    5,
+    3,
+    1
+  ],
+  "calibration_seed": 59001,
+  "calibration_anchors": 128,
+  "calibration_futures": 64,
+  "diagnostic_seed": 59003,
+  "diagnostic_anchors": 256,
+  "seeds": [
+    60011,
+    60017
+  ],
+  "repeats": 256,
+  "methods": [
+    {
+      "name": "terminal-n8",
+      "particles": 8,
+      "value": "flat"
+    },
+    {
+      "name": "terminal-n16",
+      "particles": 16,
+      "value": "flat"
+    },
+    {
+      "name": "terminal-n32",
+      "particles": 32,
+      "value": "flat"
+    },
+    {
+      "name": "terminal-n64",
+      "particles": 64,
+      "value": "flat"
+    },
+    {
+      "name": "point-sparse-n8",
+      "particles": 8,
+      "value": "point",
+      "neighbours": 8
+    },
+    {
+      "name": "mean-sparse-n8",
+      "particles": 8,
+      "value": "mean",
+      "neighbours": 8
+    },
+    {
+      "name": "gaussian-sparse-n8",
+      "particles": 8,
+      "value": "gaussian",
+      "neighbours": 8
+    },
+    {
+      "name": "empirical-sparse-n8",
+      "particles": 8,
+      "value": "empirical",
+      "neighbours": 8
+    },
+    {
+      "name": "direct-sparse-n8",
+      "particles": 8,
+      "value": "direct",
+      "neighbours": 8
+    },
+    {
+      "name": "point-sparse-n16",
+      "particles": 16,
+      "value": "point",
+      "neighbours": 8
+    },
+    {
+      "name": "mean-sparse-n16",
+      "particles": 16,
+      "value": "mean",
+      "neighbours": 8
+    },
+    {
+      "name": "gaussian-sparse-n16",
+      "particles": 16,
+      "value": "gaussian",
+      "neighbours": 8
+    },
+    {
+      "name": "empirical-sparse-n16",
+      "particles": 16,
+      "value": "empirical",
+      "neighbours": 8
+    },
+    {
+      "name": "direct-sparse-n16",
+      "particles": 16,
+      "value": "direct",
+      "neighbours": 8
+    },
+    {
+      "name": "point-half-sparse-n8",
+      "particles": 8,
+      "value": "point",
+      "strength": 0.5
+    },
+    {
+      "name": "empirical-half-sparse-n8",
+      "particles": 8,
+      "value": "empirical",
+      "strength": 0.5,
+      "neighbours": 8
+    },
+    {
+      "name": "empirical-k16-sparse-n8",
+      "particles": 8,
+      "value": "empirical",
+      "neighbours": 16
+    },
+    {
+      "name": "future2-sparse-n8",
+      "particles": 8,
+      "value": "future",
+      "branches": 2
+    },
+    {
+      "name": "exact-value-sparse-n8",
+      "particles": 8,
+      "value": "mixture"
+    }
+  ]
+}

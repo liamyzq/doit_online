@@ -1,0 +1,44 @@
+{
+  "conditions": 76,
+  "checks": {
+    "mean": 0.0,
+    "mean_variance": 0.0,
+    "gaussian": 0.0,
+    "gaussian_variance": 0.0,
+    "empirical": 0.0,
+    "empirical_variance": 0.0,
+    "direct": 0.0,
+    "direct_variance": 0.0,
+    "reward_translation": 1.7763568394002505e-15,
+    "deterministic_future": 0.0
+  },
+  "total_costs": {
+    "transition_samples": 2604032,
+    "reward_evaluations": 838912,
+    "value_evaluations": 554496,
+    "analytic_component_integrals": 39168
+  },
+  "calibration_costs": [
+    {
+      "problem": "gaussian",
+      "costs": {
+        "transition_samples": 74752,
+        "reward_evaluations": 24960
+      },
+      "anchors_per_checkpoint": 128,
+      "futures_per_anchor": 64
+    },
+    {
+      "problem": "mixture",
+      "costs": {
+        "transition_samples": 74752,
+        "reward_evaluations": 24960
+      },
+      "anchors_per_checkpoint": 128,
+      "futures_per_anchor": 64
+    }
+  ],
+  "repeats_per_condition": 256,
+  "peak_allocated_mib": 0.0,
+  "peak_reserved_mib": 0.0
+}

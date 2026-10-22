@@ -1,0 +1,240 @@
+[
+  {
+    "problem": "gaussian",
+    "values": [
+      {
+        "index": 5,
+        "value": "point",
+        "centered_log_value_mse": 3.5083333854765697,
+        "normalized_value_kl": 0.6491596702120463
+      },
+      {
+        "index": 5,
+        "value": "mean",
+        "centered_log_value_mse": 3.8313438429486286,
+        "normalized_value_kl": 0.6548918527613448
+      },
+      {
+        "index": 5,
+        "value": "gaussian",
+        "centered_log_value_mse": 13.867239973388049,
+        "normalized_value_kl": 6.859530331820938
+      },
+      {
+        "index": 5,
+        "value": "empirical",
+        "centered_log_value_mse": 0.1160472638048466,
+        "normalized_value_kl": 0.01385874514714933
+      },
+      {
+        "index": 5,
+        "value": "direct",
+        "centered_log_value_mse": 0.011978532141606504,
+        "normalized_value_kl": 0.002562852600314507
+      },
+      {
+        "index": 5,
+        "value": "future",
+        "centered_log_value_mse": 8.80333108347003,
+        "normalized_value_kl": 1.2499688372301185
+      },
+      {
+        "index": 3,
+        "value": "point",
+        "centered_log_value_mse": 4.4055660579337745,
+        "normalized_value_kl": 0.28885354934656365
+      },
+      {
+        "index": 3,
+        "value": "mean",
+        "centered_log_value_mse": 4.523992584851485,
+        "normalized_value_kl": 0.2818662959682664
+      },
+      {
+        "index": 3,
+        "value": "gaussian",
+        "centered_log_value_mse": 3.4861247476875663,
+        "normalized_value_kl": 0.7608531145393564
+      },
+      {
+        "index": 3,
+        "value": "empirical",
+        "centered_log_value_mse": 0.1855463181245959,
+        "normalized_value_kl": 0.0022674229515118323
+      },
+      {
+        "index": 3,
+        "value": "direct",
+        "centered_log_value_mse": 0.03528640081277401,
+        "normalized_value_kl": 0.002239754819525477
+      },
+      {
+        "index": 3,
+        "value": "future",
+        "centered_log_value_mse": 7.528116733948344,
+        "normalized_value_kl": 0.5444808380334204
+      },
+      {
+        "index": 1,
+        "value": "point",
+        "centered_log_value_mse": 0.9360904988890222,
+        "normalized_value_kl": 0.01449691729433299
+      },
+      {
+        "index": 1,
+        "value": "mean",
+        "centered_log_value_mse": 0.931534150752672,
+        "normalized_value_kl": 0.01615155431020241
+      },
+      {
+        "index": 1,
+        "value": "gaussian",
+        "centered_log_value_mse": 0.029407192185363355,
+        "normalized_value_kl": 0.0005181480710383705
+      },
+      {
+        "index": 1,
+        "value": "empirical",
+        "centered_log_value_mse": 0.039886876455429945,
+        "normalized_value_kl": 0.0006023901283593908
+      },
+      {
+        "index": 1,
+        "value": "direct",
+        "centered_log_value_mse": 0.7267764972868659,
+        "normalized_value_kl": 0.005680713445954465
+      },
+      {
+        "index": 1,
+        "value": "future",
+        "centered_log_value_mse": 1.7572160925112628,
+        "normalized_value_kl": 0.08454584247290307
+      }
+    ],
+    "costs": {
+      "transition_samples": 6656,
+      "reward_evaluations": 5376,
+      "value_evaluations": 6912,
+      "analytic_component_integrals": 768
+    }
+  },
+  {
+    "problem": "mixture",
+    "values": [
+      {
+        "index": 5,
+        "value": "point",
+        "centered_log_value_mse": 0.050733401018446596,
+        "normalized_value_kl": 0.0360112603060086
+      },
+      {
+        "index": 5,
+        "value": "mean",
+        "centered_log_value_mse": 0.03996336840771274,
+        "normalized_value_kl": 0.041098262860121984
+      },
+      {
+        "index": 5,
+        "value": "gaussian",
+        "centered_log_value_mse": 0.009316112394408833,
+        "normalized_value_kl": 0.007383786729774111
+      },
+      {
+        "index": 5,
+        "value": "empirical",
+        "centered_log_value_mse": 0.0028351828513445846,
+        "normalized_value_kl": 0.0009842316538232014
+      },
+      {
+        "index": 5,
+        "value": "direct",
+        "centered_log_value_mse": 0.00314955831941057,
+        "normalized_value_kl": 0.0009976681687824318
+      },
+      {
+        "index": 5,
+        "value": "future",
+        "centered_log_value_mse": 0.6380931965226714,
+        "normalized_value_kl": 0.228870716562345
+      },
+      {
+        "index": 3,
+        "value": "point",
+        "centered_log_value_mse": 0.015130275333532242,
+        "normalized_value_kl": 0.007468227605823817
+      },
+      {
+        "index": 3,
+        "value": "mean",
+        "centered_log_value_mse": 0.013890523729173614,
+        "normalized_value_kl": 0.006822273809623882
+      },
+      {
+        "index": 3,
+        "value": "gaussian",
+        "centered_log_value_mse": 0.0011940750150252414,
+        "normalized_value_kl": 0.000501359037926218
+      },
+      {
+        "index": 3,
+        "value": "empirical",
+        "centered_log_value_mse": 0.0010426118205528613,
+        "normalized_value_kl": 0.0002561266508905076
+      },
+      {
+        "index": 3,
+        "value": "direct",
+        "centered_log_value_mse": 0.005240374213951491,
+        "normalized_value_kl": 0.0029345219063738404
+      },
+      {
+        "index": 3,
+        "value": "future",
+        "centered_log_value_mse": 0.2468879554339607,
+        "normalized_value_kl": 0.051401657068188805
+      },
+      {
+        "index": 1,
+        "value": "point",
+        "centered_log_value_mse": 0.0019183916242552844,
+        "normalized_value_kl": 0.0005525328738122373
+      },
+      {
+        "index": 1,
+        "value": "mean",
+        "centered_log_value_mse": 0.00211921692388137,
+        "normalized_value_kl": 0.0006209530412622649
+      },
+      {
+        "index": 1,
+        "value": "gaussian",
+        "centered_log_value_mse": 0.0002073885490608265,
+        "normalized_value_kl": 3.33190204891937e-05
+      },
+      {
+        "index": 1,
+        "value": "empirical",
+        "centered_log_value_mse": 0.0001929971546149904,
+        "normalized_value_kl": 3.361558592223575e-05
+      },
+      {
+        "index": 1,
+        "value": "direct",
+        "centered_log_value_mse": 0.016674937774406196,
+        "normalized_value_kl": 0.00286670217636669
+      },
+      {
+        "index": 1,
+        "value": "future",
+        "centered_log_value_mse": 0.08737413005861458,
+        "normalized_value_kl": 0.01265204288709337
+      }
+    ],
+    "costs": {
+      "transition_samples": 6656,
+      "reward_evaluations": 5376,
+      "value_evaluations": 6912,
+      "analytic_component_integrals": 1536
+    }
+  }
+]

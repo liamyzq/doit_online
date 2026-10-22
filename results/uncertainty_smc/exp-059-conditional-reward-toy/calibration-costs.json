@@ -1,0 +1,20 @@
+[
+  {
+    "problem": "gaussian",
+    "costs": {
+      "transition_samples": 74752,
+      "reward_evaluations": 24960
+    },
+    "anchors_per_checkpoint": 128,
+    "futures_per_anchor": 64
+  },
+  {
+    "problem": "mixture",
+    "costs": {
+      "transition_samples": 74752,
+      "reward_evaluations": 24960
+    },
+    "anchors_per_checkpoint": 128,
+    "futures_per_anchor": 64
+  }
+]

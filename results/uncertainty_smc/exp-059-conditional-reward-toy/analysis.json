@@ -1,0 +1,875 @@
+{
+  "decision": "No empirical or Gaussian UC setting meets the endpoint improvement criterion. Empirical UC improves conditional value prediction, motivating a bounded real-critic prediction experiment rather than an endpoint success claim.",
+  "comparisons": [
+    {
+      "problem": "gaussian",
+      "method": "terminal-n8",
+      "cdf_mse": 0.025150450661655513,
+      "per_seed_cdf_mse": {
+        "60011": 0.024863173817692222,
+        "60017": 0.025437727505618804
+      },
+      "online_costs_per_population": {
+        "transition_samples": 64.0,
+        "reward_evaluations": 8.0
+      },
+      "calibration_costs": {}
+    },
+    {
+      "problem": "gaussian",
+      "method": "terminal-n16",
+      "cdf_mse": 0.010831672127447997,
+      "per_seed_cdf_mse": {
+        "60011": 0.010799221690629942,
+        "60017": 0.010864122564266051
+      },
+      "online_costs_per_population": {
+        "transition_samples": 128.0,
+        "reward_evaluations": 16.0
+      },
+      "calibration_costs": {}
+    },
+    {
+      "problem": "gaussian",
+      "method": "terminal-n32",
+      "cdf_mse": 0.004460708267101165,
+      "per_seed_cdf_mse": {
+        "60011": 0.004553836283801775,
+        "60017": 0.004367580250400555
+      },
+      "online_costs_per_population": {
+        "transition_samples": 256.0,
+        "reward_evaluations": 32.0
+      },
+      "calibration_costs": {}
+    },
+    {
+      "problem": "gaussian",
+      "method": "terminal-n64",
+      "cdf_mse": 0.0020772999527439344,
+      "per_seed_cdf_mse": {
+        "60011": 0.0021296671399901853,
+        "60017": 0.0020249327654976836
+      },
+      "online_costs_per_population": {
+        "transition_samples": 512.0,
+        "reward_evaluations": 64.0
+      },
+      "calibration_costs": {}
+    },
+    {
+      "problem": "gaussian",
+      "method": "point-sparse-n8",
+      "cdf_mse": 0.010032500681345178,
+      "per_seed_cdf_mse": {
+        "60011": 0.010698310131466791,
+        "60017": 0.009366691231223565
+      },
+      "online_costs_per_population": {
+        "transition_samples": 64.0,
+        "reward_evaluations": 32.0,
+        "value_evaluations": 24.0
+      },
+      "calibration_costs": {}
+    },
+    {
+      "problem": "gaussian",
+      "method": "mean-sparse-n8",
+      "cdf_mse": 0.009634723519592586,
+      "per_seed_cdf_mse": {
+        "60011": 0.010547429763512844,
+        "60017": 0.008722017275672326
+      },
+      "online_costs_per_population": {
+        "transition_samples": 64.0,
+        "reward_evaluations": 32.0,
+        "value_evaluations": 24.0
+      },
+      "calibration_costs": {
+        "transition_samples": 74752,
+        "reward_evaluations": 24960
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "gaussian-sparse-n8",
+      "cdf_mse": 0.06025520071639885,
+      "per_seed_cdf_mse": {
+        "60011": 0.058702391692573075,
+        "60017": 0.061808009740224636
+      },
+      "online_costs_per_population": {
+        "transition_samples": 64.0,
+        "reward_evaluations": 32.0,
+        "value_evaluations": 24.0
+      },
+      "calibration_costs": {
+        "transition_samples": 74752,
+        "reward_evaluations": 24960
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "empirical-sparse-n8",
+      "cdf_mse": 0.013306608598915887,
+      "per_seed_cdf_mse": {
+        "60011": 0.01281056398803076,
+        "60017": 0.013802653209801011
+      },
+      "online_costs_per_population": {
+        "transition_samples": 64.0,
+        "reward_evaluations": 32.0,
+        "value_evaluations": 24.0
+      },
+      "calibration_costs": {
+        "transition_samples": 74752,
+        "reward_evaluations": 24960
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "direct-sparse-n8",
+      "cdf_mse": 0.01298774294308521,
+      "per_seed_cdf_mse": {
+        "60011": 0.012687058106589592,
+        "60017": 0.013288427779580827
+      },
+      "online_costs_per_population": {
+        "transition_samples": 64.0,
+        "reward_evaluations": 32.0,
+        "value_evaluations": 24.0
+      },
+      "calibration_costs": {
+        "transition_samples": 74752,
+        "reward_evaluations": 24960
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "point-sparse-n16",
+      "cdf_mse": 0.005273489538746047,
+      "per_seed_cdf_mse": {
+        "60011": 0.004926088146868758,
+        "60017": 0.005620890930623335
+      },
+      "online_costs_per_population": {
+        "transition_samples": 128.0,
+        "reward_evaluations": 64.0,
+        "value_evaluations": 48.0
+      },
+      "calibration_costs": {}
+    },
+    {
+      "problem": "gaussian",
+      "method": "mean-sparse-n16",
+      "cdf_mse": 0.005186738650021179,
+      "per_seed_cdf_mse": {
+        "60011": 0.0052325345411391964,
+        "60017": 0.005140942758903162
+      },
+      "online_costs_per_population": {
+        "transition_samples": 128.0,
+        "reward_evaluations": 64.0,
+        "value_evaluations": 48.0
+      },
+      "calibration_costs": {
+        "transition_samples": 74752,
+        "reward_evaluations": 24960
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "gaussian-sparse-n16",
+      "cdf_mse": 0.04665958674777903,
+      "per_seed_cdf_mse": {
+        "60011": 0.045484983024270065,
+        "60017": 0.04783419047128799
+      },
+      "online_costs_per_population": {
+        "transition_samples": 128.0,
+        "reward_evaluations": 64.0,
+        "value_evaluations": 48.0
+      },
+      "calibration_costs": {
+        "transition_samples": 74752,
+        "reward_evaluations": 24960
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "empirical-sparse-n16",
+      "cdf_mse": 0.005642628347208852,
+      "per_seed_cdf_mse": {
+        "60011": 0.005893003113337104,
+        "60017": 0.0053922535810806
+      },
+      "online_costs_per_population": {
+        "transition_samples": 128.0,
+        "reward_evaluations": 64.0,
+        "value_evaluations": 48.0
+      },
+      "calibration_costs": {
+        "transition_samples": 74752,
+        "reward_evaluations": 24960
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "direct-sparse-n16",
+      "cdf_mse": 0.0052263453011784505,
+      "per_seed_cdf_mse": {
+        "60011": 0.00541677190658754,
+        "60017": 0.005035918695769361
+      },
+      "online_costs_per_population": {
+        "transition_samples": 128.0,
+        "reward_evaluations": 64.0,
+        "value_evaluations": 48.0
+      },
+      "calibration_costs": {
+        "transition_samples": 74752,
+        "reward_evaluations": 24960
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "point-half-sparse-n8",
+      "cdf_mse": 0.013403563684547096,
+      "per_seed_cdf_mse": {
+        "60011": 0.013609567482693766,
+        "60017": 0.013197559886400428
+      },
+      "online_costs_per_population": {
+        "transition_samples": 64.0,
+        "reward_evaluations": 32.0,
+        "value_evaluations": 24.0
+      },
+      "calibration_costs": {}
+    },
+    {
+      "problem": "gaussian",
+      "method": "empirical-half-sparse-n8",
+      "cdf_mse": 0.019423598597984156,
+      "per_seed_cdf_mse": {
+        "60011": 0.018890725726436772,
+        "60017": 0.019956471469531535
+      },
+      "online_costs_per_population": {
+        "transition_samples": 64.0,
+        "reward_evaluations": 32.0,
+        "value_evaluations": 24.0
+      },
+      "calibration_costs": {
+        "transition_samples": 74752,
+        "reward_evaluations": 24960
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "empirical-k16-sparse-n8",
+      "cdf_mse": 0.01323571705397268,
+      "per_seed_cdf_mse": {
+        "60011": 0.01311124250677832,
+        "60017": 0.01336019160116704
+      },
+      "online_costs_per_population": {
+        "transition_samples": 64.0,
+        "reward_evaluations": 32.0,
+        "value_evaluations": 24.0
+      },
+      "calibration_costs": {
+        "transition_samples": 74752,
+        "reward_evaluations": 24960
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "future2-sparse-n8",
+      "cdf_mse": 0.011974154530442802,
+      "per_seed_cdf_mse": {
+        "60011": 0.01124665645387644,
+        "60017": 0.012701652607009162
+      },
+      "online_costs_per_population": {
+        "transition_samples": 208.0,
+        "reward_evaluations": 56.0,
+        "value_evaluations": 72.0
+      },
+      "calibration_costs": {}
+    },
+    {
+      "problem": "gaussian",
+      "method": "exact-value-sparse-n8",
+      "cdf_mse": 0.012738769524940814,
+      "per_seed_cdf_mse": {
+        "60011": 0.012371802088454665,
+        "60017": 0.013105736961426962
+      },
+      "online_costs_per_population": {
+        "transition_samples": 64.0,
+        "reward_evaluations": 8.0,
+        "value_evaluations": 24.0,
+        "analytic_component_integrals": 24.0
+      },
+      "calibration_costs": {}
+    },
+    {
+      "problem": "mixture",
+      "method": "terminal-n8",
+      "cdf_mse": 0.06024096411082521,
+      "per_seed_cdf_mse": {
+        "60011": 0.05663564765401692,
+        "60017": 0.0638462805676335
+      },
+      "online_costs_per_population": {
+        "transition_samples": 64.0,
+        "reward_evaluations": 8.0
+      },
+      "calibration_costs": {}
+    },
+    {
+      "problem": "mixture",
+      "method": "terminal-n16",
+      "cdf_mse": 0.019089896386267916,
+      "per_seed_cdf_mse": {
+        "60011": 0.02019731244112729,
+        "60017": 0.017982480331408538
+      },
+      "online_costs_per_population": {
+        "transition_samples": 128.0,
+        "reward_evaluations": 16.0
+      },
+      "calibration_costs": {}
+    },
+    {
+      "problem": "mixture",
+      "method": "terminal-n32",
+      "cdf_mse": 0.006971712385943475,
+      "per_seed_cdf_mse": {
+        "60011": 0.007289861935826444,
+        "60017": 0.006653562836060506
+      },
+      "online_costs_per_population": {
+        "transition_samples": 256.0,
+        "reward_evaluations": 32.0
+      },
+      "calibration_costs": {}
+    },
+    {
+      "problem": "mixture",
+      "method": "terminal-n64",
+      "cdf_mse": 0.003051884714314276,
+      "per_seed_cdf_mse": {
+        "60011": 0.003172134630478356,
+        "60017": 0.0029316347981501963
+      },
+      "online_costs_per_population": {
+        "transition_samples": 512.0,
+        "reward_evaluations": 64.0
+      },
+      "calibration_costs": {}
+    },
+    {
+      "problem": "mixture",
+      "method": "point-sparse-n8",
+      "cdf_mse": 0.045355024663800175,
+      "per_seed_cdf_mse": {
+        "60011": 0.03866158103449195,
+        "60017": 0.0520484682931084
+      },
+      "online_costs_per_population": {
+        "transition_samples": 64.0,
+        "reward_evaluations": 32.0,
+        "value_evaluations": 24.0
+      },
+      "calibration_costs": {}
+    },
+    {
+      "problem": "mixture",
+      "method": "mean-sparse-n8",
+      "cdf_mse": 0.047255438401124936,
+      "per_seed_cdf_mse": {
+        "60011": 0.04193121963389138,
+        "60017": 0.052579657168358496
+      },
+      "online_costs_per_population": {
+        "transition_samples": 64.0,
+        "reward_evaluations": 32.0,
+        "value_evaluations": 24.0
+      },
+      "calibration_costs": {
+        "transition_samples": 74752,
+        "reward_evaluations": 24960
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "gaussian-sparse-n8",
+      "cdf_mse": 0.04517686467633107,
+      "per_seed_cdf_mse": {
+        "60011": 0.03984383133968708,
+        "60017": 0.05050989801297506
+      },
+      "online_costs_per_population": {
+        "transition_samples": 64.0,
+        "reward_evaluations": 32.0,
+        "value_evaluations": 24.0
+      },
+      "calibration_costs": {
+        "transition_samples": 74752,
+        "reward_evaluations": 24960
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "empirical-sparse-n8",
+      "cdf_mse": 0.047684065233590804,
+      "per_seed_cdf_mse": {
+        "60011": 0.041741831195584125,
+        "60017": 0.05362629927159748
+      },
+      "online_costs_per_population": {
+        "transition_samples": 64.0,
+        "reward_evaluations": 32.0,
+        "value_evaluations": 24.0
+      },
+      "calibration_costs": {
+        "transition_samples": 74752,
+        "reward_evaluations": 24960
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "direct-sparse-n8",
+      "cdf_mse": 0.0484868845043319,
+      "per_seed_cdf_mse": {
+        "60011": 0.04176026482782304,
+        "60017": 0.055213504180840756
+      },
+      "online_costs_per_population": {
+        "transition_samples": 64.0,
+        "reward_evaluations": 32.0,
+        "value_evaluations": 24.0
+      },
+      "calibration_costs": {
+        "transition_samples": 74752,
+        "reward_evaluations": 24960
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "point-sparse-n16",
+      "cdf_mse": 0.0126965909856803,
+      "per_seed_cdf_mse": {
+        "60011": 0.012511216155096379,
+        "60017": 0.012881965816264222
+      },
+      "online_costs_per_population": {
+        "transition_samples": 128.0,
+        "reward_evaluations": 64.0,
+        "value_evaluations": 48.0
+      },
+      "calibration_costs": {}
+    },
+    {
+      "problem": "mixture",
+      "method": "mean-sparse-n16",
+      "cdf_mse": 0.013498770154216005,
+      "per_seed_cdf_mse": {
+        "60011": 0.013666162655253165,
+        "60017": 0.013331377653178843
+      },
+      "online_costs_per_population": {
+        "transition_samples": 128.0,
+        "reward_evaluations": 64.0,
+        "value_evaluations": 48.0
+      },
+      "calibration_costs": {
+        "transition_samples": 74752,
+        "reward_evaluations": 24960
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "gaussian-sparse-n16",
+      "cdf_mse": 0.011545505846568358,
+      "per_seed_cdf_mse": {
+        "60011": 0.012219566091345637,
+        "60017": 0.01087144560179108
+      },
+      "online_costs_per_population": {
+        "transition_samples": 128.0,
+        "reward_evaluations": 64.0,
+        "value_evaluations": 48.0
+      },
+      "calibration_costs": {
+        "transition_samples": 74752,
+        "reward_evaluations": 24960
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "empirical-sparse-n16",
+      "cdf_mse": 0.013423501079455592,
+      "per_seed_cdf_mse": {
+        "60011": 0.014114694056609083,
+        "60017": 0.012732308102302102
+      },
+      "online_costs_per_population": {
+        "transition_samples": 128.0,
+        "reward_evaluations": 64.0,
+        "value_evaluations": 48.0
+      },
+      "calibration_costs": {
+        "transition_samples": 74752,
+        "reward_evaluations": 24960
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "direct-sparse-n16",
+      "cdf_mse": 0.012694663490080676,
+      "per_seed_cdf_mse": {
+        "60011": 0.013465614143874156,
+        "60017": 0.011923712836287197
+      },
+      "online_costs_per_population": {
+        "transition_samples": 128.0,
+        "reward_evaluations": 64.0,
+        "value_evaluations": 48.0
+      },
+      "calibration_costs": {
+        "transition_samples": 74752,
+        "reward_evaluations": 24960
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "point-half-sparse-n8",
+      "cdf_mse": 0.06006882159459237,
+      "per_seed_cdf_mse": {
+        "60011": 0.05653140712865735,
+        "60017": 0.0636062360605274
+      },
+      "online_costs_per_population": {
+        "transition_samples": 64.0,
+        "reward_evaluations": 32.0,
+        "value_evaluations": 24.0
+      },
+      "calibration_costs": {}
+    },
+    {
+      "problem": "mixture",
+      "method": "empirical-half-sparse-n8",
+      "cdf_mse": 0.0601412878515185,
+      "per_seed_cdf_mse": {
+        "60011": 0.0565453949941514,
+        "60017": 0.06373718070888561
+      },
+      "online_costs_per_population": {
+        "transition_samples": 64.0,
+        "reward_evaluations": 32.0,
+        "value_evaluations": 24.0
+      },
+      "calibration_costs": {
+        "transition_samples": 74752,
+        "reward_evaluations": 24960
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "empirical-k16-sparse-n8",
+      "cdf_mse": 0.04673874523286828,
+      "per_seed_cdf_mse": {
+        "60011": 0.040069591133533075,
+        "60017": 0.053407899332203475
+      },
+      "online_costs_per_population": {
+        "transition_samples": 64.0,
+        "reward_evaluations": 32.0,
+        "value_evaluations": 24.0
+      },
+      "calibration_costs": {
+        "transition_samples": 74752,
+        "reward_evaluations": 24960
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "future2-sparse-n8",
+      "cdf_mse": 0.04641387331590157,
+      "per_seed_cdf_mse": {
+        "60011": 0.040432022431932016,
+        "60017": 0.052395724199871124
+      },
+      "online_costs_per_population": {
+        "transition_samples": 208.0,
+        "reward_evaluations": 56.0,
+        "value_evaluations": 72.0
+      },
+      "calibration_costs": {}
+    },
+    {
+      "problem": "mixture",
+      "method": "exact-value-sparse-n8",
+      "cdf_mse": 0.04804428328948802,
+      "per_seed_cdf_mse": {
+        "60011": 0.0417909916620012,
+        "60017": 0.05429757491697483
+      },
+      "online_costs_per_population": {
+        "transition_samples": 64.0,
+        "reward_evaluations": 8.0,
+        "value_evaluations": 24.0,
+        "analytic_component_integrals": 48.0
+      },
+      "calibration_costs": {}
+    }
+  ],
+  "diagnostics": [
+    {
+      "problem": "gaussian",
+      "values": [
+        {
+          "index": 5,
+          "value": "point",
+          "centered_log_value_mse": 3.5083333854765697,
+          "normalized_value_kl": 0.6491596702120463
+        },
+        {
+          "index": 5,
+          "value": "mean",
+          "centered_log_value_mse": 3.8313438429486286,
+          "normalized_value_kl": 0.6548918527613448
+        },
+        {
+          "index": 5,
+          "value": "gaussian",
+          "centered_log_value_mse": 13.867239973388049,
+          "normalized_value_kl": 6.859530331820938
+        },
+        {
+          "index": 5,
+          "value": "empirical",
+          "centered_log_value_mse": 0.1160472638048466,
+          "normalized_value_kl": 0.01385874514714933
+        },
+        {
+          "index": 5,
+          "value": "direct",
+          "centered_log_value_mse": 0.011978532141606504,
+          "normalized_value_kl": 0.002562852600314507
+        },
+        {
+          "index": 5,
+          "value": "future",
+          "centered_log_value_mse": 8.80333108347003,
+          "normalized_value_kl": 1.2499688372301185
+        },
+        {
+          "index": 3,
+          "value": "point",
+          "centered_log_value_mse": 4.4055660579337745,
+          "normalized_value_kl": 0.28885354934656365
+        },
+        {
+          "index": 3,
+          "value": "mean",
+          "centered_log_value_mse": 4.523992584851485,
+          "normalized_value_kl": 0.2818662959682664
+        },
+        {
+          "index": 3,
+          "value": "gaussian",
+          "centered_log_value_mse": 3.4861247476875663,
+          "normalized_value_kl": 0.7608531145393564
+        },
+        {
+          "index": 3,
+          "value": "empirical",
+          "centered_log_value_mse": 0.1855463181245959,
+          "normalized_value_kl": 0.0022674229515118323
+        },
+        {
+          "index": 3,
+          "value": "direct",
+          "centered_log_value_mse": 0.03528640081277401,
+          "normalized_value_kl": 0.002239754819525477
+        },
+        {
+          "index": 3,
+          "value": "future",
+          "centered_log_value_mse": 7.528116733948344,
+          "normalized_value_kl": 0.5444808380334204
+        },
+        {
+          "index": 1,
+          "value": "point",
+          "centered_log_value_mse": 0.9360904988890222,
+          "normalized_value_kl": 0.01449691729433299
+        },
+        {
+          "index": 1,
+          "value": "mean",
+          "centered_log_value_mse": 0.931534150752672,
+          "normalized_value_kl": 0.01615155431020241
+        },
+        {
+          "index": 1,
+          "value": "gaussian",
+          "centered_log_value_mse": 0.029407192185363355,
+          "normalized_value_kl": 0.0005181480710383705
+        },
+        {
+          "index": 1,
+          "value": "empirical",
+          "centered_log_value_mse": 0.039886876455429945,
+          "normalized_value_kl": 0.0006023901283593908
+        },
+        {
+          "index": 1,
+          "value": "direct",
+          "centered_log_value_mse": 0.7267764972868659,
+          "normalized_value_kl": 0.005680713445954465
+        },
+        {
+          "index": 1,
+          "value": "future",
+          "centered_log_value_mse": 1.7572160925112628,
+          "normalized_value_kl": 0.08454584247290307
+        }
+      ],
+      "costs": {
+        "transition_samples": 6656,
+        "reward_evaluations": 5376,
+        "value_evaluations": 6912,
+        "analytic_component_integrals": 768
+      }
+    },
+    {
+      "problem": "mixture",
+      "values": [
+        {
+          "index": 5,
+          "value": "point",
+          "centered_log_value_mse": 0.050733401018446596,
+          "normalized_value_kl": 0.0360112603060086
+        },
+        {
+          "index": 5,
+          "value": "mean",
+          "centered_log_value_mse": 0.03996336840771274,
+          "normalized_value_kl": 0.041098262860121984
+        },
+        {
+          "index": 5,
+          "value": "gaussian",
+          "centered_log_value_mse": 0.009316112394408833,
+          "normalized_value_kl": 0.007383786729774111
+        },
+        {
+          "index": 5,
+          "value": "empirical",
+          "centered_log_value_mse": 0.0028351828513445846,
+          "normalized_value_kl": 0.0009842316538232014
+        },
+        {
+          "index": 5,
+          "value": "direct",
+          "centered_log_value_mse": 0.00314955831941057,
+          "normalized_value_kl": 0.0009976681687824318
+        },
+        {
+          "index": 5,
+          "value": "future",
+          "centered_log_value_mse": 0.6380931965226714,
+          "normalized_value_kl": 0.228870716562345
+        },
+        {
+          "index": 3,
+          "value": "point",
+          "centered_log_value_mse": 0.015130275333532242,
+          "normalized_value_kl": 0.007468227605823817
+        },
+        {
+          "index": 3,
+          "value": "mean",
+          "centered_log_value_mse": 0.013890523729173614,
+          "normalized_value_kl": 0.006822273809623882
+        },
+        {
+          "index": 3,
+          "value": "gaussian",
+          "centered_log_value_mse": 0.0011940750150252414,
+          "normalized_value_kl": 0.000501359037926218
+        },
+        {
+          "index": 3,
+          "value": "empirical",
+          "centered_log_value_mse": 0.0010426118205528613,
+          "normalized_value_kl": 0.0002561266508905076
+        },
+        {
+          "index": 3,
+          "value": "direct",
+          "centered_log_value_mse": 0.005240374213951491,
+          "normalized_value_kl": 0.0029345219063738404
+        },
+        {
+          "index": 3,
+          "value": "future",
+          "centered_log_value_mse": 0.2468879554339607,
+          "normalized_value_kl": 0.051401657068188805
+        },
+        {
+          "index": 1,
+          "value": "point",
+          "centered_log_value_mse": 0.0019183916242552844,
+          "normalized_value_kl": 0.0005525328738122373
+        },
+        {
+          "index": 1,
+          "value": "mean",
+          "centered_log_value_mse": 0.00211921692388137,
+          "normalized_value_kl": 0.0006209530412622649
+        },
+        {
+          "index": 1,
+          "value": "gaussian",
+          "centered_log_value_mse": 0.0002073885490608265,
+          "normalized_value_kl": 3.33190204891937e-05
+        },
+        {
+          "index": 1,
+          "value": "empirical",
+          "centered_log_value_mse": 0.0001929971546149904,
+          "normalized_value_kl": 3.361558592223575e-05
+        },
+        {
+          "index": 1,
+          "value": "direct",
+          "centered_log_value_mse": 0.016674937774406196,
+          "normalized_value_kl": 0.00286670217636669
+        },
+        {
+          "index": 1,
+          "value": "future",
+          "centered_log_value_mse": 0.08737413005861458,
+          "normalized_value_kl": 0.01265204288709337
+        }
+      ],
+      "costs": {
+        "transition_samples": 6656,
+        "reward_evaluations": 5376,
+        "value_evaluations": 6912,
+        "analytic_component_integrals": 1536
+      }
+    }
+  ],
+  "total_costs": {
+    "transition_samples": 2604032,
+    "reward_evaluations": 838912,
+    "value_evaluations": 554496,
+    "analytic_component_integrals": 39168
+  }
+}

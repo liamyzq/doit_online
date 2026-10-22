@@ -34,6 +34,10 @@ queued in this study. The execution checkout remains at the run revision;
 later local commits contain analysis and documentation. Terminal N4 passed the
 bounded confirmation criterion documented in `experiments/uncertainty_smc/FINDINGS.md`.
 
+The continuation's CPU toy exp-059 completed at `6f96363`, with all 76 conditions
+and new moment checks successful. Its finite controller exited and records were
+retrieved. No continuation job is active; real-critic calibration is being prepared.
+
 ## Authorized machine
 
 - SSH alias: `orion`, user `mlw0719`; it connects through Quest.

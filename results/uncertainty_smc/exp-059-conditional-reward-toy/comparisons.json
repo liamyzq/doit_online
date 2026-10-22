@@ -1,0 +1,2542 @@
+[
+  {
+    "problem": "gaussian",
+    "seed": 60011,
+    "method": "terminal-n8",
+    "particles": 8,
+    "cdf_mse": 0.024863173817692222,
+    "cdf_mse_standard_error": 0.0016877578775277532,
+    "pooled_cdf_mse": 0.002808465528162958,
+    "positive_mass_mse": 0.012757278511779697,
+    "positive_mass": 0.9750806364724613,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 1.1435255074752106,
+    "mean_log_reward": -1.1092696189450617,
+    "checkpoint_ess_fractions": [],
+    "resamplings_per_repeat": 0.0,
+    "final_ess_fraction": 0.3027778200295112,
+    "seconds": 0.007038129027932882,
+    "costs": {
+      "transition_samples": 16384,
+      "reward_evaluations": 2048
+    },
+    "costs_per_repeat": {
+      "transition_samples": 64.0,
+      "reward_evaluations": 8.0
+    },
+    "shared_calibration_costs": {}
+  },
+  {
+    "problem": "gaussian",
+    "seed": 60011,
+    "method": "terminal-n16",
+    "particles": 16,
+    "cdf_mse": 0.010799221690629942,
+    "cdf_mse_standard_error": 0.0007161502919769315,
+    "pooled_cdf_mse": 0.0007630667817842733,
+    "positive_mass_mse": 0.00018493270758705444,
+    "positive_mass": 0.9933873217819454,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 1.2338320979757786,
+    "mean_log_reward": -0.8388303044915246,
+    "checkpoint_ess_fractions": [],
+    "resamplings_per_repeat": 0.0,
+    "final_ess_fraction": 0.2637429206416876,
+    "seconds": 0.010960075072944164,
+    "costs": {
+      "transition_samples": 32768,
+      "reward_evaluations": 4096
+    },
+    "costs_per_repeat": {
+      "transition_samples": 128.0,
+      "reward_evaluations": 16.0
+    },
+    "shared_calibration_costs": {}
+  },
+  {
+    "problem": "gaussian",
+    "seed": 60011,
+    "method": "terminal-n32",
+    "particles": 32,
+    "cdf_mse": 0.004553836283801775,
+    "cdf_mse_standard_error": 0.0003086350436012508,
+    "pooled_cdf_mse": 5.40257005211782e-05,
+    "positive_mass_mse": 1.0219679715071415e-05,
+    "positive_mass": 0.995088430837599,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 1.3072253859694443,
+    "mean_log_reward": -0.7249935373444514,
+    "checkpoint_ess_fractions": [],
+    "resamplings_per_repeat": 0.0,
+    "final_ess_fraction": 0.24759632934111353,
+    "seconds": 0.015949217951856554,
+    "costs": {
+      "transition_samples": 65536,
+      "reward_evaluations": 8192
+    },
+    "costs_per_repeat": {
+      "transition_samples": 256.0,
+      "reward_evaluations": 32.0
+    },
+    "shared_calibration_costs": {}
+  },
+  {
+    "problem": "gaussian",
+    "seed": 60011,
+    "method": "terminal-n64",
+    "particles": 64,
+    "cdf_mse": 0.0021296671399901853,
+    "cdf_mse_standard_error": 0.00012315023472847517,
+    "pooled_cdf_mse": 4.432198428848777e-05,
+    "positive_mass_mse": 3.8994365749467e-06,
+    "positive_mass": 0.9953894369410679,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 1.3133761646278588,
+    "mean_log_reward": -0.714828832692772,
+    "checkpoint_ess_fractions": [],
+    "resamplings_per_repeat": 0.0,
+    "final_ess_fraction": 0.24828005694610267,
+    "seconds": 0.02971772593446076,
+    "costs": {
+      "transition_samples": 131072,
+      "reward_evaluations": 16384
+    },
+    "costs_per_repeat": {
+      "transition_samples": 512.0,
+      "reward_evaluations": 64.0
+    },
+    "shared_calibration_costs": {}
+  },
+  {
+    "problem": "gaussian",
+    "seed": 60011,
+    "method": "point-sparse-n8",
+    "particles": 8,
+    "cdf_mse": 0.010698310131466791,
+    "cdf_mse_standard_error": 0.0007112980847354686,
+    "pooled_cdf_mse": 0.00012700139131215676,
+    "positive_mass_mse": 0.0012198028432024823,
+    "positive_mass": 0.9918219750598862,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 1.345072053468892,
+    "mean_log_reward": -0.7386280864970411,
+    "checkpoint_ess_fractions": [
+      0.32932882612436676,
+      0.46791075072567295,
+      0.5399432567923714
+    ],
+    "resamplings_per_repeat": 1.94140625,
+    "final_ess_fraction": 0.7249427697884517,
+    "seconds": 0.017253495985642076,
+    "costs": {
+      "transition_samples": 16384,
+      "reward_evaluations": 8192,
+      "value_evaluations": 6144
+    },
+    "costs_per_repeat": {
+      "transition_samples": 64.0,
+      "reward_evaluations": 32.0,
+      "value_evaluations": 24.0
+    },
+    "shared_calibration_costs": {}
+  },
+  {
+    "problem": "gaussian",
+    "seed": 60011,
+    "method": "mean-sparse-n8",
+    "particles": 8,
+    "cdf_mse": 0.010547429763512844,
+    "cdf_mse_standard_error": 0.0006766190609874462,
+    "pooled_cdf_mse": 0.00010605317058166008,
+    "positive_mass_mse": 0.0015165329379147347,
+    "positive_mass": 0.9929453331843572,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 1.3141964765665997,
+    "mean_log_reward": -0.7623303445265288,
+    "checkpoint_ess_fractions": [
+      0.32998102290734616,
+      0.46560515028024907,
+      0.5453334428654488
+    ],
+    "resamplings_per_repeat": 1.90625,
+    "final_ess_fraction": 0.6998001865609529,
+    "seconds": 0.0591082499595359,
+    "costs": {
+      "transition_samples": 16384,
+      "reward_evaluations": 8192,
+      "value_evaluations": 6144
+    },
+    "costs_per_repeat": {
+      "transition_samples": 64.0,
+      "reward_evaluations": 32.0,
+      "value_evaluations": 24.0
+    },
+    "shared_calibration_costs": {
+      "transition_samples": 74752,
+      "reward_evaluations": 24960
+    }
+  },
+  {
+    "problem": "gaussian",
+    "seed": 60011,
+    "method": "gaussian-sparse-n8",
+    "particles": 8,
+    "cdf_mse": 0.058702391692573075,
+    "cdf_mse_standard_error": 0.0030679149242564285,
+    "pooled_cdf_mse": 0.031912375985658846,
+    "positive_mass_mse": 0.10516519740020237,
+    "positive_mass": 0.8390540340562296,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 0.6108429714062615,
+    "mean_log_reward": -2.5664041358785816,
+    "checkpoint_ess_fractions": [
+      0.23309187620674943,
+      0.5238876927756551,
+      0.2848364075491081
+    ],
+    "resamplings_per_repeat": 2.31640625,
+    "final_ess_fraction": 0.6173893519687104,
+    "seconds": 0.058052883949130774,
+    "costs": {
+      "transition_samples": 16384,
+      "reward_evaluations": 8192,
+      "value_evaluations": 6144
+    },
+    "costs_per_repeat": {
+      "transition_samples": 64.0,
+      "reward_evaluations": 32.0,
+      "value_evaluations": 24.0
+    },
+    "shared_calibration_costs": {
+      "transition_samples": 74752,
+      "reward_evaluations": 24960
+    }
+  },
+  {
+    "problem": "gaussian",
+    "seed": 60011,
+    "method": "empirical-sparse-n8",
+    "particles": 8,
+    "cdf_mse": 0.01281056398803076,
+    "cdf_mse_standard_error": 0.001043916591689426,
+    "pooled_cdf_mse": 0.0008460934093643709,
+    "positive_mass_mse": 0.0023829994180591544,
+    "positive_mass": 0.9877840743931372,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 1.2222617585145719,
+    "mean_log_reward": -0.8975375176337073,
+    "checkpoint_ess_fractions": [
+      0.68550029218721,
+      0.5090629805808833,
+      0.48047041974002147
+    ],
+    "resamplings_per_repeat": 1.1640625,
+    "final_ess_fraction": 0.7010807357789531,
+    "seconds": 0.1663556699641049,
+    "costs": {
+      "transition_samples": 16384,
+      "reward_evaluations": 8192,
+      "value_evaluations": 6144
+    },
+    "costs_per_repeat": {
+      "transition_samples": 64.0,
+      "reward_evaluations": 32.0,
+      "value_evaluations": 24.0
+    },
+    "shared_calibration_costs": {
+      "transition_samples": 74752,
+      "reward_evaluations": 24960
+    }
+  },
+  {
+    "problem": "gaussian",
+    "seed": 60011,
+    "method": "direct-sparse-n8",
+    "particles": 8,
+    "cdf_mse": 0.012687058106589592,
+    "cdf_mse_standard_error": 0.0009733768531071008,
+    "pooled_cdf_mse": 0.0006200259129817073,
+    "positive_mass_mse": 0.0021264966228530073,
+    "positive_mass": 0.9879545377678594,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 1.2377109634533743,
+    "mean_log_reward": -0.8642085047408287,
+    "checkpoint_ess_fractions": [
+      0.682977224710349,
+      0.502109806013081,
+      0.4920816796250048
+    ],
+    "resamplings_per_repeat": 1.1484375,
+    "final_ess_fraction": 0.6929782785718537,
+    "seconds": 0.15149414795450866,
+    "costs": {
+      "transition_samples": 16384,
+      "reward_evaluations": 8192,
+      "value_evaluations": 6144
+    },
+    "costs_per_repeat": {
+      "transition_samples": 64.0,
+      "reward_evaluations": 32.0,
+      "value_evaluations": 24.0
+    },
+    "shared_calibration_costs": {
+      "transition_samples": 74752,
+      "reward_evaluations": 24960
+    }
+  },
+  {
+    "problem": "gaussian",
+    "seed": 60011,
+    "method": "point-sparse-n16",
+    "particles": 16,
+    "cdf_mse": 0.004926088146868758,
+    "cdf_mse_standard_error": 0.0003333293498744967,
+    "pooled_cdf_mse": 1.657195890039346e-05,
+    "positive_mass_mse": 0.00036708765575384564,
+    "positive_mass": 0.9953052402333393,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 1.3479511784315383,
+    "mean_log_reward": -0.6779586116543574,
+    "checkpoint_ess_fractions": [
+      0.2694182127802066,
+      0.4188456161851798,
+      0.5022484567445553
+    ],
+    "resamplings_per_repeat": 2.12890625,
+    "final_ess_fraction": 0.6874457149045146,
+    "seconds": 0.019429799052886665,
+    "costs": {
+      "transition_samples": 32768,
+      "reward_evaluations": 16384,
+      "value_evaluations": 12288
+    },
+    "costs_per_repeat": {
+      "transition_samples": 128.0,
+      "reward_evaluations": 64.0,
+      "value_evaluations": 48.0
+    },
+    "shared_calibration_costs": {}
+  },
+  {
+    "problem": "gaussian",
+    "seed": 60011,
+    "method": "mean-sparse-n16",
+    "particles": 16,
+    "cdf_mse": 0.0052325345411391964,
+    "cdf_mse_standard_error": 0.0003939622682934638,
+    "pooled_cdf_mse": 1.7497371032892732e-05,
+    "positive_mass_mse": 0.0003394394751121759,
+    "positive_mass": 0.9945390273223755,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 1.348584107360216,
+    "mean_log_reward": -0.6692386472721861,
+    "checkpoint_ess_fractions": [
+      0.2655988572008525,
+      0.4102261805309944,
+      0.50932845125825
+    ],
+    "resamplings_per_repeat": 2.1484375,
+    "final_ess_fraction": 0.6891052873876791,
+    "seconds": 0.09575569198932499,
+    "costs": {
+      "transition_samples": 32768,
+      "reward_evaluations": 16384,
+      "value_evaluations": 12288
+    },
+    "costs_per_repeat": {
+      "transition_samples": 128.0,
+      "reward_evaluations": 64.0,
+      "value_evaluations": 48.0
+    },
+    "shared_calibration_costs": {
+      "transition_samples": 74752,
+      "reward_evaluations": 24960
+    }
+  },
+  {
+    "problem": "gaussian",
+    "seed": 60011,
+    "method": "gaussian-sparse-n16",
+    "particles": 16,
+    "cdf_mse": 0.045484983024270065,
+    "cdf_mse_standard_error": 0.0024092787776395846,
+    "pooled_cdf_mse": 0.028201077850847352,
+    "positive_mass_mse": 0.051216836146202455,
+    "positive_mass": 0.8955949062632642,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 0.6700325839970764,
+    "mean_log_reward": -2.247245036017863,
+    "checkpoint_ess_fractions": [
+      0.13492699505033467,
+      0.337389764911688,
+      0.23131842802670616
+    ],
+    "resamplings_per_repeat": 2.65625,
+    "final_ess_fraction": 0.5565665052508828,
+    "seconds": 0.09287122311070561,
+    "costs": {
+      "transition_samples": 32768,
+      "reward_evaluations": 16384,
+      "value_evaluations": 12288
+    },
+    "costs_per_repeat": {
+      "transition_samples": 128.0,
+      "reward_evaluations": 64.0,
+      "value_evaluations": 48.0
+    },
+    "shared_calibration_costs": {
+      "transition_samples": 74752,
+      "reward_evaluations": 24960
+    }
+  },
+  {
+    "problem": "gaussian",
+    "seed": 60011,
+    "method": "empirical-sparse-n16",
+    "particles": 16,
+    "cdf_mse": 0.005893003113337104,
+    "cdf_mse_standard_error": 0.00043734135769913794,
+    "pooled_cdf_mse": 0.00026155894158965255,
+    "positive_mass_mse": 0.0010594052459476828,
+    "positive_mass": 0.9917416276555778,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 1.273618693149777,
+    "mean_log_reward": -0.7941356075116195,
+    "checkpoint_ess_fractions": [
+      0.6467064346711083,
+      0.4769652059375076,
+      0.4814925188512851
+    ],
+    "resamplings_per_repeat": 1.2578125,
+    "final_ess_fraction": 0.6640802639349461,
+    "seconds": 0.2865832650568336,
+    "costs": {
+      "transition_samples": 32768,
+      "reward_evaluations": 16384,
+      "value_evaluations": 12288
+    },
+    "costs_per_repeat": {
+      "transition_samples": 128.0,
+      "reward_evaluations": 64.0,
+      "value_evaluations": 48.0
+    },
+    "shared_calibration_costs": {
+      "transition_samples": 74752,
+      "reward_evaluations": 24960
+    }
+  },
+  {
+    "problem": "gaussian",
+    "seed": 60011,
+    "method": "direct-sparse-n16",
+    "particles": 16,
+    "cdf_mse": 0.00541677190658754,
+    "cdf_mse_standard_error": 0.0003970079662494569,
+    "pooled_cdf_mse": 0.0002025925574432793,
+    "positive_mass_mse": 0.0002234657262439131,
+    "positive_mass": 0.9940835597786604,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 1.2822370681351312,
+    "mean_log_reward": -0.771611490061625,
+    "checkpoint_ess_fractions": [
+      0.6676646203152949,
+      0.46323352237895754,
+      0.5184887625484674
+    ],
+    "resamplings_per_repeat": 1.1484375,
+    "final_ess_fraction": 0.648586845011575,
+    "seconds": 0.26836480002384633,
+    "costs": {
+      "transition_samples": 32768,
+      "reward_evaluations": 16384,
+      "value_evaluations": 12288
+    },
+    "costs_per_repeat": {
+      "transition_samples": 128.0,
+      "reward_evaluations": 64.0,
+      "value_evaluations": 48.0
+    },
+    "shared_calibration_costs": {
+      "transition_samples": 74752,
+      "reward_evaluations": 24960
+    }
+  },
+  {
+    "problem": "gaussian",
+    "seed": 60011,
+    "method": "point-half-sparse-n8",
+    "particles": 8,
+    "cdf_mse": 0.013609567482693766,
+    "cdf_mse_standard_error": 0.0010780384529608794,
+    "pooled_cdf_mse": 0.0007196689871174847,
+    "positive_mass_mse": 0.005682656070441625,
+    "positive_mass": 0.9842776123943013,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 1.2329156263690033,
+    "mean_log_reward": -0.897242989336388,
+    "checkpoint_ess_fractions": [
+      0.5365989063531631,
+      0.5462332385123694,
+      0.6030503182122167
+    ],
+    "resamplings_per_repeat": 1.0703125,
+    "final_ess_fraction": 0.5623655799907775,
+    "seconds": 0.01155053498223424,
+    "costs": {
+      "transition_samples": 16384,
+      "reward_evaluations": 8192,
+      "value_evaluations": 6144
+    },
+    "costs_per_repeat": {
+      "transition_samples": 64.0,
+      "reward_evaluations": 32.0,
+      "value_evaluations": 24.0
+    },
+    "shared_calibration_costs": {}
+  },
+  {
+    "problem": "gaussian",
+    "seed": 60011,
+    "method": "empirical-half-sparse-n8",
+    "particles": 8,
+    "cdf_mse": 0.018890725726436772,
+    "cdf_mse_standard_error": 0.0013513317473437727,
+    "pooled_cdf_mse": 0.002005189855987536,
+    "positive_mass_mse": 0.002956524499519492,
+    "positive_mass": 0.9839317337365461,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 1.1725474406562821,
+    "mean_log_reward": -1.0198981593561163,
+    "checkpoint_ess_fractions": [
+      0.8792744852190075,
+      0.7066088989116808,
+      0.5116964685134622
+    ],
+    "resamplings_per_repeat": 0.5703125,
+    "final_ess_fraction": 0.5424003180962331,
+    "seconds": 0.1516763059189543,
+    "costs": {
+      "transition_samples": 16384,
+      "reward_evaluations": 8192,
+      "value_evaluations": 6144
+    },
+    "costs_per_repeat": {
+      "transition_samples": 64.0,
+      "reward_evaluations": 32.0,
+      "value_evaluations": 24.0
+    },
+    "shared_calibration_costs": {
+      "transition_samples": 74752,
+      "reward_evaluations": 24960
+    }
+  },
+  {
+    "problem": "gaussian",
+    "seed": 60011,
+    "method": "empirical-k16-sparse-n8",
+    "particles": 8,
+    "cdf_mse": 0.01311124250677832,
+    "cdf_mse_standard_error": 0.0010569539949688385,
+    "pooled_cdf_mse": 0.0008903975644896837,
+    "positive_mass_mse": 0.001993663645401796,
+    "positive_mass": 0.9892808609780124,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 1.2194237110395805,
+    "mean_log_reward": -0.8959706352097073,
+    "checkpoint_ess_fractions": [
+      0.6682889048779616,
+      0.5097059760918322,
+      0.4775094977902708
+    ],
+    "resamplings_per_repeat": 1.18359375,
+    "final_ess_fraction": 0.7023316107449233,
+    "seconds": 0.24065891606733203,
+    "costs": {
+      "transition_samples": 16384,
+      "reward_evaluations": 8192,
+      "value_evaluations": 6144
+    },
+    "costs_per_repeat": {
+      "transition_samples": 64.0,
+      "reward_evaluations": 32.0,
+      "value_evaluations": 24.0
+    },
+    "shared_calibration_costs": {
+      "transition_samples": 74752,
+      "reward_evaluations": 24960
+    }
+  },
+  {
+    "problem": "gaussian",
+    "seed": 60011,
+    "method": "future2-sparse-n8",
+    "particles": 8,
+    "cdf_mse": 0.01124665645387644,
+    "cdf_mse_standard_error": 0.0008058034285868767,
+    "pooled_cdf_mse": 0.00019052694343998602,
+    "positive_mass_mse": 0.001852639614452699,
+    "positive_mass": 0.9906621432436441,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 1.285490826430635,
+    "mean_log_reward": -0.7822849388621235,
+    "checkpoint_ess_fractions": [
+      0.40025571941070326,
+      0.4062838881484358,
+      0.48614128044119553
+    ],
+    "resamplings_per_repeat": 2.03125,
+    "final_ess_fraction": 0.6653425799555448,
+    "seconds": 0.023738853982649744,
+    "costs": {
+      "transition_samples": 53248,
+      "reward_evaluations": 14336,
+      "value_evaluations": 18432
+    },
+    "costs_per_repeat": {
+      "transition_samples": 208.0,
+      "reward_evaluations": 56.0,
+      "value_evaluations": 72.0
+    },
+    "shared_calibration_costs": {}
+  },
+  {
+    "problem": "gaussian",
+    "seed": 60011,
+    "method": "exact-value-sparse-n8",
+    "particles": 8,
+    "cdf_mse": 0.012371802088454665,
+    "cdf_mse_standard_error": 0.0010073461987531388,
+    "pooled_cdf_mse": 0.0005222476868619487,
+    "positive_mass_mse": 0.0020615138091096366,
+    "positive_mass": 0.9892776352087261,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 1.245419802916227,
+    "mean_log_reward": -0.8518247038158664,
+    "checkpoint_ess_fractions": [
+      0.6829935751094122,
+      0.49249934379693594,
+      0.49283540655879543
+    ],
+    "resamplings_per_repeat": 1.15234375,
+    "final_ess_fraction": 0.6959198179276085,
+    "seconds": 0.0120892149861902,
+    "costs": {
+      "transition_samples": 16384,
+      "reward_evaluations": 2048,
+      "value_evaluations": 6144,
+      "analytic_component_integrals": 6144
+    },
+    "costs_per_repeat": {
+      "transition_samples": 64.0,
+      "reward_evaluations": 8.0,
+      "value_evaluations": 24.0,
+      "analytic_component_integrals": 24.0
+    },
+    "shared_calibration_costs": {}
+  },
+  {
+    "problem": "gaussian",
+    "seed": 60017,
+    "method": "terminal-n8",
+    "particles": 8,
+    "cdf_mse": 0.025437727505618804,
+    "cdf_mse_standard_error": 0.0017036825967985643,
+    "pooled_cdf_mse": 0.0035516982091304125,
+    "positive_mass_mse": 0.016719734119778604,
+    "positive_mass": 0.9721876095405634,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 1.1061401480226154,
+    "mean_log_reward": -1.1346967747602124,
+    "checkpoint_ess_fractions": [],
+    "resamplings_per_repeat": 0.0,
+    "final_ess_fraction": 0.30762375836017314,
+    "seconds": 0.005623049917630851,
+    "costs": {
+      "transition_samples": 16384,
+      "reward_evaluations": 2048
+    },
+    "costs_per_repeat": {
+      "transition_samples": 64.0,
+      "reward_evaluations": 8.0
+    },
+    "shared_calibration_costs": {}
+  },
+  {
+    "problem": "gaussian",
+    "seed": 60017,
+    "method": "terminal-n16",
+    "particles": 16,
+    "cdf_mse": 0.010864122564266051,
+    "cdf_mse_standard_error": 0.0007578156758818114,
+    "pooled_cdf_mse": 0.0006912418420231348,
+    "positive_mass_mse": 8.288291197848748e-05,
+    "positive_mass": 0.9930563681435036,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 1.2441393168579782,
+    "mean_log_reward": -0.8438086619957286,
+    "checkpoint_ess_fractions": [],
+    "resamplings_per_repeat": 0.0,
+    "final_ess_fraction": 0.2660142377653232,
+    "seconds": 0.009423617972061038,
+    "costs": {
+      "transition_samples": 32768,
+      "reward_evaluations": 4096
+    },
+    "costs_per_repeat": {
+      "transition_samples": 128.0,
+      "reward_evaluations": 16.0
+    },
+    "shared_calibration_costs": {}
+  },
+  {
+    "problem": "gaussian",
+    "seed": 60017,
+    "method": "terminal-n32",
+    "particles": 32,
+    "cdf_mse": 0.004367580250400555,
+    "cdf_mse_standard_error": 0.0002554514650117314,
+    "pooled_cdf_mse": 3.2290037469759125e-05,
+    "positive_mass_mse": 1.3202083313220445e-05,
+    "positive_mass": 0.994801204351943,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 1.3160109992156144,
+    "mean_log_reward": -0.7173488401768907,
+    "checkpoint_ess_fractions": [],
+    "resamplings_per_repeat": 0.0,
+    "final_ess_fraction": 0.24706790598520054,
+    "seconds": 0.01897823193576187,
+    "costs": {
+      "transition_samples": 65536,
+      "reward_evaluations": 8192
+    },
+    "costs_per_repeat": {
+      "transition_samples": 256.0,
+      "reward_evaluations": 32.0
+    },
+    "shared_calibration_costs": {}
+  },
+  {
+    "problem": "gaussian",
+    "seed": 60017,
+    "method": "terminal-n64",
+    "particles": 64,
+    "cdf_mse": 0.0020249327654976836,
+    "cdf_mse_standard_error": 0.0001070991333160529,
+    "pooled_cdf_mse": 2.848787922510505e-05,
+    "positive_mass_mse": 4.0904277196865474e-06,
+    "positive_mass": 0.9954831326943352,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 1.322224737439855,
+    "mean_log_reward": -0.7054298835140054,
+    "checkpoint_ess_fractions": [],
+    "resamplings_per_repeat": 0.0,
+    "final_ess_fraction": 0.2500685309477424,
+    "seconds": 0.029434791998937726,
+    "costs": {
+      "transition_samples": 131072,
+      "reward_evaluations": 16384
+    },
+    "costs_per_repeat": {
+      "transition_samples": 512.0,
+      "reward_evaluations": 64.0
+    },
+    "shared_calibration_costs": {}
+  },
+  {
+    "problem": "gaussian",
+    "seed": 60017,
+    "method": "point-sparse-n8",
+    "particles": 8,
+    "cdf_mse": 0.009366691231223565,
+    "cdf_mse_standard_error": 0.0005749064361729743,
+    "pooled_cdf_mse": 4.6604704630334816e-05,
+    "positive_mass_mse": 0.0023453672678402713,
+    "positive_mass": 0.9911169349292819,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 1.3236442403595357,
+    "mean_log_reward": -0.7400698865883384,
+    "checkpoint_ess_fractions": [
+      0.3392627089215437,
+      0.4450057079160236,
+      0.538306416578985
+    ],
+    "resamplings_per_repeat": 1.94921875,
+    "final_ess_fraction": 0.6971412952835978,
+    "seconds": 0.017917883000336587,
+    "costs": {
+      "transition_samples": 16384,
+      "reward_evaluations": 8192,
+      "value_evaluations": 6144
+    },
+    "costs_per_repeat": {
+      "transition_samples": 64.0,
+      "reward_evaluations": 32.0,
+      "value_evaluations": 24.0
+    },
+    "shared_calibration_costs": {}
+  },
+  {
+    "problem": "gaussian",
+    "seed": 60017,
+    "method": "mean-sparse-n8",
+    "particles": 8,
+    "cdf_mse": 0.008722017275672326,
+    "cdf_mse_standard_error": 0.0005225867355485447,
+    "pooled_cdf_mse": 4.002189307174912e-05,
+    "positive_mass_mse": 0.0026274165450086667,
+    "positive_mass": 0.9889637584066111,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 1.3362061317882146,
+    "mean_log_reward": -0.7258944945585563,
+    "checkpoint_ess_fractions": [
+      0.34259032850530036,
+      0.4486737162921655,
+      0.5390800163165762
+    ],
+    "resamplings_per_repeat": 1.93359375,
+    "final_ess_fraction": 0.7066960218598035,
+    "seconds": 0.05327616701833904,
+    "costs": {
+      "transition_samples": 16384,
+      "reward_evaluations": 8192,
+      "value_evaluations": 6144
+    },
+    "costs_per_repeat": {
+      "transition_samples": 64.0,
+      "reward_evaluations": 32.0,
+      "value_evaluations": 24.0
+    },
+    "shared_calibration_costs": {
+      "transition_samples": 74752,
+      "reward_evaluations": 24960
+    }
+  },
+  {
+    "problem": "gaussian",
+    "seed": 60017,
+    "method": "gaussian-sparse-n8",
+    "particles": 8,
+    "cdf_mse": 0.061808009740224636,
+    "cdf_mse_standard_error": 0.003449027651858044,
+    "pooled_cdf_mse": 0.03383494981120507,
+    "positive_mass_mse": 0.1365720913290478,
+    "positive_mass": 0.8158227524154704,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 0.5683439398557897,
+    "mean_log_reward": -2.728557370260682,
+    "checkpoint_ess_fractions": [
+      0.229538855761237,
+      0.5067321961822991,
+      0.28800864051350367
+    ],
+    "resamplings_per_repeat": 2.3671875,
+    "final_ess_fraction": 0.5908232548390486,
+    "seconds": 0.0520507589681074,
+    "costs": {
+      "transition_samples": 16384,
+      "reward_evaluations": 8192,
+      "value_evaluations": 6144
+    },
+    "costs_per_repeat": {
+      "transition_samples": 64.0,
+      "reward_evaluations": 32.0,
+      "value_evaluations": 24.0
+    },
+    "shared_calibration_costs": {
+      "transition_samples": 74752,
+      "reward_evaluations": 24960
+    }
+  },
+  {
+    "problem": "gaussian",
+    "seed": 60017,
+    "method": "empirical-sparse-n8",
+    "particles": 8,
+    "cdf_mse": 0.013802653209801011,
+    "cdf_mse_standard_error": 0.001061575510460637,
+    "pooled_cdf_mse": 0.0011320651934303267,
+    "positive_mass_mse": 0.0029204031520848406,
+    "positive_mass": 0.9878157157320395,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 1.2113270994334036,
+    "mean_log_reward": -0.9300275135007843,
+    "checkpoint_ess_fractions": [
+      0.6890409721072195,
+      0.4880041541512362,
+      0.4899786127674743
+    ],
+    "resamplings_per_repeat": 1.140625,
+    "final_ess_fraction": 0.6843699357548967,
+    "seconds": 0.14278201502747834,
+    "costs": {
+      "transition_samples": 16384,
+      "reward_evaluations": 8192,
+      "value_evaluations": 6144
+    },
+    "costs_per_repeat": {
+      "transition_samples": 64.0,
+      "reward_evaluations": 32.0,
+      "value_evaluations": 24.0
+    },
+    "shared_calibration_costs": {
+      "transition_samples": 74752,
+      "reward_evaluations": 24960
+    }
+  },
+  {
+    "problem": "gaussian",
+    "seed": 60017,
+    "method": "direct-sparse-n8",
+    "particles": 8,
+    "cdf_mse": 0.013288427779580827,
+    "cdf_mse_standard_error": 0.0009484691971055546,
+    "pooled_cdf_mse": 0.0011376823480751344,
+    "positive_mass_mse": 0.0009727564934886462,
+    "positive_mass": 0.9900016650639375,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 1.2142216738751521,
+    "mean_log_reward": -0.9197998661319281,
+    "checkpoint_ess_fractions": [
+      0.6895214792551401,
+      0.48303616384441406,
+      0.504270001548022
+    ],
+    "resamplings_per_repeat": 1.109375,
+    "final_ess_fraction": 0.6820092797712283,
+    "seconds": 0.13890044100116938,
+    "costs": {
+      "transition_samples": 16384,
+      "reward_evaluations": 8192,
+      "value_evaluations": 6144
+    },
+    "costs_per_repeat": {
+      "transition_samples": 64.0,
+      "reward_evaluations": 32.0,
+      "value_evaluations": 24.0
+    },
+    "shared_calibration_costs": {
+      "transition_samples": 74752,
+      "reward_evaluations": 24960
+    }
+  },
+  {
+    "problem": "gaussian",
+    "seed": 60017,
+    "method": "point-sparse-n16",
+    "particles": 16,
+    "cdf_mse": 0.005620890930623335,
+    "cdf_mse_standard_error": 0.0004223006496555192,
+    "pooled_cdf_mse": 9.376615885786672e-05,
+    "positive_mass_mse": 0.00014120575393889703,
+    "positive_mass": 0.9958921147630904,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 1.3523398297166451,
+    "mean_log_reward": -0.6978545839991113,
+    "checkpoint_ess_fractions": [
+      0.2589593534712378,
+      0.40796248913541755,
+      0.5126044802944694
+    ],
+    "resamplings_per_repeat": 2.12890625,
+    "final_ess_fraction": 0.6738134080636681,
+    "seconds": 0.019183814991265535,
+    "costs": {
+      "transition_samples": 32768,
+      "reward_evaluations": 16384,
+      "value_evaluations": 12288
+    },
+    "costs_per_repeat": {
+      "transition_samples": 128.0,
+      "reward_evaluations": 64.0,
+      "value_evaluations": 48.0
+    },
+    "shared_calibration_costs": {}
+  },
+  {
+    "problem": "gaussian",
+    "seed": 60017,
+    "method": "mean-sparse-n16",
+    "particles": 16,
+    "cdf_mse": 0.005140942758903162,
+    "cdf_mse_standard_error": 0.00031709854785710374,
+    "pooled_cdf_mse": 7.752664390164816e-05,
+    "positive_mass_mse": 0.0002864597287842164,
+    "positive_mass": 0.9956860795775604,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 1.3515452131037393,
+    "mean_log_reward": -0.683127254020671,
+    "checkpoint_ess_fractions": [
+      0.25547509276002434,
+      0.41655626146738606,
+      0.503918793861149
+    ],
+    "resamplings_per_repeat": 2.13671875,
+    "final_ess_fraction": 0.679993447780298,
+    "seconds": 0.0922818660037592,
+    "costs": {
+      "transition_samples": 32768,
+      "reward_evaluations": 16384,
+      "value_evaluations": 12288
+    },
+    "costs_per_repeat": {
+      "transition_samples": 128.0,
+      "reward_evaluations": 64.0,
+      "value_evaluations": 48.0
+    },
+    "shared_calibration_costs": {
+      "transition_samples": 74752,
+      "reward_evaluations": 24960
+    }
+  },
+  {
+    "problem": "gaussian",
+    "seed": 60017,
+    "method": "gaussian-sparse-n16",
+    "particles": 16,
+    "cdf_mse": 0.04783419047128799,
+    "cdf_mse_standard_error": 0.0024273358202782755,
+    "pooled_cdf_mse": 0.03048620189347744,
+    "positive_mass_mse": 0.045381555391034556,
+    "positive_mass": 0.8943709206839614,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 0.6455560446585504,
+    "mean_log_reward": -2.319879032240841,
+    "checkpoint_ess_fractions": [
+      0.13320789835579086,
+      0.30492100707907993,
+      0.22343152639117675
+    ],
+    "resamplings_per_repeat": 2.78515625,
+    "final_ess_fraction": 0.5699834576752881,
+    "seconds": 0.11541172198485583,
+    "costs": {
+      "transition_samples": 32768,
+      "reward_evaluations": 16384,
+      "value_evaluations": 12288
+    },
+    "costs_per_repeat": {
+      "transition_samples": 128.0,
+      "reward_evaluations": 64.0,
+      "value_evaluations": 48.0
+    },
+    "shared_calibration_costs": {
+      "transition_samples": 74752,
+      "reward_evaluations": 24960
+    }
+  },
+  {
+    "problem": "gaussian",
+    "seed": 60017,
+    "method": "empirical-sparse-n16",
+    "particles": 16,
+    "cdf_mse": 0.0053922535810806,
+    "cdf_mse_standard_error": 0.00044490337359623654,
+    "pooled_cdf_mse": 0.00016324658020612745,
+    "positive_mass_mse": 0.00019775349744589286,
+    "positive_mass": 0.993248051673303,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 1.2879263185913643,
+    "mean_log_reward": -0.7645438030080155,
+    "checkpoint_ess_fractions": [
+      0.6366001859821449,
+      0.45729309705453514,
+      0.48986296496491
+    ],
+    "resamplings_per_repeat": 1.31640625,
+    "final_ess_fraction": 0.6761507283856432,
+    "seconds": 0.3015521240886301,
+    "costs": {
+      "transition_samples": 32768,
+      "reward_evaluations": 16384,
+      "value_evaluations": 12288
+    },
+    "costs_per_repeat": {
+      "transition_samples": 128.0,
+      "reward_evaluations": 64.0,
+      "value_evaluations": 48.0
+    },
+    "shared_calibration_costs": {
+      "transition_samples": 74752,
+      "reward_evaluations": 24960
+    }
+  },
+  {
+    "problem": "gaussian",
+    "seed": 60017,
+    "method": "direct-sparse-n16",
+    "particles": 16,
+    "cdf_mse": 0.005035918695769361,
+    "cdf_mse_standard_error": 0.00032257440990240776,
+    "pooled_cdf_mse": 0.00011611580354486659,
+    "positive_mass_mse": 0.00029713054425190114,
+    "positive_mass": 0.9942537977686984,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 1.2958349026324711,
+    "mean_log_reward": -0.7382054428511571,
+    "checkpoint_ess_fractions": [
+      0.6553606684315721,
+      0.4531941227711802,
+      0.5168674835140128
+    ],
+    "resamplings_per_repeat": 1.1953125,
+    "final_ess_fraction": 0.6520671056528407,
+    "seconds": 0.2683943270239979,
+    "costs": {
+      "transition_samples": 32768,
+      "reward_evaluations": 16384,
+      "value_evaluations": 12288
+    },
+    "costs_per_repeat": {
+      "transition_samples": 128.0,
+      "reward_evaluations": 64.0,
+      "value_evaluations": 48.0
+    },
+    "shared_calibration_costs": {
+      "transition_samples": 74752,
+      "reward_evaluations": 24960
+    }
+  },
+  {
+    "problem": "gaussian",
+    "seed": 60017,
+    "method": "point-half-sparse-n8",
+    "particles": 8,
+    "cdf_mse": 0.013197559886400428,
+    "cdf_mse_standard_error": 0.0009569628858380578,
+    "pooled_cdf_mse": 0.0008252222000727295,
+    "positive_mass_mse": 0.0006426215400396406,
+    "positive_mass": 0.9905447875510471,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 1.2302788194206844,
+    "mean_log_reward": -0.8802633533641432,
+    "checkpoint_ess_fractions": [
+      0.5457993912622481,
+      0.5314065651601361,
+      0.5779507715348686
+    ],
+    "resamplings_per_repeat": 1.125,
+    "final_ess_fraction": 0.5821616662297893,
+    "seconds": 0.011813718010671437,
+    "costs": {
+      "transition_samples": 16384,
+      "reward_evaluations": 8192,
+      "value_evaluations": 6144
+    },
+    "costs_per_repeat": {
+      "transition_samples": 64.0,
+      "reward_evaluations": 32.0,
+      "value_evaluations": 24.0
+    },
+    "shared_calibration_costs": {}
+  },
+  {
+    "problem": "gaussian",
+    "seed": 60017,
+    "method": "empirical-half-sparse-n8",
+    "particles": 8,
+    "cdf_mse": 0.019956471469531535,
+    "cdf_mse_standard_error": 0.0014001657793543745,
+    "pooled_cdf_mse": 0.0027124241121579953,
+    "positive_mass_mse": 0.0062517716672075676,
+    "positive_mass": 0.9842493716384153,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 1.145637046930009,
+    "mean_log_reward": -1.0502808753946438,
+    "checkpoint_ess_fractions": [
+      0.8792472804640759,
+      0.6859435271959131,
+      0.5041758518057395
+    ],
+    "resamplings_per_repeat": 0.515625,
+    "final_ess_fraction": 0.5243368979107381,
+    "seconds": 0.14362238999456167,
+    "costs": {
+      "transition_samples": 16384,
+      "reward_evaluations": 8192,
+      "value_evaluations": 6144
+    },
+    "costs_per_repeat": {
+      "transition_samples": 64.0,
+      "reward_evaluations": 32.0,
+      "value_evaluations": 24.0
+    },
+    "shared_calibration_costs": {
+      "transition_samples": 74752,
+      "reward_evaluations": 24960
+    }
+  },
+  {
+    "problem": "gaussian",
+    "seed": 60017,
+    "method": "empirical-k16-sparse-n8",
+    "particles": 8,
+    "cdf_mse": 0.01336019160116704,
+    "cdf_mse_standard_error": 0.0010302521495912573,
+    "pooled_cdf_mse": 0.0009454496742412528,
+    "positive_mass_mse": 0.0026216819534184534,
+    "positive_mass": 0.9895008726528636,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 1.2233566280261503,
+    "mean_log_reward": -0.8973115198812472,
+    "checkpoint_ess_fractions": [
+      0.6742348431033173,
+      0.494231543511629,
+      0.49665701943080537
+    ],
+    "resamplings_per_repeat": 1.18359375,
+    "final_ess_fraction": 0.6907415654836617,
+    "seconds": 0.24632144800852984,
+    "costs": {
+      "transition_samples": 16384,
+      "reward_evaluations": 8192,
+      "value_evaluations": 6144
+    },
+    "costs_per_repeat": {
+      "transition_samples": 64.0,
+      "reward_evaluations": 32.0,
+      "value_evaluations": 24.0
+    },
+    "shared_calibration_costs": {
+      "transition_samples": 74752,
+      "reward_evaluations": 24960
+    }
+  },
+  {
+    "problem": "gaussian",
+    "seed": 60017,
+    "method": "future2-sparse-n8",
+    "particles": 8,
+    "cdf_mse": 0.012701652607009162,
+    "cdf_mse_standard_error": 0.0009400011990579448,
+    "pooled_cdf_mse": 0.00023376833699216676,
+    "positive_mass_mse": 0.0009457403144854221,
+    "positive_mass": 0.9939658228982706,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 1.2908899556337194,
+    "mean_log_reward": -0.8116864813995973,
+    "checkpoint_ess_fractions": [
+      0.39923586128308824,
+      0.4047780616224261,
+      0.48388372293103316
+    ],
+    "resamplings_per_repeat": 2.1015625,
+    "final_ess_fraction": 0.6907356314862494,
+    "seconds": 0.02080389391630888,
+    "costs": {
+      "transition_samples": 53248,
+      "reward_evaluations": 14336,
+      "value_evaluations": 18432
+    },
+    "costs_per_repeat": {
+      "transition_samples": 208.0,
+      "reward_evaluations": 56.0,
+      "value_evaluations": 72.0
+    },
+    "shared_calibration_costs": {}
+  },
+  {
+    "problem": "gaussian",
+    "seed": 60017,
+    "method": "exact-value-sparse-n8",
+    "particles": 8,
+    "cdf_mse": 0.013105736961426962,
+    "cdf_mse_standard_error": 0.0009736594186025935,
+    "pooled_cdf_mse": 0.0011439980495993366,
+    "positive_mass_mse": 0.0006133211848269662,
+    "positive_mass": 0.9910023844244982,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 1.2157867191143552,
+    "mean_log_reward": -0.9095390142692803,
+    "checkpoint_ess_fractions": [
+      0.6877937082076834,
+      0.476504761831796,
+      0.5121690492419977
+    ],
+    "resamplings_per_repeat": 1.0859375,
+    "final_ess_fraction": 0.6721062150550903,
+    "seconds": 0.012127647991292179,
+    "costs": {
+      "transition_samples": 16384,
+      "reward_evaluations": 2048,
+      "value_evaluations": 6144,
+      "analytic_component_integrals": 6144
+    },
+    "costs_per_repeat": {
+      "transition_samples": 64.0,
+      "reward_evaluations": 8.0,
+      "value_evaluations": 24.0,
+      "analytic_component_integrals": 24.0
+    },
+    "shared_calibration_costs": {}
+  },
+  {
+    "problem": "mixture",
+    "seed": 60011,
+    "method": "terminal-n8",
+    "particles": 8,
+    "cdf_mse": 0.05663564765401692,
+    "cdf_mse_standard_error": 0.005432067055912845,
+    "pooled_cdf_mse": 0.007284300837405659,
+    "positive_mass_mse": 0.12462871614574547,
+    "positive_mass": 0.634327091297199,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 0.6517052574383816,
+    "mean_log_reward": -0.9731149659247156,
+    "checkpoint_ess_fractions": [],
+    "resamplings_per_repeat": 0.0,
+    "final_ess_fraction": 0.4145764653097148,
+    "seconds": 0.009895220980979502,
+    "costs": {
+      "transition_samples": 16384,
+      "reward_evaluations": 2048
+    },
+    "costs_per_repeat": {
+      "transition_samples": 64.0,
+      "reward_evaluations": 8.0
+    },
+    "shared_calibration_costs": {}
+  },
+  {
+    "problem": "mixture",
+    "seed": 60011,
+    "method": "terminal-n16",
+    "particles": 16,
+    "cdf_mse": 0.02019731244112729,
+    "cdf_mse_standard_error": 0.0025961844990463924,
+    "pooled_cdf_mse": 0.0012027626887056093,
+    "positive_mass_mse": 0.03908016672577915,
+    "positive_mass": 0.7150305931035326,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 0.936027854737868,
+    "mean_log_reward": -0.7623425914833123,
+    "checkpoint_ess_fractions": [],
+    "resamplings_per_repeat": 0.0,
+    "final_ess_fraction": 0.3322790486902317,
+    "seconds": 0.015499235014431179,
+    "costs": {
+      "transition_samples": 32768,
+      "reward_evaluations": 4096
+    },
+    "costs_per_repeat": {
+      "transition_samples": 128.0,
+      "reward_evaluations": 16.0
+    },
+    "shared_calibration_costs": {}
+  },
+  {
+    "problem": "mixture",
+    "seed": 60011,
+    "method": "terminal-n32",
+    "particles": 32,
+    "cdf_mse": 0.007289861935826444,
+    "cdf_mse_standard_error": 0.0005618065813421275,
+    "pooled_cdf_mse": 0.0002841836299990292,
+    "positive_mass_mse": 0.01094137267695558,
+    "positive_mass": 0.745151084021989,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 1.0460693842441051,
+    "mean_log_reward": -0.6877185948141622,
+    "checkpoint_ess_fractions": [],
+    "resamplings_per_repeat": 0.0,
+    "final_ess_fraction": 0.3187947518641041,
+    "seconds": 0.027773150010034442,
+    "costs": {
+      "transition_samples": 65536,
+      "reward_evaluations": 8192
+    },
+    "costs_per_repeat": {
+      "transition_samples": 256.0,
+      "reward_evaluations": 32.0
+    },
+    "shared_calibration_costs": {}
+  },
+  {
+    "problem": "mixture",
+    "seed": 60011,
+    "method": "terminal-n64",
+    "particles": 64,
+    "cdf_mse": 0.003172134630478356,
+    "cdf_mse_standard_error": 0.00020366391624713757,
+    "pooled_cdf_mse": 7.2529059016309e-05,
+    "positive_mass_mse": 0.004344549315076546,
+    "positive_mass": 0.7560108564012238,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 1.0990573903321752,
+    "mean_log_reward": -0.6625045954508483,
+    "checkpoint_ess_fractions": [],
+    "resamplings_per_repeat": 0.0,
+    "final_ess_fraction": 0.31621110157052823,
+    "seconds": 0.05327760404907167,
+    "costs": {
+      "transition_samples": 131072,
+      "reward_evaluations": 16384
+    },
+    "costs_per_repeat": {
+      "transition_samples": 512.0,
+      "reward_evaluations": 64.0
+    },
+    "shared_calibration_costs": {}
+  },
+  {
+    "problem": "mixture",
+    "seed": 60011,
+    "method": "point-sparse-n8",
+    "particles": 8,
+    "cdf_mse": 0.03866158103449195,
+    "cdf_mse_standard_error": 0.004177908055004969,
+    "pooled_cdf_mse": 0.003614638519787687,
+    "positive_mass_mse": 0.0880757839120919,
+    "positive_mass": 0.6780150259183184,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 0.7923350316149562,
+    "mean_log_reward": -0.8824998453858011,
+    "checkpoint_ess_fractions": [
+      0.4398988363005024,
+      0.6954940057756411,
+      0.7558472675645183
+    ],
+    "resamplings_per_repeat": 0.9765625,
+    "final_ess_fraction": 0.7636766705613729,
+    "seconds": 0.01769888203125447,
+    "costs": {
+      "transition_samples": 16384,
+      "reward_evaluations": 8192,
+      "value_evaluations": 6144
+    },
+    "costs_per_repeat": {
+      "transition_samples": 64.0,
+      "reward_evaluations": 32.0,
+      "value_evaluations": 24.0
+    },
+    "shared_calibration_costs": {}
+  },
+  {
+    "problem": "mixture",
+    "seed": 60011,
+    "method": "mean-sparse-n8",
+    "particles": 8,
+    "cdf_mse": 0.04193121963389138,
+    "cdf_mse_standard_error": 0.004491685390707627,
+    "pooled_cdf_mse": 0.0038035374382116216,
+    "positive_mass_mse": 0.09671045732094044,
+    "positive_mass": 0.6750775870786907,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 0.7847119135319071,
+    "mean_log_reward": -0.8920988034613705,
+    "checkpoint_ess_fractions": [
+      0.47372084774040624,
+      0.6844959949426576,
+      0.7777597309432442
+    ],
+    "resamplings_per_repeat": 0.98828125,
+    "final_ess_fraction": 0.7955619323262002,
+    "seconds": 0.052096826024353504,
+    "costs": {
+      "transition_samples": 16384,
+      "reward_evaluations": 8192,
+      "value_evaluations": 6144
+    },
+    "costs_per_repeat": {
+      "transition_samples": 64.0,
+      "reward_evaluations": 32.0,
+      "value_evaluations": 24.0
+    },
+    "shared_calibration_costs": {
+      "transition_samples": 74752,
+      "reward_evaluations": 24960
+    }
+  },
+  {
+    "problem": "mixture",
+    "seed": 60011,
+    "method": "gaussian-sparse-n8",
+    "particles": 8,
+    "cdf_mse": 0.03984383133968708,
+    "cdf_mse_standard_error": 0.004465993667672084,
+    "pooled_cdf_mse": 0.0035451096604039237,
+    "positive_mass_mse": 0.09027565574199976,
+    "positive_mass": 0.6789804384320283,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 0.7932324746744703,
+    "mean_log_reward": -0.8831664740507589,
+    "checkpoint_ess_fractions": [
+      0.4975370230002688,
+      0.673753893580008,
+      0.759869594114694
+    ],
+    "resamplings_per_repeat": 0.91796875,
+    "final_ess_fraction": 0.7827082849417646,
+    "seconds": 0.05397961300332099,
+    "costs": {
+      "transition_samples": 16384,
+      "reward_evaluations": 8192,
+      "value_evaluations": 6144
+    },
+    "costs_per_repeat": {
+      "transition_samples": 64.0,
+      "reward_evaluations": 32.0,
+      "value_evaluations": 24.0
+    },
+    "shared_calibration_costs": {
+      "transition_samples": 74752,
+      "reward_evaluations": 24960
+    }
+  },
+  {
+    "problem": "mixture",
+    "seed": 60011,
+    "method": "empirical-sparse-n8",
+    "particles": 8,
+    "cdf_mse": 0.041741831195584125,
+    "cdf_mse_standard_error": 0.0046291741026827015,
+    "pooled_cdf_mse": 0.004119876124652509,
+    "positive_mass_mse": 0.09565046461179989,
+    "positive_mass": 0.6717962264113273,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 0.7667438418405503,
+    "mean_log_reward": -0.89821182434639,
+    "checkpoint_ess_fractions": [
+      0.5214264081395309,
+      0.6472085866864818,
+      0.7755142907585875
+    ],
+    "resamplings_per_repeat": 0.8984375,
+    "final_ess_fraction": 0.7916920424169066,
+    "seconds": 0.14806115604005754,
+    "costs": {
+      "transition_samples": 16384,
+      "reward_evaluations": 8192,
+      "value_evaluations": 6144
+    },
+    "costs_per_repeat": {
+      "transition_samples": 64.0,
+      "reward_evaluations": 32.0,
+      "value_evaluations": 24.0
+    },
+    "shared_calibration_costs": {
+      "transition_samples": 74752,
+      "reward_evaluations": 24960
+    }
+  },
+  {
+    "problem": "mixture",
+    "seed": 60011,
+    "method": "direct-sparse-n8",
+    "particles": 8,
+    "cdf_mse": 0.04176026482782304,
+    "cdf_mse_standard_error": 0.004690028059561827,
+    "pooled_cdf_mse": 0.004812743162413086,
+    "positive_mass_mse": 0.09532491547324834,
+    "positive_mass": 0.6628853379860569,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 0.7396249159117927,
+    "mean_log_reward": -0.9201972730162602,
+    "checkpoint_ess_fractions": [
+      0.5257861339679244,
+      0.6435897879990031,
+      0.7851656455479139
+    ],
+    "resamplings_per_repeat": 0.8828125,
+    "final_ess_fraction": 0.7858673595874348,
+    "seconds": 0.14501351700164378,
+    "costs": {
+      "transition_samples": 16384,
+      "reward_evaluations": 8192,
+      "value_evaluations": 6144
+    },
+    "costs_per_repeat": {
+      "transition_samples": 64.0,
+      "reward_evaluations": 32.0,
+      "value_evaluations": 24.0
+    },
+    "shared_calibration_costs": {
+      "transition_samples": 74752,
+      "reward_evaluations": 24960
+    }
+  },
+  {
+    "problem": "mixture",
+    "seed": 60011,
+    "method": "point-sparse-n16",
+    "particles": 16,
+    "cdf_mse": 0.012511216155096379,
+    "cdf_mse_standard_error": 0.0009637848469223793,
+    "pooled_cdf_mse": 0.0007251750979795124,
+    "positive_mass_mse": 0.024451360263340233,
+    "positive_mass": 0.7283929688167984,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 0.9877128587066173,
+    "mean_log_reward": -0.7369500434728039,
+    "checkpoint_ess_fractions": [
+      0.36139544289689346,
+      0.6744365163392956,
+      0.7292944227885937
+    ],
+    "resamplings_per_repeat": 1.21484375,
+    "final_ess_fraction": 0.7347530610301148,
+    "seconds": 0.028117961017414927,
+    "costs": {
+      "transition_samples": 32768,
+      "reward_evaluations": 16384,
+      "value_evaluations": 12288
+    },
+    "costs_per_repeat": {
+      "transition_samples": 128.0,
+      "reward_evaluations": 64.0,
+      "value_evaluations": 48.0
+    },
+    "shared_calibration_costs": {}
+  },
+  {
+    "problem": "mixture",
+    "seed": 60011,
+    "method": "mean-sparse-n16",
+    "particles": 16,
+    "cdf_mse": 0.013666162655253165,
+    "cdf_mse_standard_error": 0.0017216137221610082,
+    "pooled_cdf_mse": 0.0007559818208436557,
+    "positive_mass_mse": 0.0287923906662738,
+    "positive_mass": 0.7274266718615361,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 0.9848671974294969,
+    "mean_log_reward": -0.7484114866518393,
+    "checkpoint_ess_fractions": [
+      0.368377030863096,
+      0.6408211085255349,
+      0.749505761865102
+    ],
+    "resamplings_per_repeat": 1.25390625,
+    "final_ess_fraction": 0.7537456031961813,
+    "seconds": 0.09805519203655422,
+    "costs": {
+      "transition_samples": 32768,
+      "reward_evaluations": 16384,
+      "value_evaluations": 12288
+    },
+    "costs_per_repeat": {
+      "transition_samples": 128.0,
+      "reward_evaluations": 64.0,
+      "value_evaluations": 48.0
+    },
+    "shared_calibration_costs": {
+      "transition_samples": 74752,
+      "reward_evaluations": 24960
+    }
+  },
+  {
+    "problem": "mixture",
+    "seed": 60011,
+    "method": "gaussian-sparse-n16",
+    "particles": 16,
+    "cdf_mse": 0.012219566091345637,
+    "cdf_mse_standard_error": 0.0014779899463715003,
+    "pooled_cdf_mse": 0.0006219784746491807,
+    "positive_mass_mse": 0.02413592263854409,
+    "positive_mass": 0.7307534777182838,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 0.998792621559673,
+    "mean_log_reward": -0.729727192366181,
+    "checkpoint_ess_fractions": [
+      0.4346080020191179,
+      0.6780207005817211,
+      0.7471077306994554
+    ],
+    "resamplings_per_repeat": 1.140625,
+    "final_ess_fraction": 0.747399859113081,
+    "seconds": 0.0990388699574396,
+    "costs": {
+      "transition_samples": 32768,
+      "reward_evaluations": 16384,
+      "value_evaluations": 12288
+    },
+    "costs_per_repeat": {
+      "transition_samples": 128.0,
+      "reward_evaluations": 64.0,
+      "value_evaluations": 48.0
+    },
+    "shared_calibration_costs": {
+      "transition_samples": 74752,
+      "reward_evaluations": 24960
+    }
+  },
+  {
+    "problem": "mixture",
+    "seed": 60011,
+    "method": "empirical-sparse-n16",
+    "particles": 16,
+    "cdf_mse": 0.014114694056609083,
+    "cdf_mse_standard_error": 0.0018808463292722263,
+    "pooled_cdf_mse": 0.0009669148300174563,
+    "positive_mass_mse": 0.029745631026038853,
+    "positive_mass": 0.720182605560066,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 0.9635083816196468,
+    "mean_log_reward": -0.7536230411546144,
+    "checkpoint_ess_fractions": [
+      0.4659893877335326,
+      0.633305476762325,
+      0.7397128640379015
+    ],
+    "resamplings_per_repeat": 1.0703125,
+    "final_ess_fraction": 0.7427961733380009,
+    "seconds": 0.2926266900030896,
+    "costs": {
+      "transition_samples": 32768,
+      "reward_evaluations": 16384,
+      "value_evaluations": 12288
+    },
+    "costs_per_repeat": {
+      "transition_samples": 128.0,
+      "reward_evaluations": 64.0,
+      "value_evaluations": 48.0
+    },
+    "shared_calibration_costs": {
+      "transition_samples": 74752,
+      "reward_evaluations": 24960
+    }
+  },
+  {
+    "problem": "mixture",
+    "seed": 60011,
+    "method": "direct-sparse-n16",
+    "particles": 16,
+    "cdf_mse": 0.013465614143874156,
+    "cdf_mse_standard_error": 0.001856075155907978,
+    "pooled_cdf_mse": 0.000634105074998683,
+    "positive_mass_mse": 0.02756835606999315,
+    "positive_mass": 0.7305042613463826,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 0.9967784705786603,
+    "mean_log_reward": -0.7323542160929941,
+    "checkpoint_ess_fractions": [
+      0.46844967202158083,
+      0.6292011188707558,
+      0.7480117937310453
+    ],
+    "resamplings_per_repeat": 1.08203125,
+    "final_ess_fraction": 0.7514395448490666,
+    "seconds": 0.2910151140531525,
+    "costs": {
+      "transition_samples": 32768,
+      "reward_evaluations": 16384,
+      "value_evaluations": 12288
+    },
+    "costs_per_repeat": {
+      "transition_samples": 128.0,
+      "reward_evaluations": 64.0,
+      "value_evaluations": 48.0
+    },
+    "shared_calibration_costs": {
+      "transition_samples": 74752,
+      "reward_evaluations": 24960
+    }
+  },
+  {
+    "problem": "mixture",
+    "seed": 60011,
+    "method": "point-half-sparse-n8",
+    "particles": 8,
+    "cdf_mse": 0.05653140712865735,
+    "cdf_mse_standard_error": 0.005435174466787813,
+    "pooled_cdf_mse": 0.007288631082494635,
+    "positive_mass_mse": 0.12464027756790061,
+    "positive_mass": 0.6342607686237274,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 0.6514763517922887,
+    "mean_log_reward": -0.9735058573569259,
+    "checkpoint_ess_fractions": [
+      0.7177303385069626,
+      0.6870680064700143,
+      0.6796806460493354
+    ],
+    "resamplings_per_repeat": 0.02734375,
+    "final_ess_fraction": 0.42769448318099923,
+    "seconds": 0.012758522992953658,
+    "costs": {
+      "transition_samples": 16384,
+      "reward_evaluations": 8192,
+      "value_evaluations": 6144
+    },
+    "costs_per_repeat": {
+      "transition_samples": 64.0,
+      "reward_evaluations": 32.0,
+      "value_evaluations": 24.0
+    },
+    "shared_calibration_costs": {}
+  },
+  {
+    "problem": "mixture",
+    "seed": 60011,
+    "method": "empirical-half-sparse-n8",
+    "particles": 8,
+    "cdf_mse": 0.0565453949941514,
+    "cdf_mse_standard_error": 0.005434705643180897,
+    "pooled_cdf_mse": 0.007306934332280889,
+    "positive_mass_mse": 0.1246225922221139,
+    "positive_mass": 0.6340125137583649,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 0.6510612058448699,
+    "mean_log_reward": -0.9741198212967934,
+    "checkpoint_ess_fractions": [
+      0.7955679782333721,
+      0.7292561671741895,
+      0.6914289388068795
+    ],
+    "resamplings_per_repeat": 0.0234375,
+    "final_ess_fraction": 0.4257900400613346,
+    "seconds": 0.14839266997296363,
+    "costs": {
+      "transition_samples": 16384,
+      "reward_evaluations": 8192,
+      "value_evaluations": 6144
+    },
+    "costs_per_repeat": {
+      "transition_samples": 64.0,
+      "reward_evaluations": 32.0,
+      "value_evaluations": 24.0
+    },
+    "shared_calibration_costs": {
+      "transition_samples": 74752,
+      "reward_evaluations": 24960
+    }
+  },
+  {
+    "problem": "mixture",
+    "seed": 60011,
+    "method": "empirical-k16-sparse-n8",
+    "particles": 8,
+    "cdf_mse": 0.040069591133533075,
+    "cdf_mse_standard_error": 0.004444784228088741,
+    "pooled_cdf_mse": 0.00419124243421739,
+    "positive_mass_mse": 0.09053533064138651,
+    "positive_mass": 0.6722563841731597,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 0.7619455221381555,
+    "mean_log_reward": -0.8882608117871522,
+    "checkpoint_ess_fractions": [
+      0.5223336920141936,
+      0.6444979962926141,
+      0.7652897489197548
+    ],
+    "resamplings_per_repeat": 0.90625,
+    "final_ess_fraction": 0.7868516649392638,
+    "seconds": 0.25177172699477524,
+    "costs": {
+      "transition_samples": 16384,
+      "reward_evaluations": 8192,
+      "value_evaluations": 6144
+    },
+    "costs_per_repeat": {
+      "transition_samples": 64.0,
+      "reward_evaluations": 32.0,
+      "value_evaluations": 24.0
+    },
+    "shared_calibration_costs": {
+      "transition_samples": 74752,
+      "reward_evaluations": 24960
+    }
+  },
+  {
+    "problem": "mixture",
+    "seed": 60011,
+    "method": "future2-sparse-n8",
+    "particles": 8,
+    "cdf_mse": 0.040432022431932016,
+    "cdf_mse_standard_error": 0.004361792262795251,
+    "pooled_cdf_mse": 0.0027728417558264148,
+    "positive_mass_mse": 0.08886947957917887,
+    "positive_mass": 0.691872736571089,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 0.8378742696563408,
+    "mean_log_reward": -0.8780709882852549,
+    "checkpoint_ess_fractions": [
+      0.43551586456324903,
+      0.6007778758585204,
+      0.7284332257506727
+    ],
+    "resamplings_per_repeat": 1.18359375,
+    "final_ess_fraction": 0.7795593718685068,
+    "seconds": 0.03328180394601077,
+    "costs": {
+      "transition_samples": 53248,
+      "reward_evaluations": 14336,
+      "value_evaluations": 18432
+    },
+    "costs_per_repeat": {
+      "transition_samples": 208.0,
+      "reward_evaluations": 56.0,
+      "value_evaluations": 72.0
+    },
+    "shared_calibration_costs": {}
+  },
+  {
+    "problem": "mixture",
+    "seed": 60011,
+    "method": "exact-value-sparse-n8",
+    "particles": 8,
+    "cdf_mse": 0.0417909916620012,
+    "cdf_mse_standard_error": 0.0046056009392461605,
+    "pooled_cdf_mse": 0.00399849338660994,
+    "positive_mass_mse": 0.09480391640120173,
+    "positive_mass": 0.6736131746440184,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 0.7744438722705207,
+    "mean_log_reward": -0.895162456461418,
+    "checkpoint_ess_fractions": [
+      0.5212026882218659,
+      0.6488660090434544,
+      0.7735171575791362
+    ],
+    "resamplings_per_repeat": 0.89453125,
+    "final_ess_fraction": 0.7827188076730198,
+    "seconds": 0.022091411985456944,
+    "costs": {
+      "transition_samples": 16384,
+      "reward_evaluations": 2048,
+      "value_evaluations": 6144,
+      "analytic_component_integrals": 12288
+    },
+    "costs_per_repeat": {
+      "transition_samples": 64.0,
+      "reward_evaluations": 8.0,
+      "value_evaluations": 24.0,
+      "analytic_component_integrals": 48.0
+    },
+    "shared_calibration_costs": {}
+  },
+  {
+    "problem": "mixture",
+    "seed": 60017,
+    "method": "terminal-n8",
+    "particles": 8,
+    "cdf_mse": 0.0638462805676335,
+    "cdf_mse_standard_error": 0.005716099063660149,
+    "pooled_cdf_mse": 0.010292536117016395,
+    "positive_mass_mse": 0.13539316117882666,
+    "positive_mass": 0.6096122055583555,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 0.5501602543426093,
+    "mean_log_reward": -1.0491068780063848,
+    "checkpoint_ess_fractions": [],
+    "resamplings_per_repeat": 0.0,
+    "final_ess_fraction": 0.4131197818923288,
+    "seconds": 0.008814505999907851,
+    "costs": {
+      "transition_samples": 16384,
+      "reward_evaluations": 2048
+    },
+    "costs_per_repeat": {
+      "transition_samples": 64.0,
+      "reward_evaluations": 8.0
+    },
+    "shared_calibration_costs": {}
+  },
+  {
+    "problem": "mixture",
+    "seed": 60017,
+    "method": "terminal-n16",
+    "particles": 16,
+    "cdf_mse": 0.017982480331408538,
+    "cdf_mse_standard_error": 0.0018306193199149406,
+    "pooled_cdf_mse": 0.001034404971310258,
+    "positive_mass_mse": 0.030062203049286425,
+    "positive_mass": 0.7188948054506482,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 0.9572317617100462,
+    "mean_log_reward": -0.7474166289503243,
+    "checkpoint_ess_fractions": [],
+    "resamplings_per_repeat": 0.0,
+    "final_ess_fraction": 0.33000115780980566,
+    "seconds": 0.01536329195369035,
+    "costs": {
+      "transition_samples": 32768,
+      "reward_evaluations": 4096
+    },
+    "costs_per_repeat": {
+      "transition_samples": 128.0,
+      "reward_evaluations": 16.0
+    },
+    "shared_calibration_costs": {}
+  },
+  {
+    "problem": "mixture",
+    "seed": 60017,
+    "method": "terminal-n32",
+    "particles": 32,
+    "cdf_mse": 0.006653562836060506,
+    "cdf_mse_standard_error": 0.0004355534616081409,
+    "pooled_cdf_mse": 0.00024708704693128476,
+    "positive_mass_mse": 0.009735795243570902,
+    "positive_mass": 0.7466672856898575,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 1.0538805292897582,
+    "mean_log_reward": -0.6841422072362029,
+    "checkpoint_ess_fractions": [],
+    "resamplings_per_repeat": 0.0,
+    "final_ess_fraction": 0.31662449330786036,
+    "seconds": 0.027525704936124384,
+    "costs": {
+      "transition_samples": 65536,
+      "reward_evaluations": 8192
+    },
+    "costs_per_repeat": {
+      "transition_samples": 256.0,
+      "reward_evaluations": 32.0
+    },
+    "shared_calibration_costs": {}
+  },
+  {
+    "problem": "mixture",
+    "seed": 60017,
+    "method": "terminal-n64",
+    "particles": 64,
+    "cdf_mse": 0.0029316347981501963,
+    "cdf_mse_standard_error": 0.00018965025435109157,
+    "pooled_cdf_mse": 1.9584902485336985e-05,
+    "positive_mass_mse": 0.0041385056591754805,
+    "positive_mass": 0.765311485300513,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 1.127809897566745,
+    "mean_log_reward": -0.6469342876332588,
+    "checkpoint_ess_fractions": [],
+    "resamplings_per_repeat": 0.0,
+    "final_ess_fraction": 0.32040319757327196,
+    "seconds": 0.05334456998389214,
+    "costs": {
+      "transition_samples": 131072,
+      "reward_evaluations": 16384
+    },
+    "costs_per_repeat": {
+      "transition_samples": 512.0,
+      "reward_evaluations": 64.0
+    },
+    "shared_calibration_costs": {}
+  },
+  {
+    "problem": "mixture",
+    "seed": 60017,
+    "method": "point-sparse-n8",
+    "particles": 8,
+    "cdf_mse": 0.0520484682931084,
+    "cdf_mse_standard_error": 0.005088852766992902,
+    "pooled_cdf_mse": 0.007492845395051858,
+    "positive_mass_mse": 0.11785571269909724,
+    "positive_mass": 0.6349889121373857,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 0.6418019479235807,
+    "mean_log_reward": -1.004385037866389,
+    "checkpoint_ess_fractions": [
+      0.4379282262154849,
+      0.719994027020028,
+      0.7394515514980345
+    ],
+    "resamplings_per_repeat": 0.9609375,
+    "final_ess_fraction": 0.7569928476150973,
+    "seconds": 0.01678755402099341,
+    "costs": {
+      "transition_samples": 16384,
+      "reward_evaluations": 8192,
+      "value_evaluations": 6144
+    },
+    "costs_per_repeat": {
+      "transition_samples": 64.0,
+      "reward_evaluations": 32.0,
+      "value_evaluations": 24.0
+    },
+    "shared_calibration_costs": {}
+  },
+  {
+    "problem": "mixture",
+    "seed": 60017,
+    "method": "mean-sparse-n8",
+    "particles": 8,
+    "cdf_mse": 0.052579657168358496,
+    "cdf_mse_standard_error": 0.00524487153297051,
+    "pooled_cdf_mse": 0.007752948302097988,
+    "positive_mass_mse": 0.11832590680094277,
+    "positive_mass": 0.6334243073262048,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 0.6360731470670934,
+    "mean_log_reward": -1.000793350846976,
+    "checkpoint_ess_fractions": [
+      0.47553526400083723,
+      0.7191863859463988,
+      0.7595078047368916
+    ],
+    "resamplings_per_repeat": 0.9609375,
+    "final_ess_fraction": 0.7854512400764664,
+    "seconds": 0.054783503990620375,
+    "costs": {
+      "transition_samples": 16384,
+      "reward_evaluations": 8192,
+      "value_evaluations": 6144
+    },
+    "costs_per_repeat": {
+      "transition_samples": 64.0,
+      "reward_evaluations": 32.0,
+      "value_evaluations": 24.0
+    },
+    "shared_calibration_costs": {
+      "transition_samples": 74752,
+      "reward_evaluations": 24960
+    }
+  },
+  {
+    "problem": "mixture",
+    "seed": 60017,
+    "method": "gaussian-sparse-n8",
+    "particles": 8,
+    "cdf_mse": 0.05050989801297506,
+    "cdf_mse_standard_error": 0.0050931118206827474,
+    "pooled_cdf_mse": 0.007188982977854372,
+    "positive_mass_mse": 0.11368524759798093,
+    "positive_mass": 0.6369296162417444,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 0.6549812264078687,
+    "mean_log_reward": -0.9881717322887984,
+    "checkpoint_ess_fractions": [
+      0.49781241846878,
+      0.7004216488476834,
+      0.7454587834891072
+    ],
+    "resamplings_per_repeat": 0.91015625,
+    "final_ess_fraction": 0.7657682405621495,
+    "seconds": 0.06585800205357373,
+    "costs": {
+      "transition_samples": 16384,
+      "reward_evaluations": 8192,
+      "value_evaluations": 6144
+    },
+    "costs_per_repeat": {
+      "transition_samples": 64.0,
+      "reward_evaluations": 32.0,
+      "value_evaluations": 24.0
+    },
+    "shared_calibration_costs": {
+      "transition_samples": 74752,
+      "reward_evaluations": 24960
+    }
+  },
+  {
+    "problem": "mixture",
+    "seed": 60017,
+    "method": "empirical-sparse-n8",
+    "particles": 8,
+    "cdf_mse": 0.05362629927159748,
+    "cdf_mse_standard_error": 0.005286055468100943,
+    "pooled_cdf_mse": 0.007512253349249825,
+    "positive_mass_mse": 0.12101223115318516,
+    "positive_mass": 0.634987667923837,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 0.6438871379245079,
+    "mean_log_reward": -0.9982328160494025,
+    "checkpoint_ess_fractions": [
+      0.5194699175399593,
+      0.6768104980413068,
+      0.758483379710959
+    ],
+    "resamplings_per_repeat": 0.875,
+    "final_ess_fraction": 0.7790541884896334,
+    "seconds": 0.14963470597285777,
+    "costs": {
+      "transition_samples": 16384,
+      "reward_evaluations": 8192,
+      "value_evaluations": 6144
+    },
+    "costs_per_repeat": {
+      "transition_samples": 64.0,
+      "reward_evaluations": 32.0,
+      "value_evaluations": 24.0
+    },
+    "shared_calibration_costs": {
+      "transition_samples": 74752,
+      "reward_evaluations": 24960
+    }
+  },
+  {
+    "problem": "mixture",
+    "seed": 60017,
+    "method": "direct-sparse-n8",
+    "particles": 8,
+    "cdf_mse": 0.055213504180840756,
+    "cdf_mse_standard_error": 0.005421845121627522,
+    "pooled_cdf_mse": 0.008172049677163144,
+    "positive_mass_mse": 0.12610109065057398,
+    "positive_mass": 0.6290389971573429,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 0.6212670893952306,
+    "mean_log_reward": -1.0167446985365154,
+    "checkpoint_ess_fractions": [
+      0.5220662103632643,
+      0.6774120913997959,
+      0.7730921145417934
+    ],
+    "resamplings_per_repeat": 0.875,
+    "final_ess_fraction": 0.7808588959488922,
+    "seconds": 0.14398984995204955,
+    "costs": {
+      "transition_samples": 16384,
+      "reward_evaluations": 8192,
+      "value_evaluations": 6144
+    },
+    "costs_per_repeat": {
+      "transition_samples": 64.0,
+      "reward_evaluations": 32.0,
+      "value_evaluations": 24.0
+    },
+    "shared_calibration_costs": {
+      "transition_samples": 74752,
+      "reward_evaluations": 24960
+    }
+  },
+  {
+    "problem": "mixture",
+    "seed": 60017,
+    "method": "point-sparse-n16",
+    "particles": 16,
+    "cdf_mse": 0.012881965816264222,
+    "cdf_mse_standard_error": 0.0010091432383017849,
+    "pooled_cdf_mse": 0.0004233183000856956,
+    "positive_mass_mse": 0.026412207791400064,
+    "positive_mass": 0.7399208247591365,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 1.0231467869141802,
+    "mean_log_reward": -0.7222340521969264,
+    "checkpoint_ess_fractions": [
+      0.3563834592164673,
+      0.6721981520214189,
+      0.7551194694590657
+    ],
+    "resamplings_per_repeat": 1.23828125,
+    "final_ess_fraction": 0.7724598499750663,
+    "seconds": 0.026679123053327203,
+    "costs": {
+      "transition_samples": 32768,
+      "reward_evaluations": 16384,
+      "value_evaluations": 12288
+    },
+    "costs_per_repeat": {
+      "transition_samples": 128.0,
+      "reward_evaluations": 64.0,
+      "value_evaluations": 48.0
+    },
+    "shared_calibration_costs": {}
+  },
+  {
+    "problem": "mixture",
+    "seed": 60017,
+    "method": "mean-sparse-n16",
+    "particles": 16,
+    "cdf_mse": 0.013331377653178843,
+    "cdf_mse_standard_error": 0.001436914068931432,
+    "pooled_cdf_mse": 0.0005215894966116075,
+    "positive_mass_mse": 0.028434342411205606,
+    "positive_mass": 0.7344459310800859,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 1.00944507511016,
+    "mean_log_reward": -0.7220185002875508,
+    "checkpoint_ess_fractions": [
+      0.3690850245506705,
+      0.6473067775476479,
+      0.7422184814768943
+    ],
+    "resamplings_per_repeat": 1.2578125,
+    "final_ess_fraction": 0.768537746119513,
+    "seconds": 0.10281936905812472,
+    "costs": {
+      "transition_samples": 32768,
+      "reward_evaluations": 16384,
+      "value_evaluations": 12288
+    },
+    "costs_per_repeat": {
+      "transition_samples": 128.0,
+      "reward_evaluations": 64.0,
+      "value_evaluations": 48.0
+    },
+    "shared_calibration_costs": {
+      "transition_samples": 74752,
+      "reward_evaluations": 24960
+    }
+  },
+  {
+    "problem": "mixture",
+    "seed": 60017,
+    "method": "gaussian-sparse-n16",
+    "particles": 16,
+    "cdf_mse": 0.01087144560179108,
+    "cdf_mse_standard_error": 0.0010899841203285939,
+    "pooled_cdf_mse": 0.00035776959260957976,
+    "positive_mass_mse": 0.021207252305031014,
+    "positive_mass": 0.7440330462225219,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 1.0346728313974412,
+    "mean_log_reward": -0.7149390862026279,
+    "checkpoint_ess_fractions": [
+      0.4270371610828105,
+      0.6749378714538443,
+      0.7407498981232307
+    ],
+    "resamplings_per_repeat": 1.17578125,
+    "final_ess_fraction": 0.7751169083418721,
+    "seconds": 0.11207421496510506,
+    "costs": {
+      "transition_samples": 32768,
+      "reward_evaluations": 16384,
+      "value_evaluations": 12288
+    },
+    "costs_per_repeat": {
+      "transition_samples": 128.0,
+      "reward_evaluations": 64.0,
+      "value_evaluations": 48.0
+    },
+    "shared_calibration_costs": {
+      "transition_samples": 74752,
+      "reward_evaluations": 24960
+    }
+  },
+  {
+    "problem": "mixture",
+    "seed": 60017,
+    "method": "empirical-sparse-n16",
+    "particles": 16,
+    "cdf_mse": 0.012732308102302102,
+    "cdf_mse_standard_error": 0.0015285326658423597,
+    "pooled_cdf_mse": 0.0003526601532603851,
+    "positive_mass_mse": 0.0263384374692982,
+    "positive_mass": 0.7425394225125583,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 1.032070315581762,
+    "mean_log_reward": -0.7077272983035654,
+    "checkpoint_ess_fractions": [
+      0.4571857262709742,
+      0.6340583022453378,
+      0.7414670970901489
+    ],
+    "resamplings_per_repeat": 1.11328125,
+    "final_ess_fraction": 0.7609519994827159,
+    "seconds": 0.310123250936158,
+    "costs": {
+      "transition_samples": 32768,
+      "reward_evaluations": 16384,
+      "value_evaluations": 12288
+    },
+    "costs_per_repeat": {
+      "transition_samples": 128.0,
+      "reward_evaluations": 64.0,
+      "value_evaluations": 48.0
+    },
+    "shared_calibration_costs": {
+      "transition_samples": 74752,
+      "reward_evaluations": 24960
+    }
+  },
+  {
+    "problem": "mixture",
+    "seed": 60017,
+    "method": "direct-sparse-n16",
+    "particles": 16,
+    "cdf_mse": 0.011923712836287197,
+    "cdf_mse_standard_error": 0.0014244369322057998,
+    "pooled_cdf_mse": 0.00039581653178781935,
+    "positive_mass_mse": 0.02458820322472996,
+    "positive_mass": 0.7394703596401857,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 1.0299655572816766,
+    "mean_log_reward": -0.7144899277435911,
+    "checkpoint_ess_fractions": [
+      0.4604268131759891,
+      0.6343039675352722,
+      0.7581910956015563
+    ],
+    "resamplings_per_repeat": 1.10546875,
+    "final_ess_fraction": 0.7663328319946757,
+    "seconds": 0.2841535290936008,
+    "costs": {
+      "transition_samples": 32768,
+      "reward_evaluations": 16384,
+      "value_evaluations": 12288
+    },
+    "costs_per_repeat": {
+      "transition_samples": 128.0,
+      "reward_evaluations": 64.0,
+      "value_evaluations": 48.0
+    },
+    "shared_calibration_costs": {
+      "transition_samples": 74752,
+      "reward_evaluations": 24960
+    }
+  },
+  {
+    "problem": "mixture",
+    "seed": 60017,
+    "method": "point-half-sparse-n8",
+    "particles": 8,
+    "cdf_mse": 0.0636062360605274,
+    "cdf_mse_standard_error": 0.005723691490057528,
+    "pooled_cdf_mse": 0.010346263911116644,
+    "positive_mass_mse": 0.13531621212420003,
+    "positive_mass": 0.6092485681470587,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 0.5481651352866812,
+    "mean_log_reward": -1.0492555089108042,
+    "checkpoint_ess_fractions": [
+      0.722650767231574,
+      0.6945773740904182,
+      0.6813800559948561
+    ],
+    "resamplings_per_repeat": 0.0234375,
+    "final_ess_fraction": 0.4249616825667793,
+    "seconds": 0.012148292968049645,
+    "costs": {
+      "transition_samples": 16384,
+      "reward_evaluations": 8192,
+      "value_evaluations": 6144
+    },
+    "costs_per_repeat": {
+      "transition_samples": 64.0,
+      "reward_evaluations": 32.0,
+      "value_evaluations": 24.0
+    },
+    "shared_calibration_costs": {}
+  },
+  {
+    "problem": "mixture",
+    "seed": 60017,
+    "method": "empirical-half-sparse-n8",
+    "particles": 8,
+    "cdf_mse": 0.06373718070888561,
+    "cdf_mse_standard_error": 0.005719236770597863,
+    "pooled_cdf_mse": 0.010295970157039747,
+    "positive_mass_mse": 0.13534431243799072,
+    "positive_mass": 0.609385963522716,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 0.5504335603297356,
+    "mean_log_reward": -1.0496641132503912,
+    "checkpoint_ess_fractions": [
+      0.7991942371184854,
+      0.7350463978976662,
+      0.6931770905855172
+    ],
+    "resamplings_per_repeat": 0.01171875,
+    "final_ess_fraction": 0.41898334086894173,
+    "seconds": 0.16896071308292449,
+    "costs": {
+      "transition_samples": 16384,
+      "reward_evaluations": 8192,
+      "value_evaluations": 6144
+    },
+    "costs_per_repeat": {
+      "transition_samples": 64.0,
+      "reward_evaluations": 32.0,
+      "value_evaluations": 24.0
+    },
+    "shared_calibration_costs": {
+      "transition_samples": 74752,
+      "reward_evaluations": 24960
+    }
+  },
+  {
+    "problem": "mixture",
+    "seed": 60017,
+    "method": "empirical-k16-sparse-n8",
+    "particles": 8,
+    "cdf_mse": 0.053407899332203475,
+    "cdf_mse_standard_error": 0.005288523414456059,
+    "pooled_cdf_mse": 0.007475992344471107,
+    "positive_mass_mse": 0.11995053242302116,
+    "positive_mass": 0.63520475402003,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 0.6486447898322125,
+    "mean_log_reward": -0.9995263710579483,
+    "checkpoint_ess_fractions": [
+      0.5206557372541771,
+      0.6838158339220718,
+      0.7563928334307106
+    ],
+    "resamplings_per_repeat": 0.87890625,
+    "final_ess_fraction": 0.7801776309241305,
+    "seconds": 0.25444703607354313,
+    "costs": {
+      "transition_samples": 16384,
+      "reward_evaluations": 8192,
+      "value_evaluations": 6144
+    },
+    "costs_per_repeat": {
+      "transition_samples": 64.0,
+      "reward_evaluations": 32.0,
+      "value_evaluations": 24.0
+    },
+    "shared_calibration_costs": {
+      "transition_samples": 74752,
+      "reward_evaluations": 24960
+    }
+  },
+  {
+    "problem": "mixture",
+    "seed": 60017,
+    "method": "future2-sparse-n8",
+    "particles": 8,
+    "cdf_mse": 0.052395724199871124,
+    "cdf_mse_standard_error": 0.005017192092941323,
+    "pooled_cdf_mse": 0.007807764968772537,
+    "positive_mass_mse": 0.1196194348223137,
+    "positive_mass": 0.6287787735158983,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 0.6329078300985098,
+    "mean_log_reward": -0.9975452342768641,
+    "checkpoint_ess_fractions": [
+      0.45283080953034793,
+      0.6110497436721547,
+      0.7302907882379056
+    ],
+    "resamplings_per_repeat": 1.15625,
+    "final_ess_fraction": 0.7750121380152739,
+    "seconds": 0.02849060809239745,
+    "costs": {
+      "transition_samples": 53248,
+      "reward_evaluations": 14336,
+      "value_evaluations": 18432
+    },
+    "costs_per_repeat": {
+      "transition_samples": 208.0,
+      "reward_evaluations": 56.0,
+      "value_evaluations": 72.0
+    },
+    "shared_calibration_costs": {}
+  },
+  {
+    "problem": "mixture",
+    "seed": 60017,
+    "method": "exact-value-sparse-n8",
+    "particles": 8,
+    "cdf_mse": 0.05429757491697483,
+    "cdf_mse_standard_error": 0.005335055424075114,
+    "pooled_cdf_mse": 0.007684413482377475,
+    "positive_mass_mse": 0.12213424321658686,
+    "positive_mass": 0.6333104519595759,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 0.639808134484103,
+    "mean_log_reward": -1.00905639774696,
+    "checkpoint_ess_fractions": [
+      0.5177879198045174,
+      0.6903643733877939,
+      0.7574368043057579
+    ],
+    "resamplings_per_repeat": 0.875,
+    "final_ess_fraction": 0.7838636546279272,
+    "seconds": 0.016225600033067167,
+    "costs": {
+      "transition_samples": 16384,
+      "reward_evaluations": 2048,
+      "value_evaluations": 6144,
+      "analytic_component_integrals": 12288
+    },
+    "costs_per_repeat": {
+      "transition_samples": 64.0,
+      "reward_evaluations": 8.0,
+      "value_evaluations": 24.0,
+      "analytic_component_integrals": 48.0
+    },
+    "shared_calibration_costs": {}
+  }
+]

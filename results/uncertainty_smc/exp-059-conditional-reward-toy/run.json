@@ -1,0 +1,25 @@
+{
+  "commit": "6f96363ef2e38c8fdc4a017be527c3ac68c0b76c",
+  "config": "/home/mlw0719/doit_uncertainty/configs/uncertainty_smc/exp-059-conditional-reward-toy.json",
+  "experiment_id": "exp-059-conditional-reward-toy",
+  "pid": 1566722,
+  "cuda_visible_devices": "3",
+  "started_at": 1792687031.889948,
+  "status": "completed",
+  "environment": {
+    "python": "3.12.9",
+    "torch": "2.6.0+cu124",
+    "cuda": "12.4",
+    "gpu": "NVIDIA RTX A6000",
+    "packages": {
+      "numpy": "1.26.4",
+      "diffusers": "0.32.2",
+      "transformers": "4.49.0",
+      "torchvision": "0.21.0",
+      "huggingface_hub": "0.36.0",
+      "safetensors": "0.8.0",
+      "h5py": "3.14.0"
+    }
+  },
+  "elapsed_seconds": 8.515011548995972
+}
