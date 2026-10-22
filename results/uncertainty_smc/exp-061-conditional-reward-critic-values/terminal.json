@@ -1,0 +1,15 @@
+{
+  "experiment_id": "exp-061-conditional-reward-critic-values",
+  "commit": "7f7a5a27ed8cc765a1e5af91fe0a9166bee22745",
+  "config": "/home/mlw0719/doit_uncertainty/configs/uncertainty_smc/exp-061-conditional-reward-critic-values.json",
+  "machine": "orion",
+  "gpu": 2,
+  "pid": 1588645,
+  "path": "/home/mlw0719/doit_uncertainty_storage/runs/exp-061-conditional-reward-critic-values",
+  "log_path": "/home/mlw0719/doit_uncertainty_storage/artifacts/exp-061-conditional-reward-critic-values.log",
+  "status": "completed",
+  "timestamp": "2026-10-22T16:50:22.514528+00:00",
+  "started_at": "2026-10-22T16:50:02.513870+00:00",
+  "returncode": 0,
+  "finished_at": "2026-10-22T16:50:22.514562+00:00"
+}

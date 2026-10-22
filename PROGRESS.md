@@ -13,8 +13,13 @@ Exp-059 completed all 76 conditions at `6f96363`. Empirical reward UC improves
 held-out value prediction but fails to improve sparse-SMC endpoints over the
 mean-only control. Gaussian reward closure is substantially worse on the
 single-mode target. Even exact values do not ensure better finite-population
-endpoints with this schedule. The next bounded experiment tests conditional
-value prediction on real critics before expanding particle experiments.
+endpoints with this schedule. Exp-060 passed the real-critic execution smoke.
+Exp-061 found no useful transfer from the cross-observation conditional reward
+bank: on resolved HalfCheetah row18, empirical/point/future2 centered log-value
+MSE is 5.0400/4.8749/0.2169. Hopper's continuation reference ESS is near one,
+preventing fine ranking there. Close this bank at the tested budget. The next
+bounded toy experiment changes the particle-allocation objective from a first
+to a second conditional reward moment, motivated by the value/endpoint mismatch.
 The completed exp-058 result below remains the accepted practical baseline;
 the new development goal is active and has no new sampling improvement yet.
 

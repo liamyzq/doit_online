@@ -1,0 +1,42 @@
+[
+  {
+    "task": "hopper-medium-v2",
+    "stage": "calibration",
+    "costs": {
+      "reward_queries": 24960,
+      "reward_seconds": 0.11246225563809276,
+      "score_forwards": 157568,
+      "vjp_seconds": 0.0
+    }
+  },
+  {
+    "task": "hopper-medium-v2",
+    "stage": "diagnostics",
+    "costs": {
+      "reward_queries": 198528,
+      "reward_seconds": 0.4195734178647399,
+      "score_forwards": 1252352,
+      "vjp_seconds": 0.0
+    }
+  },
+  {
+    "task": "halfcheetah-medium-v2",
+    "stage": "calibration",
+    "costs": {
+      "reward_queries": 24960,
+      "reward_seconds": 0.062096895766444504,
+      "score_forwards": 157568,
+      "vjp_seconds": 0.0
+    }
+  },
+  {
+    "task": "halfcheetah-medium-v2",
+    "stage": "diagnostics",
+    "costs": {
+      "reward_queries": 198528,
+      "reward_seconds": 0.3467700131004676,
+      "score_forwards": 1252352,
+      "vjp_seconds": 0.0
+    }
+  }
+]

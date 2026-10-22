@@ -1,0 +1,15 @@
+{
+  "experiment_id": "exp-060-conditional-reward-critic-smoke",
+  "commit": "7f7a5a27ed8cc765a1e5af91fe0a9166bee22745",
+  "config": "/home/mlw0719/doit_uncertainty/configs/uncertainty_smc/exp-060-conditional-reward-critic-smoke.json",
+  "machine": "orion",
+  "gpu": 3,
+  "pid": 1583008,
+  "path": "/home/mlw0719/doit_uncertainty_storage/runs/exp-060-conditional-reward-critic-smoke",
+  "log_path": "/home/mlw0719/doit_uncertainty_storage/artifacts/exp-060-conditional-reward-critic-smoke.log",
+  "status": "completed",
+  "timestamp": "2026-10-22T16:47:26.091549+00:00",
+  "started_at": "2026-10-22T16:47:16.091085+00:00",
+  "returncode": 0,
+  "finished_at": "2026-10-22T16:47:26.091630+00:00"
+}

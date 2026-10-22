@@ -36,7 +36,10 @@ bounded confirmation criterion documented in `experiments/uncertainty_smc/FINDIN
 
 The continuation's CPU toy exp-059 completed at `6f96363`, with all 76 conditions
 and new moment checks successful. Its finite controller exited and records were
-retrieved. No continuation job is active; real-critic calibration is being prepared.
+retrieved. Exp-060/061 completed at `7f7a5a2`; their reserved-memory peaks were
+46/70 MiB. Both finite controllers exited and all records were retrieved. No
+continuation job is active. Retain 4096 MiB plus 2048 MiB reserve and one job
+per GPU for this critic path.
 
 ## Authorized machine
 

@@ -1,0 +1,50 @@
+{
+  "conditions": 6,
+  "score_forwards": 7984,
+  "reward_queries": 1320,
+  "stage_costs": [
+    {
+      "task": "hopper-medium-v2",
+      "stage": "calibration",
+      "costs": {
+        "reward_queries": 216,
+        "reward_seconds": 0.13042941386811435,
+        "score_forwards": 1336,
+        "vjp_seconds": 0.0
+      }
+    },
+    {
+      "task": "hopper-medium-v2",
+      "stage": "diagnostics",
+      "costs": {
+        "reward_queries": 444,
+        "reward_seconds": 0.02245319588109851,
+        "score_forwards": 2656,
+        "vjp_seconds": 0.0
+      }
+    },
+    {
+      "task": "halfcheetah-medium-v2",
+      "stage": "calibration",
+      "costs": {
+        "reward_queries": 216,
+        "reward_seconds": 0.007824476924724877,
+        "score_forwards": 1336,
+        "vjp_seconds": 0.0
+      }
+    },
+    {
+      "task": "halfcheetah-medium-v2",
+      "stage": "diagnostics",
+      "costs": {
+        "reward_queries": 444,
+        "reward_seconds": 0.01003368804231286,
+        "score_forwards": 2656,
+        "vjp_seconds": 0.0
+      }
+    }
+  ],
+  "interpretation": "Independent continuation-value diagnostics; no simulator or endpoint success claim.",
+  "peak_allocated_mib": 32.609375,
+  "peak_reserved_mib": 46.0
+}

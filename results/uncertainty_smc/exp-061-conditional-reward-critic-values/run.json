@@ -1,0 +1,25 @@
+{
+  "commit": "7f7a5a27ed8cc765a1e5af91fe0a9166bee22745",
+  "config": "/home/mlw0719/doit_uncertainty/configs/uncertainty_smc/exp-061-conditional-reward-critic-values.json",
+  "experiment_id": "exp-061-conditional-reward-critic-values",
+  "pid": 1588645,
+  "cuda_visible_devices": "2",
+  "started_at": 1792687804.1305177,
+  "status": "completed",
+  "environment": {
+    "python": "3.12.9",
+    "torch": "2.6.0+cu124",
+    "cuda": "12.4",
+    "gpu": "NVIDIA RTX A6000",
+    "packages": {
+      "numpy": "1.26.4",
+      "diffusers": "0.32.2",
+      "transformers": "4.49.0",
+      "torchvision": "0.21.0",
+      "huggingface_hub": "0.36.0",
+      "safetensors": "0.8.0",
+      "h5py": "3.14.0"
+    }
+  },
+  "elapsed_seconds": 15.617687940597534
+}

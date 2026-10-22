@@ -147,3 +147,25 @@ with direct learned values supports the extra construction. Accurate values
 alone still do not establish better finite-particle endpoints, novelty or
 simulator return. If the reference cannot distinguish the difference, report
 it as unresolved rather than treating either estimate as exact.
+
+Exp-060 passed all expected counts with 46 MiB peak reserved memory. Exp-061
+completed all 12 conditions at `7f7a5a2`, exactly using the planned 2,819,840
+actor and 446,976 Q calls, with 70 MiB peak reserved memory. The well-resolved
+HalfCheetah row18 has mean centered log-value MSE 5.0400 for empirical UC,
+5.4510 for mean-only, 4.8749 for point and 0.2169 for future2. The UC gain over
+mean-only is small and it does not beat point. Its normalized-value KL is
+1.6353 versus point 1.6695 and future2 0.0272. Direct cross-observation regression
+is much worse on this row. This conditional feature bank does not supply a
+useful replacement for real continuation sampling.
+
+Hopper reference ESS medians are only 1.3--2.7 out of 512. Its fine ranking is
+unresolved, not a reliable comparison against an exact oracle. HalfCheetah row22
+also has appreciable reference uncertainty and provides no positive UC signal.
+Close this cross-observation calibration at the tested budget; do not expand it
+to images or simulator returns. See exp-061's `analysis.json` for all cases.
+
+The next bounded mechanism question returns to toy: when the proposal remains
+the base transition, does a conditional second moment allocate particles better
+than a first-moment continuation value? This tests the inference from exp-059
+that value accuracy alone is insufficient. It does not reuse the failed
+cross-observation real-critic bank or imply a general rejection of UC.

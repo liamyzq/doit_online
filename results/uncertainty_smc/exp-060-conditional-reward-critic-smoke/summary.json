@@ -1,0 +1,260 @@
+[
+  {
+    "task": "hopper-medium-v2",
+    "state_row": 18,
+    "index": 5,
+    "anchors": 4,
+    "reference_futures": 32,
+    "reference_ess_min": 1.0021899200896538,
+    "reference_ess_median": 1.0082227513765147,
+    "reference_split_error": {
+      "centered_log_value_mse": 25.21786368459419,
+      "normalized_value_kl": 0.1584559660797627
+    },
+    "values": {
+      "point": {
+        "centered_log_value_mse": 252.8840987542863,
+        "normalized_value_kl": 28.434908263653213
+      },
+      "mean": {
+        "centered_log_value_mse": 254.53926861255388,
+        "normalized_value_kl": 28.568719305936725
+      },
+      "gaussian": {
+        "centered_log_value_mse": 254.76529264587901,
+        "normalized_value_kl": 28.596488068218477
+      },
+      "empirical": {
+        "centered_log_value_mse": 254.84159519002532,
+        "normalized_value_kl": 28.596078898198343
+      },
+      "direct": {
+        "centered_log_value_mse": 20.168006029844722,
+        "normalized_value_kl": 0.8927287992741636
+      },
+      "pooled_action_gaussian": {
+        "centered_log_value_mse": 1964.471980721356,
+        "normalized_value_kl": 96.76548867898909
+      },
+      "future2": {
+        "centered_log_value_mse": 39.31382567430724,
+        "normalized_value_kl": 1.7178286238395737
+      }
+    }
+  },
+  {
+    "task": "hopper-medium-v2",
+    "state_row": 18,
+    "index": 9,
+    "anchors": 4,
+    "reference_futures": 32,
+    "reference_ess_min": 1.2129168269140207,
+    "reference_ess_median": 3.1312347313831816,
+    "reference_split_error": {
+      "centered_log_value_mse": 16.991517065987956,
+      "normalized_value_kl": 1.4880569734150855
+    },
+    "values": {
+      "point": {
+        "centered_log_value_mse": 28.498516349109572,
+        "normalized_value_kl": 4.518890286997865
+      },
+      "mean": {
+        "centered_log_value_mse": 29.10292712755279,
+        "normalized_value_kl": 4.640398296725493
+      },
+      "gaussian": {
+        "centered_log_value_mse": 28.62683366757971,
+        "normalized_value_kl": 4.5431165062727565
+      },
+      "empirical": {
+        "centered_log_value_mse": 28.88239234967935,
+        "normalized_value_kl": 4.595500408596466
+      },
+      "direct": {
+        "centered_log_value_mse": 9.357107613046482,
+        "normalized_value_kl": 0.6470964237452312
+      },
+      "pooled_action_gaussian": {
+        "centered_log_value_mse": 98.72373705143217,
+        "normalized_value_kl": 4.004209758262121
+      },
+      "future2": {
+        "centered_log_value_mse": 24.295734865615646,
+        "normalized_value_kl": 1.1267748254064862
+      }
+    }
+  },
+  {
+    "task": "hopper-medium-v2",
+    "state_row": 18,
+    "index": 12,
+    "anchors": 4,
+    "reference_futures": 32,
+    "reference_ess_min": 1.0045069057752958,
+    "reference_ess_median": 1.1717361553020083,
+    "reference_split_error": {
+      "centered_log_value_mse": 20.828962965660914,
+      "normalized_value_kl": 0.8395901556926529
+    },
+    "values": {
+      "point": {
+        "centered_log_value_mse": 10.870461268841582,
+        "normalized_value_kl": 0.8370378139389214
+      },
+      "mean": {
+        "centered_log_value_mse": 11.027850653178042,
+        "normalized_value_kl": 0.8506908237990803
+      },
+      "gaussian": {
+        "centered_log_value_mse": 11.066467800191097,
+        "normalized_value_kl": 0.8524501569429086
+      },
+      "empirical": {
+        "centered_log_value_mse": 11.07285347312575,
+        "normalized_value_kl": 0.8509285847357765
+      },
+      "direct": {
+        "centered_log_value_mse": 9.383925111338417,
+        "normalized_value_kl": 1.3397276035628842
+      },
+      "pooled_action_gaussian": {
+        "centered_log_value_mse": 109.78128161796343,
+        "normalized_value_kl": 18.082207180363124
+      },
+      "future2": {
+        "centered_log_value_mse": 38.40906520969702,
+        "normalized_value_kl": 11.641140306206946
+      }
+    }
+  },
+  {
+    "task": "halfcheetah-medium-v2",
+    "state_row": 18,
+    "index": 5,
+    "anchors": 4,
+    "reference_futures": 32,
+    "reference_ess_min": 23.7444026964229,
+    "reference_ess_median": 26.40393849113302,
+    "reference_split_error": {
+      "centered_log_value_mse": 0.016859048801593595,
+      "normalized_value_kl": 0.011495468149080652
+    },
+    "values": {
+      "point": {
+        "centered_log_value_mse": 2.2262441520160765,
+        "normalized_value_kl": 0.9901679152252503
+      },
+      "mean": {
+        "centered_log_value_mse": 2.1856737608458463,
+        "normalized_value_kl": 0.9759941359545354
+      },
+      "gaussian": {
+        "centered_log_value_mse": 2.182755104058813,
+        "normalized_value_kl": 0.9744744668400462
+      },
+      "empirical": {
+        "centered_log_value_mse": 2.182853708743376,
+        "normalized_value_kl": 0.9745050305892269
+      },
+      "direct": {
+        "centered_log_value_mse": 0.2561721475606473,
+        "normalized_value_kl": 0.1103815331322365
+      },
+      "pooled_action_gaussian": {
+        "centered_log_value_mse": 5.196035213801991,
+        "normalized_value_kl": 2.385729287750917
+      },
+      "future2": {
+        "centered_log_value_mse": 0.0425411560895444,
+        "normalized_value_kl": 0.022291779312762078
+      }
+    }
+  },
+  {
+    "task": "halfcheetah-medium-v2",
+    "state_row": 18,
+    "index": 9,
+    "anchors": 4,
+    "reference_futures": 32,
+    "reference_ess_min": 24.62788401036475,
+    "reference_ess_median": 28.664596141145466,
+    "reference_split_error": {
+      "centered_log_value_mse": 0.007937101823797152,
+      "normalized_value_kl": 0.004707385065559095
+    },
+    "values": {
+      "point": {
+        "centered_log_value_mse": 0.644958127410451,
+        "normalized_value_kl": 0.1771521311113341
+      },
+      "mean": {
+        "centered_log_value_mse": 0.6453372185543693,
+        "normalized_value_kl": 0.17730113458143862
+      },
+      "gaussian": {
+        "centered_log_value_mse": 0.6453404142174126,
+        "normalized_value_kl": 0.1773028324572487
+      },
+      "empirical": {
+        "centered_log_value_mse": 0.645340676515129,
+        "normalized_value_kl": 0.17730294807233782
+      },
+      "direct": {
+        "centered_log_value_mse": 0.5524063498050023,
+        "normalized_value_kl": 0.1918449001673896
+      },
+      "pooled_action_gaussian": {
+        "centered_log_value_mse": 1.415795232589654,
+        "normalized_value_kl": 0.5033778016474764
+      },
+      "future2": {
+        "centered_log_value_mse": 0.1531319181940466,
+        "normalized_value_kl": 0.04829781023197354
+      }
+    }
+  },
+  {
+    "task": "halfcheetah-medium-v2",
+    "state_row": 18,
+    "index": 12,
+    "anchors": 4,
+    "reference_futures": 32,
+    "reference_ess_min": 26.017782547507945,
+    "reference_ess_median": 30.701058791570684,
+    "reference_split_error": {
+      "centered_log_value_mse": 0.003073949733593185,
+      "normalized_value_kl": 0.0006238596600832967
+    },
+    "values": {
+      "point": {
+        "centered_log_value_mse": 0.7129456040717949,
+        "normalized_value_kl": 0.2329035380390774
+      },
+      "mean": {
+        "centered_log_value_mse": 0.7152186720594216,
+        "normalized_value_kl": 0.23337307441395236
+      },
+      "gaussian": {
+        "centered_log_value_mse": 0.7152174881965927,
+        "normalized_value_kl": 0.2333729232165756
+      },
+      "empirical": {
+        "centered_log_value_mse": 0.7152177706882735,
+        "normalized_value_kl": 0.23337297943706237
+      },
+      "direct": {
+        "centered_log_value_mse": 1.2319909102648596,
+        "normalized_value_kl": 0.2693572388574757
+      },
+      "pooled_action_gaussian": {
+        "centered_log_value_mse": 0.5799463062976729,
+        "normalized_value_kl": 0.22645534237596904
+      },
+      "future2": {
+        "centered_log_value_mse": 0.010690603664209737,
+        "normalized_value_kl": 0.004978023098373828
+      }
+    }
+  }
+]
