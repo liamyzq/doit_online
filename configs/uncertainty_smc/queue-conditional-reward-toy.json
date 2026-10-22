@@ -1,0 +1,6 @@
+[
+  {
+    "id": "exp-059-conditional-reward-toy",
+    "config": "configs/uncertainty_smc/exp-059-conditional-reward-toy.json"
+  }
+]

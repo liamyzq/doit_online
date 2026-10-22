@@ -42,7 +42,10 @@ def main():
         torch.set_num_threads(int(os.environ.get("OMP_NUM_THREADS", 2)))
         torch.cuda.reset_peak_memory_stats()
         mode = config.get("mode", "image")
-        if mode == "uncertainty_image":
+        if mode == "reward_calibration_toy":
+            from .reward_calibration_toy import evaluate
+            metrics = evaluate(config, output)
+        elif mode == "uncertainty_image":
             from .uncertainty_image import evaluate
             from .image import ImageEngine
             engine = ImageEngine(config["image"])

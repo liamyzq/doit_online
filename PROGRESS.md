@@ -2,6 +2,16 @@
 
 ## Current decision
 
+The user reopened method development on 2026-10-22. The new candidate calibrates
+conditional terminal-reward residuals, using a single proxy query at sparse
+checkpoints. Mean-only, Gaussian-moment, empirical-residual and direct
+learned-value variants separate uncertainty from mean-bias correction and
+existing value regression. Exp-059 first tests this mechanism on the analytic
+targets with every calibration cost recorded. See
+[the continuation protocol](experiments/uncertainty_smc/CONTINUATION.md).
+The completed exp-058 result below remains the accepted practical baseline;
+the new development goal is active and has no new positive result yet.
+
 The user opened a new uncertainty/SMC/FORS study on 2026-10-21, with toy,
 image, and RL experiments authorized. The active branch is now
 `codex/doit-uncertainty-smc`; its protocol is
