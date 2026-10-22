@@ -1,0 +1,15 @@
+{
+  "experiment_id": "exp-052-critic-particle-smoke",
+  "commit": "4cad6c988d031d1a5791ea33f403f245138d8b54",
+  "config": "/home/mlw0719/doit_uncertainty/configs/uncertainty_smc/exp-052-critic-particle-smoke.json",
+  "machine": "orion",
+  "gpu": 0,
+  "pid": 1975892,
+  "path": "/home/mlw0719/doit_uncertainty_storage/runs/exp-052-critic-particle-smoke",
+  "log_path": "/home/mlw0719/doit_uncertainty_storage/artifacts/exp-052-critic-particle-smoke.log",
+  "status": "completed",
+  "timestamp": "2026-10-22T05:05:08.431836+00:00",
+  "started_at": "2026-10-22T05:04:43.430558+00:00",
+  "returncode": 0,
+  "finished_at": "2026-10-22T05:05:08.431864+00:00"
+}

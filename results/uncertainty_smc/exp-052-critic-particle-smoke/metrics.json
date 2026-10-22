@@ -1,0 +1,7 @@
+{
+  "conditions": 32,
+  "score_forwards": 82080,
+  "reward_queries": 53760,
+  "peak_allocated_mib": 34.193359375,
+  "peak_reserved_mib": 48.0
+}

@@ -1,0 +1,6 @@
+[
+  {
+    "id": "exp-054-terminal-tilt-calibration",
+    "config": "configs/uncertainty_smc/exp-054-terminal-tilt-calibration.json"
+  }
+]

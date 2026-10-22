@@ -1,0 +1,1529 @@
+{
+  "exp-048-uncertainty-toy-discovery": [
+    {
+      "problem": "gaussian",
+      "method": "base-smc-n4",
+      "cdf_mse": 0.049824200903681184,
+      "pooled_cdf_mse": 0.012711146877952374,
+      "costs_per_repeat": {
+        "value_evaluations": 36.0,
+        "transition_samples": 32.0,
+        "reward_evaluations": 4.0
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "exact-doob-n4",
+      "cdf_mse": 0.009033243474466879,
+      "pooled_cdf_mse": 5.717491852834803e-05,
+      "costs_per_repeat": {
+        "transition_samples": 32.0
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "point-pilot8-smc-n4",
+      "cdf_mse": 0.015242677639316877,
+      "pooled_cdf_mse": 0.0008242836146559718,
+      "costs_per_repeat": {
+        "value_evaluations": 292.0,
+        "reward_evaluations": 292.0,
+        "transition_samples": 288.0
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "gaussian-pilot8-smc-n4",
+      "cdf_mse": 0.01487626631394745,
+      "pooled_cdf_mse": 0.0002745748570951687,
+      "costs_per_repeat": {
+        "value_evaluations": 292.0,
+        "analytic_component_integrals": 256.0,
+        "transition_samples": 288.0,
+        "reward_evaluations": 36.0
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "mixture-pilot8-smc-n4",
+      "cdf_mse": 0.01487626631394745,
+      "pooled_cdf_mse": 0.0002745748570951687,
+      "costs_per_repeat": {
+        "value_evaluations": 292.0,
+        "analytic_component_integrals": 256.0,
+        "transition_samples": 288.0,
+        "reward_evaluations": 36.0
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "branch2-pilot8-smc-n4",
+      "cdf_mse": 0.01521492406604708,
+      "pooled_cdf_mse": 0.00012864132109274322,
+      "costs_per_repeat": {
+        "value_evaluations": 804.0,
+        "transition_samples": 800.0,
+        "analytic_component_integrals": 440.0,
+        "reward_evaluations": 108.0
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "future2-pilot8-smc-n4",
+      "cdf_mse": 0.014950745305683789,
+      "pooled_cdf_mse": 4.64204758356129e-05,
+      "costs_per_repeat": {
+        "value_evaluations": 804.0,
+        "transition_samples": 2368.0,
+        "reward_evaluations": 548.0
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "base-smc-n8",
+      "cdf_mse": 0.025201618372586568,
+      "pooled_cdf_mse": 0.0029541921558154257,
+      "costs_per_repeat": {
+        "value_evaluations": 72.0,
+        "transition_samples": 64.0,
+        "reward_evaluations": 8.0
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "exact-doob-n8",
+      "cdf_mse": 0.004372176265583406,
+      "pooled_cdf_mse": 1.3190115919895862e-05,
+      "costs_per_repeat": {
+        "transition_samples": 64.0
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "point-pilot8-smc-n8",
+      "cdf_mse": 0.008907659010092425,
+      "pooled_cdf_mse": 0.0008767296753758812,
+      "costs_per_repeat": {
+        "value_evaluations": 584.0,
+        "reward_evaluations": 584.0,
+        "transition_samples": 576.0
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "gaussian-pilot8-smc-n8",
+      "cdf_mse": 0.007224190449780768,
+      "pooled_cdf_mse": 2.358670206477124e-05,
+      "costs_per_repeat": {
+        "value_evaluations": 584.0,
+        "analytic_component_integrals": 512.0,
+        "transition_samples": 576.0,
+        "reward_evaluations": 72.0
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "mixture-pilot8-smc-n8",
+      "cdf_mse": 0.007224190449780768,
+      "pooled_cdf_mse": 2.358670206477124e-05,
+      "costs_per_repeat": {
+        "value_evaluations": 584.0,
+        "analytic_component_integrals": 512.0,
+        "transition_samples": 576.0,
+        "reward_evaluations": 72.0
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "branch2-pilot8-smc-n8",
+      "cdf_mse": 0.007582946395251793,
+      "pooled_cdf_mse": 3.876194436445307e-05,
+      "costs_per_repeat": {
+        "value_evaluations": 1608.0,
+        "transition_samples": 1600.0,
+        "analytic_component_integrals": 880.0,
+        "reward_evaluations": 216.0
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "future2-pilot8-smc-n8",
+      "cdf_mse": 0.008092763037861155,
+      "pooled_cdf_mse": 0.0002368205333602094,
+      "costs_per_repeat": {
+        "value_evaluations": 1608.0,
+        "transition_samples": 4736.0,
+        "reward_evaluations": 1096.0
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "base-smc-n16",
+      "cdf_mse": 0.010464539861760836,
+      "pooled_cdf_mse": 0.0005171399266688353,
+      "costs_per_repeat": {
+        "value_evaluations": 144.0,
+        "transition_samples": 128.0,
+        "reward_evaluations": 16.0
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "exact-doob-n16",
+      "cdf_mse": 0.0022333257581302578,
+      "pooled_cdf_mse": 1.7262086899728283e-05,
+      "costs_per_repeat": {
+        "transition_samples": 128.0
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "point-pilot8-smc-n16",
+      "cdf_mse": 0.004952931045030007,
+      "pooled_cdf_mse": 0.0005187628671320661,
+      "costs_per_repeat": {
+        "value_evaluations": 1168.0,
+        "reward_evaluations": 1168.0,
+        "transition_samples": 1152.0
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "gaussian-pilot8-smc-n16",
+      "cdf_mse": 0.004019036959908618,
+      "pooled_cdf_mse": 1.6012098840091692e-05,
+      "costs_per_repeat": {
+        "value_evaluations": 1168.0,
+        "analytic_component_integrals": 1024.0,
+        "transition_samples": 1152.0,
+        "reward_evaluations": 144.0
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "mixture-pilot8-smc-n16",
+      "cdf_mse": 0.004019036959908618,
+      "pooled_cdf_mse": 1.6012098840091692e-05,
+      "costs_per_repeat": {
+        "value_evaluations": 1168.0,
+        "analytic_component_integrals": 1024.0,
+        "transition_samples": 1152.0,
+        "reward_evaluations": 144.0
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "branch2-pilot8-smc-n16",
+      "cdf_mse": 0.004248228836514741,
+      "pooled_cdf_mse": 2.8702065486055073e-05,
+      "costs_per_repeat": {
+        "value_evaluations": 3216.0,
+        "transition_samples": 3200.0,
+        "analytic_component_integrals": 1760.0,
+        "reward_evaluations": 432.0
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "future2-pilot8-smc-n16",
+      "cdf_mse": 0.005168673185695624,
+      "pooled_cdf_mse": 0.0003712892885253861,
+      "costs_per_repeat": {
+        "value_evaluations": 3216.0,
+        "transition_samples": 9472.0,
+        "reward_evaluations": 2192.0
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "point-grad1.0-false-n8",
+      "cdf_mse": 0.01610793314040734,
+      "pooled_cdf_mse": 0.012068005100998721,
+      "costs_per_repeat": {
+        "value_evaluations": 128.0,
+        "reward_evaluations": 128.0,
+        "transition_samples": 64.0
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "point-grad0.5-false-n8",
+      "cdf_mse": 0.005858628177321384,
+      "pooled_cdf_mse": 0.0006443042686754695,
+      "costs_per_repeat": {
+        "value_evaluations": 128.0,
+        "reward_evaluations": 128.0,
+        "transition_samples": 64.0
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "gaussian-grad1.0-false-n8",
+      "cdf_mse": 0.005496557861078506,
+      "pooled_cdf_mse": 0.0011317474861255148,
+      "costs_per_repeat": {
+        "value_evaluations": 128.0,
+        "analytic_component_integrals": 112.0,
+        "transition_samples": 64.0,
+        "reward_evaluations": 16.0
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "mixture-grad1.0-false-n8",
+      "cdf_mse": 0.005496557861078506,
+      "pooled_cdf_mse": 0.0011317474861255148,
+      "costs_per_repeat": {
+        "value_evaluations": 128.0,
+        "analytic_component_integrals": 112.0,
+        "transition_samples": 64.0,
+        "reward_evaluations": 16.0
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "point-grad1.0-true-n8",
+      "cdf_mse": 0.011474665442451792,
+      "pooled_cdf_mse": 0.004022494154856589,
+      "costs_per_repeat": {
+        "value_evaluations": 200.0,
+        "reward_evaluations": 200.0,
+        "transition_samples": 64.0
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "point-grad0.5-true-n8",
+      "cdf_mse": 0.006482588649340168,
+      "pooled_cdf_mse": 5.9639441453044905e-05,
+      "costs_per_repeat": {
+        "value_evaluations": 200.0,
+        "reward_evaluations": 200.0,
+        "transition_samples": 64.0
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "gaussian-grad1.0-true-n8",
+      "cdf_mse": 0.0057275390535972345,
+      "pooled_cdf_mse": 4.331502701737618e-05,
+      "costs_per_repeat": {
+        "value_evaluations": 200.0,
+        "analytic_component_integrals": 176.0,
+        "transition_samples": 64.0,
+        "reward_evaluations": 24.0
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "mixture-grad1.0-true-n8",
+      "cdf_mse": 0.0057275390535972345,
+      "pooled_cdf_mse": 4.331502701737618e-05,
+      "costs_per_repeat": {
+        "value_evaluations": 200.0,
+        "analytic_component_integrals": 176.0,
+        "transition_samples": 64.0,
+        "reward_evaluations": 24.0
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "base-smc-n4",
+      "cdf_mse": 0.12876002920663676,
+      "pooled_cdf_mse": 0.03828342104343874,
+      "costs_per_repeat": {
+        "value_evaluations": 36.0,
+        "transition_samples": 32.0,
+        "reward_evaluations": 4.0
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "exact-doob-n4",
+      "cdf_mse": 0.02458213212488141,
+      "pooled_cdf_mse": 9.151208635723054e-05,
+      "costs_per_repeat": {
+        "transition_samples": 32.0
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "point-pilot8-smc-n4",
+      "cdf_mse": 0.05041831678087007,
+      "pooled_cdf_mse": 0.0006197520901773513,
+      "costs_per_repeat": {
+        "value_evaluations": 292.0,
+        "reward_evaluations": 292.0,
+        "transition_samples": 288.0
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "gaussian-pilot8-smc-n4",
+      "cdf_mse": 0.05504981768251168,
+      "pooled_cdf_mse": 0.002862666761929415,
+      "costs_per_repeat": {
+        "value_evaluations": 292.0,
+        "analytic_component_integrals": 256.0,
+        "transition_samples": 288.0,
+        "reward_evaluations": 36.0
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "mixture-pilot8-smc-n4",
+      "cdf_mse": 0.0560516903750613,
+      "pooled_cdf_mse": 0.0025148670887883812,
+      "costs_per_repeat": {
+        "value_evaluations": 292.0,
+        "analytic_component_integrals": 512.0,
+        "transition_samples": 288.0,
+        "reward_evaluations": 36.0
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "branch2-pilot8-smc-n4",
+      "cdf_mse": 0.05278840788329642,
+      "pooled_cdf_mse": 0.0022600947033875577,
+      "costs_per_repeat": {
+        "value_evaluations": 804.0,
+        "transition_samples": 800.0,
+        "analytic_component_integrals": 440.0,
+        "reward_evaluations": 108.0
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "future2-pilot8-smc-n4",
+      "cdf_mse": 0.05649779664632433,
+      "pooled_cdf_mse": 0.0014772124944159287,
+      "costs_per_repeat": {
+        "value_evaluations": 804.0,
+        "transition_samples": 2368.0,
+        "reward_evaluations": 548.0
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "base-smc-n8",
+      "cdf_mse": 0.05426492856355877,
+      "pooled_cdf_mse": 0.005746959504320838,
+      "costs_per_repeat": {
+        "value_evaluations": 72.0,
+        "transition_samples": 64.0,
+        "reward_evaluations": 8.0
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "exact-doob-n8",
+      "cdf_mse": 0.012308083750247804,
+      "pooled_cdf_mse": 9.723928384291842e-05,
+      "costs_per_repeat": {
+        "transition_samples": 64.0
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "point-pilot8-smc-n8",
+      "cdf_mse": 0.025043861172151977,
+      "pooled_cdf_mse": 0.00010844320497997996,
+      "costs_per_repeat": {
+        "value_evaluations": 584.0,
+        "reward_evaluations": 584.0,
+        "transition_samples": 576.0
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "gaussian-pilot8-smc-n8",
+      "cdf_mse": 0.026068236619596674,
+      "pooled_cdf_mse": 0.00023506991199943647,
+      "costs_per_repeat": {
+        "value_evaluations": 584.0,
+        "analytic_component_integrals": 512.0,
+        "transition_samples": 576.0,
+        "reward_evaluations": 72.0
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "mixture-pilot8-smc-n8",
+      "cdf_mse": 0.025110110316476142,
+      "pooled_cdf_mse": 8.904601237653194e-05,
+      "costs_per_repeat": {
+        "value_evaluations": 584.0,
+        "analytic_component_integrals": 1024.0,
+        "transition_samples": 576.0,
+        "reward_evaluations": 72.0
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "branch2-pilot8-smc-n8",
+      "cdf_mse": 0.025400479593287575,
+      "pooled_cdf_mse": 8.428445417014871e-05,
+      "costs_per_repeat": {
+        "value_evaluations": 1608.0,
+        "transition_samples": 1600.0,
+        "analytic_component_integrals": 880.0,
+        "reward_evaluations": 216.0
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "future2-pilot8-smc-n8",
+      "cdf_mse": 0.03101212823026884,
+      "pooled_cdf_mse": 6.630769427676031e-05,
+      "costs_per_repeat": {
+        "value_evaluations": 1608.0,
+        "transition_samples": 4736.0,
+        "reward_evaluations": 1096.0
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "base-smc-n16",
+      "cdf_mse": 0.017871343134979983,
+      "pooled_cdf_mse": 0.0008176759318999781,
+      "costs_per_repeat": {
+        "value_evaluations": 144.0,
+        "transition_samples": 128.0,
+        "reward_evaluations": 16.0
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "exact-doob-n16",
+      "cdf_mse": 0.006091383024340476,
+      "pooled_cdf_mse": 1.4411642993104839e-05,
+      "costs_per_repeat": {
+        "transition_samples": 128.0
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "point-pilot8-smc-n16",
+      "cdf_mse": 0.014881225458338636,
+      "pooled_cdf_mse": 0.00012183755193028531,
+      "costs_per_repeat": {
+        "value_evaluations": 1168.0,
+        "reward_evaluations": 1168.0,
+        "transition_samples": 1152.0
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "gaussian-pilot8-smc-n16",
+      "cdf_mse": 0.013403250143570375,
+      "pooled_cdf_mse": 2.3617774593318368e-05,
+      "costs_per_repeat": {
+        "value_evaluations": 1168.0,
+        "analytic_component_integrals": 1024.0,
+        "transition_samples": 1152.0,
+        "reward_evaluations": 144.0
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "mixture-pilot8-smc-n16",
+      "cdf_mse": 0.013570756197707942,
+      "pooled_cdf_mse": 3.307929291611258e-05,
+      "costs_per_repeat": {
+        "value_evaluations": 1168.0,
+        "analytic_component_integrals": 2048.0,
+        "transition_samples": 1152.0,
+        "reward_evaluations": 144.0
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "branch2-pilot8-smc-n16",
+      "cdf_mse": 0.013723871780310835,
+      "pooled_cdf_mse": 8.836577674404755e-05,
+      "costs_per_repeat": {
+        "value_evaluations": 3216.0,
+        "transition_samples": 3200.0,
+        "analytic_component_integrals": 1760.0,
+        "reward_evaluations": 432.0
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "future2-pilot8-smc-n16",
+      "cdf_mse": 0.020925789307499318,
+      "pooled_cdf_mse": 5.16273366795932e-05,
+      "costs_per_repeat": {
+        "value_evaluations": 3216.0,
+        "transition_samples": 9472.0,
+        "reward_evaluations": 2192.0
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "point-grad1.0-false-n8",
+      "cdf_mse": 0.028713880057272732,
+      "pooled_cdf_mse": 0.013234499757686789,
+      "costs_per_repeat": {
+        "value_evaluations": 128.0,
+        "reward_evaluations": 128.0,
+        "transition_samples": 64.0
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "point-grad0.5-false-n8",
+      "cdf_mse": 0.07895797313128355,
+      "pooled_cdf_mse": 0.06301954673442198,
+      "costs_per_repeat": {
+        "value_evaluations": 128.0,
+        "reward_evaluations": 128.0,
+        "transition_samples": 64.0
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "gaussian-grad1.0-false-n8",
+      "cdf_mse": 0.041018810190161896,
+      "pooled_cdf_mse": 0.025766007507202378,
+      "costs_per_repeat": {
+        "value_evaluations": 128.0,
+        "analytic_component_integrals": 112.0,
+        "transition_samples": 64.0,
+        "reward_evaluations": 16.0
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "mixture-grad1.0-false-n8",
+      "cdf_mse": 0.04173014971147033,
+      "pooled_cdf_mse": 0.026110411950109064,
+      "costs_per_repeat": {
+        "value_evaluations": 128.0,
+        "analytic_component_integrals": 224.0,
+        "transition_samples": 64.0,
+        "reward_evaluations": 16.0
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "point-grad1.0-true-n8",
+      "cdf_mse": 0.019298874701759998,
+      "pooled_cdf_mse": 0.00016751809187496013,
+      "costs_per_repeat": {
+        "value_evaluations": 200.0,
+        "reward_evaluations": 200.0,
+        "transition_samples": 64.0
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "point-grad0.5-true-n8",
+      "cdf_mse": 0.020701103996313162,
+      "pooled_cdf_mse": 0.001069402232950505,
+      "costs_per_repeat": {
+        "value_evaluations": 200.0,
+        "reward_evaluations": 200.0,
+        "transition_samples": 64.0
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "gaussian-grad1.0-true-n8",
+      "cdf_mse": 0.017544856401104786,
+      "pooled_cdf_mse": 0.0004971672224985937,
+      "costs_per_repeat": {
+        "value_evaluations": 200.0,
+        "analytic_component_integrals": 176.0,
+        "transition_samples": 64.0,
+        "reward_evaluations": 24.0
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "mixture-grad1.0-true-n8",
+      "cdf_mse": 0.018319566530554665,
+      "pooled_cdf_mse": 0.0006072401051017142,
+      "costs_per_repeat": {
+        "value_evaluations": 200.0,
+        "analytic_component_integrals": 352.0,
+        "transition_samples": 64.0,
+        "reward_evaluations": 24.0
+      }
+    }
+  ],
+  "exp-050-grouped-uncertainty-discovery": [
+    {
+      "problem": "gaussian",
+      "method": "point-group4-smc-n4",
+      "cdf_mse": 0.012505131170729818,
+      "pooled_cdf_mse": 0.000833350171363986,
+      "costs_per_repeat": {
+        "value_evaluations": 132.0,
+        "reward_evaluations": 132.0,
+        "transition_samples": 128.0
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "gaussian-group4-smc-n4",
+      "cdf_mse": 0.01306954299467893,
+      "pooled_cdf_mse": 0.0002684748934389343,
+      "costs_per_repeat": {
+        "value_evaluations": 132.0,
+        "analytic_component_integrals": 116.0,
+        "transition_samples": 128.0,
+        "reward_evaluations": 16.0
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "mixture-group4-smc-n4",
+      "cdf_mse": 0.01306954299467893,
+      "pooled_cdf_mse": 0.0002684748934389343,
+      "costs_per_repeat": {
+        "value_evaluations": 132.0,
+        "analytic_component_integrals": 116.0,
+        "transition_samples": 128.0,
+        "reward_evaluations": 16.0
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "branch-group4-smc-n4",
+      "cdf_mse": 0.014002143012890317,
+      "pooled_cdf_mse": 1.8415132928744996e-05,
+      "costs_per_repeat": {
+        "value_evaluations": 364.0,
+        "transition_samples": 360.0,
+        "analytic_component_integrals": 200.0,
+        "reward_evaluations": 48.0
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "future-group4-smc-n4",
+      "cdf_mse": 0.014978233318530971,
+      "pooled_cdf_mse": 0.0002251361240986551,
+      "costs_per_repeat": {
+        "value_evaluations": 364.0,
+        "transition_samples": 1088.0,
+        "reward_evaluations": 248.0
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "point-group8-smc-n4",
+      "cdf_mse": 0.013819546780863924,
+      "pooled_cdf_mse": 0.002090869487856539,
+      "costs_per_repeat": {
+        "value_evaluations": 260.0,
+        "reward_evaluations": 260.0,
+        "transition_samples": 256.0
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "gaussian-group8-smc-n4",
+      "cdf_mse": 0.011516965439376416,
+      "pooled_cdf_mse": 6.137460809233733e-05,
+      "costs_per_repeat": {
+        "value_evaluations": 260.0,
+        "analytic_component_integrals": 228.0,
+        "transition_samples": 256.0,
+        "reward_evaluations": 32.0
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "mixture-group8-smc-n4",
+      "cdf_mse": 0.011516965439376416,
+      "pooled_cdf_mse": 6.137460809233733e-05,
+      "costs_per_repeat": {
+        "value_evaluations": 260.0,
+        "analytic_component_integrals": 228.0,
+        "transition_samples": 256.0,
+        "reward_evaluations": 32.0
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "branch-group8-smc-n4",
+      "cdf_mse": 0.014392587420470494,
+      "pooled_cdf_mse": 2.7781354637316218e-05,
+      "costs_per_repeat": {
+        "value_evaluations": 716.0,
+        "transition_samples": 712.0,
+        "analytic_component_integrals": 392.0,
+        "reward_evaluations": 96.0
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "future-group8-smc-n4",
+      "cdf_mse": 0.014527682330732643,
+      "pooled_cdf_mse": 0.0003042837160917484,
+      "costs_per_repeat": {
+        "value_evaluations": 716.0,
+        "transition_samples": 2112.0,
+        "reward_evaluations": 488.0
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "point-group4-smc-n8",
+      "cdf_mse": 0.00774426355069231,
+      "pooled_cdf_mse": 0.0006108530811867113,
+      "costs_per_repeat": {
+        "value_evaluations": 264.0,
+        "reward_evaluations": 264.0,
+        "transition_samples": 256.0
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "gaussian-group4-smc-n8",
+      "cdf_mse": 0.006755912085284756,
+      "pooled_cdf_mse": 2.0440528670119974e-05,
+      "costs_per_repeat": {
+        "value_evaluations": 264.0,
+        "analytic_component_integrals": 232.0,
+        "transition_samples": 256.0,
+        "reward_evaluations": 32.0
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "mixture-group4-smc-n8",
+      "cdf_mse": 0.006755912085284756,
+      "pooled_cdf_mse": 2.0440528670119974e-05,
+      "costs_per_repeat": {
+        "value_evaluations": 264.0,
+        "analytic_component_integrals": 232.0,
+        "transition_samples": 256.0,
+        "reward_evaluations": 32.0
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "branch-group4-smc-n8",
+      "cdf_mse": 0.008153509064866032,
+      "pooled_cdf_mse": 6.910364860351457e-05,
+      "costs_per_repeat": {
+        "value_evaluations": 728.0,
+        "transition_samples": 720.0,
+        "analytic_component_integrals": 400.0,
+        "reward_evaluations": 96.0
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "future-group4-smc-n8",
+      "cdf_mse": 0.008763318379021093,
+      "pooled_cdf_mse": 0.0004466601720304582,
+      "costs_per_repeat": {
+        "value_evaluations": 728.0,
+        "transition_samples": 2176.0,
+        "reward_evaluations": 496.0
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "point-group8-smc-n8",
+      "cdf_mse": 0.008372123481043532,
+      "pooled_cdf_mse": 0.0012709716176729235,
+      "costs_per_repeat": {
+        "value_evaluations": 520.0,
+        "reward_evaluations": 520.0,
+        "transition_samples": 512.0
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "gaussian-group8-smc-n8",
+      "cdf_mse": 0.005927830548080206,
+      "pooled_cdf_mse": 5.9120050562447814e-05,
+      "costs_per_repeat": {
+        "value_evaluations": 520.0,
+        "analytic_component_integrals": 456.0,
+        "transition_samples": 512.0,
+        "reward_evaluations": 64.0
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "mixture-group8-smc-n8",
+      "cdf_mse": 0.005927830548080206,
+      "pooled_cdf_mse": 5.9120050562447814e-05,
+      "costs_per_repeat": {
+        "value_evaluations": 520.0,
+        "analytic_component_integrals": 456.0,
+        "transition_samples": 512.0,
+        "reward_evaluations": 64.0
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "branch-group8-smc-n8",
+      "cdf_mse": 0.007162228023257458,
+      "pooled_cdf_mse": 8.623212758589986e-05,
+      "costs_per_repeat": {
+        "value_evaluations": 1432.0,
+        "transition_samples": 1424.0,
+        "analytic_component_integrals": 784.0,
+        "reward_evaluations": 192.0
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "future-group8-smc-n8",
+      "cdf_mse": 0.00837417431159801,
+      "pooled_cdf_mse": 0.0003035637411750524,
+      "costs_per_repeat": {
+        "value_evaluations": 1432.0,
+        "transition_samples": 4224.0,
+        "reward_evaluations": 976.0
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "point-group4-smc-n16",
+      "cdf_mse": 0.004435522237878817,
+      "pooled_cdf_mse": 0.00042211266603885676,
+      "costs_per_repeat": {
+        "value_evaluations": 528.0,
+        "reward_evaluations": 528.0,
+        "transition_samples": 512.0
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "gaussian-group4-smc-n16",
+      "cdf_mse": 0.0034493546365355248,
+      "pooled_cdf_mse": 1.9057907177307654e-05,
+      "costs_per_repeat": {
+        "value_evaluations": 528.0,
+        "analytic_component_integrals": 464.0,
+        "transition_samples": 512.0,
+        "reward_evaluations": 64.0
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "mixture-group4-smc-n16",
+      "cdf_mse": 0.0034493546365355248,
+      "pooled_cdf_mse": 1.9057907177307654e-05,
+      "costs_per_repeat": {
+        "value_evaluations": 528.0,
+        "analytic_component_integrals": 464.0,
+        "transition_samples": 512.0,
+        "reward_evaluations": 64.0
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "branch-group4-smc-n16",
+      "cdf_mse": 0.004313155457496081,
+      "pooled_cdf_mse": 1.4303621895745016e-05,
+      "costs_per_repeat": {
+        "value_evaluations": 1456.0,
+        "transition_samples": 1440.0,
+        "analytic_component_integrals": 800.0,
+        "reward_evaluations": 192.0
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "future-group4-smc-n16",
+      "cdf_mse": 0.005332968809068368,
+      "pooled_cdf_mse": 0.0002521858976169482,
+      "costs_per_repeat": {
+        "value_evaluations": 1456.0,
+        "transition_samples": 4352.0,
+        "reward_evaluations": 992.0
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "point-group8-smc-n16",
+      "cdf_mse": 0.005237805197277383,
+      "pooled_cdf_mse": 0.0005673352473152831,
+      "costs_per_repeat": {
+        "value_evaluations": 1040.0,
+        "reward_evaluations": 1040.0,
+        "transition_samples": 1024.0
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "gaussian-group8-smc-n16",
+      "cdf_mse": 0.0029457288119425994,
+      "pooled_cdf_mse": 2.0235375141408326e-05,
+      "costs_per_repeat": {
+        "value_evaluations": 1040.0,
+        "analytic_component_integrals": 912.0,
+        "transition_samples": 1024.0,
+        "reward_evaluations": 128.0
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "mixture-group8-smc-n16",
+      "cdf_mse": 0.0029457288119425994,
+      "pooled_cdf_mse": 2.0235375141408326e-05,
+      "costs_per_repeat": {
+        "value_evaluations": 1040.0,
+        "analytic_component_integrals": 912.0,
+        "transition_samples": 1024.0,
+        "reward_evaluations": 128.0
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "branch-group8-smc-n16",
+      "cdf_mse": 0.004747905337828482,
+      "pooled_cdf_mse": 3.0822872389976655e-05,
+      "costs_per_repeat": {
+        "value_evaluations": 2864.0,
+        "transition_samples": 2848.0,
+        "analytic_component_integrals": 1568.0,
+        "reward_evaluations": 384.0
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "future-group8-smc-n16",
+      "cdf_mse": 0.005180053435906084,
+      "pooled_cdf_mse": 0.0008041559944534401,
+      "costs_per_repeat": {
+        "value_evaluations": 2864.0,
+        "transition_samples": 8448.0,
+        "reward_evaluations": 1952.0
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "base-smc-n32",
+      "cdf_mse": 0.004846638808149241,
+      "pooled_cdf_mse": 0.00011628135106008598,
+      "costs_per_repeat": {
+        "value_evaluations": 288.0,
+        "transition_samples": 256.0,
+        "reward_evaluations": 32.0
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "base-smc-n64",
+      "cdf_mse": 0.001996198567553519,
+      "pooled_cdf_mse": 1.6448259420037924e-05,
+      "costs_per_repeat": {
+        "value_evaluations": 576.0,
+        "transition_samples": 512.0,
+        "reward_evaluations": 64.0
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "base-smc-n128",
+      "cdf_mse": 0.0010107379411087658,
+      "pooled_cdf_mse": 3.4598610402869314e-06,
+      "costs_per_repeat": {
+        "value_evaluations": 1152.0,
+        "transition_samples": 1024.0,
+        "reward_evaluations": 128.0
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "point-group8-uncorrected-n8",
+      "cdf_mse": 0.007100940451338146,
+      "pooled_cdf_mse": 0.00274967995215397,
+      "costs_per_repeat": {
+        "transition_samples": 512.0,
+        "value_evaluations": 512.0,
+        "reward_evaluations": 512.0
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "gaussian-group8-uncorrected-n8",
+      "cdf_mse": 0.0060194450452867865,
+      "pooled_cdf_mse": 0.0011162159182676976,
+      "costs_per_repeat": {
+        "transition_samples": 512.0,
+        "value_evaluations": 512.0,
+        "analytic_component_integrals": 448.0,
+        "reward_evaluations": 64.0
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "mixture-group8-uncorrected-n8",
+      "cdf_mse": 0.0060194450452867865,
+      "pooled_cdf_mse": 0.0011162159182676976,
+      "costs_per_repeat": {
+        "transition_samples": 512.0,
+        "value_evaluations": 512.0,
+        "analytic_component_integrals": 448.0,
+        "reward_evaluations": 64.0
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "point-group4-smc-n4",
+      "cdf_mse": 0.037347532469598876,
+      "pooled_cdf_mse": 0.0006773485680123795,
+      "costs_per_repeat": {
+        "value_evaluations": 132.0,
+        "reward_evaluations": 132.0,
+        "transition_samples": 128.0
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "gaussian-group4-smc-n4",
+      "cdf_mse": 0.03995476038592265,
+      "pooled_cdf_mse": 0.0017321535580556839,
+      "costs_per_repeat": {
+        "value_evaluations": 132.0,
+        "analytic_component_integrals": 116.0,
+        "transition_samples": 128.0,
+        "reward_evaluations": 16.0
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "mixture-group4-smc-n4",
+      "cdf_mse": 0.03633445690069477,
+      "pooled_cdf_mse": 0.0009355463508449055,
+      "costs_per_repeat": {
+        "value_evaluations": 132.0,
+        "analytic_component_integrals": 232.0,
+        "transition_samples": 128.0,
+        "reward_evaluations": 16.0
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "branch-group4-smc-n4",
+      "cdf_mse": 0.044019382196973905,
+      "pooled_cdf_mse": 0.0018256008515800505,
+      "costs_per_repeat": {
+        "value_evaluations": 364.0,
+        "transition_samples": 360.0,
+        "analytic_component_integrals": 200.0,
+        "reward_evaluations": 48.0
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "future-group4-smc-n4",
+      "cdf_mse": 0.05293244215548025,
+      "pooled_cdf_mse": 0.0017721059874685019,
+      "costs_per_repeat": {
+        "value_evaluations": 364.0,
+        "transition_samples": 1088.0,
+        "reward_evaluations": 248.0
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "point-group8-smc-n4",
+      "cdf_mse": 0.0347311262518272,
+      "pooled_cdf_mse": 0.0001386908866361154,
+      "costs_per_repeat": {
+        "value_evaluations": 260.0,
+        "reward_evaluations": 260.0,
+        "transition_samples": 256.0
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "gaussian-group8-smc-n4",
+      "cdf_mse": 0.032892303082294,
+      "pooled_cdf_mse": 0.000860703581138354,
+      "costs_per_repeat": {
+        "value_evaluations": 260.0,
+        "analytic_component_integrals": 228.0,
+        "transition_samples": 256.0,
+        "reward_evaluations": 32.0
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "mixture-group8-smc-n4",
+      "cdf_mse": 0.031371985607316646,
+      "pooled_cdf_mse": 0.0008680708102852977,
+      "costs_per_repeat": {
+        "value_evaluations": 260.0,
+        "analytic_component_integrals": 456.0,
+        "transition_samples": 256.0,
+        "reward_evaluations": 32.0
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "branch-group8-smc-n4",
+      "cdf_mse": 0.04289981481509866,
+      "pooled_cdf_mse": 0.001251376493446102,
+      "costs_per_repeat": {
+        "value_evaluations": 716.0,
+        "transition_samples": 712.0,
+        "analytic_component_integrals": 392.0,
+        "reward_evaluations": 96.0
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "future-group8-smc-n4",
+      "cdf_mse": 0.050074552519777424,
+      "pooled_cdf_mse": 0.0007870926557520051,
+      "costs_per_repeat": {
+        "value_evaluations": 716.0,
+        "transition_samples": 2112.0,
+        "reward_evaluations": 488.0
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "point-group4-smc-n8",
+      "cdf_mse": 0.017313603636054272,
+      "pooled_cdf_mse": 2.6879585806853257e-05,
+      "costs_per_repeat": {
+        "value_evaluations": 264.0,
+        "reward_evaluations": 264.0,
+        "transition_samples": 256.0
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "gaussian-group4-smc-n8",
+      "cdf_mse": 0.016023712228877978,
+      "pooled_cdf_mse": 7.739003161654273e-05,
+      "costs_per_repeat": {
+        "value_evaluations": 264.0,
+        "analytic_component_integrals": 232.0,
+        "transition_samples": 256.0,
+        "reward_evaluations": 32.0
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "mixture-group4-smc-n8",
+      "cdf_mse": 0.016576554985892448,
+      "pooled_cdf_mse": 0.000153661295565493,
+      "costs_per_repeat": {
+        "value_evaluations": 264.0,
+        "analytic_component_integrals": 464.0,
+        "transition_samples": 256.0,
+        "reward_evaluations": 32.0
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "branch-group4-smc-n8",
+      "cdf_mse": 0.02072734344275575,
+      "pooled_cdf_mse": 0.00015186187512999358,
+      "costs_per_repeat": {
+        "value_evaluations": 728.0,
+        "transition_samples": 720.0,
+        "analytic_component_integrals": 400.0,
+        "reward_evaluations": 96.0
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "future-group4-smc-n8",
+      "cdf_mse": 0.02931914904124988,
+      "pooled_cdf_mse": 0.0002824628626061333,
+      "costs_per_repeat": {
+        "value_evaluations": 728.0,
+        "transition_samples": 2176.0,
+        "reward_evaluations": 496.0
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "point-group8-smc-n8",
+      "cdf_mse": 0.017115792571378748,
+      "pooled_cdf_mse": 3.820809505159534e-05,
+      "costs_per_repeat": {
+        "value_evaluations": 520.0,
+        "reward_evaluations": 520.0,
+        "transition_samples": 512.0
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "gaussian-group8-smc-n8",
+      "cdf_mse": 0.015253790535630318,
+      "pooled_cdf_mse": 0.00014027161710742904,
+      "costs_per_repeat": {
+        "value_evaluations": 520.0,
+        "analytic_component_integrals": 456.0,
+        "transition_samples": 512.0,
+        "reward_evaluations": 64.0
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "mixture-group8-smc-n8",
+      "cdf_mse": 0.015632893236977217,
+      "pooled_cdf_mse": 6.340398533319285e-05,
+      "costs_per_repeat": {
+        "value_evaluations": 520.0,
+        "analytic_component_integrals": 912.0,
+        "transition_samples": 512.0,
+        "reward_evaluations": 64.0
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "branch-group8-smc-n8",
+      "cdf_mse": 0.01905156832964345,
+      "pooled_cdf_mse": 6.389713621627262e-05,
+      "costs_per_repeat": {
+        "value_evaluations": 1432.0,
+        "transition_samples": 1424.0,
+        "analytic_component_integrals": 784.0,
+        "reward_evaluations": 192.0
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "future-group8-smc-n8",
+      "cdf_mse": 0.029383834001959614,
+      "pooled_cdf_mse": 0.00011149379749568239,
+      "costs_per_repeat": {
+        "value_evaluations": 1432.0,
+        "transition_samples": 4224.0,
+        "reward_evaluations": 976.0
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "point-group4-smc-n16",
+      "cdf_mse": 0.010186726936778719,
+      "pooled_cdf_mse": 3.194869256437598e-05,
+      "costs_per_repeat": {
+        "value_evaluations": 528.0,
+        "reward_evaluations": 528.0,
+        "transition_samples": 512.0
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "gaussian-group4-smc-n16",
+      "cdf_mse": 0.008671348866770606,
+      "pooled_cdf_mse": 0.00011480610327435115,
+      "costs_per_repeat": {
+        "value_evaluations": 528.0,
+        "analytic_component_integrals": 464.0,
+        "transition_samples": 512.0,
+        "reward_evaluations": 64.0
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "mixture-group4-smc-n16",
+      "cdf_mse": 0.008586849712916386,
+      "pooled_cdf_mse": 7.897889839932248e-05,
+      "costs_per_repeat": {
+        "value_evaluations": 528.0,
+        "analytic_component_integrals": 928.0,
+        "transition_samples": 512.0,
+        "reward_evaluations": 64.0
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "branch-group4-smc-n16",
+      "cdf_mse": 0.01073872200012017,
+      "pooled_cdf_mse": 7.645394687207124e-05,
+      "costs_per_repeat": {
+        "value_evaluations": 1456.0,
+        "transition_samples": 1440.0,
+        "analytic_component_integrals": 800.0,
+        "reward_evaluations": 192.0
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "future-group4-smc-n16",
+      "cdf_mse": 0.015064541495816996,
+      "pooled_cdf_mse": 0.00010128728522443463,
+      "costs_per_repeat": {
+        "value_evaluations": 1456.0,
+        "transition_samples": 4352.0,
+        "reward_evaluations": 992.0
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "point-group8-smc-n16",
+      "cdf_mse": 0.009707912105054978,
+      "pooled_cdf_mse": 3.801040135542464e-05,
+      "costs_per_repeat": {
+        "value_evaluations": 1040.0,
+        "reward_evaluations": 1040.0,
+        "transition_samples": 1024.0
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "gaussian-group8-smc-n16",
+      "cdf_mse": 0.007231236059099793,
+      "pooled_cdf_mse": 6.293233491118262e-05,
+      "costs_per_repeat": {
+        "value_evaluations": 1040.0,
+        "analytic_component_integrals": 912.0,
+        "transition_samples": 1024.0,
+        "reward_evaluations": 128.0
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "mixture-group8-smc-n16",
+      "cdf_mse": 0.00785293492548739,
+      "pooled_cdf_mse": 3.314688251460226e-05,
+      "costs_per_repeat": {
+        "value_evaluations": 1040.0,
+        "analytic_component_integrals": 1824.0,
+        "transition_samples": 1024.0,
+        "reward_evaluations": 128.0
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "branch-group8-smc-n16",
+      "cdf_mse": 0.011394371160995058,
+      "pooled_cdf_mse": 9.906297873628109e-05,
+      "costs_per_repeat": {
+        "value_evaluations": 2864.0,
+        "transition_samples": 2848.0,
+        "analytic_component_integrals": 1568.0,
+        "reward_evaluations": 384.0
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "future-group8-smc-n16",
+      "cdf_mse": 0.016999168606293108,
+      "pooled_cdf_mse": 9.797495267513353e-05,
+      "costs_per_repeat": {
+        "value_evaluations": 2864.0,
+        "transition_samples": 8448.0,
+        "reward_evaluations": 1952.0
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "base-smc-n32",
+      "cdf_mse": 0.007214271290861417,
+      "pooled_cdf_mse": 0.00027276240970222496,
+      "costs_per_repeat": {
+        "value_evaluations": 288.0,
+        "transition_samples": 256.0,
+        "reward_evaluations": 32.0
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "base-smc-n64",
+      "cdf_mse": 0.003316620118854958,
+      "pooled_cdf_mse": 9.170754579140473e-05,
+      "costs_per_repeat": {
+        "value_evaluations": 576.0,
+        "transition_samples": 512.0,
+        "reward_evaluations": 64.0
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "base-smc-n128",
+      "cdf_mse": 0.0014812476502528392,
+      "pooled_cdf_mse": 1.644999324261765e-05,
+      "costs_per_repeat": {
+        "value_evaluations": 1152.0,
+        "transition_samples": 1024.0,
+        "reward_evaluations": 128.0
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "point-group8-uncorrected-n8",
+      "cdf_mse": 0.01617899623153724,
+      "pooled_cdf_mse": 0.0019443586097702059,
+      "costs_per_repeat": {
+        "transition_samples": 512.0,
+        "value_evaluations": 512.0,
+        "reward_evaluations": 512.0
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "gaussian-group8-uncorrected-n8",
+      "cdf_mse": 0.02673436226426561,
+      "pooled_cdf_mse": 0.01071710298635321,
+      "costs_per_repeat": {
+        "transition_samples": 512.0,
+        "value_evaluations": 512.0,
+        "analytic_component_integrals": 448.0,
+        "reward_evaluations": 64.0
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "mixture-group8-uncorrected-n8",
+      "cdf_mse": 0.0253076069844671,
+      "pooled_cdf_mse": 0.008813505365338987,
+      "costs_per_repeat": {
+        "transition_samples": 512.0,
+        "value_evaluations": 512.0,
+        "analytic_component_integrals": 896.0,
+        "reward_evaluations": 64.0
+      }
+    }
+  ],
+  "exp-049-fors-local-discovery": [
+    {
+      "method": "shift",
+      "cdf_mse": 0.023943864816132105,
+      "guidance_per_output": 5e-05,
+      "proposals_per_output": 1.0
+    },
+    {
+      "method": "exact",
+      "cdf_mse": 5.966704215970268e-06,
+      "guidance_per_output": 0.0,
+      "proposals_per_output": 1.0
+    },
+    {
+      "method": "direct",
+      "cdf_mse": 3.7598775136753676e-06,
+      "guidance_per_output": 5e-05,
+      "proposals_per_output": 2.0323
+    },
+    {
+      "method": "fors-0.25",
+      "cdf_mse": 0.019887034073276327,
+      "guidance_per_output": 0.7678,
+      "proposals_per_output": 1.5424
+    },
+    {
+      "method": "fors-1.0",
+      "cdf_mse": 0.006598781409178949,
+      "guidance_per_output": 8.822600000000001,
+      "proposals_per_output": 4.416725
+    },
+    {
+      "method": "fors-2.0",
+      "cdf_mse": 0.0009558870269175543,
+      "guidance_per_output": 55.56825,
+      "proposals_per_output": 13.90465
+    }
+  ],
+  "decision": "No demonstrated cost-controlled improvement. Grouped uncertainty helps fixed-N comparisons but larger bootstrap populations win at equal toy transition counts. FORS remains biased at B=2 and expensive; direct residual rejection is accurate. Continue only bounded real-critic evaluation, including calibrated-mean and larger-bootstrap controls."
+}

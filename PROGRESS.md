@@ -11,6 +11,26 @@ approximation, local sampling, and finite-particle correction on analytic
 models before selecting a bounded real-model experiment. The older studies
 below retain their conclusions at their tested budgets.
 
+The first uncertainty waves are complete. Exp-047-r2 passed the analytic
+identities; the first check failed from insufficient numerical quadrature, and
+independent adaptive integration verified the formula before correction.
+Exp-048/050 completed 260 toy conditions with 256 repeats each. Gaussian
+uncertainty and corrected grouped candidates improve some fixed-particle
+comparisons, but larger bootstrap populations win at matched toy transition
+counts. Short branches do not repay their added cost here. Exp-049's FORS B=2
+still has substantial clipping bias at about 55 guidance calls per output;
+direct residual rejection is accurate at about two residual evaluations.
+Do not scale FORS or claim a cost-controlled toy success from these results.
+
+Exp-051 verified batched real actor transitions within 1.2e-7 and calibrated
+actual finite-sampler residuals on independent real observation rows. Both
+Hopper and HalfCheetah have early residual RMS about 1.36, including substantial
+mean bias. Exp-052/053 therefore compare uncertainty against both point and
+calibrated-mean controls, as well as larger bootstrap populations. The primary
+metric is fixed-target projected CDF error with independent reference
+uncertainty reported. This is an offline critic-distribution study; simulator
+returns and new image outcomes remain untested.
+
 Orion connectivity has recovered. Read-only inspection found no active project
 queue or run, and the old checkout remains clean at `d6728de`. Exp-039 actually
 failed with a nonfinite Gaussian moment ratio after 31,744 saved rows; its total

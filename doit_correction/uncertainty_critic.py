@@ -179,6 +179,7 @@ def run_particles(model, method, seed, repeats):
     else:
         terminal_q = model.reward(x)
     return x, weights, {"mean_step_ess_fraction": float(np.mean(ess_values)) if ess_values else 1.0,
+                        "step_ess_fractions": ess_values,
                         "final_ess_fraction": float((1 / weights.square().sum(dim=-1)).mean() / n),
                         "resamplings_per_repeat": resampling_count / repeats,
                         "max_proposal_kl": max_displacement_kl,
@@ -295,3 +296,30 @@ def calibrate(config, output):
     return {"tasks": len(summaries), "score_forwards": sum(c["score_forwards"] for c in counts),
             "reward_queries": sum(c["reward_queries"] for c in counts),
             "batch_checks_passed": len(summaries)}
+
+
+def calibrate_terminal(config, output):
+    rows, counts = [], []
+    for task in config["tasks"]:
+        model = BatchCritic(task)
+        try:
+            for row in config["state_rows"]:
+                model.engine.use_state(row)
+                generator = model.generator(config["seed"] + row * 1009)
+                x = model.rollout(model.noise((config["trajectories_per_state"], model.dimension), generator), 0, generator)
+                q = model.reward(x).double()
+                rows.append({"task": task["name"], "state_row": row, "samples": len(q),
+                             "q_mean": float(q.mean()), "q_std": float(q.std()),
+                             "q_quantiles": torch.quantile(q, torch.tensor([0, .1, .5, .9, 1.], device="cuda", dtype=torch.float64)).cpu().tolist()})
+                dump(output / "terminal-calibration.json", rows)
+                dump(output / "counts.json", counts + [{"task": task["name"], **model.engine.counts()}])
+        finally:
+            counts.append({"task": task["name"], **model.engine.counts()})
+            dump(output / "counts.json", counts)
+        del model
+        torch.cuda.empty_cache()
+    temperatures = {task["name"]: float(np.median([row["q_std"] for row in rows if row["task"] == task["name"]])) / config["tilt_standard_deviations"]
+                    for task in config["tasks"]}
+    dump(output / "temperatures.json", temperatures)
+    return {"states": len(rows), "score_forwards": sum(c["score_forwards"] for c in counts),
+            "reward_queries": sum(c["reward_queries"] for c in counts), "temperatures": temperatures}
