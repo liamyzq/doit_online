@@ -1,0 +1,10 @@
+{
+  "gaussian_value_equals_mixture": 0.0,
+  "gaussian_ratio_step3": 4.996003610813204e-16,
+  "gaussian_ratio_step2": 2.7755575615628914e-16,
+  "gaussian_ratio_step1": 4.996003610813204e-16,
+  "path_telescoping": 1.7763568394002505e-15,
+  "exact_doob_increment": 3.552713678800501e-15,
+  "poisson_identity": 5.551115123125783e-17,
+  "mixture_tower": 1.7763568394002505e-15
+}

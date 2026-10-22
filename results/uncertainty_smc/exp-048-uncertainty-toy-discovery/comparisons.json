@@ -1,0 +1,3306 @@
+[
+  {
+    "problem": "gaussian",
+    "seed": 47011,
+    "method": "base-smc-n4",
+    "particles": 4,
+    "cdf_mse": 0.04860394232629281,
+    "cdf_mse_standard_error": 0.002826362420985984,
+    "pooled_cdf_mse": 0.011921741635204203,
+    "positive_mass_mse": 0.07773582161255965,
+    "positive_mass": 0.903872395211377,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 0.9000833828859031,
+    "mean_log_reward": -1.8010767972473056,
+    "mean_step_ess_fraction": 1.0,
+    "final_ess_fraction": 0.40051562151735876,
+    "resampling_events_per_repeat": 0.0,
+    "costs": {
+      "value_evaluations": 9216,
+      "transition_samples": 8192,
+      "reward_evaluations": 1024
+    },
+    "seconds": 0.01210165093652904,
+    "costs_per_repeat": {
+      "value_evaluations": 36.0,
+      "transition_samples": 32.0,
+      "reward_evaluations": 4.0
+    }
+  },
+  {
+    "problem": "gaussian",
+    "seed": 47011,
+    "method": "exact-doob-n4",
+    "particles": 4,
+    "cdf_mse": 0.009811742497862534,
+    "cdf_mse_standard_error": 0.0005018045753554323,
+    "pooled_cdf_mse": 3.871911760668814e-05,
+    "positive_mass_mse": 0.0016681182719145956,
+    "positive_mass": 0.9931640625,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 1.3299988676569718,
+    "mean_log_reward": -0.7123244248451213,
+    "mean_step_ess_fraction": 1.0,
+    "final_ess_fraction": 1.0,
+    "resampling_events_per_repeat": 0.0,
+    "costs": {
+      "transition_samples": 8192
+    },
+    "seconds": 0.00791043508797884,
+    "costs_per_repeat": {
+      "transition_samples": 32.0
+    }
+  },
+  {
+    "problem": "gaussian",
+    "seed": 47011,
+    "method": "point-pilot8-smc-n4",
+    "particles": 4,
+    "cdf_mse": 0.01595177806807194,
+    "cdf_mse_standard_error": 0.0008610792055471283,
+    "pooled_cdf_mse": 0.0009261692015977886,
+    "positive_mass_mse": 0.0006841002748169783,
+    "positive_mass": 0.9976199777529458,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 1.4529909676238288,
+    "mean_log_reward": -0.5620997282178435,
+    "mean_step_ess_fraction": 0.6888450443692755,
+    "final_ess_fraction": 0.7238848249611775,
+    "resampling_events_per_repeat": 1.01171875,
+    "costs": {
+      "value_evaluations": 74752,
+      "reward_evaluations": 74752,
+      "transition_samples": 73728
+    },
+    "seconds": 0.03481304494198412,
+    "costs_per_repeat": {
+      "value_evaluations": 292.0,
+      "reward_evaluations": 292.0,
+      "transition_samples": 288.0
+    }
+  },
+  {
+    "problem": "gaussian",
+    "seed": 47011,
+    "method": "gaussian-pilot8-smc-n4",
+    "particles": 4,
+    "cdf_mse": 0.015374363488488798,
+    "cdf_mse_standard_error": 0.0008288869872831816,
+    "pooled_cdf_mse": 0.00025471072993172287,
+    "positive_mass_mse": 0.0003872130940632904,
+    "positive_mass": 0.9957631969640741,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 1.2906942537693404,
+    "mean_log_reward": -0.8046082831140189,
+    "mean_step_ess_fraction": 0.7786862626802735,
+    "final_ess_fraction": 0.7134527090442149,
+    "resampling_events_per_repeat": 0.375,
+    "costs": {
+      "value_evaluations": 74752,
+      "analytic_component_integrals": 65536,
+      "transition_samples": 73728,
+      "reward_evaluations": 9216
+    },
+    "seconds": 0.03361677099019289,
+    "costs_per_repeat": {
+      "value_evaluations": 292.0,
+      "analytic_component_integrals": 256.0,
+      "transition_samples": 288.0,
+      "reward_evaluations": 36.0
+    }
+  },
+  {
+    "problem": "gaussian",
+    "seed": 47011,
+    "method": "mixture-pilot8-smc-n4",
+    "particles": 4,
+    "cdf_mse": 0.015374363488488798,
+    "cdf_mse_standard_error": 0.0008288869872831816,
+    "pooled_cdf_mse": 0.00025471072993172287,
+    "positive_mass_mse": 0.0003872130940632904,
+    "positive_mass": 0.9957631969640741,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 1.2906942537693404,
+    "mean_log_reward": -0.8046082831140189,
+    "mean_step_ess_fraction": 0.7786862626802735,
+    "final_ess_fraction": 0.7134527090442149,
+    "resampling_events_per_repeat": 0.375,
+    "costs": {
+      "value_evaluations": 74752,
+      "analytic_component_integrals": 65536,
+      "transition_samples": 73728,
+      "reward_evaluations": 9216
+    },
+    "seconds": 0.036082876031287014,
+    "costs_per_repeat": {
+      "value_evaluations": 292.0,
+      "analytic_component_integrals": 256.0,
+      "transition_samples": 288.0,
+      "reward_evaluations": 36.0
+    }
+  },
+  {
+    "problem": "gaussian",
+    "seed": 47011,
+    "method": "branch2-pilot8-smc-n4",
+    "particles": 4,
+    "cdf_mse": 0.015442322700902972,
+    "cdf_mse_standard_error": 0.0008659275957940137,
+    "pooled_cdf_mse": 0.00016078775734121523,
+    "positive_mass_mse": 0.004231318850610977,
+    "positive_mass": 0.9879026789888561,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 1.3380609799996335,
+    "mean_log_reward": -0.7421216515156526,
+    "mean_step_ess_fraction": 0.7409943260015888,
+    "final_ess_fraction": 0.737348918606431,
+    "resampling_events_per_repeat": 0.734375,
+    "costs": {
+      "value_evaluations": 205824,
+      "transition_samples": 204800,
+      "analytic_component_integrals": 112640,
+      "reward_evaluations": 27648
+    },
+    "seconds": 0.09227813500910997,
+    "costs_per_repeat": {
+      "value_evaluations": 804.0,
+      "transition_samples": 800.0,
+      "analytic_component_integrals": 440.0,
+      "reward_evaluations": 108.0
+    }
+  },
+  {
+    "problem": "gaussian",
+    "seed": 47011,
+    "method": "future2-pilot8-smc-n4",
+    "particles": 4,
+    "cdf_mse": 0.01445899849138375,
+    "cdf_mse_standard_error": 0.0007815175939557284,
+    "pooled_cdf_mse": 5.715802731072353e-05,
+    "positive_mass_mse": 0.0025610710723352865,
+    "positive_mass": 0.9933946535667805,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 1.358727508029423,
+    "mean_log_reward": -0.6724119081875859,
+    "mean_step_ess_fraction": 0.5686213123991528,
+    "final_ess_fraction": 0.7392936859630079,
+    "resampling_events_per_repeat": 2.97265625,
+    "costs": {
+      "value_evaluations": 205824,
+      "transition_samples": 606208,
+      "reward_evaluations": 140288
+    },
+    "seconds": 0.13054491707589477,
+    "costs_per_repeat": {
+      "value_evaluations": 804.0,
+      "transition_samples": 2368.0,
+      "reward_evaluations": 548.0
+    }
+  },
+  {
+    "problem": "gaussian",
+    "seed": 47011,
+    "method": "base-smc-n8",
+    "particles": 8,
+    "cdf_mse": 0.023381669395795487,
+    "cdf_mse_standard_error": 0.0014292682392604815,
+    "pooled_cdf_mse": 0.002787018164869688,
+    "positive_mass_mse": 0.0009235161389562932,
+    "positive_mass": 0.9883289833819926,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 1.144115973649467,
+    "mean_log_reward": -1.0589921621654521,
+    "mean_step_ess_fraction": 0.9999999999999999,
+    "final_ess_fraction": 0.3089638638780767,
+    "resampling_events_per_repeat": 0.0,
+    "costs": {
+      "value_evaluations": 18432,
+      "transition_samples": 16384,
+      "reward_evaluations": 2048
+    },
+    "seconds": 0.015033285948447883,
+    "costs_per_repeat": {
+      "value_evaluations": 72.0,
+      "transition_samples": 64.0,
+      "reward_evaluations": 8.0
+    }
+  },
+  {
+    "problem": "gaussian",
+    "seed": 47011,
+    "method": "exact-doob-n8",
+    "particles": 8,
+    "cdf_mse": 0.004337676807249705,
+    "cdf_mse_standard_error": 0.00020632027129791397,
+    "pooled_cdf_mse": 1.4287588048575124e-05,
+    "positive_mass_mse": 0.0005953509700185558,
+    "positive_mass": 0.99609375,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 1.3410148275218619,
+    "mean_log_reward": -0.654657895251104,
+    "mean_step_ess_fraction": 1.0,
+    "final_ess_fraction": 1.0,
+    "resampling_events_per_repeat": 0.0,
+    "costs": {
+      "transition_samples": 16384
+    },
+    "seconds": 0.010538070928305387,
+    "costs_per_repeat": {
+      "transition_samples": 64.0
+    }
+  },
+  {
+    "problem": "gaussian",
+    "seed": 47011,
+    "method": "point-pilot8-smc-n8",
+    "particles": 8,
+    "cdf_mse": 0.008715496036010885,
+    "cdf_mse_standard_error": 0.00047578663043908485,
+    "pooled_cdf_mse": 0.000937556228566166,
+    "positive_mass_mse": 0.0004681286064646492,
+    "positive_mass": 0.9982759671639403,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 1.4481208549065574,
+    "mean_log_reward": -0.5402438237278182,
+    "mean_step_ess_fraction": 0.6429040621788943,
+    "final_ess_fraction": 0.6962621159485667,
+    "resampling_events_per_repeat": 1.4921875,
+    "costs": {
+      "value_evaluations": 149504,
+      "reward_evaluations": 149504,
+      "transition_samples": 147456
+    },
+    "seconds": 0.06458529504016042,
+    "costs_per_repeat": {
+      "value_evaluations": 584.0,
+      "reward_evaluations": 584.0,
+      "transition_samples": 576.0
+    }
+  },
+  {
+    "problem": "gaussian",
+    "seed": 47011,
+    "method": "gaussian-pilot8-smc-n8",
+    "particles": 8,
+    "cdf_mse": 0.007115153291626784,
+    "cdf_mse_standard_error": 0.00034072141317238974,
+    "pooled_cdf_mse": 1.1778754918601921e-05,
+    "positive_mass_mse": 0.0004589943946005619,
+    "positive_mass": 0.9951735602115205,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 1.3372420938403007,
+    "mean_log_reward": -0.6759445483970938,
+    "mean_step_ess_fraction": 0.7482512132823305,
+    "final_ess_fraction": 0.674254615370484,
+    "resampling_events_per_repeat": 0.51171875,
+    "costs": {
+      "value_evaluations": 149504,
+      "analytic_component_integrals": 131072,
+      "transition_samples": 147456,
+      "reward_evaluations": 18432
+    },
+    "seconds": 0.052005534060299397,
+    "costs_per_repeat": {
+      "value_evaluations": 584.0,
+      "analytic_component_integrals": 512.0,
+      "transition_samples": 576.0,
+      "reward_evaluations": 72.0
+    }
+  },
+  {
+    "problem": "gaussian",
+    "seed": 47011,
+    "method": "mixture-pilot8-smc-n8",
+    "particles": 8,
+    "cdf_mse": 0.007115153291626784,
+    "cdf_mse_standard_error": 0.00034072141317238974,
+    "pooled_cdf_mse": 1.1778754918601921e-05,
+    "positive_mass_mse": 0.0004589943946005619,
+    "positive_mass": 0.9951735602115205,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 1.3372420938403007,
+    "mean_log_reward": -0.6759445483970938,
+    "mean_step_ess_fraction": 0.7482512132823305,
+    "final_ess_fraction": 0.674254615370484,
+    "resampling_events_per_repeat": 0.51171875,
+    "costs": {
+      "value_evaluations": 149504,
+      "analytic_component_integrals": 131072,
+      "transition_samples": 147456,
+      "reward_evaluations": 18432
+    },
+    "seconds": 0.05856917495839298,
+    "costs_per_repeat": {
+      "value_evaluations": 584.0,
+      "analytic_component_integrals": 512.0,
+      "transition_samples": 576.0,
+      "reward_evaluations": 72.0
+    }
+  },
+  {
+    "problem": "gaussian",
+    "seed": 47011,
+    "method": "branch2-pilot8-smc-n8",
+    "particles": 8,
+    "cdf_mse": 0.007705098491389498,
+    "cdf_mse_standard_error": 0.00046127062530424296,
+    "pooled_cdf_mse": 6.364347585314119e-05,
+    "positive_mass_mse": 0.0007738101476030706,
+    "positive_mass": 0.9943340546031791,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 1.3510830178363447,
+    "mean_log_reward": -0.6777013755714943,
+    "mean_step_ess_fraction": 0.6973877749221014,
+    "final_ess_fraction": 0.6807800586415773,
+    "resampling_events_per_repeat": 1.01953125,
+    "costs": {
+      "value_evaluations": 411648,
+      "transition_samples": 409600,
+      "analytic_component_integrals": 225280,
+      "reward_evaluations": 55296
+    },
+    "seconds": 0.11964089202228934,
+    "costs_per_repeat": {
+      "value_evaluations": 1608.0,
+      "transition_samples": 1600.0,
+      "analytic_component_integrals": 880.0,
+      "reward_evaluations": 216.0
+    }
+  },
+  {
+    "problem": "gaussian",
+    "seed": 47011,
+    "method": "future2-pilot8-smc-n8",
+    "particles": 8,
+    "cdf_mse": 0.007745203594122754,
+    "cdf_mse_standard_error": 0.0004255555332954971,
+    "pooled_cdf_mse": 0.00028145816903298314,
+    "positive_mass_mse": 0.0003091272527521084,
+    "positive_mass": 0.9972223807640017,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 1.3902076483395325,
+    "mean_log_reward": -0.5888268509457362,
+    "mean_step_ess_fraction": 0.48551526017940444,
+    "final_ess_fraction": 0.6976871264569271,
+    "resampling_events_per_repeat": 4.2578125,
+    "costs": {
+      "value_evaluations": 411648,
+      "transition_samples": 1212416,
+      "reward_evaluations": 280576
+    },
+    "seconds": 0.20665998803451657,
+    "costs_per_repeat": {
+      "value_evaluations": 1608.0,
+      "transition_samples": 4736.0,
+      "reward_evaluations": 1096.0
+    }
+  },
+  {
+    "problem": "gaussian",
+    "seed": 47011,
+    "method": "base-smc-n16",
+    "particles": 16,
+    "cdf_mse": 0.010725830826794458,
+    "cdf_mse_standard_error": 0.0007549127804192735,
+    "pooled_cdf_mse": 0.0005841743221384765,
+    "positive_mass_mse": 7.464775560698832e-05,
+    "positive_mass": 0.9936859611917152,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 1.25205922235665,
+    "mean_log_reward": -0.8336164009810125,
+    "mean_step_ess_fraction": 1.0,
+    "final_ess_fraction": 0.2732256132539508,
+    "resampling_events_per_repeat": 0.0,
+    "costs": {
+      "value_evaluations": 36864,
+      "transition_samples": 32768,
+      "reward_evaluations": 4096
+    },
+    "seconds": 0.02030910295434296,
+    "costs_per_repeat": {
+      "value_evaluations": 144.0,
+      "transition_samples": 128.0,
+      "reward_evaluations": 16.0
+    }
+  },
+  {
+    "problem": "gaussian",
+    "seed": 47011,
+    "method": "exact-doob-n16",
+    "particles": 16,
+    "cdf_mse": 0.00208013224909915,
+    "cdf_mse_standard_error": 9.508422231054306e-05,
+    "pooled_cdf_mse": 2.2749840222552957e-05,
+    "positive_mass_mse": 0.0001636233832910396,
+    "positive_mass": 0.997314453125,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 1.351576494188229,
+    "mean_log_reward": -0.6478469663325739,
+    "mean_step_ess_fraction": 1.0,
+    "final_ess_fraction": 1.0,
+    "resampling_events_per_repeat": 0.0,
+    "costs": {
+      "transition_samples": 32768
+    },
+    "seconds": 0.01510737999342382,
+    "costs_per_repeat": {
+      "transition_samples": 128.0
+    }
+  },
+  {
+    "problem": "gaussian",
+    "seed": 47011,
+    "method": "point-pilot8-smc-n16",
+    "particles": 16,
+    "cdf_mse": 0.0048043013597354935,
+    "cdf_mse_standard_error": 0.0002569075584047989,
+    "pooled_cdf_mse": 0.0005245481235442294,
+    "positive_mass_mse": 0.00010341977349039408,
+    "positive_mass": 0.9985849136804164,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 1.421581713289026,
+    "mean_log_reward": -0.5549624534909907,
+    "mean_step_ess_fraction": 0.6090861973197511,
+    "final_ess_fraction": 0.6851840164609588,
+    "resampling_events_per_repeat": 2.1328125,
+    "costs": {
+      "value_evaluations": 299008,
+      "reward_evaluations": 299008,
+      "transition_samples": 294912
+    },
+    "seconds": 0.0886587459826842,
+    "costs_per_repeat": {
+      "value_evaluations": 1168.0,
+      "reward_evaluations": 1168.0,
+      "transition_samples": 1152.0
+    }
+  },
+  {
+    "problem": "gaussian",
+    "seed": 47011,
+    "method": "gaussian-pilot8-smc-n16",
+    "particles": 16,
+    "cdf_mse": 0.004032827284113721,
+    "cdf_mse_standard_error": 0.00024344303373692908,
+    "pooled_cdf_mse": 1.3331189279056562e-05,
+    "positive_mass_mse": 0.0003212714655684305,
+    "positive_mass": 0.9954845021226024,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 1.3448091497888752,
+    "mean_log_reward": -0.6681777600263806,
+    "mean_step_ess_fraction": 0.7216196472789663,
+    "final_ess_fraction": 0.681420546697985,
+    "resampling_events_per_repeat": 0.69140625,
+    "costs": {
+      "value_evaluations": 299008,
+      "analytic_component_integrals": 262144,
+      "transition_samples": 294912,
+      "reward_evaluations": 36864
+    },
+    "seconds": 0.07429859193507582,
+    "costs_per_repeat": {
+      "value_evaluations": 1168.0,
+      "analytic_component_integrals": 1024.0,
+      "transition_samples": 1152.0,
+      "reward_evaluations": 144.0
+    }
+  },
+  {
+    "problem": "gaussian",
+    "seed": 47011,
+    "method": "mixture-pilot8-smc-n16",
+    "particles": 16,
+    "cdf_mse": 0.004032827284113721,
+    "cdf_mse_standard_error": 0.00024344303373692908,
+    "pooled_cdf_mse": 1.3331189279056562e-05,
+    "positive_mass_mse": 0.0003212714655684305,
+    "positive_mass": 0.9954845021226024,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 1.3448091497888752,
+    "mean_log_reward": -0.6681777600263806,
+    "mean_step_ess_fraction": 0.7216196472789663,
+    "final_ess_fraction": 0.681420546697985,
+    "resampling_events_per_repeat": 0.69140625,
+    "costs": {
+      "value_evaluations": 299008,
+      "analytic_component_integrals": 262144,
+      "transition_samples": 294912,
+      "reward_evaluations": 36864
+    },
+    "seconds": 0.0883773600216955,
+    "costs_per_repeat": {
+      "value_evaluations": 1168.0,
+      "analytic_component_integrals": 1024.0,
+      "transition_samples": 1152.0,
+      "reward_evaluations": 144.0
+    }
+  },
+  {
+    "problem": "gaussian",
+    "seed": 47011,
+    "method": "branch2-pilot8-smc-n16",
+    "particles": 16,
+    "cdf_mse": 0.004068229092523886,
+    "cdf_mse_standard_error": 0.0002100392838684782,
+    "pooled_cdf_mse": 2.5732940836845077e-05,
+    "positive_mass_mse": 0.00019836942159384534,
+    "positive_mass": 0.994879022605285,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 1.3507637557927592,
+    "mean_log_reward": -0.6596289071905461,
+    "mean_step_ess_fraction": 0.662541791220732,
+    "final_ess_fraction": 0.6575120949320628,
+    "resampling_events_per_repeat": 1.2734375,
+    "costs": {
+      "value_evaluations": 823296,
+      "transition_samples": 819200,
+      "analytic_component_integrals": 450560,
+      "reward_evaluations": 110592
+    },
+    "seconds": 0.21404184203129262,
+    "costs_per_repeat": {
+      "value_evaluations": 3216.0,
+      "transition_samples": 3200.0,
+      "analytic_component_integrals": 1760.0,
+      "reward_evaluations": 432.0
+    }
+  },
+  {
+    "problem": "gaussian",
+    "seed": 47011,
+    "method": "future2-pilot8-smc-n16",
+    "particles": 16,
+    "cdf_mse": 0.005181255414531053,
+    "cdf_mse_standard_error": 0.0003531809243607015,
+    "pooled_cdf_mse": 0.00036084914260983887,
+    "positive_mass_mse": 0.00032983618749110843,
+    "positive_mass": 0.9963855396427992,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 1.4044452237075475,
+    "mean_log_reward": -0.5855410266696208,
+    "mean_step_ess_fraction": 0.422952663452977,
+    "final_ess_fraction": 0.6656811961010957,
+    "resampling_events_per_repeat": 5.24609375,
+    "costs": {
+      "value_evaluations": 823296,
+      "transition_samples": 2424832,
+      "reward_evaluations": 561152
+    },
+    "seconds": 0.36776154406834394,
+    "costs_per_repeat": {
+      "value_evaluations": 3216.0,
+      "transition_samples": 9472.0,
+      "reward_evaluations": 2192.0
+    }
+  },
+  {
+    "problem": "gaussian",
+    "seed": 47011,
+    "method": "point-grad1.0-false-n8",
+    "particles": 8,
+    "cdf_mse": 0.01645321241310499,
+    "cdf_mse_standard_error": 0.0006034139767792936,
+    "pooled_cdf_mse": 0.012359919335647963,
+    "positive_mass_mse": 1.9486754990503566e-05,
+    "positive_mass": 1.0,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 1.749290276436322,
+    "mean_log_reward": -0.2945520159838978,
+    "mean_step_ess_fraction": 1.0,
+    "final_ess_fraction": 1.0,
+    "resampling_events_per_repeat": 0.0,
+    "costs": {
+      "value_evaluations": 32768,
+      "reward_evaluations": 32768,
+      "transition_samples": 16384
+    },
+    "seconds": 0.01059753296431154,
+    "costs_per_repeat": {
+      "value_evaluations": 128.0,
+      "reward_evaluations": 128.0,
+      "transition_samples": 64.0
+    }
+  },
+  {
+    "problem": "gaussian",
+    "seed": 47011,
+    "method": "point-grad0.5-false-n8",
+    "particles": 8,
+    "cdf_mse": 0.005879727547014175,
+    "cdf_mse_standard_error": 0.0002953555160794879,
+    "pooled_cdf_mse": 0.0007245995655794762,
+    "positive_mass_mse": 0.0014548363741266413,
+    "positive_mass": 0.98974609375,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 1.4146410374263758,
+    "mean_log_reward": -0.7178877022821544,
+    "mean_step_ess_fraction": 1.0,
+    "final_ess_fraction": 1.0,
+    "resampling_events_per_repeat": 0.0,
+    "costs": {
+      "value_evaluations": 32768,
+      "reward_evaluations": 32768,
+      "transition_samples": 16384
+    },
+    "seconds": 0.01124798902310431,
+    "costs_per_repeat": {
+      "value_evaluations": 128.0,
+      "reward_evaluations": 128.0,
+      "transition_samples": 64.0
+    }
+  },
+  {
+    "problem": "gaussian",
+    "seed": 47011,
+    "method": "gaussian-grad1.0-false-n8",
+    "particles": 8,
+    "cdf_mse": 0.005652340954666303,
+    "cdf_mse_standard_error": 0.0002810346839821588,
+    "pooled_cdf_mse": 0.0012916799515061226,
+    "positive_mass_mse": 0.00013293523062251665,
+    "positive_mass": 0.9990234375,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 1.4671986450106433,
+    "mean_log_reward": -0.5106339377539919,
+    "mean_step_ess_fraction": 1.0,
+    "final_ess_fraction": 1.0,
+    "resampling_events_per_repeat": 0.0,
+    "costs": {
+      "value_evaluations": 32768,
+      "analytic_component_integrals": 28672,
+      "transition_samples": 16384,
+      "reward_evaluations": 4096
+    },
+    "seconds": 0.013329243054613471,
+    "costs_per_repeat": {
+      "value_evaluations": 128.0,
+      "analytic_component_integrals": 112.0,
+      "transition_samples": 64.0,
+      "reward_evaluations": 16.0
+    }
+  },
+  {
+    "problem": "gaussian",
+    "seed": 47011,
+    "method": "mixture-grad1.0-false-n8",
+    "particles": 8,
+    "cdf_mse": 0.005652340954666303,
+    "cdf_mse_standard_error": 0.0002810346839821588,
+    "pooled_cdf_mse": 0.0012916799515061226,
+    "positive_mass_mse": 0.00013293523062251665,
+    "positive_mass": 0.9990234375,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 1.4671986450106433,
+    "mean_log_reward": -0.5106339377539919,
+    "mean_step_ess_fraction": 1.0,
+    "final_ess_fraction": 1.0,
+    "resampling_events_per_repeat": 0.0,
+    "costs": {
+      "value_evaluations": 32768,
+      "analytic_component_integrals": 28672,
+      "transition_samples": 16384,
+      "reward_evaluations": 4096
+    },
+    "seconds": 0.02169623109512031,
+    "costs_per_repeat": {
+      "value_evaluations": 128.0,
+      "analytic_component_integrals": 112.0,
+      "transition_samples": 64.0,
+      "reward_evaluations": 16.0
+    }
+  },
+  {
+    "problem": "gaussian",
+    "seed": 47011,
+    "method": "point-grad1.0-true-n8",
+    "particles": 8,
+    "cdf_mse": 0.011695528997509108,
+    "cdf_mse_standard_error": 0.0006220049456441452,
+    "pooled_cdf_mse": 0.004062662313751325,
+    "positive_mass_mse": 1.9486754990504034e-05,
+    "positive_mass": 1.0,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 1.5711395230201037,
+    "mean_log_reward": -0.38102942976718274,
+    "mean_step_ess_fraction": 0.6644496647251111,
+    "final_ess_fraction": 0.7282028556426364,
+    "resampling_events_per_repeat": 1.30859375,
+    "costs": {
+      "value_evaluations": 51200,
+      "reward_evaluations": 51200,
+      "transition_samples": 16384
+    },
+    "seconds": 0.026371320942416787,
+    "costs_per_repeat": {
+      "value_evaluations": 200.0,
+      "reward_evaluations": 200.0,
+      "transition_samples": 64.0
+    }
+  },
+  {
+    "problem": "gaussian",
+    "seed": 47011,
+    "method": "point-grad0.5-true-n8",
+    "particles": 8,
+    "cdf_mse": 0.006383759280119987,
+    "cdf_mse_standard_error": 0.00031167366126886805,
+    "pooled_cdf_mse": 9.893210133098487e-05,
+    "positive_mass_mse": 0.00044065055500424385,
+    "positive_mass": 0.9967364087073074,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 1.3680992178999247,
+    "mean_log_reward": -0.6430337287532951,
+    "mean_step_ess_fraction": 0.7029409447755518,
+    "final_ess_fraction": 0.7296023693659016,
+    "resampling_events_per_repeat": 0.625,
+    "costs": {
+      "value_evaluations": 51200,
+      "reward_evaluations": 51200,
+      "transition_samples": 16384
+    },
+    "seconds": 0.02348502108361572,
+    "costs_per_repeat": {
+      "value_evaluations": 200.0,
+      "reward_evaluations": 200.0,
+      "transition_samples": 64.0
+    }
+  },
+  {
+    "problem": "gaussian",
+    "seed": 47011,
+    "method": "gaussian-grad1.0-true-n8",
+    "particles": 8,
+    "cdf_mse": 0.0058322509933036405,
+    "cdf_mse_standard_error": 0.0002915093747557605,
+    "pooled_cdf_mse": 7.409039807582358e-05,
+    "positive_mass_mse": 0.0006262446231949327,
+    "positive_mass": 0.9978204360474658,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 1.365678473688011,
+    "mean_log_reward": -0.624325516862098,
+    "mean_step_ess_fraction": 0.8926664023569836,
+    "final_ess_fraction": 0.7859064759837231,
+    "resampling_events_per_repeat": 0.00390625,
+    "costs": {
+      "value_evaluations": 51200,
+      "analytic_component_integrals": 45056,
+      "transition_samples": 16384,
+      "reward_evaluations": 6144
+    },
+    "seconds": 0.020087282988242805,
+    "costs_per_repeat": {
+      "value_evaluations": 200.0,
+      "analytic_component_integrals": 176.0,
+      "transition_samples": 64.0,
+      "reward_evaluations": 24.0
+    }
+  },
+  {
+    "problem": "gaussian",
+    "seed": 47011,
+    "method": "mixture-grad1.0-true-n8",
+    "particles": 8,
+    "cdf_mse": 0.0058322509933036405,
+    "cdf_mse_standard_error": 0.0002915093747557605,
+    "pooled_cdf_mse": 7.409039807582358e-05,
+    "positive_mass_mse": 0.0006262446231949327,
+    "positive_mass": 0.9978204360474658,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 1.365678473688011,
+    "mean_log_reward": -0.624325516862098,
+    "mean_step_ess_fraction": 0.8926664023569836,
+    "final_ess_fraction": 0.7859064759837231,
+    "resampling_events_per_repeat": 0.00390625,
+    "costs": {
+      "value_evaluations": 51200,
+      "analytic_component_integrals": 45056,
+      "transition_samples": 16384,
+      "reward_evaluations": 6144
+    },
+    "seconds": 0.02399006101768464,
+    "costs_per_repeat": {
+      "value_evaluations": 200.0,
+      "analytic_component_integrals": 176.0,
+      "transition_samples": 64.0,
+      "reward_evaluations": 24.0
+    }
+  },
+  {
+    "problem": "gaussian",
+    "seed": 47017,
+    "method": "base-smc-n4",
+    "particles": 4,
+    "cdf_mse": 0.05104445948106956,
+    "cdf_mse_standard_error": 0.002803267962844118,
+    "pooled_cdf_mse": 0.013500552120700544,
+    "positive_mass_mse": 0.0803407211645077,
+    "positive_mass": 0.9022217345544968,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 0.866619295138108,
+    "mean_log_reward": -1.8472439756025016,
+    "mean_step_ess_fraction": 1.0,
+    "final_ess_fraction": 0.38347959708984053,
+    "resampling_events_per_repeat": 0.0,
+    "costs": {
+      "value_evaluations": 9216,
+      "transition_samples": 8192,
+      "reward_evaluations": 1024
+    },
+    "seconds": 0.011053520953282714,
+    "costs_per_repeat": {
+      "value_evaluations": 36.0,
+      "transition_samples": 32.0,
+      "reward_evaluations": 4.0
+    }
+  },
+  {
+    "problem": "gaussian",
+    "seed": 47017,
+    "method": "exact-doob-n4",
+    "particles": 4,
+    "cdf_mse": 0.008254744451071223,
+    "cdf_mse_standard_error": 0.000430322955292113,
+    "pooled_cdf_mse": 7.563071945000792e-05,
+    "positive_mass_mse": 0.0007260431193865434,
+    "positive_mass": 0.9970703125,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 1.3125632364494781,
+    "mean_log_reward": -0.6848134658191436,
+    "mean_step_ess_fraction": 1.0,
+    "final_ess_fraction": 1.0,
+    "resampling_events_per_repeat": 0.0,
+    "costs": {
+      "transition_samples": 8192
+    },
+    "seconds": 0.007064301986247301,
+    "costs_per_repeat": {
+      "transition_samples": 32.0
+    }
+  },
+  {
+    "problem": "gaussian",
+    "seed": 47017,
+    "method": "point-pilot8-smc-n4",
+    "particles": 4,
+    "cdf_mse": 0.014533577210561813,
+    "cdf_mse_standard_error": 0.0007232564656735301,
+    "pooled_cdf_mse": 0.0007223980277141552,
+    "positive_mass_mse": 0.0004204784158140966,
+    "positive_mass": 0.9981476365286794,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 1.4363135329342893,
+    "mean_log_reward": -0.5495749060441746,
+    "mean_step_ess_fraction": 0.6952318302991038,
+    "final_ess_fraction": 0.7118142299519457,
+    "resampling_events_per_repeat": 0.96484375,
+    "costs": {
+      "value_evaluations": 74752,
+      "reward_evaluations": 74752,
+      "transition_samples": 73728
+    },
+    "seconds": 0.03727600094862282,
+    "costs_per_repeat": {
+      "value_evaluations": 292.0,
+      "reward_evaluations": 292.0,
+      "transition_samples": 288.0
+    }
+  },
+  {
+    "problem": "gaussian",
+    "seed": 47017,
+    "method": "gaussian-pilot8-smc-n4",
+    "particles": 4,
+    "cdf_mse": 0.014378169139406101,
+    "cdf_mse_standard_error": 0.0007365655635857707,
+    "pooled_cdf_mse": 0.0002944389842586145,
+    "positive_mass_mse": 0.0012616787189692075,
+    "positive_mass": 0.9929108287120734,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 1.2719422806422163,
+    "mean_log_reward": -0.7877561910876685,
+    "mean_step_ess_fraction": 0.7884574547222893,
+    "final_ess_fraction": 0.698020624804573,
+    "resampling_events_per_repeat": 0.3203125,
+    "costs": {
+      "value_evaluations": 74752,
+      "analytic_component_integrals": 65536,
+      "transition_samples": 73728,
+      "reward_evaluations": 9216
+    },
+    "seconds": 0.031359960907138884,
+    "costs_per_repeat": {
+      "value_evaluations": 292.0,
+      "analytic_component_integrals": 256.0,
+      "transition_samples": 288.0,
+      "reward_evaluations": 36.0
+    }
+  },
+  {
+    "problem": "gaussian",
+    "seed": 47017,
+    "method": "mixture-pilot8-smc-n4",
+    "particles": 4,
+    "cdf_mse": 0.014378169139406101,
+    "cdf_mse_standard_error": 0.0007365655635857707,
+    "pooled_cdf_mse": 0.0002944389842586145,
+    "positive_mass_mse": 0.0012616787189692075,
+    "positive_mass": 0.9929108287120734,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 1.2719422806422163,
+    "mean_log_reward": -0.7877561910876685,
+    "mean_step_ess_fraction": 0.7884574547222893,
+    "final_ess_fraction": 0.698020624804573,
+    "resampling_events_per_repeat": 0.3203125,
+    "costs": {
+      "value_evaluations": 74752,
+      "analytic_component_integrals": 65536,
+      "transition_samples": 73728,
+      "reward_evaluations": 9216
+    },
+    "seconds": 0.03903973090928048,
+    "costs_per_repeat": {
+      "value_evaluations": 292.0,
+      "analytic_component_integrals": 256.0,
+      "transition_samples": 288.0,
+      "reward_evaluations": 36.0
+    }
+  },
+  {
+    "problem": "gaussian",
+    "seed": 47017,
+    "method": "branch2-pilot8-smc-n4",
+    "particles": 4,
+    "cdf_mse": 0.014987525431191188,
+    "cdf_mse_standard_error": 0.0008710736703467148,
+    "pooled_cdf_mse": 9.649488484427122e-05,
+    "positive_mass_mse": 0.0022428638339065305,
+    "positive_mass": 0.9933122977569507,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 1.30447720455848,
+    "mean_log_reward": -0.7546913989518651,
+    "mean_step_ess_fraction": 0.7476585802420256,
+    "final_ess_fraction": 0.7264679541002296,
+    "resampling_events_per_repeat": 0.69921875,
+    "costs": {
+      "value_evaluations": 205824,
+      "transition_samples": 204800,
+      "analytic_component_integrals": 112640,
+      "reward_evaluations": 27648
+    },
+    "seconds": 0.0919392709620297,
+    "costs_per_repeat": {
+      "value_evaluations": 804.0,
+      "transition_samples": 800.0,
+      "analytic_component_integrals": 440.0,
+      "reward_evaluations": 108.0
+    }
+  },
+  {
+    "problem": "gaussian",
+    "seed": 47017,
+    "method": "future2-pilot8-smc-n4",
+    "particles": 4,
+    "cdf_mse": 0.015442492119983825,
+    "cdf_mse_standard_error": 0.0009375405643356412,
+    "pooled_cdf_mse": 3.568292436050227e-05,
+    "positive_mass_mse": 0.002639649726969015,
+    "positive_mass": 0.989765740677047,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 1.327518472882041,
+    "mean_log_reward": -0.7200952692034801,
+    "mean_step_ess_fraction": 0.5728711279086751,
+    "final_ess_fraction": 0.7424259302964384,
+    "resampling_events_per_repeat": 2.9140625,
+    "costs": {
+      "value_evaluations": 205824,
+      "transition_samples": 606208,
+      "reward_evaluations": 140288
+    },
+    "seconds": 0.1322690580273047,
+    "costs_per_repeat": {
+      "value_evaluations": 804.0,
+      "transition_samples": 2368.0,
+      "reward_evaluations": 548.0
+    }
+  },
+  {
+    "problem": "gaussian",
+    "seed": 47017,
+    "method": "base-smc-n8",
+    "particles": 8,
+    "cdf_mse": 0.027021567349377648,
+    "cdf_mse_standard_error": 0.0018519966214239057,
+    "pooled_cdf_mse": 0.0031213661467611635,
+    "positive_mass_mse": 0.01433943325637628,
+    "positive_mass": 0.9733682846118886,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 1.1405498194317347,
+    "mean_log_reward": -1.16661287338034,
+    "mean_step_ess_fraction": 0.9999999999999999,
+    "final_ess_fraction": 0.30571047110410876,
+    "resampling_events_per_repeat": 0.0,
+    "costs": {
+      "value_evaluations": 18432,
+      "transition_samples": 16384,
+      "reward_evaluations": 2048
+    },
+    "seconds": 0.014279803959652781,
+    "costs_per_repeat": {
+      "value_evaluations": 72.0,
+      "transition_samples": 64.0,
+      "reward_evaluations": 8.0
+    }
+  },
+  {
+    "problem": "gaussian",
+    "seed": 47017,
+    "method": "exact-doob-n8",
+    "particles": 8,
+    "cdf_mse": 0.004406675723917108,
+    "cdf_mse_standard_error": 0.00021895680921241119,
+    "pooled_cdf_mse": 1.2092643791216598e-05,
+    "positive_mass_mse": 0.0005867291331505689,
+    "positive_mass": 0.9951171875,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 1.324723930346674,
+    "mean_log_reward": -0.7019942456015271,
+    "mean_step_ess_fraction": 1.0,
+    "final_ess_fraction": 1.0,
+    "resampling_events_per_repeat": 0.0,
+    "costs": {
+      "transition_samples": 16384
+    },
+    "seconds": 0.01313855906482786,
+    "costs_per_repeat": {
+      "transition_samples": 64.0
+    }
+  },
+  {
+    "problem": "gaussian",
+    "seed": 47017,
+    "method": "point-pilot8-smc-n8",
+    "particles": 8,
+    "cdf_mse": 0.009099821984173967,
+    "cdf_mse_standard_error": 0.0004776906860004755,
+    "pooled_cdf_mse": 0.0008159031221855965,
+    "positive_mass_mse": 0.0012541887451589463,
+    "positive_mass": 0.9950937797431306,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 1.4360393023693026,
+    "mean_log_reward": -0.5638338579442226,
+    "mean_step_ess_fraction": 0.6398132323549999,
+    "final_ess_fraction": 0.705353816817955,
+    "resampling_events_per_repeat": 1.58203125,
+    "costs": {
+      "value_evaluations": 149504,
+      "reward_evaluations": 149504,
+      "transition_samples": 147456
+    },
+    "seconds": 0.06792539893649518,
+    "costs_per_repeat": {
+      "value_evaluations": 584.0,
+      "reward_evaluations": 584.0,
+      "transition_samples": 576.0
+    }
+  },
+  {
+    "problem": "gaussian",
+    "seed": 47017,
+    "method": "gaussian-pilot8-smc-n8",
+    "particles": 8,
+    "cdf_mse": 0.007333227607934752,
+    "cdf_mse_standard_error": 0.0003987705499145031,
+    "pooled_cdf_mse": 3.5394649210940554e-05,
+    "positive_mass_mse": 0.0013058840700128076,
+    "positive_mass": 0.9928567002379434,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 1.318888288090342,
+    "mean_log_reward": -0.741402588480202,
+    "mean_step_ess_fraction": 0.7457355933582344,
+    "final_ess_fraction": 0.691484266997945,
+    "resampling_events_per_repeat": 0.5234375,
+    "costs": {
+      "value_evaluations": 149504,
+      "analytic_component_integrals": 131072,
+      "transition_samples": 147456,
+      "reward_evaluations": 18432
+    },
+    "seconds": 0.06379925401415676,
+    "costs_per_repeat": {
+      "value_evaluations": 584.0,
+      "analytic_component_integrals": 512.0,
+      "transition_samples": 576.0,
+      "reward_evaluations": 72.0
+    }
+  },
+  {
+    "problem": "gaussian",
+    "seed": 47017,
+    "method": "mixture-pilot8-smc-n8",
+    "particles": 8,
+    "cdf_mse": 0.007333227607934752,
+    "cdf_mse_standard_error": 0.0003987705499145031,
+    "pooled_cdf_mse": 3.5394649210940554e-05,
+    "positive_mass_mse": 0.0013058840700128076,
+    "positive_mass": 0.9928567002379434,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 1.318888288090342,
+    "mean_log_reward": -0.741402588480202,
+    "mean_step_ess_fraction": 0.7457355933582344,
+    "final_ess_fraction": 0.691484266997945,
+    "resampling_events_per_repeat": 0.5234375,
+    "costs": {
+      "value_evaluations": 149504,
+      "analytic_component_integrals": 131072,
+      "transition_samples": 147456,
+      "reward_evaluations": 18432
+    },
+    "seconds": 0.05552755598910153,
+    "costs_per_repeat": {
+      "value_evaluations": 584.0,
+      "analytic_component_integrals": 512.0,
+      "transition_samples": 576.0,
+      "reward_evaluations": 72.0
+    }
+  },
+  {
+    "problem": "gaussian",
+    "seed": 47017,
+    "method": "branch2-pilot8-smc-n8",
+    "particles": 8,
+    "cdf_mse": 0.007460794299114087,
+    "cdf_mse_standard_error": 0.0004172966972250102,
+    "pooled_cdf_mse": 1.3880412875764941e-05,
+    "positive_mass_mse": 0.0001882274907590751,
+    "positive_mass": 0.9966644145367803,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 1.3321909398966643,
+    "mean_log_reward": -0.6726254098802695,
+    "mean_step_ess_fraction": 0.6955823962364357,
+    "final_ess_fraction": 0.666421423774876,
+    "resampling_events_per_repeat": 1.0234375,
+    "costs": {
+      "value_evaluations": 411648,
+      "transition_samples": 409600,
+      "analytic_component_integrals": 225280,
+      "reward_evaluations": 55296
+    },
+    "seconds": 0.10747037106193602,
+    "costs_per_repeat": {
+      "value_evaluations": 1608.0,
+      "transition_samples": 1600.0,
+      "analytic_component_integrals": 880.0,
+      "reward_evaluations": 216.0
+    }
+  },
+  {
+    "problem": "gaussian",
+    "seed": 47017,
+    "method": "future2-pilot8-smc-n8",
+    "particles": 8,
+    "cdf_mse": 0.008440322481599554,
+    "cdf_mse_standard_error": 0.0005570433701318518,
+    "pooled_cdf_mse": 0.00019218289768743567,
+    "positive_mass_mse": 9.589828662556131e-05,
+    "positive_mass": 0.9978569003969977,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 1.3894649008286803,
+    "mean_log_reward": -0.6091363315757765,
+    "mean_step_ess_fraction": 0.4874634304898704,
+    "final_ess_fraction": 0.720629836831044,
+    "resampling_events_per_repeat": 4.33984375,
+    "costs": {
+      "value_evaluations": 411648,
+      "transition_samples": 1212416,
+      "reward_evaluations": 280576
+    },
+    "seconds": 0.20242699491791427,
+    "costs_per_repeat": {
+      "value_evaluations": 1608.0,
+      "transition_samples": 4736.0,
+      "reward_evaluations": 1096.0
+    }
+  },
+  {
+    "problem": "gaussian",
+    "seed": 47017,
+    "method": "base-smc-n16",
+    "particles": 16,
+    "cdf_mse": 0.010203248896727215,
+    "cdf_mse_standard_error": 0.0006255822938264488,
+    "pooled_cdf_mse": 0.0004501055311991941,
+    "positive_mass_mse": 5.967314444561833e-05,
+    "positive_mass": 0.9940523783153394,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 1.26507090301704,
+    "mean_log_reward": -0.8026135867465373,
+    "mean_step_ess_fraction": 1.0,
+    "final_ess_fraction": 0.27091924957659175,
+    "resampling_events_per_repeat": 0.0,
+    "costs": {
+      "value_evaluations": 36864,
+      "transition_samples": 32768,
+      "reward_evaluations": 4096
+    },
+    "seconds": 0.01912554702721536,
+    "costs_per_repeat": {
+      "value_evaluations": 144.0,
+      "transition_samples": 128.0,
+      "reward_evaluations": 16.0
+    }
+  },
+  {
+    "problem": "gaussian",
+    "seed": 47017,
+    "method": "exact-doob-n16",
+    "particles": 16,
+    "cdf_mse": 0.0023865192671613657,
+    "cdf_mse_standard_error": 0.00011438312885928031,
+    "pooled_cdf_mse": 1.177433357690361e-05,
+    "positive_mass_mse": 0.00021603670267305268,
+    "positive_mass": 0.996337890625,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 1.3395660222397145,
+    "mean_log_reward": -0.6716960577048796,
+    "mean_step_ess_fraction": 1.0,
+    "final_ess_fraction": 1.0,
+    "resampling_events_per_repeat": 0.0,
+    "costs": {
+      "transition_samples": 32768
+    },
+    "seconds": 0.015675008995458484,
+    "costs_per_repeat": {
+      "transition_samples": 128.0
+    }
+  },
+  {
+    "problem": "gaussian",
+    "seed": 47017,
+    "method": "point-pilot8-smc-n16",
+    "particles": 16,
+    "cdf_mse": 0.005101560730324521,
+    "cdf_mse_standard_error": 0.00030125934887712284,
+    "pooled_cdf_mse": 0.0005129776107199028,
+    "positive_mass_mse": 0.0003209133996497763,
+    "positive_mass": 0.998285841294039,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 1.418310212717702,
+    "mean_log_reward": -0.568434249771762,
+    "mean_step_ess_fraction": 0.6100414142475231,
+    "final_ess_fraction": 0.6776942495789002,
+    "resampling_events_per_repeat": 1.99609375,
+    "costs": {
+      "value_evaluations": 299008,
+      "reward_evaluations": 299008,
+      "transition_samples": 294912
+    },
+    "seconds": 0.0784804429858923,
+    "costs_per_repeat": {
+      "value_evaluations": 1168.0,
+      "reward_evaluations": 1168.0,
+      "transition_samples": 1152.0
+    }
+  },
+  {
+    "problem": "gaussian",
+    "seed": 47017,
+    "method": "gaussian-pilot8-smc-n16",
+    "particles": 16,
+    "cdf_mse": 0.004005246635703515,
+    "cdf_mse_standard_error": 0.00018871148385118022,
+    "pooled_cdf_mse": 1.8693008401126825e-05,
+    "positive_mass_mse": 0.0013650801448002123,
+    "positive_mass": 0.991630673869686,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 1.341591903460891,
+    "mean_log_reward": -0.6920262360693612,
+    "mean_step_ess_fraction": 0.7218519778817319,
+    "final_ess_fraction": 0.6842912359647945,
+    "resampling_events_per_repeat": 0.68359375,
+    "costs": {
+      "value_evaluations": 299008,
+      "analytic_component_integrals": 262144,
+      "transition_samples": 294912,
+      "reward_evaluations": 36864
+    },
+    "seconds": 0.07867108401842415,
+    "costs_per_repeat": {
+      "value_evaluations": 1168.0,
+      "analytic_component_integrals": 1024.0,
+      "transition_samples": 1152.0,
+      "reward_evaluations": 144.0
+    }
+  },
+  {
+    "problem": "gaussian",
+    "seed": 47017,
+    "method": "mixture-pilot8-smc-n16",
+    "particles": 16,
+    "cdf_mse": 0.004005246635703515,
+    "cdf_mse_standard_error": 0.00018871148385118022,
+    "pooled_cdf_mse": 1.8693008401126825e-05,
+    "positive_mass_mse": 0.0013650801448002123,
+    "positive_mass": 0.991630673869686,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 1.341591903460891,
+    "mean_log_reward": -0.6920262360693612,
+    "mean_step_ess_fraction": 0.7218519778817319,
+    "final_ess_fraction": 0.6842912359647945,
+    "resampling_events_per_repeat": 0.68359375,
+    "costs": {
+      "value_evaluations": 299008,
+      "analytic_component_integrals": 262144,
+      "transition_samples": 294912,
+      "reward_evaluations": 36864
+    },
+    "seconds": 0.11106386501342058,
+    "costs_per_repeat": {
+      "value_evaluations": 1168.0,
+      "analytic_component_integrals": 1024.0,
+      "transition_samples": 1152.0,
+      "reward_evaluations": 144.0
+    }
+  },
+  {
+    "problem": "gaussian",
+    "seed": 47017,
+    "method": "branch2-pilot8-smc-n16",
+    "particles": 16,
+    "cdf_mse": 0.004428228580505596,
+    "cdf_mse_standard_error": 0.0002454012940323729,
+    "pooled_cdf_mse": 3.1671190135265065e-05,
+    "positive_mass_mse": 0.00019731197426602965,
+    "positive_mass": 0.9956017610547918,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 1.3538715760113704,
+    "mean_log_reward": -0.6529807202666298,
+    "mean_step_ess_fraction": 0.6631305681023278,
+    "final_ess_fraction": 0.6547603346976946,
+    "resampling_events_per_repeat": 1.265625,
+    "costs": {
+      "value_evaluations": 823296,
+      "transition_samples": 819200,
+      "analytic_component_integrals": 450560,
+      "reward_evaluations": 110592
+    },
+    "seconds": 0.2035135809564963,
+    "costs_per_repeat": {
+      "value_evaluations": 3216.0,
+      "transition_samples": 3200.0,
+      "analytic_component_integrals": 1760.0,
+      "reward_evaluations": 432.0
+    }
+  },
+  {
+    "problem": "gaussian",
+    "seed": 47017,
+    "method": "future2-pilot8-smc-n16",
+    "particles": 16,
+    "cdf_mse": 0.005156090956860196,
+    "cdf_mse_standard_error": 0.0003253374812533324,
+    "pooled_cdf_mse": 0.0003817294344409333,
+    "positive_mass_mse": 6.934571449715527e-05,
+    "positive_mass": 0.9980292458976264,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 1.4013971351989885,
+    "mean_log_reward": -0.5895020578017887,
+    "mean_step_ess_fraction": 0.4308819407084091,
+    "final_ess_fraction": 0.6574242711464664,
+    "resampling_events_per_repeat": 5.125,
+    "costs": {
+      "value_evaluations": 823296,
+      "transition_samples": 2424832,
+      "reward_evaluations": 561152
+    },
+    "seconds": 0.3582711110357195,
+    "costs_per_repeat": {
+      "value_evaluations": 3216.0,
+      "transition_samples": 9472.0,
+      "reward_evaluations": 2192.0
+    }
+  },
+  {
+    "problem": "gaussian",
+    "seed": 47017,
+    "method": "point-grad1.0-false-n8",
+    "particles": 8,
+    "cdf_mse": 0.01576265386770969,
+    "cdf_mse_standard_error": 0.0006152321703032526,
+    "pooled_cdf_mse": 0.01177609086634948,
+    "positive_mass_mse": 7.621099280651009e-05,
+    "positive_mass": 0.99951171875,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 1.7413518049776262,
+    "mean_log_reward": -0.30848564417057206,
+    "mean_step_ess_fraction": 1.0,
+    "final_ess_fraction": 1.0,
+    "resampling_events_per_repeat": 0.0,
+    "costs": {
+      "value_evaluations": 32768,
+      "reward_evaluations": 32768,
+      "transition_samples": 16384
+    },
+    "seconds": 0.009619938908144832,
+    "costs_per_repeat": {
+      "value_evaluations": 128.0,
+      "reward_evaluations": 128.0,
+      "transition_samples": 64.0
+    }
+  },
+  {
+    "problem": "gaussian",
+    "seed": 47017,
+    "method": "point-grad0.5-false-n8",
+    "particles": 8,
+    "cdf_mse": 0.005837528807628594,
+    "cdf_mse_standard_error": 0.0003066258186436013,
+    "pooled_cdf_mse": 0.0005640089717714628,
+    "positive_mass_mse": 0.0013808684625746606,
+    "positive_mass": 0.98828125,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 1.394825794322907,
+    "mean_log_reward": -0.7776327524646771,
+    "mean_step_ess_fraction": 1.0,
+    "final_ess_fraction": 1.0,
+    "resampling_events_per_repeat": 0.0,
+    "costs": {
+      "value_evaluations": 32768,
+      "reward_evaluations": 32768,
+      "transition_samples": 16384
+    },
+    "seconds": 0.009548115078359842,
+    "costs_per_repeat": {
+      "value_evaluations": 128.0,
+      "reward_evaluations": 128.0,
+      "transition_samples": 64.0
+    }
+  },
+  {
+    "problem": "gaussian",
+    "seed": 47017,
+    "method": "gaussian-grad1.0-false-n8",
+    "particles": 8,
+    "cdf_mse": 0.005340774767490709,
+    "cdf_mse_standard_error": 0.0002900307999843559,
+    "pooled_cdf_mse": 0.0009718150207449071,
+    "positive_mass_mse": 0.0003031079440705362,
+    "positive_mass": 0.99755859375,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 1.453606860739095,
+    "mean_log_reward": -0.5468529093541341,
+    "mean_step_ess_fraction": 1.0,
+    "final_ess_fraction": 1.0,
+    "resampling_events_per_repeat": 0.0,
+    "costs": {
+      "value_evaluations": 32768,
+      "analytic_component_integrals": 28672,
+      "transition_samples": 16384,
+      "reward_evaluations": 4096
+    },
+    "seconds": 0.010111622978001833,
+    "costs_per_repeat": {
+      "value_evaluations": 128.0,
+      "analytic_component_integrals": 112.0,
+      "transition_samples": 64.0,
+      "reward_evaluations": 16.0
+    }
+  },
+  {
+    "problem": "gaussian",
+    "seed": 47017,
+    "method": "mixture-grad1.0-false-n8",
+    "particles": 8,
+    "cdf_mse": 0.005340774767490709,
+    "cdf_mse_standard_error": 0.0002900307999843559,
+    "pooled_cdf_mse": 0.0009718150207449071,
+    "positive_mass_mse": 0.0003031079440705362,
+    "positive_mass": 0.99755859375,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 1.453606860739095,
+    "mean_log_reward": -0.5468529093541341,
+    "mean_step_ess_fraction": 1.0,
+    "final_ess_fraction": 1.0,
+    "resampling_events_per_repeat": 0.0,
+    "costs": {
+      "value_evaluations": 32768,
+      "analytic_component_integrals": 28672,
+      "transition_samples": 16384,
+      "reward_evaluations": 4096
+    },
+    "seconds": 0.012733972049318254,
+    "costs_per_repeat": {
+      "value_evaluations": 128.0,
+      "analytic_component_integrals": 112.0,
+      "transition_samples": 64.0,
+      "reward_evaluations": 16.0
+    }
+  },
+  {
+    "problem": "gaussian",
+    "seed": 47017,
+    "method": "point-grad1.0-true-n8",
+    "particles": 8,
+    "cdf_mse": 0.011253801887394478,
+    "cdf_mse_standard_error": 0.0006038764566872765,
+    "pooled_cdf_mse": 0.003982325995961852,
+    "positive_mass_mse": 1.9486754990503925e-05,
+    "positive_mass": 1.0,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 1.5637897952667137,
+    "mean_log_reward": -0.3843928725610678,
+    "mean_step_ess_fraction": 0.6652940944100503,
+    "final_ess_fraction": 0.7345555094947629,
+    "resampling_events_per_repeat": 1.3046875,
+    "costs": {
+      "value_evaluations": 51200,
+      "reward_evaluations": 51200,
+      "transition_samples": 16384
+    },
+    "seconds": 0.02402068499941379,
+    "costs_per_repeat": {
+      "value_evaluations": 200.0,
+      "reward_evaluations": 200.0,
+      "transition_samples": 64.0
+    }
+  },
+  {
+    "problem": "gaussian",
+    "seed": 47017,
+    "method": "point-grad0.5-true-n8",
+    "particles": 8,
+    "cdf_mse": 0.006581418018560347,
+    "cdf_mse_standard_error": 0.0003820909503554905,
+    "pooled_cdf_mse": 2.0346781575104937e-05,
+    "positive_mass_mse": 0.001434925064845131,
+    "positive_mass": 0.995603013429776,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 1.34366174034838,
+    "mean_log_reward": -0.6831366215255543,
+    "mean_step_ess_fraction": 0.6986203548214168,
+    "final_ess_fraction": 0.7128719250082906,
+    "resampling_events_per_repeat": 0.6796875,
+    "costs": {
+      "value_evaluations": 51200,
+      "reward_evaluations": 51200,
+      "transition_samples": 16384
+    },
+    "seconds": 0.024623629986308515,
+    "costs_per_repeat": {
+      "value_evaluations": 200.0,
+      "reward_evaluations": 200.0,
+      "transition_samples": 64.0
+    }
+  },
+  {
+    "problem": "gaussian",
+    "seed": 47017,
+    "method": "gaussian-grad1.0-true-n8",
+    "particles": 8,
+    "cdf_mse": 0.005622827113890828,
+    "cdf_mse_standard_error": 0.00027716449950451294,
+    "pooled_cdf_mse": 1.2539655958928776e-05,
+    "positive_mass_mse": 0.0011819402528060853,
+    "positive_mass": 0.9957251453744063,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 1.3437457308999519,
+    "mean_log_reward": -0.6643773315200436,
+    "mean_step_ess_fraction": 0.8885881238799587,
+    "final_ess_fraction": 0.7816210789210692,
+    "resampling_events_per_repeat": 0.00390625,
+    "costs": {
+      "value_evaluations": 51200,
+      "analytic_component_integrals": 45056,
+      "transition_samples": 16384,
+      "reward_evaluations": 6144
+    },
+    "seconds": 0.019173806998878717,
+    "costs_per_repeat": {
+      "value_evaluations": 200.0,
+      "analytic_component_integrals": 176.0,
+      "transition_samples": 64.0,
+      "reward_evaluations": 24.0
+    }
+  },
+  {
+    "problem": "gaussian",
+    "seed": 47017,
+    "method": "mixture-grad1.0-true-n8",
+    "particles": 8,
+    "cdf_mse": 0.005622827113890828,
+    "cdf_mse_standard_error": 0.00027716449950451294,
+    "pooled_cdf_mse": 1.2539655958928776e-05,
+    "positive_mass_mse": 0.0011819402528060853,
+    "positive_mass": 0.9957251453744063,
+    "target_positive_mass": 0.9955856195235907,
+    "mean": 1.3437457308999519,
+    "mean_log_reward": -0.6643773315200436,
+    "mean_step_ess_fraction": 0.8885881238799587,
+    "final_ess_fraction": 0.7816210789210692,
+    "resampling_events_per_repeat": 0.00390625,
+    "costs": {
+      "value_evaluations": 51200,
+      "analytic_component_integrals": 45056,
+      "transition_samples": 16384,
+      "reward_evaluations": 6144
+    },
+    "seconds": 0.024785224930383265,
+    "costs_per_repeat": {
+      "value_evaluations": 200.0,
+      "analytic_component_integrals": 176.0,
+      "transition_samples": 64.0,
+      "reward_evaluations": 24.0
+    }
+  },
+  {
+    "problem": "mixture",
+    "seed": 47011,
+    "method": "base-smc-n4",
+    "particles": 4,
+    "cdf_mse": 0.12426035419598927,
+    "cdf_mse_standard_error": 0.007017448368897444,
+    "pooled_cdf_mse": 0.03424365225090063,
+    "positive_mass_mse": 0.27775590014455465,
+    "positive_mass": 0.47430488457218867,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 0.06372335498622823,
+    "mean_log_reward": -1.4183484175526597,
+    "mean_step_ess_fraction": 1.0,
+    "final_ess_fraction": 0.5594910476402769,
+    "resampling_events_per_repeat": 0.0,
+    "costs": {
+      "value_evaluations": 9216,
+      "transition_samples": 8192,
+      "reward_evaluations": 1024
+    },
+    "seconds": 0.01657998689915985,
+    "costs_per_repeat": {
+      "value_evaluations": 36.0,
+      "transition_samples": 32.0,
+      "reward_evaluations": 4.0
+    }
+  },
+  {
+    "problem": "mixture",
+    "seed": 47011,
+    "method": "exact-doob-n4",
+    "particles": 4,
+    "cdf_mse": 0.02538564470279218,
+    "cdf_mse_standard_error": 0.0014481769666873031,
+    "pooled_cdf_mse": 0.00011443038940356934,
+    "positive_mass_mse": 0.0441515863079044,
+    "positive_mass": 0.7890625,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 1.2019323761536733,
+    "mean_log_reward": -0.5990940626156549,
+    "mean_step_ess_fraction": 1.0,
+    "final_ess_fraction": 1.0,
+    "resampling_events_per_repeat": 0.0,
+    "costs": {
+      "transition_samples": 8192
+    },
+    "seconds": 0.012891685939393938,
+    "costs_per_repeat": {
+      "transition_samples": 32.0
+    }
+  },
+  {
+    "problem": "mixture",
+    "seed": 47011,
+    "method": "point-pilot8-smc-n4",
+    "particles": 4,
+    "cdf_mse": 0.04711463552906836,
+    "cdf_mse_standard_error": 0.0033723762240065575,
+    "pooled_cdf_mse": 0.00018517181541588586,
+    "positive_mass_mse": 0.08673502904114815,
+    "positive_mass": 0.7555941387675112,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 1.098166730325543,
+    "mean_log_reward": -0.6952344320679593,
+    "mean_step_ess_fraction": 0.709280264104448,
+    "final_ess_fraction": 0.7267731177073637,
+    "resampling_events_per_repeat": 0.63671875,
+    "costs": {
+      "value_evaluations": 74752,
+      "reward_evaluations": 74752,
+      "transition_samples": 73728
+    },
+    "seconds": 0.06253685394767672,
+    "costs_per_repeat": {
+      "value_evaluations": 292.0,
+      "reward_evaluations": 292.0,
+      "transition_samples": 288.0
+    }
+  },
+  {
+    "problem": "mixture",
+    "seed": 47011,
+    "method": "gaussian-pilot8-smc-n4",
+    "particles": 4,
+    "cdf_mse": 0.053240376401372316,
+    "cdf_mse_standard_error": 0.004101519101737039,
+    "pooled_cdf_mse": 0.0021512732542324086,
+    "positive_mass_mse": 0.10477723543667646,
+    "positive_mass": 0.6976295536897299,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 0.8815379261486591,
+    "mean_log_reward": -0.8347851946634673,
+    "mean_step_ess_fraction": 0.753260159373437,
+    "final_ess_fraction": 0.7365373281106851,
+    "resampling_events_per_repeat": 0.52734375,
+    "costs": {
+      "value_evaluations": 74752,
+      "analytic_component_integrals": 65536,
+      "transition_samples": 73728,
+      "reward_evaluations": 9216
+    },
+    "seconds": 0.06705581909045577,
+    "costs_per_repeat": {
+      "value_evaluations": 292.0,
+      "analytic_component_integrals": 256.0,
+      "transition_samples": 288.0,
+      "reward_evaluations": 36.0
+    }
+  },
+  {
+    "problem": "mixture",
+    "seed": 47011,
+    "method": "mixture-pilot8-smc-n4",
+    "particles": 4,
+    "cdf_mse": 0.05476284362957895,
+    "cdf_mse_standard_error": 0.0040586543137294834,
+    "pooled_cdf_mse": 0.0015950703931876119,
+    "positive_mass_mse": 0.10664819274005811,
+    "positive_mass": 0.7083504356295321,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 0.9210969349259228,
+    "mean_log_reward": -0.8007807402092805,
+    "mean_step_ess_fraction": 0.739492989897126,
+    "final_ess_fraction": 0.7371319639664246,
+    "resampling_events_per_repeat": 0.53125,
+    "costs": {
+      "value_evaluations": 74752,
+      "analytic_component_integrals": 131072,
+      "transition_samples": 73728,
+      "reward_evaluations": 9216
+    },
+    "seconds": 0.07624236203264445,
+    "costs_per_repeat": {
+      "value_evaluations": 292.0,
+      "analytic_component_integrals": 512.0,
+      "transition_samples": 288.0,
+      "reward_evaluations": 36.0
+    }
+  },
+  {
+    "problem": "mixture",
+    "seed": 47011,
+    "method": "branch2-pilot8-smc-n4",
+    "particles": 4,
+    "cdf_mse": 0.055170371373790626,
+    "cdf_mse_standard_error": 0.00419774055383269,
+    "pooled_cdf_mse": 0.0017685136964679848,
+    "positive_mass_mse": 0.11323843730114441,
+    "positive_mass": 0.7026220923661294,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 0.9011117526815053,
+    "mean_log_reward": -0.7990147667190004,
+    "mean_step_ess_fraction": 0.7271304907013305,
+    "final_ess_fraction": 0.732588360467332,
+    "resampling_events_per_repeat": 0.68359375,
+    "costs": {
+      "value_evaluations": 205824,
+      "transition_samples": 204800,
+      "analytic_component_integrals": 112640,
+      "reward_evaluations": 27648
+    },
+    "seconds": 0.1388876310084015,
+    "costs_per_repeat": {
+      "value_evaluations": 804.0,
+      "transition_samples": 800.0,
+      "analytic_component_integrals": 440.0,
+      "reward_evaluations": 108.0
+    }
+  },
+  {
+    "problem": "mixture",
+    "seed": 47011,
+    "method": "future2-pilot8-smc-n4",
+    "particles": 4,
+    "cdf_mse": 0.05535488499086663,
+    "cdf_mse_standard_error": 0.004016573851513693,
+    "pooled_cdf_mse": 0.0013062950842769423,
+    "positive_mass_mse": 0.10597626234592769,
+    "positive_mass": 0.7165335536218993,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 0.9620386770252695,
+    "mean_log_reward": -0.8034262737932338,
+    "mean_step_ess_fraction": 0.6680474261335478,
+    "final_ess_fraction": 0.7409067627615029,
+    "resampling_events_per_repeat": 1.49609375,
+    "costs": {
+      "value_evaluations": 205824,
+      "transition_samples": 606208,
+      "reward_evaluations": 140288
+    },
+    "seconds": 0.2577496899757534,
+    "costs_per_repeat": {
+      "value_evaluations": 804.0,
+      "transition_samples": 2368.0,
+      "reward_evaluations": 548.0
+    }
+  },
+  {
+    "problem": "mixture",
+    "seed": 47011,
+    "method": "base-smc-n8",
+    "particles": 8,
+    "cdf_mse": 0.05441041195858884,
+    "cdf_mse_standard_error": 0.004982671959478787,
+    "pooled_cdf_mse": 0.006136790443992972,
+    "positive_mass_mse": 0.10891990892673656,
+    "positive_mass": 0.6504241581803683,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 0.7013634323557514,
+    "mean_log_reward": -0.9473088760855366,
+    "mean_step_ess_fraction": 0.9999999999999999,
+    "final_ess_fraction": 0.4021616313107863,
+    "resampling_events_per_repeat": 0.0,
+    "costs": {
+      "value_evaluations": 18432,
+      "transition_samples": 16384,
+      "reward_evaluations": 2048
+    },
+    "seconds": 0.021669892012141645,
+    "costs_per_repeat": {
+      "value_evaluations": 72.0,
+      "transition_samples": 64.0,
+      "reward_evaluations": 8.0
+    }
+  },
+  {
+    "problem": "mixture",
+    "seed": 47011,
+    "method": "exact-doob-n8",
+    "particles": 8,
+    "cdf_mse": 0.012428667952046411,
+    "cdf_mse_standard_error": 0.0006325008807052717,
+    "pooled_cdf_mse": 8.636451605143969e-05,
+    "positive_mass_mse": 0.02316099914172902,
+    "positive_mass": 0.78759765625,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 1.1932979897535012,
+    "mean_log_reward": -0.5848915373808252,
+    "mean_step_ess_fraction": 1.0,
+    "final_ess_fraction": 1.0,
+    "resampling_events_per_repeat": 0.0,
+    "costs": {
+      "transition_samples": 16384
+    },
+    "seconds": 0.01619719003792852,
+    "costs_per_repeat": {
+      "transition_samples": 64.0
+    }
+  },
+  {
+    "problem": "mixture",
+    "seed": 47011,
+    "method": "point-pilot8-smc-n8",
+    "particles": 8,
+    "cdf_mse": 0.024127718896758812,
+    "cdf_mse_standard_error": 0.001771075704141638,
+    "pooled_cdf_mse": 0.00013429922829951693,
+    "positive_mass_mse": 0.04684429991642084,
+    "positive_mass": 0.7820630889827769,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 1.2090135305189769,
+    "mean_log_reward": -0.5967770313314065,
+    "mean_step_ess_fraction": 0.6632799383729575,
+    "final_ess_fraction": 0.7081632710354132,
+    "resampling_events_per_repeat": 0.95703125,
+    "costs": {
+      "value_evaluations": 149504,
+      "reward_evaluations": 149504,
+      "transition_samples": 147456
+    },
+    "seconds": 0.10483255295548588,
+    "costs_per_repeat": {
+      "value_evaluations": 584.0,
+      "reward_evaluations": 584.0,
+      "transition_samples": 576.0
+    }
+  },
+  {
+    "problem": "mixture",
+    "seed": 47011,
+    "method": "gaussian-pilot8-smc-n8",
+    "particles": 8,
+    "cdf_mse": 0.027939790240290942,
+    "cdf_mse_standard_error": 0.0022308909604287675,
+    "pooled_cdf_mse": 0.00038904802078066687,
+    "positive_mass_mse": 0.0575755859041743,
+    "positive_mass": 0.7384993681327341,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 1.0398355746730563,
+    "mean_log_reward": -0.7029743105856553,
+    "mean_step_ess_fraction": 0.7136673595262982,
+    "final_ess_fraction": 0.716242472622491,
+    "resampling_events_per_repeat": 0.74609375,
+    "costs": {
+      "value_evaluations": 149504,
+      "analytic_component_integrals": 131072,
+      "transition_samples": 147456,
+      "reward_evaluations": 18432
+    },
+    "seconds": 0.12155631196219474,
+    "costs_per_repeat": {
+      "value_evaluations": 584.0,
+      "analytic_component_integrals": 512.0,
+      "transition_samples": 576.0,
+      "reward_evaluations": 72.0
+    }
+  },
+  {
+    "problem": "mixture",
+    "seed": 47011,
+    "method": "mixture-pilot8-smc-n8",
+    "particles": 8,
+    "cdf_mse": 0.025942126033947733,
+    "cdf_mse_standard_error": 0.0019417966594405128,
+    "pooled_cdf_mse": 0.0001336975734722415,
+    "positive_mass_mse": 0.05227656672947321,
+    "positive_mass": 0.751759926446274,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 1.0870544008332885,
+    "mean_log_reward": -0.6697226001891615,
+    "mean_step_ess_fraction": 0.7013216237534041,
+    "final_ess_fraction": 0.7110096042539362,
+    "resampling_events_per_repeat": 0.73828125,
+    "costs": {
+      "value_evaluations": 149504,
+      "analytic_component_integrals": 262144,
+      "transition_samples": 147456,
+      "reward_evaluations": 18432
+    },
+    "seconds": 0.1432149950414896,
+    "costs_per_repeat": {
+      "value_evaluations": 584.0,
+      "analytic_component_integrals": 1024.0,
+      "transition_samples": 576.0,
+      "reward_evaluations": 72.0
+    }
+  },
+  {
+    "problem": "mixture",
+    "seed": 47011,
+    "method": "branch2-pilot8-smc-n8",
+    "particles": 8,
+    "cdf_mse": 0.02483480791454641,
+    "cdf_mse_standard_error": 0.0017699958871060866,
+    "pooled_cdf_mse": 8.091254301523482e-05,
+    "positive_mass_mse": 0.049017232347117204,
+    "positive_mass": 0.756147713329606,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 1.107898869529944,
+    "mean_log_reward": -0.659196060628917,
+    "mean_step_ess_fraction": 0.6830658785412786,
+    "final_ess_fraction": 0.6972735021429988,
+    "resampling_events_per_repeat": 0.95703125,
+    "costs": {
+      "value_evaluations": 411648,
+      "transition_samples": 409600,
+      "analytic_component_integrals": 225280,
+      "reward_evaluations": 55296
+    },
+    "seconds": 0.2641787870088592,
+    "costs_per_repeat": {
+      "value_evaluations": 1608.0,
+      "transition_samples": 1600.0,
+      "analytic_component_integrals": 880.0,
+      "reward_evaluations": 216.0
+    }
+  },
+  {
+    "problem": "mixture",
+    "seed": 47011,
+    "method": "future2-pilot8-smc-n8",
+    "particles": 8,
+    "cdf_mse": 0.030710479570428512,
+    "cdf_mse_standard_error": 0.002475772596278744,
+    "pooled_cdf_mse": 0.00010689910157932122,
+    "positive_mass_mse": 0.05857079657152053,
+    "positive_mass": 0.756830779935414,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 1.1209796163840293,
+    "mean_log_reward": -0.6745889563828867,
+    "mean_step_ess_fraction": 0.5859721661732075,
+    "final_ess_fraction": 0.6846118258997362,
+    "resampling_events_per_repeat": 2.41015625,
+    "costs": {
+      "value_evaluations": 411648,
+      "transition_samples": 1212416,
+      "reward_evaluations": 280576
+    },
+    "seconds": 0.4569347460055724,
+    "costs_per_repeat": {
+      "value_evaluations": 1608.0,
+      "transition_samples": 4736.0,
+      "reward_evaluations": 1096.0
+    }
+  },
+  {
+    "problem": "mixture",
+    "seed": 47011,
+    "method": "base-smc-n16",
+    "particles": 16,
+    "cdf_mse": 0.016973492143437952,
+    "cdf_mse_standard_error": 0.0019319082676962846,
+    "pooled_cdf_mse": 0.0007884984677009462,
+    "positive_mass_mse": 0.029765855514925492,
+    "positive_mass": 0.7221568785384698,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 0.9986363743332061,
+    "mean_log_reward": -0.7521250157806001,
+    "mean_step_ess_fraction": 1.0,
+    "final_ess_fraction": 0.33124409052418935,
+    "resampling_events_per_repeat": 0.0,
+    "costs": {
+      "value_evaluations": 36864,
+      "transition_samples": 32768,
+      "reward_evaluations": 4096
+    },
+    "seconds": 0.04010101000312716,
+    "costs_per_repeat": {
+      "value_evaluations": 144.0,
+      "transition_samples": 128.0,
+      "reward_evaluations": 16.0
+    }
+  },
+  {
+    "problem": "mixture",
+    "seed": 47011,
+    "method": "exact-doob-n16",
+    "particles": 16,
+    "cdf_mse": 0.005996949291002151,
+    "cdf_mse_standard_error": 0.0003391848225438605,
+    "pooled_cdf_mse": 1.5108588684634507e-05,
+    "positive_mass_mse": 0.01068584586775048,
+    "positive_mass": 0.773681640625,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 1.1617249677117358,
+    "mean_log_reward": -0.6242961599892125,
+    "mean_step_ess_fraction": 1.0,
+    "final_ess_fraction": 1.0,
+    "resampling_events_per_repeat": 0.0,
+    "costs": {
+      "transition_samples": 32768
+    },
+    "seconds": 0.027443085913546383,
+    "costs_per_repeat": {
+      "transition_samples": 128.0
+    }
+  },
+  {
+    "problem": "mixture",
+    "seed": 47011,
+    "method": "point-pilot8-smc-n16",
+    "particles": 16,
+    "cdf_mse": 0.015414794239305595,
+    "cdf_mse_standard_error": 0.0011986950464483038,
+    "pooled_cdf_mse": 8.977401417698073e-05,
+    "positive_mass_mse": 0.030991016283136958,
+    "positive_mass": 0.779946984093101,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 1.1937649427600348,
+    "mean_log_reward": -0.5944218770893037,
+    "mean_step_ess_fraction": 0.6340353882169045,
+    "final_ess_fraction": 0.6704640793767304,
+    "resampling_events_per_repeat": 1.32421875,
+    "costs": {
+      "value_evaluations": 299008,
+      "reward_evaluations": 299008,
+      "transition_samples": 294912
+    },
+    "seconds": 0.18954161705914885,
+    "costs_per_repeat": {
+      "value_evaluations": 1168.0,
+      "reward_evaluations": 1168.0,
+      "transition_samples": 1152.0
+    }
+  },
+  {
+    "problem": "mixture",
+    "seed": 47011,
+    "method": "gaussian-pilot8-smc-n16",
+    "particles": 16,
+    "cdf_mse": 0.014006227495961473,
+    "cdf_mse_standard_error": 0.0012029393951034618,
+    "pooled_cdf_mse": 2.313742751563482e-05,
+    "positive_mass_mse": 0.02739512527822755,
+    "positive_mass": 0.7651388078753948,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 1.1252621465265271,
+    "mean_log_reward": -0.6343761972375825,
+    "mean_step_ess_fraction": 0.6913473620494324,
+    "final_ess_fraction": 0.702730425768157,
+    "resampling_events_per_repeat": 0.98828125,
+    "costs": {
+      "value_evaluations": 299008,
+      "analytic_component_integrals": 262144,
+      "transition_samples": 294912,
+      "reward_evaluations": 36864
+    },
+    "seconds": 0.20190858491696417,
+    "costs_per_repeat": {
+      "value_evaluations": 1168.0,
+      "analytic_component_integrals": 1024.0,
+      "transition_samples": 1152.0,
+      "reward_evaluations": 144.0
+    }
+  },
+  {
+    "problem": "mixture",
+    "seed": 47011,
+    "method": "mixture-pilot8-smc-n16",
+    "particles": 16,
+    "cdf_mse": 0.014037668682573626,
+    "cdf_mse_standard_error": 0.0012403631114064697,
+    "pooled_cdf_mse": 5.4178876237085564e-05,
+    "positive_mass_mse": 0.0274478158644381,
+    "positive_mass": 0.7613777167458438,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 1.1222291859453484,
+    "mean_log_reward": -0.6491892427386701,
+    "mean_step_ess_fraction": 0.6781521554087167,
+    "final_ess_fraction": 0.6997063371198509,
+    "resampling_events_per_repeat": 0.98828125,
+    "costs": {
+      "value_evaluations": 299008,
+      "analytic_component_integrals": 524288,
+      "transition_samples": 294912,
+      "reward_evaluations": 36864
+    },
+    "seconds": 0.2487792989704758,
+    "costs_per_repeat": {
+      "value_evaluations": 1168.0,
+      "analytic_component_integrals": 2048.0,
+      "transition_samples": 1152.0,
+      "reward_evaluations": 144.0
+    }
+  },
+  {
+    "problem": "mixture",
+    "seed": 47011,
+    "method": "branch2-pilot8-smc-n16",
+    "particles": 16,
+    "cdf_mse": 0.014028044581139813,
+    "cdf_mse_standard_error": 0.0010074949216630179,
+    "pooled_cdf_mse": 6.952093519339623e-05,
+    "positive_mass_mse": 0.027129679513379263,
+    "positive_mass": 0.7576933668446695,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 1.1051341720743135,
+    "mean_log_reward": -0.6641732388463224,
+    "mean_step_ess_fraction": 0.651287852256969,
+    "final_ess_fraction": 0.6888376358464419,
+    "resampling_events_per_repeat": 1.26171875,
+    "costs": {
+      "value_evaluations": 823296,
+      "transition_samples": 819200,
+      "analytic_component_integrals": 450560,
+      "reward_evaluations": 110592
+    },
+    "seconds": 0.4548254180699587,
+    "costs_per_repeat": {
+      "value_evaluations": 3216.0,
+      "transition_samples": 3200.0,
+      "analytic_component_integrals": 1760.0,
+      "reward_evaluations": 432.0
+    }
+  },
+  {
+    "problem": "mixture",
+    "seed": 47011,
+    "method": "future2-pilot8-smc-n16",
+    "particles": 16,
+    "cdf_mse": 0.02106206564865736,
+    "cdf_mse_standard_error": 0.001977350897458044,
+    "pooled_cdf_mse": 5.9140210895457015e-05,
+    "positive_mass_mse": 0.044118199019043146,
+    "positive_mass": 0.7660249606285385,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 1.150775706413941,
+    "mean_log_reward": -0.6488554266464577,
+    "mean_step_ess_fraction": 0.5356577310563271,
+    "final_ess_fraction": 0.6835216398430621,
+    "resampling_events_per_repeat": 3.265625,
+    "costs": {
+      "value_evaluations": 823296,
+      "transition_samples": 2424832,
+      "reward_evaluations": 561152
+    },
+    "seconds": 0.872442074934952,
+    "costs_per_repeat": {
+      "value_evaluations": 3216.0,
+      "transition_samples": 9472.0,
+      "reward_evaluations": 2192.0
+    }
+  },
+  {
+    "problem": "mixture",
+    "seed": 47011,
+    "method": "point-grad1.0-false-n8",
+    "particles": 8,
+    "cdf_mse": 0.02803681661091929,
+    "cdf_mse_standard_error": 0.00208666439020029,
+    "pooled_cdf_mse": 0.01216179252620022,
+    "positive_mass_mse": 0.06939745145487582,
+    "positive_mass": 0.57861328125,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 0.5308693533076275,
+    "mean_log_reward": -1.0401092453632428,
+    "mean_step_ess_fraction": 1.0,
+    "final_ess_fraction": 1.0,
+    "resampling_events_per_repeat": 0.0,
+    "costs": {
+      "value_evaluations": 32768,
+      "reward_evaluations": 32768,
+      "transition_samples": 16384
+    },
+    "seconds": 0.023229429963976145,
+    "costs_per_repeat": {
+      "value_evaluations": 128.0,
+      "reward_evaluations": 128.0,
+      "transition_samples": 64.0
+    }
+  },
+  {
+    "problem": "mixture",
+    "seed": 47011,
+    "method": "point-grad0.5-false-n8",
+    "particles": 8,
+    "cdf_mse": 0.07897350641673437,
+    "cdf_mse_standard_error": 0.0036126666222198807,
+    "pooled_cdf_mse": 0.0628473846232599,
+    "positive_mass_mse": 0.19106785030919798,
+    "positive_mass": 0.37109375,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": -0.339757023400698,
+    "mean_log_reward": -1.7214272348435065,
+    "mean_step_ess_fraction": 1.0,
+    "final_ess_fraction": 1.0,
+    "resampling_events_per_repeat": 0.0,
+    "costs": {
+      "value_evaluations": 32768,
+      "reward_evaluations": 32768,
+      "transition_samples": 16384
+    },
+    "seconds": 0.021330330055207014,
+    "costs_per_repeat": {
+      "value_evaluations": 128.0,
+      "reward_evaluations": 128.0,
+      "transition_samples": 64.0
+    }
+  },
+  {
+    "problem": "mixture",
+    "seed": 47011,
+    "method": "gaussian-grad1.0-false-n8",
+    "particles": 8,
+    "cdf_mse": 0.0414194230166174,
+    "cdf_mse_standard_error": 0.0024352712619519854,
+    "pooled_cdf_mse": 0.025659138983736507,
+    "positive_mass_mse": 0.10721475407895542,
+    "positive_mass": 0.49853515625,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 0.2381919487186306,
+    "mean_log_reward": -1.2015321966502466,
+    "mean_step_ess_fraction": 1.0,
+    "final_ess_fraction": 1.0,
+    "resampling_events_per_repeat": 0.0,
+    "costs": {
+      "value_evaluations": 32768,
+      "analytic_component_integrals": 28672,
+      "transition_samples": 16384,
+      "reward_evaluations": 4096
+    },
+    "seconds": 0.02086331299506128,
+    "costs_per_repeat": {
+      "value_evaluations": 128.0,
+      "analytic_component_integrals": 112.0,
+      "transition_samples": 64.0,
+      "reward_evaluations": 16.0
+    }
+  },
+  {
+    "problem": "mixture",
+    "seed": 47011,
+    "method": "mixture-grad1.0-false-n8",
+    "particles": 8,
+    "cdf_mse": 0.040925442570984835,
+    "cdf_mse_standard_error": 0.0024751873048889732,
+    "pooled_cdf_mse": 0.0250087144861126,
+    "positive_mass_mse": 0.10463475776498155,
+    "positive_mass": 0.5029296875,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 0.24852773879130755,
+    "mean_log_reward": -1.2103987481291956,
+    "mean_step_ess_fraction": 1.0,
+    "final_ess_fraction": 1.0,
+    "resampling_events_per_repeat": 0.0,
+    "costs": {
+      "value_evaluations": 32768,
+      "analytic_component_integrals": 57344,
+      "transition_samples": 16384,
+      "reward_evaluations": 4096
+    },
+    "seconds": 0.03169899806380272,
+    "costs_per_repeat": {
+      "value_evaluations": 128.0,
+      "analytic_component_integrals": 224.0,
+      "transition_samples": 64.0,
+      "reward_evaluations": 16.0
+    }
+  },
+  {
+    "problem": "mixture",
+    "seed": 47011,
+    "method": "point-grad1.0-true-n8",
+    "particles": 8,
+    "cdf_mse": 0.01973218277240646,
+    "cdf_mse_standard_error": 0.0018057991219602404,
+    "pooled_cdf_mse": 0.00014384899431536374,
+    "positive_mass_mse": 0.037728284078249026,
+    "positive_mass": 0.7511068773880598,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 1.0915189484660681,
+    "mean_log_reward": -0.6781069490252286,
+    "mean_step_ess_fraction": 0.7001955648185927,
+    "final_ess_fraction": 0.7408931166603099,
+    "resampling_events_per_repeat": 0.390625,
+    "costs": {
+      "value_evaluations": 51200,
+      "reward_evaluations": 51200,
+      "transition_samples": 16384
+    },
+    "seconds": 0.03858574491459876,
+    "costs_per_repeat": {
+      "value_evaluations": 200.0,
+      "reward_evaluations": 200.0,
+      "transition_samples": 64.0
+    }
+  },
+  {
+    "problem": "mixture",
+    "seed": 47011,
+    "method": "point-grad0.5-true-n8",
+    "particles": 8,
+    "cdf_mse": 0.021695543956768454,
+    "cdf_mse_standard_error": 0.002189771321728361,
+    "pooled_cdf_mse": 0.0013725307180252175,
+    "positive_mass_mse": 0.04494598807937591,
+    "positive_mass": 0.7088752794019988,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 0.9363421763023793,
+    "mean_log_reward": -0.7779827595891318,
+    "mean_step_ess_fraction": 0.6825311697372196,
+    "final_ess_fraction": 0.7657591290228064,
+    "resampling_events_per_repeat": 0.62890625,
+    "costs": {
+      "value_evaluations": 51200,
+      "reward_evaluations": 51200,
+      "transition_samples": 16384
+    },
+    "seconds": 0.04078860301524401,
+    "costs_per_repeat": {
+      "value_evaluations": 200.0,
+      "reward_evaluations": 200.0,
+      "transition_samples": 64.0
+    }
+  },
+  {
+    "problem": "mixture",
+    "seed": 47011,
+    "method": "gaussian-grad1.0-true-n8",
+    "particles": 8,
+    "cdf_mse": 0.01764747185915974,
+    "cdf_mse_standard_error": 0.0016286833137860396,
+    "pooled_cdf_mse": 0.00044888290459613194,
+    "positive_mass_mse": 0.031325377635504394,
+    "positive_mass": 0.7364536611181975,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 1.0282526237913046,
+    "mean_log_reward": -0.7033508379708768,
+    "mean_step_ess_fraction": 0.7741633272923505,
+    "final_ess_fraction": 0.7118063703261721,
+    "resampling_events_per_repeat": 0.11328125,
+    "costs": {
+      "value_evaluations": 51200,
+      "analytic_component_integrals": 45056,
+      "transition_samples": 16384,
+      "reward_evaluations": 6144
+    },
+    "seconds": 0.04355386598035693,
+    "costs_per_repeat": {
+      "value_evaluations": 200.0,
+      "analytic_component_integrals": 176.0,
+      "transition_samples": 64.0,
+      "reward_evaluations": 24.0
+    }
+  },
+  {
+    "problem": "mixture",
+    "seed": 47011,
+    "method": "mixture-grad1.0-true-n8",
+    "particles": 8,
+    "cdf_mse": 0.01824858989592628,
+    "cdf_mse_standard_error": 0.001653945004809705,
+    "pooled_cdf_mse": 0.0005453491575016341,
+    "positive_mass_mse": 0.03276171957761543,
+    "positive_mass": 0.7329922057609188,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 1.022308876668351,
+    "mean_log_reward": -0.7137875245401472,
+    "mean_step_ess_fraction": 0.7611754086708448,
+    "final_ess_fraction": 0.719369819969462,
+    "resampling_events_per_repeat": 0.125,
+    "costs": {
+      "value_evaluations": 51200,
+      "analytic_component_integrals": 90112,
+      "transition_samples": 16384,
+      "reward_evaluations": 6144
+    },
+    "seconds": 0.05056162201799452,
+    "costs_per_repeat": {
+      "value_evaluations": 200.0,
+      "analytic_component_integrals": 352.0,
+      "transition_samples": 64.0,
+      "reward_evaluations": 24.0
+    }
+  },
+  {
+    "problem": "mixture",
+    "seed": 47017,
+    "method": "base-smc-n4",
+    "particles": 4,
+    "cdf_mse": 0.13325970421728422,
+    "cdf_mse_standard_error": 0.007117677379056071,
+    "pooled_cdf_mse": 0.04232318983597684,
+    "positive_mass_mse": 0.29376807684183254,
+    "positive_mass": 0.44458916854188446,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": -0.07225865642007381,
+    "mean_log_reward": -1.5031720169990006,
+    "mean_step_ess_fraction": 1.0,
+    "final_ess_fraction": 0.5621716953557898,
+    "resampling_events_per_repeat": 0.0,
+    "costs": {
+      "value_evaluations": 9216,
+      "transition_samples": 8192,
+      "reward_evaluations": 1024
+    },
+    "seconds": 0.01622075098566711,
+    "costs_per_repeat": {
+      "value_evaluations": 36.0,
+      "transition_samples": 32.0,
+      "reward_evaluations": 4.0
+    }
+  },
+  {
+    "problem": "mixture",
+    "seed": 47017,
+    "method": "exact-doob-n4",
+    "particles": 4,
+    "cdf_mse": 0.023778619546970636,
+    "cdf_mse_standard_error": 0.001260034221814839,
+    "pooled_cdf_mse": 6.859378331089175e-05,
+    "positive_mass_mse": 0.041842955048600916,
+    "positive_mass": 0.775390625,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 1.129190944443152,
+    "mean_log_reward": -0.6225025368566949,
+    "mean_step_ess_fraction": 1.0,
+    "final_ess_fraction": 1.0,
+    "resampling_events_per_repeat": 0.0,
+    "costs": {
+      "transition_samples": 8192
+    },
+    "seconds": 0.011082317098043859,
+    "costs_per_repeat": {
+      "transition_samples": 32.0
+    }
+  },
+  {
+    "problem": "mixture",
+    "seed": 47017,
+    "method": "point-pilot8-smc-n4",
+    "particles": 4,
+    "cdf_mse": 0.053721998032671775,
+    "cdf_mse_standard_error": 0.004093159374458074,
+    "pooled_cdf_mse": 0.0010543323649388166,
+    "positive_mass_mse": 0.10828936795355165,
+    "positive_mass": 0.7232019672156107,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 0.9533861630395133,
+    "mean_log_reward": -0.7543571145689958,
+    "mean_step_ess_fraction": 0.7139194757218945,
+    "final_ess_fraction": 0.71332609276962,
+    "resampling_events_per_repeat": 0.65625,
+    "costs": {
+      "value_evaluations": 74752,
+      "reward_evaluations": 74752,
+      "transition_samples": 73728
+    },
+    "seconds": 0.061406649998389184,
+    "costs_per_repeat": {
+      "value_evaluations": 292.0,
+      "reward_evaluations": 292.0,
+      "transition_samples": 288.0
+    }
+  },
+  {
+    "problem": "mixture",
+    "seed": 47017,
+    "method": "gaussian-pilot8-smc-n4",
+    "particles": 4,
+    "cdf_mse": 0.056859258963651044,
+    "cdf_mse_standard_error": 0.004166862380352254,
+    "pooled_cdf_mse": 0.003574060269626422,
+    "positive_mass_mse": 0.1173892027261597,
+    "positive_mass": 0.6813514312358722,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 0.795796550687708,
+    "mean_log_reward": -0.8359799490089121,
+    "mean_step_ess_fraction": 0.7570852963352745,
+    "final_ess_fraction": 0.7250176386272078,
+    "resampling_events_per_repeat": 0.48046875,
+    "costs": {
+      "value_evaluations": 74752,
+      "analytic_component_integrals": 65536,
+      "transition_samples": 73728,
+      "reward_evaluations": 9216
+    },
+    "seconds": 0.06655407301150262,
+    "costs_per_repeat": {
+      "value_evaluations": 292.0,
+      "analytic_component_integrals": 256.0,
+      "transition_samples": 288.0,
+      "reward_evaluations": 36.0
+    }
+  },
+  {
+    "problem": "mixture",
+    "seed": 47017,
+    "method": "mixture-pilot8-smc-n4",
+    "particles": 4,
+    "cdf_mse": 0.057340537120543655,
+    "cdf_mse_standard_error": 0.004218318585011609,
+    "pooled_cdf_mse": 0.0034346637843891505,
+    "positive_mass_mse": 0.12122712900626319,
+    "positive_mass": 0.6768340341706964,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 0.8033783141718289,
+    "mean_log_reward": -0.8424459159821052,
+    "mean_step_ess_fraction": 0.7469943184837897,
+    "final_ess_fraction": 0.7234028401106132,
+    "resampling_events_per_repeat": 0.49609375,
+    "costs": {
+      "value_evaluations": 74752,
+      "analytic_component_integrals": 131072,
+      "transition_samples": 73728,
+      "reward_evaluations": 9216
+    },
+    "seconds": 0.09312214003875852,
+    "costs_per_repeat": {
+      "value_evaluations": 292.0,
+      "analytic_component_integrals": 512.0,
+      "transition_samples": 288.0,
+      "reward_evaluations": 36.0
+    }
+  },
+  {
+    "problem": "mixture",
+    "seed": 47017,
+    "method": "branch2-pilot8-smc-n4",
+    "particles": 4,
+    "cdf_mse": 0.050406444392802216,
+    "cdf_mse_standard_error": 0.003579827419914808,
+    "pooled_cdf_mse": 0.0027516757103071303,
+    "positive_mass_mse": 0.10373756791102709,
+    "positive_mass": 0.6848844715432185,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 0.8553367635503124,
+    "mean_log_reward": -0.8306487995118177,
+    "mean_step_ess_fraction": 0.7307209237314268,
+    "final_ess_fraction": 0.7353915010282404,
+    "resampling_events_per_repeat": 0.59375,
+    "costs": {
+      "value_evaluations": 205824,
+      "transition_samples": 204800,
+      "analytic_component_integrals": 112640,
+      "reward_evaluations": 27648
+    },
+    "seconds": 0.14600531000178307,
+    "costs_per_repeat": {
+      "value_evaluations": 804.0,
+      "transition_samples": 800.0,
+      "analytic_component_integrals": 440.0,
+      "reward_evaluations": 108.0
+    }
+  },
+  {
+    "problem": "mixture",
+    "seed": 47017,
+    "method": "future2-pilot8-smc-n4",
+    "particles": 4,
+    "cdf_mse": 0.05764070830178202,
+    "cdf_mse_standard_error": 0.004241996717291541,
+    "pooled_cdf_mse": 0.0016481299045549153,
+    "positive_mass_mse": 0.11798951812499392,
+    "positive_mass": 0.701837360314006,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 0.9260136321529172,
+    "mean_log_reward": -0.7848016053529365,
+    "mean_step_ess_fraction": 0.656154914545563,
+    "final_ess_fraction": 0.7310107612046693,
+    "resampling_events_per_repeat": 1.5703125,
+    "costs": {
+      "value_evaluations": 205824,
+      "transition_samples": 606208,
+      "reward_evaluations": 140288
+    },
+    "seconds": 0.25054360600188375,
+    "costs_per_repeat": {
+      "value_evaluations": 804.0,
+      "transition_samples": 2368.0,
+      "reward_evaluations": 548.0
+    }
+  },
+  {
+    "problem": "mixture",
+    "seed": 47017,
+    "method": "base-smc-n8",
+    "particles": 8,
+    "cdf_mse": 0.054119445168528714,
+    "cdf_mse_standard_error": 0.005254047179683815,
+    "pooled_cdf_mse": 0.005357128564648703,
+    "positive_mass_mse": 0.1145461399480219,
+    "positive_mass": 0.6566135390165799,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 0.7139341408273853,
+    "mean_log_reward": -0.9292311927941147,
+    "mean_step_ess_fraction": 0.9999999999999999,
+    "final_ess_fraction": 0.4160623844435206,
+    "resampling_events_per_repeat": 0.0,
+    "costs": {
+      "value_evaluations": 18432,
+      "transition_samples": 16384,
+      "reward_evaluations": 2048
+    },
+    "seconds": 0.021510971942916512,
+    "costs_per_repeat": {
+      "value_evaluations": 72.0,
+      "transition_samples": 64.0,
+      "reward_evaluations": 8.0
+    }
+  },
+  {
+    "problem": "mixture",
+    "seed": 47017,
+    "method": "exact-doob-n8",
+    "particles": 8,
+    "cdf_mse": 0.012187499548449197,
+    "cdf_mse_standard_error": 0.0007371474830650193,
+    "pooled_cdf_mse": 0.00010811405163439715,
+    "positive_mass_mse": 0.022055934277046184,
+    "positive_mass": 0.7568359375,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 1.0843919252991494,
+    "mean_log_reward": -0.6709542202003855,
+    "mean_step_ess_fraction": 1.0,
+    "final_ess_fraction": 1.0,
+    "resampling_events_per_repeat": 0.0,
+    "costs": {
+      "transition_samples": 16384
+    },
+    "seconds": 0.01845294493250549,
+    "costs_per_repeat": {
+      "transition_samples": 64.0
+    }
+  },
+  {
+    "problem": "mixture",
+    "seed": 47017,
+    "method": "point-pilot8-smc-n8",
+    "particles": 8,
+    "cdf_mse": 0.025960003447545142,
+    "cdf_mse_standard_error": 0.0018169892487383751,
+    "pooled_cdf_mse": 8.258718166044298e-05,
+    "positive_mass_mse": 0.050113957487573524,
+    "positive_mass": 0.7862570613719636,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 1.1948775392256206,
+    "mean_log_reward": -0.6047066788731509,
+    "mean_step_ess_fraction": 0.6598807596705902,
+    "final_ess_fraction": 0.7002049498052192,
+    "resampling_events_per_repeat": 1.05078125,
+    "costs": {
+      "value_evaluations": 149504,
+      "reward_evaluations": 149504,
+      "transition_samples": 147456
+    },
+    "seconds": 0.1075277520576492,
+    "costs_per_repeat": {
+      "value_evaluations": 584.0,
+      "reward_evaluations": 584.0,
+      "transition_samples": 576.0
+    }
+  },
+  {
+    "problem": "mixture",
+    "seed": 47017,
+    "method": "gaussian-pilot8-smc-n8",
+    "particles": 8,
+    "cdf_mse": 0.02419668299890241,
+    "cdf_mse_standard_error": 0.0018245103366787115,
+    "pooled_cdf_mse": 8.109180321820609e-05,
+    "positive_mass_mse": 0.04861815244904362,
+    "positive_mass": 0.7571640476850725,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 1.0923923113723886,
+    "mean_log_reward": -0.6646952392320762,
+    "mean_step_ess_fraction": 0.7143983155183775,
+    "final_ess_fraction": 0.7154029521561758,
+    "resampling_events_per_repeat": 0.80078125,
+    "costs": {
+      "value_evaluations": 149504,
+      "analytic_component_integrals": 131072,
+      "transition_samples": 147456,
+      "reward_evaluations": 18432
+    },
+    "seconds": 0.11006037297192961,
+    "costs_per_repeat": {
+      "value_evaluations": 584.0,
+      "analytic_component_integrals": 512.0,
+      "transition_samples": 576.0,
+      "reward_evaluations": 72.0
+    }
+  },
+  {
+    "problem": "mixture",
+    "seed": 47017,
+    "method": "mixture-pilot8-smc-n8",
+    "particles": 8,
+    "cdf_mse": 0.02427809459900455,
+    "cdf_mse_standard_error": 0.0019287086939696726,
+    "pooled_cdf_mse": 4.4394451280822406e-05,
+    "positive_mass_mse": 0.047534287097405994,
+    "positive_mass": 0.762057483148459,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 1.1090720745502316,
+    "mean_log_reward": -0.660024972767155,
+    "mean_step_ess_fraction": 0.6999995660400186,
+    "final_ess_fraction": 0.6957952392155129,
+    "resampling_events_per_repeat": 0.8046875,
+    "costs": {
+      "value_evaluations": 149504,
+      "analytic_component_integrals": 262144,
+      "transition_samples": 147456,
+      "reward_evaluations": 18432
+    },
+    "seconds": 0.13181233499199152,
+    "costs_per_repeat": {
+      "value_evaluations": 584.0,
+      "analytic_component_integrals": 1024.0,
+      "transition_samples": 576.0,
+      "reward_evaluations": 72.0
+    }
+  },
+  {
+    "problem": "mixture",
+    "seed": 47017,
+    "method": "branch2-pilot8-smc-n8",
+    "particles": 8,
+    "cdf_mse": 0.025966151272028736,
+    "cdf_mse_standard_error": 0.0019382476941371964,
+    "pooled_cdf_mse": 8.765636532506259e-05,
+    "positive_mass_mse": 0.051729895906175286,
+    "positive_mass": 0.7556112677696367,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 1.115371744955031,
+    "mean_log_reward": -0.665725848091604,
+    "mean_step_ess_fraction": 0.6772830239380884,
+    "final_ess_fraction": 0.7023840434487583,
+    "resampling_events_per_repeat": 1.03515625,
+    "costs": {
+      "value_evaluations": 411648,
+      "transition_samples": 409600,
+      "analytic_component_integrals": 225280,
+      "reward_evaluations": 55296
+    },
+    "seconds": 0.24593470804393291,
+    "costs_per_repeat": {
+      "value_evaluations": 1608.0,
+      "transition_samples": 1600.0,
+      "analytic_component_integrals": 880.0,
+      "reward_evaluations": 216.0
+    }
+  },
+  {
+    "problem": "mixture",
+    "seed": 47017,
+    "method": "future2-pilot8-smc-n8",
+    "particles": 8,
+    "cdf_mse": 0.03131377689010917,
+    "cdf_mse_standard_error": 0.002482847316882118,
+    "pooled_cdf_mse": 2.5716286974199398e-05,
+    "positive_mass_mse": 0.06368211876409394,
+    "positive_mass": 0.7715609943519008,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 1.1553874645112248,
+    "mean_log_reward": -0.6389326793681627,
+    "mean_step_ess_fraction": 0.5848731578114774,
+    "final_ess_fraction": 0.7015105453117818,
+    "resampling_events_per_repeat": 2.55078125,
+    "costs": {
+      "value_evaluations": 411648,
+      "transition_samples": 1212416,
+      "reward_evaluations": 280576
+    },
+    "seconds": 0.4589333850890398,
+    "costs_per_repeat": {
+      "value_evaluations": 1608.0,
+      "transition_samples": 4736.0,
+      "reward_evaluations": 1096.0
+    }
+  },
+  {
+    "problem": "mixture",
+    "seed": 47017,
+    "method": "base-smc-n16",
+    "particles": 16,
+    "cdf_mse": 0.018769194126522018,
+    "cdf_mse_standard_error": 0.0023809735565784745,
+    "pooled_cdf_mse": 0.0008468533960990101,
+    "positive_mass_mse": 0.033731983537681184,
+    "positive_mass": 0.7226115435256038,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 0.9903515049192235,
+    "mean_log_reward": -0.7595955256487499,
+    "mean_step_ess_fraction": 1.0,
+    "final_ess_fraction": 0.3342200823894489,
+    "resampling_events_per_repeat": 0.0,
+    "costs": {
+      "value_evaluations": 36864,
+      "transition_samples": 32768,
+      "reward_evaluations": 4096
+    },
+    "seconds": 0.03450957196764648,
+    "costs_per_repeat": {
+      "value_evaluations": 144.0,
+      "transition_samples": 128.0,
+      "reward_evaluations": 16.0
+    }
+  },
+  {
+    "problem": "mixture",
+    "seed": 47017,
+    "method": "exact-doob-n16",
+    "particles": 16,
+    "cdf_mse": 0.006185816757678803,
+    "cdf_mse_standard_error": 0.0003936927160400918,
+    "pooled_cdf_mse": 1.371469730157517e-05,
+    "positive_mass_mse": 0.010389007084600605,
+    "positive_mass": 0.774169921875,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 1.1507572247326336,
+    "mean_log_reward": -0.6299021227643643,
+    "mean_step_ess_fraction": 1.0,
+    "final_ess_fraction": 1.0,
+    "resampling_events_per_repeat": 0.0,
+    "costs": {
+      "transition_samples": 32768
+    },
+    "seconds": 0.02674034400843084,
+    "costs_per_repeat": {
+      "transition_samples": 128.0
+    }
+  },
+  {
+    "problem": "mixture",
+    "seed": 47017,
+    "method": "point-pilot8-smc-n16",
+    "particles": 16,
+    "cdf_mse": 0.014347656677371675,
+    "cdf_mse_standard_error": 0.0012634703797095048,
+    "pooled_cdf_mse": 0.0001539010896835899,
+    "positive_mass_mse": 0.028116826502871034,
+    "positive_mass": 0.7854596411139848,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 1.2189018564736054,
+    "mean_log_reward": -0.589469480805364,
+    "mean_step_ess_fraction": 0.6382030529639433,
+    "final_ess_fraction": 0.6828139783853873,
+    "resampling_events_per_repeat": 1.31640625,
+    "costs": {
+      "value_evaluations": 299008,
+      "reward_evaluations": 299008,
+      "transition_samples": 294912
+    },
+    "seconds": 0.1889497550437227,
+    "costs_per_repeat": {
+      "value_evaluations": 1168.0,
+      "reward_evaluations": 1168.0,
+      "transition_samples": 1152.0
+    }
+  },
+  {
+    "problem": "mixture",
+    "seed": 47017,
+    "method": "gaussian-pilot8-smc-n16",
+    "particles": 16,
+    "cdf_mse": 0.012800272791179276,
+    "cdf_mse_standard_error": 0.001190506535076522,
+    "pooled_cdf_mse": 2.4098121671001913e-05,
+    "positive_mass_mse": 0.024495539037406644,
+    "positive_mass": 0.7655548798991207,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 1.1156882278889064,
+    "mean_log_reward": -0.6518430880746044,
+    "mean_step_ess_fraction": 0.6926868613004866,
+    "final_ess_fraction": 0.7092621141491132,
+    "resampling_events_per_repeat": 1.02734375,
+    "costs": {
+      "value_evaluations": 299008,
+      "analytic_component_integrals": 262144,
+      "transition_samples": 294912,
+      "reward_evaluations": 36864
+    },
+    "seconds": 0.19746507401578128,
+    "costs_per_repeat": {
+      "value_evaluations": 1168.0,
+      "analytic_component_integrals": 1024.0,
+      "transition_samples": 1152.0,
+      "reward_evaluations": 144.0
+    }
+  },
+  {
+    "problem": "mixture",
+    "seed": 47017,
+    "method": "mixture-pilot8-smc-n16",
+    "particles": 16,
+    "cdf_mse": 0.013103843712842258,
+    "cdf_mse_standard_error": 0.0011975052307559226,
+    "pooled_cdf_mse": 1.1979709595139602e-05,
+    "positive_mass_mse": 0.02593700783157721,
+    "positive_mass": 0.7701449047066713,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 1.1300674828578248,
+    "mean_log_reward": -0.6322814115917487,
+    "mean_step_ess_fraction": 0.6762832771447445,
+    "final_ess_fraction": 0.6966085395849791,
+    "resampling_events_per_repeat": 1.01953125,
+    "costs": {
+      "value_evaluations": 299008,
+      "analytic_component_integrals": 524288,
+      "transition_samples": 294912,
+      "reward_evaluations": 36864
+    },
+    "seconds": 0.24436673300806433,
+    "costs_per_repeat": {
+      "value_evaluations": 1168.0,
+      "analytic_component_integrals": 2048.0,
+      "transition_samples": 1152.0,
+      "reward_evaluations": 144.0
+    }
+  },
+  {
+    "problem": "mixture",
+    "seed": 47017,
+    "method": "branch2-pilot8-smc-n16",
+    "particles": 16,
+    "cdf_mse": 0.013419698979481857,
+    "cdf_mse_standard_error": 0.0008990889309943514,
+    "pooled_cdf_mse": 0.00010721061829469887,
+    "positive_mass_mse": 0.025305304483853368,
+    "positive_mass": 0.7777981884654984,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 1.1961266838028881,
+    "mean_log_reward": -0.6083042400987415,
+    "mean_step_ess_fraction": 0.6510824044997567,
+    "final_ess_fraction": 0.6945174306836593,
+    "resampling_events_per_repeat": 1.30078125,
+    "costs": {
+      "value_evaluations": 823296,
+      "transition_samples": 819200,
+      "analytic_component_integrals": 450560,
+      "reward_evaluations": 110592
+    },
+    "seconds": 0.45942177798133343,
+    "costs_per_repeat": {
+      "value_evaluations": 3216.0,
+      "transition_samples": 3200.0,
+      "analytic_component_integrals": 1760.0,
+      "reward_evaluations": 432.0
+    }
+  },
+  {
+    "problem": "mixture",
+    "seed": 47017,
+    "method": "future2-pilot8-smc-n16",
+    "particles": 16,
+    "cdf_mse": 0.020789512966341274,
+    "cdf_mse_standard_error": 0.0020977061181984623,
+    "pooled_cdf_mse": 4.4114462463729385e-05,
+    "positive_mass_mse": 0.04451423280333062,
+    "positive_mass": 0.7730318633612832,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 1.1636364837221014,
+    "mean_log_reward": -0.641266791236603,
+    "mean_step_ess_fraction": 0.536664696753066,
+    "final_ess_fraction": 0.6761408323208983,
+    "resampling_events_per_repeat": 3.25390625,
+    "costs": {
+      "value_evaluations": 823296,
+      "transition_samples": 2424832,
+      "reward_evaluations": 561152
+    },
+    "seconds": 0.815348171046935,
+    "costs_per_repeat": {
+      "value_evaluations": 3216.0,
+      "transition_samples": 9472.0,
+      "reward_evaluations": 2192.0
+    }
+  },
+  {
+    "problem": "mixture",
+    "seed": 47017,
+    "method": "point-grad1.0-false-n8",
+    "particles": 8,
+    "cdf_mse": 0.029390943503626178,
+    "cdf_mse_standard_error": 0.0019529335828252898,
+    "pooled_cdf_mse": 0.014307206989173357,
+    "positive_mass_mse": 0.07176084006297283,
+    "positive_mass": 0.56689453125,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 0.4719545713365698,
+    "mean_log_reward": -1.0864526375832326,
+    "mean_step_ess_fraction": 1.0,
+    "final_ess_fraction": 1.0,
+    "resampling_events_per_repeat": 0.0,
+    "costs": {
+      "value_evaluations": 32768,
+      "reward_evaluations": 32768,
+      "transition_samples": 16384
+    },
+    "seconds": 0.028106042998842895,
+    "costs_per_repeat": {
+      "value_evaluations": 128.0,
+      "reward_evaluations": 128.0,
+      "transition_samples": 64.0
+    }
+  },
+  {
+    "problem": "mixture",
+    "seed": 47017,
+    "method": "point-grad0.5-false-n8",
+    "particles": 8,
+    "cdf_mse": 0.07894243984583274,
+    "cdf_mse_standard_error": 0.0034850768139148875,
+    "pooled_cdf_mse": 0.06319170884558405,
+    "positive_mass_mse": 0.1913563520942477,
+    "positive_mass": 0.3701171875,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": -0.35215257039869696,
+    "mean_log_reward": -1.7575256228960061,
+    "mean_step_ess_fraction": 1.0,
+    "final_ess_fraction": 1.0,
+    "resampling_events_per_repeat": 0.0,
+    "costs": {
+      "value_evaluations": 32768,
+      "reward_evaluations": 32768,
+      "transition_samples": 16384
+    },
+    "seconds": 0.02112462604418397,
+    "costs_per_repeat": {
+      "value_evaluations": 128.0,
+      "reward_evaluations": 128.0,
+      "transition_samples": 64.0
+    }
+  },
+  {
+    "problem": "mixture",
+    "seed": 47017,
+    "method": "gaussian-grad1.0-false-n8",
+    "particles": 8,
+    "cdf_mse": 0.04061819736370639,
+    "cdf_mse_standard_error": 0.0023179252232037057,
+    "pooled_cdf_mse": 0.025872876030668245,
+    "positive_mass_mse": 0.10546691512773029,
+    "positive_mass": 0.498046875,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 0.2259715188181922,
+    "mean_log_reward": -1.223451319307622,
+    "mean_step_ess_fraction": 1.0,
+    "final_ess_fraction": 1.0,
+    "resampling_events_per_repeat": 0.0,
+    "costs": {
+      "value_evaluations": 32768,
+      "analytic_component_integrals": 28672,
+      "transition_samples": 16384,
+      "reward_evaluations": 4096
+    },
+    "seconds": 0.02095440705306828,
+    "costs_per_repeat": {
+      "value_evaluations": 128.0,
+      "analytic_component_integrals": 112.0,
+      "transition_samples": 64.0,
+      "reward_evaluations": 16.0
+    }
+  },
+  {
+    "problem": "mixture",
+    "seed": 47017,
+    "method": "mixture-grad1.0-false-n8",
+    "particles": 8,
+    "cdf_mse": 0.04253485685195582,
+    "cdf_mse_standard_error": 0.002445497618526658,
+    "pooled_cdf_mse": 0.02721210941410553,
+    "positive_mass_mse": 0.10976140240052881,
+    "positive_mass": 0.4921875,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 0.2018871146591138,
+    "mean_log_reward": -1.253322357891731,
+    "mean_step_ess_fraction": 1.0,
+    "final_ess_fraction": 1.0,
+    "resampling_events_per_repeat": 0.0,
+    "costs": {
+      "value_evaluations": 32768,
+      "analytic_component_integrals": 57344,
+      "transition_samples": 16384,
+      "reward_evaluations": 4096
+    },
+    "seconds": 0.028720873990096152,
+    "costs_per_repeat": {
+      "value_evaluations": 128.0,
+      "analytic_component_integrals": 224.0,
+      "transition_samples": 64.0,
+      "reward_evaluations": 16.0
+    }
+  },
+  {
+    "problem": "mixture",
+    "seed": 47017,
+    "method": "point-grad1.0-true-n8",
+    "particles": 8,
+    "cdf_mse": 0.018865566631113537,
+    "cdf_mse_standard_error": 0.001449842517052406,
+    "pooled_cdf_mse": 0.00019118718943455655,
+    "positive_mass_mse": 0.03532280311434036,
+    "positive_mass": 0.7503369370384053,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 1.0741212160303841,
+    "mean_log_reward": -0.6901789207893481,
+    "mean_step_ess_fraction": 0.7046162394083133,
+    "final_ess_fraction": 0.7520826938818148,
+    "resampling_events_per_repeat": 0.42578125,
+    "costs": {
+      "value_evaluations": 51200,
+      "reward_evaluations": 51200,
+      "transition_samples": 16384
+    },
+    "seconds": 0.03971355000976473,
+    "costs_per_repeat": {
+      "value_evaluations": 200.0,
+      "reward_evaluations": 200.0,
+      "transition_samples": 64.0
+    }
+  },
+  {
+    "problem": "mixture",
+    "seed": 47017,
+    "method": "point-grad0.5-true-n8",
+    "particles": 8,
+    "cdf_mse": 0.01970666403585787,
+    "cdf_mse_standard_error": 0.001653971817970149,
+    "pooled_cdf_mse": 0.0007662737478757926,
+    "positive_mass_mse": 0.038277908632137383,
+    "positive_mass": 0.723915989114932,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 0.9930827709543224,
+    "mean_log_reward": -0.7522736541624981,
+    "mean_step_ess_fraction": 0.6841801464555779,
+    "final_ess_fraction": 0.7492754357998674,
+    "resampling_events_per_repeat": 0.58984375,
+    "costs": {
+      "value_evaluations": 51200,
+      "reward_evaluations": 51200,
+      "transition_samples": 16384
+    },
+    "seconds": 0.04156868299469352,
+    "costs_per_repeat": {
+      "value_evaluations": 200.0,
+      "reward_evaluations": 200.0,
+      "transition_samples": 64.0
+    }
+  },
+  {
+    "problem": "mixture",
+    "seed": 47017,
+    "method": "gaussian-grad1.0-true-n8",
+    "particles": 8,
+    "cdf_mse": 0.01744224094304983,
+    "cdf_mse_standard_error": 0.0014547553446988854,
+    "pooled_cdf_mse": 0.0005454515404010556,
+    "positive_mass_mse": 0.031467840522249046,
+    "positive_mass": 0.7307056336171445,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 1.0131675829844062,
+    "mean_log_reward": -0.7203382105166212,
+    "mean_step_ess_fraction": 0.7733825453333312,
+    "final_ess_fraction": 0.7143301895276204,
+    "resampling_events_per_repeat": 0.1015625,
+    "costs": {
+      "value_evaluations": 51200,
+      "analytic_component_integrals": 45056,
+      "transition_samples": 16384,
+      "reward_evaluations": 6144
+    },
+    "seconds": 0.039798177080228925,
+    "costs_per_repeat": {
+      "value_evaluations": 200.0,
+      "analytic_component_integrals": 176.0,
+      "transition_samples": 64.0,
+      "reward_evaluations": 24.0
+    }
+  },
+  {
+    "problem": "mixture",
+    "seed": 47017,
+    "method": "mixture-grad1.0-true-n8",
+    "particles": 8,
+    "cdf_mse": 0.01839054316518305,
+    "cdf_mse_standard_error": 0.00158501412588224,
+    "pooled_cdf_mse": 0.0006691310527017942,
+    "positive_mass_mse": 0.03348801586398159,
+    "positive_mass": 0.7275703062508612,
+    "target_positive_mass": 0.7727129139454727,
+    "mean": 1.0017723866508803,
+    "mean_log_reward": -0.7353968216294028,
+    "mean_step_ess_fraction": 0.7541131658521351,
+    "final_ess_fraction": 0.7110160749842082,
+    "resampling_events_per_repeat": 0.09765625,
+    "costs": {
+      "value_evaluations": 51200,
+      "analytic_component_integrals": 90112,
+      "transition_samples": 16384,
+      "reward_evaluations": 6144
+    },
+    "seconds": 0.05065679701510817,
+    "costs_per_repeat": {
+      "value_evaluations": 200.0,
+      "analytic_component_integrals": 352.0,
+      "transition_samples": 64.0,
+      "reward_evaluations": 24.0
+    }
+  }
+]

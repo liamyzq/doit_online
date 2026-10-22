@@ -1,0 +1,15 @@
+{
+  "experiment_id": "exp-047-uncertainty-checks-r2",
+  "commit": "88b8a9f7e809317e27b20fa77e746947a8230730",
+  "config": "/home/mlw0719/doit_uncertainty/configs/uncertainty_smc/exp-047-uncertainty-checks-r2.json",
+  "machine": "orion",
+  "gpu": 1,
+  "pid": 1759181,
+  "path": "/home/mlw0719/doit_uncertainty_storage/runs/exp-047-uncertainty-checks-r2",
+  "log_path": "/home/mlw0719/doit_uncertainty_storage/artifacts/exp-047-uncertainty-checks-r2.log",
+  "status": "completed",
+  "timestamp": "2026-10-22T04:48:56.727561+00:00",
+  "started_at": "2026-10-22T04:48:51.727237+00:00",
+  "returncode": 0,
+  "finished_at": "2026-10-22T04:48:56.727636+00:00"
+}

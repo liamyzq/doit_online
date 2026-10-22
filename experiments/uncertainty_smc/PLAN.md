@@ -89,3 +89,30 @@ Sources: the user's supplied derivation; [FORS](https://arxiv.org/abs/2602.01338
 [TDS](https://arxiv.org/abs/2306.17775), and
 [DOIT](https://arxiv.org/abs/2602.16198). Gaussian moment correction and twisted
 SMC are established baselines, not new contributions by themselves.
+
+## Discovery decision and grouped candidate extension
+
+Exp-047-r2 passed all eight checks after resolving quadrature error in the first
+check run. Exp-048 completed 116 conditions. At N=16, Gaussian uncertainty
+reduced Gaussian-toy CDF MSE from 0.004953 to 0.004019; the mixture improvement
+was smaller, and no stable benefit appeared at N=8. Short branching and full
+futures did not repay their larger costs in this discovery. Exp-049 found that
+FORS B=2 still had terminal variance about 0.53 versus the exact 0.364 and cost
+about 55 guidance calls/output. Direct residual rejection was accurate at about
+two residual evaluations/output. Do not scale FORS on the present evidence.
+
+Exp-050 tests a grouped candidate particle update. Given a parent and M base
+proposals z_j with positive values v_j, select j with probability v_j/sum(v).
+Its incremental weight is mean(v)/psi_parent. Conditional on the candidate
+pool, the weighted expectation of f(z_j) is
+`sum_j v_j*f(z_j)/(M*psi_parent)`. Averaging over the base candidates gives
+the required `integral P(z|x)*psi_child(z)*f(z)/psi_parent`. This is an
+extended-space particle correction; no Gaussian density is assigned to the
+selected candidate. Store its realized child potential for the next denominator.
+
+This combination avoids fitting and then perturbing a Gaussian shift from a
+small pilot pool. Compare point, Gaussian, exact mixture, branch2, and future2
+values at M=4/8, N=4/8/16, including bootstrap particle counts matched to the
+number of base transition samples. The extension is motivated by observed
+pilot cost and finite-pool noise; it is not a claim that candidate selection
+alone is new. A finite-pool weight identity is added before formal execution.

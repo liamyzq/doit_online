@@ -1,0 +1,6 @@
+[
+  {
+    "id": "exp-050-grouped-uncertainty-discovery",
+    "config": "configs/uncertainty_smc/exp-050-grouped-uncertainty-discovery.json"
+  }
+]

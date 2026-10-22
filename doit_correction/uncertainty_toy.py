@@ -170,6 +170,19 @@ def particles(model, method, seed, repeats):
             x = model.draw(model.exact_kernel(x, k), path_rng)
             continue
         delta = np.zeros_like(x)
+        if method.get("proposal") == "grouped":
+            pilots = method["pilots"]
+            candidates = model.draw(model.kernel(np.broadcast_to(x[..., None], (*x.shape, pilots)), k), pilot_rng)
+            values = model.value(candidates, k - 1, kind, value_rng, branches)
+            probabilities = normalize(values)
+            indices = np.sum(selection_rng.random(x.shape)[..., None] > np.cumsum(probabilities, axis=-1), axis=-1)
+            z = np.take_along_axis(candidates, indices[..., None], axis=-1)[..., 0]
+            new_v = np.take_along_axis(values, indices[..., None], axis=-1)[..., 0]
+            if smc:
+                logw += logsumexp(values, axis=-1) - math.log(pilots) - v
+                v = new_v
+            x = z
+            continue
         if method.get("proposal", "base") == "pilot":
             pilots = method["pilots"]
             candidates = model.draw(model.kernel(np.broadcast_to(x[..., None], (*x.shape, pilots)), k), pilot_rng)
@@ -327,6 +340,14 @@ def run_checks(config, output):
     candidates = parameters[1][..., None] + math.sqrt(2 * parameters[2]) * nodes
     integrated = np.sum(parameters[0] * np.sum(np.exp(mixture.value(candidates, 1, "mixture")) * quadrature / math.sqrt(math.pi), axis=-1), axis=-1)
     errors["mixture_tower"] = float(np.max(np.abs(np.log(integrated) - mixture.value(state, 2, "mixture"))))
+    # Integrate the selected index exactly within a finite candidate pool.
+    # Multiplying selection by mean potential must recover its unnormalized sum.
+    candidates = np.array([[-2.0, -0.1, 0.7, 2.4], [-1.2, 0.0, 1.1, 3.0]])
+    values = mixture.value(candidates, 1, "mixture")
+    test_function = candidates ** 2 + 0.3 * candidates
+    lhs = np.exp(logsumexp(values, axis=-1) - math.log(4)) * np.sum(normalize(values) * test_function, axis=-1)
+    rhs = np.mean(np.exp(values) * test_function, axis=-1)
+    errors["grouped_selection_weight_identity"] = float(np.max(np.abs(lhs - rhs)))
     dump(output / "checks.json", errors)
     if max(errors.values()) > 1e-9:
         raise AssertionError(errors)

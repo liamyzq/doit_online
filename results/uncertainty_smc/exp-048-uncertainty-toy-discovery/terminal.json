@@ -1,0 +1,15 @@
+{
+  "experiment_id": "exp-048-uncertainty-toy-discovery",
+  "commit": "88b8a9f7e809317e27b20fa77e746947a8230730",
+  "config": "/home/mlw0719/doit_uncertainty/configs/uncertainty_smc/exp-048-uncertainty-toy-discovery.json",
+  "machine": "orion",
+  "gpu": 4,
+  "pid": 1782439,
+  "path": "/home/mlw0719/doit_uncertainty_storage/runs/exp-048-uncertainty-toy-discovery",
+  "log_path": "/home/mlw0719/doit_uncertainty_storage/artifacts/exp-048-uncertainty-toy-discovery.log",
+  "status": "completed",
+  "timestamp": "2026-10-22T04:50:34.227202+00:00",
+  "started_at": "2026-10-22T04:50:19.224867+00:00",
+  "returncode": 0,
+  "finished_at": "2026-10-22T04:50:34.227251+00:00"
+}

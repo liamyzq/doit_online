@@ -1,0 +1,378 @@
+{
+  "id": "exp-050-grouped-uncertainty-discovery",
+  "mode": "uncertainty_toy",
+  "problems": [
+    {
+      "name": "gaussian",
+      "means": [
+        0.0
+      ],
+      "probabilities": [
+        1.0
+      ],
+      "clean_variance": 1.0,
+      "noise_variances": [
+        0.0,
+        0.08,
+        0.25,
+        0.6,
+        1.2,
+        2.4,
+        5.0,
+        10.0,
+        20.0
+      ],
+      "reward_target": 1.8,
+      "reward_variance": 0.7,
+      "beta": 2.0
+    },
+    {
+      "name": "mixture",
+      "means": [
+        -2.0,
+        2.0
+      ],
+      "probabilities": [
+        0.8,
+        0.2
+      ],
+      "clean_variance": 0.3,
+      "noise_variances": [
+        0.0,
+        0.08,
+        0.25,
+        0.6,
+        1.2,
+        2.4,
+        5.0,
+        10.0,
+        20.0
+      ],
+      "reward_target": 1.5,
+      "reward_variance": 2.0,
+      "beta": 1.0
+    }
+  ],
+  "seeds": [
+    47011,
+    47017
+  ],
+  "repeats": 256,
+  "methods": [
+    {
+      "name": "point-group4-smc-n4",
+      "particles": 4,
+      "proposal": "grouped",
+      "pilots": 4,
+      "value": "point",
+      "branches": 2,
+      "smc": true
+    },
+    {
+      "name": "gaussian-group4-smc-n4",
+      "particles": 4,
+      "proposal": "grouped",
+      "pilots": 4,
+      "value": "gaussian",
+      "branches": 2,
+      "smc": true
+    },
+    {
+      "name": "mixture-group4-smc-n4",
+      "particles": 4,
+      "proposal": "grouped",
+      "pilots": 4,
+      "value": "mixture",
+      "branches": 2,
+      "smc": true
+    },
+    {
+      "name": "branch-group4-smc-n4",
+      "particles": 4,
+      "proposal": "grouped",
+      "pilots": 4,
+      "value": "branch",
+      "branches": 2,
+      "smc": true
+    },
+    {
+      "name": "future-group4-smc-n4",
+      "particles": 4,
+      "proposal": "grouped",
+      "pilots": 4,
+      "value": "future",
+      "branches": 2,
+      "smc": true
+    },
+    {
+      "name": "point-group8-smc-n4",
+      "particles": 4,
+      "proposal": "grouped",
+      "pilots": 8,
+      "value": "point",
+      "branches": 2,
+      "smc": true
+    },
+    {
+      "name": "gaussian-group8-smc-n4",
+      "particles": 4,
+      "proposal": "grouped",
+      "pilots": 8,
+      "value": "gaussian",
+      "branches": 2,
+      "smc": true
+    },
+    {
+      "name": "mixture-group8-smc-n4",
+      "particles": 4,
+      "proposal": "grouped",
+      "pilots": 8,
+      "value": "mixture",
+      "branches": 2,
+      "smc": true
+    },
+    {
+      "name": "branch-group8-smc-n4",
+      "particles": 4,
+      "proposal": "grouped",
+      "pilots": 8,
+      "value": "branch",
+      "branches": 2,
+      "smc": true
+    },
+    {
+      "name": "future-group8-smc-n4",
+      "particles": 4,
+      "proposal": "grouped",
+      "pilots": 8,
+      "value": "future",
+      "branches": 2,
+      "smc": true
+    },
+    {
+      "name": "point-group4-smc-n8",
+      "particles": 8,
+      "proposal": "grouped",
+      "pilots": 4,
+      "value": "point",
+      "branches": 2,
+      "smc": true
+    },
+    {
+      "name": "gaussian-group4-smc-n8",
+      "particles": 8,
+      "proposal": "grouped",
+      "pilots": 4,
+      "value": "gaussian",
+      "branches": 2,
+      "smc": true
+    },
+    {
+      "name": "mixture-group4-smc-n8",
+      "particles": 8,
+      "proposal": "grouped",
+      "pilots": 4,
+      "value": "mixture",
+      "branches": 2,
+      "smc": true
+    },
+    {
+      "name": "branch-group4-smc-n8",
+      "particles": 8,
+      "proposal": "grouped",
+      "pilots": 4,
+      "value": "branch",
+      "branches": 2,
+      "smc": true
+    },
+    {
+      "name": "future-group4-smc-n8",
+      "particles": 8,
+      "proposal": "grouped",
+      "pilots": 4,
+      "value": "future",
+      "branches": 2,
+      "smc": true
+    },
+    {
+      "name": "point-group8-smc-n8",
+      "particles": 8,
+      "proposal": "grouped",
+      "pilots": 8,
+      "value": "point",
+      "branches": 2,
+      "smc": true
+    },
+    {
+      "name": "gaussian-group8-smc-n8",
+      "particles": 8,
+      "proposal": "grouped",
+      "pilots": 8,
+      "value": "gaussian",
+      "branches": 2,
+      "smc": true
+    },
+    {
+      "name": "mixture-group8-smc-n8",
+      "particles": 8,
+      "proposal": "grouped",
+      "pilots": 8,
+      "value": "mixture",
+      "branches": 2,
+      "smc": true
+    },
+    {
+      "name": "branch-group8-smc-n8",
+      "particles": 8,
+      "proposal": "grouped",
+      "pilots": 8,
+      "value": "branch",
+      "branches": 2,
+      "smc": true
+    },
+    {
+      "name": "future-group8-smc-n8",
+      "particles": 8,
+      "proposal": "grouped",
+      "pilots": 8,
+      "value": "future",
+      "branches": 2,
+      "smc": true
+    },
+    {
+      "name": "point-group4-smc-n16",
+      "particles": 16,
+      "proposal": "grouped",
+      "pilots": 4,
+      "value": "point",
+      "branches": 2,
+      "smc": true
+    },
+    {
+      "name": "gaussian-group4-smc-n16",
+      "particles": 16,
+      "proposal": "grouped",
+      "pilots": 4,
+      "value": "gaussian",
+      "branches": 2,
+      "smc": true
+    },
+    {
+      "name": "mixture-group4-smc-n16",
+      "particles": 16,
+      "proposal": "grouped",
+      "pilots": 4,
+      "value": "mixture",
+      "branches": 2,
+      "smc": true
+    },
+    {
+      "name": "branch-group4-smc-n16",
+      "particles": 16,
+      "proposal": "grouped",
+      "pilots": 4,
+      "value": "branch",
+      "branches": 2,
+      "smc": true
+    },
+    {
+      "name": "future-group4-smc-n16",
+      "particles": 16,
+      "proposal": "grouped",
+      "pilots": 4,
+      "value": "future",
+      "branches": 2,
+      "smc": true
+    },
+    {
+      "name": "point-group8-smc-n16",
+      "particles": 16,
+      "proposal": "grouped",
+      "pilots": 8,
+      "value": "point",
+      "branches": 2,
+      "smc": true
+    },
+    {
+      "name": "gaussian-group8-smc-n16",
+      "particles": 16,
+      "proposal": "grouped",
+      "pilots": 8,
+      "value": "gaussian",
+      "branches": 2,
+      "smc": true
+    },
+    {
+      "name": "mixture-group8-smc-n16",
+      "particles": 16,
+      "proposal": "grouped",
+      "pilots": 8,
+      "value": "mixture",
+      "branches": 2,
+      "smc": true
+    },
+    {
+      "name": "branch-group8-smc-n16",
+      "particles": 16,
+      "proposal": "grouped",
+      "pilots": 8,
+      "value": "branch",
+      "branches": 2,
+      "smc": true
+    },
+    {
+      "name": "future-group8-smc-n16",
+      "particles": 16,
+      "proposal": "grouped",
+      "pilots": 8,
+      "value": "future",
+      "branches": 2,
+      "smc": true
+    },
+    {
+      "name": "base-smc-n32",
+      "particles": 32,
+      "proposal": "base",
+      "value": "flat",
+      "smc": true
+    },
+    {
+      "name": "base-smc-n64",
+      "particles": 64,
+      "proposal": "base",
+      "value": "flat",
+      "smc": true
+    },
+    {
+      "name": "base-smc-n128",
+      "particles": 128,
+      "proposal": "base",
+      "value": "flat",
+      "smc": true
+    },
+    {
+      "name": "point-group8-uncorrected-n8",
+      "particles": 8,
+      "proposal": "grouped",
+      "pilots": 8,
+      "value": "point",
+      "smc": false
+    },
+    {
+      "name": "gaussian-group8-uncorrected-n8",
+      "particles": 8,
+      "proposal": "grouped",
+      "pilots": 8,
+      "value": "gaussian",
+      "smc": false
+    },
+    {
+      "name": "mixture-group8-uncorrected-n8",
+      "particles": 8,
+      "proposal": "grouped",
+      "pilots": 8,
+      "value": "mixture",
+      "smc": false
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "conditions": 116,
+  "repeats_per_condition": 256,
+  "total_costs": {
+    "value_evaluations": 19406848,
+    "transition_samples": 29884416,
+    "reward_evaluations": 8093696,
+    "analytic_component_integrals": 8478720
+  },
+  "peak_allocated_mib": 0.0,
+  "peak_reserved_mib": 0.0
+}

@@ -1,0 +1,6 @@
+[
+  {
+    "id": "exp-050-grouped-weight-checks",
+    "config": "configs/uncertainty_smc/exp-050-grouped-weight-checks.json"
+  }
+]

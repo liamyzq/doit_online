@@ -1,0 +1,295 @@
+{
+  "id": "exp-048-uncertainty-toy-discovery",
+  "mode": "uncertainty_toy",
+  "problems": [
+    {
+      "name": "gaussian",
+      "means": [
+        0.0
+      ],
+      "probabilities": [
+        1.0
+      ],
+      "clean_variance": 1.0,
+      "noise_variances": [
+        0.0,
+        0.08,
+        0.25,
+        0.6,
+        1.2,
+        2.4,
+        5.0,
+        10.0,
+        20.0
+      ],
+      "reward_target": 1.8,
+      "reward_variance": 0.7,
+      "beta": 2.0
+    },
+    {
+      "name": "mixture",
+      "means": [
+        -2.0,
+        2.0
+      ],
+      "probabilities": [
+        0.8,
+        0.2
+      ],
+      "clean_variance": 0.3,
+      "noise_variances": [
+        0.0,
+        0.08,
+        0.25,
+        0.6,
+        1.2,
+        2.4,
+        5.0,
+        10.0,
+        20.0
+      ],
+      "reward_target": 1.5,
+      "reward_variance": 2.0,
+      "beta": 1.0
+    }
+  ],
+  "seeds": [
+    47011,
+    47017
+  ],
+  "repeats": 256,
+  "methods": [
+    {
+      "name": "base-smc-n4",
+      "particles": 4,
+      "proposal": "base",
+      "value": "flat",
+      "smc": true
+    },
+    {
+      "name": "exact-doob-n4",
+      "particles": 4,
+      "proposal": "exact",
+      "value": "mixture",
+      "smc": false
+    },
+    {
+      "name": "point-pilot8-smc-n4",
+      "particles": 4,
+      "proposal": "pilot",
+      "pilots": 8,
+      "value": "point",
+      "smc": true
+    },
+    {
+      "name": "gaussian-pilot8-smc-n4",
+      "particles": 4,
+      "proposal": "pilot",
+      "pilots": 8,
+      "value": "gaussian",
+      "smc": true
+    },
+    {
+      "name": "mixture-pilot8-smc-n4",
+      "particles": 4,
+      "proposal": "pilot",
+      "pilots": 8,
+      "value": "mixture",
+      "smc": true
+    },
+    {
+      "name": "branch2-pilot8-smc-n4",
+      "particles": 4,
+      "proposal": "pilot",
+      "pilots": 8,
+      "value": "branch",
+      "branches": 2,
+      "smc": true
+    },
+    {
+      "name": "future2-pilot8-smc-n4",
+      "particles": 4,
+      "proposal": "pilot",
+      "pilots": 8,
+      "value": "future",
+      "branches": 2,
+      "smc": true
+    },
+    {
+      "name": "base-smc-n8",
+      "particles": 8,
+      "proposal": "base",
+      "value": "flat",
+      "smc": true
+    },
+    {
+      "name": "exact-doob-n8",
+      "particles": 8,
+      "proposal": "exact",
+      "value": "mixture",
+      "smc": false
+    },
+    {
+      "name": "point-pilot8-smc-n8",
+      "particles": 8,
+      "proposal": "pilot",
+      "pilots": 8,
+      "value": "point",
+      "smc": true
+    },
+    {
+      "name": "gaussian-pilot8-smc-n8",
+      "particles": 8,
+      "proposal": "pilot",
+      "pilots": 8,
+      "value": "gaussian",
+      "smc": true
+    },
+    {
+      "name": "mixture-pilot8-smc-n8",
+      "particles": 8,
+      "proposal": "pilot",
+      "pilots": 8,
+      "value": "mixture",
+      "smc": true
+    },
+    {
+      "name": "branch2-pilot8-smc-n8",
+      "particles": 8,
+      "proposal": "pilot",
+      "pilots": 8,
+      "value": "branch",
+      "branches": 2,
+      "smc": true
+    },
+    {
+      "name": "future2-pilot8-smc-n8",
+      "particles": 8,
+      "proposal": "pilot",
+      "pilots": 8,
+      "value": "future",
+      "branches": 2,
+      "smc": true
+    },
+    {
+      "name": "base-smc-n16",
+      "particles": 16,
+      "proposal": "base",
+      "value": "flat",
+      "smc": true
+    },
+    {
+      "name": "exact-doob-n16",
+      "particles": 16,
+      "proposal": "exact",
+      "value": "mixture",
+      "smc": false
+    },
+    {
+      "name": "point-pilot8-smc-n16",
+      "particles": 16,
+      "proposal": "pilot",
+      "pilots": 8,
+      "value": "point",
+      "smc": true
+    },
+    {
+      "name": "gaussian-pilot8-smc-n16",
+      "particles": 16,
+      "proposal": "pilot",
+      "pilots": 8,
+      "value": "gaussian",
+      "smc": true
+    },
+    {
+      "name": "mixture-pilot8-smc-n16",
+      "particles": 16,
+      "proposal": "pilot",
+      "pilots": 8,
+      "value": "mixture",
+      "smc": true
+    },
+    {
+      "name": "branch2-pilot8-smc-n16",
+      "particles": 16,
+      "proposal": "pilot",
+      "pilots": 8,
+      "value": "branch",
+      "branches": 2,
+      "smc": true
+    },
+    {
+      "name": "future2-pilot8-smc-n16",
+      "particles": 16,
+      "proposal": "pilot",
+      "pilots": 8,
+      "value": "future",
+      "branches": 2,
+      "smc": true
+    },
+    {
+      "name": "point-grad1.0-false-n8",
+      "particles": 8,
+      "proposal": "gradient",
+      "value": "point",
+      "scale": 1.0,
+      "smc": false
+    },
+    {
+      "name": "point-grad0.5-false-n8",
+      "particles": 8,
+      "proposal": "gradient",
+      "value": "point",
+      "scale": 0.5,
+      "smc": false
+    },
+    {
+      "name": "gaussian-grad1.0-false-n8",
+      "particles": 8,
+      "proposal": "gradient",
+      "value": "gaussian",
+      "scale": 1.0,
+      "smc": false
+    },
+    {
+      "name": "mixture-grad1.0-false-n8",
+      "particles": 8,
+      "proposal": "gradient",
+      "value": "mixture",
+      "scale": 1.0,
+      "smc": false
+    },
+    {
+      "name": "point-grad1.0-true-n8",
+      "particles": 8,
+      "proposal": "gradient",
+      "value": "point",
+      "scale": 1.0,
+      "smc": true
+    },
+    {
+      "name": "point-grad0.5-true-n8",
+      "particles": 8,
+      "proposal": "gradient",
+      "value": "point",
+      "scale": 0.5,
+      "smc": true
+    },
+    {
+      "name": "gaussian-grad1.0-true-n8",
+      "particles": 8,
+      "proposal": "gradient",
+      "value": "gaussian",
+      "scale": 1.0,
+      "smc": true
+    },
+    {
+      "name": "mixture-grad1.0-true-n8",
+      "particles": 8,
+      "proposal": "gradient",
+      "value": "mixture",
+      "scale": 1.0,
+      "smc": true
+    }
+  ]
+}

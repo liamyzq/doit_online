@@ -1,0 +1,15 @@
+{
+  "experiment_id": "exp-049-fors-local-discovery",
+  "commit": "88b8a9f7e809317e27b20fa77e746947a8230730",
+  "config": "/home/mlw0719/doit_uncertainty/configs/uncertainty_smc/exp-049-fors-local-discovery.json",
+  "machine": "orion",
+  "gpu": 1,
+  "pid": 1782440,
+  "path": "/home/mlw0719/doit_uncertainty_storage/runs/exp-049-fors-local-discovery",
+  "log_path": "/home/mlw0719/doit_uncertainty_storage/artifacts/exp-049-fors-local-discovery.log",
+  "status": "completed",
+  "timestamp": "2026-10-22T04:50:24.226187+00:00",
+  "started_at": "2026-10-22T04:50:19.225922+00:00",
+  "returncode": 0,
+  "finished_at": "2026-10-22T04:50:24.226216+00:00"
+}
