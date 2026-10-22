@@ -1,0 +1,418 @@
+[
+  {
+    "prompt": "bernese",
+    "seed": 57011,
+    "method": "point-smc-n4",
+    "reward": 6.272282600402832,
+    "clip_alignment": 0.33002543449401855,
+    "seconds": 6.9684065310284495,
+    "guidance_queries": 12,
+    "evaluation_queries": 4,
+    "all_queries": 16,
+    "score_forwards": 92,
+    "vjp_calls": 0,
+    "reward_seconds": 1.6327466119546443,
+    "terminal_evaluation_seconds": 0.5810516159981489,
+    "weighted_reward": 6.3250045127664425,
+    "weighted_alignment": 0.30356879267718795,
+    "final_ess": 2.866433449670369,
+    "initial_ancestors": 4,
+    "chosen": 3,
+    "candidate_rewards": [
+      5.831231594085693,
+      6.467057704925537,
+      6.182436466217041,
+      6.272282600402832
+    ],
+    "weights": [
+      0.05916992308084307,
+      0.4926671166415173,
+      0.1907752939172924,
+      0.2573876663603471
+    ],
+    "steps": [
+      {
+        "index": 10,
+        "ess": 2.094660273188641,
+        "resampled": false,
+        "initial_ancestors": 4
+      },
+      {
+        "index": 14,
+        "ess": 3.2705870234184147,
+        "resampled": false,
+        "initial_ancestors": 4
+      },
+      {
+        "index": 18,
+        "ess": 2.842727751645098,
+        "resampled": false,
+        "initial_ancestors": 4
+      }
+    ]
+  },
+  {
+    "prompt": "formula1",
+    "seed": 57011,
+    "method": "point-smc-n4",
+    "reward": 5.340975284576416,
+    "clip_alignment": 0.2642993927001953,
+    "seconds": 6.207463331986219,
+    "guidance_queries": 12,
+    "evaluation_queries": 4,
+    "all_queries": 16,
+    "score_forwards": 92,
+    "vjp_calls": 0,
+    "reward_seconds": 1.5964062110288069,
+    "terminal_evaluation_seconds": 0.49658394895959646,
+    "weighted_reward": 5.268423142454634,
+    "weighted_alignment": 0.25610111845096417,
+    "final_ess": 3.29409072366064,
+    "initial_ancestors": 2,
+    "chosen": 2,
+    "candidate_rewards": [
+      5.024511337280273,
+      5.445114612579346,
+      5.340975284576416,
+      4.920925140380859
+    ],
+    "weights": [
+      0.26735020506549545,
+      0.38950911271368177,
+      0.275271027706265,
+      0.06786965451455787
+    ],
+    "steps": [
+      {
+        "index": 10,
+        "ess": 1.8303921712624156,
+        "resampled": true,
+        "initial_ancestors": 2
+      },
+      {
+        "index": 14,
+        "ess": 3.5454220168606225,
+        "resampled": false,
+        "initial_ancestors": 2
+      },
+      {
+        "index": 18,
+        "ess": 3.297889772312001,
+        "resampled": false,
+        "initial_ancestors": 2
+      }
+    ]
+  },
+  {
+    "prompt": "airplane",
+    "seed": 57011,
+    "method": "point-smc-n4",
+    "reward": 5.538270473480225,
+    "clip_alignment": 0.22005502879619598,
+    "seconds": 6.175304614938796,
+    "guidance_queries": 12,
+    "evaluation_queries": 4,
+    "all_queries": 16,
+    "score_forwards": 92,
+    "vjp_calls": 0,
+    "reward_seconds": 1.5884703150950372,
+    "terminal_evaluation_seconds": 0.5742325630271807,
+    "weighted_reward": 5.521007119906321,
+    "weighted_alignment": 0.24993043625131817,
+    "final_ess": 2.6360302927794583,
+    "initial_ancestors": 4,
+    "chosen": 3,
+    "candidate_rewards": [
+      5.634417533874512,
+      4.86344051361084,
+      5.215393543243408,
+      5.538270473480225
+    ],
+    "weights": [
+      0.4878679168862199,
+      0.037342097376004975,
+      0.12069878619363228,
+      0.35409119954414287
+    ],
+    "steps": [
+      {
+        "index": 10,
+        "ess": 3.069997141376973,
+        "resampled": false,
+        "initial_ancestors": 4
+      },
+      {
+        "index": 14,
+        "ess": 2.377352207069259,
+        "resampled": false,
+        "initial_ancestors": 4
+      },
+      {
+        "index": 18,
+        "ess": 2.5187889463117608,
+        "resampled": false,
+        "initial_ancestors": 4
+      }
+    ]
+  },
+  {
+    "prompt": "labrador",
+    "seed": 57011,
+    "method": "point-smc-n4",
+    "reward": 6.32190465927124,
+    "clip_alignment": 0.30039653182029724,
+    "seconds": 6.803416252951138,
+    "guidance_queries": 12,
+    "evaluation_queries": 4,
+    "all_queries": 16,
+    "score_forwards": 92,
+    "vjp_calls": 0,
+    "reward_seconds": 1.705206289072521,
+    "terminal_evaluation_seconds": 0.5261829369701445,
+    "weighted_reward": 6.1634124015783245,
+    "weighted_alignment": 0.2893214584345105,
+    "final_ess": 2.4069847859316,
+    "initial_ancestors": 4,
+    "chosen": 0,
+    "candidate_rewards": [
+      6.32190465927124,
+      5.848769187927246,
+      6.063020706176758,
+      5.604444980621338
+    ],
+    "weights": [
+      0.5814034674481393,
+      0.12010023841925319,
+      0.24530404515072046,
+      0.053192248981887034
+    ],
+    "steps": [
+      {
+        "index": 10,
+        "ess": 3.174453516935343,
+        "resampled": false,
+        "initial_ancestors": 4
+      },
+      {
+        "index": 14,
+        "ess": 3.273731351466196,
+        "resampled": false,
+        "initial_ancestors": 4
+      },
+      {
+        "index": 18,
+        "ess": 2.482281724230581,
+        "resampled": false,
+        "initial_ancestors": 4
+      }
+    ]
+  },
+  {
+    "prompt": "lighthouse",
+    "seed": 57011,
+    "method": "point-smc-n4",
+    "reward": 6.6914777755737305,
+    "clip_alignment": 0.28578981757164,
+    "seconds": 6.310626259073615,
+    "guidance_queries": 12,
+    "evaluation_queries": 4,
+    "all_queries": 16,
+    "score_forwards": 92,
+    "vjp_calls": 0,
+    "reward_seconds": 1.6668794529978186,
+    "terminal_evaluation_seconds": 0.519710045075044,
+    "weighted_reward": 6.678876652179714,
+    "weighted_alignment": 0.2716735073079832,
+    "final_ess": 3.931700698820291,
+    "initial_ancestors": 4,
+    "chosen": 3,
+    "candidate_rewards": [
+      6.69338321685791,
+      6.708242416381836,
+      6.599802017211914,
+      6.6914777755737305
+    ],
+    "weights": [
+      0.26479727751822346,
+      0.278243104398926,
+      0.1938388629520101,
+      0.2631207551308403
+    ],
+    "steps": [
+      {
+        "index": 10,
+        "ess": 3.552428433342313,
+        "resampled": false,
+        "initial_ancestors": 4
+      },
+      {
+        "index": 14,
+        "ess": 3.8895301034078433,
+        "resampled": false,
+        "initial_ancestors": 4
+      },
+      {
+        "index": 18,
+        "ess": 3.933411116367694,
+        "resampled": false,
+        "initial_ancestors": 4
+      }
+    ]
+  },
+  {
+    "prompt": "cafe",
+    "seed": 57011,
+    "method": "point-smc-n4",
+    "reward": 6.644911289215088,
+    "clip_alignment": 0.26924949884414673,
+    "seconds": 6.289498420082964,
+    "guidance_queries": 12,
+    "evaluation_queries": 4,
+    "all_queries": 16,
+    "score_forwards": 92,
+    "vjp_calls": 0,
+    "reward_seconds": 1.6144592229975387,
+    "terminal_evaluation_seconds": 0.5138315170770511,
+    "weighted_reward": 6.561194080439744,
+    "weighted_alignment": 0.2850092867288188,
+    "final_ess": 3.7399480356845927,
+    "initial_ancestors": 1,
+    "chosen": 2,
+    "candidate_rewards": [
+      6.587806224822998,
+      6.47249698638916,
+      6.644911289215088,
+      6.456720352172852
+    ],
+    "weights": [
+      0.28276077080408724,
+      0.1925271300625793,
+      0.34204811761286946,
+      0.18266398152046395
+    ],
+    "steps": [
+      {
+        "index": 10,
+        "ess": 2.573001171443376,
+        "resampled": false,
+        "initial_ancestors": 4
+      },
+      {
+        "index": 14,
+        "ess": 1.1546985315515301,
+        "resampled": true,
+        "initial_ancestors": 1
+      },
+      {
+        "index": 18,
+        "ess": 3.4867876335089374,
+        "resampled": false,
+        "initial_ancestors": 1
+      }
+    ]
+  },
+  {
+    "prompt": "orchid",
+    "seed": 57011,
+    "method": "point-smc-n4",
+    "reward": 6.210496425628662,
+    "clip_alignment": 0.2943718135356903,
+    "seconds": 6.332202046993189,
+    "guidance_queries": 12,
+    "evaluation_queries": 4,
+    "all_queries": 16,
+    "score_forwards": 92,
+    "vjp_calls": 0,
+    "reward_seconds": 1.6080888499272987,
+    "terminal_evaluation_seconds": 0.5857612920226529,
+    "weighted_reward": 6.178487768459096,
+    "weighted_alignment": 0.2749157684401943,
+    "final_ess": 2.615923308037895,
+    "initial_ancestors": 4,
+    "chosen": 3,
+    "candidate_rewards": [
+      6.24138069152832,
+      5.9216508865356445,
+      4.345357894897461,
+      6.210496425628662
+    ],
+    "weights": [
+      0.4447532051813534,
+      0.15320141852744698,
+      0.0008004698145140378,
+      0.40124490647668576
+    ],
+    "steps": [
+      {
+        "index": 10,
+        "ess": 2.832423643792705,
+        "resampled": false,
+        "initial_ancestors": 4
+      },
+      {
+        "index": 14,
+        "ess": 2.7795162404276548,
+        "resampled": false,
+        "initial_ancestors": 4
+      },
+      {
+        "index": 18,
+        "ess": 2.6245989967609296,
+        "resampled": false,
+        "initial_ancestors": 4
+      }
+    ]
+  },
+  {
+    "prompt": "mountain",
+    "seed": 57011,
+    "method": "point-smc-n4",
+    "reward": 6.952308177947998,
+    "clip_alignment": 0.28984755277633667,
+    "seconds": 6.605956421000883,
+    "guidance_queries": 12,
+    "evaluation_queries": 4,
+    "all_queries": 16,
+    "score_forwards": 92,
+    "vjp_calls": 0,
+    "reward_seconds": 1.837707662023604,
+    "terminal_evaluation_seconds": 0.5098228759597987,
+    "weighted_reward": 6.9525568867830945,
+    "weighted_alignment": 0.2895377199206865,
+    "final_ess": 3.955562457695121,
+    "initial_ancestors": 1,
+    "chosen": 2,
+    "candidate_rewards": [
+      6.959712028503418,
+      6.896818161010742,
+      6.952308177947998,
+      6.987459182739258
+    ],
+    "weights": [
+      0.25750655128381783,
+      0.2088046104958384,
+      0.25122919747036804,
+      0.2824596407499758
+    ],
+    "steps": [
+      {
+        "index": 10,
+        "ess": 1.5812294951774537,
+        "resampled": true,
+        "initial_ancestors": 2
+      },
+      {
+        "index": 14,
+        "ess": 3.5110620979207985,
+        "resampled": false,
+        "initial_ancestors": 2
+      },
+      {
+        "index": 18,
+        "ess": 1.4905023346279231,
+        "resampled": true,
+        "initial_ancestors": 1
+      }
+    ]
+  }
+]

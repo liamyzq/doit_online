@@ -1,0 +1,625 @@
+{
+  "queue": "configs/uncertainty_smc/queue-image-discovery.json",
+  "seeds": [
+    57011,
+    57017
+  ],
+  "prompts": [
+    "airplane",
+    "bernese",
+    "cafe",
+    "formula1",
+    "labrador",
+    "lighthouse",
+    "mountain",
+    "orchid"
+  ],
+  "confirmation": false,
+  "interval_scope": "Seed-block bootstrap conditional on these fixed prompts; no discovery interval from two seeds.",
+  "groups": {
+    "base": {
+      "images": 16,
+      "mean_reward": 5.97716760635376,
+      "mean_clip_alignment": 0.2826921381056309,
+      "mean_seconds": 1.2518631277998793,
+      "mean_all_queries": 1.0,
+      "mean_score_forwards": 20.0,
+      "mean_vjp_calls": 0.0,
+      "reward_10th_percentile": 5.039668083190918,
+      "by_seed": {
+        "57011": {
+          "reward": 6.031098246574402,
+          "clip_alignment": 0.2839873433113098,
+          "seconds": 1.2987710765009979
+        },
+        "57017": {
+          "reward": 5.923236966133118,
+          "clip_alignment": 0.28139693289995193,
+          "seconds": 1.2049551790987607
+        }
+      },
+      "mean_within_prompt_embedding_distance": 0.1010703518986702,
+      "comparisons": {
+        "mc8": {
+          "reward": {
+            "mean_delta": -0.05376940965652466,
+            "seed_deltas": [
+              -0.07531583309173584,
+              -0.03222298622131348
+            ]
+          },
+          "clip_alignment": {
+            "mean_delta": -0.0005370108410716057,
+            "seed_deltas": [
+              -0.0013011321425437927,
+              0.00022711046040058136
+            ]
+          },
+          "seconds": {
+            "mean_delta": -26.377056268029264,
+            "seed_deltas": [
+              -29.09311341562716,
+              -23.66099912043137
+            ]
+          }
+        },
+        "mc32": {
+          "reward": {
+            "mean_delta": -0.23920932412147522,
+            "seed_deltas": [
+              -0.19844770431518555,
+              -0.2799709439277649
+            ]
+          },
+          "clip_alignment": {
+            "mean_delta": 0.0003552734851837158,
+            "seed_deltas": [
+              0.0052459221333265305,
+              -0.004535375162959099
+            ]
+          },
+          "seconds": {
+            "mean_delta": -72.5962577011378,
+            "seed_deltas": [
+              -68.38240911111643,
+              -76.81010629115917
+            ]
+          }
+        },
+        "terminal-n8": {
+          "reward": {
+            "mean_delta": -0.4301995635032654,
+            "seed_deltas": [
+              -0.5695364475250244,
+              -0.29086267948150635
+            ]
+          },
+          "clip_alignment": {
+            "mean_delta": 0.006122734397649765,
+            "seed_deltas": [
+              0.013645302504301071,
+              -0.0013998337090015411
+            ]
+          },
+          "seconds": {
+            "mean_delta": -19.579990445257863,
+            "seed_deltas": [
+              -17.233980814387905,
+              -21.92600007612782
+            ]
+          }
+        }
+      }
+    },
+    "mc8": {
+      "images": 16,
+      "mean_reward": 6.030937016010284,
+      "mean_clip_alignment": 0.2832291489467025,
+      "mean_seconds": 27.628919395829143,
+      "mean_all_queries": 97.0,
+      "mean_score_forwards": 20.0,
+      "mean_vjp_calls": 9.0,
+      "reward_10th_percentile": 4.995325326919556,
+      "by_seed": {
+        "57011": {
+          "reward": 6.106414079666138,
+          "clip_alignment": 0.2852884754538536,
+          "seconds": 30.391884492128156
+        },
+        "57017": {
+          "reward": 5.955459952354431,
+          "clip_alignment": 0.28116982243955135,
+          "seconds": 24.86595429953013
+        }
+      },
+      "mean_within_prompt_embedding_distance": 0.10264717787504196,
+      "comparisons": {
+        "mc32": {
+          "reward": {
+            "mean_delta": -0.18543991446495056,
+            "seed_deltas": [
+              -0.12313187122344971,
+              -0.24774795770645142
+            ]
+          },
+          "clip_alignment": {
+            "mean_delta": 0.0008922843262553215,
+            "seed_deltas": [
+              0.006547054275870323,
+              -0.00476248562335968
+            ]
+          },
+          "seconds": {
+            "mean_delta": -46.21920143310854,
+            "seed_deltas": [
+              -39.28929569548927,
+              -53.1491071707278
+            ]
+          }
+        },
+        "terminal-n8": {
+          "reward": {
+            "mean_delta": -0.3764301538467407,
+            "seed_deltas": [
+              -0.4942206144332886,
+              -0.25863969326019287
+            ]
+          },
+          "clip_alignment": {
+            "mean_delta": 0.006659745238721371,
+            "seed_deltas": [
+              0.014946434646844864,
+              -0.0016269441694021225
+            ]
+          },
+          "seconds": {
+            "mean_delta": 6.797065822771401,
+            "seed_deltas": [
+              11.859132601239253,
+              1.7349990443035495
+            ]
+          }
+        }
+      }
+    },
+    "mc32": {
+      "images": 16,
+      "mean_reward": 6.216376930475235,
+      "mean_clip_alignment": 0.28233686462044716,
+      "mean_seconds": 73.84812082893768,
+      "mean_all_queries": 289.0,
+      "mean_score_forwards": 20.0,
+      "mean_vjp_calls": 9.0,
+      "reward_10th_percentile": 4.971067428588867,
+      "by_seed": {
+        "57011": {
+          "reward": 6.229545950889587,
+          "clip_alignment": 0.2787414211779833,
+          "seconds": 69.68118018761743
+        },
+        "57017": {
+          "reward": 6.203207910060883,
+          "clip_alignment": 0.28593230806291103,
+          "seconds": 78.01506147025793
+        }
+      },
+      "mean_within_prompt_embedding_distance": 0.12530231475830078,
+      "comparisons": {
+        "mc8": {
+          "reward": {
+            "mean_delta": 0.18543991446495056,
+            "seed_deltas": [
+              0.12313187122344971,
+              0.24774795770645142
+            ]
+          },
+          "clip_alignment": {
+            "mean_delta": -0.0008922843262553215,
+            "seed_deltas": [
+              -0.006547054275870323,
+              0.00476248562335968
+            ]
+          },
+          "seconds": {
+            "mean_delta": 46.21920143310854,
+            "seed_deltas": [
+              39.28929569548927,
+              53.1491071707278
+            ]
+          }
+        },
+        "terminal-n8": {
+          "reward": {
+            "mean_delta": -0.19099023938179016,
+            "seed_deltas": [
+              -0.37108874320983887,
+              -0.010891735553741455
+            ]
+          },
+          "clip_alignment": {
+            "mean_delta": 0.005767460912466049,
+            "seed_deltas": [
+              0.00839938037097454,
+              0.0031355414539575577
+            ]
+          },
+          "seconds": {
+            "mean_delta": 53.01626725587994,
+            "seed_deltas": [
+              51.148428296728525,
+              54.88410621503135
+            ]
+          }
+        }
+      }
+    },
+    "terminal-n4": {
+      "images": 16,
+      "mean_reward": 6.184403151273727,
+      "mean_clip_alignment": 0.28138148318976164,
+      "mean_seconds": 9.212417636554164,
+      "mean_all_queries": 4.0,
+      "mean_score_forwards": 80.0,
+      "mean_vjp_calls": 0.0,
+      "reward_10th_percentile": 5.236103773117065,
+      "by_seed": {
+        "57011": {
+          "reward": 6.154706656932831,
+          "clip_alignment": 0.2799661997705698,
+          "seconds": 7.870592633611523
+        },
+        "57017": {
+          "reward": 6.214099645614624,
+          "clip_alignment": 0.2827967666089535,
+          "seconds": 10.554242639496806
+        }
+      },
+      "mean_within_prompt_embedding_distance": 0.10783747583627701,
+      "mean_weighted_reward_diagnostic": 6.273993487346565,
+      "mean_final_ess": 2.4892748215475344,
+      "mean_initial_ancestors": 4.0,
+      "comparisons": {
+        "mc8": {
+          "reward": {
+            "mean_delta": 0.153466135263443,
+            "seed_deltas": [
+              0.048292577266693115,
+              0.25863969326019287
+            ]
+          },
+          "clip_alignment": {
+            "mean_delta": -0.0018476657569408417,
+            "seed_deltas": [
+              -0.005322275683283806,
+              0.0016269441694021225
+            ]
+          },
+          "seconds": {
+            "mean_delta": -18.41650175927498,
+            "seed_deltas": [
+              -22.521291858516634,
+              -14.311711660033325
+            ]
+          }
+        },
+        "mc32": {
+          "reward": {
+            "mean_delta": -0.03197377920150757,
+            "seed_deltas": [
+              -0.07483929395675659,
+              0.010891735553741455
+            ]
+          },
+          "clip_alignment": {
+            "mean_delta": -0.0009553814306855202,
+            "seed_deltas": [
+              0.0012247785925865173,
+              -0.0031355414539575577
+            ]
+          },
+          "seconds": {
+            "mean_delta": -64.63570319238352,
+            "seed_deltas": [
+              -61.810587554005906,
+              -67.46081883076113
+            ]
+          }
+        },
+        "terminal-n8": {
+          "reward": {
+            "mean_delta": -0.22296401858329773,
+            "seed_deltas": [
+              -0.44592803716659546,
+              0.0
+            ]
+          },
+          "clip_alignment": {
+            "mean_delta": 0.004812079481780529,
+            "seed_deltas": [
+              0.009624158963561058,
+              0.0
+            ]
+          },
+          "seconds": {
+            "mean_delta": -11.619435936503578,
+            "seed_deltas": [
+              -10.66215925727738,
+              -12.576712615729775
+            ]
+          }
+        }
+      }
+    },
+    "terminal-n8": {
+      "images": 16,
+      "mean_reward": 6.407367169857025,
+      "mean_clip_alignment": 0.2765694037079811,
+      "mean_seconds": 20.831853573057742,
+      "mean_all_queries": 8.0,
+      "mean_score_forwards": 160.0,
+      "mean_vjp_calls": 0.0,
+      "reward_10th_percentile": 5.6019837856292725,
+      "by_seed": {
+        "57011": {
+          "reward": 6.600634694099426,
+          "clip_alignment": 0.27034204080700874,
+          "seconds": 18.532751890888903
+        },
+        "57017": {
+          "reward": 6.214099645614624,
+          "clip_alignment": 0.2827967666089535,
+          "seconds": 23.13095525522658
+        }
+      },
+      "mean_within_prompt_embedding_distance": 0.12286647409200668,
+      "mean_weighted_reward_diagnostic": 6.42622520327914,
+      "mean_final_ess": 3.9362563153751187,
+      "mean_initial_ancestors": 8.0,
+      "comparisons": {
+        "mc8": {
+          "reward": {
+            "mean_delta": 0.3764301538467407,
+            "seed_deltas": [
+              0.4942206144332886,
+              0.25863969326019287
+            ]
+          },
+          "clip_alignment": {
+            "mean_delta": -0.006659745238721371,
+            "seed_deltas": [
+              -0.014946434646844864,
+              0.0016269441694021225
+            ]
+          },
+          "seconds": {
+            "mean_delta": -6.797065822771401,
+            "seed_deltas": [
+              -11.859132601239253,
+              -1.7349990443035495
+            ]
+          }
+        },
+        "mc32": {
+          "reward": {
+            "mean_delta": 0.19099023938179016,
+            "seed_deltas": [
+              0.37108874320983887,
+              0.010891735553741455
+            ]
+          },
+          "clip_alignment": {
+            "mean_delta": -0.005767460912466049,
+            "seed_deltas": [
+              -0.00839938037097454,
+              -0.0031355414539575577
+            ]
+          },
+          "seconds": {
+            "mean_delta": -53.01626725587994,
+            "seed_deltas": [
+              -51.148428296728525,
+              -54.88410621503135
+            ]
+          }
+        }
+      }
+    },
+    "point-smc-n4": {
+      "images": 16,
+      "mean_reward": 6.420121937990189,
+      "mean_clip_alignment": 0.27529844734817743,
+      "mean_seconds": 9.342930210761551,
+      "mean_all_queries": 16.0,
+      "mean_score_forwards": 92.0,
+      "mean_vjp_calls": 0.0,
+      "reward_10th_percentile": 5.6199798583984375,
+      "by_seed": {
+        "57011": {
+          "reward": 6.246578335762024,
+          "clip_alignment": 0.2817543838173151,
+          "seconds": 6.4616092347569065
+        },
+        "57017": {
+          "reward": 6.593665540218353,
+          "clip_alignment": 0.26884251087903976,
+          "seconds": 12.224251186766196
+        }
+      },
+      "mean_within_prompt_embedding_distance": 0.10242703557014465,
+      "mean_weighted_reward_diagnostic": 6.3795798845873355,
+      "mean_final_ess": 3.248249409188868,
+      "mean_initial_ancestors": 2.5625,
+      "comparisons": {
+        "mc8": {
+          "reward": {
+            "mean_delta": 0.3891849219799042,
+            "seed_deltas": [
+              0.14016425609588623,
+              0.6382055878639221
+            ]
+          },
+          "clip_alignment": {
+            "mean_delta": -0.007930701598525047,
+            "seed_deltas": [
+              -0.0035340916365385056,
+              -0.012327311560511589
+            ]
+          },
+          "seconds": {
+            "mean_delta": -18.285989185067592,
+            "seed_deltas": [
+              -23.93027525737125,
+              -12.641703112763935
+            ]
+          }
+        },
+        "mc32": {
+          "reward": {
+            "mean_delta": 0.2037450075149536,
+            "seed_deltas": [
+              0.017032384872436523,
+              0.3904576301574707
+            ]
+          },
+          "clip_alignment": {
+            "mean_delta": -0.007038417272269726,
+            "seed_deltas": [
+              0.0030129626393318176,
+              -0.01708979718387127
+            ]
+          },
+          "seconds": {
+            "mean_delta": -64.50519061817613,
+            "seed_deltas": [
+              -63.21957095286052,
+              -65.79081028349174
+            ]
+          }
+        },
+        "terminal-n8": {
+          "reward": {
+            "mean_delta": 0.012754768133163452,
+            "seed_deltas": [
+              -0.35405635833740234,
+              0.37956589460372925
+            ]
+          },
+          "clip_alignment": {
+            "mean_delta": -0.0012709563598036766,
+            "seed_deltas": [
+              0.011412343010306358,
+              -0.013954255729913712
+            ]
+          },
+          "seconds": {
+            "mean_delta": -11.488923362296191,
+            "seed_deltas": [
+              -12.071142656131997,
+              -10.906704068460385
+            ]
+          }
+        }
+      }
+    },
+    "future2-smc-n4": {
+      "images": 16,
+      "mean_reward": 6.35862210392952,
+      "mean_clip_alignment": 0.2760520027950406,
+      "mean_seconds": 31.79552561462333,
+      "mean_all_queries": 28.0,
+      "mean_score_forwards": 224.0,
+      "mean_vjp_calls": 0.0,
+      "reward_10th_percentile": 5.399710655212402,
+      "by_seed": {
+        "57011": {
+          "reward": 6.2052512764930725,
+          "clip_alignment": 0.28287444449961185,
+          "seconds": 31.359389812263544
+        },
+        "57017": {
+          "reward": 6.511992931365967,
+          "clip_alignment": 0.26922956109046936,
+          "seconds": 32.231661416983115
+        }
+      },
+      "mean_within_prompt_embedding_distance": 0.10175159573554993,
+      "mean_weighted_reward_diagnostic": 6.346763348918552,
+      "mean_final_ess": 2.986926707997398,
+      "mean_initial_ancestors": 3.0625,
+      "comparisons": {
+        "mc8": {
+          "reward": {
+            "mean_delta": 0.32768508791923523,
+            "seed_deltas": [
+              0.09883719682693481,
+              0.5565329790115356
+            ]
+          },
+          "clip_alignment": {
+            "mean_delta": -0.007177146151661873,
+            "seed_deltas": [
+              -0.0024140309542417526,
+              -0.011940261349081993
+            ]
+          },
+          "seconds": {
+            "mean_delta": 4.166606218794186,
+            "seed_deltas": [
+              0.9675053201353876,
+              7.365707117452985
+            ]
+          }
+        },
+        "mc32": {
+          "reward": {
+            "mean_delta": 0.14224517345428467,
+            "seed_deltas": [
+              -0.024294674396514893,
+              0.30878502130508423
+            ]
+          },
+          "clip_alignment": {
+            "mean_delta": -0.006284861825406551,
+            "seed_deltas": [
+              0.0041330233216285706,
+              -0.016702746972441673
+            ]
+          },
+          "seconds": {
+            "mean_delta": -42.05259521431435,
+            "seed_deltas": [
+              -38.321790375353885,
+              -45.78340005327482
+            ]
+          }
+        },
+        "terminal-n8": {
+          "reward": {
+            "mean_delta": -0.04874506592750549,
+            "seed_deltas": [
+              -0.39538341760635376,
+              0.2978932857513428
+            ]
+          },
+          "clip_alignment": {
+            "mean_delta": -0.0005174009129405022,
+            "seed_deltas": [
+              0.012532403692603111,
+              -0.013567205518484116
+            ]
+          },
+          "seconds": {
+            "mean_delta": 10.963672041565587,
+            "seed_deltas": [
+              12.82663792137464,
+              9.100706161756534
+            ]
+          }
+        }
+      }
+    }
+  },
+  "total_queries": 7088,
+  "total_score_forwards": 9856,
+  "total_vjp_calls": 288
+}

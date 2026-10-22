@@ -1,0 +1,15 @@
+{
+  "experiment_id": "exp-057-image-discovery-terminal-n4-s57017",
+  "commit": "1b3c612e08c2dea56f5618005b7047e7ece74d2f",
+  "config": "/home/mlw0719/doit_uncertainty/configs/uncertainty_smc/exp-057-image-discovery-terminal-n4-s57017.json",
+  "machine": "orion",
+  "gpu": 0,
+  "pid": 2304008,
+  "path": "/home/mlw0719/doit_uncertainty_storage/runs/exp-057-image-discovery-terminal-n4-s57017",
+  "log_path": "/home/mlw0719/doit_uncertainty_storage/artifacts/exp-057-image-discovery-terminal-n4-s57017.log",
+  "status": "completed",
+  "timestamp": "2026-10-22T05:30:05.867038+00:00",
+  "started_at": "2026-10-22T05:28:24.596447+00:00",
+  "returncode": 0,
+  "finished_at": "2026-10-22T05:30:05.867064+00:00"
+}

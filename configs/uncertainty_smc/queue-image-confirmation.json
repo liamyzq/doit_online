@@ -1,0 +1,130 @@
+[
+  {
+    "id": "exp-058-image-confirm-mc32-s59011",
+    "config": "configs/uncertainty_smc/exp-058-image-confirm-mc32-s59011.json"
+  },
+  {
+    "id": "exp-058-image-confirm-mc32-s59017",
+    "config": "configs/uncertainty_smc/exp-058-image-confirm-mc32-s59017.json"
+  },
+  {
+    "id": "exp-058-image-confirm-mc32-s59023",
+    "config": "configs/uncertainty_smc/exp-058-image-confirm-mc32-s59023.json"
+  },
+  {
+    "id": "exp-058-image-confirm-mc32-s59029",
+    "config": "configs/uncertainty_smc/exp-058-image-confirm-mc32-s59029.json"
+  },
+  {
+    "id": "exp-058-image-confirm-mc32-s59039",
+    "config": "configs/uncertainty_smc/exp-058-image-confirm-mc32-s59039.json"
+  },
+  {
+    "id": "exp-058-image-confirm-mc32-s59051",
+    "config": "configs/uncertainty_smc/exp-058-image-confirm-mc32-s59051.json"
+  },
+  {
+    "id": "exp-058-image-confirm-mc32-s59057",
+    "config": "configs/uncertainty_smc/exp-058-image-confirm-mc32-s59057.json"
+  },
+  {
+    "id": "exp-058-image-confirm-mc32-s59063",
+    "config": "configs/uncertainty_smc/exp-058-image-confirm-mc32-s59063.json"
+  },
+  {
+    "id": "exp-058-image-confirm-mc8-s59011",
+    "config": "configs/uncertainty_smc/exp-058-image-confirm-mc8-s59011.json"
+  },
+  {
+    "id": "exp-058-image-confirm-mc8-s59017",
+    "config": "configs/uncertainty_smc/exp-058-image-confirm-mc8-s59017.json"
+  },
+  {
+    "id": "exp-058-image-confirm-mc8-s59023",
+    "config": "configs/uncertainty_smc/exp-058-image-confirm-mc8-s59023.json"
+  },
+  {
+    "id": "exp-058-image-confirm-mc8-s59029",
+    "config": "configs/uncertainty_smc/exp-058-image-confirm-mc8-s59029.json"
+  },
+  {
+    "id": "exp-058-image-confirm-mc8-s59039",
+    "config": "configs/uncertainty_smc/exp-058-image-confirm-mc8-s59039.json"
+  },
+  {
+    "id": "exp-058-image-confirm-mc8-s59051",
+    "config": "configs/uncertainty_smc/exp-058-image-confirm-mc8-s59051.json"
+  },
+  {
+    "id": "exp-058-image-confirm-mc8-s59057",
+    "config": "configs/uncertainty_smc/exp-058-image-confirm-mc8-s59057.json"
+  },
+  {
+    "id": "exp-058-image-confirm-mc8-s59063",
+    "config": "configs/uncertainty_smc/exp-058-image-confirm-mc8-s59063.json"
+  },
+  {
+    "id": "exp-058-image-confirm-terminal-n4-s59011",
+    "config": "configs/uncertainty_smc/exp-058-image-confirm-terminal-n4-s59011.json"
+  },
+  {
+    "id": "exp-058-image-confirm-terminal-n4-s59017",
+    "config": "configs/uncertainty_smc/exp-058-image-confirm-terminal-n4-s59017.json"
+  },
+  {
+    "id": "exp-058-image-confirm-terminal-n4-s59023",
+    "config": "configs/uncertainty_smc/exp-058-image-confirm-terminal-n4-s59023.json"
+  },
+  {
+    "id": "exp-058-image-confirm-terminal-n4-s59029",
+    "config": "configs/uncertainty_smc/exp-058-image-confirm-terminal-n4-s59029.json"
+  },
+  {
+    "id": "exp-058-image-confirm-terminal-n4-s59039",
+    "config": "configs/uncertainty_smc/exp-058-image-confirm-terminal-n4-s59039.json"
+  },
+  {
+    "id": "exp-058-image-confirm-terminal-n4-s59051",
+    "config": "configs/uncertainty_smc/exp-058-image-confirm-terminal-n4-s59051.json"
+  },
+  {
+    "id": "exp-058-image-confirm-terminal-n4-s59057",
+    "config": "configs/uncertainty_smc/exp-058-image-confirm-terminal-n4-s59057.json"
+  },
+  {
+    "id": "exp-058-image-confirm-terminal-n4-s59063",
+    "config": "configs/uncertainty_smc/exp-058-image-confirm-terminal-n4-s59063.json"
+  },
+  {
+    "id": "exp-058-image-confirm-base-s59011",
+    "config": "configs/uncertainty_smc/exp-058-image-confirm-base-s59011.json"
+  },
+  {
+    "id": "exp-058-image-confirm-base-s59017",
+    "config": "configs/uncertainty_smc/exp-058-image-confirm-base-s59017.json"
+  },
+  {
+    "id": "exp-058-image-confirm-base-s59023",
+    "config": "configs/uncertainty_smc/exp-058-image-confirm-base-s59023.json"
+  },
+  {
+    "id": "exp-058-image-confirm-base-s59029",
+    "config": "configs/uncertainty_smc/exp-058-image-confirm-base-s59029.json"
+  },
+  {
+    "id": "exp-058-image-confirm-base-s59039",
+    "config": "configs/uncertainty_smc/exp-058-image-confirm-base-s59039.json"
+  },
+  {
+    "id": "exp-058-image-confirm-base-s59051",
+    "config": "configs/uncertainty_smc/exp-058-image-confirm-base-s59051.json"
+  },
+  {
+    "id": "exp-058-image-confirm-base-s59057",
+    "config": "configs/uncertainty_smc/exp-058-image-confirm-base-s59057.json"
+  },
+  {
+    "id": "exp-058-image-confirm-base-s59063",
+    "config": "configs/uncertainty_smc/exp-058-image-confirm-base-s59063.json"
+  }
+]

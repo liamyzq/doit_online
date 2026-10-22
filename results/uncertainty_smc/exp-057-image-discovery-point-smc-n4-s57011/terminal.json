@@ -1,0 +1,15 @@
+{
+  "experiment_id": "exp-057-image-discovery-point-smc-n4-s57011",
+  "commit": "1b3c612e08c2dea56f5618005b7047e7ece74d2f",
+  "config": "/home/mlw0719/doit_uncertainty/configs/uncertainty_smc/exp-057-image-discovery-point-smc-n4-s57011.json",
+  "machine": "orion",
+  "gpu": 1,
+  "pid": 2265030,
+  "path": "/home/mlw0719/doit_uncertainty_storage/runs/exp-057-image-discovery-point-smc-n4-s57011",
+  "log_path": "/home/mlw0719/doit_uncertainty_storage/artifacts/exp-057-image-discovery-point-smc-n4-s57011.log",
+  "status": "completed",
+  "timestamp": "2026-10-22T05:25:37.142640+00:00",
+  "started_at": "2026-10-22T05:24:26.214880+00:00",
+  "returncode": 0,
+  "finished_at": "2026-10-22T05:25:37.142669+00:00"
+}

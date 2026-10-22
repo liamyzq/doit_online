@@ -1,0 +1,57 @@
+{
+  "commit": "1b3c612e08c2dea56f5618005b7047e7ece74d2f",
+  "config": "/home/mlw0719/doit_uncertainty/configs/uncertainty_smc/exp-057-image-discovery-terminal-n4-s57017.json",
+  "experiment_id": "exp-057-image-discovery-terminal-n4-s57017",
+  "pid": 2304008,
+  "cuda_visible_devices": "0",
+  "started_at": 1792646906.22303,
+  "status": "completed",
+  "environment": {
+    "python": "3.12.9",
+    "torch": "2.6.0+cu124",
+    "cuda": "12.4",
+    "gpu": "NVIDIA RTX A6000",
+    "packages": {
+      "numpy": "1.26.4",
+      "diffusers": "0.32.2",
+      "transformers": "4.49.0",
+      "torchvision": "0.21.0",
+      "huggingface_hub": "0.36.0",
+      "safetensors": "0.8.0",
+      "h5py": "3.14.0"
+    }
+  },
+  "models": {
+    "model": "sd-legacy/stable-diffusion-v1-5",
+    "model_revision": "451f4fe16113bff5a5d2269ed5ad43b0592e9a14",
+    "clip_model": "openai/clip-vit-large-patch14",
+    "clip_revision": "32bd64288804d66eefd0ccbe215aa642df71cc41",
+    "aesthetic_head": "/home/mlw0719/doit_correction_storage/models/sa_0_4_vit_l_14_linear.pth",
+    "dtype": "torch.float16",
+    "scheduler": "EulerAncestralDiscreteScheduler",
+    "sigmas": [
+      14.614646911621094,
+      10.74685001373291,
+      8.081536293029785,
+      6.204951286315918,
+      4.85566520690918,
+      3.865384578704834,
+      3.1237690448760986,
+      2.5571682453155518,
+      2.115661859512329,
+      1.7648253440856934,
+      1.4805827140808105,
+      1.245815396308899,
+      1.048142910003662,
+      0.8784299492835999,
+      0.7297195196151733,
+      0.5964350700378418,
+      0.4735862612724304,
+      0.3555470407009125,
+      0.23216819763183594,
+      0.029167532920837402,
+      0.0
+    ]
+  },
+  "elapsed_seconds": 96.8869116306305
+}

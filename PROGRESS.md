@@ -51,6 +51,17 @@ critic study. Terminal resampling is an established baseline, not a novelty
 claim. Image reward gains require fresh seeds, alignment/diversity measures,
 measured cost and visual quality review.
 
+Exp-057 completed 112 images. Only terminal importance resampling N4 passes
+the locked discovery criteria: reward 6.18440 versus MC8 6.03094, alignment
+0.281381 versus 0.283229, and mean time 9.21s versus 27.63s. All 112 outputs
+were reviewed; N4 has no distinct new severe quality failure and its measured
+within-prompt embedding distance is not reduced. N8 and both sparse-SMC
+combinations gain reward but exceed the 0.005 alignment-loss gate; future2
+also exceeds MC8 time. Close those settings, preserving the positive reward
+observations. Exp-058 confirms only N4/tau0.3 against base, MC8 and selected
+MC32 on eight new seeds (256 images). This is a known importance-resampling
+baseline, not a novelty claim. No confirmed improvement exists yet.
+
 Orion connectivity has recovered. Read-only inspection found no active project
 queue or run, and the old checkout remains clean at `d6728de`. Exp-039 actually
 failed with a nonfinite Gaussian moment ratio after 31,744 saved rows; its total
