@@ -100,8 +100,9 @@ Gaussian target: N16 error 0.04666 versus mean-only 0.00519.
 
 There is a distinct value-prediction signal. At checkpoint 5, empirical versus
 mean-only centered log-value MSE is 0.11605 versus 3.83134 (Gaussian) and
-0.002835 versus 0.039963 (mixture). Direct value regression is stronger at the
-early Gaussian checkpoint; empirical transport is stronger at later checkpoints.
+0.002835 versus 0.039963 (mixture). Direct value regression is stronger at
+Gaussian indices 5 and 3; empirical transport is stronger at Gaussian index 1
+and mixture indices 3 and 1.
 Even the exact-value sparse-N8 diagnostic loses to point-N8 in these finite
 populations, so accurate values alone do not solve the endpoint problem.
 This is evidence for investigating the estimator, not for a sampling success.
@@ -205,3 +206,37 @@ Advance only if second-moment UC improves CDF MSE by at least 20% over its
 first-moment counterpart and mean/point controls, with a favorable cost
 comparison and a result not explained solely by changing the ESS threshold.
 Any success requires separately locked fresh-seed confirmation.
+
+Exp-062 completed all 144 conditions at `2437de2`; independent integration and
+root checks passed with maximum discrepancy 8.88e-16. Online sampling costs are
+8,257,536 transitions and 2,801,664 rewards. The reused calibration originally
+cost 149,504 transitions and 49,920 rewards across the two problems.
+
+Second-moment allocation does not meet the advance criterion. At N16 with
+ESS threshold 0.5, empirical first/second-moment CDF MSE is 0.005098/0.006330
+on the Gaussian problem and 0.015349/0.016360 on the mixture. At threshold 1,
+the values are 0.004134/0.004203 and 0.013433/0.012609 respectively. The favorable
+mixture difference is only 6.1%. Exact-moment diagnostics support the same
+conclusion that this change does not solve the finite-particle endpoint issue.
+
+The resampling ablation does reveal a limited positive signal: Gaussian N16
+with first-moment empirical UC and threshold 1 has 21.4% lower error than point
+(0.004134 versus 0.005258). Direct value regression reaches 0.004097, however,
+and the mixture gain over point is only 3.4%. This does not establish a distinct
+UC benefit, a cost-controlled improvement or a transferable new method.
+
+The completed development pass closes both implemented candidates at these
+budgets. It produced 220 toy conditions, a real-critic smoke and 12 real-value
+conditions; no condition or unfavorable seed was removed. The image and
+simulator expansion gates were not met, so those expensive stages were not
+launched. Terminal N4 remains the accepted practical image baseline.
+
+The real-value decomposition points to the unresolved mean-prediction problem:
+on HalfCheetah row18, using the saved reference reward mean alone gives centered
+log-value errors 0.244/0.369/0.053 at indices 5/9/12, whereas the calibrated
+mean's errors against that reference mean are 12.317/5.179/2.823. Late predicted
+reward variances are also much larger than reference variances. This diagnostic
+shares the reference futures and is not an independent method result. A future
+candidate would need reliable local mean/uncertainty prediction or an improved
+proposal, with the existing learned-value control retained. No follow-up is
+queued and no general impossibility or novelty claim is made.

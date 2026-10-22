@@ -1,0 +1,1377 @@
+{
+  "decision": "Close conditional second-moment allocation at this budget. No setting meets the 20% gain over both first-moment and point/mean controls; stronger resampling explains the principal improvement. First-moment empirical UC at Gaussian N16/ESS1 is matched by direct learned-value regression.",
+  "comparisons": [
+    {
+      "problem": "gaussian",
+      "method": "terminal-n8",
+      "cdf_mse": 0.023968239363904135,
+      "per_seed_cdf_mse": {
+        "62011": 0.023474704218742135,
+        "62017": 0.024461774509066135
+      },
+      "resamplings_per_population": 0.0,
+      "online_costs_per_population": {
+        "transition_samples": 64.0,
+        "reward_evaluations": 8.0
+      },
+      "shared_calibration_costs": {}
+    },
+    {
+      "problem": "gaussian",
+      "method": "terminal-n16",
+      "cdf_mse": 0.010137719691695647,
+      "per_seed_cdf_mse": {
+        "62011": 0.01036867033843118,
+        "62017": 0.009906769044960113
+      },
+      "resamplings_per_population": 0.0,
+      "online_costs_per_population": {
+        "transition_samples": 128.0,
+        "reward_evaluations": 16.0
+      },
+      "shared_calibration_costs": {}
+    },
+    {
+      "problem": "gaussian",
+      "method": "terminal-n32",
+      "cdf_mse": 0.0047632969018370185,
+      "per_seed_cdf_mse": {
+        "62011": 0.004818759785234865,
+        "62017": 0.004707834018439172
+      },
+      "resamplings_per_population": 0.0,
+      "online_costs_per_population": {
+        "transition_samples": 256.0,
+        "reward_evaluations": 32.0
+      },
+      "shared_calibration_costs": {}
+    },
+    {
+      "problem": "gaussian",
+      "method": "terminal-n64",
+      "cdf_mse": 0.0021410314757074464,
+      "per_seed_cdf_mse": {
+        "62011": 0.002164500575222009,
+        "62017": 0.002117562376192884
+      },
+      "resamplings_per_population": 0.0,
+      "online_costs_per_population": {
+        "transition_samples": 512.0,
+        "reward_evaluations": 64.0
+      },
+      "shared_calibration_costs": {}
+    },
+    {
+      "problem": "gaussian",
+      "method": "point-n8-ess0.5",
+      "cdf_mse": 0.009828969200158013,
+      "per_seed_cdf_mse": {
+        "62011": 0.0100451440351462,
+        "62017": 0.009612794365169826
+      },
+      "resamplings_per_population": 1.896484375,
+      "online_costs_per_population": {
+        "transition_samples": 64.0,
+        "reward_evaluations": 32.0,
+        "value_evaluations": 24.0
+      },
+      "shared_calibration_costs": {}
+    },
+    {
+      "problem": "gaussian",
+      "method": "empirical-moment1-n8-ess0.5",
+      "cdf_mse": 0.013118310390901793,
+      "per_seed_cdf_mse": {
+        "62011": 0.01284911492710974,
+        "62017": 0.013387505854693846
+      },
+      "resamplings_per_population": 1.1318359375,
+      "online_costs_per_population": {
+        "transition_samples": 64.0,
+        "reward_evaluations": 32.0,
+        "value_evaluations": 24.0
+      },
+      "shared_calibration_costs": {
+        "transition_samples": 74752,
+        "reward_evaluations": 24960
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "empirical-moment2-n8-ess0.5",
+      "cdf_mse": 0.016112611535018494,
+      "per_seed_cdf_mse": {
+        "62011": 0.015586451965744551,
+        "62017": 0.016638771104292432
+      },
+      "resamplings_per_population": 0.9130859375,
+      "online_costs_per_population": {
+        "transition_samples": 64.0,
+        "reward_evaluations": 32.0,
+        "value_evaluations": 24.0
+      },
+      "shared_calibration_costs": {
+        "transition_samples": 74752,
+        "reward_evaluations": 24960
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "direct-moment1-n8-ess0.5",
+      "cdf_mse": 0.013337425213817457,
+      "per_seed_cdf_mse": {
+        "62011": 0.012948734583847172,
+        "62017": 0.013726115843787742
+      },
+      "resamplings_per_population": 1.0869140625,
+      "online_costs_per_population": {
+        "transition_samples": 64.0,
+        "reward_evaluations": 32.0,
+        "value_evaluations": 24.0
+      },
+      "shared_calibration_costs": {
+        "transition_samples": 74752,
+        "reward_evaluations": 24960
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "direct-moment2-n8-ess0.5",
+      "cdf_mse": 0.015731305593874683,
+      "per_seed_cdf_mse": {
+        "62011": 0.01570789946116148,
+        "62017": 0.015754711726587885
+      },
+      "resamplings_per_population": 0.912109375,
+      "online_costs_per_population": {
+        "transition_samples": 64.0,
+        "reward_evaluations": 32.0,
+        "value_evaluations": 24.0
+      },
+      "shared_calibration_costs": {
+        "transition_samples": 74752,
+        "reward_evaluations": 24960
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "mixture-moment1-n8-ess0.5",
+      "cdf_mse": 0.012881149787512154,
+      "per_seed_cdf_mse": {
+        "62011": 0.012645236846741261,
+        "62017": 0.013117062728283045
+      },
+      "resamplings_per_population": 1.1064453125,
+      "online_costs_per_population": {
+        "transition_samples": 64.0,
+        "reward_evaluations": 8.0,
+        "value_evaluations": 24.0,
+        "analytic_component_integrals": 24.0
+      },
+      "shared_calibration_costs": {}
+    },
+    {
+      "problem": "gaussian",
+      "method": "mixture-moment2-n8-ess0.5",
+      "cdf_mse": 0.015420189278141821,
+      "per_seed_cdf_mse": {
+        "62011": 0.014911155964931606,
+        "62017": 0.015929222591352037
+      },
+      "resamplings_per_population": 0.9208984375,
+      "online_costs_per_population": {
+        "transition_samples": 64.0,
+        "reward_evaluations": 8.0,
+        "value_evaluations": 24.0,
+        "analytic_component_integrals": 24.0
+      },
+      "shared_calibration_costs": {}
+    },
+    {
+      "problem": "gaussian",
+      "method": "point-n8-ess1",
+      "cdf_mse": 0.009186616863490525,
+      "per_seed_cdf_mse": {
+        "62011": 0.008842743449666415,
+        "62017": 0.009530490277314636
+      },
+      "resamplings_per_population": 3.0,
+      "online_costs_per_population": {
+        "transition_samples": 64.0,
+        "reward_evaluations": 32.0,
+        "value_evaluations": 24.0
+      },
+      "shared_calibration_costs": {}
+    },
+    {
+      "problem": "gaussian",
+      "method": "empirical-moment1-n8-ess1",
+      "cdf_mse": 0.009070540626190214,
+      "per_seed_cdf_mse": {
+        "62011": 0.009065887838631166,
+        "62017": 0.009075193413749263
+      },
+      "resamplings_per_population": 3.0,
+      "online_costs_per_population": {
+        "transition_samples": 64.0,
+        "reward_evaluations": 32.0,
+        "value_evaluations": 24.0
+      },
+      "shared_calibration_costs": {
+        "transition_samples": 74752,
+        "reward_evaluations": 24960
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "empirical-moment2-n8-ess1",
+      "cdf_mse": 0.010343312258350591,
+      "per_seed_cdf_mse": {
+        "62011": 0.010033861986485966,
+        "62017": 0.010652762530215217
+      },
+      "resamplings_per_population": 3.0,
+      "online_costs_per_population": {
+        "transition_samples": 64.0,
+        "reward_evaluations": 32.0,
+        "value_evaluations": 24.0
+      },
+      "shared_calibration_costs": {
+        "transition_samples": 74752,
+        "reward_evaluations": 24960
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "direct-moment1-n8-ess1",
+      "cdf_mse": 0.00916939212189519,
+      "per_seed_cdf_mse": {
+        "62011": 0.009144349590946187,
+        "62017": 0.009194434652844191
+      },
+      "resamplings_per_population": 3.0,
+      "online_costs_per_population": {
+        "transition_samples": 64.0,
+        "reward_evaluations": 32.0,
+        "value_evaluations": 24.0
+      },
+      "shared_calibration_costs": {
+        "transition_samples": 74752,
+        "reward_evaluations": 24960
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "direct-moment2-n8-ess1",
+      "cdf_mse": 0.010262235096904836,
+      "per_seed_cdf_mse": {
+        "62011": 0.009933106071762288,
+        "62017": 0.010591364122047385
+      },
+      "resamplings_per_population": 3.0,
+      "online_costs_per_population": {
+        "transition_samples": 64.0,
+        "reward_evaluations": 32.0,
+        "value_evaluations": 24.0
+      },
+      "shared_calibration_costs": {
+        "transition_samples": 74752,
+        "reward_evaluations": 24960
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "mixture-moment1-n8-ess1",
+      "cdf_mse": 0.008998224756333016,
+      "per_seed_cdf_mse": {
+        "62011": 0.008962774929284921,
+        "62017": 0.00903367458338111
+      },
+      "resamplings_per_population": 3.0,
+      "online_costs_per_population": {
+        "transition_samples": 64.0,
+        "reward_evaluations": 8.0,
+        "value_evaluations": 24.0,
+        "analytic_component_integrals": 24.0
+      },
+      "shared_calibration_costs": {}
+    },
+    {
+      "problem": "gaussian",
+      "method": "mixture-moment2-n8-ess1",
+      "cdf_mse": 0.009894666222105851,
+      "per_seed_cdf_mse": {
+        "62011": 0.009567145548078432,
+        "62017": 0.01022218689613327
+      },
+      "resamplings_per_population": 3.0,
+      "online_costs_per_population": {
+        "transition_samples": 64.0,
+        "reward_evaluations": 8.0,
+        "value_evaluations": 24.0,
+        "analytic_component_integrals": 24.0
+      },
+      "shared_calibration_costs": {}
+    },
+    {
+      "problem": "gaussian",
+      "method": "point-n16-ess0.5",
+      "cdf_mse": 0.00528161397718592,
+      "per_seed_cdf_mse": {
+        "62011": 0.005270360635228961,
+        "62017": 0.0052928673191428785
+      },
+      "resamplings_per_population": 2.201171875,
+      "online_costs_per_population": {
+        "transition_samples": 128.0,
+        "reward_evaluations": 64.0,
+        "value_evaluations": 48.0
+      },
+      "shared_calibration_costs": {}
+    },
+    {
+      "problem": "gaussian",
+      "method": "empirical-moment1-n16-ess0.5",
+      "cdf_mse": 0.005098455728177864,
+      "per_seed_cdf_mse": {
+        "62011": 0.0048637268874270395,
+        "62017": 0.005333184568928689
+      },
+      "resamplings_per_population": 1.263671875,
+      "online_costs_per_population": {
+        "transition_samples": 128.0,
+        "reward_evaluations": 64.0,
+        "value_evaluations": 48.0
+      },
+      "shared_calibration_costs": {
+        "transition_samples": 74752,
+        "reward_evaluations": 24960
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "empirical-moment2-n16-ess0.5",
+      "cdf_mse": 0.00633047865870013,
+      "per_seed_cdf_mse": {
+        "62011": 0.006511613156910985,
+        "62017": 0.006149344160489274
+      },
+      "resamplings_per_population": 1.00390625,
+      "online_costs_per_population": {
+        "transition_samples": 128.0,
+        "reward_evaluations": 64.0,
+        "value_evaluations": 48.0
+      },
+      "shared_calibration_costs": {
+        "transition_samples": 74752,
+        "reward_evaluations": 24960
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "direct-moment1-n16-ess0.5",
+      "cdf_mse": 0.00485444743819493,
+      "per_seed_cdf_mse": {
+        "62011": 0.004929395434305399,
+        "62017": 0.004779499442084459
+      },
+      "resamplings_per_population": 1.185546875,
+      "online_costs_per_population": {
+        "transition_samples": 128.0,
+        "reward_evaluations": 64.0,
+        "value_evaluations": 48.0
+      },
+      "shared_calibration_costs": {
+        "transition_samples": 74752,
+        "reward_evaluations": 24960
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "direct-moment2-n16-ess0.5",
+      "cdf_mse": 0.006240307774530046,
+      "per_seed_cdf_mse": {
+        "62011": 0.006276086866531605,
+        "62017": 0.006204528682528486
+      },
+      "resamplings_per_population": 1.001953125,
+      "online_costs_per_population": {
+        "transition_samples": 128.0,
+        "reward_evaluations": 64.0,
+        "value_evaluations": 48.0
+      },
+      "shared_calibration_costs": {
+        "transition_samples": 74752,
+        "reward_evaluations": 24960
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "mixture-moment1-n16-ess0.5",
+      "cdf_mse": 0.004933515683395758,
+      "per_seed_cdf_mse": {
+        "62011": 0.004931142544567791,
+        "62017": 0.004935888822223723
+      },
+      "resamplings_per_population": 1.212890625,
+      "online_costs_per_population": {
+        "transition_samples": 128.0,
+        "reward_evaluations": 16.0,
+        "value_evaluations": 48.0,
+        "analytic_component_integrals": 48.0
+      },
+      "shared_calibration_costs": {}
+    },
+    {
+      "problem": "gaussian",
+      "method": "mixture-moment2-n16-ess0.5",
+      "cdf_mse": 0.005985983305099518,
+      "per_seed_cdf_mse": {
+        "62011": 0.006121718541528494,
+        "62017": 0.005850248068670542
+      },
+      "resamplings_per_population": 1.0166015625,
+      "online_costs_per_population": {
+        "transition_samples": 128.0,
+        "reward_evaluations": 16.0,
+        "value_evaluations": 48.0,
+        "analytic_component_integrals": 48.0
+      },
+      "shared_calibration_costs": {}
+    },
+    {
+      "problem": "gaussian",
+      "method": "point-n16-ess1",
+      "cdf_mse": 0.005257726637534221,
+      "per_seed_cdf_mse": {
+        "62011": 0.005241001773026388,
+        "62017": 0.005274451502042053
+      },
+      "resamplings_per_population": 3.0,
+      "online_costs_per_population": {
+        "transition_samples": 128.0,
+        "reward_evaluations": 64.0,
+        "value_evaluations": 48.0
+      },
+      "shared_calibration_costs": {}
+    },
+    {
+      "problem": "gaussian",
+      "method": "empirical-moment1-n16-ess1",
+      "cdf_mse": 0.0041338199360167836,
+      "per_seed_cdf_mse": {
+        "62011": 0.004058024972730239,
+        "62017": 0.004209614899303328
+      },
+      "resamplings_per_population": 3.0,
+      "online_costs_per_population": {
+        "transition_samples": 128.0,
+        "reward_evaluations": 64.0,
+        "value_evaluations": 48.0
+      },
+      "shared_calibration_costs": {
+        "transition_samples": 74752,
+        "reward_evaluations": 24960
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "empirical-moment2-n16-ess1",
+      "cdf_mse": 0.004202869017408661,
+      "per_seed_cdf_mse": {
+        "62011": 0.004304858536594641,
+        "62017": 0.004100879498222682
+      },
+      "resamplings_per_population": 3.0,
+      "online_costs_per_population": {
+        "transition_samples": 128.0,
+        "reward_evaluations": 64.0,
+        "value_evaluations": 48.0
+      },
+      "shared_calibration_costs": {
+        "transition_samples": 74752,
+        "reward_evaluations": 24960
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "direct-moment1-n16-ess1",
+      "cdf_mse": 0.004096603261106855,
+      "per_seed_cdf_mse": {
+        "62011": 0.004330007081263167,
+        "62017": 0.0038631994409505433
+      },
+      "resamplings_per_population": 3.0,
+      "online_costs_per_population": {
+        "transition_samples": 128.0,
+        "reward_evaluations": 64.0,
+        "value_evaluations": 48.0
+      },
+      "shared_calibration_costs": {
+        "transition_samples": 74752,
+        "reward_evaluations": 24960
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "direct-moment2-n16-ess1",
+      "cdf_mse": 0.004100294383726271,
+      "per_seed_cdf_mse": {
+        "62011": 0.00415237184199601,
+        "62017": 0.004048216925456532
+      },
+      "resamplings_per_population": 3.0,
+      "online_costs_per_population": {
+        "transition_samples": 128.0,
+        "reward_evaluations": 64.0,
+        "value_evaluations": 48.0
+      },
+      "shared_calibration_costs": {
+        "transition_samples": 74752,
+        "reward_evaluations": 24960
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "mixture-moment1-n16-ess1",
+      "cdf_mse": 0.00399256631091889,
+      "per_seed_cdf_mse": {
+        "62011": 0.004159583333504562,
+        "62017": 0.0038255492883332177
+      },
+      "resamplings_per_population": 3.0,
+      "online_costs_per_population": {
+        "transition_samples": 128.0,
+        "reward_evaluations": 16.0,
+        "value_evaluations": 48.0,
+        "analytic_component_integrals": 48.0
+      },
+      "shared_calibration_costs": {}
+    },
+    {
+      "problem": "gaussian",
+      "method": "mixture-moment2-n16-ess1",
+      "cdf_mse": 0.004117596046523549,
+      "per_seed_cdf_mse": {
+        "62011": 0.004188452292942766,
+        "62017": 0.004046739800104332
+      },
+      "resamplings_per_population": 3.0,
+      "online_costs_per_population": {
+        "transition_samples": 128.0,
+        "reward_evaluations": 16.0,
+        "value_evaluations": 48.0,
+        "analytic_component_integrals": 48.0
+      },
+      "shared_calibration_costs": {}
+    },
+    {
+      "problem": "gaussian",
+      "method": "mean-n8-ess0.5",
+      "cdf_mse": 0.009469310865491264,
+      "per_seed_cdf_mse": {
+        "62011": 0.009686870556119269,
+        "62017": 0.009251751174863258
+      },
+      "resamplings_per_population": 1.8779296875,
+      "online_costs_per_population": {
+        "transition_samples": 64.0,
+        "reward_evaluations": 32.0,
+        "value_evaluations": 24.0
+      },
+      "shared_calibration_costs": {
+        "transition_samples": 74752,
+        "reward_evaluations": 24960
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "mean-n8-ess1",
+      "cdf_mse": 0.008895301430682385,
+      "per_seed_cdf_mse": {
+        "62011": 0.00882502399850417,
+        "62017": 0.0089655788628606
+      },
+      "resamplings_per_population": 3.0,
+      "online_costs_per_population": {
+        "transition_samples": 64.0,
+        "reward_evaluations": 32.0,
+        "value_evaluations": 24.0
+      },
+      "shared_calibration_costs": {
+        "transition_samples": 74752,
+        "reward_evaluations": 24960
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "mean-n16-ess0.5",
+      "cdf_mse": 0.0053245120472614664,
+      "per_seed_cdf_mse": {
+        "62011": 0.0053960565366758025,
+        "62017": 0.00525296755784713
+      },
+      "resamplings_per_population": 2.1904296875,
+      "online_costs_per_population": {
+        "transition_samples": 128.0,
+        "reward_evaluations": 64.0,
+        "value_evaluations": 48.0
+      },
+      "shared_calibration_costs": {
+        "transition_samples": 74752,
+        "reward_evaluations": 24960
+      }
+    },
+    {
+      "problem": "gaussian",
+      "method": "mean-n16-ess1",
+      "cdf_mse": 0.00516691467663364,
+      "per_seed_cdf_mse": {
+        "62011": 0.004970684490713172,
+        "62017": 0.005363144862554108
+      },
+      "resamplings_per_population": 3.0,
+      "online_costs_per_population": {
+        "transition_samples": 128.0,
+        "reward_evaluations": 64.0,
+        "value_evaluations": 48.0
+      },
+      "shared_calibration_costs": {
+        "transition_samples": 74752,
+        "reward_evaluations": 24960
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "terminal-n8",
+      "cdf_mse": 0.05170877363414579,
+      "per_seed_cdf_mse": {
+        "62011": 0.0592128100060153,
+        "62017": 0.04420473726227629
+      },
+      "resamplings_per_population": 0.0,
+      "online_costs_per_population": {
+        "transition_samples": 64.0,
+        "reward_evaluations": 8.0
+      },
+      "shared_calibration_costs": {}
+    },
+    {
+      "problem": "mixture",
+      "method": "terminal-n16",
+      "cdf_mse": 0.02034323650866162,
+      "per_seed_cdf_mse": {
+        "62011": 0.020926590310337778,
+        "62017": 0.019759882706985463
+      },
+      "resamplings_per_population": 0.0,
+      "online_costs_per_population": {
+        "transition_samples": 128.0,
+        "reward_evaluations": 16.0
+      },
+      "shared_calibration_costs": {}
+    },
+    {
+      "problem": "mixture",
+      "method": "terminal-n32",
+      "cdf_mse": 0.007630944624999519,
+      "per_seed_cdf_mse": {
+        "62011": 0.007407450843233162,
+        "62017": 0.007854438406765876
+      },
+      "resamplings_per_population": 0.0,
+      "online_costs_per_population": {
+        "transition_samples": 256.0,
+        "reward_evaluations": 32.0
+      },
+      "shared_calibration_costs": {}
+    },
+    {
+      "problem": "mixture",
+      "method": "terminal-n64",
+      "cdf_mse": 0.0033748377890161045,
+      "per_seed_cdf_mse": {
+        "62011": 0.00346605984163466,
+        "62017": 0.003283615736397549
+      },
+      "resamplings_per_population": 0.0,
+      "online_costs_per_population": {
+        "transition_samples": 512.0,
+        "reward_evaluations": 64.0
+      },
+      "shared_calibration_costs": {}
+    },
+    {
+      "problem": "mixture",
+      "method": "point-n8-ess0.5",
+      "cdf_mse": 0.037165569292665096,
+      "per_seed_cdf_mse": {
+        "62011": 0.04150063910722905,
+        "62017": 0.03283049947810115
+      },
+      "resamplings_per_population": 1.02734375,
+      "online_costs_per_population": {
+        "transition_samples": 64.0,
+        "reward_evaluations": 32.0,
+        "value_evaluations": 24.0
+      },
+      "shared_calibration_costs": {}
+    },
+    {
+      "problem": "mixture",
+      "method": "empirical-moment1-n8-ess0.5",
+      "cdf_mse": 0.04032571905823049,
+      "per_seed_cdf_mse": {
+        "62011": 0.046400714980881566,
+        "62017": 0.03425072313557942
+      },
+      "resamplings_per_population": 0.9150390625,
+      "online_costs_per_population": {
+        "transition_samples": 64.0,
+        "reward_evaluations": 32.0,
+        "value_evaluations": 24.0
+      },
+      "shared_calibration_costs": {
+        "transition_samples": 74752,
+        "reward_evaluations": 24960
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "empirical-moment2-n8-ess0.5",
+      "cdf_mse": 0.04290361754131429,
+      "per_seed_cdf_mse": {
+        "62011": 0.0489648975189602,
+        "62017": 0.03684233756366838
+      },
+      "resamplings_per_population": 0.8388671875,
+      "online_costs_per_population": {
+        "transition_samples": 64.0,
+        "reward_evaluations": 32.0,
+        "value_evaluations": 24.0
+      },
+      "shared_calibration_costs": {
+        "transition_samples": 74752,
+        "reward_evaluations": 24960
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "direct-moment1-n8-ess0.5",
+      "cdf_mse": 0.03984957721344158,
+      "per_seed_cdf_mse": {
+        "62011": 0.04594225944060888,
+        "62017": 0.03375689498627429
+      },
+      "resamplings_per_population": 0.900390625,
+      "online_costs_per_population": {
+        "transition_samples": 64.0,
+        "reward_evaluations": 32.0,
+        "value_evaluations": 24.0
+      },
+      "shared_calibration_costs": {
+        "transition_samples": 74752,
+        "reward_evaluations": 24960
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "direct-moment2-n8-ess0.5",
+      "cdf_mse": 0.04393776876491553,
+      "per_seed_cdf_mse": {
+        "62011": 0.05112949706432429,
+        "62017": 0.036746040465506766
+      },
+      "resamplings_per_population": 0.822265625,
+      "online_costs_per_population": {
+        "transition_samples": 64.0,
+        "reward_evaluations": 32.0,
+        "value_evaluations": 24.0
+      },
+      "shared_calibration_costs": {
+        "transition_samples": 74752,
+        "reward_evaluations": 24960
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "mixture-moment1-n8-ess0.5",
+      "cdf_mse": 0.039787579421888805,
+      "per_seed_cdf_mse": {
+        "62011": 0.046536929430333086,
+        "62017": 0.033038229413444524
+      },
+      "resamplings_per_population": 0.912109375,
+      "online_costs_per_population": {
+        "transition_samples": 64.0,
+        "reward_evaluations": 8.0,
+        "value_evaluations": 24.0,
+        "analytic_component_integrals": 48.0
+      },
+      "shared_calibration_costs": {}
+    },
+    {
+      "problem": "mixture",
+      "method": "mixture-moment2-n8-ess0.5",
+      "cdf_mse": 0.04336084050865413,
+      "per_seed_cdf_mse": {
+        "62011": 0.04963079021692154,
+        "62017": 0.03709089080038673
+      },
+      "resamplings_per_population": 0.8349609375,
+      "online_costs_per_population": {
+        "transition_samples": 64.0,
+        "reward_evaluations": 8.0,
+        "value_evaluations": 24.0,
+        "analytic_component_integrals": 48.0
+      },
+      "shared_calibration_costs": {}
+    },
+    {
+      "problem": "mixture",
+      "method": "point-n8-ess1",
+      "cdf_mse": 0.03376940232896924,
+      "per_seed_cdf_mse": {
+        "62011": 0.036205814852749554,
+        "62017": 0.03133298980518892
+      },
+      "resamplings_per_population": 3.0,
+      "online_costs_per_population": {
+        "transition_samples": 64.0,
+        "reward_evaluations": 32.0,
+        "value_evaluations": 24.0
+      },
+      "shared_calibration_costs": {}
+    },
+    {
+      "problem": "mixture",
+      "method": "empirical-moment1-n8-ess1",
+      "cdf_mse": 0.03284721633200673,
+      "per_seed_cdf_mse": {
+        "62011": 0.03561774666900987,
+        "62017": 0.030076685995003596
+      },
+      "resamplings_per_population": 3.0,
+      "online_costs_per_population": {
+        "transition_samples": 64.0,
+        "reward_evaluations": 32.0,
+        "value_evaluations": 24.0
+      },
+      "shared_calibration_costs": {
+        "transition_samples": 74752,
+        "reward_evaluations": 24960
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "empirical-moment2-n8-ess1",
+      "cdf_mse": 0.03297985388575265,
+      "per_seed_cdf_mse": {
+        "62011": 0.03579091505794082,
+        "62017": 0.030168792713564475
+      },
+      "resamplings_per_population": 3.0,
+      "online_costs_per_population": {
+        "transition_samples": 64.0,
+        "reward_evaluations": 32.0,
+        "value_evaluations": 24.0
+      },
+      "shared_calibration_costs": {
+        "transition_samples": 74752,
+        "reward_evaluations": 24960
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "direct-moment1-n8-ess1",
+      "cdf_mse": 0.03318411513597451,
+      "per_seed_cdf_mse": {
+        "62011": 0.03561209569867843,
+        "62017": 0.03075613457327059
+      },
+      "resamplings_per_population": 3.0,
+      "online_costs_per_population": {
+        "transition_samples": 64.0,
+        "reward_evaluations": 32.0,
+        "value_evaluations": 24.0
+      },
+      "shared_calibration_costs": {
+        "transition_samples": 74752,
+        "reward_evaluations": 24960
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "direct-moment2-n8-ess1",
+      "cdf_mse": 0.03328266903095174,
+      "per_seed_cdf_mse": {
+        "62011": 0.03637808840215824,
+        "62017": 0.030187249659745237
+      },
+      "resamplings_per_population": 3.0,
+      "online_costs_per_population": {
+        "transition_samples": 64.0,
+        "reward_evaluations": 32.0,
+        "value_evaluations": 24.0
+      },
+      "shared_calibration_costs": {
+        "transition_samples": 74752,
+        "reward_evaluations": 24960
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "mixture-moment1-n8-ess1",
+      "cdf_mse": 0.03345097722776044,
+      "per_seed_cdf_mse": {
+        "62011": 0.03580662110332891,
+        "62017": 0.031095333352191976
+      },
+      "resamplings_per_population": 3.0,
+      "online_costs_per_population": {
+        "transition_samples": 64.0,
+        "reward_evaluations": 8.0,
+        "value_evaluations": 24.0,
+        "analytic_component_integrals": 48.0
+      },
+      "shared_calibration_costs": {}
+    },
+    {
+      "problem": "mixture",
+      "method": "mixture-moment2-n8-ess1",
+      "cdf_mse": 0.0332939756013123,
+      "per_seed_cdf_mse": {
+        "62011": 0.03602804800165933,
+        "62017": 0.03055990320096527
+      },
+      "resamplings_per_population": 3.0,
+      "online_costs_per_population": {
+        "transition_samples": 64.0,
+        "reward_evaluations": 8.0,
+        "value_evaluations": 24.0,
+        "analytic_component_integrals": 48.0
+      },
+      "shared_calibration_costs": {}
+    },
+    {
+      "problem": "mixture",
+      "method": "point-n16-ess0.5",
+      "cdf_mse": 0.014829562602901364,
+      "per_seed_cdf_mse": {
+        "62011": 0.01573270967997118,
+        "62017": 0.013926415525831546
+      },
+      "resamplings_per_population": 1.185546875,
+      "online_costs_per_population": {
+        "transition_samples": 128.0,
+        "reward_evaluations": 64.0,
+        "value_evaluations": 48.0
+      },
+      "shared_calibration_costs": {}
+    },
+    {
+      "problem": "mixture",
+      "method": "empirical-moment1-n16-ess0.5",
+      "cdf_mse": 0.01534927151984989,
+      "per_seed_cdf_mse": {
+        "62011": 0.016631711236923342,
+        "62017": 0.014066831802776437
+      },
+      "resamplings_per_population": 1.08984375,
+      "online_costs_per_population": {
+        "transition_samples": 128.0,
+        "reward_evaluations": 64.0,
+        "value_evaluations": 48.0
+      },
+      "shared_calibration_costs": {
+        "transition_samples": 74752,
+        "reward_evaluations": 24960
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "empirical-moment2-n16-ess0.5",
+      "cdf_mse": 0.016360345808384413,
+      "per_seed_cdf_mse": {
+        "62011": 0.017549038988159134,
+        "62017": 0.01517165262860969
+      },
+      "resamplings_per_population": 0.9697265625,
+      "online_costs_per_population": {
+        "transition_samples": 128.0,
+        "reward_evaluations": 64.0,
+        "value_evaluations": 48.0
+      },
+      "shared_calibration_costs": {
+        "transition_samples": 74752,
+        "reward_evaluations": 24960
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "direct-moment1-n16-ess0.5",
+      "cdf_mse": 0.014802839489694167,
+      "per_seed_cdf_mse": {
+        "62011": 0.016038130484517608,
+        "62017": 0.013567548494870726
+      },
+      "resamplings_per_population": 1.0703125,
+      "online_costs_per_population": {
+        "transition_samples": 128.0,
+        "reward_evaluations": 64.0,
+        "value_evaluations": 48.0
+      },
+      "shared_calibration_costs": {
+        "transition_samples": 74752,
+        "reward_evaluations": 24960
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "direct-moment2-n16-ess0.5",
+      "cdf_mse": 0.016595764083006143,
+      "per_seed_cdf_mse": {
+        "62011": 0.01720808524862286,
+        "62017": 0.015983442917389422
+      },
+      "resamplings_per_population": 0.9580078125,
+      "online_costs_per_population": {
+        "transition_samples": 128.0,
+        "reward_evaluations": 64.0,
+        "value_evaluations": 48.0
+      },
+      "shared_calibration_costs": {
+        "transition_samples": 74752,
+        "reward_evaluations": 24960
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "mixture-moment1-n16-ess0.5",
+      "cdf_mse": 0.014737156363430043,
+      "per_seed_cdf_mse": {
+        "62011": 0.01638694449734541,
+        "62017": 0.013087368229514677
+      },
+      "resamplings_per_population": 1.083984375,
+      "online_costs_per_population": {
+        "transition_samples": 128.0,
+        "reward_evaluations": 16.0,
+        "value_evaluations": 48.0,
+        "analytic_component_integrals": 96.0
+      },
+      "shared_calibration_costs": {}
+    },
+    {
+      "problem": "mixture",
+      "method": "mixture-moment2-n16-ess0.5",
+      "cdf_mse": 0.016415349887874804,
+      "per_seed_cdf_mse": {
+        "62011": 0.017569323461795492,
+        "62017": 0.015261376313954113
+      },
+      "resamplings_per_population": 0.970703125,
+      "online_costs_per_population": {
+        "transition_samples": 128.0,
+        "reward_evaluations": 16.0,
+        "value_evaluations": 48.0,
+        "analytic_component_integrals": 96.0
+      },
+      "shared_calibration_costs": {}
+    },
+    {
+      "problem": "mixture",
+      "method": "point-n16-ess1",
+      "cdf_mse": 0.013902107179858396,
+      "per_seed_cdf_mse": {
+        "62011": 0.014720681974594089,
+        "62017": 0.013083532385122703
+      },
+      "resamplings_per_population": 3.0,
+      "online_costs_per_population": {
+        "transition_samples": 128.0,
+        "reward_evaluations": 64.0,
+        "value_evaluations": 48.0
+      },
+      "shared_calibration_costs": {}
+    },
+    {
+      "problem": "mixture",
+      "method": "empirical-moment1-n16-ess1",
+      "cdf_mse": 0.013432525227207203,
+      "per_seed_cdf_mse": {
+        "62011": 0.0147227918377084,
+        "62017": 0.012142258616706007
+      },
+      "resamplings_per_population": 3.0,
+      "online_costs_per_population": {
+        "transition_samples": 128.0,
+        "reward_evaluations": 64.0,
+        "value_evaluations": 48.0
+      },
+      "shared_calibration_costs": {
+        "transition_samples": 74752,
+        "reward_evaluations": 24960
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "empirical-moment2-n16-ess1",
+      "cdf_mse": 0.012609401539229754,
+      "per_seed_cdf_mse": {
+        "62011": 0.013428063812681799,
+        "62017": 0.01179073926577771
+      },
+      "resamplings_per_population": 3.0,
+      "online_costs_per_population": {
+        "transition_samples": 128.0,
+        "reward_evaluations": 64.0,
+        "value_evaluations": 48.0
+      },
+      "shared_calibration_costs": {
+        "transition_samples": 74752,
+        "reward_evaluations": 24960
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "direct-moment1-n16-ess1",
+      "cdf_mse": 0.013434537941257079,
+      "per_seed_cdf_mse": {
+        "62011": 0.014815875059999838,
+        "62017": 0.01205320082251432
+      },
+      "resamplings_per_population": 3.0,
+      "online_costs_per_population": {
+        "transition_samples": 128.0,
+        "reward_evaluations": 64.0,
+        "value_evaluations": 48.0
+      },
+      "shared_calibration_costs": {
+        "transition_samples": 74752,
+        "reward_evaluations": 24960
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "direct-moment2-n16-ess1",
+      "cdf_mse": 0.013272027010404632,
+      "per_seed_cdf_mse": {
+        "62011": 0.013840219626277253,
+        "62017": 0.012703834394532012
+      },
+      "resamplings_per_population": 3.0,
+      "online_costs_per_population": {
+        "transition_samples": 128.0,
+        "reward_evaluations": 64.0,
+        "value_evaluations": 48.0
+      },
+      "shared_calibration_costs": {
+        "transition_samples": 74752,
+        "reward_evaluations": 24960
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "mixture-moment1-n16-ess1",
+      "cdf_mse": 0.013041930255552302,
+      "per_seed_cdf_mse": {
+        "62011": 0.014365443759442112,
+        "62017": 0.011718416751662492
+      },
+      "resamplings_per_population": 3.0,
+      "online_costs_per_population": {
+        "transition_samples": 128.0,
+        "reward_evaluations": 16.0,
+        "value_evaluations": 48.0,
+        "analytic_component_integrals": 96.0
+      },
+      "shared_calibration_costs": {}
+    },
+    {
+      "problem": "mixture",
+      "method": "mixture-moment2-n16-ess1",
+      "cdf_mse": 0.01287446083315205,
+      "per_seed_cdf_mse": {
+        "62011": 0.01348974159132818,
+        "62017": 0.01225918007497592
+      },
+      "resamplings_per_population": 3.0,
+      "online_costs_per_population": {
+        "transition_samples": 128.0,
+        "reward_evaluations": 16.0,
+        "value_evaluations": 48.0,
+        "analytic_component_integrals": 96.0
+      },
+      "shared_calibration_costs": {}
+    },
+    {
+      "problem": "mixture",
+      "method": "mean-n8-ess0.5",
+      "cdf_mse": 0.041876128413300066,
+      "per_seed_cdf_mse": {
+        "62011": 0.04933532057622621,
+        "62017": 0.034416936250373925
+      },
+      "resamplings_per_population": 0.9658203125,
+      "online_costs_per_population": {
+        "transition_samples": 64.0,
+        "reward_evaluations": 32.0,
+        "value_evaluations": 24.0
+      },
+      "shared_calibration_costs": {
+        "transition_samples": 74752,
+        "reward_evaluations": 24960
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "mean-n8-ess1",
+      "cdf_mse": 0.03509561497718316,
+      "per_seed_cdf_mse": {
+        "62011": 0.03882162580974331,
+        "62017": 0.031369604144623
+      },
+      "resamplings_per_population": 3.0,
+      "online_costs_per_population": {
+        "transition_samples": 64.0,
+        "reward_evaluations": 32.0,
+        "value_evaluations": 24.0
+      },
+      "shared_calibration_costs": {
+        "transition_samples": 74752,
+        "reward_evaluations": 24960
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "mean-n16-ess0.5",
+      "cdf_mse": 0.01615035202456134,
+      "per_seed_cdf_mse": {
+        "62011": 0.017398825547079326,
+        "62017": 0.014901878502043355
+      },
+      "resamplings_per_population": 1.23046875,
+      "online_costs_per_population": {
+        "transition_samples": 128.0,
+        "reward_evaluations": 64.0,
+        "value_evaluations": 48.0
+      },
+      "shared_calibration_costs": {
+        "transition_samples": 74752,
+        "reward_evaluations": 24960
+      }
+    },
+    {
+      "problem": "mixture",
+      "method": "mean-n16-ess1",
+      "cdf_mse": 0.014093318698093289,
+      "per_seed_cdf_mse": {
+        "62011": 0.014867078318083204,
+        "62017": 0.013319559078103373
+      },
+      "resamplings_per_population": 3.0,
+      "online_costs_per_population": {
+        "transition_samples": 128.0,
+        "reward_evaluations": 64.0,
+        "value_evaluations": 48.0
+      },
+      "shared_calibration_costs": {
+        "transition_samples": 74752,
+        "reward_evaluations": 24960
+      }
+    }
+  ],
+  "moment_effects": [
+    {
+      "problem": "gaussian",
+      "particles": 8,
+      "ess_threshold": 0.5,
+      "second_vs_first_empirical_relative_gain": -0.2282535673338999,
+      "second_vs_point_relative_gain": -0.6392982017645821
+    },
+    {
+      "problem": "gaussian",
+      "particles": 8,
+      "ess_threshold": 1.0,
+      "second_vs_first_empirical_relative_gain": -0.1403192692269506,
+      "second_vs_point_relative_gain": -0.12591092151203198
+    },
+    {
+      "problem": "gaussian",
+      "particles": 16,
+      "ess_threshold": 0.5,
+      "second_vs_first_empirical_relative_gain": -0.24164629374208135,
+      "second_vs_point_relative_gain": -0.19858791006779564
+    },
+    {
+      "problem": "gaussian",
+      "particles": 16,
+      "ess_threshold": 1.0,
+      "second_vs_first_empirical_relative_gain": -0.016703456478661005,
+      "second_vs_point_relative_gain": 0.2006299857042908
+    },
+    {
+      "problem": "mixture",
+      "particles": 8,
+      "ess_threshold": 0.5,
+      "second_vs_first_empirical_relative_gain": -0.06392690678029322,
+      "second_vs_point_relative_gain": -0.15439150692040227
+    },
+    {
+      "problem": "mixture",
+      "particles": 8,
+      "ess_threshold": 1.0,
+      "second_vs_first_empirical_relative_gain": -0.004038015045331855,
+      "second_vs_point_relative_gain": 0.023380586826059147
+    },
+    {
+      "problem": "mixture",
+      "particles": 16,
+      "ess_threshold": 0.5,
+      "second_vs_first_empirical_relative_gain": -0.06587115793912357,
+      "second_vs_point_relative_gain": -0.10322510828360887
+    },
+    {
+      "problem": "mixture",
+      "particles": 16,
+      "ess_threshold": 1.0,
+      "second_vs_first_empirical_relative_gain": 0.06127840253820893,
+      "second_vs_point_relative_gain": 0.09298630947843178
+    }
+  ],
+  "actual_run_costs": {
+    "conditions": 144,
+    "checks": {
+      "gaussian-k1-x-1.0": 8.881784197001252e-16,
+      "gaussian-k1-x1.5": 5.551115123125783e-17,
+      "gaussian-k5-x-1.0": 0.0,
+      "gaussian-k5-x1.5": 0.0,
+      "mixture-k1-x-1.0": 2.220446049250313e-16,
+      "mixture-k1-x1.5": 3.469446951953614e-18,
+      "mixture-k5-x-1.0": 0.0,
+      "mixture-k5-x1.5": 5.551115123125783e-17,
+      "empirical_second_moment_root": 0.0
+    },
+    "total_costs": {
+      "transition_samples": 8257536,
+      "reward_evaluations": 2801664,
+      "value_evaluations": 2359296,
+      "analytic_component_integrals": 884736
+    },
+    "calibration_reused_from": "/home/mlw0719/doit_uncertainty_storage/runs/exp-059-conditional-reward-toy",
+    "original_calibration_costs": {
+      "gaussian": {
+        "transition_samples": 74752,
+        "reward_evaluations": 24960
+      },
+      "mixture": {
+        "transition_samples": 74752,
+        "reward_evaluations": 24960
+      }
+    },
+    "repeats_per_condition": 512,
+    "peak_allocated_mib": 0.0,
+    "peak_reserved_mib": 0.0
+  }
+}

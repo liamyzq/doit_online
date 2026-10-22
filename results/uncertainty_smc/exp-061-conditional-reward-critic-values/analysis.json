@@ -598,5 +598,31 @@
     "interpretation": "Independent continuation-value diagnostics; no simulator or endpoint success claim.",
     "peak_allocated_mib": 60.39404296875,
     "peak_reserved_mib": 70.0
+  },
+  "resolved_row_moment_diagnostic": {
+    "interpretation": "Within the same saved reference futures, mean prediction error is much larger than the missing higher-moment contribution; this is a decomposition diagnostic, not an independently tested sampler.",
+    "rows": [
+      {
+        "index": 5,
+        "reference_mean_only_centered_log_mse": 0.24434905477301,
+        "predicted_mean_error_against_reference_mean": 12.317418835761114,
+        "reference_variance_median": 0.0011083018149902202,
+        "predicted_variance_median": 0.0023043254801299712
+      },
+      {
+        "index": 9,
+        "reference_mean_only_centered_log_mse": 0.3687980782752067,
+        "predicted_mean_error_against_reference_mean": 5.178828473700653,
+        "reference_variance_median": 0.0006225955524923332,
+        "predicted_variance_median": 0.012129600522298108
+      },
+      {
+        "index": 12,
+        "reference_mean_only_centered_log_mse": 0.0525989337797764,
+        "predicted_mean_error_against_reference_mean": 2.8229066386041497,
+        "reference_variance_median": 0.00031561747557051767,
+        "predicted_variance_median": 0.009099896534232783
+      }
+    ]
   }
 }

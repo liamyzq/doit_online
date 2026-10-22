@@ -41,6 +41,11 @@ retrieved. Exp-060/061 completed at `7f7a5a2`; their reserved-memory peaks were
 continuation job is active. Retain 4096 MiB plus 2048 MiB reserve and one job
 per GPU for this critic path.
 
+Exp-062 also completed its 144 CPU toy conditions and new moment checks at
+`2437de2`, with zero GPU allocation. Its finite controller exited, all records
+were retrieved, and no new job is queued. The continuation closes at its stated
+budgets with no image/simulator expansion.
+
 ## Authorized machine
 
 - SSH alias: `orion`, user `mlw0719`; it connects through Quest.

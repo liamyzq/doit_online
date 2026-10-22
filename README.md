@@ -28,6 +28,16 @@ timings and fixed-prompt intervals limit the claim; see the findings for details
 The study uses separate Orion checkout/storage and preserves the older studies.
 Small results live under `results/uncertainty_smc/`.
 
+The subsequent [method-development continuation](experiments/uncertainty_smc/CONTINUATION.md)
+implemented conditional reward residual calibration and second-moment particle
+allocation. Exp-059--062 completed 220 toy conditions, a critic smoke and 12
+real-value conditions. Empirical UC improves some toy value estimates, but
+cross-observation critic prediction and the second-moment allocation variant
+do not establish a new sampling improvement. More frequent resampling helps a
+limited toy comparison and is matched by direct learned-value regression.
+Both candidates are closed at the tested budgets; no new image or simulator
+run is queued. The terminal-N4 baseline remains the best validated result.
+
 Earlier research reopened after an external audit of `c5e4311`; its
 [audit follow-up protocol](docs/audit-followup.md) remains available. The
 previous `codex/doit-guidance-reliability` branch ran the authorized

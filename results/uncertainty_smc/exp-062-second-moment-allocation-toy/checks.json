@@ -1,0 +1,11 @@
+{
+  "gaussian-k1-x-1.0": 8.881784197001252e-16,
+  "gaussian-k1-x1.5": 5.551115123125783e-17,
+  "gaussian-k5-x-1.0": 0.0,
+  "gaussian-k5-x1.5": 0.0,
+  "mixture-k1-x-1.0": 2.220446049250313e-16,
+  "mixture-k1-x1.5": 3.469446951953614e-18,
+  "mixture-k5-x-1.0": 0.0,
+  "mixture-k5-x1.5": 5.551115123125783e-17,
+  "empirical_second_moment_root": 0.0
+}

@@ -1,0 +1,15 @@
+{
+  "experiment_id": "exp-062-second-moment-allocation-toy",
+  "commit": "2437de23cbdf828aec164360007f12a49515e552",
+  "config": "/home/mlw0719/doit_uncertainty/configs/uncertainty_smc/exp-062-second-moment-allocation-toy.json",
+  "machine": "orion",
+  "gpu": 2,
+  "pid": 1607756,
+  "path": "/home/mlw0719/doit_uncertainty_storage/runs/exp-062-second-moment-allocation-toy",
+  "log_path": "/home/mlw0719/doit_uncertainty_storage/artifacts/exp-062-second-moment-allocation-toy.log",
+  "status": "completed",
+  "timestamp": "2026-10-22T17:01:31.404639+00:00",
+  "started_at": "2026-10-22T17:00:51.403402+00:00",
+  "returncode": 0,
+  "finished_at": "2026-10-22T17:01:31.404676+00:00"
+}

@@ -1,0 +1,34 @@
+{
+  "conditions": 144,
+  "checks": {
+    "gaussian-k1-x-1.0": 8.881784197001252e-16,
+    "gaussian-k1-x1.5": 5.551115123125783e-17,
+    "gaussian-k5-x-1.0": 0.0,
+    "gaussian-k5-x1.5": 0.0,
+    "mixture-k1-x-1.0": 2.220446049250313e-16,
+    "mixture-k1-x1.5": 3.469446951953614e-18,
+    "mixture-k5-x-1.0": 0.0,
+    "mixture-k5-x1.5": 5.551115123125783e-17,
+    "empirical_second_moment_root": 0.0
+  },
+  "total_costs": {
+    "transition_samples": 8257536,
+    "reward_evaluations": 2801664,
+    "value_evaluations": 2359296,
+    "analytic_component_integrals": 884736
+  },
+  "calibration_reused_from": "/home/mlw0719/doit_uncertainty_storage/runs/exp-059-conditional-reward-toy",
+  "original_calibration_costs": {
+    "gaussian": {
+      "transition_samples": 74752,
+      "reward_evaluations": 24960
+    },
+    "mixture": {
+      "transition_samples": 74752,
+      "reward_evaluations": 24960
+    }
+  },
+  "repeats_per_condition": 512,
+  "peak_allocated_mib": 0.0,
+  "peak_reserved_mib": 0.0
+}

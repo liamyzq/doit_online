@@ -17,11 +17,16 @@ endpoints with this schedule. Exp-060 passed the real-critic execution smoke.
 Exp-061 found no useful transfer from the cross-observation conditional reward
 bank: on resolved HalfCheetah row18, empirical/point/future2 centered log-value
 MSE is 5.0400/4.8749/0.2169. Hopper's continuation reference ESS is near one,
-preventing fine ranking there. Close this bank at the tested budget. The next
-bounded toy experiment changes the particle-allocation objective from a first
-to a second conditional reward moment, motivated by the value/endpoint mismatch.
+preventing fine ranking there. Close this bank at the tested budget. Exp-062
+completed 144 further toy conditions and found that second-moment allocation
+does not meet the required gain. More frequent resampling helps first-moment
+values on the Gaussian toy, but direct value regression matches empirical UC.
+The development pass is complete with both candidates closed at their tested
+budgets; its gates do not justify image or simulator expansion. No job remains
+queued. Reliable local mean/uncertainty prediction or proposal improvement is
+still an open research question, not a scheduled continuation.
 The completed exp-058 result below remains the accepted practical baseline;
-the new development goal is active and has no new sampling improvement yet.
+this continuation has not established a new sampling improvement.
 
 The user opened a new uncertainty/SMC/FORS study on 2026-10-21, with toy,
 image, and RL experiments authorized. The active branch is now

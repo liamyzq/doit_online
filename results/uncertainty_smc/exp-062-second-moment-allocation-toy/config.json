@@ -1,0 +1,334 @@
+{
+  "id": "exp-062-second-moment-allocation-toy",
+  "mode": "reward_allocation_toy",
+  "purpose": "Test whether the conditional RMS terminal weight allocates base-proposal particles better than its first moment. Distinguish moment order from resampling threshold, retain exact-moment diagnostics and terminal cost baselines. Reuse independent exp059 calibration with original costs reported.",
+  "problems": [
+    {
+      "name": "gaussian",
+      "means": [
+        0.0
+      ],
+      "probabilities": [
+        1.0
+      ],
+      "clean_variance": 1.0,
+      "noise_variances": [
+        0.0,
+        0.08,
+        0.25,
+        0.6,
+        1.2,
+        2.4,
+        5.0,
+        10.0,
+        20.0
+      ],
+      "reward_target": 1.8,
+      "reward_variance": 0.7,
+      "beta": 2.0
+    },
+    {
+      "name": "mixture",
+      "means": [
+        -2.0,
+        2.0
+      ],
+      "probabilities": [
+        0.8,
+        0.2
+      ],
+      "clean_variance": 0.3,
+      "noise_variances": [
+        0.0,
+        0.08,
+        0.25,
+        0.6,
+        1.2,
+        2.4,
+        5.0,
+        10.0,
+        20.0
+      ],
+      "reward_target": 1.5,
+      "reward_variance": 2.0,
+      "beta": 1.0
+    }
+  ],
+  "checkpoints": [
+    5,
+    3,
+    1
+  ],
+  "calibration_directory": "/home/mlw0719/doit_uncertainty_storage/runs/exp-059-conditional-reward-toy",
+  "seeds": [
+    62011,
+    62017
+  ],
+  "repeats": 512,
+  "methods": [
+    {
+      "name": "terminal-n8",
+      "particles": 8,
+      "value": "flat"
+    },
+    {
+      "name": "terminal-n16",
+      "particles": 16,
+      "value": "flat"
+    },
+    {
+      "name": "terminal-n32",
+      "particles": 32,
+      "value": "flat"
+    },
+    {
+      "name": "terminal-n64",
+      "particles": 64,
+      "value": "flat"
+    },
+    {
+      "name": "point-n8-ess0.5",
+      "particles": 8,
+      "value": "point",
+      "ess_threshold": 0.5
+    },
+    {
+      "name": "empirical-moment1-n8-ess0.5",
+      "particles": 8,
+      "value": "empirical",
+      "moment_order": 1,
+      "ess_threshold": 0.5,
+      "neighbours": 8
+    },
+    {
+      "name": "empirical-moment2-n8-ess0.5",
+      "particles": 8,
+      "value": "empirical",
+      "moment_order": 2,
+      "ess_threshold": 0.5,
+      "neighbours": 8
+    },
+    {
+      "name": "direct-moment1-n8-ess0.5",
+      "particles": 8,
+      "value": "direct",
+      "moment_order": 1,
+      "ess_threshold": 0.5,
+      "neighbours": 8
+    },
+    {
+      "name": "direct-moment2-n8-ess0.5",
+      "particles": 8,
+      "value": "direct",
+      "moment_order": 2,
+      "ess_threshold": 0.5,
+      "neighbours": 8
+    },
+    {
+      "name": "mixture-moment1-n8-ess0.5",
+      "particles": 8,
+      "value": "mixture",
+      "moment_order": 1,
+      "ess_threshold": 0.5,
+      "neighbours": 8
+    },
+    {
+      "name": "mixture-moment2-n8-ess0.5",
+      "particles": 8,
+      "value": "mixture",
+      "moment_order": 2,
+      "ess_threshold": 0.5,
+      "neighbours": 8
+    },
+    {
+      "name": "point-n8-ess1",
+      "particles": 8,
+      "value": "point",
+      "ess_threshold": 1.0
+    },
+    {
+      "name": "empirical-moment1-n8-ess1",
+      "particles": 8,
+      "value": "empirical",
+      "moment_order": 1,
+      "ess_threshold": 1.0,
+      "neighbours": 8
+    },
+    {
+      "name": "empirical-moment2-n8-ess1",
+      "particles": 8,
+      "value": "empirical",
+      "moment_order": 2,
+      "ess_threshold": 1.0,
+      "neighbours": 8
+    },
+    {
+      "name": "direct-moment1-n8-ess1",
+      "particles": 8,
+      "value": "direct",
+      "moment_order": 1,
+      "ess_threshold": 1.0,
+      "neighbours": 8
+    },
+    {
+      "name": "direct-moment2-n8-ess1",
+      "particles": 8,
+      "value": "direct",
+      "moment_order": 2,
+      "ess_threshold": 1.0,
+      "neighbours": 8
+    },
+    {
+      "name": "mixture-moment1-n8-ess1",
+      "particles": 8,
+      "value": "mixture",
+      "moment_order": 1,
+      "ess_threshold": 1.0,
+      "neighbours": 8
+    },
+    {
+      "name": "mixture-moment2-n8-ess1",
+      "particles": 8,
+      "value": "mixture",
+      "moment_order": 2,
+      "ess_threshold": 1.0,
+      "neighbours": 8
+    },
+    {
+      "name": "point-n16-ess0.5",
+      "particles": 16,
+      "value": "point",
+      "ess_threshold": 0.5
+    },
+    {
+      "name": "empirical-moment1-n16-ess0.5",
+      "particles": 16,
+      "value": "empirical",
+      "moment_order": 1,
+      "ess_threshold": 0.5,
+      "neighbours": 8
+    },
+    {
+      "name": "empirical-moment2-n16-ess0.5",
+      "particles": 16,
+      "value": "empirical",
+      "moment_order": 2,
+      "ess_threshold": 0.5,
+      "neighbours": 8
+    },
+    {
+      "name": "direct-moment1-n16-ess0.5",
+      "particles": 16,
+      "value": "direct",
+      "moment_order": 1,
+      "ess_threshold": 0.5,
+      "neighbours": 8
+    },
+    {
+      "name": "direct-moment2-n16-ess0.5",
+      "particles": 16,
+      "value": "direct",
+      "moment_order": 2,
+      "ess_threshold": 0.5,
+      "neighbours": 8
+    },
+    {
+      "name": "mixture-moment1-n16-ess0.5",
+      "particles": 16,
+      "value": "mixture",
+      "moment_order": 1,
+      "ess_threshold": 0.5,
+      "neighbours": 8
+    },
+    {
+      "name": "mixture-moment2-n16-ess0.5",
+      "particles": 16,
+      "value": "mixture",
+      "moment_order": 2,
+      "ess_threshold": 0.5,
+      "neighbours": 8
+    },
+    {
+      "name": "point-n16-ess1",
+      "particles": 16,
+      "value": "point",
+      "ess_threshold": 1.0
+    },
+    {
+      "name": "empirical-moment1-n16-ess1",
+      "particles": 16,
+      "value": "empirical",
+      "moment_order": 1,
+      "ess_threshold": 1.0,
+      "neighbours": 8
+    },
+    {
+      "name": "empirical-moment2-n16-ess1",
+      "particles": 16,
+      "value": "empirical",
+      "moment_order": 2,
+      "ess_threshold": 1.0,
+      "neighbours": 8
+    },
+    {
+      "name": "direct-moment1-n16-ess1",
+      "particles": 16,
+      "value": "direct",
+      "moment_order": 1,
+      "ess_threshold": 1.0,
+      "neighbours": 8
+    },
+    {
+      "name": "direct-moment2-n16-ess1",
+      "particles": 16,
+      "value": "direct",
+      "moment_order": 2,
+      "ess_threshold": 1.0,
+      "neighbours": 8
+    },
+    {
+      "name": "mixture-moment1-n16-ess1",
+      "particles": 16,
+      "value": "mixture",
+      "moment_order": 1,
+      "ess_threshold": 1.0,
+      "neighbours": 8
+    },
+    {
+      "name": "mixture-moment2-n16-ess1",
+      "particles": 16,
+      "value": "mixture",
+      "moment_order": 2,
+      "ess_threshold": 1.0,
+      "neighbours": 8
+    },
+    {
+      "name": "mean-n8-ess0.5",
+      "particles": 8,
+      "value": "mean",
+      "ess_threshold": 0.5,
+      "neighbours": 8
+    },
+    {
+      "name": "mean-n8-ess1",
+      "particles": 8,
+      "value": "mean",
+      "ess_threshold": 1.0,
+      "neighbours": 8
+    },
+    {
+      "name": "mean-n16-ess0.5",
+      "particles": 16,
+      "value": "mean",
+      "ess_threshold": 0.5,
+      "neighbours": 8
+    },
+    {
+      "name": "mean-n16-ess1",
+      "particles": 16,
+      "value": "mean",
+      "ess_threshold": 1.0,
+      "neighbours": 8
+    }
+  ]
+}

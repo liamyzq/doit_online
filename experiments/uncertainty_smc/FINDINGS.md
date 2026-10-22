@@ -16,6 +16,29 @@ reward. Implementation identities pass; finite-query improvement is a separate
 empirical question. Every formal run, including the first failed quadrature
 check, is recorded in `experiments/results.tsv`.
 
+## Method-development continuation
+
+The later exp-059--062 pass develops two additional candidates: conditional
+reward residual calibration for inexpensive positive potentials, and using the
+conditional second moment to allocate particles under the unchanged base
+proposal. The [continuation report](CONTINUATION.md) records their formulas,
+existing-method controls, locked decisions, complete costs and negative results.
+
+Across 220 toy conditions, empirical calibration improves some value estimates
+but has no established endpoint advantage over the relevant controls. The
+second-moment variant does not meet its advance criterion. More frequent
+resampling improves the Gaussian N16 first-moment case by 21.4% against point,
+but direct learned-value regression performs as well and the mixture benefit
+is small. This is a limited schedule/value-estimation signal, not a distinct
+new UC result.
+
+The real-critic continuation covers 12 observation/checkpoint conditions.
+On the reference-resolved HalfCheetah row18, empirical/point/future2 centered
+log-value MSE is 5.0400/4.8749/0.2169. Hopper's near-one reference ESS prevents
+fine ranking. Both new candidates are closed at the tested budgets; the image
+and simulator expansion gates were not met. This does not invalidate UC in
+general or establish novelty. All formal outcomes remain in the ledgers.
+
 ## Analytic models
 
 Exp-047-r2 passes all eight initial identities, with maximum absolute error
