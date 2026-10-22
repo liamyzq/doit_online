@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "/home/mlw0719/doit_uncertainty/doit_correction/run.py", line 47, in main
+    metrics = {"uncertainty_checks": run_checks, "uncertainty_toy": run_toys,
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mlw0719/doit_uncertainty/doit_correction/uncertainty_toy.py", line 331, in run_checks
+    raise AssertionError(errors)
+AssertionError: {'gaussian_value_equals_mixture': 0.0, 'gaussian_ratio_step3': 4.996003610813204e-16, 'gaussian_ratio_step2': 2.7755575615628914e-16, 'gaussian_ratio_step1': 4.996003610813204e-16, 'path_telescoping': 1.7763568394002505e-15, 'exact_doob_increment': 3.552713678800501e-15, 'poisson_identity': 5.551115123125783e-17, 'mixture_tower': 1.2011083772023312e-07}
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/mlw0719/doit_uncertainty/doit_correction/run.py", line 133, in <module>
+    main()
+  File "/home/mlw0719/doit_uncertainty/doit_correction/run.py", line 47, in main
+    metrics = {"uncertainty_checks": run_checks, "uncertainty_toy": run_toys,
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mlw0719/doit_uncertainty/doit_correction/uncertainty_toy.py", line 331, in run_checks
+    raise AssertionError(errors)
+AssertionError: {'gaussian_value_equals_mixture': 0.0, 'gaussian_ratio_step3': 4.996003610813204e-16, 'gaussian_ratio_step2': 2.7755575615628914e-16, 'gaussian_ratio_step1': 4.996003610813204e-16, 'path_telescoping': 1.7763568394002505e-15, 'exact_doob_increment': 3.552713678800501e-15, 'poisson_identity': 5.551115123125783e-17, 'mixture_tower': 1.2011083772023312e-07}

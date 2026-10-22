@@ -1,0 +1,6 @@
+[
+  {
+    "id": "exp-047-uncertainty-checks-r2",
+    "config": "configs/uncertainty_smc/exp-047-uncertainty-checks-r2.json"
+  }
+]

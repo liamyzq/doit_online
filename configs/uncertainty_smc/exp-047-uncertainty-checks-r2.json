@@ -1,0 +1,5 @@
+{
+  "id": "exp-047-uncertainty-checks-r2",
+  "mode": "uncertainty_checks",
+  "purpose": "Repeat after independent adaptive quadrature established that the 64-node integration error, not the mixture identity, caused the first failure. Use 256 nodes."
+}

@@ -6,7 +6,6 @@ approximation to that density. All arrays and density arithmetic use float64.
 
 from __future__ import annotations
 
-import csv
 import json
 import math
 import time
@@ -253,7 +252,8 @@ def fors_draw(count, rng, mean, variance, target, precision, bound, direct=False
         accepted.append(z[rng.random(len(z)) < probability])
         if proposed > count * 20000:
             raise RuntimeError("Local rejection exceeded the declared proposal budget")
-    return np.concatenate(accepted)[:count], {"proposals": proposed, "guidance_queries": queries,
+    return np.concatenate(accepted)[:count], {"proposals": proposed, "guidance_queries": queries + 1,
+                                            "residual_value_evaluations": proposed if direct else 0,
                                             "clipped_factors": clipped, "poisson_factors": factors,
                                             "returned_samples": count}
 
@@ -274,7 +274,8 @@ def run_local(config, output):
             if method in {"shift", "exact"}:
                 mu, var = (proposal_mean, variance) if method == "shift" else (exact_mean, exact_variance)
                 x = mu + math.sqrt(var) * rng.normal(size=config["samples"])
-                counts = {"proposals": len(x), "guidance_queries": 0, "clipped_factors": 0,
+                counts = {"proposals": len(x), "guidance_queries": int(method == "shift"),
+                          "residual_value_evaluations": 0, "clipped_factors": 0,
                           "poisson_factors": 0, "returned_samples": len(x)}
             else:
                 bound = float(method.split("-")[1]) if method.startswith("fors") else 0
@@ -320,7 +321,7 @@ def run_checks(config, output):
     errors["poisson_identity"] = abs(sum(terms) - math.exp(expected_w - bound))
     # Independent quadrature of the mixture kernel checks the tower relation.
     mixture = MixtureChain(dict(problem, means=[-2.0, 2.0], probabilities=[0.8, 0.2]))
-    nodes, quadrature = np.polynomial.hermite.hermgauss(64)
+    nodes, quadrature = np.polynomial.hermite.hermgauss(256)
     state = np.array([-1.0, 0.0, 1.0])
     parameters = mixture.kernel(state, 2)
     candidates = parameters[1][..., None] + math.sqrt(2 * parameters[2]) * nodes

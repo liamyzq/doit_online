@@ -1,0 +1,26 @@
+{
+  "commit": "99c437b1f2a2a43d7e162a683c1be329c4b63a8f",
+  "config": "/home/mlw0719/doit_uncertainty/configs/uncertainty_smc/exp-047-uncertainty-checks.json",
+  "experiment_id": "exp-047-uncertainty-checks",
+  "pid": 1727586,
+  "cuda_visible_devices": "1",
+  "started_at": 1792644363.3567317,
+  "status": "failed",
+  "environment": {
+    "python": "3.12.9",
+    "torch": "2.6.0+cu124",
+    "cuda": "12.4",
+    "gpu": "NVIDIA RTX A6000",
+    "packages": {
+      "numpy": "1.26.4",
+      "diffusers": "0.32.2",
+      "transformers": "4.49.0",
+      "torchvision": "0.21.0",
+      "huggingface_hub": "0.36.0",
+      "safetensors": "0.8.0",
+      "h5py": "3.14.0"
+    }
+  },
+  "error": "AssertionError({'gaussian_value_equals_mixture': 0.0, 'gaussian_ratio_step3': 4.996003610813204e-16, 'gaussian_ratio_step2': 2.7755575615628914e-16, 'gaussian_ratio_step1': 4.996003610813204e-16, 'path_telescoping': 1.7763568394002505e-15, 'exact_doob_increment': 3.552713678800501e-15, 'poisson_identity': 5.551115123125783e-17, 'mixture_tower': 1.2011083772023312e-07})",
+  "elapsed_seconds": 1.0072362422943115
+}

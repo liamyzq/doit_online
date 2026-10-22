@@ -1,0 +1,9 @@
+{
+  "hermite_max_log_errors": {
+    "64": 1.2011083772023312e-07,
+    "128": 7.43141104209144e-11,
+    "256": 1.7763568394002505e-15
+  },
+  "adaptive_max_log_error": 8.881784197001252e-16,
+  "decision": "The identity is correct. Increase quadrature resolution while retaining the 1e-9 check threshold."
+}
