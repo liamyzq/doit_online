@@ -207,3 +207,15 @@ standard prompts and fresh seeds 57011/57017, followed by locked confirmation
 on new seeds if a method improves reward at comparable measured cost without
 material alignment loss or new quality failures. All candidate-pool queries
 are charged per delivered image, including unselected candidates.
+
+Discovery selection uses delivered-image mean aesthetic reward and actual
+end-to-end time, with all reward/score/VJP counts reported separately. Advance
+only candidates with at least +0.15 reward against moderate MC8 at no greater
+mean measured time, mean alignment loss below 0.005, and no distinct quality
+failure. Compare any retained sparse-SMC combination to terminal N=8 as well.
+If a candidate advances, lock its parameters for eight new confirmation seeds
+59011/59017/59023/59029/59039/59051/59057/59063. Confirmation requires positive
+95% seed-block interval for reward gain, mean gain at least 0.15, alignment
+loss below 0.005, no more than 10% within-prompt embedding-distance reduction,
+and visual review of every delivered image. Shared-device timing is descriptive,
+not a dedicated-device benchmark. Two discovery seeds cannot establish precision.

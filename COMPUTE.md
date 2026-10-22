@@ -21,7 +21,10 @@ simulator execution still requires a working isolated simulator environment.
 The new batched critic smoke exp-052 passed all 32 conditions with 48 MiB
 peak reserved memory. Subsequent critic-only queues retain a conservative
 4096 MiB allowance plus 2048 MiB free reserve and at most one job per GPU.
-Image particle execution has not yet been smoked under this new study.
+Exp-056 image particle execution passed N1 equivalence and exact cost checks,
+with 5730 MiB peak reserved memory. Image discovery also includes the existing
+MC8/MC32 paths (previously 7298 MiB), so retain an 11000 MiB job allowance plus
+2048 MiB reserve and at most one job per physical GPU 0--4.
 
 ## Authorized machine
 

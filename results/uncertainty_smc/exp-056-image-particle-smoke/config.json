@@ -1,0 +1,74 @@
+{
+  "id": "exp-056-image-particle-smoke",
+  "mode": "uncertainty_image",
+  "purpose": "Verify N1 equivalence with the established base image sampler, exact new-method query and score counts, finite sparse SMC weights, and peak memory before image concurrency. No endpoint conclusion from one image per method.",
+  "image": {
+    "size": 512,
+    "steps": 20,
+    "guided_steps": 10,
+    "proxy": "euler",
+    "reward_batch": 2,
+    "future_batch": 2,
+    "particle_batch": 1
+  },
+  "prompts": [
+    "cafe"
+  ],
+  "seeds": [
+    56001
+  ],
+  "methods": [
+    {
+      "name": "base",
+      "estimator": {
+        "kind": "mc",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "gamma": 0
+      }
+    },
+    {
+      "name": "terminal-n1",
+      "particles": 1,
+      "tau": 0.3,
+      "value": "point",
+      "checkpoints": []
+    },
+    {
+      "name": "terminal-n4",
+      "particles": 4,
+      "tau": 0.3,
+      "value": "point",
+      "checkpoints": []
+    },
+    {
+      "name": "point-smc-n4",
+      "particles": 4,
+      "tau": 0.3,
+      "value": "point",
+      "checkpoints": [
+        10,
+        14,
+        18
+      ]
+    },
+    {
+      "name": "future2-smc-n4",
+      "particles": 4,
+      "tau": 0.3,
+      "value": "future",
+      "branches": 2,
+      "checkpoints": [
+        10,
+        14,
+        18
+      ]
+    }
+  ],
+  "execution_smoke": true
+}

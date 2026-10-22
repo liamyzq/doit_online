@@ -195,7 +195,7 @@ class ImageEngine:
         results = []
         for batch in flat_latents.split(self.chunk):
             results.append(self.score_images(self.decode(batch)))
-        self.reward_queries += len(flat_latents)
+            self.reward_queries += len(batch)
         torch.cuda.synchronize(self.device)
         self.reward_seconds += time.perf_counter() - started
         return torch.cat(results)

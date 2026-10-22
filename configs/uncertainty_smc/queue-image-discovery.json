@@ -1,0 +1,58 @@
+[
+  {
+    "id": "exp-057-image-discovery-base-s57011",
+    "config": "configs/uncertainty_smc/exp-057-image-discovery-base-s57011.json"
+  },
+  {
+    "id": "exp-057-image-discovery-mc8-s57011",
+    "config": "configs/uncertainty_smc/exp-057-image-discovery-mc8-s57011.json"
+  },
+  {
+    "id": "exp-057-image-discovery-mc32-s57011",
+    "config": "configs/uncertainty_smc/exp-057-image-discovery-mc32-s57011.json"
+  },
+  {
+    "id": "exp-057-image-discovery-terminal-n4-s57011",
+    "config": "configs/uncertainty_smc/exp-057-image-discovery-terminal-n4-s57011.json"
+  },
+  {
+    "id": "exp-057-image-discovery-terminal-n8-s57011",
+    "config": "configs/uncertainty_smc/exp-057-image-discovery-terminal-n8-s57011.json"
+  },
+  {
+    "id": "exp-057-image-discovery-point-smc-n4-s57011",
+    "config": "configs/uncertainty_smc/exp-057-image-discovery-point-smc-n4-s57011.json"
+  },
+  {
+    "id": "exp-057-image-discovery-future2-smc-n4-s57011",
+    "config": "configs/uncertainty_smc/exp-057-image-discovery-future2-smc-n4-s57011.json"
+  },
+  {
+    "id": "exp-057-image-discovery-base-s57017",
+    "config": "configs/uncertainty_smc/exp-057-image-discovery-base-s57017.json"
+  },
+  {
+    "id": "exp-057-image-discovery-mc8-s57017",
+    "config": "configs/uncertainty_smc/exp-057-image-discovery-mc8-s57017.json"
+  },
+  {
+    "id": "exp-057-image-discovery-mc32-s57017",
+    "config": "configs/uncertainty_smc/exp-057-image-discovery-mc32-s57017.json"
+  },
+  {
+    "id": "exp-057-image-discovery-terminal-n4-s57017",
+    "config": "configs/uncertainty_smc/exp-057-image-discovery-terminal-n4-s57017.json"
+  },
+  {
+    "id": "exp-057-image-discovery-terminal-n8-s57017",
+    "config": "configs/uncertainty_smc/exp-057-image-discovery-terminal-n8-s57017.json"
+  },
+  {
+    "id": "exp-057-image-discovery-point-smc-n4-s57017",
+    "config": "configs/uncertainty_smc/exp-057-image-discovery-point-smc-n4-s57017.json"
+  },
+  {
+    "id": "exp-057-image-discovery-future2-smc-n4-s57017",
+    "config": "configs/uncertainty_smc/exp-057-image-discovery-future2-smc-n4-s57017.json"
+  }
+]

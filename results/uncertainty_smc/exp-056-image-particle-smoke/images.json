@@ -1,0 +1,187 @@
+[
+  {
+    "prompt": "cafe",
+    "seed": 56001,
+    "reward": 6.563589096069336,
+    "clip_alignment": 0.25788021087646484,
+    "seconds": 3.618075808044523,
+    "guidance_queries": 0,
+    "evaluation_queries": 1,
+    "all_queries": 1,
+    "score_forwards": 20,
+    "reward_seconds": 0.0,
+    "vjp_seconds": 0.0,
+    "vjp_calls": 0,
+    "sensitivity_seconds": 0.0,
+    "oracle_seconds": 0,
+    "estimator_seconds": 0,
+    "update_seconds": 0,
+    "denominator_events": 0,
+    "steps": [],
+    "method": "base"
+  },
+  {
+    "prompt": "cafe",
+    "seed": 56001,
+    "method": "terminal-n1",
+    "reward": 6.563589096069336,
+    "clip_alignment": 0.25788021087646484,
+    "seconds": 1.172113741049543,
+    "guidance_queries": 0,
+    "evaluation_queries": 1,
+    "all_queries": 1,
+    "score_forwards": 20,
+    "vjp_calls": 0,
+    "reward_seconds": 0.0,
+    "terminal_evaluation_seconds": 0.18815821001771837,
+    "weighted_reward": 6.563589096069336,
+    "weighted_alignment": 0.25788021087646484,
+    "final_ess": 1.0,
+    "initial_ancestors": 1,
+    "chosen": 0,
+    "candidate_rewards": [
+      6.563589096069336
+    ],
+    "weights": [
+      1.0
+    ],
+    "steps": []
+  },
+  {
+    "prompt": "cafe",
+    "seed": 56001,
+    "method": "terminal-n4",
+    "reward": 7.069089889526367,
+    "clip_alignment": 0.2849769592285156,
+    "seconds": 4.5616901780012995,
+    "guidance_queries": 0,
+    "evaluation_queries": 4,
+    "all_queries": 4,
+    "score_forwards": 80,
+    "vjp_calls": 0,
+    "reward_seconds": 0.0,
+    "terminal_evaluation_seconds": 0.57244170201011,
+    "weighted_reward": 6.899659988738218,
+    "weighted_alignment": 0.27532076742476685,
+    "final_ess": 2.1739501301742563,
+    "initial_ancestors": 4,
+    "chosen": 1,
+    "candidate_rewards": [
+      6.5811052322387695,
+      7.069089889526367,
+      6.321828842163086,
+      6.693634986877441
+    ],
+    "weights": [
+      0.12557874194799953,
+      0.6387725932917913,
+      0.05291455030757685,
+      0.18273411445263243
+    ],
+    "steps": []
+  },
+  {
+    "prompt": "cafe",
+    "seed": 56001,
+    "method": "point-smc-n4",
+    "reward": 7.069089889526367,
+    "clip_alignment": 0.2849769592285156,
+    "seconds": 6.685617116047069,
+    "guidance_queries": 12,
+    "evaluation_queries": 4,
+    "all_queries": 16,
+    "score_forwards": 92,
+    "vjp_calls": 0,
+    "reward_seconds": 1.5884936689399183,
+    "terminal_evaluation_seconds": 0.5726943610934541,
+    "weighted_reward": 7.0906659411411095,
+    "weighted_alignment": 0.27801318771394995,
+    "final_ess": 3.615695390643121,
+    "initial_ancestors": 2,
+    "chosen": 1,
+    "candidate_rewards": [
+      7.120044708251953,
+      7.069089889526367,
+      7.286775588989258,
+      6.693634986877441
+    ],
+    "weights": [
+      0.2233991339480635,
+      0.18850237649108625,
+      0.38944771200044903,
+      0.19865077756040123
+    ],
+    "steps": [
+      {
+        "index": 10,
+        "ess": 2.963210373771276,
+        "resampled": false,
+        "initial_ancestors": 4
+      },
+      {
+        "index": 14,
+        "ess": 2.5099586746555578,
+        "resampled": false,
+        "initial_ancestors": 4
+      },
+      {
+        "index": 18,
+        "ess": 1.9273169401805483,
+        "resampled": true,
+        "initial_ancestors": 2
+      }
+    ]
+  },
+  {
+    "prompt": "cafe",
+    "seed": 56001,
+    "method": "future2-smc-n4",
+    "reward": 7.069089889526367,
+    "clip_alignment": 0.2849769592285156,
+    "seconds": 15.197776173939928,
+    "guidance_queries": 24,
+    "evaluation_queries": 4,
+    "all_queries": 28,
+    "score_forwards": 224,
+    "vjp_calls": 0,
+    "reward_seconds": 3.15010619093664,
+    "terminal_evaluation_seconds": 0.5535657100845128,
+    "weighted_reward": 6.920126497097451,
+    "weighted_alignment": 0.27552243233194784,
+    "final_ess": 3.7200229856119047,
+    "initial_ancestors": 2,
+    "chosen": 1,
+    "candidate_rewards": [
+      7.061201095581055,
+      7.069089889526367,
+      6.846695899963379,
+      6.693634986877441
+    ],
+    "weights": [
+      0.2735735725918201,
+      0.2808628774132647,
+      0.13382771596230078,
+      0.3117358340326143
+    ],
+    "steps": [
+      {
+        "index": 10,
+        "ess": 2.070639559773832,
+        "resampled": false,
+        "initial_ancestors": 4
+      },
+      {
+        "index": 14,
+        "ess": 1.6002330566817626,
+        "resampled": true,
+        "initial_ancestors": 2
+      },
+      {
+        "index": 18,
+        "ess": 3.3184035360964184,
+        "resampled": false,
+        "initial_ancestors": 2
+      }
+    ]
+  }
+]

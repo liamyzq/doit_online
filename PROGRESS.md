@@ -41,8 +41,9 @@ established a useful real-critic improvement. Complete costs are 10,506,240
 actor and 6,881,280 Q evaluations, including references.
 
 The next bounded experiment moves to images, where decoder/reward cost changes
-the tradeoff. Exp-056 checks a sparse particle adapter against the existing
-unguided sampler and measures memory. Compare terminal importance resampling,
+the tradeoff. Exp-056 passed exact N1 equivalence and all cost checks (50 reward queries,
+436 actor evaluations), with 5730 MiB peak reserved memory. Exp-057 locks seven
+settings across eight prompts and two fresh seeds, 112 delivered images. Compare terminal importance resampling,
 delayed point-potential SMC, and two-full-future uncertainty SMC against the
 established MC8 and selected MC32 image settings. Intermediate resampling is
 restricted to steps 10/14/18 to avoid the early proxy collapse observed in the

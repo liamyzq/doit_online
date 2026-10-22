@@ -1,0 +1,13 @@
+{
+  "images": 5,
+  "reward_queries": 50,
+  "score_forwards": 436,
+  "vjp_calls": 0,
+  "checks": {
+    "n1_reward_error": 0.0,
+    "n1_alignment_error": 0.0,
+    "cost_conditions_passed": 4
+  },
+  "peak_allocated_mib": 4737.57421875,
+  "peak_reserved_mib": 5730.0
+}

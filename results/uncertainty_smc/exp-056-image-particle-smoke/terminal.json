@@ -1,0 +1,15 @@
+{
+  "experiment_id": "exp-056-image-particle-smoke",
+  "commit": "c6aca331daa87b9ee39b8a60e95d5bae3bb83310",
+  "config": "/home/mlw0719/doit_uncertainty/configs/uncertainty_smc/exp-056-image-particle-smoke.json",
+  "machine": "orion",
+  "gpu": 1,
+  "pid": 2212886,
+  "path": "/home/mlw0719/doit_uncertainty_storage/runs/exp-056-image-particle-smoke",
+  "log_path": "/home/mlw0719/doit_uncertainty_storage/artifacts/exp-056-image-particle-smoke.log",
+  "status": "completed",
+  "timestamp": "2026-10-22T05:21:03.946422+00:00",
+  "started_at": "2026-10-22T05:19:48.943487+00:00",
+  "returncode": 0,
+  "finished_at": "2026-10-22T05:21:03.946459+00:00"
+}

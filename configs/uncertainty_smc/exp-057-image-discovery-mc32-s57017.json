@@ -1,0 +1,43 @@
+{
+  "id": "exp-057-image-discovery-mc32-s57017",
+  "mode": "uncertainty_image",
+  "purpose": "Locked eight-prompt image discovery: terminal importance resampling and sparse point/full-future SMC versus historical MC8/MC32 controls. Compare delivered-image aesthetic reward, alignment, diversity, visual quality and measured wall time with all candidate costs.",
+  "image": {
+    "size": 512,
+    "steps": 20,
+    "guided_steps": 10,
+    "proxy": "euler",
+    "reward_batch": 2,
+    "future_batch": 2,
+    "particle_batch": 1
+  },
+  "prompts": [
+    "bernese",
+    "formula1",
+    "airplane",
+    "labrador",
+    "lighthouse",
+    "cafe",
+    "orchid",
+    "mountain"
+  ],
+  "seeds": [
+    57017
+  ],
+  "methods": [
+    {
+      "name": "mc32",
+      "estimator": {
+        "kind": "mc",
+        "antithetic": true,
+        "samples": 32,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.6,
+        "reward_offset": 6.0,
+        "gamma": 4.0
+      }
+    }
+  ]
+}
