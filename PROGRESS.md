@@ -6,10 +6,11 @@ The user opened a new uncertainty/SMC/FORS study on 2026-10-21, with toy,
 image, and RL experiments authorized. The active branch is now
 `codex/doit-uncertainty-smc`; its protocol is
 [experiments/uncertainty_smc/PLAN.md](experiments/uncertainty_smc/PLAN.md).
-No new improvement is established yet. The first step separates posterior
-approximation, local sampling, and finite-particle correction on analytic
-models before selecting a bounded real-model experiment. The older studies
-below retain their conclusions at their tested budgets.
+The completed study establishes a bounded image improvement from terminal
+importance resampling N4/tau0.3, an existing baseline. The tested posterior
+uncertainty, FORS and intermediate-particle combinations do not establish a
+cost-controlled improvement. The older studies below retain their conclusions
+at their tested budgets.
 
 The first uncertainty waves are complete. Exp-047-r2 passed the analytic
 identities; the first check failed from insufficient numerical quadrature, and
@@ -29,7 +30,7 @@ mean bias. Exp-052/053 therefore compare uncertainty against both point and
 calibrated-mean controls, as well as larger bootstrap populations. The primary
 metric is fixed-target projected CDF error with independent reference
 uncertainty reported. This is an offline critic-distribution study; simulator
-returns and new image outcomes remain untested.
+returns remain untested. The image evidence is recorded below.
 
 Exp-055 completed 128 real-critic conditions at the terminal-calibrated
 temperatures. On the three states with reliable references, larger bootstrap
@@ -40,7 +41,7 @@ configurations at this budget; neither uncertainty nor grouped proposals has
 established a useful real-critic improvement. Complete costs are 10,506,240
 actor and 6,881,280 Q evaluations, including references.
 
-The next bounded experiment moves to images, where decoder/reward cost changes
+The next bounded experiment moved to images, where decoder/reward cost changes
 the tradeoff. Exp-056 passed exact N1 equivalence and all cost checks (50 reward queries,
 436 actor evaluations), with 5730 MiB peak reserved memory. Exp-057 locks seven
 settings across eight prompts and two fresh seeds, 112 delivered images. Compare terminal importance resampling,
@@ -58,9 +59,28 @@ were reviewed; N4 has no distinct new quality failure and its measured
 within-prompt embedding distance is not reduced. N8 and both sparse-SMC
 combinations gain reward but exceed the 0.005 alignment-loss gate; future2
 also exceeds MC8 time. Close those settings, preserving the positive reward
-observations. Exp-058 confirms only N4/tau0.3 against base, MC8 and selected
-MC32 on eight new seeds (256 images). This is a known importance-resampling
-baseline, not a novelty claim. No confirmed improvement exists yet.
+observations. Exp-058 confirmed only N4/tau0.3 against base, MC8 and selected
+MC32 on eight new seeds (256 images).
+
+Exp-058 completed all 32 jobs at `2c1416f`: 25,024 reward queries, 8,960 score
+forwards and 1,152 VJPs. N4 meets the locked aggregate criterion, with reward
+6.33180 versus MC8 6.15570, delta +0.17610 and 95% seed-block interval
+[0.00911, 0.30592]. Mean alignment improves by 0.002491; embedding distance
+increases 1.42%. N4 costs 4 reward queries, 80 score forwards and zero VJPs per
+image, versus MC8's 97/20/9, with measured time 8.89 versus 31.30 seconds.
+Shared-GPU timing is descriptive. N4's reward difference from selected MC32 is
+unresolved: +0.00552, interval [-0.16793, 0.16153].
+
+All 256 images were reviewed. N4 has no distinct new visual failure mode
+relative to the controls, but inherits base-model defects, including a missing
+lighthouse at seed59051 and malformed aircraft geometry. Labrador mean
+alignment drops 0.01423 despite the favorable overall mean. All failures remain
+included. This is a confirmed practical improvement on the eight fixed prompts
+from a known importance-resampling baseline; novelty, new-prompt generalization
+and simulator returns are unestablished. The goal is complete within that scope.
+See [the findings](experiments/uncertainty_smc/FINDINGS.md) and
+`results/uncertainty_smc/exp-058-analysis/summary.json`. The finite controller has
+exited, all artifacts were retrieved, and this study has no further queued run.
 
 Orion connectivity has recovered. Read-only inspection found no active project
 queue or run, and the old checkout remains clean at `d6728de`. Exp-039 actually

@@ -1,0 +1,9 @@
+{
+  "images": 8,
+  "reward_queries": 2312,
+  "score_forwards": 160,
+  "vjp_calls": 72,
+  "checks": {},
+  "peak_allocated_mib": 6248.3232421875,
+  "peak_reserved_mib": 7290.0
+}

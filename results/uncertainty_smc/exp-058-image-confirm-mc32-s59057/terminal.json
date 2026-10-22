@@ -1,0 +1,15 @@
+{
+  "experiment_id": "exp-058-image-confirm-mc32-s59057",
+  "commit": "2c1416fcd4bead5789fa5392ccdb769b99756c17",
+  "config": "/home/mlw0719/doit_uncertainty/configs/uncertainty_smc/exp-058-image-confirm-mc32-s59057.json",
+  "machine": "orion",
+  "gpu": 3,
+  "pid": 2593041,
+  "path": "/home/mlw0719/doit_uncertainty_storage/runs/exp-058-image-confirm-mc32-s59057",
+  "log_path": "/home/mlw0719/doit_uncertainty_storage/artifacts/exp-058-image-confirm-mc32-s59057.log",
+  "status": "completed",
+  "timestamp": "2026-10-22T06:05:05.046698+00:00",
+  "started_at": "2026-10-22T05:54:57.449304+00:00",
+  "returncode": 0,
+  "finished_at": "2026-10-22T06:05:05.046733+00:00"
+}

@@ -1,0 +1,15 @@
+{
+  "experiment_id": "exp-058-image-confirm-base-s59039",
+  "commit": "2c1416fcd4bead5789fa5392ccdb769b99756c17",
+  "config": "/home/mlw0719/doit_uncertainty/configs/uncertainty_smc/exp-058-image-confirm-base-s59039.json",
+  "machine": "orion",
+  "gpu": 3,
+  "pid": 2738089,
+  "path": "/home/mlw0719/doit_uncertainty_storage/runs/exp-058-image-confirm-base-s59039",
+  "log_path": "/home/mlw0719/doit_uncertainty_storage/artifacts/exp-058-image-confirm-base-s59039.log",
+  "status": "completed",
+  "timestamp": "2026-10-22T06:11:50.545943+00:00",
+  "started_at": "2026-10-22T06:11:15.175712+00:00",
+  "returncode": 0,
+  "finished_at": "2026-10-22T06:11:50.545956+00:00"
+}

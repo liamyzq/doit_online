@@ -2,8 +2,9 @@
 
 ## Current uncertainty study
 
-As of 2026-10-21, both Orion and Nebula are reachable and have no active project
-queue or run. Orion is clean at `d6728de`, Nebula at `6d1ceca`. The old Orion
+Recovery on 2026-10-21 found both Orion and Nebula reachable with no active
+project queue or run. The preserved Orion checkout was clean at `d6728de`,
+Nebula at `6d1ceca`. The old Orion
 exp-039 crash and five completed exp-041 probes have been recovered; see
 `results/recovery/2026-10-21/recovery.json`. Preserve those execution checkouts.
 
@@ -25,6 +26,13 @@ Exp-056 image particle execution passed N1 equivalence and exact cost checks,
 with 5730 MiB peak reserved memory. Image discovery also includes the existing
 MC8/MC32 paths (previously 7298 MiB), so retain an 11000 MiB job allowance plus
 2048 MiB reserve and at most one job per physical GPU 0--4.
+
+The new image confirmation exp-058 completed all 32 jobs and 256 images on
+2026-10-22 at `2c1416f`. Peak reserved memory was 7300 MiB. Its finite controller
+exited, all images/embeddings and records were retrieved, and no further run is
+queued in this study. The execution checkout remains at the run revision;
+later local commits contain analysis and documentation. Terminal N4 passed the
+bounded confirmation criterion documented in `experiments/uncertainty_smc/FINDINGS.md`.
 
 ## Authorized machine
 

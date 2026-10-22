@@ -1,0 +1,44 @@
+{
+  "id": "exp-058-image-confirm-mc8-s59011",
+  "mode": "uncertainty_image",
+  "purpose": "Confirm only the locked terminal-N4 candidate, which passed discovery reward, time, alignment and visual criteria, against historical MC8, selected MC32 and the base sampler. Eight independent seeds across eight fixed prompts; include every candidate cost and inspect all images. No parameter retuning from confirmation.",
+  "image": {
+    "size": 512,
+    "steps": 20,
+    "guided_steps": 10,
+    "proxy": "euler",
+    "reward_batch": 2,
+    "future_batch": 2,
+    "particle_batch": 1
+  },
+  "prompts": [
+    "bernese",
+    "formula1",
+    "airplane",
+    "labrador",
+    "lighthouse",
+    "cafe",
+    "orchid",
+    "mountain"
+  ],
+  "seeds": [
+    59011
+  ],
+  "methods": [
+    {
+      "name": "mc8",
+      "estimator": {
+        "kind": "mc",
+        "antithetic": true,
+        "samples": 8,
+        "warmup_samples": 32,
+        "warmup_steps": 1,
+        "refresh_every": 0,
+        "tau": 0.3,
+        "reward_offset": 6.0,
+        "gamma": 0.4
+      }
+    }
+  ],
+  "source_config": "configs/uncertainty_smc/exp-057-image-discovery-mc8-s57011.json"
+}

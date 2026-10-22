@@ -1,0 +1,15 @@
+{
+  "experiment_id": "exp-058-image-confirm-mc8-s59011",
+  "commit": "2c1416fcd4bead5789fa5392ccdb769b99756c17",
+  "config": "/home/mlw0719/doit_uncertainty/configs/uncertainty_smc/exp-058-image-confirm-mc8-s59011.json",
+  "machine": "orion",
+  "gpu": 1,
+  "pid": 2620260,
+  "path": "/home/mlw0719/doit_uncertainty_storage/runs/exp-058-image-confirm-mc8-s59011",
+  "log_path": "/home/mlw0719/doit_uncertainty_storage/artifacts/exp-058-image-confirm-mc8-s59011.log",
+  "status": "completed",
+  "timestamp": "2026-10-22T06:01:42.501217+00:00",
+  "started_at": "2026-10-22T05:57:39.464647+00:00",
+  "returncode": 0,
+  "finished_at": "2026-10-22T06:01:42.501259+00:00"
+}

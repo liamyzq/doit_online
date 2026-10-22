@@ -17,9 +17,14 @@ correction, with toy, image and RL experiments authorized. Start with its
 and their crash/completion records were recovered before new execution.
 
 The new toy and frozen real-critic experiments found no cost-controlled gain
-from the tested uncertainty combinations. Image discovery retained terminal
-importance resampling N4 for an independent eight-seed confirmation. This is
-an established baseline; confirmation is pending and novelty is not claimed.
+from the tested uncertainty combinations. Terminal importance resampling N4
+passes the locked image confirmation on eight fresh seeds and eight fixed
+prompts: reward +0.17610 versus MC8 (95% seed-block interval [0.00911, 0.30592]),
+4 instead of 97 reward queries, and 8.89 instead of 31.30 measured seconds per
+image. It uses 80 instead of 20 score forwards and no VJPs. Mean alignment and
+embedding distance do not decrease; individual prompt failures remain.
+This is an established baseline, not a novel uncertainty method. Shared-GPU
+timings and fixed-prompt intervals limit the claim; see the findings for details.
 The study uses separate Orion checkout/storage and preserves the older studies.
 Small results live under `results/uncertainty_smc/`.
 
