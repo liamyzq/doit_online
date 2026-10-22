@@ -81,11 +81,11 @@ class MixtureChain:
         return logsumexp(np.log(weights) + normal_logpdf(
             np.asarray(z)[..., None], means + np.asarray(delta)[..., None], variance), axis=-1)
 
-    def value(self, x, k, kind, rng=None, branches=2):
+    def value(self, x, k, kind, rng=None, branches=2, power=1.0):
         x = np.asarray(x)
         self.cost["value_evaluations"] += x.size
         if k == 0:
-            return self.log_reward(x)
+            return power * self.log_reward(x)
         if kind == "flat":
             return np.zeros_like(x)
         if kind in {"branch", "future"}:
@@ -93,22 +93,23 @@ class MixtureChain:
             end = k - 1 if kind == "branch" else 0
             for j in range(k, end, -1):
                 y = self.draw(self.kernel(y, j), rng)
-            values = self.value(y, end, "gaussian" if end else "point")
+            values = self.value(y, end, "gaussian" if end else "point", power=power)
             return logsumexp(values, axis=-1) - math.log(branches)
         weights, means, variance = self.posterior(x, k)
+        precision = power * self.precision
         if kind == "mixture":
             self.cost["analytic_component_integrals"] += means.size
-            denominator = 1 + self.precision * variance
-            logh = -0.5 * np.log(denominator) - 0.5 * self.precision * (means - self.target) ** 2 / denominator
+            denominator = 1 + precision * variance
+            logh = -0.5 * np.log(denominator) - 0.5 * precision * (means - self.target) ** 2 / denominator
             return logsumexp(np.log(weights) + logh, axis=-1)
         mean = np.sum(weights * means, axis=-1)
         if kind == "point":
-            return self.log_reward(mean)
+            return power * self.log_reward(mean)
         if kind == "gaussian":
             self.cost["analytic_component_integrals"] += x.size
             variance = variance + np.sum(weights * (means - mean[..., None]) ** 2, axis=-1)
-            denominator = 1 + self.precision * variance
-            return -0.5 * np.log(denominator) - 0.5 * self.precision * (mean - self.target) ** 2 / denominator
+            denominator = 1 + precision * variance
+            return -0.5 * np.log(denominator) - 0.5 * precision * (mean - self.target) ** 2 / denominator
         raise ValueError(kind)
 
     def target_parameters(self):

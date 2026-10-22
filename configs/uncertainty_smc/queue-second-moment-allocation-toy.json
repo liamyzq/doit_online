@@ -1,0 +1,6 @@
+[
+  {
+    "id": "exp-062-second-moment-allocation-toy",
+    "config": "configs/uncertainty_smc/exp-062-second-moment-allocation-toy.json"
+  }
+]

@@ -169,3 +169,39 @@ the base transition, does a conditional second moment allocate particles better
 than a first-moment continuation value? This tests the inference from exp-059
 that value accuracy alone is insufficient. It does not reuse the failed
 cross-observation real-critic bank or imply a general rejection of UC.
+
+## Exp-062: conditional second-moment allocation
+
+Let L = exp(R/tau) be the terminal weight. For one allocation pass followed by
+unchanged base continuations, selecting ancestor i with probability a_i gives
+a conditional second-moment term proportional to sum_i w_i^2 E[L_i^2]/a_i.
+Minimizing this term subject to sum_i a_i = 1 yields a_i proportional to
+w_i sqrt(E[L_i^2]). This motivates log psi = 0.5 log E[exp(2R/tau)], compared
+with the original log E[exp(R/tau)]. It is a conditional normalizing-constant
+variance rationale, not a proof of optimal finite-N CDF error across several
+systematic resampling steps. For self-normalized test-function estimates, the
+optimal allocation also depends on the centered test function.
+
+This principle is related to existing auxiliary particle filter theory:
+[Douc, Moulines and Olsson, section 4](https://arxiv.org/html/0709.3448#S4).
+Neither the square-root rule nor its composition with SMC is claimed as novel.
+The research question is whether cheap calibrated reward moments make this
+allocation useful under the project's actual budgets.
+
+Reuse the independent exp-059 calibration bank and report its original cost;
+do not pay for or pretend to regenerate it. Evaluate empirical and direct
+calibrated moments of order 1/2, analytic moments as diagnostics, point and
+mean-only controls, N8/N16, and ESS thresholds 0.5/1.0. The threshold ablation
+separates moment choice from more frequent resampling. Keep terminal
+populations N8/16/32/64. Run two new seeds 62011/62017 and 512 populations per
+condition (144 conditions). Intermediate moment order never changes the actual
+terminal target or base proposal.
+
+Before comparison, independent scalar integration checks the new squared
+terminal weight and outer square root, and a two-value empirical example
+checks the changed temperature/root calculation. A mismatch blocks comparison
+and requires a formula fix. Do not repeat the settled resampling checks.
+Advance only if second-moment UC improves CDF MSE by at least 20% over its
+first-moment counterpart and mean/point controls, with a favorable cost
+comparison and a result not explained solely by changing the ESS threshold.
+Any success requires separately locked fresh-seed confirmation.
