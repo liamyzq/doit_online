@@ -1,0 +1,481 @@
+{
+  "decision": "Close tested critic combinations at this budget: larger bootstrap populations beat them on all three reference-resolved states. Hopper row16 has insufficient reference ESS for a fine ranking.",
+  "comparisons": [
+    {
+      "task": "hopper-medium-v2",
+      "state_row": 16,
+      "reference_reliable_for_fine_ranking": false,
+      "methods": [
+        {
+          "method": "bootstrap-n8",
+          "cdf_mse": 0.1282623916521002,
+          "pooled_cdf_mse": 0.04583738917856847,
+          "reward_queries": 8.0,
+          "score_forwards": 120.0
+        },
+        {
+          "method": "bootstrap-n16",
+          "cdf_mse": 0.0873431761228539,
+          "pooled_cdf_mse": 0.024636021277935388,
+          "reward_queries": 16.0,
+          "score_forwards": 240.0
+        },
+        {
+          "method": "bootstrap-n32",
+          "cdf_mse": 0.0550069868462879,
+          "pooled_cdf_mse": 0.011439474313575431,
+          "reward_queries": 32.0,
+          "score_forwards": 480.0
+        },
+        {
+          "method": "bootstrap-n64",
+          "cdf_mse": 0.03832956302714388,
+          "pooled_cdf_mse": 0.00580917936507765,
+          "reward_queries": 64.0,
+          "score_forwards": 960.0
+        },
+        {
+          "method": "point-smc-n8",
+          "cdf_mse": 0.39544513876045295,
+          "pooled_cdf_mse": 0.26559627063088476,
+          "reward_queries": 128.0,
+          "score_forwards": 240.0
+        },
+        {
+          "method": "calibrated_point-smc-n8",
+          "cdf_mse": 0.447362616923406,
+          "pooled_cdf_mse": 0.30113084378004534,
+          "reward_queries": 128.0,
+          "score_forwards": 240.0
+        },
+        {
+          "method": "gaussian-smc-n8",
+          "cdf_mse": 0.29303620194357716,
+          "pooled_cdf_mse": 0.1625641717115336,
+          "reward_queries": 248.0,
+          "score_forwards": 240.0
+        },
+        {
+          "method": "point-smc-n16",
+          "cdf_mse": 0.4050587571526628,
+          "pooled_cdf_mse": 0.28905015595302563,
+          "reward_queries": 256.0,
+          "score_forwards": 480.0
+        },
+        {
+          "method": "calibrated_point-smc-n16",
+          "cdf_mse": 0.5305433582430148,
+          "pooled_cdf_mse": 0.4016349622242039,
+          "reward_queries": 256.0,
+          "score_forwards": 480.0
+        },
+        {
+          "method": "gaussian-smc-n16",
+          "cdf_mse": 0.2542214792607147,
+          "pooled_cdf_mse": 0.13277021406139478,
+          "reward_queries": 496.0,
+          "score_forwards": 480.0
+        },
+        {
+          "method": "point-group4-n8",
+          "cdf_mse": 0.44137829152287217,
+          "pooled_cdf_mse": 0.339590467868643,
+          "reward_queries": 488.0,
+          "score_forwards": 576.0
+        },
+        {
+          "method": "calibrated_point-group4-n8",
+          "cdf_mse": 0.5327358065258758,
+          "pooled_cdf_mse": 0.4164637940027597,
+          "reward_queries": 488.0,
+          "score_forwards": 576.0
+        },
+        {
+          "method": "gaussian-group4-n8",
+          "cdf_mse": 0.23937440645528954,
+          "pooled_cdf_mse": 0.1180421908586278,
+          "reward_queries": 944.0,
+          "score_forwards": 576.0
+        },
+        {
+          "method": "point-group8-n8",
+          "cdf_mse": 0.45964792512117414,
+          "pooled_cdf_mse": 0.3623786140681846,
+          "reward_queries": 968.0,
+          "score_forwards": 1024.0
+        },
+        {
+          "method": "branch2-uc2-group4-n4",
+          "cdf_mse": 0.16166417861692803,
+          "pooled_cdf_mse": 0.06522651642124969,
+          "reward_queries": 896.0,
+          "score_forwards": 940.0
+        },
+        {
+          "method": "gaussian-pilot4-n8",
+          "cdf_mse": 0.3131133745953615,
+          "pooled_cdf_mse": 0.1646223709459244,
+          "reward_queries": 1176.0,
+          "score_forwards": 688.0
+        }
+      ]
+    },
+    {
+      "task": "hopper-medium-v2",
+      "state_row": 20,
+      "reference_reliable_for_fine_ranking": true,
+      "methods": [
+        {
+          "method": "bootstrap-n8",
+          "cdf_mse": 0.029649147675261743,
+          "pooled_cdf_mse": 0.00018454499710639195,
+          "reward_queries": 8.0,
+          "score_forwards": 120.0
+        },
+        {
+          "method": "bootstrap-n16",
+          "cdf_mse": 0.014436790003595087,
+          "pooled_cdf_mse": 0.00012407349226953272,
+          "reward_queries": 16.0,
+          "score_forwards": 240.0
+        },
+        {
+          "method": "bootstrap-n32",
+          "cdf_mse": 0.007049812135619748,
+          "pooled_cdf_mse": 8.166246897552151e-05,
+          "reward_queries": 32.0,
+          "score_forwards": 480.0
+        },
+        {
+          "method": "bootstrap-n64",
+          "cdf_mse": 0.0035719708168699955,
+          "pooled_cdf_mse": 5.351424217697094e-05,
+          "reward_queries": 64.0,
+          "score_forwards": 960.0
+        },
+        {
+          "method": "point-smc-n8",
+          "cdf_mse": 0.03161604833063574,
+          "pooled_cdf_mse": 0.00040778891265503625,
+          "reward_queries": 128.0,
+          "score_forwards": 240.0
+        },
+        {
+          "method": "calibrated_point-smc-n8",
+          "cdf_mse": 0.03285561291439218,
+          "pooled_cdf_mse": 0.001610505141267585,
+          "reward_queries": 128.0,
+          "score_forwards": 240.0
+        },
+        {
+          "method": "gaussian-smc-n8",
+          "cdf_mse": 0.03584871205036027,
+          "pooled_cdf_mse": 0.000981979998055253,
+          "reward_queries": 248.0,
+          "score_forwards": 240.0
+        },
+        {
+          "method": "point-smc-n16",
+          "cdf_mse": 0.017933018867895948,
+          "pooled_cdf_mse": 0.0001622049147144209,
+          "reward_queries": 256.0,
+          "score_forwards": 480.0
+        },
+        {
+          "method": "calibrated_point-smc-n16",
+          "cdf_mse": 0.018097557655779327,
+          "pooled_cdf_mse": 0.0010953698557174124,
+          "reward_queries": 256.0,
+          "score_forwards": 480.0
+        },
+        {
+          "method": "gaussian-smc-n16",
+          "cdf_mse": 0.019218273286834887,
+          "pooled_cdf_mse": 0.0007487702868847858,
+          "reward_queries": 496.0,
+          "score_forwards": 480.0
+        },
+        {
+          "method": "point-group4-n8",
+          "cdf_mse": 0.030488848266553195,
+          "pooled_cdf_mse": 0.0006728714077013772,
+          "reward_queries": 488.0,
+          "score_forwards": 576.0
+        },
+        {
+          "method": "calibrated_point-group4-n8",
+          "cdf_mse": 0.030975913896698074,
+          "pooled_cdf_mse": 0.002266852526760116,
+          "reward_queries": 488.0,
+          "score_forwards": 576.0
+        },
+        {
+          "method": "gaussian-group4-n8",
+          "cdf_mse": 0.03433687494167269,
+          "pooled_cdf_mse": 0.0016518481048739975,
+          "reward_queries": 944.0,
+          "score_forwards": 576.0
+        },
+        {
+          "method": "point-group8-n8",
+          "cdf_mse": 0.029544430039034827,
+          "pooled_cdf_mse": 0.0004668485830506083,
+          "reward_queries": 968.0,
+          "score_forwards": 1024.0
+        },
+        {
+          "method": "branch2-uc2-group4-n4",
+          "cdf_mse": 0.05950521653867037,
+          "pooled_cdf_mse": 0.0014088592732148693,
+          "reward_queries": 896.0,
+          "score_forwards": 940.0
+        },
+        {
+          "method": "gaussian-pilot4-n8",
+          "cdf_mse": 0.06989044905273027,
+          "pooled_cdf_mse": 0.002145904006198704,
+          "reward_queries": 1176.0,
+          "score_forwards": 688.0
+        }
+      ]
+    },
+    {
+      "task": "halfcheetah-medium-v2",
+      "state_row": 16,
+      "reference_reliable_for_fine_ranking": true,
+      "methods": [
+        {
+          "method": "bootstrap-n8",
+          "cdf_mse": 0.070252783235289,
+          "pooled_cdf_mse": 0.004981213052131823,
+          "reward_queries": 8.0,
+          "score_forwards": 120.0
+        },
+        {
+          "method": "bootstrap-n16",
+          "cdf_mse": 0.04267728831858814,
+          "pooled_cdf_mse": 0.0013751816899460563,
+          "reward_queries": 16.0,
+          "score_forwards": 240.0
+        },
+        {
+          "method": "bootstrap-n32",
+          "cdf_mse": 0.025676943860790922,
+          "pooled_cdf_mse": 0.0005273023878380472,
+          "reward_queries": 32.0,
+          "score_forwards": 480.0
+        },
+        {
+          "method": "bootstrap-n64",
+          "cdf_mse": 0.015319457276678109,
+          "pooled_cdf_mse": 0.00013666148819875627,
+          "reward_queries": 64.0,
+          "score_forwards": 960.0
+        },
+        {
+          "method": "point-smc-n8",
+          "cdf_mse": 0.1723571346036666,
+          "pooled_cdf_mse": 0.07662472613933408,
+          "reward_queries": 128.0,
+          "score_forwards": 240.0
+        },
+        {
+          "method": "calibrated_point-smc-n8",
+          "cdf_mse": 0.14769019314698717,
+          "pooled_cdf_mse": 0.05377089602170973,
+          "reward_queries": 128.0,
+          "score_forwards": 240.0
+        },
+        {
+          "method": "gaussian-smc-n8",
+          "cdf_mse": 0.1719295652915171,
+          "pooled_cdf_mse": 0.055431901269446096,
+          "reward_queries": 248.0,
+          "score_forwards": 240.0
+        },
+        {
+          "method": "point-smc-n16",
+          "cdf_mse": 0.1547205767090858,
+          "pooled_cdf_mse": 0.07898445660822917,
+          "reward_queries": 256.0,
+          "score_forwards": 480.0
+        },
+        {
+          "method": "calibrated_point-smc-n16",
+          "cdf_mse": 0.12597710464381168,
+          "pooled_cdf_mse": 0.05306798803568562,
+          "reward_queries": 256.0,
+          "score_forwards": 480.0
+        },
+        {
+          "method": "gaussian-smc-n16",
+          "cdf_mse": 0.1619563813003381,
+          "pooled_cdf_mse": 0.05810089400772583,
+          "reward_queries": 496.0,
+          "score_forwards": 480.0
+        },
+        {
+          "method": "point-group4-n8",
+          "cdf_mse": 0.16928252039345254,
+          "pooled_cdf_mse": 0.07558140490220439,
+          "reward_queries": 488.0,
+          "score_forwards": 576.0
+        },
+        {
+          "method": "calibrated_point-group4-n8",
+          "cdf_mse": 0.14560205496661485,
+          "pooled_cdf_mse": 0.054392802120498275,
+          "reward_queries": 488.0,
+          "score_forwards": 576.0
+        },
+        {
+          "method": "gaussian-group4-n8",
+          "cdf_mse": 0.17269492490836663,
+          "pooled_cdf_mse": 0.05474421662313332,
+          "reward_queries": 944.0,
+          "score_forwards": 576.0
+        },
+        {
+          "method": "point-group8-n8",
+          "cdf_mse": 0.1680096204624746,
+          "pooled_cdf_mse": 0.07437631993494422,
+          "reward_queries": 968.0,
+          "score_forwards": 1024.0
+        },
+        {
+          "method": "branch2-uc2-group4-n4",
+          "cdf_mse": 0.16231707765942766,
+          "pooled_cdf_mse": 0.03435113731574539,
+          "reward_queries": 896.0,
+          "score_forwards": 940.0
+        },
+        {
+          "method": "gaussian-pilot4-n8",
+          "cdf_mse": 0.19866387196533455,
+          "pooled_cdf_mse": 0.05782473093118244,
+          "reward_queries": 1176.0,
+          "score_forwards": 688.0
+        }
+      ]
+    },
+    {
+      "task": "halfcheetah-medium-v2",
+      "state_row": 20,
+      "reference_reliable_for_fine_ranking": true,
+      "methods": [
+        {
+          "method": "bootstrap-n8",
+          "cdf_mse": 0.03140469133888103,
+          "pooled_cdf_mse": 0.000609310810052905,
+          "reward_queries": 8.0,
+          "score_forwards": 120.0
+        },
+        {
+          "method": "bootstrap-n16",
+          "cdf_mse": 0.0161879214204061,
+          "pooled_cdf_mse": 0.0001952601136007498,
+          "reward_queries": 16.0,
+          "score_forwards": 240.0
+        },
+        {
+          "method": "bootstrap-n32",
+          "cdf_mse": 0.00839185221861192,
+          "pooled_cdf_mse": 0.00010726958221873737,
+          "reward_queries": 32.0,
+          "score_forwards": 480.0
+        },
+        {
+          "method": "bootstrap-n64",
+          "cdf_mse": 0.004588580747117252,
+          "pooled_cdf_mse": 6.074617262539433e-05,
+          "reward_queries": 64.0,
+          "score_forwards": 960.0
+        },
+        {
+          "method": "point-smc-n8",
+          "cdf_mse": 0.1110334219222864,
+          "pooled_cdf_mse": 0.026153147353454448,
+          "reward_queries": 128.0,
+          "score_forwards": 240.0
+        },
+        {
+          "method": "calibrated_point-smc-n8",
+          "cdf_mse": 0.11237483310469419,
+          "pooled_cdf_mse": 0.02937848747732428,
+          "reward_queries": 128.0,
+          "score_forwards": 240.0
+        },
+        {
+          "method": "gaussian-smc-n8",
+          "cdf_mse": 0.12268408224675631,
+          "pooled_cdf_mse": 0.01679564125241073,
+          "reward_queries": 248.0,
+          "score_forwards": 240.0
+        },
+        {
+          "method": "point-smc-n16",
+          "cdf_mse": 0.11004301348124058,
+          "pooled_cdf_mse": 0.03771818704330154,
+          "reward_queries": 256.0,
+          "score_forwards": 480.0
+        },
+        {
+          "method": "calibrated_point-smc-n16",
+          "cdf_mse": 0.11647363152180407,
+          "pooled_cdf_mse": 0.04536655555012011,
+          "reward_queries": 256.0,
+          "score_forwards": 480.0
+        },
+        {
+          "method": "gaussian-smc-n16",
+          "cdf_mse": 0.11436476331147899,
+          "pooled_cdf_mse": 0.020576785354501796,
+          "reward_queries": 496.0,
+          "score_forwards": 480.0
+        },
+        {
+          "method": "point-group4-n8",
+          "cdf_mse": 0.11208483520365112,
+          "pooled_cdf_mse": 0.027635975149908405,
+          "reward_queries": 488.0,
+          "score_forwards": 576.0
+        },
+        {
+          "method": "calibrated_point-group4-n8",
+          "cdf_mse": 0.11622527981234512,
+          "pooled_cdf_mse": 0.032187341564439594,
+          "reward_queries": 488.0,
+          "score_forwards": 576.0
+        },
+        {
+          "method": "gaussian-group4-n8",
+          "cdf_mse": 0.12999419581822286,
+          "pooled_cdf_mse": 0.01905394873242016,
+          "reward_queries": 944.0,
+          "score_forwards": 576.0
+        },
+        {
+          "method": "point-group8-n8",
+          "cdf_mse": 0.11263578170743146,
+          "pooled_cdf_mse": 0.028066992592502643,
+          "reward_queries": 968.0,
+          "score_forwards": 1024.0
+        },
+        {
+          "method": "branch2-uc2-group4-n4",
+          "cdf_mse": 0.14061478477283157,
+          "pooled_cdf_mse": 0.022572631195464002,
+          "reward_queries": 896.0,
+          "score_forwards": 940.0
+        },
+        {
+          "method": "gaussian-pilot4-n8",
+          "cdf_mse": 0.1624011025183945,
+          "pooled_cdf_mse": 0.02037552778972682,
+          "reward_queries": 1176.0,
+          "score_forwards": 688.0
+        }
+      ]
+    }
+  ]
+}

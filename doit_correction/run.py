@@ -42,7 +42,14 @@ def main():
         torch.set_num_threads(int(os.environ.get("OMP_NUM_THREADS", 2)))
         torch.cuda.reset_peak_memory_stats()
         mode = config.get("mode", "image")
-        if mode == "uncertainty_terminal_calibration":
+        if mode == "uncertainty_image":
+            from .uncertainty_image import evaluate
+            from .image import ImageEngine
+            engine = ImageEngine(config["image"])
+            metadata["models"] = engine.provenance
+            write_json(output / "run.json", metadata)
+            metrics = evaluate(config, output, engine)
+        elif mode == "uncertainty_terminal_calibration":
             from .uncertainty_critic import calibrate_terminal
             metrics = calibrate_terminal(config, output)
         elif mode == "uncertainty_critic":

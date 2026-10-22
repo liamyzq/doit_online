@@ -31,6 +31,25 @@ metric is fixed-target projected CDF error with independent reference
 uncertainty reported. This is an offline critic-distribution study; simulator
 returns and new image outcomes remain untested.
 
+Exp-055 completed 128 real-critic conditions at the terminal-calibrated
+temperatures. On the three states with reliable references, larger bootstrap
+populations beat every tested uncertainty/SMC combination at lower or comparable
+actor cost and far fewer Q calls. Hopper row16 has reference ESS 11.21 out of
+32,768 and split CDF MSE 0.01284, so its fine ranking is unresolved. Close these
+configurations at this budget; neither uncertainty nor grouped proposals has
+established a useful real-critic improvement. Complete costs are 10,506,240
+actor and 6,881,280 Q evaluations, including references.
+
+The next bounded experiment moves to images, where decoder/reward cost changes
+the tradeoff. Exp-056 checks a sparse particle adapter against the existing
+unguided sampler and measures memory. Compare terminal importance resampling,
+delayed point-potential SMC, and two-full-future uncertainty SMC against the
+established MC8 and selected MC32 image settings. Intermediate resampling is
+restricted to steps 10/14/18 to avoid the early proxy collapse observed in the
+critic study. Terminal resampling is an established baseline, not a novelty
+claim. Image reward gains require fresh seeds, alignment/diversity measures,
+measured cost and visual quality review.
+
 Orion connectivity has recovered. Read-only inspection found no active project
 queue or run, and the old checkout remains clean at `d6728de`. Exp-039 actually
 failed with a nonfinite Gaussian moment ratio after 31,744 saved rows; its total

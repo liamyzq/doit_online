@@ -176,3 +176,34 @@ same locked methods, discovery rows, seeds, repetitions, and reference budget
 at those temperatures. No method uses discovery rewards to select tau. A
 reference that is too concentrated to resolve the candidate differences will
 be reported as unresolved rather than used to claim an improvement.
+
+## Sparse image particles after critic closure
+
+Exp-055 fails the cost criterion on all three reference-resolved states.
+Hopper row16 is reference-limited (ESS 11.21 / 32,768), not a positive result.
+Close the tested critic configurations. Sparse image SMC now uses the existing
+20-step Euler kernel, fixed tau 0.3, and no displaced Gaussian proposals.
+Initial potential is one. Only states at indices 10/14/18 receive intermediate
+potentials, followed by the actual terminal aesthetic reward. Each update uses
+new log potential minus the cached parent log potential; systematic resampling
+at ESS < N/2 carries that cache and ancestry. The last deterministic map is
+unchanged. Select one final image by its normalized weight, never by argmax.
+
+Point potentials evaluate the current clean estimate x - sigma*epsilon.
+The uncertainty alternative averages exp(reward/tau) over two independent full
+base continuations at each checkpoint. Those random realized values are cached.
+This avoids imposing an uncalibrated high-dimensional Gaussian residual model.
+It pays and records every continuation score, decoder, and reward call.
+Terminal-only N=4/8 is the known importance-resampling comparator. MC8 at
+tau0.3/gamma0.4 and historical selected MC32 at tau0.6/gamma4 remain the
+endpoint controls. Their temperatures are their established settings; the
+comparison concerns output quality and cost, not equality of their path targets.
+
+Exp-056 is a cafe-only execution smoke. It must reproduce the established
+unguided output at N=1, match exact query and actor counts for all new paths,
+and provide finite normalized terminal weights and peak memory. Failure blocks
+image discovery and triggers adapter repair. Discovery will use all eight
+standard prompts and fresh seeds 57011/57017, followed by locked confirmation
+on new seeds if a method improves reward at comparable measured cost without
+material alignment loss or new quality failures. All candidate-pool queries
+are charged per delivered image, including unselected candidates.

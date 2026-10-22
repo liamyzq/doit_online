@@ -1,0 +1,15 @@
+{
+  "experiment_id": "exp-055-critic-terminal-tilt-discovery",
+  "commit": "300c802ca887880ae246d5aece396e3d8a8211b5",
+  "config": "/home/mlw0719/doit_uncertainty/configs/uncertainty_smc/exp-055-critic-terminal-tilt-discovery.json",
+  "machine": "orion",
+  "gpu": 2,
+  "pid": 2108550,
+  "path": "/home/mlw0719/doit_uncertainty_storage/runs/exp-055-critic-terminal-tilt-discovery",
+  "log_path": "/home/mlw0719/doit_uncertainty_storage/artifacts/exp-055-critic-terminal-tilt-discovery.log",
+  "status": "completed",
+  "timestamp": "2026-10-22T05:14:32.739449+00:00",
+  "started_at": "2026-10-22T05:13:02.730591+00:00",
+  "returncode": 0,
+  "finished_at": "2026-10-22T05:14:32.739483+00:00"
+}
