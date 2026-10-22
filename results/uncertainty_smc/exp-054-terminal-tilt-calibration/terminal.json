@@ -1,0 +1,15 @@
+{
+  "experiment_id": "exp-054-terminal-tilt-calibration",
+  "commit": "9d4e46b197edcfbf1e526d0b6d6ac0d517ef651b",
+  "config": "/home/mlw0719/doit_uncertainty/configs/uncertainty_smc/exp-054-terminal-tilt-calibration.json",
+  "machine": "orion",
+  "gpu": 0,
+  "pid": 2052331,
+  "path": "/home/mlw0719/doit_uncertainty_storage/runs/exp-054-terminal-tilt-calibration",
+  "log_path": "/home/mlw0719/doit_uncertainty_storage/artifacts/exp-054-terminal-tilt-calibration.log",
+  "status": "completed",
+  "timestamp": "2026-10-22T05:09:17.353643+00:00",
+  "started_at": "2026-10-22T05:09:07.353230+00:00",
+  "returncode": 0,
+  "finished_at": "2026-10-22T05:09:17.353668+00:00"
+}

@@ -1,0 +1,6 @@
+[
+  {
+    "id": "exp-055-critic-terminal-tilt-discovery",
+    "config": "configs/uncertainty_smc/exp-055-critic-terminal-tilt-discovery.json"
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "states": 8,
+  "score_forwards": 61440,
+  "reward_queries": 4096,
+  "temperatures": {
+    "hopper-medium-v2": 0.031159553132296444,
+    "halfcheetah-medium-v2": 0.07369107116716792
+  },
+  "peak_allocated_mib": 34.19189453125,
+  "peak_reserved_mib": 48.0
+}

@@ -18,6 +18,11 @@ determines memory allowance before concurrent new runs. The user's latest
 authorization includes bounded RL experiments independently of image success;
 simulator execution still requires a working isolated simulator environment.
 
+The new batched critic smoke exp-052 passed all 32 conditions with 48 MiB
+peak reserved memory. Subsequent critic-only queues retain a conservative
+4096 MiB allowance plus 2048 MiB free reserve and at most one job per GPU.
+Image particle execution has not yet been smoked under this new study.
+
 ## Authorized machine
 
 - SSH alias: `orion`, user `mlw0719`; it connects through Quest.

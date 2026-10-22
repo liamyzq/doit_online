@@ -163,3 +163,16 @@ cost controls. Confirmation will use new observation rows from 32 onward and
 new seeds, with a locked method and a target of at least 20% lower primary
 error at a comparable stated cost. No simulator or image success follows from
 an offline critic-distribution result.
+
+Exp-052 passed all 32 execution conditions with exact expected cost counts and
+48 MiB peak reserved memory. At the historical proxy temperatures its 512-path
+reference ESS was 509--511: the terminal target was almost the base sampler.
+Exp-053 therefore remains unlaunched. Exp-054 measured terminal Q variation on
+calibration rows only, at a cost of 61,440 actor and 4,096 Q evaluations, and
+fixed tau to half the median within-state terminal Q standard deviation.
+The resulting temperatures are 0.0311595531 (Hopper) and 0.0736910712
+(HalfCheetah). This defines a new, explicitly named target. Exp-055 retains the
+same locked methods, discovery rows, seeds, repetitions, and reference budget
+at those temperatures. No method uses discovery rewards to select tau. A
+reference that is too concentrated to resolve the candidate differences will
+be reported as unresolved rather than used to claim an improvement.

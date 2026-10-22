@@ -1,0 +1,5 @@
+/home/mlw0719/doob_transform/test/Doob_training_free_adaptation/diffusion_SDE/schedule.py:5: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  t = torch.tensor(t, device=device)
+/home/mlw0719/doob_transform/test/Doob_training_free_adaptation/diffusion_SDE/schedule.py:5: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  t = torch.tensor(t, device=device)
+{"states": 8, "score_forwards": 61440, "reward_queries": 4096, "temperatures": {"hopper-medium-v2": 0.031159553132296444, "halfcheetah-medium-v2": 0.07369107116716792}, "peak_allocated_mib": 34.19189453125, "peak_reserved_mib": 48.0}
