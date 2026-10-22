@@ -11,7 +11,7 @@ from PIL import Image, ImageDraw
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--prefix', required=True)
+    parser.add_argument('--queue', required=True)
     parser.add_argument('--output', required=True)
     parser.add_argument('--confirmation', action='store_true')
     args = parser.parse_args()
@@ -19,12 +19,19 @@ def main():
     output.mkdir(parents=True, exist_ok=True)
     root = Path('results/uncertainty_smc')
     data = {}
-    for folder in sorted(root.glob(args.prefix + '*')):
-        if not folder.is_dir():
-            continue
+    queue = json.loads(Path(args.queue).read_text())
+    for job in queue:
+        folder = root / job['id']
+        config = json.loads(Path(job['config']).read_text())
         if json.loads((folder / 'run.json').read_text())['status'] != 'completed':
             raise ValueError(f'Incomplete experiment: {folder}')
-        for row in json.loads((folder / 'images.json').read_text()):
+        image_rows = json.loads((folder / 'images.json').read_text())
+        expected = {(method['name'], prompt, seed) for method in config['methods']
+                    for prompt in config['prompts'] for seed in config['seeds']}
+        actual = {(row['method'], row['prompt'], row['seed']) for row in image_rows}
+        if actual != expected or len(image_rows) != len(expected):
+            raise ValueError(f'Incomplete configured image coverage: {folder}')
+        for row in image_rows:
             method = row['method']
             key = row['prompt'], row['seed']
             row['directory'] = str(folder / method / key[0] / str(key[1]))
@@ -67,7 +74,7 @@ def main():
                 comparisons[field] = result
             summary['comparisons'][comparator] = comparisons
         summaries[method] = summary
-    result = {'prefix': args.prefix, 'seeds': seeds, 'prompts': prompts, 'confirmation': args.confirmation,
+    result = {'queue': args.queue, 'seeds': seeds, 'prompts': prompts, 'confirmation': args.confirmation,
               'interval_scope': 'Seed-block bootstrap conditional on these fixed prompts; no discovery interval from two seeds.',
               'groups': summaries,
               'total_queries': sum(row['all_queries'] for records in data.values() for row in records.values()),
