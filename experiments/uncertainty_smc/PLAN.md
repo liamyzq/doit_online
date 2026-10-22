@@ -116,3 +116,50 @@ values at M=4/8, N=4/8/16, including bootstrap particle counts matched to the
 number of base transition samples. The extension is motivated by observed
 pilot cost and finite-pool noise; it is not a claim that candidate selection
 alone is new. A finite-pool weight identity is added before formal execution.
+
+## Real-critic discovery contract
+
+Exp-050's grouped update reduces fixed-N error, but bootstrap with more
+particles wins at the same number of toy transition samples. This is not an
+efficiency success. Gaussian uncertainty still helps some fixed-N comparisons;
+branching remains expensive. Continue to real models, whose actor and reward
+costs differ from analytic arithmetic, with explicit larger-bootstrap controls.
+
+Exp-051 calibrated finite-sampler residuals using only real observation rows
+0/4/8/12, 128 trajectories per row per task. Both new batched adapters match
+the validated scalar transition within 1.2e-7. The 15,372 actor evaluations
+include this check. Peak reserved memory is 46 MiB. Early residual RMS is about
+1.36 on both tasks and includes substantial mean bias; therefore covariance
+must be compared to a calibrated-mean-only ablation.
+
+Exp-052 is a four-repeat execution smoke with a small reference, not research
+evidence. It detects batched particle shape errors, invalid cached-potential
+resampling, nonfinite weights, and actual memory use in the changed paths;
+failure blocks exp-053. Exp-053 then locks observation rows 16/20, seeds
+53011/53017, 128 independent particle populations per condition, and 32,768
+independent base reference paths per state. These are distribution experiments
+on frozen real actors/critics, not simulator return evaluations.
+
+The target is the source actor's finite Gaussian chain tilted by the actual
+terminal twin-Q minimum at the previously calibrated task temperature.
+Observations and terminal actions remain raw. There is no final best-of-N
+selection. Primary error is mean squared weighted empirical CDF discrepancy
+along coordinate axes and four fixed random projections, at nine base-reference
+quantiles per projection. Report split-reference disagreement and ESS to expose
+reference uncertainty. Report pooled error separately from per-population MSE.
+The Q mean is a secondary target moment; maximizing it is not this objective.
+
+Compare bootstrap N=8/16/32/64, point/calibrated-point/uncertainty SMC N=8/16,
+grouped candidates, one conditional Gaussian pilot proposal, and the bounded
+branch2-plus-uncertainty combination. Gaussian values average exponential
+rewards over two antithetic residual draws. Initial and cached intermediate
+potentials remain included; all terminal values are the actual Q/tau. Count
+every reference, calibration, pilot, branch, reward, and actor evaluation.
+Assess the calibration cost separately and amortized, never silently discard it.
+
+A candidate advances only if the observed CDF benefit is materially larger
+than reference disagreement and survives the relevant mean-only and measured
+cost controls. Confirmation will use new observation rows from 32 onward and
+new seeds, with a locked method and a target of at least 20% lower primary
+error at a comparable stated cost. No simulator or image success follows from
+an offline critic-distribution result.

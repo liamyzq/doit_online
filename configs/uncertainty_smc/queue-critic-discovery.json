@@ -1,0 +1,6 @@
+[
+  {
+    "id": "exp-053-critic-uncertainty-discovery",
+    "config": "configs/uncertainty_smc/exp-053-critic-uncertainty-discovery.json"
+  }
+]

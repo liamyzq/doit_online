@@ -1,0 +1,8 @@
+{
+  "tasks": 2,
+  "score_forwards": 15372,
+  "reward_queries": 0,
+  "batch_checks_passed": 2,
+  "peak_allocated_mib": 32.63525390625,
+  "peak_reserved_mib": 46.0
+}

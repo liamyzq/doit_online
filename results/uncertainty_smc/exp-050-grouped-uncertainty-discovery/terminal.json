@@ -1,0 +1,15 @@
+{
+  "experiment_id": "exp-050-grouped-uncertainty-discovery",
+  "commit": "7b682fc7b392d4492f08575341f51cd674bbbf1f",
+  "config": "/home/mlw0719/doit_uncertainty/configs/uncertainty_smc/exp-050-grouped-uncertainty-discovery.json",
+  "machine": "orion",
+  "gpu": 2,
+  "pid": 1862832,
+  "path": "/home/mlw0719/doit_uncertainty_storage/runs/exp-050-grouped-uncertainty-discovery",
+  "log_path": "/home/mlw0719/doit_uncertainty_storage/artifacts/exp-050-grouped-uncertainty-discovery.log",
+  "status": "completed",
+  "timestamp": "2026-10-22T04:56:58.180711+00:00",
+  "started_at": "2026-10-22T04:56:38.177188+00:00",
+  "returncode": 0,
+  "finished_at": "2026-10-22T04:56:58.180738+00:00"
+}

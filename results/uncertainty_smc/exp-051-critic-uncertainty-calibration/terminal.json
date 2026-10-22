@@ -1,0 +1,15 @@
+{
+  "experiment_id": "exp-051-critic-uncertainty-calibration",
+  "commit": "bde0df677797188a88939a97784c85274aa95bca",
+  "config": "/home/mlw0719/doit_uncertainty/configs/uncertainty_smc/exp-051-critic-uncertainty-calibration.json",
+  "machine": "orion",
+  "gpu": 1,
+  "pid": 1896549,
+  "path": "/home/mlw0719/doit_uncertainty_storage/runs/exp-051-critic-uncertainty-calibration",
+  "log_path": "/home/mlw0719/doit_uncertainty_storage/artifacts/exp-051-critic-uncertainty-calibration.log",
+  "status": "completed",
+  "timestamp": "2026-10-22T04:59:23.989420+00:00",
+  "started_at": "2026-10-22T04:59:08.988880+00:00",
+  "returncode": 0,
+  "finished_at": "2026-10-22T04:59:23.989447+00:00"
+}

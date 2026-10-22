@@ -1,0 +1,6 @@
+[
+  {
+    "id": "exp-052-critic-particle-smoke",
+    "config": "configs/uncertainty_smc/exp-052-critic-particle-smoke.json"
+  }
+]
