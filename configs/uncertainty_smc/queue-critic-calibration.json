@@ -1,0 +1,6 @@
+[
+  {
+    "id": "exp-051-critic-uncertainty-calibration",
+    "config": "configs/uncertainty_smc/exp-051-critic-uncertainty-calibration.json"
+  }
+]
