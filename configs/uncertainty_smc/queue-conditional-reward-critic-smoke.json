@@ -1,0 +1,6 @@
+[
+  {
+    "id": "exp-060-conditional-reward-critic-smoke",
+    "config": "configs/uncertainty_smc/exp-060-conditional-reward-critic-smoke.json"
+  }
+]

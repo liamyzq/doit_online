@@ -111,3 +111,39 @@ It must distinguish transfer of the value-prediction improvement from error in
 the continuation reference. Endpoint expansion is deferred until that result.
 Full per-seed comparisons and all stage costs are in
 `results/uncertainty_smc/exp-059-conditional-reward-toy/analysis.json`.
+
+## Exp-060/061: conditional real-critic values
+
+Reuse the validated 15-step actor and terminal-calibrated temperatures from
+exp-054. At indices 5/9/12, features comprise raw observation, current action,
+predicted clean action and its Q value. Each checkpoint has its own bank, with
+feature standardization fitted only on calibration data. Predictions share the
+same local neighbours for mean, Gaussian UC, empirical UC and direct regression.
+The earlier pooled-action Gaussian and independent future2 are controls.
+
+Exp-060 is a single-job execution smoke on both tasks: calibration rows 0/4,
+four anchors per row and eight futures; diagnostic row18, four anchors and 32
+reference futures. New feature-shape or nonfinite failures and incorrect cost
+accounting block the larger run. Expected costs per task are 1,336 actor and
+216 Q calls for calibration, then 2,656/444 for diagnostics. Measure peak memory
+before setting concurrency. Do not infer prediction performance from this smoke.
+
+After it passes, exp-061 calibrates on rows 0/2/4/6/8/10/12/14, with 16 anchors
+per row and 64 independent futures. It evaluates rows18/22, with 64 anchors and
+512 reference futures. Calibration, anchor propagation, reference and future2
+have independent random streams where they share a starting state. A fixed
+diagnostic feature/proxy evaluation is shared across the calibrated estimators;
+the total diagnostic cost includes that evaluation once. The full expected
+budget is 2,819,840 actor and 446,976 Q calls across both tasks. Prior pooled
+action calibration is reused as a historical control, with its original cost
+in exp-051; it is not a new data-matched fit.
+
+Primary prediction measures are centered log-value MSE and normalized-value KL,
+computed within each observation/checkpoint. Report independent half-reference
+disagreement and per-anchor importance ESS before ranking close results. A
+candidate warrants endpoint follow-up only if its errors improve materially
+(target 20%) over mean-only and point on resolved conditions and its comparison
+with direct learned values supports the extra construction. Accurate values
+alone still do not establish better finite-particle endpoints, novelty or
+simulator return. If the reference cannot distinguish the difference, report
+it as unresolved rather than treating either estimate as exact.

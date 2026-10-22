@@ -1,0 +1,6 @@
+[
+  {
+    "id": "exp-061-conditional-reward-critic-values",
+    "config": "configs/uncertainty_smc/exp-061-conditional-reward-critic-values.json"
+  }
+]

@@ -1,0 +1,57 @@
+{
+  "mode": "reward_calibration_critic",
+  "tasks": [
+    {
+      "name": "hopper-medium-v2",
+      "source": "/home/mlw0719/doob_transform/test/Doob_training_free_adaptation",
+      "states": "/home/mlw0719/doit_correction_storage/data/critic-states/hopper-medium-v2",
+      "actor": "models_rl/hopper-medium-v20large_actor/behavior_ckpt600.pth",
+      "critic": "models_rl/hopper-medium-v20large_actor/critic_ckpt100.pth",
+      "eta": 0.6,
+      "guidance_end_index": 8,
+      "steps": 15,
+      "tau": 0.031159553132296444
+    },
+    {
+      "name": "halfcheetah-medium-v2",
+      "source": "/home/mlw0719/doob_transform/test/Doob_training_free_adaptation",
+      "states": "/home/mlw0719/doit_correction_storage/data/critic-states/halfcheetah-medium-v2",
+      "actor": "models_rl/halfcheetah-medium-v20large_actor/behavior_ckpt600.pth",
+      "critic": "models_rl/halfcheetah-medium-v20large_actor/critic_ckpt100.pth",
+      "eta": 0.2,
+      "guidance_end_index": 10,
+      "steps": 15,
+      "tau": 0.07369107116716792
+    }
+  ],
+  "checkpoints": [
+    5,
+    9,
+    12
+  ],
+  "calibration_seed": 61001,
+  "diagnostic_seed": 61003,
+  "neighbours": 8,
+  "pooled_calibration_directory": "/home/mlw0719/doit_uncertainty_storage/runs/exp-051-critic-uncertainty-calibration",
+  "temperature_source": "exp-054-terminal-tilt-calibration at 9d4e46b",
+  "id": "exp-061-conditional-reward-critic-values",
+  "purpose": "Test transfer of conditional reward value-prediction improvements to independent real observations. Compare mean, Gaussian and empirical UC with point, learned-value regression, earlier pooled action Gaussian and independent future2. Check reference split uncertainty before ranking.",
+  "calibration_state_rows": [
+    0,
+    2,
+    4,
+    6,
+    8,
+    10,
+    12,
+    14
+  ],
+  "calibration_anchors_per_state": 16,
+  "calibration_futures": 64,
+  "diagnostic_state_rows": [
+    18,
+    22
+  ],
+  "diagnostic_anchors_per_state": 64,
+  "reference_futures": 512
+}
