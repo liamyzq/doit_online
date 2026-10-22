@@ -95,8 +95,8 @@ forwards and 288 VJPs. The complete contact sheets were visually reviewed.
 | Sparse future2 SMC N4 | 6.35862 | 0.276052 | 31.80 | 28 | 224 |
 
 Only terminal N4 passes the predeclared discovery gate: +0.15347 reward versus
-MC8, alignment loss 0.00185, less measured time, no diversity loss and no new
-severe image-quality failure. The other particle settings lose more than 0.005
+MC8, alignment loss 0.00185, less measured time, no diversity loss and no distinct new
+image-quality failure. The other particle settings lose more than 0.005
 alignment; full-future SMC also costs more time than MC8. Their positive reward
 results are real, but they fail the joint criterion. Close these settings at
 this budget. No confidence interval is inferred from the two discovery seeds.
@@ -106,3 +106,31 @@ eight new seeds and the same eight prompts (256 delivered images). Parameters
 will not be retuned from confirmation. Terminal importance resampling remains
 a known-method baseline; a favorable result would establish a useful project
 improvement, not novelty for uncertainty correction. Confirmation is pending.
+
+## Reproduction and records
+
+Configurations are under `configs/uncertainty_smc/`, implementation under
+`doit_correction/uncertainty_*.py`, and the analysis command is
+`scripts/analysis/uncertainty_images.py`. Read `COMPUTE.md` before remote use.
+Use `scripts/compute/uncertainty/sync.sh` only between finite queues; the remote
+checkout is `/home/mlw0719/doit_uncertainty` and storage is
+`/home/mlw0719/doit_uncertainty_storage`. The recorded run commit, config, PID,
+physical GPU, model revisions and environment are in each run's JSON records.
+
+For the discovery summary, after retrieving each complete run folder including
+PNGs and embeddings into `results/uncertainty_smc/<experiment-id>`, run:
+
+```sh
+python scripts/analysis/uncertainty_images.py \
+  --queue configs/uncertainty_smc/queue-image-discovery.json \
+  --output results/uncertainty_smc/exp-057-analysis
+```
+
+For confirmation, use `queue-image-confirmation.json`, output
+`results/uncertainty_smc/exp-058-analysis`, and add `--confirmation`.
+The analysis requires NumPy and Pillow. Discovery used an isolated local
+Python 3.9 environment with NumPy 2.0.2 and Pillow 11.3.0; this environment
+does not alter the frozen remote model environment. PNG outputs are retained
+locally and in remote storage; small metadata and embeddings are committed.
+The analysis requires the entire committed queue and all configured images,
+so a partial retrieval cannot silently become a complete comparison.

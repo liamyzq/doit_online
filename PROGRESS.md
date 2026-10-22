@@ -54,7 +54,7 @@ measured cost and visual quality review.
 Exp-057 completed 112 images. Only terminal importance resampling N4 passes
 the locked discovery criteria: reward 6.18440 versus MC8 6.03094, alignment
 0.281381 versus 0.283229, and mean time 9.21s versus 27.63s. All 112 outputs
-were reviewed; N4 has no distinct new severe quality failure and its measured
+were reviewed; N4 has no distinct new quality failure and its measured
 within-prompt embedding distance is not reduced. N8 and both sparse-SMC
 combinations gain reward but exceed the 0.005 alignment-loss gate; future2
 also exceeds MC8 time. Close those settings, preserving the positive reward

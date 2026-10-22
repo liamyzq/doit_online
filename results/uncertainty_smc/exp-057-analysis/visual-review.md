@@ -1,7 +1,7 @@
 # Discovery visual review
 
 Reviewed all 112 delivered images in the four complete contact sheets.
-Terminal N4 shows no distinct new severe texture, saturation or structural
+Terminal N4 shows no distinct new texture, saturation or structural
 failure relative to MC8. Its airplane seed57011 is a closer crop with lower
 text alignment; both are retained in the complete metrics and review rather
 than excluded. The cafe and lighthouse outputs remain clean. Normal SD1.5

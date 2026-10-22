@@ -8,15 +8,26 @@ The primary question is whether information from earlier steps reduces current
 correction error and improves generated samples at the same actual reward-query
 budget. Fitting error alone is not a success criterion.
 
-Research has reopened following an external audit of `c5e4311`. See the
-[audit follow-up protocol](docs/audit-followup.md) and current
-[research state](PROGRESS.md) for the active questions and new seed split.
-This branch, `codex/doit-guidance-reliability`, adds the user-authorized
-[guidance reliability exploration](docs/guidance-reliability.md) on Nebula while
-Orion remains unreachable. It fixes the reward vector before comparing raw,
-smoothed and regularized sensitivity. A read-only Orion monitor will report
-reconnection so the existing online-update runs can be recovered and continued
-on `codex/doit-correction`.
+The active branch is `codex/doit-uncertainty-smc`. The user opened a separate
+study of posterior uncertainty, local FORS sampling and strict particle
+correction, with toy, image and RL experiments authorized. Start with its
+[protocol](experiments/uncertainty_smc/PLAN.md),
+[current findings](experiments/uncertainty_smc/FINDINGS.md), and
+[research state](PROGRESS.md). Orion connectivity has recovered; prior jobs
+and their crash/completion records were recovered before new execution.
+
+The new toy and frozen real-critic experiments found no cost-controlled gain
+from the tested uncertainty combinations. Image discovery retained terminal
+importance resampling N4 for an independent eight-seed confirmation. This is
+an established baseline; confirmation is pending and novelty is not claimed.
+The study uses separate Orion checkout/storage and preserves the older studies.
+Small results live under `results/uncertainty_smc/`.
+
+Earlier research reopened after an external audit of `c5e4311`; its
+[audit follow-up protocol](docs/audit-followup.md) remains available. The
+previous `codex/doit-guidance-reliability` branch ran the authorized
+[guidance reliability exploration](docs/guidance-reliability.md) on Nebula
+during the Orion outage. Those historical findings remain valid.
 
 The bounded Nebula exploration is complete: the fixed-vector FP32 adjoint
 checks pass, but neither norm-matched shrinkage nor four-point smoothing shows
@@ -37,7 +48,7 @@ Start with [the final findings](docs/findings.md),
 [PROGRESS.md](PROGRESS.md), [the study protocol](docs/study.md), and
 [COMPUTE.md](COMPUTE.md). Experimental outcomes are in `experiments/results.tsv`;
 job events are in `jobs/jobs.jsonl`. Large artifacts live on the worker recorded
-in each result. The new branch's small outputs are in `results/reliability/`.
+in each result. The prior guidance-reliability branch's small outputs are in `results/reliability/`.
 The final aggregate JSON files and report image evidence are included in
 [`results/final/`](results/final/) for viewing directly on GitHub.
 Commands for running a committed configuration and analyzing paired image
@@ -46,8 +57,9 @@ The [estimator note](docs/estimators.md) explains the implemented moment
 identities, the biased EMA controls, and the costs of future sampling.
 
 The user authorized physical GPUs 0--4 on Orion and Nebula, including concurrent
-use with other users when free memory permits. Full RL scaling still requires
-an image decision; the audit separately authorizes bounded real-critic studies.
+use with other users when free memory permits. The latest study explicitly
+authorizes RL experiments independently of image success; simulator returns
+still require a validated isolated simulator environment.
 
 ## Sources
 
