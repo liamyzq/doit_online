@@ -1,0 +1,15 @@
+{
+  "experiment_id": "exp-080-joint-future-critic-discovery",
+  "commit": "6e9db3cc1527f33f2b6101ef8622d41d6fd47a48",
+  "config": "/home/mlw0719/doit_geometry/configs/joint_future/exp-080-joint-future-critic-discovery.json",
+  "machine": "orion",
+  "gpu": 0,
+  "pid": 4069281,
+  "path": "/home/mlw0719/doit_geometry_storage/runs/exp-080-joint-future-critic-discovery",
+  "log_path": "/home/mlw0719/doit_geometry_storage/artifacts/exp-080-joint-future-critic-discovery.log",
+  "status": "completed",
+  "timestamp": "2026-10-23T06:35:11.779232+00:00",
+  "started_at": "2026-10-23T06:32:11.776209+00:00",
+  "returncode": 0,
+  "finished_at": "2026-10-23T06:35:11.779256+00:00"
+}

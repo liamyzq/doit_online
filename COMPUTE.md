@@ -52,8 +52,8 @@ reference quadrature evaluations, with zero GPU tensor allocation. Exp-076
 completed all 128 exact toy conditions. It used 16,711,680 main reward
 evaluations, 7,798,784 direction-acquisition reward evaluations and 1,605,632
 oracle derivative evaluations (24,510,464 total reward evaluations), with zero
-GPU tensor allocation. No real-critic, image or simulator job was launched;
-await the main agent's toy gate review before any real-critic study.
+GPU tensor allocation. The main-agent review closed the paid-direction design
+at its locked toy gate; no real-critic, image or simulator job follows it.
 
 ## Joint future-noise coupling
 
@@ -62,9 +62,20 @@ exited and full output trees and logs retrieved. Exp-077 passed all 21 sign-map,
 exact-moment, constant-weight cancellation and repeat-alignment checks; it used
 655,360 toy reward evaluations and zero GPU tensor allocation. Exp-078 completed
 all 80 toy conditions with 15,728,640 reward evaluations and no direction
-acquisition queries; peak allocated/reserved memory was 0/0MiB. No real-critic,
-image or simulator run was launched. Await the main agent's gate review before
-any real-critic phase.
+acquisition queries; peak allocated/reserved memory was 0/0MiB. Exp-079 then
+passed its Hopper row25/index3 smoke at `6e9db3c`: all future-map, constant-
+guidance and preserved-rollout comparisons had zero discrepancy. It used 3,328
+reward queries, 37,317 actor forwards and 3 kernel-Jacobian VJPs; peak
+allocated/reserved memory was 33.16/40MiB. Its complete output tree and log are
+retrieved. Exp-080 then completed all 192 conditions across 12 Hopper contexts
+at `6e9db3c`: 3,145,728 reward queries, 28,311,596 actor forwards and 36
+kernel-Jacobian VJPs. Kernel Jacobian time was not separately instrumented.
+Peak allocated/reserved memory was 57.50/78MiB, with 158.19seconds reported
+elapsed time. The full raw output tree and log are retrieved. The main-agent
+review closes joint antithetic at the M32/M64 discovery gate. All finite
+controllers have exited; no worker or pending queue remains. No confirmation,
+image or simulator run follows. The execution checkout remains at `6e9db3c`;
+later commits contain the analysis and research records.
 
 ## Current uncertainty study
 

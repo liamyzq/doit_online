@@ -1,0 +1,254 @@
+[
+  {
+    "context_key": "context000",
+    "task": "hopper-medium-v2",
+    "state_row": 25,
+    "index": 3,
+    "seed": 79011,
+    "samples": 32,
+    "method": "independent_future",
+    "control": "shared_antithetic",
+    "mse_difference": 4.935481993159936,
+    "mc_se": 1.3575881709579252,
+    "mc_interval95": [
+      2.2746091780824025,
+      7.59635480823747
+    ],
+    "reference_block_differences": [
+      3.1747523806769435,
+      5.945862018715528
+    ],
+    "unit_gamma_displacement_difference": 3.087040863156473
+  },
+  {
+    "context_key": "context000",
+    "task": "hopper-medium-v2",
+    "state_row": 25,
+    "index": 3,
+    "seed": 79011,
+    "samples": 32,
+    "method": "independent_future",
+    "control": "random_paired_lhs",
+    "mse_difference": 4.652040725698164,
+    "mc_se": 1.7632175468110753,
+    "mc_interval95": [
+      1.1961343339484567,
+      8.107947117447871
+    ],
+    "reference_block_differences": [
+      3.7739641816398857,
+      5.155917638277512
+    ],
+    "unit_gamma_displacement_difference": 2.909754272673111
+  },
+  {
+    "context_key": "context000",
+    "task": "hopper-medium-v2",
+    "state_row": 25,
+    "index": 3,
+    "seed": 79011,
+    "samples": 32,
+    "method": "shared_antithetic",
+    "control": "random_paired_lhs",
+    "mse_difference": -0.28344126746177223,
+    "mc_se": 0.7877842451479524,
+    "mc_interval95": [
+      -1.827498387951759,
+      1.2606158530282143
+    ],
+    "reference_block_differences": [
+      0.5992118009629421,
+      -0.7899443804380154
+    ],
+    "unit_gamma_displacement_difference": -0.17728659048336226
+  },
+  {
+    "context_key": "context000",
+    "task": "hopper-medium-v2",
+    "state_row": 25,
+    "index": 3,
+    "seed": 79011,
+    "samples": 32,
+    "method": "random_paired_lhs",
+    "control": "shared_antithetic",
+    "mse_difference": 0.28344126746177223,
+    "mc_se": 0.7877842451479524,
+    "mc_interval95": [
+      -1.2606158530282143,
+      1.827498387951759
+    ],
+    "reference_block_differences": [
+      -0.5992118009629421,
+      0.7899443804380154
+    ],
+    "unit_gamma_displacement_difference": 0.17728659048336226
+  },
+  {
+    "context_key": "context000",
+    "task": "hopper-medium-v2",
+    "state_row": 25,
+    "index": 3,
+    "seed": 79011,
+    "samples": 32,
+    "method": "joint_antithetic",
+    "control": "shared_antithetic",
+    "mse_difference": 1.4869790011691493,
+    "mc_se": 1.2310410432563805,
+    "mc_interval95": [
+      -0.9258614436133563,
+      3.899819445951655
+    ],
+    "reference_block_differences": [
+      0.8437708260594894,
+      1.8560786561063916
+    ],
+    "unit_gamma_displacement_difference": 0.9300742958087028
+  },
+  {
+    "context_key": "context000",
+    "task": "hopper-medium-v2",
+    "state_row": 25,
+    "index": 3,
+    "seed": 79011,
+    "samples": 32,
+    "method": "joint_antithetic",
+    "control": "random_paired_lhs",
+    "mse_difference": 1.2035377337073774,
+    "mc_se": 1.853954945607255,
+    "mc_interval95": [
+      -2.4302139596828423,
+      4.837289427097597
+    ],
+    "reference_block_differences": [
+      1.4429826270224313,
+      1.066134275668376
+    ],
+    "unit_gamma_displacement_difference": 0.7527877053253408
+  },
+  {
+    "context_key": "context000",
+    "task": "hopper-medium-v2",
+    "state_row": 25,
+    "index": 3,
+    "seed": 79011,
+    "samples": 64,
+    "method": "independent_future",
+    "control": "shared_antithetic",
+    "mse_difference": 4.858089485967902,
+    "mc_se": 1.5994283792670125,
+    "mc_interval95": [
+      1.7232098626045573,
+      7.992969109331247
+    ],
+    "reference_block_differences": [
+      4.614250186239863,
+      4.998014637532274
+    ],
+    "unit_gamma_displacement_difference": 3.038633466972058
+  },
+  {
+    "context_key": "context000",
+    "task": "hopper-medium-v2",
+    "state_row": 25,
+    "index": 3,
+    "seed": 79011,
+    "samples": 64,
+    "method": "independent_future",
+    "control": "random_paired_lhs",
+    "mse_difference": 4.554996261728841,
+    "mc_se": 1.5255691335307726,
+    "mc_interval95": [
+      1.5648807600085268,
+      7.545111763449156
+    ],
+    "reference_block_differences": [
+      4.971007369839166,
+      4.316271751693842
+    ],
+    "unit_gamma_displacement_difference": 2.8490549881388745
+  },
+  {
+    "context_key": "context000",
+    "task": "hopper-medium-v2",
+    "state_row": 25,
+    "index": 3,
+    "seed": 79011,
+    "samples": 64,
+    "method": "shared_antithetic",
+    "control": "random_paired_lhs",
+    "mse_difference": -0.30309322423906115,
+    "mc_se": 0.3419673692013837,
+    "mc_interval95": [
+      -0.9733492678737732,
+      0.3671628193956509
+    ],
+    "reference_block_differences": [
+      0.3567571835993018,
+      -0.6817428858384326
+    ],
+    "unit_gamma_displacement_difference": -0.1895784788331836
+  },
+  {
+    "context_key": "context000",
+    "task": "hopper-medium-v2",
+    "state_row": 25,
+    "index": 3,
+    "seed": 79011,
+    "samples": 64,
+    "method": "random_paired_lhs",
+    "control": "shared_antithetic",
+    "mse_difference": 0.30309322423906115,
+    "mc_se": 0.3419673692013837,
+    "mc_interval95": [
+      -0.3671628193956509,
+      0.9733492678737732
+    ],
+    "reference_block_differences": [
+      -0.3567571835993018,
+      0.6817428858384326
+    ],
+    "unit_gamma_displacement_difference": 0.1895784788331836
+  },
+  {
+    "context_key": "context000",
+    "task": "hopper-medium-v2",
+    "state_row": 25,
+    "index": 3,
+    "seed": 79011,
+    "samples": 64,
+    "method": "joint_antithetic",
+    "control": "shared_antithetic",
+    "mse_difference": 7.104925767286217,
+    "mc_se": 2.139109804667322,
+    "mc_interval95": [
+      2.912270550138266,
+      11.29758098443417
+    ],
+    "reference_block_differences": [
+      1.5561953878330725,
+      10.289018488193829
+    ],
+    "unit_gamma_displacement_difference": 4.443982614809057
+  },
+  {
+    "context_key": "context000",
+    "task": "hopper-medium-v2",
+    "state_row": 25,
+    "index": 3,
+    "seed": 79011,
+    "samples": 64,
+    "method": "joint_antithetic",
+    "control": "random_paired_lhs",
+    "mse_difference": 6.801832543047157,
+    "mc_se": 2.138027076642764,
+    "mc_interval95": [
+      2.6112994728273398,
+      10.992365613266973
+    ],
+    "reference_block_differences": [
+      1.912952571432374,
+      9.607275602355395
+    ],
+    "unit_gamma_displacement_difference": 4.254404135975874
+  }
+]

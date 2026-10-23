@@ -1,0 +1,15 @@
+/home/mlw0719/doob_transform/test/Doob_training_free_adaptation/diffusion_SDE/schedule.py:5: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  t = torch.tensor(t, device=device)
+Completed context000: hopper-medium-v2 row41 index3; 16 conditions
+Completed context001: hopper-medium-v2 row41 index5; 32 conditions
+Completed context002: hopper-medium-v2 row41 index7; 48 conditions
+Completed context003: hopper-medium-v2 row45 index3; 64 conditions
+Completed context004: hopper-medium-v2 row45 index5; 80 conditions
+Completed context005: hopper-medium-v2 row45 index7; 96 conditions
+Completed context006: hopper-medium-v2 row49 index3; 112 conditions
+Completed context007: hopper-medium-v2 row49 index5; 128 conditions
+Completed context008: hopper-medium-v2 row49 index7; 144 conditions
+Completed context009: hopper-medium-v2 row53 index3; 160 conditions
+Completed context010: hopper-medium-v2 row53 index5; 176 conditions
+Completed context011: hopper-medium-v2 row53 index7; 192 conditions
+{"conditions": 192, "contexts": 12, "checks": {}, "reward_queries": 3145728, "score_forwards": 28311596, "actual_kernel_jacobian_vjp_calls": 36, "seconds": 158.19469263998326, "scope": "Fixed active-interval contexts; timing batches is not individual-call deployment timing; no simulator return claim", "peak_allocated_mib": 57.49609375, "peak_reserved_mib": 78.0}

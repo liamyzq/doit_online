@@ -1,0 +1,25 @@
+{
+  "commit": "6e9db3cc1527f33f2b6101ef8622d41d6fd47a48",
+  "config": "/home/mlw0719/doit_geometry/configs/joint_future/exp-079-joint-future-critic-smoke.json",
+  "experiment_id": "exp-079-joint-future-critic-smoke",
+  "pid": 3774922,
+  "cuda_visible_devices": "0",
+  "started_at": 1792736934.3838859,
+  "status": "completed",
+  "environment": {
+    "python": "3.12.9",
+    "torch": "2.6.0+cu124",
+    "cuda": "12.4",
+    "gpu": "NVIDIA RTX A6000",
+    "packages": {
+      "numpy": "1.26.4",
+      "diffusers": "0.32.2",
+      "transformers": "4.49.0",
+      "torchvision": "0.21.0",
+      "huggingface_hub": "0.36.0",
+      "safetensors": "0.8.0",
+      "h5py": "3.14.0"
+    }
+  },
+  "elapsed_seconds": 9.5628662109375
+}

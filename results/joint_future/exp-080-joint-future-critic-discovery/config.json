@@ -1,0 +1,54 @@
+{
+  "id": "exp-080-joint-future-critic-discovery",
+  "mode": "joint_future_critic",
+  "purpose": "Test the preselected joint antithetic coupling on four fresh Hopper observations; M32 displacement MSE is primary, with the locked 20 percent, three-of-four and reference-sensitivity gate.",
+  "tasks": [
+    {
+      "name": "hopper-medium-v2",
+      "source": "/home/mlw0719/doob_transform/test/Doob_training_free_adaptation",
+      "states": "/home/mlw0719/doit_correction_storage/data/critic-states/hopper-medium-v2",
+      "actor": "models_rl/hopper-medium-v20large_actor/behavior_ckpt600.pth",
+      "critic": "models_rl/hopper-medium-v20large_actor/critic_ckpt100.pth",
+      "eta": 0.6,
+      "guidance_end_index": 8,
+      "steps": 15,
+      "tau": 0.031159553132296444
+    }
+  ],
+  "batch": 2048,
+  "smoke": false,
+  "state_rows": [
+    41,
+    45,
+    49,
+    53
+  ],
+  "indices": [
+    3,
+    5,
+    7
+  ],
+  "path_seed": 80001,
+  "reference_seed": 80007,
+  "seeds": [
+    80011,
+    80017
+  ],
+  "samples": [
+    32,
+    64
+  ],
+  "repeats": 256,
+  "reference_blocks": 8,
+  "reference_block_samples": 8192,
+  "methods": [
+    "independent_future",
+    "shared_antithetic",
+    "random_paired_lhs",
+    "joint_antithetic"
+  ],
+  "controls": [
+    "shared_antithetic",
+    "random_paired_lhs"
+  ]
+}

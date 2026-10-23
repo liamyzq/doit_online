@@ -1,0 +1,12 @@
+{
+  "conditions": 192,
+  "contexts": 12,
+  "checks": {},
+  "reward_queries": 3145728,
+  "score_forwards": 28311596,
+  "actual_kernel_jacobian_vjp_calls": 36,
+  "seconds": 158.19469263998326,
+  "scope": "Fixed active-interval contexts; timing batches is not individual-call deployment timing; no simulator return claim",
+  "peak_allocated_mib": 57.49609375,
+  "peak_reserved_mib": 78.0
+}

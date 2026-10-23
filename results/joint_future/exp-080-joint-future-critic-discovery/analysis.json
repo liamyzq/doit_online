@@ -1,0 +1,674 @@
+{
+  "comparisons": [
+    {
+      "task": "hopper-medium-v2",
+      "samples": 32,
+      "method": "independent_future",
+      "observations": 4,
+      "fixed_contexts": 12,
+      "mean_guidance_mse": 7.062338579542805,
+      "mean_unit_gamma_displacement_mse": 3.0989651688388653,
+      "mean_queries_per_call": 32,
+      "mean_score_forwards_per_call": 289,
+      "comparisons": {
+        "shared_antithetic": {
+          "relative_displacement_mse_gain": -0.29478268142384456,
+          "displacement_mse_difference": 0.7055402232479956,
+          "conditional_mc_interval95": [
+            0.5858869975008985,
+            0.8251934489950927
+          ],
+          "reference_block_replacement_differences": [
+            0.8971716486746578,
+            0.9651883941841592,
+            0.9851948797870789,
+            1.121828201908358,
+            0.6801021322483851,
+            0.7780392145020271,
+            0.8232782857792221,
+            0.8059003773042743
+          ],
+          "reference_block_range": [
+            0.6801021322483851,
+            1.121828201908358
+          ],
+          "observation_displacement_differences": {
+            "41": 1.187514121132004,
+            "45": 0.3599432344082802,
+            "49": 0.09175663226744556,
+            "53": 1.1829469051842527
+          },
+          "observations_improved": 0
+        },
+        "random_paired_lhs": {
+          "relative_displacement_mse_gain": -0.27199298857151977,
+          "displacement_mse_difference": 0.6626583678720755,
+          "conditional_mc_interval95": [
+            0.5423437349435271,
+            0.782973000800624
+          ],
+          "reference_block_replacement_differences": [
+            0.9138032480110456,
+            0.9386539717350049,
+            0.9524478535161723,
+            1.0954400477587793,
+            0.652020595354842,
+            0.762174203886596,
+            0.8242361981325795,
+            0.8076252074461905
+          ],
+          "reference_block_range": [
+            0.652020595354842,
+            1.0954400477587793
+          ],
+          "observation_displacement_differences": {
+            "41": 1.1246020233273901,
+            "45": 0.36593890495974213,
+            "49": 0.093713466649282,
+            "53": 1.066379076551888
+          },
+          "observations_improved": 0
+        }
+      }
+    },
+    {
+      "task": "hopper-medium-v2",
+      "samples": 32,
+      "method": "shared_antithetic",
+      "observations": 4,
+      "fixed_contexts": 12,
+      "mean_guidance_mse": 5.174154893001759,
+      "mean_unit_gamma_displacement_mse": 2.3934249455908696,
+      "mean_queries_per_call": 32,
+      "mean_score_forwards_per_call": 289,
+      "comparisons": {
+        "random_paired_lhs": {
+          "relative_displacement_mse_gain": 0.017601172134356524,
+          "displacement_mse_difference": -0.04288185537592005,
+          "conditional_mc_interval95": [
+            -0.12327034178928542,
+            0.03750663103744533
+          ],
+          "reference_block_replacement_differences": [
+            0.01663159933638784,
+            -0.02653442244915431,
+            -0.03274702627090659,
+            -0.02638815414957883,
+            -0.028081536893543108,
+            -0.015865010615431264,
+            0.000957912353357468,
+            0.001724830141916222
+          ],
+          "reference_block_range": [
+            -0.03274702627090659,
+            0.01663159933638784
+          ],
+          "observation_displacement_differences": {
+            "41": -0.06291209780461386,
+            "45": 0.005995670551461877,
+            "49": 0.001956834381836449,
+            "53": -0.11656782863236465
+          },
+          "observations_improved": 2
+        }
+      }
+    },
+    {
+      "task": "hopper-medium-v2",
+      "samples": 32,
+      "method": "random_paired_lhs",
+      "observations": 4,
+      "fixed_contexts": 12,
+      "mean_guidance_mse": 5.261202688009769,
+      "mean_unit_gamma_displacement_mse": 2.4363068009667894,
+      "mean_queries_per_call": 32,
+      "mean_score_forwards_per_call": 289,
+      "comparisons": {
+        "shared_antithetic": {
+          "relative_displacement_mse_gain": -0.01791652395656529,
+          "displacement_mse_difference": 0.04288185537592005,
+          "conditional_mc_interval95": [
+            -0.03750663103744533,
+            0.12327034178928542
+          ],
+          "reference_block_replacement_differences": [
+            -0.01663159933638784,
+            0.02653442244915431,
+            0.03274702627090659,
+            0.02638815414957883,
+            0.028081536893543108,
+            0.015865010615431264,
+            -0.000957912353357468,
+            -0.001724830141916222
+          ],
+          "reference_block_range": [
+            -0.01663159933638784,
+            0.03274702627090659
+          ],
+          "observation_displacement_differences": {
+            "41": 0.06291209780461386,
+            "45": -0.005995670551461877,
+            "49": -0.001956834381836449,
+            "53": 0.11656782863236465
+          },
+          "observations_improved": 2
+        }
+      }
+    },
+    {
+      "task": "hopper-medium-v2",
+      "samples": 32,
+      "method": "joint_antithetic",
+      "observations": 4,
+      "fixed_contexts": 12,
+      "mean_guidance_mse": 7.138921684951069,
+      "mean_unit_gamma_displacement_mse": 3.126653295198424,
+      "mean_queries_per_call": 32,
+      "mean_score_forwards_per_call": 289,
+      "comparisons": {
+        "shared_antithetic": {
+          "relative_displacement_mse_gain": -0.30635109363186697,
+          "displacement_mse_difference": 0.7332283496075543,
+          "conditional_mc_interval95": [
+            0.6260898438029366,
+            0.840366855412172
+          ],
+          "reference_block_replacement_differences": [
+            0.9088701431139761,
+            1.022965161355888,
+            0.9801909344110071,
+            1.1354393742342723,
+            0.6885740557356289,
+            0.7903286317352666,
+            0.865572665092715,
+            0.8751693986020638
+          ],
+          "reference_block_range": [
+            0.6885740557356289,
+            1.1354393742342723
+          ],
+          "observation_displacement_differences": {
+            "41": 1.2597705961108836,
+            "45": 0.45258977686174606,
+            "49": 0.13858553463437512,
+            "53": 1.0819674908232126
+          },
+          "observations_improved": 0
+        },
+        "random_paired_lhs": {
+          "relative_displacement_mse_gain": -0.28335778316494764,
+          "displacement_mse_difference": 0.6903464942316343,
+          "conditional_mc_interval95": [
+            0.5769368035856018,
+            0.8037561848776668
+          ],
+          "reference_block_replacement_differences": [
+            0.9255017424503639,
+            0.9964307389067337,
+            0.9474439081401005,
+            1.1090512200846934,
+            0.6604925188420858,
+            0.7744636211198352,
+            0.8665305774460724,
+            0.87689422874398
+          ],
+          "reference_block_range": [
+            0.6604925188420858,
+            1.1090512200846934
+          ],
+          "observation_displacement_differences": {
+            "41": 1.1968584983062698,
+            "45": 0.458585447413208,
+            "49": 0.1405423690162116,
+            "53": 0.9653996621908479
+          },
+          "observations_improved": 0
+        }
+      }
+    },
+    {
+      "task": "hopper-medium-v2",
+      "samples": 64,
+      "method": "independent_future",
+      "observations": 4,
+      "fixed_contexts": 12,
+      "mean_guidance_mse": 6.483429502234071,
+      "mean_unit_gamma_displacement_mse": 2.872111938732464,
+      "mean_queries_per_call": 64,
+      "mean_score_forwards_per_call": 577,
+      "comparisons": {
+        "shared_antithetic": {
+          "relative_displacement_mse_gain": -0.21009506908234643,
+          "displacement_mse_difference": 0.4986521898959714,
+          "conditional_mc_interval95": [
+            0.3796553685014915,
+            0.6176490112904512
+          ],
+          "reference_block_replacement_differences": [
+            0.7589376646095977,
+            0.7472460234615681,
+            0.834225786743446,
+            0.9851771817149366,
+            0.4794181390028479,
+            0.711238013017721,
+            0.7052415851202744,
+            0.758011378139249
+          ],
+          "reference_block_range": [
+            0.4794181390028479,
+            0.9851771817149366
+          ],
+          "observation_displacement_differences": {
+            "41": 1.1941472013426904,
+            "45": 0.20560406223491146,
+            "49": 0.041227479491513924,
+            "53": 0.5536300165147698
+          },
+          "observations_improved": 0
+        },
+        "random_paired_lhs": {
+          "relative_displacement_mse_gain": -0.21100671801088766,
+          "displacement_mse_difference": 0.5004389364142039,
+          "conditional_mc_interval95": [
+            0.3830484201254276,
+            0.6178294527029802
+          ],
+          "reference_block_replacement_differences": [
+            0.7460236363502317,
+            0.7514478794501854,
+            0.7867789309386004,
+            0.9422825127804748,
+            0.45955206684789746,
+            0.6607002137821999,
+            0.7078499463185053,
+            0.7600793939825146
+          ],
+          "reference_block_range": [
+            0.45955206684789746,
+            0.9422825127804748
+          ],
+          "observation_displacement_differences": {
+            "41": 1.1546038732698178,
+            "45": 0.21035741256795165,
+            "49": 0.044714217015608786,
+            "53": 0.5920802428034373
+          },
+          "observations_improved": 0
+        }
+      }
+    },
+    {
+      "task": "hopper-medium-v2",
+      "samples": 64,
+      "method": "shared_antithetic",
+      "observations": 4,
+      "fixed_contexts": 12,
+      "mean_guidance_mse": 5.068331564414987,
+      "mean_unit_gamma_displacement_mse": 2.3734597488364924,
+      "mean_queries_per_call": 64,
+      "mean_score_forwards_per_call": 577,
+      "comparisons": {
+        "random_paired_lhs": {
+          "relative_displacement_mse_gain": -0.0007533696746921947,
+          "displacement_mse_difference": 0.001786746518232463,
+          "conditional_mc_interval95": [
+            -0.08106142643582093,
+            0.08463491947228585
+          ],
+          "reference_block_replacement_differences": [
+            -0.012914028259366004,
+            0.0042018559886172905,
+            -0.0474468558048456,
+            -0.04289466893446181,
+            -0.019866072154950457,
+            -0.05053779923552116,
+            0.0026083611982308016,
+            0.0020680158432655445
+          ],
+          "reference_block_range": [
+            -0.05053779923552116,
+            0.0042018559886172905
+          ],
+          "observation_displacement_differences": {
+            "41": -0.03954332807287273,
+            "45": 0.004753350333040199,
+            "49": 0.0034867375240948497,
+            "53": 0.03845022628866753
+          },
+          "observations_improved": 1
+        }
+      }
+    },
+    {
+      "task": "hopper-medium-v2",
+      "samples": 64,
+      "method": "random_paired_lhs",
+      "observations": 4,
+      "fixed_contexts": 12,
+      "mean_guidance_mse": 5.076145817700363,
+      "mean_unit_gamma_displacement_mse": 2.3716730023182597,
+      "mean_queries_per_call": 64,
+      "mean_score_forwards_per_call": 577,
+      "comparisons": {
+        "shared_antithetic": {
+          "relative_displacement_mse_gain": 0.0007528025360904467,
+          "displacement_mse_difference": -0.001786746518232463,
+          "conditional_mc_interval95": [
+            -0.08463491947228585,
+            0.08106142643582093
+          ],
+          "reference_block_replacement_differences": [
+            0.012914028259366004,
+            -0.0042018559886172905,
+            0.0474468558048456,
+            0.04289466893446181,
+            0.019866072154950457,
+            0.05053779923552116,
+            -0.0026083611982308016,
+            -0.0020680158432655445
+          ],
+          "reference_block_range": [
+            -0.0042018559886172905,
+            0.05053779923552116
+          ],
+          "observation_displacement_differences": {
+            "41": 0.03954332807287273,
+            "45": -0.004753350333040199,
+            "49": -0.0034867375240948497,
+            "53": -0.03845022628866753
+          },
+          "observations_improved": 3
+        }
+      }
+    },
+    {
+      "task": "hopper-medium-v2",
+      "samples": 64,
+      "method": "joint_antithetic",
+      "observations": 4,
+      "fixed_contexts": 12,
+      "mean_guidance_mse": 6.669482656782706,
+      "mean_unit_gamma_displacement_mse": 2.9590184745051094,
+      "mean_queries_per_call": 64,
+      "mean_score_forwards_per_call": 577,
+      "comparisons": {
+        "shared_antithetic": {
+          "relative_displacement_mse_gain": -0.24671104111020514,
+          "displacement_mse_difference": 0.585558725668617,
+          "conditional_mc_interval95": [
+            0.47810865760455035,
+            0.6930087937326836
+          ],
+          "reference_block_replacement_differences": [
+            0.791311610900933,
+            0.7592780522703589,
+            0.8803661721319628,
+            0.9887267734643025,
+            0.5726731801838193,
+            0.734945223068285,
+            0.724577349700985,
+            0.7156000178146508
+          ],
+          "reference_block_range": [
+            0.5726731801838193,
+            0.9887267734643025
+          ],
+          "observation_displacement_differences": {
+            "41": 1.1261227779861365,
+            "45": 0.2704361838097133,
+            "49": 0.08523127447569805,
+            "53": 0.8604446664029205
+          },
+          "observations_improved": 0
+        },
+        "random_paired_lhs": {
+          "relative_displacement_mse_gain": -0.24765027540168139,
+          "displacement_mse_difference": 0.5873454721868495,
+          "conditional_mc_interval95": [
+            0.4720304277486074,
+            0.7026605166250917
+          ],
+          "reference_block_replacement_differences": [
+            0.7783975826415671,
+            0.7634799082589762,
+            0.8329193163271171,
+            0.9458321045298406,
+            0.5528071080288689,
+            0.6844074238327638,
+            0.7271857108992158,
+            0.7176680336579162
+          ],
+          "reference_block_range": [
+            0.5528071080288689,
+            0.9458321045298406
+          ],
+          "observation_displacement_differences": {
+            "41": 1.0865794499132637,
+            "45": 0.2751895341427535,
+            "49": 0.0887180119997929,
+            "53": 0.898894892691588
+          },
+          "observations_improved": 0
+        }
+      }
+    }
+  ],
+  "discovery_gates": [
+    {
+      "task": "hopper-medium-v2",
+      "method": "joint_antithetic",
+      "checks": {
+        "shared_antithetic": {
+          "at_least20percent": false,
+          "at_least3of4_observations": false,
+          "conditional_mc_difference_resolved": false,
+          "all_reference_block_replacements_negative": false
+        },
+        "random_paired_lhs": {
+          "at_least20percent": false,
+          "at_least3of4_observations": false,
+          "conditional_mc_difference_resolved": false,
+          "all_reference_block_replacements_negative": false
+        }
+      },
+      "same_observations_improved_against_both": [],
+      "passes": false
+    }
+  ],
+  "eligible_for_independent_confirmation": [],
+  "reference_diagnostics": [
+    {
+      "task": "hopper-medium-v2",
+      "state_row": 41,
+      "index": 3,
+      "ess": 17.105034147587453,
+      "block_ess": [
+        8.977466459219983,
+        5.064375782502723,
+        14.15112368781478,
+        4.070405877665441,
+        16.070130471750343,
+        12.043528599463775,
+        13.58868634321748,
+        20.305266448276075
+      ]
+    },
+    {
+      "task": "hopper-medium-v2",
+      "state_row": 41,
+      "index": 5,
+      "ess": 24.824347173713125,
+      "block_ess": [
+        8.688378071461635,
+        3.179970735377339,
+        17.089210929252772,
+        6.891056212884774,
+        13.619366155719373,
+        9.816734090550275,
+        9.363568752078805,
+        4.706278726038373
+      ]
+    },
+    {
+      "task": "hopper-medium-v2",
+      "state_row": 41,
+      "index": 7,
+      "ess": 8.785098507290307,
+      "block_ess": [
+        41.23594318265798,
+        11.724978066577496,
+        13.916649561118266,
+        5.46134702320062,
+        23.565529142739628,
+        2.593853859133314,
+        10.163427425187894,
+        17.97957831925382
+      ]
+    },
+    {
+      "task": "hopper-medium-v2",
+      "state_row": 45,
+      "index": 3,
+      "ess": 9775.106430650745,
+      "block_ess": [
+        1397.0384922662258,
+        1492.0341762586343,
+        933.0761023980974,
+        813.4983162867721,
+        1317.5782077119507,
+        1617.087805432848,
+        1259.37110715968,
+        1414.539362650936
+      ]
+    },
+    {
+      "task": "hopper-medium-v2",
+      "state_row": 45,
+      "index": 5,
+      "ess": 14717.472904457185,
+      "block_ess": [
+        1977.1780261572483,
+        2210.4973764200836,
+        1887.7406882970747,
+        1939.8902160622752,
+        1858.828317505822,
+        2082.7831309634707,
+        1712.9234598330806,
+        1334.7342473710994
+      ]
+    },
+    {
+      "task": "hopper-medium-v2",
+      "state_row": 45,
+      "index": 7,
+      "ess": 12331.155000509134,
+      "block_ess": [
+        1685.9573120417988,
+        1379.0829793349274,
+        1644.1926853723262,
+        1533.7628730468573,
+        1561.107321148836,
+        1465.2710228145575,
+        1514.011524333326,
+        1610.038038406106
+      ]
+    },
+    {
+      "task": "hopper-medium-v2",
+      "state_row": 49,
+      "index": 3,
+      "ess": 23517.034304899993,
+      "block_ess": [
+        3516.684890466165,
+        2691.958042754622,
+        3045.993736309718,
+        2513.799239732111,
+        3499.5320842177607,
+        2922.664500279702,
+        2815.514016837234,
+        2824.433565466446
+      ]
+    },
+    {
+      "task": "hopper-medium-v2",
+      "state_row": 49,
+      "index": 5,
+      "ess": 30101.781568389466,
+      "block_ess": [
+        4474.374262246542,
+        3375.506186878327,
+        4478.331793031255,
+        3382.1454972967445,
+        4694.053406333052,
+        3662.259955504425,
+        3720.9548342548806,
+        3035.1775341922876
+      ]
+    },
+    {
+      "task": "hopper-medium-v2",
+      "state_row": 49,
+      "index": 7,
+      "ess": 41039.81690092064,
+      "block_ess": [
+        5278.611304852193,
+        5377.213825382136,
+        5172.557747793189,
+        5188.1060946654825,
+        5004.8559858786575,
+        5096.438916028496,
+        5178.7530327418535,
+        4794.3328526988535
+      ]
+    },
+    {
+      "task": "hopper-medium-v2",
+      "state_row": 53,
+      "index": 3,
+      "ess": 1.0309980809238841,
+      "block_ess": [
+        1.2524105578346572,
+        1.213421071694072,
+        1.0001861849705314,
+        1.4961445543880865,
+        1.0245524084265827,
+        2.148038331995959,
+        1.4667744439407897,
+        1.0545644048006204
+      ]
+    },
+    {
+      "task": "hopper-medium-v2",
+      "state_row": 53,
+      "index": 5,
+      "ess": 1.017581490736914,
+      "block_ess": [
+        1.0000100449610567,
+        2.8791388376504496,
+        1.1260499738303378,
+        1.0001576286151779,
+        1.9663323114634,
+        2.056107182866717,
+        1.1160023514906765,
+        1.1344899748575221
+      ]
+    },
+    {
+      "task": "hopper-medium-v2",
+      "state_row": 53,
+      "index": 7,
+      "ess": 2.9576487648223315,
+      "block_ess": [
+        1.403244524584641,
+        1.0579477519099676,
+        1.000000887679772,
+        1.2999850577545748,
+        1.0014445884454644,
+        1.5260622403750734,
+        1.0001280682578635,
+        1.0633534074353164
+      ]
+    }
+  ],
+  "uncertainty_scope": "MC intervals condition on fixed contexts and pooled reference; eight reference-block replacements measure sensitivity, not calibrated ratio-reference bias; all four observations retained"
+}

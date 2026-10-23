@@ -2,21 +2,33 @@
 
 ## Current decision
 
-The user-started goal remains active. Exp-075 passes19 checks and exp-076
-closes [per-future paid directions](experiments/future_directions/FINDINGS.md)
-at its locked toy gate. An accurate path-gradient oracle improves M64 rotating-
-direction MSE54.98% in dimension6 but only12.38% in dimension3. Full coordinate
-finite differences and four-query pilots fail after per-future acquisition
-costs. No real-critic extension follows that design. The next distinct question
-is whether [coupling future noises](experiments/joint_future/PLAN.md) themselves
-reduces variance without spending queries on directions. Exp-077 checks the new
-sign maps and passes21 checks. Exp-078 finds that joint antithetic at M32
-improves the rotating dimension3 target25.68%/24.42% against shared antithetic/
-random paired LHS, while dimension6 misses20%. Cartesian four-point passes
-both dimensions, but the predeclared simpler-pair preference selects only joint
-antithetic and only Hopper. Aligned-direction controls worsen, so the toy gain
-is conditional. Next validate the real future-sign adapter and test fresh Hopper
-observations. The original exp-073 closure remains in force.
+The continuation-aware follow-up is complete at its stated budgets. Exp-075
+passes 19 checks; exp-076 closes [paid per-future directions](experiments/future_directions/FINDINGS.md)
+at its locked toy gate. The path-gradient oracle improves rotating-target M64
+MSE by 54.98% in dimension6 but only 12.38% in dimension3, and black-box
+acquisition costs eliminate practical gains. No real-critic extension follows.
+
+The distinct [free future-noise coupling study](experiments/joint_future/FINDINGS.md)
+passes 21 construction checks in exp-077. Exp-078 joint antithetic improves the
+rotating dimension3 M32 toy by 25.68%/24.42% against shared antithetic/random
+paired LHS, while the aligned control worsens. The predeclared simpler-pair
+rule selects only joint antithetic and only Hopper. Exp-079 then passes all
+new real-critic path and cost checks at `6e9db3c`.
+
+Exp-080 completes 192 conditions across 12 fresh Hopper contexts. Primary M32
+joint-antithetic displacement MSE is 3.126653 versus 2.393425/2.436307 for the
+two controls: increases of 30.64%/28.34%. All four observations worsen, including
+both observations with high reference ESS; conditional paired intervals and all
+eight reference-block replacements favor the controls. M64 also worsens all
+four observations. Concentrated references are retained and still limit claims
+about exact error. Close this setting without confirmation or image expansion.
+The toy mechanism is correct but does not transfer to these real contexts.
+
+All raw vectors, matrices, reference blocks, costs and job events are recorded.
+Every finite queue has exited and no new job is queued. Terminal N4 remains the
+best confirmed practical image baseline. This closure concerns the tested paid
+directions and joint sign coupling under named budgets; it does not rule out
+other continuation-aware methods. The original exp-073 closure remains in force.
 
 The complement-cancellation follow-up is complete on the geometry branch. See
 [the protocol](experiments/complement_pairing/PLAN.md) and

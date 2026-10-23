@@ -1,0 +1,12 @@
+{
+  "tasks": [
+    {
+      "task": "hopper-medium-v2",
+      "reward_queries": 3328,
+      "reward_seconds": 0.07830337004270405,
+      "score_forwards": 37317,
+      "vjp_seconds": 0.0
+    }
+  ],
+  "actual_kernel_jacobian_vjp_calls": 3
+}

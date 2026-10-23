@@ -9,14 +9,19 @@ correction error and improves generated samples at the same actual reward-query
 budget. Fitting error alone is not a success criterion.
 
 The active branch is `codex/doit-posterior-geometry`. Its latest completed
-[complement-pairing study](experiments/complement_pairing/FINDINGS.md) confirms
-that four-point sign groups can remove reward-irrelevant complement noise in
-exact toys. Paid reward directions also improve real candidate-integrand MSE.
-The locked continuation gate fails: Hopper gains are confined to two of four
-observations, and all feasible HalfCheetah settings worsen. No image or simulator
-expansion follows. See the [protocol](experiments/complement_pairing/PLAN.md)
-and [current state](PROGRESS.md), including the repaired toy inference and
-preserved failure records. No run remains queued.
+[continuation-aware follow-up](experiments/joint_future/FINDINGS.md) tests paid
+per-future directions and free joint noise coupling. Paid directions close at
+the toy cost gate. Joint antithetic has a valid three-dimensional toy gain but
+increases fresh Hopper displacement error by 30.64%/28.34% against two simple
+controls at M32; all four observations worsen. No setting advances to image
+or simulator evaluation, and no run remains queued. See the [current state](PROGRESS.md)
+and [paid-direction findings](experiments/future_directions/FINDINGS.md).
+
+The preceding [complement-pairing study](experiments/complement_pairing/FINDINGS.md)
+confirms exact-toy complement cancellation and real candidate-integrand gains
+from paid reward directions. Its continuation gate fails because Hopper gains
+are confined to two of four observations and all feasible HalfCheetah settings
+worsen. These original decisions and failure records remain preserved.
 
 The earlier exp-063--069 study tested Gaussian probe stratification and denoiser-
 response proxies. Spectral strata did not establish a robust total-error gain

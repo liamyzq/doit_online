@@ -1,0 +1,15 @@
+{
+  "experiment_id": "exp-079-joint-future-critic-smoke",
+  "commit": "6e9db3cc1527f33f2b6101ef8622d41d6fd47a48",
+  "config": "/home/mlw0719/doit_geometry/configs/joint_future/exp-079-joint-future-critic-smoke.json",
+  "machine": "orion",
+  "gpu": 0,
+  "pid": 3774922,
+  "path": "/home/mlw0719/doit_geometry_storage/runs/exp-079-joint-future-critic-smoke",
+  "log_path": "/home/mlw0719/doit_geometry_storage/artifacts/exp-079-joint-future-critic-smoke.log",
+  "status": "completed",
+  "timestamp": "2026-10-23T06:29:21.194787+00:00",
+  "started_at": "2026-10-23T06:28:51.194457+00:00",
+  "returncode": 0,
+  "finished_at": "2026-10-23T06:29:21.194821+00:00"
+}
