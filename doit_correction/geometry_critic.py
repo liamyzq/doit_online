@@ -37,12 +37,16 @@ class Context:
         self.transition = transition
         self.jmu = engine.jacobian(transition).detach().cpu().double().numpy()
         self.vjps = model.dimension
+        torch.cuda.synchronize()
+        response_started = time.perf_counter()
         y = transition.mean.detach().reshape(1, -1).requires_grad_(True)
         clean = denoise(model, y, index + 1, True)
         self.center = clean.detach().flatten().cpu().double().numpy()
         basis = torch.eye(model.dimension, device="cuda")
         rows = [torch.autograd.grad(clean, y, e[None], retain_graph=True)[0].flatten() for e in basis]
         self.response = torch.stack(rows).detach().cpu().double().numpy()
+        torch.cuda.synchronize()
+        self.response_seconds = time.perf_counter() - response_started
         self.vjps += model.dimension
         self.symmetric = (self.response + self.response.T) / 2
         self.values, self.vectors = np.linalg.eigh(self.symmetric)

@@ -1,0 +1,124 @@
+{
+  "id": "exp-073-complement-critic-discovery",
+  "mode": "complement_critic",
+  "purpose": "Compare exact network eigendirections, right singular directions, candidate reward-gradient oracle and paid black-box finite differences on four fresh observations per task inside the active guidance interval.",
+  "tasks": [
+    {
+      "name": "hopper-medium-v2",
+      "source": "/home/mlw0719/doob_transform/test/Doob_training_free_adaptation",
+      "states": "/home/mlw0719/doit_correction_storage/data/critic-states/hopper-medium-v2",
+      "actor": "models_rl/hopper-medium-v20large_actor/behavior_ckpt600.pth",
+      "critic": "models_rl/hopper-medium-v20large_actor/critic_ckpt100.pth",
+      "eta": 0.6,
+      "guidance_end_index": 8,
+      "steps": 15,
+      "tau": 0.031159553132296444
+    },
+    {
+      "name": "halfcheetah-medium-v2",
+      "source": "/home/mlw0719/doob_transform/test/Doob_training_free_adaptation",
+      "states": "/home/mlw0719/doit_correction_storage/data/critic-states/halfcheetah-medium-v2",
+      "actor": "models_rl/halfcheetah-medium-v20large_actor/behavior_ckpt600.pth",
+      "critic": "models_rl/halfcheetah-medium-v20large_actor/critic_ckpt100.pth",
+      "eta": 0.2,
+      "guidance_end_index": 10,
+      "steps": 15,
+      "tau": 0.07369107116716792
+    }
+  ],
+  "batch": 2048,
+  "smoke": false,
+  "state_rows": [
+    40,
+    44,
+    48,
+    52
+  ],
+  "indices": [
+    3,
+    5,
+    7
+  ],
+  "path_seed": 73001,
+  "reference_seed": 73007,
+  "seeds": [
+    73011,
+    73017
+  ],
+  "samples": [
+    16,
+    32
+  ],
+  "repeats": 256,
+  "reference_blocks": 8,
+  "reference_block_samples": 8192,
+  "pilot_radius": 0.25,
+  "integrands": [
+    "candidate",
+    "continuation_independent",
+    "continuation_shared"
+  ],
+  "methods": [
+    {
+      "name": "antithetic",
+      "basis": "none"
+    },
+    {
+      "name": "random_paired_r1",
+      "basis": "random",
+      "lhs": true
+    },
+    {
+      "name": "random_four_lhs_r1",
+      "basis": "random",
+      "four": true,
+      "lhs": true
+    },
+    {
+      "name": "symmetric_four_lhs_r1",
+      "basis": "symmetric",
+      "four": true,
+      "lhs": true
+    },
+    {
+      "name": "svd_four_lhs_r1",
+      "basis": "svd",
+      "four": true,
+      "lhs": true
+    },
+    {
+      "name": "oracle_paired_r1",
+      "basis": "oracle",
+      "lhs": true
+    },
+    {
+      "name": "oracle_four_lhs_r1",
+      "basis": "oracle",
+      "four": true,
+      "lhs": true
+    },
+    {
+      "name": "fd_full_paired_r1",
+      "basis": "fd_full",
+      "lhs": true
+    },
+    {
+      "name": "fd_full_four_lhs_r1",
+      "basis": "fd_full",
+      "four": true,
+      "lhs": true
+    },
+    {
+      "name": "pilot4_four_lhs_r1",
+      "basis": "pilot4",
+      "four": true,
+      "lhs": true
+    }
+  ],
+  "controls": [
+    "antithetic",
+    "random_paired_r1",
+    "oracle_paired_r1",
+    "fd_full_paired_r1"
+  ]
+}

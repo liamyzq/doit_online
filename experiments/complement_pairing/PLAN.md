@@ -94,6 +94,60 @@ Terminal N4 remains the practical image baseline. Endpoint or simulator work
 requires a separate favorable fixed-state, cost and independent confirmation
 decision; it is not an automatic consequence of a toy mechanism.
 
+## Locked P2 discovery after the P1 mechanism gate
+
+Exp-071 passes the ideal-direction gate on both toys and both deterministic
+targets. Exp-072 now checks only the newly introduced candidate log-weight
+gradient orientation and grouped future-noise implementation. Independent
+future rollout must match the preserved adapter; identical candidates with
+shared future randomness must remain identical. These checks distinguish a
+time/index/coupling error from real estimator behavior. Failure blocks exp-073.
+The smoke measures peak memory before discovery concurrency is set.
+
+Exp-073 uses fresh observation rows40/44/48/52, indices3/5/7 (active for both
+tasks), M16/M32, two seeds and256 repeats. Each context has eight independent
+reference blocks of8192 paired probes. Later reference noises are shared within
+ordinary pairs. Each point retains the original continuation marginal. Save
+block moments, masses and ESS, complete response/kernel matrices, per-repeat
+guidance and paired losses. The candidate target and independent/shared future
+estimators are all reported. The primary advance target is shared-future
+continuation at M32; candidate gains alone do not advance to images.
+
+Fixed directions are measured once for scientific efficiency, with acquisition
+cost explicitly charged to every hypothetical deployed guidance call. Full
+coordinate finite differences use2d candidate Q/actor calls; the local reward
+gradient oracle uses one Q/actor call and a joint backward pass. Main sample
+count is the largest complete pair/four-point group that fits the remaining
+query budget; unused slots are reported, not silently filled. Symmetric and
+singular directions require the full response Jacobian here and expose that
+extra derivative cost. A separate four-query random two-direction fit is drawn
+independently per repeat. The shared kernel VJP is common to every algorithm.
+Actual research counters include all diagnostic setup and references; per-call
+costs describe deployment rather than falsely multiplying actual setup work.
+
+Simple controls are ordinary antithetic and random rank-one paired LHS.
+Oracle and finite-difference paired controls isolate the four-point tradeoff.
+Random bases are fresh per repeat, shared explicitly between matched random
+pair/four-point designs. Main/future random streams are explicitly coupled
+across methods for paired loss comparisons and separated across contexts.
+
+A task/method discovery can advance only if the mean unit-gamma displacement
+MSE improves by at least20% against both simple controls, at least three of
+four observations improve against both, and aggregate paired Monte Carlo
+intervals exclude zero. The aggregate difference must keep its sign for all
+eight independent reference-block replacements as well as the pooled reference.
+This block sensitivity is not a calibrated confidence bound on ratio bias.
+All conditions, including low-ESS references, remain in the aggregate.
+
+Only the random-four, full-finite-difference-four and four-query-pilot-four
+methods can pass the current inexpensive-direction gate. Exact matrix and
+gradient oracles explain attainable direction quality and cost; they do not
+constitute a cheap high-dimensional implementation. Discovery makes no speed
+claim from batched repeats. If an eligible setting passes, lock at most one
+setting on new observations and measure complete individual-call costs in
+confirmation before any image expansion. No other hyperparameter sweep follows
+a failed discovery under this budget.
+
 ## Execution
 
 Use the existing geometry branch, Orion checkout and finite queue. Commit each
