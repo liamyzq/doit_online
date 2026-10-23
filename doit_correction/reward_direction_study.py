@@ -56,11 +56,29 @@ class Study:
         self.estimates = {}
         self.started = time.perf_counter()
         (output / "raw").mkdir()
+        self.reference_contexts = None
+        if "reference_source" in config:
+            from pathlib import Path
+            source = Path(config["reference_source"])
+            original = json.loads((source / "config.json").read_text())
+            # This bounded gate ablation changes no target, state, seed or budget.
+            # Reject reuse if anything beyond the declared method knobs differs.
+            omitted = {"id", "purpose", "routes", "agreement_threshold", "reference_source"}
+            if ({k: v for k, v in config.items() if k not in omitted} !=
+                    {k: v for k, v in original.items() if k not in omitted}):
+                raise ValueError("Reference reuse requires identical target and fixed-state settings")
+            self.reference_contexts = {c["context_key"]: c for c in json.loads((source / "contexts.json").read_text())}
 
     def context(self, context, coordinates, metadata):
         config, output = self.config, self.output
         key = f"context{len(self.contexts):04d}"
-        refs = references(context, config, coordinates, output / "raw" / f"{key}-references.npz")
+        if self.reference_contexts is None:
+            refs = references(context, config, coordinates, output / "raw" / f"{key}-references.npz")
+        else:
+            source = self.reference_contexts[key]
+            if any(source[k] != v for k, v in metadata.items()):
+                raise ValueError("Reference context order differs from the source run")
+            refs = source["references"]
         np.savez_compressed(output / "raw" / f"{key}-matrices.npz", jmu=context.jmu,
                             pool=context.pool, mean=context.mean, x=context.x)
         self.contexts.append({"context_key": key, **metadata, **context.describe(), "references": refs})
@@ -124,7 +142,7 @@ def evaluate_toy(config, output):
     for kind in config["models"]:
         ki = 0 if kind == "gaussian" else 1
         model = ToyProcess(kind, config["dimension"])
-        if kind == "gaussian":
+        if kind == "gaussian" and "reference_source" not in config:
             # A new polynomial reference must integrate the same terminal reward
             # for P and F. Sixteen Gaussian quadrature nodes integrate this
             # degree-five numerator exactly, independently of its closed form.

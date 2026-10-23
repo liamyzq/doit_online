@@ -1,0 +1,18 @@
+[
+  {
+    "id": "exp-085-gaussian-in_pool-gate-ablation",
+    "config": "configs/reward_directions/exp-085-gaussian-in_pool-gate-ablation.json"
+  },
+  {
+    "id": "exp-085-mixture-in_pool-gate-ablation",
+    "config": "configs/reward_directions/exp-085-mixture-in_pool-gate-ablation.json"
+  },
+  {
+    "id": "exp-085-hopper-development-gate-ablation",
+    "config": "configs/reward_directions/exp-085-hopper-development-gate-ablation.json"
+  },
+  {
+    "id": "exp-085-halfcheetah-development-gate-ablation",
+    "config": "configs/reward_directions/exp-085-halfcheetah-development-gate-ablation.json"
+  }
+]

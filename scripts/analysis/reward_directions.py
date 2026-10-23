@@ -19,9 +19,16 @@ def main():
     summaries, contexts_out = [], []
     for run in args.runs:
         rows, contexts = load(run / "results.json"), load(run / "contexts.json")
+        config = load(run / "config.json")
         lookup = {(r["context_key"], r["route"], r["samples"], r["method"]): r for r in rows}
         contexts = {c["context_key"]: c for c in contexts}
         arrays = np.load(run / "estimates.npz")
+        original_lookup, original_arrays = {}, None
+        if "reference_source" in config:
+            original = Path(config["reference_source"])
+            original_lookup = {(r["context_key"], r["route"], r["samples"], r["method"]): r
+                               for r in load(original / "results.json")}
+            original_arrays = np.load(original / "estimates.npz")
         real = "task" in rows[0]
         conditions = {}
         for row in rows:
@@ -30,11 +37,17 @@ def main():
                 continue
             matched = "random_four" if (name.endswith("four") or
                        (row["route"] == "P" and name in {"model", "first", "no_j"})) else "random_pair"
-            for control in ("antithetic", matched):
+            controls = ["antithetic", matched] + (["original_gate"] if original_arrays is not None else [])
+            for control in controls:
                 if name == control:
                     continue
                 route_b = "F" if row["route"] == "PF" else row["route"]
-                baseline = lookup[(row["context_key"], route_b, row["samples"], control)]
+                baseline_key = (row["context_key"], route_b, row["samples"],
+                                name if control == "original_gate" else control)
+                if control == "original_gate" or baseline_key not in lookup:
+                    baseline, baseline_arrays = original_lookup[baseline_key], original_arrays
+                else:
+                    baseline, baseline_arrays = lookup[baseline_key], arrays
                 context = contexts[row["context_key"]]
                 # Fixed-state artifacts store the kernel gain at unit gamma.
                 # Restore the preserved task's deployment strength for physical
@@ -43,7 +56,7 @@ def main():
                 gamma = (0.75 if row["task"].startswith("hopper") else 0.25) if real else 1.0
                 gain2 = (gamma * context["gain"])**2
                 estimate = arrays[row["array_key"]]
-                other = arrays[baseline["array_key"]]
+                other = baseline_arrays[baseline["array_key"]]
                 metrics = ["same_target"] + (["proxy_to_full"] if row["route"] == "P" else [])
                 for metric in metrics:
                     ref_route = "P" if row["route"] == "P" and metric == "same_target" else "F"
@@ -88,6 +101,8 @@ def main():
             contexts_out.append({"comparison": {**labels, "route": route, "samples": budget,
                                  "method": method, "control": control, "metric": metric}, "entries": entries})
         arrays.close()
+        if original_arrays is not None:
+            original_arrays.close()
     args.output.mkdir(parents=True, exist_ok=True)
     (args.output / "comparisons.json").write_text(json.dumps(summaries, indent=2, allow_nan=False) + "\n")
     (args.output / "context-comparisons.json").write_text(json.dumps(contexts_out, indent=2, allow_nan=False) + "\n")

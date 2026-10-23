@@ -12,9 +12,14 @@ proxy pilots never enter full-continuation weights. Exp-081 passed all31 new
 checks at `16c00b5`, including exact constant-moment cancellation, ratio merge,
 adaptive numerator/denominator preservation and the actual discrete reference.
 Exp-083 passed both real-critic mixed-group and exact query/actor-cost checks
-at `f73ed2e`, with48MiB peak reserved memory. The locked toy comparisons and
-fresh Hopper/HalfCheetah development now proceed; no new variance-reduction
-result is available yet. Historical closures below
+at `f73ed2e`, with48MiB peak reserved memory. All six development jobs completed at
+`0e4e9f3`: four toy comparisons and both16-observation real tasks. Oracle
+four-point directions work on the Gaussian mechanism controls, but paid pilot
+selection usually falls back. Random paired P improves Hopper, and random
+four-point F improves its aggregate error with substantial observation
+heterogeneity. No reserved confirmation observation has been used. Exp-085
+removes only the split-agreement gate on P development data to resolve whether
+the gate suppresses usable direction information; it reuses existing references. Historical closures below
 remain the conclusions for their own methods and budgets.
 
 The continuation-aware follow-up is complete at its stated budgets. Exp-075

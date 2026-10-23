@@ -1,0 +1,14 @@
+{
+  "conditions": 1728,
+  "contexts": 48,
+  "costs": {
+    "reward_queries": 24379392,
+    "reward_seconds": 32.88090741029009,
+    "score_forwards": 126615728,
+    "vjp_seconds": 0.0
+  },
+  "actual_jacobian_vjp_calls": 144,
+  "jacobian_seconds": 1.588664923910983,
+  "seconds": 456.3211469129892,
+  "scope": "Fixed authentic actors and black-box critics; no critic differentiation or simulator returns"
+}

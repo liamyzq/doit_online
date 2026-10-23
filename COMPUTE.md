@@ -21,6 +21,13 @@ studies and writes 16 development plus 32 confirmation observations per task
 under the new storage's `data/critic-states/`. Selection seed is83041; models,
 temperatures, eta and active guidance intervals remain fixed.
 
+All six exp-082/084 jobs completed at `0e4e9f3`; the finite controller exited.
+Real-task peak reserved memory was78/80MiB; toys used0MiB. Small records,
+aggregate estimates and logs are local; approximately13GB of raw per-condition
+NPZ artifacts remain in the recorded Orion run directories. Exp-085 retains
+the4096MiB allowance plus2048MiB reserve and one worker per physical GPU.
+It reuses exp-082/084 references without repeating their evaluation costs.
+
 ## Posterior geometry exploration
 
 The new branch `codex/doit-posterior-geometry` uses separate Orion checkout

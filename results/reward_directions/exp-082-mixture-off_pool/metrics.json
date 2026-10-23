@@ -1,0 +1,12 @@
+{
+  "conditions": 2640,
+  "contexts": 60,
+  "costs": {
+    "reward_queries": 68812800,
+    "score_forwards": 319979580
+  },
+  "seconds": 556.7807296829997,
+  "scope": "Actual sixteen-step Gaussian transition process; analytic references only for the Gaussian model",
+  "peak_allocated_mib": 0.0,
+  "peak_reserved_mib": 0.0
+}

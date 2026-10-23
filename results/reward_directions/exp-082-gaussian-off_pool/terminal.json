@@ -1,0 +1,15 @@
+{
+  "experiment_id": "exp-082-gaussian-off_pool",
+  "commit": "0e4e9f3ffa9d45b9e6be03f044836cd66a6a2775",
+  "config": "/home/mlw0719/doit_reward_directions/configs/reward_directions/exp-082-gaussian-off_pool.json",
+  "machine": "orion",
+  "gpu": 0,
+  "pid": 4023046,
+  "path": "/home/mlw0719/doit_reward_directions_storage/runs/exp-082-gaussian-off_pool",
+  "log_path": "/home/mlw0719/doit_reward_directions_storage/artifacts/exp-082-gaussian-off_pool.log",
+  "status": "completed",
+  "timestamp": "2026-10-23T21:12:53.274731+00:00",
+  "started_at": "2026-10-23T21:06:51.954350+00:00",
+  "returncode": 0,
+  "finished_at": "2026-10-23T21:12:53.274753+00:00"
+}

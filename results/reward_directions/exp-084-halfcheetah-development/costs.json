@@ -1,0 +1,10 @@
+{
+  "actual_costs": {
+    "reward_queries": 24379392,
+    "reward_seconds": 71.50740580656566,
+    "score_forwards": 126615728,
+    "vjp_seconds": 0.0
+  },
+  "jacobian_vjps": 288,
+  "jacobian_seconds": 1.8074882830260321
+}

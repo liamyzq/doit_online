@@ -109,3 +109,24 @@ All implementation/configuration is committed before formal runs. Use the
 project finite queue in a separate Orion checkout/storage; preserve previous
 execution checkouts. Record every completion, crash and invalid run in the
 existing ledgers before interpretation.
+
+## Bounded development follow-up: exp-085
+
+The completed Gaussian in-pool records show useful P-route direction information
+at M64: mean selected-axis capture0.7219 and exact-axis selection0.6278 for the
+shift reward, but only0.1525 of repeats pass the split-agreement gate. Full-route
+capture remains near the six-dimensional chance level. The real-critic pilot
+methods mostly fall back, while simple structured controls can match or exceed
+their error. This makes the gate a concrete unresolved mechanism on P.
+
+Exp-085 removes only the split-agreement threshold, setting it to0. The ESS
+threshold and zero-score fallback remain. Test the same four paid P variants
+(first, no-J, moments pair, moments four) at the same M32/M64, states and seeds
+on both in-pool toys and both16-observation development tasks. Reuse all
+independent references and existing full-budget controls from their original
+run artifacts; the runner rejects target/state/seed/budget differences. Compare
+the new estimates with both controls and the original gate on paired repeats.
+No new full-continuation tuning or threshold grid is introduced. Select between
+these two development gate settings before touching the32-observation holdout.
+Any apparent paid-direction gain must also compete with the cheaper random
+paired control, even if the layout-matched random-four control is weaker.

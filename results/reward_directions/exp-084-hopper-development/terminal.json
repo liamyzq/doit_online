@@ -1,0 +1,15 @@
+{
+  "experiment_id": "exp-084-hopper-development",
+  "commit": "0e4e9f3ffa9d45b9e6be03f044836cd66a6a2775",
+  "config": "/home/mlw0719/doit_reward_directions/configs/reward_directions/exp-084-hopper-development.json",
+  "machine": "orion",
+  "gpu": 0,
+  "pid": 3522985,
+  "path": "/home/mlw0719/doit_reward_directions_storage/runs/exp-084-hopper-development",
+  "log_path": "/home/mlw0719/doit_reward_directions_storage/artifacts/exp-084-hopper-development.log",
+  "status": "completed",
+  "timestamp": "2026-10-23T21:06:51.849968+00:00",
+  "started_at": "2026-10-23T20:58:50.747656+00:00",
+  "returncode": 0,
+  "finished_at": "2026-10-23T21:06:51.849995+00:00"
+}

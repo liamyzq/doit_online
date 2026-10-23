@@ -1,0 +1,25 @@
+{
+  "commit": "0e4e9f3ffa9d45b9e6be03f044836cd66a6a2775",
+  "config": "/home/mlw0719/doit_reward_directions/configs/reward_directions/exp-082-gaussian-in_pool.json",
+  "experiment_id": "exp-082-gaussian-in_pool",
+  "pid": 3522987,
+  "cuda_visible_devices": "3",
+  "started_at": 1792789132.9366486,
+  "status": "completed",
+  "environment": {
+    "python": "3.12.9",
+    "torch": "2.6.0+cu124",
+    "cuda": "12.4",
+    "gpu": "NVIDIA RTX A6000",
+    "packages": {
+      "numpy": "1.26.4",
+      "diffusers": "0.32.2",
+      "transformers": "4.49.0",
+      "torchvision": "0.21.0",
+      "huggingface_hub": "0.36.0",
+      "safetensors": "0.8.0",
+      "h5py": "3.14.0"
+    }
+  },
+  "elapsed_seconds": 356.3002965450287
+}
