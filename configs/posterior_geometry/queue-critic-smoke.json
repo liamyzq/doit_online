@@ -1,0 +1,6 @@
+[
+  {
+    "id": "exp-065-geometry-critic-smoke",
+    "config": "configs/posterior_geometry/exp-065-geometry-critic-smoke.json"
+  }
+]

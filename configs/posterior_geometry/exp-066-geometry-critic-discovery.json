@@ -1,0 +1,108 @@
+{
+  "mode": "geometry_critic",
+  "tasks": [
+    {
+      "name": "hopper-medium-v2",
+      "source": "/home/mlw0719/doob_transform/test/Doob_training_free_adaptation",
+      "states": "/home/mlw0719/doit_correction_storage/data/critic-states/hopper-medium-v2",
+      "actor": "models_rl/hopper-medium-v20large_actor/behavior_ckpt600.pth",
+      "critic": "models_rl/hopper-medium-v20large_actor/critic_ckpt100.pth",
+      "eta": 0.6,
+      "guidance_end_index": 8,
+      "steps": 15,
+      "tau": 0.031159553132296444
+    },
+    {
+      "name": "halfcheetah-medium-v2",
+      "source": "/home/mlw0719/doob_transform/test/Doob_training_free_adaptation",
+      "states": "/home/mlw0719/doit_correction_storage/data/critic-states/halfcheetah-medium-v2",
+      "actor": "models_rl/halfcheetah-medium-v20large_actor/behavior_ckpt600.pth",
+      "critic": "models_rl/halfcheetah-medium-v20large_actor/critic_ckpt100.pth",
+      "eta": 0.2,
+      "guidance_end_index": 10,
+      "steps": 15,
+      "tau": 0.07369107116716792
+    }
+  ],
+  "proxies": [
+    "frozen",
+    "center_identity",
+    "center_isotropic",
+    "geometry_1",
+    "geometry_2",
+    "geometry_4",
+    "full_linear",
+    "candidate",
+    "continuation"
+  ],
+  "probe_integrands": [
+    "frozen",
+    "candidate",
+    "continuation"
+  ],
+  "methods": [
+    {
+      "name": "iid"
+    },
+    {
+      "name": "antithetic",
+      "antithetic": true
+    },
+    {
+      "name": "random_lhs_r2",
+      "rank": 2
+    },
+    {
+      "name": "top_lhs_r2",
+      "rank": 2
+    },
+    {
+      "name": "bottom_lhs_r1",
+      "rank": 1
+    },
+    {
+      "name": "random_paired_lhs_r2",
+      "rank": 2,
+      "antithetic": true
+    },
+    {
+      "name": "top_paired_lhs_r2",
+      "rank": 2,
+      "antithetic": true
+    },
+    {
+      "name": "pilot_paired_lhs_r1",
+      "rank": 1,
+      "antithetic": true,
+      "pilot_samples": 4
+    }
+  ],
+  "batch": 2048,
+  "path_seed": 66001,
+  "reference_seed": 66007,
+  "id": "exp-066-geometry-critic-discovery",
+  "purpose": "Measure geometry-specific probe variance reduction and local proxy bias on held-out real observations, including independent continuation references and all actual query costs.",
+  "smoke": false,
+  "state_rows": [
+    24,
+    28
+  ],
+  "indices": [
+    5,
+    9,
+    12
+  ],
+  "seeds": [
+    66011,
+    66017
+  ],
+  "repeats": 128,
+  "samples": [
+    8,
+    16,
+    32,
+    64
+  ],
+  "proxy_samples": 32,
+  "reference_samples": 8192
+}
