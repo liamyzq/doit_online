@@ -42,7 +42,13 @@ def main():
         torch.set_num_threads(int(os.environ.get("OMP_NUM_THREADS", 2)))
         torch.cuda.reset_peak_memory_stats()
         mode = config.get("mode", "image")
-        if mode == "reward_allocation_toy":
+        if mode == "geometry_checks":
+            from .geometry_toy import run_checks
+            metrics = run_checks(config, output)
+        elif mode == "geometry_toy":
+            from .geometry_toy import evaluate
+            metrics = evaluate(config, output)
+        elif mode == "reward_allocation_toy":
             from .reward_calibration_toy import evaluate_allocation
             metrics = evaluate_allocation(config, output)
         elif mode == "reward_calibration_critic":

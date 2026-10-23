@@ -1,5 +1,17 @@
 # Compute
 
+## Posterior geometry exploration
+
+The new branch `codex/doit-posterior-geometry` uses separate Orion checkout
+`/home/mlw0719/doit_geometry` and storage `/home/mlw0719/doit_geometry_storage`,
+with `scripts/compute/geometry/{env.sh,sync.sh}` and the existing finite queue.
+Share the preserved isolated environment and model cache by symlink. A bounded
+inspection on 2026-10-22 found Orion reachable and no active project queue or
+run. Preserve earlier execution checkouts. Exp-063/064 use CPU analytic code
+without GPU tensors; later critic and FP32 image smokes determine their own
+memory allowances before concurrency. Use physical GPUs 0--4, one project job
+per device and 2048 MiB free reserve.
+
 ## Current uncertainty study
 
 Recovery on 2026-10-21 found both Orion and Nebula reachable with no active

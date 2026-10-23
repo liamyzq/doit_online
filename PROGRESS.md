@@ -2,6 +2,17 @@
 
 ## Current decision
 
+The user opened a fresh posterior-geometry exploration on 2026-10-22 from
+`7dda3d6`, on `codex/doit-posterior-geometry`. The latest supplied plan tests
+Gaussian probe stratification and low-rank denoiser-response proxies separately.
+Toy, fixed-state image and real-critic RL verification are authorized. The
+[protocol](experiments/posterior_geometry/PLAN.md) defines baselines, costs and
+endpoint gates. Exp-063/064 implement the initial analytic checks and toy
+comparisons; no new result is claimed yet. Long-running execution is assigned
+to low-cost monitors. Earlier study closures below remain valid.
+
+## Completed conditional-reward development
+
 The user reopened method development on 2026-10-22. The new candidate calibrates
 conditional terminal-reward residuals, using a single proxy query at sparse
 checkpoints. Mean-only, Gaussian-moment, empirical-residual and direct

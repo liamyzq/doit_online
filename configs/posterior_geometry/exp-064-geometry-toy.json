@@ -1,0 +1,105 @@
+{
+  "id": "exp-064-geometry-toy",
+  "mode": "geometry_toy",
+  "purpose": "Separate Gaussian probe variance reduction from denoiser proxy bias using exact low-dimensional quadrature and matched reward budgets.",
+  "dimension": 12,
+  "models": [
+    "gaussian",
+    "mixture"
+  ],
+  "reward_alignments": [
+    "top",
+    "bottom",
+    "middle",
+    "random"
+  ],
+  "seeds": [
+    64011,
+    64017
+  ],
+  "repeats": 256,
+  "samples": [
+    8,
+    16,
+    32,
+    64
+  ],
+  "methods": [
+    {
+      "name": "iid"
+    },
+    {
+      "name": "antithetic",
+      "antithetic": true
+    },
+    {
+      "name": "random_lhs_r1",
+      "rank": 1
+    },
+    {
+      "name": "top_lhs_r1",
+      "rank": 1
+    },
+    {
+      "name": "random_lhs_r2",
+      "rank": 2
+    },
+    {
+      "name": "top_lhs_r2",
+      "rank": 2
+    },
+    {
+      "name": "random_lhs_r4",
+      "rank": 4
+    },
+    {
+      "name": "top_lhs_r4",
+      "rank": 4
+    },
+    {
+      "name": "random_lhs_r8",
+      "rank": 8
+    },
+    {
+      "name": "top_lhs_r8",
+      "rank": 8
+    },
+    {
+      "name": "bottom_lhs_r1",
+      "rank": 1
+    },
+    {
+      "name": "extreme_lhs_r2",
+      "rank": 2
+    },
+    {
+      "name": "random_paired_lhs_r2",
+      "rank": 2,
+      "antithetic": true
+    },
+    {
+      "name": "top_paired_lhs_r2",
+      "rank": 2,
+      "antithetic": true
+    },
+    {
+      "name": "pilot_paired_lhs_r1",
+      "rank": 1,
+      "antithetic": true,
+      "pilot_samples": 4
+    }
+  ],
+  "proxies": [
+    "frozen",
+    "center_identity",
+    "center_isotropic",
+    "geometry_2",
+    "geometry_4",
+    "geometry_8",
+    "full_linear",
+    "candidate",
+    "continuation"
+  ],
+  "proxy_samples": 32,
+  "quadrature_nodes": 96
+}

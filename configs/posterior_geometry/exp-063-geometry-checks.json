@@ -1,0 +1,6 @@
+{
+  "id": "exp-063-geometry-checks",
+  "mode": "geometry_checks",
+  "dimension": 12,
+  "purpose": "Validate new posterior responses, Gaussian probe marginals, antithetic cancellation and independent toy references before performance comparisons."
+}

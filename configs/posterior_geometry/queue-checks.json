@@ -1,0 +1,6 @@
+[
+  {
+    "id": "exp-063-geometry-checks",
+    "config": "configs/posterior_geometry/exp-063-geometry-checks.json"
+  }
+]

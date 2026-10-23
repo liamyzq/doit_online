@@ -8,7 +8,12 @@ The primary question is whether information from earlier steps reduces current
 correction error and improves generated samples at the same actual reward-query
 budget. Fitting error alone is not a success criterion.
 
-The active branch is `codex/doit-uncertainty-smc`. The user opened a separate
+The active branch is `codex/doit-posterior-geometry`. The latest study tests
+Gaussian probe stratification and denoiser-response proxies; see its
+[protocol](experiments/posterior_geometry/PLAN.md) and [current state](PROGRESS.md).
+It uses a new Orion checkout and retains the previous study as a baseline.
+
+The preceding branch is `codex/doit-uncertainty-smc`. The user opened a separate
 study of posterior uncertainty, local FORS sampling and strict particle
 correction, with toy, image and RL experiments authorized. Start with its
 [protocol](experiments/uncertainty_smc/PLAN.md),
