@@ -26,11 +26,13 @@ def main():
         conditions = {}
         for row in rows:
             name = row["method"]
-            if name in {"antithetic", "random_pair", "random_four"}:
+            if name == "antithetic":
                 continue
             matched = "random_four" if (name.endswith("four") or
                        (row["route"] == "P" and name in {"model", "first", "no_j"})) else "random_pair"
             for control in ("antithetic", matched):
+                if name == control:
+                    continue
                 route_b = "F" if row["route"] == "PF" else row["route"]
                 baseline = lookup[(row["context_key"], route_b, row["samples"], control)]
                 context = contexts[row["context_key"]]
