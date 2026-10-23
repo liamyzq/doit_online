@@ -1,0 +1,5 @@
+{
+  "id": "exp-075-future-direction-checks",
+  "mode": "future_direction_checks",
+  "purpose": "Validate the new conditional Gaussian block construction, exact joint moment, full-score retention and fixed-capacity repeat alignment before any formal comparison."
+}
