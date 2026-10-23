@@ -1,0 +1,6 @@
+[
+  {
+    "id": "exp-080-joint-future-critic-discovery",
+    "config": "configs/joint_future/exp-080-joint-future-critic-discovery.json"
+  }
+]

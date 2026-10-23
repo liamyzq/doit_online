@@ -42,7 +42,10 @@ def main():
         torch.set_num_threads(int(os.environ.get("OMP_NUM_THREADS", 2)))
         torch.cuda.reset_peak_memory_stats()
         mode = config.get("mode", "image")
-        if mode == "joint_future_checks":
+        if mode == "joint_future_critic":
+            from .joint_future_critic import evaluate
+            metrics = evaluate(config, output)
+        elif mode == "joint_future_checks":
             from .joint_future import checks
             metrics = checks(config, output)
         elif mode == "joint_future_toy":

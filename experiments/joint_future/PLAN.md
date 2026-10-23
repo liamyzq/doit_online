@@ -85,3 +85,24 @@ Apply the predeclared simpler-pair preference: select only joint antithetic,
 only Hopper. Its aligned-direction toy control is worse and remains reported.
 The following smoke/discovery configs must not add another selected coupling
 or another physical task after observing this result.
+
+## Real-critic execution contract
+
+Exp-079 validates the new Torch future-sign layout on Hopper row25, index3,
+with eight repeats and M32/M64. Compare the Torch signs against the checked
+NumPy maps; compare independent and shared control rollouts against their
+preserved adapters; check constant-weight full-guidance cancellation and actual
+reward/actor counts. Any failure blocks discovery and requires an adapter fix.
+Two128-point reference blocks are smoke-only, with no scientific gate decision.
+
+Exp-080 implements the locked discovery on Hopper rows41/45/49/53, indices3/5/7,
+seeds80011/80017,256 repeats and M32/M64. Keep only independent-future antithetic,
+shared-future antithetic, random paired LHS and the selected joint antithetic.
+References use eight8192-point blocks from independent random streams. Save all
+raw per-repeat vectors, reference moments, kernel Jacobians and actual costs.
+Each deployment estimate uses M terminal queries,1+M*(14-index) actor forwards
+and one common kernel VJP; constructing the stored exact Jacobian uses three
+VJPs per context and is counted as research work. No direction queries occur.
+Batch timings do not establish individual-call deployment speed. The existing
+analysis rule is implemented before execution, including the same-three-of-four
+observation requirement. Do not promote M64 into the primary selection gate.

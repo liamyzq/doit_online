@@ -1,0 +1,6 @@
+[
+  {
+    "id": "exp-079-joint-future-critic-smoke",
+    "config": "configs/joint_future/exp-079-joint-future-critic-smoke.json"
+  }
+]

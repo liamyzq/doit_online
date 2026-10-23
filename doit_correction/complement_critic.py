@@ -76,13 +76,13 @@ def acquisition(context, radius):
                           "singular_values": singular_values, "right_singular_vectors": vh.T}
 
 
-def references(context, config, seed_words):
+def references(context, config, seed_words, integrands=("candidate", "continuation_shared")):
     blocks = []
     for block in range(config["reference_blocks"]):
         eps = sign_probes(stream(config["reference_seed"], *seed_words, block, 1),
                           1, config["reference_block_samples"], context.dimension)
         entry = {}
-        for ii, integrand in enumerate(("candidate", "continuation_shared")):
+        for ii, integrand in enumerate(integrands):
             logs = log_weights(context, eps, integrand,
                                generator(context.model, config["reference_seed"], *seed_words, block, ii, 2), 2)[0]
             ratio = ratio_estimate(eps, logs[None])[0]
@@ -92,7 +92,7 @@ def references(context, config, seed_words):
                                 "log_mean_weight": logmass, "ess": float(1 / np.square(weights).sum())}
         blocks.append(entry)
     combined = {}
-    for integrand in ("candidate", "continuation_shared"):
+    for integrand in integrands:
         entries = [block[integrand] for block in blocks]
         masses = np.array([x["log_mean_weight"] for x in entries])
         relative_mass = np.exp(masses - logsumexp(masses))
