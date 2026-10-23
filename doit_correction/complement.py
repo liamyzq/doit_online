@@ -11,18 +11,22 @@ def stream(seed, *coordinates):
     return np.random.default_rng(np.random.SeedSequence([seed, *coordinates]))
 
 
-def sign_probes(rng, repeats, samples, dimension, basis=None, four=False, lhs=False):
+def sign_probes(rng, repeats, samples, dimension, basis=None, four=False, lhs=False, capacity=None):
     """Return block-ordered pairs or {Ua+b, Ua-b, -Ua+b, -Ua-b}.
 
     A basis can be fixed or selected per repeat from an independent pilot.
     Every indexed probe has N(0,I) marginal conditional on that basis. All four
     weights must be evaluated; the method never discards complement scores.
+    Pass the common total budget as capacity when methods spend queries on
+    pilots. Fixed-size random blocks prevent cross-repeat reuse across methods
+    with different main counts or ranks, making paired losses independent.
     """
     group = 4 if four else 2
     if samples % group:
         raise ValueError("Sample count must contain complete sign groups")
     count = samples // group
-    eps = rng.normal(size=(repeats, count, dimension))
+    capacity = samples if capacity is None else capacity
+    eps = rng.normal(size=(repeats, capacity, dimension))[:, :count].copy()
     if basis is None:
         if four or lhs:
             raise ValueError("A subspace is required for four-point or LHS probes")
@@ -33,8 +37,9 @@ def sign_probes(rng, repeats, samples, dimension, basis=None, four=False, lhs=Fa
     a = np.einsum("nmd,ndr->nmr", eps, basis)
     b = eps - np.einsum("nmr,ndr->nmd", a, basis)
     if lhs:
-        strata = np.argsort(rng.random(a.shape), axis=1)
-        uniforms = (strata + rng.random(a.shape)) / count
+        rank = basis.shape[-1]
+        strata = np.argsort(rng.random((repeats, capacity, dimension))[:, :count, :rank], axis=1)
+        uniforms = (strata + rng.random((repeats, capacity, dimension))[:, :count, :rank]) / count
         a = ndtri(np.maximum(uniforms, np.finfo(float).tiny))
     active = np.einsum("nmr,ndr->nmd", a, basis)
     if four:
@@ -42,10 +47,11 @@ def sign_probes(rng, repeats, samples, dimension, basis=None, four=False, lhs=Fa
     return np.concatenate([active + b, -active - b], axis=1)
 
 
-def grouped_draw(rng, repeats, samples, group, dimension=None):
+def grouped_draw(rng, repeats, samples, group, dimension=None, capacity=None):
     """Share later randomness within each sign group, retaining its marginal."""
-    shape = (repeats, samples // group) + (() if dimension is None else (dimension,))
-    values = rng.normal(size=shape)
+    capacity = samples if capacity is None else capacity
+    shape = (repeats, capacity) + (() if dimension is None else (dimension,))
+    values = rng.normal(size=shape)[:, :samples // group]
     return np.concatenate([values] * group, axis=1)
 
 

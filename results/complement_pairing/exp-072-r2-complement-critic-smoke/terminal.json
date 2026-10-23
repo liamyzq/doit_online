@@ -1,0 +1,15 @@
+{
+  "experiment_id": "exp-072-r2-complement-critic-smoke",
+  "commit": "8a4cd08d4cf67c63c9e9fd50936bbef90825e7da",
+  "config": "/home/mlw0719/doit_geometry/configs/complement_pairing/exp-072-r2-complement-critic-smoke.json",
+  "machine": "orion",
+  "gpu": 0,
+  "pid": 2663202,
+  "path": "/home/mlw0719/doit_geometry_storage/runs/exp-072-r2-complement-critic-smoke",
+  "log_path": "/home/mlw0719/doit_geometry_storage/artifacts/exp-072-r2-complement-critic-smoke.log",
+  "status": "completed",
+  "timestamp": "2026-10-23T04:59:10.638892+00:00",
+  "started_at": "2026-10-23T04:58:40.638045+00:00",
+  "returncode": 0,
+  "finished_at": "2026-10-23T04:59:10.638918+00:00"
+}

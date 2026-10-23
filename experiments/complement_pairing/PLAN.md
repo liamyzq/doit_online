@@ -96,8 +96,9 @@ decision; it is not an automatic consequence of a toy mechanism.
 
 ## Locked P2 discovery after the P1 mechanism gate
 
-Exp-071 passes the ideal-direction gate on both toys and both deterministic
-targets. Exp-072 now checks only the newly introduced candidate log-weight
+Exp-071 point estimates meet the ideal-direction effect threshold on both
+toys and both deterministic targets. A subsequent stream audit invalidated its
+paired Monte Carlo intervals; exp-074 and exp-071-r2 must pass before discovery. Exp-072 now checks only the newly introduced candidate log-weight
 gradient orientation and grouped future-noise implementation. Independent
 future rollout must match the preserved adapter; identical candidates with
 shared future randomness must remain identical. These checks distinguish a
@@ -155,3 +156,16 @@ implementation and immutable config before its formal run. No simultaneous
 sync with active/pending jobs. Low-cost agents execute and monitor established
 work; main agent owns implementation, final review and scientific decisions.
 Record every formal outcome and actual job transition in the project ledgers.
+
+## Repeat alignment correction
+
+The exp-071 common-RNG layout reused random positions across different repeat
+indices when methods retained different counts or LHS ranks. Its point MSEs
+remain valid, but its paired standard errors and nominal gate are superseded.
+Exp-074 checks fixed-capacity repeat blocks for Gaussian probes, LHS fields,
+posterior mixture draws and the actual continuation-noise function. Every
+comparison uses its total query budget as the random block capacity before
+slicing to the retained main count. Rerun the unchanged toy conditions as
+exp-071-r2 after these checks; exp-073 has no prior run and retains its locked
+configuration. The revised finite-difference smoke already passed and need not
+be repeated for this change to random-array layout.

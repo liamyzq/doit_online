@@ -14,7 +14,7 @@ from .geometry import gaussian_probes, ratio_estimate
 from .geometry_toy import Toy, design_basis, dump
 
 
-def stochastic_log_weight(model, eps, rng, group):
+def stochastic_log_weight(model, eps, rng, group, capacity):
     """One exact posterior terminal draw per candidate, with optional coupling."""
     repeats, samples, _ = eps.shape
     y = model.mean + model.std * eps
@@ -22,20 +22,21 @@ def stochastic_log_weight(model, eps, rng, group):
     delta = y[..., None, :] - model.means
     logits = -0.5 * np.einsum("...kd,de,...ke->...k", delta, inverse, delta)
     p = np.exp(logits - logsumexp(logits, axis=-1, keepdims=True))
-    uniforms = rng.random((repeats, samples // group))
+    uniforms = rng.random((repeats, capacity))[:, :samples // group]
     uniforms = np.concatenate([uniforms] * group, axis=1)
     component = (uniforms > p[..., 0]).astype(int) if len(model.means) > 1 else np.zeros_like(uniforms, dtype=int)
     v = model.reward_direction
     means = (y @ (model.affine.T @ v))[..., None] + model.means @ ((np.eye(model.dimension) - model.affine).T @ v)
     scalar = np.take_along_axis(means, component[..., None], axis=-1)[..., 0]
     variance = v @ (model.next_t * model.affine) @ v
-    scalar += np.sqrt(variance) * grouped_draw(rng, repeats, samples, group)
+    scalar += np.sqrt(variance) * grouped_draw(rng, repeats, samples, group, capacity=capacity)
     return -0.5 * np.square((scalar - model.target) / model.width)
 
 
-def weights(model, eps, integrand, rng, group):
+def weights(model, eps, integrand, rng, group, capacity=None):
+    capacity = eps.shape[1] if capacity is None else capacity
     if integrand.startswith("stochastic"):
-        return stochastic_log_weight(model, eps, rng, group if integrand.endswith("shared") else 1)
+        return stochastic_log_weight(model, eps, rng, group if integrand.endswith("shared") else 1, capacity)
     return model.log_weight(eps, integrand)
 
 
@@ -166,9 +167,9 @@ def evaluate(config, output):
                     for mi, method in enumerate(config["methods"]):
                         basis, pilots = choose_basis(model, method, stream(seed, ki, ii, m, 1, mi), repeats)
                         eps = sign_probes(stream(seed, ki, ii, m, 2), repeats, m - pilots, model.dimension,
-                                          basis, method.get("four", False), method.get("lhs", False))
+                                          basis, method.get("four", False), method.get("lhs", False), capacity=m)
                         group = 4 if method.get("four", False) else 2
-                        logs = weights(model, eps, integrand, stream(seed, ki, ii, m, 3), group)
+                        logs = weights(model, eps, integrand, stream(seed, ki, ii, m, 3), group, capacity=m)
                         ratio = ratio_estimate(eps, logs)
                         if method.get("rao_blackwell", False):
                             # Oracle only: these top-aligned integrands depend in

@@ -9,12 +9,17 @@ and reproduces the old top-aligned M32 decomposition within1.11e-16. Spectral
 strata already reduce active-direction error94--95%, but more than99% of the
 remaining error is in the complement. The old total-error gate still fails.
 
-Exp-071 passes the exact-direction mechanism gate: M32 four-point LHS reduces
+Exp-071 point estimates show M32 four-point LHS reduces
 candidate total MSE95--96% and analytic-continuation MSE about92%. A30-degree
 direction error still leaves substantial benefit. The paid eight-query pilot
 fails; independent future noise weakens gains, while valid shared future
 randomness restores strong complement cancellation. These are toy oracle
-results, not a deployable algorithm. Next are exp-072/073 on four fresh real
+results, not a deployable algorithm. A later stream review found cross-repeat
+RNG overlap between methods with different retained sample counts or ranks,
+invalidating its nominal paired intervals. Exp-074 checks fixed-budget repeat
+blocks; exp-071-r2 must reestablish the gate. Exp-072-r2 has already passed
+gradient/coupling checks at46MiB peak reserved memory; exp-073 was held before
+launch. Its locked discovery uses four fresh real
 observations per task, indices3/5/7 inside actual guidance intervals, with all
 direction costs and per-repeat/reference-block records preserved. Image work
 requires a feasible shared-continuation gain and independent confirmation.

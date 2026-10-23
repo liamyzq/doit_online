@@ -25,22 +25,23 @@ def normalized(direction):
     return np.where(norm > 1e-12, direction / np.maximum(norm, 1e-12), fallback)
 
 
-def continue_group(model, x, start, rng, group):
+def continue_group(model, x, start, rng, group, capacity=None):
     """Block-ordered groups share future noises, never their reward evaluations."""
+    capacity = x.shape[1] if capacity is None else capacity
     for index in range(start, model.steps):
         mean, std, _ = model.transition(x, index)
-        noise = model.noise((x.shape[0], x.shape[1] // group, x.shape[2]), rng)
+        noise = model.noise((x.shape[0], capacity, x.shape[2]), rng)[:, :x.shape[1] // group]
         x = mean + std * torch.cat([noise] * group, dim=1)
     return x
 
 
-def log_weights(context, eps, integrand, rng, group):
+def log_weights(context, eps, integrand, rng, group, capacity=None):
     if integrand == "candidate":
         clean = context.clean(eps, "candidate")
     else:
         x = torch.as_tensor(context.mean + context.std * eps, dtype=torch.float32, device="cuda")
         clean = continue_group(context.model, x, context.index + 1, rng,
-                               group if integrand == "continuation_shared" else 1)
+                               group if integrand == "continuation_shared" else 1, capacity)
     return (context.model.reward(clean).double() / context.model.task["tau"]).cpu().numpy()
 
 
@@ -206,8 +207,8 @@ def evaluate(config, output):
                                         group = 4 if method.get("four", False) else 2
                                         main_samples = group * ((budget - direction_cost["reward_queries"]) // group)
                                         eps = sign_probes(stream(seed, ti, state_row, index, budget, 6), config["repeats"], main_samples,
-                                                          model.dimension, basis, method.get("four", False), method.get("lhs", False))
-                                        logs = log_weights(context, eps, integrand, generator(model, seed, ti, state_row, index, budget, 7), group)
+                                                          model.dimension, basis, method.get("four", False), method.get("lhs", False), capacity=budget)
+                                        logs = log_weights(context, eps, integrand, generator(model, seed, ti, state_row, index, budget, 7), group, capacity=budget)
                                         estimates = context.guidance(ratio_estimate(eps, logs))
                                         torch.cuda.synchronize()
                                         seconds = time.perf_counter() - tick

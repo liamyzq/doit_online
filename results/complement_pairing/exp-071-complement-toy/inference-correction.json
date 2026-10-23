@@ -1,0 +1,10 @@
+{
+  "source_run": "exp-071-complement-toy",
+  "source_commit": "9ca5f7f2bc8be309d6cd95064ac1df5ddab10201",
+  "marginal_estimates_and_mse_points_valid": true,
+  "paired_mc_intervals_valid": false,
+  "original_nominal_advance_gate_authoritative": false,
+  "reason": "Shape-dependent common RNG draws reused random positions across different repeat indices when counts or ranks differed. The paired loss sequence was not independent.",
+  "replacement": "exp-071-r2-complement-toy after exp-074-complement-stream-checks",
+  "preservation": "Original raw estimates, point summaries, costs and nominal analysis are preserved. Use replacement inference, not the old nominal gate, for advancement."
+}

@@ -1,7 +1,9 @@
 # Complement pairing: current evidence
 
-Exp-070 verifies the supplied direction decomposition, and exp-071 establishes
-a strong exact-direction toy mechanism. The paid eight-query random-subspace
+Exp-070 verifies the supplied direction decomposition. Exp-071 has a strong
+exact-direction MSE point-estimate signal, but its nominal paired intervals
+are superseded by the repeat-stream correction below. Exp-071-r2 must establish
+the advance gate before real-critic discovery. The paid eight-query random-subspace
 pilot fails at the tested budgets. The next question is whether real,
 low-dimensional models provide sufficiently accurate directions at low cost.
 No real-model or endpoint success follows from the toy oracle.
@@ -39,9 +41,11 @@ Each condition has1024 repeats; two independent seeds are pooled below.
 Per-repeat estimates and paired differences are preserved. Intervals quantify
 Monte Carlo uncertainty for the fixed toy, not population generalization.
 
-The M32 exact-direction four-point LHS passes all four locked deterministic
-mechanism comparisons by more than20% against both antithetic and oracle
-paired-LHS controls. Every paired difference interval is strictly negative.
+The original M32 exact-direction point estimates improve by more than20%
+against both antithetic and oracle paired-LHS controls in all four deterministic
+conditions. Its nominal intervals assumed independent paired losses, which
+the stream review disproved. Preserve these point estimates; use the corrected
+exp-071-r2 run for intervals and the formal advance decision.
 
 | Toy | Weight target | Antithetic MSE | Oracle paired LHS | Oracle four-point LHS |
 |---|---|---:|---:|---:|
@@ -71,8 +75,8 @@ antithetic0.348533/0.713738, gains65.62%/74.04%. Shared streams retain each
 posterior draw's correct marginal. They do not make the self-normalized ratio
 unbiased. All independent-noise outcomes remain reported.
 
-Decision: advance the ideal-direction mechanism to the bounded real-critic
-direction study. Preserve the failed paid pilot and noise sensitivity; neither
+Original decision: prepare the bounded real-critic direction study. The
+repeat-stream correction now holds discovery until exp-071-r2 passes the gate. Preserve the failed paid pilot and noise sensitivity; neither
 is hidden by the favorable oracle result. The
 [complete analysis](../../results/complement_pairing/exp-071-complement-toy/analysis.json)
 contains both budgets, every configured method and the exact gate decisions.
@@ -100,3 +104,29 @@ tolerance. It does not change the gradient oracle, finite-difference direction
 pilot (radius0.25), estimator, budget or exp-073 conditions. Discovery remains
 blocked until this corrected smoke completes. This is a validation precision
 failure, not evidence against complement pairing or a change to measured MSE.
+
+## Repeat-stream correction before critic discovery
+
+Exp-072-r2 completes with both gradient checks passing (0.99%/1.93%), exact
+future-coupling checks and46MiB peak reserved memory. Its costs are15,208 Q
+evaluations,94,680 actor forwards and20 Jacobian/oracle VJP calls. Its purpose
+is execution validation; its small performance rows are not used for inference.
+
+Main-agent review found a real statistical defect in common-random sampling.
+Resetting a generator while changing an array's per-repeat sample count maps
+some randomness from one method's repeat i to another method's repeat j. LHS
+rank changes and future group sizes have the same issue. Individual methods
+still have correct marginals and valid MSE point estimates, but paired losses
+are dependent across repeat indices. Thus the nominal independent-repeat
+standard errors and gate in exp-071 are invalid. Exp-073 was held before launch.
+
+The correction draws fixed total-budget blocks for every repeat, including
+normal probes, LHS permutations/jitter, posterior component uniforms and all
+future Gaussian noises, then slices to each method's main sample count/rank.
+This retains deliberate within-repeat common randomness and prevents cross-
+repeat overlap. No integrand, direction method, reward budget or target changes.
+Exp-074 tests six exact stream-alignment relations on multiple repeats. It
+does not repeat settled posterior or gradient checks. After it passes,
+exp-071-r2 reruns the same locked toy conditions; do not pool it with the old
+run or treat it as independent generalization. Its corrected paired inference
+must pass the original gate before exp-073 is launched.

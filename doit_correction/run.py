@@ -42,7 +42,10 @@ def main():
         torch.set_num_threads(int(os.environ.get("OMP_NUM_THREADS", 2)))
         torch.cuda.reset_peak_memory_stats()
         mode = config.get("mode", "image")
-        if mode == "complement_critic":
+        if mode == "complement_stream_checks":
+            from .complement_checks import run
+            metrics = run(config, output)
+        elif mode == "complement_critic":
             from .complement_critic import evaluate
             metrics = evaluate(config, output)
         elif mode == "complement_checks":

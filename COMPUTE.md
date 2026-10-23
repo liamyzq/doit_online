@@ -30,11 +30,16 @@ physical GPU0--4 for the smoke. No simulator or image job is authorized by
 this toy gate alone; the locked follow-up protocol defines later conditions.
 
 Exp-072 at `4c21ae3` failed its finite-difference validation before discovery;
-exp-073 did not run. Its finite controller exited and all failure outputs
-were retrieved. A bounded precision diagnostic measured46MiB peak reserved
-memory. The revised exp-072-r2 must pass before discovery; retain the same
-4096MiB allowance plus2048MiB reserve. This is an application-level validation
-precision issue, described in the follow-up findings, not a machine failure.
+its full failure outputs were retrieved. Exp-072-r2 at `8a4cd08` passed both
+candidate-gradient checks (relative errors 0.00992/0.01928) and both coupling
+checks, with 40.77/46MiB peak allocated/reserved memory under a 4096MiB
+allowance plus2048MiB reserve. Exp-073 has not been launched after review
+identified a cross-method RNG repeat-alignment defect affecting paired
+difference intervals; per-method marginals remain valid. All controllers have
+exited and the remote checkout remains at `8a4cd08`. After the fixed-budget
+stream repair is committed, run exp-074 and exp-071-r2, then await the main
+agent's gate decision before exp-073. Retain4096MiB+2048MiB and one job per
+GPU; the changed random blocks add only small tensors to the measured path.
 
 ## Current uncertainty study
 

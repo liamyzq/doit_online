@@ -1,0 +1,29 @@
+{
+  "conditions": 60,
+  "contexts": 2,
+  "checks": {
+    "context000": {
+      "candidate_gradient_fd_relative": 0.00992197585544081,
+      "candidate_gradient_fd_step": 0.1,
+      "candidate_gradient_numeric": -0.18853395503128922,
+      "candidate_gradient_autograd": -0.18668170367477555,
+      "independent_continuation_adapter_max": 0.0,
+      "shared_duplicate_continuation_max": 0.0
+    },
+    "context001": {
+      "candidate_gradient_fd_relative": 0.019275071644942084,
+      "candidate_gradient_fd_step": 0.1,
+      "candidate_gradient_numeric": 0.026400696510791022,
+      "candidate_gradient_autograd": 0.025901444315894674,
+      "independent_continuation_adapter_max": 0.0,
+      "shared_duplicate_continuation_max": 0.0
+    }
+  },
+  "reward_queries": 15208,
+  "score_forwards": 94680,
+  "actual_jacobian_and_oracle_vjp_calls": 20,
+  "seconds": 5.943368720007129,
+  "scope": "Fixed actor/critic contexts in the active interval; no simulator return or standalone runtime claim",
+  "peak_allocated_mib": 40.76611328125,
+  "peak_reserved_mib": 46.0
+}
