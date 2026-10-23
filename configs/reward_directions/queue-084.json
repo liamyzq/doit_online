@@ -1,0 +1,10 @@
+[
+  {
+    "id": "exp-084-hopper-development",
+    "config": "configs/reward_directions/exp-084-hopper-development.json"
+  },
+  {
+    "id": "exp-084-halfcheetah-development",
+    "config": "configs/reward_directions/exp-084-halfcheetah-development.json"
+  }
+]

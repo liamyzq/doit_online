@@ -1,0 +1,164 @@
+{
+  "agreement_threshold": 0.8,
+  "ess_fraction": 0.25,
+  "pool_seed": 81031,
+  "reference_blocks": 8,
+  "reference_block_samples": 4096,
+  "samples": [
+    32,
+    64
+  ],
+  "controls": [
+    "antithetic",
+    "random_pair",
+    "random_four"
+  ],
+  "id": "exp-082-gaussian-in_pool",
+  "mode": "reward_direction_toy",
+  "dimension": 6,
+  "models": [
+    "gaussian"
+  ],
+  "alignments": [
+    "in_pool"
+  ],
+  "rewards": [
+    "shift",
+    "narrow",
+    "intervals",
+    "constant",
+    "hermite4"
+  ],
+  "indices": [
+    2,
+    7,
+    12
+  ],
+  "states": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "repeats": 512,
+  "seed": 82011,
+  "reference_seed": 82007,
+  "routes": {
+    "P": [
+      {
+        "name": "antithetic",
+        "selector": "none",
+        "layout": "pair"
+      },
+      {
+        "name": "random_pair",
+        "selector": "random",
+        "layout": "pair_lhs"
+      },
+      {
+        "name": "random_four",
+        "selector": "random",
+        "layout": "four_lhs"
+      },
+      {
+        "name": "model",
+        "selector": "model",
+        "layout": "four_lhs"
+      },
+      {
+        "name": "first",
+        "selector": "first",
+        "layout": "four_lhs"
+      },
+      {
+        "name": "no_j",
+        "selector": "no_j",
+        "layout": "four_lhs"
+      },
+      {
+        "name": "moments_pair",
+        "selector": "moments",
+        "layout": "pair_lhs"
+      },
+      {
+        "name": "moments_four",
+        "selector": "moments",
+        "layout": "four_lhs"
+      },
+      {
+        "name": "oracle_pair",
+        "selector": "oracle",
+        "layout": "pair_lhs"
+      },
+      {
+        "name": "oracle_four",
+        "selector": "oracle",
+        "layout": "four_lhs"
+      }
+    ],
+    "F": [
+      {
+        "name": "antithetic",
+        "selector": "none",
+        "layout": "pair"
+      },
+      {
+        "name": "random_pair",
+        "selector": "random",
+        "layout": "pair_lhs"
+      },
+      {
+        "name": "random_four",
+        "selector": "random",
+        "layout": "four_lhs"
+      },
+      {
+        "name": "model",
+        "selector": "model",
+        "layout": "pair_lhs"
+      },
+      {
+        "name": "first",
+        "selector": "first",
+        "layout": "pair_lhs"
+      },
+      {
+        "name": "no_j",
+        "selector": "no_j",
+        "layout": "pair_lhs"
+      },
+      {
+        "name": "moments_pair",
+        "selector": "moments",
+        "layout": "pair_lhs"
+      },
+      {
+        "name": "moments_four",
+        "selector": "moments",
+        "layout": "four_lhs"
+      },
+      {
+        "name": "oracle_pair",
+        "selector": "oracle",
+        "layout": "pair_lhs"
+      },
+      {
+        "name": "oracle_four",
+        "selector": "oracle",
+        "layout": "four_lhs"
+      }
+    ],
+    "PF": [
+      {
+        "name": "moments_pair",
+        "selector": "moments",
+        "layout": "pair_lhs"
+      },
+      {
+        "name": "moments_four",
+        "selector": "moments",
+        "layout": "four_lhs"
+      }
+    ]
+  }
+}

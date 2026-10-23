@@ -1,0 +1,18 @@
+[
+  {
+    "id": "exp-082-gaussian-in_pool",
+    "config": "configs/reward_directions/exp-082-gaussian-in_pool.json"
+  },
+  {
+    "id": "exp-082-gaussian-off_pool",
+    "config": "configs/reward_directions/exp-082-gaussian-off_pool.json"
+  },
+  {
+    "id": "exp-082-mixture-in_pool",
+    "config": "configs/reward_directions/exp-082-mixture-in_pool.json"
+  },
+  {
+    "id": "exp-082-mixture-off_pool",
+    "config": "configs/reward_directions/exp-082-mixture-off_pool.json"
+  }
+]

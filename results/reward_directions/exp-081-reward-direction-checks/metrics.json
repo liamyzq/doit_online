@@ -1,0 +1,10 @@
+{
+  "checks_passed": 31,
+  "synthetic_reward_evaluations": 5242880,
+  "toy_costs": {
+    "reward_queries": 524288,
+    "score_forwards": 2359298
+  },
+  "peak_allocated_mib": 0.0,
+  "peak_reserved_mib": 0.0
+}

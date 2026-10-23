@@ -75,12 +75,12 @@ class Study:
                     words = (config["seed"], *coordinates, budget)
                     # Paired methods share stream coordinates; different budgets,
                     # contexts, pilot/main and reference streams are separate.
-                    before = context.model.counts()
+                    before = context.counts()
                     tick = time.perf_counter()
                     guidance, arrays, info = estimate(context, method, route, budget,
                                                      config["repeats"], words, config)
                     seconds = time.perf_counter() - tick
-                    after = context.model.counts()
+                    after = context.counts()
                     array_key = f"condition{len(self.rows):05d}"
                     np.savez_compressed(output / "raw" / f"{array_key}.npz", **arrays)
                     self.estimates[array_key] = guidance
@@ -90,6 +90,11 @@ class Study:
                            "repeats": config["repeats"], **info,
                            "actual_batch_costs": {k: after[k] - before[k] for k in before},
                            "evaluation_seconds": seconds, **loss_summary(guidance, reference)}
+                    if hasattr(context, "jacobian_seconds"):
+                        uses_pool = method["selector"] in {"model", "moments", "first", "no_j"}
+                        row.update(deployed_jacobian_vjps=context.dimension if uses_pool else 1,
+                                   measured_context_jacobian_seconds=context.jacobian_seconds,
+                                   extra_geometry_required=uses_pool)
                     row["displacement_mse"] = context.gain**2 * row["mse"]
                     row["zero_displacement_mse"] = context.gain**2 * float(reference @ reference)
                     if route == "P":
@@ -112,16 +117,40 @@ class Study:
         dump(self.output / "results.json", self.rows)
         dump(self.output / "contexts.json", self.contexts)
         dump(self.output / "paired-differences.json", self.differences)
-        np.savez_compressed(self.output / "estimates.npz", **self.estimates)
 
 
 def evaluate_toy(config, output):
     study, totals = Study(config, output), {"reward_queries": 0, "score_forwards": 0}
-    for ki, kind in enumerate(config["models"]):
+    for kind in config["models"]:
+        ki = 0 if kind == "gaussian" else 1
         model = ToyProcess(kind, config["dimension"])
+        if kind == "gaussian":
+            # A new polynomial reference must integrate the same terminal reward
+            # for P and F. Sixteen Gaussian quadrature nodes integrate this
+            # degree-five numerator exactly, independently of its closed form.
+            check_context = ToyContext(model, 7, 1, "off_pool", "hermite4", config["pool_seed"])
+            nodes, weights = np.polynomial.hermite.hermgauss(16)
+            nodes, weights = nodes * np.sqrt(2), weights / np.sqrt(np.pi)
+            errors = {}
+            for route in ("P", "F"):
+                center, response, covariance = check_context.gaussian_endpoint(route)
+                axis = check_context.axis
+                mean = center @ axis
+                variance = axis @ (response @ response.T + covariance) @ axis
+                z = mean + np.sqrt(variance) * nodes
+                terminal = z[:, None] * axis
+                w = np.exp(check_context.logs(terminal)) * weights
+                numeric = (response.T @ axis) / variance * np.sum(w * (z - mean)) / w.sum()
+                exact = check_context.analytic_reference(route)
+                errors[route] = max(float(abs(w.sum() - exact["mass"])),
+                                    float(np.max(np.abs(numeric - exact["ratio"]))))
+            dump(output / "hermite-reference-check.json", errors)
+            if max(errors.values()) > 1e-10:
+                raise AssertionError(errors)
         for index in config["indices"]:
             for state in config["states"]:
-                for ai, alignment in enumerate(config["alignments"]):
+                for alignment in config["alignments"]:
+                    ai = 0 if alignment == "in_pool" else 1
                     for ri, reward in enumerate(config["rewards"]):
                         context = ToyContext(model, index, state, alignment, reward, config["pool_seed"])
                         study.context(context, (ki, index, state, ai, ri),
@@ -129,6 +158,7 @@ def evaluate_toy(config, output):
                                        "alignment": alignment, "reward": reward})
         for key, value in model.counts().items():
             totals[key] += value
+    np.savez_compressed(output / "estimates.npz", **study.estimates)
     metrics = {"conditions": len(study.rows), "contexts": len(study.contexts), "costs": totals,
                "seconds": time.perf_counter() - study.started,
                "scope": "Actual sixteen-step Gaussian transition process; analytic references only for the Gaussian model"}

@@ -1,0 +1,158 @@
+{
+  "agreement_threshold": 0.8,
+  "ess_fraction": 0.25,
+  "pool_seed": 81031,
+  "reference_blocks": 8,
+  "reference_block_samples": 4096,
+  "samples": [
+    32,
+    64
+  ],
+  "controls": [
+    "antithetic",
+    "random_pair",
+    "random_four"
+  ],
+  "id": "exp-084-halfcheetah-development",
+  "mode": "reward_direction_critic",
+  "tasks": [
+    {
+      "name": "halfcheetah-medium-v2",
+      "source": "/home/mlw0719/doob_transform/test/Doob_training_free_adaptation",
+      "states": "/home/mlw0719/doit_reward_directions_storage/data/critic-states/halfcheetah-medium-v2",
+      "actor": "models_rl/halfcheetah-medium-v20large_actor/behavior_ckpt600.pth",
+      "critic": "models_rl/halfcheetah-medium-v20large_actor/critic_ckpt100.pth",
+      "eta": 0.2,
+      "guidance_end_index": 10,
+      "steps": 15,
+      "tau": 0.07369107116716792
+    }
+  ],
+  "batch": 2048,
+  "smoke": false,
+  "state_rows": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "indices": [
+    3,
+    5,
+    7
+  ],
+  "path_seed": 84001,
+  "seed": 84011,
+  "reference_seed": 84007,
+  "repeats": 256,
+  "routes": {
+    "P": [
+      {
+        "name": "antithetic",
+        "selector": "none",
+        "layout": "pair"
+      },
+      {
+        "name": "random_pair",
+        "selector": "random",
+        "layout": "pair_lhs"
+      },
+      {
+        "name": "random_four",
+        "selector": "random",
+        "layout": "four_lhs"
+      },
+      {
+        "name": "model",
+        "selector": "model",
+        "layout": "four_lhs"
+      },
+      {
+        "name": "first",
+        "selector": "first",
+        "layout": "four_lhs"
+      },
+      {
+        "name": "no_j",
+        "selector": "no_j",
+        "layout": "four_lhs"
+      },
+      {
+        "name": "moments_pair",
+        "selector": "moments",
+        "layout": "pair_lhs"
+      },
+      {
+        "name": "moments_four",
+        "selector": "moments",
+        "layout": "four_lhs"
+      }
+    ],
+    "F": [
+      {
+        "name": "antithetic",
+        "selector": "none",
+        "layout": "pair"
+      },
+      {
+        "name": "random_pair",
+        "selector": "random",
+        "layout": "pair_lhs"
+      },
+      {
+        "name": "random_four",
+        "selector": "random",
+        "layout": "four_lhs"
+      },
+      {
+        "name": "model",
+        "selector": "model",
+        "layout": "pair_lhs"
+      },
+      {
+        "name": "first",
+        "selector": "first",
+        "layout": "pair_lhs"
+      },
+      {
+        "name": "no_j",
+        "selector": "no_j",
+        "layout": "pair_lhs"
+      },
+      {
+        "name": "moments_pair",
+        "selector": "moments",
+        "layout": "pair_lhs"
+      },
+      {
+        "name": "moments_four",
+        "selector": "moments",
+        "layout": "four_lhs"
+      }
+    ],
+    "PF": [
+      {
+        "name": "moments_pair",
+        "selector": "moments",
+        "layout": "pair_lhs"
+      },
+      {
+        "name": "moments_four",
+        "selector": "moments",
+        "layout": "four_lhs"
+      }
+    ]
+  }
+}

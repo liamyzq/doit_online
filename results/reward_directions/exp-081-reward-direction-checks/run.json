@@ -1,0 +1,25 @@
+{
+  "commit": "16c00b546b2c3b2222a96245e079881c1823227f",
+  "config": "/home/mlw0719/doit_reward_directions/configs/reward_directions/exp-081-reward-direction-checks.json",
+  "experiment_id": "exp-081-reward-direction-checks",
+  "pid": 3003304,
+  "cuda_visible_devices": "4",
+  "started_at": 1792788637.67485,
+  "status": "completed",
+  "environment": {
+    "python": "3.12.9",
+    "torch": "2.6.0+cu124",
+    "cuda": "12.4",
+    "gpu": "NVIDIA RTX A6000",
+    "packages": {
+      "numpy": "1.26.4",
+      "diffusers": "0.32.2",
+      "transformers": "4.49.0",
+      "torchvision": "0.21.0",
+      "huggingface_hub": "0.36.0",
+      "safetensors": "0.8.0",
+      "h5py": "3.14.0"
+    }
+  },
+  "elapsed_seconds": 6.951315402984619
+}

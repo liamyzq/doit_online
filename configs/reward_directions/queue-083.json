@@ -1,0 +1,6 @@
+[
+  {
+    "id": "exp-083-reward-direction-critic-smoke",
+    "config": "configs/reward_directions/exp-083-reward-direction-critic-smoke.json"
+  }
+]

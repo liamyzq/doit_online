@@ -69,6 +69,9 @@ class ToyContext:
         # pulls back differently for P and F, recorded by exact references below.
         self.oracle = self.axis
         self.scale = np.sqrt(self.axis @ model.cov @ self.axis)
+        center, response, covariance = self.gaussian_endpoint("F")
+        self.hermite_center = float(self.axis @ center)
+        self.hermite_scale = np.sqrt(self.axis @ (response @ response.T + covariance) @ self.axis)
 
     def logs(self, terminal):
         self.model.reward_queries += int(np.prod(terminal.shape[:-1]))
@@ -82,9 +85,9 @@ class ToyContext:
         if self.reward == "constant":
             return np.zeros(z.shape)
         if self.reward == "hermite4":
-            # Center/scale under this context's Gaussian endpoint law. This gives
-            # exactly unchanged first two Gaussian moments for the Gaussian toy.
-            # The route-specific standardization is set in evaluate/reference.
+            # Fix one terminal reward from the full Gaussian endpoint law. P and
+            # F evaluate this same reward, even though their terminal laws differ.
+            z = (terminal @ self.axis - self.hermite_center) / self.hermite_scale
             return np.log1p(0.05 * (z**4 - 6 * z**2 + 3))
         raise ValueError(self.reward)
 
@@ -112,12 +115,6 @@ class ToyContext:
                 mean, std = self.model.transition(x, index)
                 noise = rng.normal(size=(len(eps), capacity, self.dimension))
                 x = mean + std * noise[np.arange(len(eps))[:, None], groups]
-        if self.reward == "hermite4":
-            center, response, covariance = self.gaussian_endpoint(route)
-            sd = np.sqrt(self.axis @ (response @ response.T + covariance) @ self.axis)
-            z = ((x - center) @ self.axis) / sd
-            self.model.reward_queries += int(np.prod(z.shape))
-            return np.log1p(0.05 * (z**4 - 6 * z**2 + 3))
         return self.logs(x)
 
     def analytic_reference(self, route):
@@ -127,8 +124,14 @@ class ToyContext:
         b = response.T @ self.axis / self.scale
         mean = self.axis @ center / self.scale
         variance = b @ b + self.axis @ covariance @ self.axis / self.scale**2
-        if self.reward in {"constant", "hermite4"}:
+        if self.reward == "constant":
             ratio, mass = np.zeros(self.dimension), 1.0
+        elif self.reward == "hermite4":
+            b_h = response.T @ self.axis / self.hermite_scale
+            m = (self.axis @ center - self.hermite_center) / self.hermite_scale
+            v = self.axis @ (response @ response.T + covariance) @ self.axis / self.hermite_scale**2
+            mass = 1 + 0.05 * (m**4 + 6 * m*m*v + 3*v*v - 6 * (m*m + v) + 3)
+            ratio = b_h * 0.2 * m * (m*m + 3*v - 3) / mass
         elif self.reward in {"shift", "narrow"}:
             target, width = (1.0, 0.6) if self.reward == "shift" else (0.0, 0.35)
             ratio = b * (target - mean) / (width**2 + variance)
@@ -150,3 +153,6 @@ class ToyContext:
         return {"model": self.model.kind, "index": self.index, "reward": self.reward,
                 "sigma": self.std, "gain": self.gain, "x": self.x.tolist(),
                 "reward_axis": self.axis.tolist(), "kernel_singular_values2": self.eigenvalues.tolist()}
+
+    def counts(self):
+        return self.model.counts()

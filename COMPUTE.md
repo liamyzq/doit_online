@@ -1,5 +1,22 @@
 # Compute
 
+## Reward-calibrated directions
+
+The 2026-10-23 round uses branch `codex/doit-reward-directions`, Orion checkout
+`/home/mlw0719/doit_reward_directions`, and storage
+`/home/mlw0719/doit_reward_directions_storage`. Use
+`scripts/compute/reward_directions/{env.sh,sync.sh}` and the existing finite
+queue. The isolated environment and model cache are symlinks to the preserved
+original study environment/cache. No old execution checkout was changed.
+Exp-081 completed31 checks at `16c00b5` with0/0MiB peak allocated/reserved GPU
+memory; its finite controller exited and records were retrieved. It used a
+512MiB allowance plus2048MiB reserve on physical GPU4. Exp-083 will measure
+the real-critic memory peak before setting development concurrency.
+The new observation split excludes all 64 episodes per task used by previous
+studies and writes 16 development plus 32 confirmation observations per task
+under the new storage's `data/critic-states/`. Selection seed is83041; models,
+temperatures, eta and active guidance intervals remain fixed.
+
 ## Posterior geometry exploration
 
 The new branch `codex/doit-posterior-geometry` uses separate Orion checkout

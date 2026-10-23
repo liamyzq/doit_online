@@ -1,0 +1,15 @@
+{
+  "experiment_id": "exp-081-reward-direction-checks",
+  "commit": "16c00b546b2c3b2222a96245e079881c1823227f",
+  "config": "/home/mlw0719/doit_reward_directions/configs/reward_directions/exp-081-reward-direction-checks.json",
+  "machine": "orion",
+  "gpu": 4,
+  "pid": 3003304,
+  "path": "/home/mlw0719/doit_reward_directions_storage/runs/exp-081-reward-direction-checks",
+  "log_path": "/home/mlw0719/doit_reward_directions_storage/artifacts/exp-081-reward-direction-checks.log",
+  "status": "completed",
+  "timestamp": "2026-10-23T20:50:57.932902+00:00",
+  "started_at": "2026-10-23T20:50:27.932217+00:00",
+  "returncode": 0,
+  "finished_at": "2026-10-23T20:50:57.932927+00:00"
+}

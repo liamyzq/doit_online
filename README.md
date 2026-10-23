@@ -8,7 +8,12 @@ The primary question is whether information from earlier steps reduces current
 correction error and improves generated samples at the same actual reward-query
 budget. Fitting error alone is not a success criterion.
 
-The active branch is `codex/doit-posterior-geometry`. Its latest completed
+The active branch is `codex/doit-reward-directions`. The new
+[audit-directed study](experiments/reward_directions/PLAN.md) tests reward-
+calibrated rank-one Gaussian sampling directions with paid antithetic pilots,
+four-point/LHS main probes and group-shared futures. Toy and fresh real-critic
+comparisons preserve the original DOIT ratio and account for every query and
+Jacobian calculation. The prior geometry branch's latest completed
 [continuation-aware follow-up](experiments/joint_future/FINDINGS.md) tests paid
 per-future directions and free joint noise coupling. Paid directions close at
 the toy cost gate. Joint antithetic has a valid three-dimensional toy gain but

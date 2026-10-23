@@ -1,0 +1,513 @@
+{
+  "task": "halfcheetah-medium-v2",
+  "dataset": "/home/mlw0719/doit_correction_storage/data/d4rl/halfcheetah-medium-v2.hdf5",
+  "dataset_url": "http://rail.eecs.berkeley.edu/datasets/offline_rl/gym_mujoco_v2/halfcheetah_medium-v2.hdf5",
+  "seed": 83041,
+  "normalization": "none",
+  "selection": "one nonterminal observation per distinct complete episode",
+  "split_sizes": {
+    "development": 16,
+    "confirmation": 32
+  },
+  "rows": [
+    {
+      "array_index": 0,
+      "split": "development",
+      "split_index": 0,
+      "episode": 845,
+      "dataset_index": 845034,
+      "episode_start": 845000,
+      "episode_end": 845999
+    },
+    {
+      "array_index": 1,
+      "split": "development",
+      "split_index": 1,
+      "episode": 943,
+      "dataset_index": 943354,
+      "episode_start": 943000,
+      "episode_end": 943999
+    },
+    {
+      "array_index": 2,
+      "split": "development",
+      "split_index": 2,
+      "episode": 231,
+      "dataset_index": 231188,
+      "episode_start": 231000,
+      "episode_end": 231999
+    },
+    {
+      "array_index": 3,
+      "split": "development",
+      "split_index": 3,
+      "episode": 628,
+      "dataset_index": 628223,
+      "episode_start": 628000,
+      "episode_end": 628999
+    },
+    {
+      "array_index": 4,
+      "split": "development",
+      "split_index": 4,
+      "episode": 163,
+      "dataset_index": 163011,
+      "episode_start": 163000,
+      "episode_end": 163999
+    },
+    {
+      "array_index": 5,
+      "split": "development",
+      "split_index": 5,
+      "episode": 494,
+      "dataset_index": 494655,
+      "episode_start": 494000,
+      "episode_end": 494999
+    },
+    {
+      "array_index": 6,
+      "split": "development",
+      "split_index": 6,
+      "episode": 462,
+      "dataset_index": 462205,
+      "episode_start": 462000,
+      "episode_end": 462999
+    },
+    {
+      "array_index": 7,
+      "split": "development",
+      "split_index": 7,
+      "episode": 297,
+      "dataset_index": 297874,
+      "episode_start": 297000,
+      "episode_end": 297999
+    },
+    {
+      "array_index": 8,
+      "split": "development",
+      "split_index": 8,
+      "episode": 464,
+      "dataset_index": 464352,
+      "episode_start": 464000,
+      "episode_end": 464999
+    },
+    {
+      "array_index": 9,
+      "split": "development",
+      "split_index": 9,
+      "episode": 188,
+      "dataset_index": 188148,
+      "episode_start": 188000,
+      "episode_end": 188999
+    },
+    {
+      "array_index": 10,
+      "split": "development",
+      "split_index": 10,
+      "episode": 601,
+      "dataset_index": 601402,
+      "episode_start": 601000,
+      "episode_end": 601999
+    },
+    {
+      "array_index": 11,
+      "split": "development",
+      "split_index": 11,
+      "episode": 511,
+      "dataset_index": 511016,
+      "episode_start": 511000,
+      "episode_end": 511999
+    },
+    {
+      "array_index": 12,
+      "split": "development",
+      "split_index": 12,
+      "episode": 520,
+      "dataset_index": 520505,
+      "episode_start": 520000,
+      "episode_end": 520999
+    },
+    {
+      "array_index": 13,
+      "split": "development",
+      "split_index": 13,
+      "episode": 518,
+      "dataset_index": 518229,
+      "episode_start": 518000,
+      "episode_end": 518999
+    },
+    {
+      "array_index": 14,
+      "split": "development",
+      "split_index": 14,
+      "episode": 687,
+      "dataset_index": 687237,
+      "episode_start": 687000,
+      "episode_end": 687999
+    },
+    {
+      "array_index": 15,
+      "split": "development",
+      "split_index": 15,
+      "episode": 672,
+      "dataset_index": 672512,
+      "episode_start": 672000,
+      "episode_end": 672999
+    },
+    {
+      "array_index": 16,
+      "split": "confirmation",
+      "split_index": 0,
+      "episode": 905,
+      "dataset_index": 905615,
+      "episode_start": 905000,
+      "episode_end": 905999
+    },
+    {
+      "array_index": 17,
+      "split": "confirmation",
+      "split_index": 1,
+      "episode": 965,
+      "dataset_index": 965408,
+      "episode_start": 965000,
+      "episode_end": 965999
+    },
+    {
+      "array_index": 18,
+      "split": "confirmation",
+      "split_index": 2,
+      "episode": 8,
+      "dataset_index": 8279,
+      "episode_start": 8000,
+      "episode_end": 8999
+    },
+    {
+      "array_index": 19,
+      "split": "confirmation",
+      "split_index": 3,
+      "episode": 792,
+      "dataset_index": 792133,
+      "episode_start": 792000,
+      "episode_end": 792999
+    },
+    {
+      "array_index": 20,
+      "split": "confirmation",
+      "split_index": 4,
+      "episode": 140,
+      "dataset_index": 140991,
+      "episode_start": 140000,
+      "episode_end": 140999
+    },
+    {
+      "array_index": 21,
+      "split": "confirmation",
+      "split_index": 5,
+      "episode": 94,
+      "dataset_index": 94134,
+      "episode_start": 94000,
+      "episode_end": 94999
+    },
+    {
+      "array_index": 22,
+      "split": "confirmation",
+      "split_index": 6,
+      "episode": 531,
+      "dataset_index": 531338,
+      "episode_start": 531000,
+      "episode_end": 531999
+    },
+    {
+      "array_index": 23,
+      "split": "confirmation",
+      "split_index": 7,
+      "episode": 797,
+      "dataset_index": 797671,
+      "episode_start": 797000,
+      "episode_end": 797999
+    },
+    {
+      "array_index": 24,
+      "split": "confirmation",
+      "split_index": 8,
+      "episode": 700,
+      "dataset_index": 700117,
+      "episode_start": 700000,
+      "episode_end": 700999
+    },
+    {
+      "array_index": 25,
+      "split": "confirmation",
+      "split_index": 9,
+      "episode": 54,
+      "dataset_index": 54689,
+      "episode_start": 54000,
+      "episode_end": 54999
+    },
+    {
+      "array_index": 26,
+      "split": "confirmation",
+      "split_index": 10,
+      "episode": 83,
+      "dataset_index": 83106,
+      "episode_start": 83000,
+      "episode_end": 83999
+    },
+    {
+      "array_index": 27,
+      "split": "confirmation",
+      "split_index": 11,
+      "episode": 426,
+      "dataset_index": 426106,
+      "episode_start": 426000,
+      "episode_end": 426999
+    },
+    {
+      "array_index": 28,
+      "split": "confirmation",
+      "split_index": 12,
+      "episode": 784,
+      "dataset_index": 784196,
+      "episode_start": 784000,
+      "episode_end": 784999
+    },
+    {
+      "array_index": 29,
+      "split": "confirmation",
+      "split_index": 13,
+      "episode": 334,
+      "dataset_index": 334189,
+      "episode_start": 334000,
+      "episode_end": 334999
+    },
+    {
+      "array_index": 30,
+      "split": "confirmation",
+      "split_index": 14,
+      "episode": 260,
+      "dataset_index": 260091,
+      "episode_start": 260000,
+      "episode_end": 260999
+    },
+    {
+      "array_index": 31,
+      "split": "confirmation",
+      "split_index": 15,
+      "episode": 430,
+      "dataset_index": 430353,
+      "episode_start": 430000,
+      "episode_end": 430999
+    },
+    {
+      "array_index": 32,
+      "split": "confirmation",
+      "split_index": 16,
+      "episode": 679,
+      "dataset_index": 679319,
+      "episode_start": 679000,
+      "episode_end": 679999
+    },
+    {
+      "array_index": 33,
+      "split": "confirmation",
+      "split_index": 17,
+      "episode": 727,
+      "dataset_index": 727772,
+      "episode_start": 727000,
+      "episode_end": 727999
+    },
+    {
+      "array_index": 34,
+      "split": "confirmation",
+      "split_index": 18,
+      "episode": 22,
+      "dataset_index": 22298,
+      "episode_start": 22000,
+      "episode_end": 22999
+    },
+    {
+      "array_index": 35,
+      "split": "confirmation",
+      "split_index": 19,
+      "episode": 456,
+      "dataset_index": 456026,
+      "episode_start": 456000,
+      "episode_end": 456999
+    },
+    {
+      "array_index": 36,
+      "split": "confirmation",
+      "split_index": 20,
+      "episode": 916,
+      "dataset_index": 916320,
+      "episode_start": 916000,
+      "episode_end": 916999
+    },
+    {
+      "array_index": 37,
+      "split": "confirmation",
+      "split_index": 21,
+      "episode": 111,
+      "dataset_index": 111079,
+      "episode_start": 111000,
+      "episode_end": 111999
+    },
+    {
+      "array_index": 38,
+      "split": "confirmation",
+      "split_index": 22,
+      "episode": 169,
+      "dataset_index": 169593,
+      "episode_start": 169000,
+      "episode_end": 169999
+    },
+    {
+      "array_index": 39,
+      "split": "confirmation",
+      "split_index": 23,
+      "episode": 555,
+      "dataset_index": 555666,
+      "episode_start": 555000,
+      "episode_end": 555999
+    },
+    {
+      "array_index": 40,
+      "split": "confirmation",
+      "split_index": 24,
+      "episode": 878,
+      "dataset_index": 878046,
+      "episode_start": 878000,
+      "episode_end": 878999
+    },
+    {
+      "array_index": 41,
+      "split": "confirmation",
+      "split_index": 25,
+      "episode": 360,
+      "dataset_index": 360763,
+      "episode_start": 360000,
+      "episode_end": 360999
+    },
+    {
+      "array_index": 42,
+      "split": "confirmation",
+      "split_index": 26,
+      "episode": 440,
+      "dataset_index": 440951,
+      "episode_start": 440000,
+      "episode_end": 440999
+    },
+    {
+      "array_index": 43,
+      "split": "confirmation",
+      "split_index": 27,
+      "episode": 293,
+      "dataset_index": 293963,
+      "episode_start": 293000,
+      "episode_end": 293999
+    },
+    {
+      "array_index": 44,
+      "split": "confirmation",
+      "split_index": 28,
+      "episode": 984,
+      "dataset_index": 984778,
+      "episode_start": 984000,
+      "episode_end": 984999
+    },
+    {
+      "array_index": 45,
+      "split": "confirmation",
+      "split_index": 29,
+      "episode": 282,
+      "dataset_index": 282153,
+      "episode_start": 282000,
+      "episode_end": 282999
+    },
+    {
+      "array_index": 46,
+      "split": "confirmation",
+      "split_index": 30,
+      "episode": 170,
+      "dataset_index": 170835,
+      "episode_start": 170000,
+      "episode_end": 170999
+    },
+    {
+      "array_index": 47,
+      "split": "confirmation",
+      "split_index": 31,
+      "episode": 587,
+      "dataset_index": 587189,
+      "episode_start": 587000,
+      "episode_end": 587999
+    }
+  ],
+  "exclude_selection": "/home/mlw0719/doit_correction_storage/data/critic-states/halfcheetah-medium-v2/selection.json",
+  "excluded_episodes": [
+    976,
+    908,
+    506,
+    868,
+    368,
+    573,
+    626,
+    216,
+    854,
+    424,
+    778,
+    599,
+    618,
+    156,
+    492,
+    165,
+    571,
+    529,
+    663,
+    142,
+    40,
+    510,
+    669,
+    253,
+    603,
+    975,
+    660,
+    106,
+    433,
+    346,
+    888,
+    240,
+    957,
+    964,
+    84,
+    728,
+    222,
+    695,
+    28,
+    568,
+    914,
+    872,
+    919,
+    436,
+    229,
+    379,
+    488,
+    849,
+    242,
+    79,
+    97,
+    408,
+    530,
+    870,
+    417,
+    562,
+    794,
+    294,
+    615,
+    932,
+    602,
+    579,
+    263,
+    563
+  ]
+}

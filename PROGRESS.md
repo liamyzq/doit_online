@@ -2,6 +2,19 @@
 
 ## Current decision
 
+The user opened a new audit-directed round on 2026-10-23. The active branch is
+`codex/doit-reward-directions`; see the [locked protocol](experiments/reward_directions/PLAN.md).
+It preserves the original DOIT ratio and tests whether empirical first/second
+reward moments can select a useful noise direction from `J J.T` eigenvectors
+and fixed random axes. Four-point LHS and group-shared futures reuse the correct
+earlier mechanisms. Same-evaluator pilots are retained in one final ratio;
+proxy pilots never enter full-continuation weights. Exp-081 passed all31 new
+checks at `16c00b5`, including exact constant-moment cancellation, ratio merge,
+adaptive numerator/denominator preservation and the actual discrete reference.
+Toy comparisons and fresh Hopper/HalfCheetah development are planned; no new
+variance-reduction result is available yet. Historical closures below
+remain the conclusions for their own methods and budgets.
+
 The continuation-aware follow-up is complete at its stated budgets. Exp-075
 passes 19 checks; exp-076 closes [paid per-future directions](experiments/future_directions/FINDINGS.md)
 at its locked toy gate. The path-gradient oracle improves rotating-target M64
