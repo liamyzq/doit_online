@@ -1,0 +1,134 @@
+[
+  {
+    "model": "gaussian",
+    "seed": 64011,
+    "method": "antithetic",
+    "mse": 0.35183219805650645,
+    "estimated_squared_bias": 0.003599266941372541,
+    "variance": 0.348232931115134,
+    "active_mse": 0.048046983727888876,
+    "complement_mse": 0.3037852143286176,
+    "original_mse_discrepancy": 5.551115123125783e-17
+  },
+  {
+    "model": "gaussian",
+    "seed": 64011,
+    "method": "random_paired_lhs_r2",
+    "mse": 0.30715331243419325,
+    "estimated_squared_bias": 0.0008184508286125883,
+    "variance": 0.30633486160558066,
+    "active_mse": 0.04067560078885338,
+    "complement_mse": 0.2664777116453399,
+    "original_mse_discrepancy": 0.0
+  },
+  {
+    "model": "gaussian",
+    "seed": 64011,
+    "method": "top_paired_lhs_r2",
+    "mse": 0.30288030490135043,
+    "estimated_squared_bias": 0.0014802370932694045,
+    "variance": 0.30140006780808104,
+    "active_mse": 0.002582361042198316,
+    "complement_mse": 0.3002979438591521,
+    "original_mse_discrepancy": 0.0
+  },
+  {
+    "model": "gaussian",
+    "seed": 64017,
+    "method": "antithetic",
+    "mse": 0.3534230990104492,
+    "estimated_squared_bias": 0.0015403899774035276,
+    "variance": 0.35188270903304564,
+    "active_mse": 0.045206158757111745,
+    "complement_mse": 0.30821694025333746,
+    "original_mse_discrepancy": 5.551115123125783e-17
+  },
+  {
+    "model": "gaussian",
+    "seed": 64017,
+    "method": "random_paired_lhs_r2",
+    "mse": 0.34347644659493426,
+    "estimated_squared_bias": 0.0006904895391935026,
+    "variance": 0.3427859570557407,
+    "active_mse": 0.049908741451763196,
+    "complement_mse": 0.29356770514317104,
+    "original_mse_discrepancy": 5.551115123125783e-17
+  },
+  {
+    "model": "gaussian",
+    "seed": 64017,
+    "method": "top_paired_lhs_r2",
+    "mse": 0.29976109758635267,
+    "estimated_squared_bias": 0.0009432919476972364,
+    "variance": 0.29881780563865545,
+    "active_mse": 0.0030398814578586385,
+    "complement_mse": 0.29672121612849406,
+    "original_mse_discrepancy": 5.551115123125783e-17
+  },
+  {
+    "model": "mixture",
+    "seed": 64011,
+    "method": "antithetic",
+    "mse": 0.6223983759999012,
+    "estimated_squared_bias": 0.004604077844540807,
+    "variance": 0.6177942981553604,
+    "active_mse": 0.08987613778236452,
+    "complement_mse": 0.5325222382175365,
+    "original_mse_discrepancy": 1.1102230246251565e-16
+  },
+  {
+    "model": "mixture",
+    "seed": 64011,
+    "method": "random_paired_lhs_r2",
+    "mse": 0.5991884221345913,
+    "estimated_squared_bias": 0.002647998210390853,
+    "variance": 0.5965404239242005,
+    "active_mse": 0.08648487853584695,
+    "complement_mse": 0.5127035435987445,
+    "original_mse_discrepancy": 0.0
+  },
+  {
+    "model": "mixture",
+    "seed": 64011,
+    "method": "top_paired_lhs_r2",
+    "mse": 0.5466724862402197,
+    "estimated_squared_bias": 0.0024827909903929433,
+    "variance": 0.5441896952498266,
+    "active_mse": 0.003713793290565422,
+    "complement_mse": 0.5429586929496542,
+    "original_mse_discrepancy": 1.1102230246251565e-16
+  },
+  {
+    "model": "mixture",
+    "seed": 64017,
+    "method": "antithetic",
+    "mse": 0.6172221417266337,
+    "estimated_squared_bias": 0.0014223794708332859,
+    "variance": 0.6157997622558005,
+    "active_mse": 0.08227316017703654,
+    "complement_mse": 0.5349489815495971,
+    "original_mse_discrepancy": 0.0
+  },
+  {
+    "model": "mixture",
+    "seed": 64017,
+    "method": "random_paired_lhs_r2",
+    "mse": 0.5740021867475358,
+    "estimated_squared_bias": 0.002002127552741066,
+    "variance": 0.5720000591947948,
+    "active_mse": 0.06792225040295076,
+    "complement_mse": 0.506079936344585,
+    "original_mse_discrepancy": 1.1102230246251565e-16
+  },
+  {
+    "model": "mixture",
+    "seed": 64017,
+    "method": "top_paired_lhs_r2",
+    "mse": 0.5419720965660801,
+    "estimated_squared_bias": 0.0013205077351808121,
+    "variance": 0.5406515888308994,
+    "active_mse": 0.004506722975445687,
+    "complement_mse": 0.5374653735906345,
+    "original_mse_discrepancy": 0.0
+  }
+]

@@ -1,0 +1,39 @@
+{
+  "errors": {
+    "marginal_mean_False": 0.013170519263448902,
+    "marginal_covariance_False": 0.01708182041447269,
+    "constant_cancellation_False": 1.942890293094024e-16,
+    "active_weight_complement_False": 2.4424906541753444e-15,
+    "full_weight_moment_False": 0.001925188613924697,
+    "marginal_mean_True": 0.0143887685293802,
+    "marginal_covariance_True": 0.020306649329996374,
+    "constant_cancellation_True": 1.5265566588595902e-16,
+    "active_weight_complement_True": 8.881784197001252e-16,
+    "full_weight_moment_True": 0.0019015794316606795,
+    "oracle_complement_invariance_gaussian_candidate": 7.105427357601002e-15,
+    "oracle_complement_invariance_gaussian_continuation": 2.886579864025407e-15,
+    "oracle_complement_invariance_gaussian_stochastic_shared": 1.2434497875801753e-14,
+    "oracle_complement_invariance_mixture_candidate": 6.661338147750939e-15,
+    "oracle_complement_invariance_mixture_continuation": 4.884981308350689e-15,
+    "oracle_complement_invariance_mixture_stochastic_shared": 3.1086244689504383e-15
+  },
+  "tolerances": {
+    "marginal_mean_False": 0.04,
+    "marginal_covariance_False": 0.04,
+    "constant_cancellation_False": 1e-10,
+    "active_weight_complement_False": 1e-10,
+    "full_weight_moment_False": 0.015,
+    "marginal_mean_True": 0.04,
+    "marginal_covariance_True": 0.04,
+    "constant_cancellation_True": 1e-10,
+    "active_weight_complement_True": 1e-10,
+    "full_weight_moment_True": 0.015,
+    "oracle_complement_invariance_gaussian_candidate": 1e-10,
+    "oracle_complement_invariance_gaussian_continuation": 1e-10,
+    "oracle_complement_invariance_gaussian_stochastic_shared": 1e-10,
+    "oracle_complement_invariance_mixture_candidate": 1e-10,
+    "oracle_complement_invariance_mixture_continuation": 1e-10,
+    "oracle_complement_invariance_mixture_stochastic_shared": 1e-10
+  },
+  "failed": {}
+}

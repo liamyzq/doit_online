@@ -229,3 +229,17 @@ The review motivates the [complement-pairing follow-up](../complement_pairing/PL
 That study first reproduces the top-aligned toy direction decomposition, then
 tests whether four-point sign groups reduce full guidance MSE. The original
 rank-one proxy and image-sketch settings remain closed.
+
+Exp-070 has now reproduced the new direction decomposition exactly (maximum
+old-total discrepancy1.11e-16): after spectral pairing, complement noise is
+99.07%/99.24% of Gaussian/mixture error. Active-direction reductions are
+93.97%/95.22%, while the original total-MSE gate still fails. The mechanism and
+new four-point results are recorded in the
+[follow-up findings](../complement_pairing/FINDINGS.md).
+
+A cheaper image discovery remains visible in exp-068: random rank-four paired
+strata give early candidate MSE427.105/573.836 versus ordinary antithetic
+739.811/826.584, reductions42.27%/30.58%. This uses16 repeats and one random
+basis per context, with noisy references; it is an unconfirmed discovery,
+not full-continuation or endpoint evidence. Any future confirmation must use
+independent bases and paired records before making a practical claim.

@@ -1,0 +1,13 @@
+{
+  "conditions": 320,
+  "costs": {
+    "reward_evaluations": 5963776,
+    "pilot_reward_evaluations": 262144,
+    "analytic_component_integrals": 2851104,
+    "reference_integrand_evaluations": 384
+  },
+  "seconds": 14.753481721971184,
+  "scope": "Exact fixed-kernel toy; oracle projections are mechanism bounds only",
+  "peak_allocated_mib": 0.0,
+  "peak_reserved_mib": 0.0
+}

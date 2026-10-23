@@ -1,0 +1,15 @@
+{
+  "experiment_id": "exp-070-complement-checks",
+  "commit": "9ca5f7f2bc8be309d6cd95064ac1df5ddab10201",
+  "config": "/home/mlw0719/doit_geometry/configs/complement_pairing/exp-070-complement-checks.json",
+  "machine": "orion",
+  "gpu": 0,
+  "pid": 1373510,
+  "path": "/home/mlw0719/doit_geometry_storage/runs/exp-070-complement-checks",
+  "log_path": "/home/mlw0719/doit_geometry_storage/artifacts/exp-070-complement-checks.log",
+  "status": "completed",
+  "timestamp": "2026-10-23T04:34:10.477026+00:00",
+  "started_at": "2026-10-23T04:33:40.476307+00:00",
+  "returncode": 0,
+  "finished_at": "2026-10-23T04:34:10.477054+00:00"
+}

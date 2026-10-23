@@ -2,19 +2,28 @@
 
 ## Current decision
 
-The supplied review reopens a bounded complement-cancellation study. See
-[the new protocol](experiments/complement_pairing/PLAN.md). Exp-070 will check
-four-point Gaussian sign groups and reproduce the old top-aligned M32 error
-decomposition; exp-071 will test exact/perturbed directions, paid pilots and
-stochastic future coupling at fixed total budgets. Real-critic and image
-expansion remains gated. Existing geometry settings stay closed.
+The complement-cancellation follow-up is active on the geometry branch. See
+[the protocol](experiments/complement_pairing/PLAN.md) and
+[findings](experiments/complement_pairing/FINDINGS.md). Exp-070 passes16 checks
+and reproduces the old top-aligned M32 decomposition within1.11e-16. Spectral
+strata already reduce active-direction error94--95%, but more than99% of the
+remaining error is in the complement. The old total-error gate still fails.
 
-The review confirms that Hopper's selected proxy was not independently
-validated, and identifies a deployment mismatch: only index5 of the old
-5/9/12 diagnostics is actively guided for Hopper. At that index isotropic
-continuation MSE is0.69553 versus rank-one5.69486. Full local Jacobians improve
-reconstruction eightfold but worsen aggregate guidance MSE. Future direction
-selection must use actual correction intervals and displacement error.
+Exp-071 passes the exact-direction mechanism gate: M32 four-point LHS reduces
+candidate total MSE95--96% and analytic-continuation MSE about92%. A30-degree
+direction error still leaves substantial benefit. The paid eight-query pilot
+fails; independent future noise weakens gains, while valid shared future
+randomness restores strong complement cancellation. These are toy oracle
+results, not a deployable algorithm. Next are exp-072/073 on four fresh real
+observations per task, indices3/5/7 inside actual guidance intervals, with all
+direction costs and per-repeat/reference-block records preserved. Image work
+requires a feasible shared-continuation gain and independent confirmation.
+
+The review also confirms a deployment mismatch in the older Hopper proxy
+study: only index5 of its5/9/12 diagnostics is actively guided. At that index
+isotropic continuation MSE is0.69553 versus rank-one5.69486. Full local Jacobians
+improve reconstruction eightfold but worsen aggregate guidance MSE. The old
+rank-one and image-sketch settings remain closed.
 
 The posterior-geometry exploration on `codex/doit-posterior-geometry` is
 complete at its stated budgets. Exp-063--069 implement and verify Gaussian

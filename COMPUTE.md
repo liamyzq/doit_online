@@ -18,6 +18,17 @@ geometry finite controllers exited; no worker or pending job remains. The
 remote execution checkout stays at `ccf61a6`; later local commits record the
 analysis. No simulator environment was installed or return evaluation run.
 
+## Complement cancellation follow-up
+
+Exp-070/071 completed at `9ca5f7f` in the existing geometry checkout, with
+zero GPU tensor allocation. All16 changed-path checks pass and the old M32
+replay discrepancy is1.11e-16. Both finite controllers have exited, all raw
+vectors and logs are retrieved, and the execution checkout remains at that
+revision. Exp-072 must measure the new critic path before exp-073 starts.
+Use the established4096MiB allowance plus2048MiB reserve and one job per
+physical GPU0--4 for the smoke. No simulator or image job is authorized by
+this toy gate alone; the locked follow-up protocol defines later conditions.
+
 ## Current uncertainty study
 
 Recovery on 2026-10-21 found both Orion and Nebula reachable with no active

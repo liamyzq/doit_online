@@ -1,0 +1,12 @@
+{
+  "checks_passed": 16,
+  "synthetic_moment_weight_evaluations": 1048576,
+  "oracle_check_reward_evaluations": 512,
+  "oracle_check_analytic_component_integrals": 384,
+  "replay_conditions": 12,
+  "replay_reward_evaluations": 98304,
+  "replay_reference_integrand_evaluations": 192,
+  "maximum_replay_discrepancy": 1.1102230246251565e-16,
+  "peak_allocated_mib": 0.0,
+  "peak_reserved_mib": 0.0
+}
