@@ -1,0 +1,5 @@
+{
+  "id": "exp-074-complement-stream-checks",
+  "mode": "complement_stream_checks",
+  "purpose": "Detect cross-repeat RNG reuse with varying main count, group size and LHS rank, using exact within-repeat prefix relations for Gaussian probes, toy posterior draws and the real continuation-noise implementation."
+}

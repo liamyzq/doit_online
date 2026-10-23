@@ -1,0 +1,91 @@
+{
+  "id": "exp-071-r2-complement-toy",
+  "mode": "complement_toy",
+  "purpose": "Repeat the locked toy comparison after correcting cross-repeat random reuse so paired Monte Carlo differences have independent repeat blocks. Methods and all scientific conditions are unchanged.",
+  "dimension": 12,
+  "models": [
+    "gaussian",
+    "mixture"
+  ],
+  "integrands": [
+    "candidate",
+    "continuation",
+    "stochastic_independent",
+    "stochastic_shared"
+  ],
+  "samples": [
+    16,
+    32
+  ],
+  "seeds": [
+    71011,
+    71017
+  ],
+  "repeats": 1024,
+  "quadrature_nodes": 96,
+  "controls": [
+    "antithetic",
+    "oracle_paired_r1"
+  ],
+  "methods": [
+    {
+      "name": "antithetic",
+      "basis": "none"
+    },
+    {
+      "name": "spectral_paired_r2",
+      "basis": "spectral",
+      "rank": 2,
+      "lhs": true
+    },
+    {
+      "name": "random_paired_r2",
+      "basis": "random",
+      "rank": 2,
+      "lhs": true
+    },
+    {
+      "name": "oracle_paired_r1",
+      "basis": "oracle",
+      "lhs": true
+    },
+    {
+      "name": "oracle_four_r1",
+      "basis": "oracle",
+      "four": true
+    },
+    {
+      "name": "oracle_four_lhs_r1",
+      "basis": "oracle",
+      "four": true,
+      "lhs": true
+    },
+    {
+      "name": "rotated30_four_lhs_r1",
+      "basis": "oracle",
+      "angle_degrees": 30,
+      "four": true,
+      "lhs": true
+    },
+    {
+      "name": "random_four_lhs_r1",
+      "basis": "random",
+      "four": true,
+      "lhs": true
+    },
+    {
+      "name": "pilot8_four_lhs_r1",
+      "basis": "pilot",
+      "pilot_samples": 8,
+      "pilot_radius": 0.5,
+      "four": true,
+      "lhs": true
+    },
+    {
+      "name": "oracle_rao_blackwell",
+      "basis": "oracle",
+      "lhs": true,
+      "rao_blackwell": true
+    }
+  ]
+}

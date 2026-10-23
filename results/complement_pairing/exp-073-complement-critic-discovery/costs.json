@@ -1,0 +1,19 @@
+{
+  "tasks": [
+    {
+      "task": "hopper-medium-v2",
+      "reward_queries": 9683028,
+      "reward_seconds": 49.841722817276604,
+      "score_forwards": 58441868,
+      "vjp_seconds": 0.0
+    },
+    {
+      "task": "halfcheetah-medium-v2",
+      "reward_queries": 9314460,
+      "reward_seconds": 63.9361456700135,
+      "score_forwards": 56107220,
+      "vjp_seconds": 0.0
+    }
+  ],
+  "actual_jacobian_and_oracle_vjp_calls": 240
+}

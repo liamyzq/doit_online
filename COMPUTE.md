@@ -20,26 +20,27 @@ analysis. No simulator environment was installed or return evaluation run.
 
 ## Complement cancellation follow-up
 
-Exp-070/071 completed at `9ca5f7f` in the existing geometry checkout, with
-zero GPU tensor allocation. All16 changed-path checks pass and the old M32
-replay discrepancy is1.11e-16. Both finite controllers have exited, all raw
-vectors and logs are retrieved, and the execution checkout remains at that
-revision. Exp-072 must measure the new critic path before exp-073 starts.
-Use the established4096MiB allowance plus2048MiB reserve and one job per
-physical GPU0--4 for the smoke. No simulator or image job is authorized by
-this toy gate alone; the locked follow-up protocol defines later conditions.
+Exp-070/071 completed at `9ca5f7f` with zero GPU tensor allocation; all16
+construction/replay checks passed. Exp-072 at `4c21ae3` failed its FP32
+finite-difference validation and its complete failure record is retained.
+Exp-072-r2 at `8a4cd08` passed gradient and coupling checks, with40.77/46MiB
+peak allocated/reserved memory. Critic runs used a4096MiB allowance plus2048MiB
+reserve, with one project job per physical GPU0--4.
 
-Exp-072 at `4c21ae3` failed its finite-difference validation before discovery;
-its full failure outputs were retrieved. Exp-072-r2 at `8a4cd08` passed both
-candidate-gradient checks (relative errors 0.00992/0.01928) and both coupling
-checks, with 40.77/46MiB peak allocated/reserved memory under a 4096MiB
-allowance plus2048MiB reserve. Exp-073 has not been launched after review
-identified a cross-method RNG repeat-alignment defect affecting paired
-difference intervals; per-method marginals remain valid. All controllers have
-exited and the remote checkout remains at `8a4cd08`. After the fixed-budget
-stream repair is committed, run exp-074 and exp-071-r2, then await the main
-agent's gate decision before exp-073. Retain4096MiB+2048MiB and one job per
-GPU; the changed random blocks add only small tensors to the measured path.
+After a common-RNG repeat-alignment correction at `0400f4e`, exp-074 passed
+all six focused stream checks (maximum discrepancy8.88e-16,2MiB reserved).
+Exp-071-r2 completed320 conditions with5,963,776 reward evaluations and zero
+GPU allocation; the corrected toy gate passed. Exp-073 then completed24
+contexts and2880 conditions, with18,997,488 reward queries,114,549,088 actor
+forwards and240 Jacobian/oracle VJP calls. It used66.65/90MiB peak allocated/
+reserved memory and1284.18seconds under shared-GPU contention.
+
+All output trees and logs are retrieved, including raw estimates, complete
+matrices and reference blocks. The remote execution checkout remains at
+`0400f4e`; later commits record analysis. All controllers have exited and no
+worker or pending queue remains. Zero of six feasible critic comparisons passes
+the locked advance gate, so no confirmation, image or simulator job follows.
+No standalone runtime or simulator-return claim is made.
 
 ## Current uncertainty study
 

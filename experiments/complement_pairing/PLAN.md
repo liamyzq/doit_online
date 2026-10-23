@@ -98,7 +98,9 @@ decision; it is not an automatic consequence of a toy mechanism.
 
 Exp-071 point estimates meet the ideal-direction effect threshold on both
 toys and both deterministic targets. A subsequent stream audit invalidated its
-paired Monte Carlo intervals; exp-074 and exp-071-r2 must pass before discovery. Exp-072 now checks only the newly introduced candidate log-weight
+paired Monte Carlo intervals. Exp-074 and exp-071-r2 subsequently pass at
+`0400f4e`, reestablishing the unchanged gate before discovery. Exp-072 checks
+only the newly introduced candidate log-weight
 gradient orientation and grouped future-noise implementation. Independent
 future rollout must match the preserved adapter; identical candidates with
 shared future randomness must remain identical. These checks distinguish a
@@ -169,3 +171,15 @@ slicing to the retained main count. Rerun the unchanged toy conditions as
 exp-071-r2 after these checks; exp-073 has no prior run and retains its locked
 configuration. The revised finite-difference smoke already passed and need not
 be repeated for this change to random-array layout.
+
+## Final locked decisions
+
+Exp-074 passes all six repeat-stream checks, and exp-071-r2 passes the original
+four deterministic M32 toy gates at `0400f4e`. Exp-072-r2 has already passed the
+changed critic execution checks. Exp-073 completes the locked discovery, but
+zero of its six feasible task/method comparisons passes: Hopper's best paid
+setting clears the aggregate threshold on only two of four observations;
+HalfCheetah's three feasible settings worsen all four. Close these settings
+without P3, endpoint or simulator expansion. Preserve the favorable toy and
+candidate-target findings and the reference limitations. No follow-up sweep
+is added after observing the failed discovery gate.

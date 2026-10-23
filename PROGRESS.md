@@ -2,27 +2,38 @@
 
 ## Current decision
 
-The complement-cancellation follow-up is active on the geometry branch. See
+The complement-cancellation follow-up is complete on the geometry branch. See
 [the protocol](experiments/complement_pairing/PLAN.md) and
-[findings](experiments/complement_pairing/FINDINGS.md). Exp-070 passes16 checks
-and reproduces the old top-aligned M32 decomposition within1.11e-16. Spectral
-strata already reduce active-direction error94--95%, but more than99% of the
-remaining error is in the complement. The old total-error gate still fails.
+[findings](experiments/complement_pairing/FINDINGS.md). Exp-070 reproduces the
+review's diagnosis: spectral strata reduce active-direction error94--95%, while
+over99% of the remaining error is in the complement. The old total-error gate
+still fails. All16 construction/replay checks and six repeat-stream checks pass.
 
-Exp-071 point estimates show M32 four-point LHS reduces
-candidate total MSE95--96% and analytic-continuation MSE about92%. A30-degree
-direction error still leaves substantial benefit. The paid eight-query pilot
-fails; independent future noise weakens gains, while valid shared future
-randomness restores strong complement cancellation. These are toy oracle
-results, not a deployable algorithm. A later stream review found cross-repeat
-RNG overlap between methods with different retained sample counts or ranks,
-invalidating its nominal paired intervals. Exp-074 checks fixed-budget repeat
-blocks; exp-071-r2 must reestablish the gate. Exp-072-r2 has already passed
-gradient/coupling checks at46MiB peak reserved memory; exp-073 was held before
-launch. Its locked discovery uses four fresh real
-observations per task, indices3/5/7 inside actual guidance intervals, with all
-direction costs and per-repeat/reference-block records preserved. Image work
-requires a feasible shared-continuation gain and independent confirmation.
+Exp-071-r2 establishes the exact-direction toy mechanism after repairing the
+cross-repeat random overlap that invalidated exp-071's nominal paired intervals.
+At M32, four-point LHS reduces candidate MSE95.04%/96.12% and analytic-continuation
+MSE92.32%/92.51% against antithetic. Paired differences also favor it against
+oracle paired LHS. The paid eight-query pilot fails; independent future noise
+weakens the benefit. The original invalid inference and all rerun costs remain
+recorded. Exp-072's FP32 derivative-check failure is diagnosed and the revised
+smoke passes without changing the method.
+
+Exp-073 completes24 real-critic contexts and2880 conditions at `0400f4e`, all
+inside active guidance intervals and with acquisition costs charged. Full finite
+differences almost exactly recover the candidate reward-gradient direction,
+and their four-point candidate MSE improves33.22%/50.03% against antithetic in
+Hopper/HalfCheetah. Primary shared-continuation results fail the locked gate:
+Hopper's strongest paid method improves20.72% against antithetic and21.61%
+against random paired LHS, but only2/4 observations improve. All three feasible
+HalfCheetah methods worsen all four observations. Favorable Hopper aggregate
+intervals and reference-block differences are retained; concentrated references
+still limit bias claims. No setting proceeds to confirmation or images.
+
+The study closes at its tested budgets. The correct complement-cancellation
+mechanism and real candidate gains do not establish a broad continuation or
+endpoint gain. Terminal N4 remains the practical image baseline. Raw per-repeat
+vectors, matrices, reference blocks, failures and job events are recorded; all
+finite queues have exited and no further run is queued.
 
 The review also confirms a deployment mismatch in the older Hopper proxy
 study: only index5 of its5/9/12 diagnostics is actively guided. At that index

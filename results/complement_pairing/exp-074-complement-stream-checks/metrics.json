@@ -1,0 +1,8 @@
+{
+  "checks_passed": 6,
+  "toy_reward_evaluations": 1920,
+  "synthetic_future_normal_draws": 55296,
+  "purpose": "Detect cross-repeat random reuse when main count, sign-group size or LHS rank differs",
+  "peak_allocated_mib": 0.12890625,
+  "peak_reserved_mib": 2.0
+}

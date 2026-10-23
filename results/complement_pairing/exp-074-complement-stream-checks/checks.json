@@ -1,0 +1,11 @@
+{
+  "errors": {
+    "repeat_aligned_complement_prefix": 6.661338147750939e-16,
+    "repeat_aligned_lhs_coordinate_across_ranks": 8.881784197001252e-16,
+    "repeat_aligned_posterior_randomness": 0.0,
+    "repeat_aligned_torch_independent_future": 0.0,
+    "repeat_aligned_torch_grouped_future": 0.0,
+    "torch_shared_group_equality": 0.0
+  },
+  "failed": {}
+}

@@ -1,0 +1,15 @@
+{
+  "experiment_id": "exp-071-r2-complement-toy",
+  "commit": "0400f4e1f6de00b7104d6de39f72e764080c11e6",
+  "config": "/home/mlw0719/doit_geometry/configs/complement_pairing/exp-071-r2-complement-toy.json",
+  "machine": "orion",
+  "gpu": 3,
+  "pid": 3741929,
+  "path": "/home/mlw0719/doit_geometry_storage/runs/exp-071-r2-complement-toy",
+  "log_path": "/home/mlw0719/doit_geometry_storage/artifacts/exp-071-r2-complement-toy.log",
+  "status": "completed",
+  "timestamp": "2026-10-23T05:16:55.471926+00:00",
+  "started_at": "2026-10-23T05:16:25.471163+00:00",
+  "returncode": 0,
+  "finished_at": "2026-10-23T05:16:55.471956+00:00"
+}

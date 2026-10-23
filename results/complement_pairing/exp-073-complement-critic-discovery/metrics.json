@@ -1,0 +1,12 @@
+{
+  "conditions": 2880,
+  "contexts": 24,
+  "checks": {},
+  "reward_queries": 18997488,
+  "score_forwards": 114549088,
+  "actual_jacobian_and_oracle_vjp_calls": 240,
+  "seconds": 1284.1783531759866,
+  "scope": "Fixed actor/critic contexts in the active interval; no simulator return or standalone runtime claim",
+  "peak_allocated_mib": 66.65478515625,
+  "peak_reserved_mib": 90.0
+}

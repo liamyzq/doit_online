@@ -8,16 +8,23 @@ The primary question is whether information from earlier steps reduces current
 correction error and improves generated samples at the same actual reward-query
 budget. Fitting error alone is not a success criterion.
 
-The active branch is `codex/doit-posterior-geometry`. The latest study tests
-Gaussian probe stratification and denoiser-response proxies; see its
-[protocol](experiments/posterior_geometry/PLAN.md) and [current state](PROGRESS.md).
-It uses a new Orion checkout and retains the previous study as a baseline.
-The exp-063--069 pass is complete: analytic checks pass, spectral strata do
-not establish a robust gain over matched controls, and the selected rank-one
-RL proxy fails fresh-observation confirmation. Image proxy improvements are
-mostly explained by isotropic contraction. See the
-[geometry findings](experiments/posterior_geometry/FINDINGS.md). No new
-endpoint or simulator improvement is claimed and no run remains queued.
+The active branch is `codex/doit-posterior-geometry`. Its latest completed
+[complement-pairing study](experiments/complement_pairing/FINDINGS.md) confirms
+that four-point sign groups can remove reward-irrelevant complement noise in
+exact toys. Paid reward directions also improve real candidate-integrand MSE.
+The locked continuation gate fails: Hopper gains are confined to two of four
+observations, and all feasible HalfCheetah settings worsen. No image or simulator
+expansion follows. See the [protocol](experiments/complement_pairing/PLAN.md)
+and [current state](PROGRESS.md), including the repaired toy inference and
+preserved failure records. No run remains queued.
+
+The earlier exp-063--069 study tested Gaussian probe stratification and denoiser-
+response proxies. Spectral strata did not establish a robust total-error gain
+over matched controls; the selected rank-one RL proxy failed fresh-observation
+confirmation, and isotropic contraction explained most image proxy improvement.
+The review adds active/complement error and actual-guidance-interval analyses
+without replacing the original locked results. See the
+[geometry findings](experiments/posterior_geometry/FINDINGS.md).
 
 The preceding branch is `codex/doit-uncertainty-smc`. The user opened a separate
 study of posterior uncertainty, local FORS sampling and strict particle
