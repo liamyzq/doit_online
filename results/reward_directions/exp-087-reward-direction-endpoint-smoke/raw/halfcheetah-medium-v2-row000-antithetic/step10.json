@@ -1,0 +1,9 @@
+{
+  "pilot_queries": 0,
+  "main_queries": 32,
+  "queries_per_estimate": 32,
+  "pilot_retained": false,
+  "fallback_rate": 0.0,
+  "mean_independent_future_groups": 0.0,
+  "mean_final_ess": 31.02464040480365
+}

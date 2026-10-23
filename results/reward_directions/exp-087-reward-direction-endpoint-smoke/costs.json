@@ -1,0 +1,9 @@
+{
+  "reward_queries": 373760,
+  "reward_seconds": 1.6890520399902016,
+  "score_forwards": 994388,
+  "vjp_seconds": 0.8090674736304209,
+  "actual_jacobian_vjps": 11094,
+  "actual_original_kernel_vjps": 6920,
+  "actual_jacobian_seconds": 1.3232103240443394
+}

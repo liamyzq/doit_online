@@ -26,8 +26,8 @@ Exp-086 completes all32 fresh observations per task. HalfCheetah proxy M64
 random pairs confirms4.984% MSE reduction; Hopper full M32 random four-point
 confirms11.415%/11.611% against antithetic/random pairs. The paid HalfCheetah
 candidate does not pass against random pairs (3.041% favorable mean, interval
-includes zero), and Hopper proxy also remains unconfirmed. Exp-087 will verify
-batched complete actions before exp-088 tests only the two confirmed constructions. Historical closures below
+includes zero), and Hopper proxy also remains unconfirmed. Exp-087 passes all26 batch/estimator checks with90MiB peak reserved memory.
+Exp-088 now tests complete actions for only the two confirmed constructions. Historical closures below
 remain the conclusions for their own methods and budgets.
 
 The continuation-aware follow-up is complete at its stated budgets. Exp-075

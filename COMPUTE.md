@@ -35,6 +35,10 @@ Both exp-086 jobs completed at `74a99b8`, with78MiB peak reserved memory,
 and controller1662717 exited. Compact artifacts, aggregate estimates and logs
 are local; raw records remain remote. Exp-087 now measures128-action batch
 memory and checks the new complete-action path before exp-088 is launched.
+Exp-087 passed all26 new batch checks at `41dccad`, with69.516/90MiB peak
+allocated/reserved memory at128 actions. Full smoke artifacts and logs are local;
+controller2483750 exited. Exp-088 runs the two committed endpoints at the same
+execution revision and4096MiB allowance plus2048MiB reserve, one worker/GPU.
 
 ## Posterior geometry exploration
 

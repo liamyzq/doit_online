@@ -2,7 +2,7 @@
 
 Development, the bounded gate ablation and fresh confirmation are complete.
 Two free sampling constructions pass confirmation; the paid candidate remains
-unresolved against its stronger control. Complete-action evaluation is next.
+unresolved against its stronger control. Complete-action evaluation is running.
 These findings concern the fixed temperatures, query budgets and frozen
 actors/critics in [the protocol](PLAN.md), not all possible direction estimators.
 
@@ -148,3 +148,10 @@ interval[-0.009405,-0.000036]. The primary target remains its proxy. Complete
 actions now test HalfCheetah P64 random pairs and Hopper F32 random four-point
 against their route-matched controls, keeping costs and critic endpoints separate
 from simulator returns.
+
+Exp-087 passes all26 complete-action batch checks. The largest repeated-state
+estimator discrepancy is1.888e-4 relative to max(1, target magnitude), below
+the predeclared2e-4 tolerance; batched direction selections and moment scores
+agree exactly with their scalar counterparts. Exact full-trajectory query and
+actor counts match for all eight smoke conditions. At128 actions, peak GPU
+reservation is90MiB. All smoke costs and raw records are retained.

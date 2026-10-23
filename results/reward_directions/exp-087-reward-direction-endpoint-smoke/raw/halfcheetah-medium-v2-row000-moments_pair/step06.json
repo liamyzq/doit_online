@@ -1,0 +1,11 @@
+{
+  "pilot_queries": 16,
+  "main_queries": 48,
+  "queries_per_estimate": 64,
+  "pilot_retained": true,
+  "fallback_rate": 0.0,
+  "mean_independent_future_groups": 0.0,
+  "mean_final_ess": 58.728323817737945,
+  "mean_pilot_ess": 14.764989182970947,
+  "mean_split_agreement": 0.38475298328605395
+}

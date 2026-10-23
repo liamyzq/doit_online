@@ -1,0 +1,15 @@
+{
+  "experiment_id": "exp-087-reward-direction-endpoint-smoke",
+  "commit": "41dccadb4060e45346e2a3b1c9410d15d3afc381",
+  "config": "/home/mlw0719/doit_reward_directions/configs/reward_directions/exp-087-reward-direction-endpoint-smoke.json",
+  "machine": "orion",
+  "gpu": 0,
+  "pid": 2484350,
+  "path": "/home/mlw0719/doit_reward_directions_storage/runs/exp-087-reward-direction-endpoint-smoke",
+  "log_path": "/home/mlw0719/doit_reward_directions_storage/artifacts/exp-087-reward-direction-endpoint-smoke.log",
+  "status": "completed",
+  "timestamp": "2026-10-23T21:48:33.619694+00:00",
+  "started_at": "2026-10-23T21:47:33.619055+00:00",
+  "returncode": 0,
+  "finished_at": "2026-10-23T21:48:33.619716+00:00"
+}
