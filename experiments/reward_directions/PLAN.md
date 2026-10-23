@@ -74,6 +74,15 @@ versus F separately. Save pilot/main eps, log rewards, final weights, selected
 directions, J, pool, corrections, reference blocks and cost counters. Report
 observation-level paired uncertainty, not MC repeats as independent data.
 
+The fixed-state run artifacts store the kernel gain at unit gamma. Final
+analysis scales displacement by the preserved task strengths (Hopper0.75,
+HalfCheetah0.25), verified from the source before inspecting development
+results. This constant rescaling changes absolute units but no within-task
+ranking or interval sign. The study retains its already calibrated fixed tau
+(Hopper0.031159553132296444, HalfCheetah0.07369107116716792). The source's
+per-batch Q standardization is not part of this fixed-integral experiment.
+See [source settings](SOURCE_NOTES.md) for endpoint and simulator provenance.
+
 ## Decisions and subsequent work
 
 First establish whether oracle directions improve the matched estimator, then

@@ -34,7 +34,12 @@ def main():
                 route_b = "F" if row["route"] == "PF" else row["route"]
                 baseline = lookup[(row["context_key"], route_b, row["samples"], control)]
                 context = contexts[row["context_key"]]
-                gain2 = context["gain"]**2
+                # Fixed-state artifacts store the kernel gain at unit gamma.
+                # Restore the preserved task's deployment strength for physical
+                # displacement units; within-task rankings/interval signs do not
+                # depend on this positive constant rescaling.
+                gamma = (0.75 if row["task"].startswith("hopper") else 0.25) if real else 1.0
+                gain2 = (gamma * context["gain"])**2
                 estimate = arrays[row["array_key"]]
                 other = arrays[baseline["array_key"]]
                 metrics = ["same_target"] + (["proxy_to_full"] if row["route"] == "P" else [])
@@ -70,6 +75,7 @@ def main():
                 "zero_mse": float(np.mean([e["zero_mse"] for e in entries])),
                 "fallback_rate": float(np.mean([e["fallback"] for e in entries])),
                 "units_improved": int((diff < 0).sum()), "units": len(diff),
+                "gamma": (0.75 if labels["task"].startswith("hopper") else 0.25) if real else 1.0,
                 "reference_block_differences": blocks.mean(axis=0).tolist() if blocks.size else []}
             if real:
                 rng = np.random.default_rng(85001)
