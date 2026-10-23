@@ -1,0 +1,16 @@
+{
+  "conditions": 72,
+  "contexts": 2,
+  "costs": {
+    "reward_queries": 28928,
+    "reward_seconds": 0.7439859472215176,
+    "score_forwards": 181898,
+    "vjp_seconds": 0.0
+  },
+  "actual_jacobian_vjp_calls": 9,
+  "jacobian_seconds": 0.2597849048906937,
+  "seconds": 26.41996375308372,
+  "scope": "Fixed authentic actors and black-box critics; no critic differentiation or simulator returns",
+  "peak_allocated_mib": 42.3134765625,
+  "peak_reserved_mib": 48.0
+}

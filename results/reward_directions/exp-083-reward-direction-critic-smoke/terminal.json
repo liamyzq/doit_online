@@ -1,0 +1,15 @@
+{
+  "experiment_id": "exp-083-reward-direction-critic-smoke",
+  "commit": "f73ed2e3f00b151655bf067dc63faef3155590bc",
+  "config": "/home/mlw0719/doit_reward_directions/configs/reward_directions/exp-083-reward-direction-critic-smoke.json",
+  "machine": "orion",
+  "gpu": 4,
+  "pid": 3287422,
+  "path": "/home/mlw0719/doit_reward_directions_storage/runs/exp-083-reward-direction-critic-smoke",
+  "log_path": "/home/mlw0719/doit_reward_directions_storage/artifacts/exp-083-reward-direction-critic-smoke.log",
+  "status": "completed",
+  "timestamp": "2026-10-23T20:55:58.848746+00:00",
+  "started_at": "2026-10-23T20:54:58.848290+00:00",
+  "returncode": 0,
+  "finished_at": "2026-10-23T20:55:58.848782+00:00"
+}

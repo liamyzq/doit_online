@@ -1,0 +1,25 @@
+{
+  "commit": "f73ed2e3f00b151655bf067dc63faef3155590bc",
+  "config": "/home/mlw0719/doit_reward_directions/configs/reward_directions/exp-083-reward-direction-critic-smoke.json",
+  "experiment_id": "exp-083-reward-direction-critic-smoke",
+  "pid": 3287422,
+  "cuda_visible_devices": "4",
+  "started_at": 1792788906.109444,
+  "status": "completed",
+  "environment": {
+    "python": "3.12.9",
+    "torch": "2.6.0+cu124",
+    "cuda": "12.4",
+    "gpu": "NVIDIA RTX A6000",
+    "packages": {
+      "numpy": "1.26.4",
+      "diffusers": "0.32.2",
+      "transformers": "4.49.0",
+      "torchvision": "0.21.0",
+      "huggingface_hub": "0.36.0",
+      "safetensors": "0.8.0",
+      "h5py": "3.14.0"
+    }
+  },
+  "elapsed_seconds": 27.102243185043335
+}

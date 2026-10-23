@@ -10,8 +10,12 @@ queue. The isolated environment and model cache are symlinks to the preserved
 original study environment/cache. No old execution checkout was changed.
 Exp-081 completed31 checks at `16c00b5` with0/0MiB peak allocated/reserved GPU
 memory; its finite controller exited and records were retrieved. It used a
-512MiB allowance plus2048MiB reserve on physical GPU4. Exp-083 will measure
-the real-critic memory peak before setting development concurrency.
+512MiB allowance plus2048MiB reserve on physical GPU4. Exp-083 passed the new
+mixed-group adapter and cost checks on both tasks at `f73ed2e`, measuring
+42.31/48MiB peak allocated/reserved memory. Retain4096MiB plus2048MiB reserve
+and at most one project worker per physical GPU0--4 for development. The
+separate CPU toys allocated no GPU tensors in exp-081. All exp-083 raw
+artifacts were retrieved and its controller exited before the next sync.
 The new observation split excludes all 64 episodes per task used by previous
 studies and writes 16 development plus 32 confirmation observations per task
 under the new storage's `data/critic-states/`. Selection seed is83041; models,

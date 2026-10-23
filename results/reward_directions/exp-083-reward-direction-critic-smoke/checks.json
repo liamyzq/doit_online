@@ -1,0 +1,16 @@
+{
+  "hopper-medium-v2/25/3": {
+    "mixed_group_matches_preserved_adapter": 0.0,
+    "full_reward_cost": 0,
+    "full_actor_cost": 0,
+    "proxy_reward_cost": 0,
+    "proxy_actor_cost": 0
+  },
+  "halfcheetah-medium-v2/25/3": {
+    "mixed_group_matches_preserved_adapter": 0.0,
+    "full_reward_cost": 0,
+    "full_actor_cost": 0,
+    "proxy_reward_cost": 0,
+    "proxy_actor_cost": 0
+  }
+}

@@ -11,8 +11,10 @@ earlier mechanisms. Same-evaluator pilots are retained in one final ratio;
 proxy pilots never enter full-continuation weights. Exp-081 passed all31 new
 checks at `16c00b5`, including exact constant-moment cancellation, ratio merge,
 adaptive numerator/denominator preservation and the actual discrete reference.
-Toy comparisons and fresh Hopper/HalfCheetah development are planned; no new
-variance-reduction result is available yet. Historical closures below
+Exp-083 passed both real-critic mixed-group and exact query/actor-cost checks
+at `f73ed2e`, with48MiB peak reserved memory. The locked toy comparisons and
+fresh Hopper/HalfCheetah development now proceed; no new variance-reduction
+result is available yet. Historical closures below
 remain the conclusions for their own methods and budgets.
 
 The continuation-aware follow-up is complete at its stated budgets. Exp-075
