@@ -2,33 +2,35 @@
 
 ## Current decision
 
-The user opened a new audit-directed round on 2026-10-23. The active branch is
-`codex/doit-reward-directions`; see the [locked protocol](experiments/reward_directions/PLAN.md).
-It preserves the original DOIT ratio and tests whether empirical first/second
-reward moments can select a useful noise direction from `J J.T` eigenvectors
-and fixed random axes. Four-point LHS and group-shared futures reuse the correct
-earlier mechanisms. Same-evaluator pilots are retained in one final ratio;
-proxy pilots never enter full-continuation weights. Exp-081 passed all31 new
-checks at `16c00b5`, including exact constant-moment cancellation, ratio merge,
-adaptive numerator/denominator preservation and the actual discrete reference.
-Exp-083 passed both real-critic mixed-group and exact query/actor-cost checks
-at `f73ed2e`, with48MiB peak reserved memory. All six development jobs completed at
-`0e4e9f3`: four toy comparisons and both16-observation real tasks. Oracle
-four-point directions work on the Gaussian mechanism controls, but paid pilot
-selection usually falls back. Random paired P improves Hopper, and random
-four-point F improves its aggregate error with substantial observation
-heterogeneity. Exp-085 completes its bounded gate ablation: paid moments-four now improves
-Gaussian shift/narrow proxy MSE31.22%/34.70%, but real-task four-point gains do
-not transfer. HalfCheetah M64 moments-pair improves5.41% against antithetic
-and1.52% against random pairs, the latter still unresolved. Exp-086 locks this
-one paid candidate and the useful free controls before using reserved rows16--47.
-Exp-086 completes all32 fresh observations per task. HalfCheetah proxy M64
-random pairs confirms4.984% MSE reduction; Hopper full M32 random four-point
-confirms11.415%/11.611% against antithetic/random pairs. The paid HalfCheetah
-candidate does not pass against random pairs (3.041% favorable mean, interval
-includes zero), and Hopper proxy also remains unconfirmed. Exp-087 passes all26 batch/estimator checks with90MiB peak reserved memory.
-Exp-088 now tests complete actions for only the two confirmed constructions. Historical closures below
-remain the conclusions for their own methods and budgets.
+The audit-directed reward-direction round is complete on
+`codex/doit-reward-directions`. See the [findings](experiments/reward_directions/FINDINGS.md)
+and [locked protocol](experiments/reward_directions/PLAN.md).
+All 17 formal jobs completed successfully; the new construction, adapter and
+batch checks pass (31 + 10 + 26 checks). All finite controllers exited.
+
+A single development ablation removes the split-agreement gate while retaining
+ESS/zero-score fallback. Paid moments-four then reduces Gaussian shift/narrow
+proxy MSE by 31.22%/34.70%, but real-task four-point gains do not transfer.
+Fresh confirmation uses 32 observations per task from disjoint episodes.
+HalfCheetah P64 random pairs confirms 4.984% lower displacement MSE; Hopper
+F32 random four-point confirms 11.415%/11.611% against antithetic/random pairs.
+The Hopper benefit is heterogeneous. HalfCheetah paid moments-pair has a
+favorable 3.041% mean against random pairs but an interval including zero,
+so it does not pass the locked confirmation rule. No further tuning follows.
+
+Complete-action tests generate 20,480 actions using the preserved gamma and
+best-of-8/best-of-4 policies. Neither confirmed construction establishes an improvement in the primary
+selected mean Q. Hopper four-point improves raw mean Q before selection;
+that secondary gain is retained. No speedup is established. The local MSE
+results remain valid, but no final selected-action improvement or simulator
+return gain is established. The conditional simulator extension does not proceed.
+
+All actual pilot, reference, future, actor and VJP costs are recorded. Compact
+artifacts and final action bundles are local; full raw probe trees remain at
+the recorded Orion paths. The execution checkout remains at `41dccad`; later
+commits record analysis. No worker or pending queue remains. These conclusions
+apply to this round's fixed targets, M32/M64 budgets and frozen tasks.
+Historical closures below retain their own scope.
 
 The continuation-aware follow-up is complete at its stated budgets. Exp-075
 passes 19 checks; exp-076 closes [paid per-future directions](experiments/future_directions/FINDINGS.md)

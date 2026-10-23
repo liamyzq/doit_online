@@ -1,0 +1,78 @@
+{
+  "id": "exp-088-halfcheetah-endpoint",
+  "mode": "reward_direction_endpoint",
+  "tasks": [
+    {
+      "name": "halfcheetah-medium-v2",
+      "source": "/home/mlw0719/doob_transform/test/Doob_training_free_adaptation",
+      "states": "/home/mlw0719/doit_reward_directions_storage/data/critic-states/halfcheetah-medium-v2",
+      "actor": "models_rl/halfcheetah-medium-v20large_actor/behavior_ckpt600.pth",
+      "critic": "models_rl/halfcheetah-medium-v20large_actor/critic_ckpt100.pth",
+      "eta": 0.2,
+      "guidance_end_index": 10,
+      "steps": 15,
+      "tau": 0.07369107116716792,
+      "gamma": 0.25,
+      "action_candidates": 4
+    }
+  ],
+  "batch": 2048,
+  "smoke": false,
+  "state_rows": [
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47
+  ],
+  "actions": 128,
+  "seed": 88011,
+  "path_seed": 88001,
+  "pool_seed": 81031,
+  "agreement_threshold": 0.0,
+  "ess_fraction": 0.25,
+  "purpose": "Complete-action test of the construction passing locked exp-086 confirmation, with original gamma, guidance interval and best-of policy.",
+  "methods": [
+    {
+      "name": "antithetic",
+      "selector": "none",
+      "layout": "pair",
+      "route": "P",
+      "samples": 64
+    },
+    {
+      "name": "random_pair",
+      "selector": "random",
+      "layout": "pair_lhs",
+      "route": "P",
+      "samples": 64
+    }
+  ]
+}

@@ -1,0 +1,180 @@
+{
+  "runs": [
+    {
+      "experiment": "exp-081-reward-direction-checks",
+      "commit": "16c00b546b2c3b2222a96245e079881c1823227f",
+      "reward_evaluations": 524288,
+      "synthetic_reward_evaluations": 5242880,
+      "actor_or_toy_transition_evaluations": 2359298,
+      "conditions": 0,
+      "actions": 0,
+      "peak_reserved_mib": 0.0
+    },
+    {
+      "experiment": "exp-082-gaussian-in_pool",
+      "commit": "0e4e9f3ffa9d45b9e6be03f044836cd66a6a2775",
+      "reward_evaluations": 64880672,
+      "synthetic_reward_evaluations": 0,
+      "actor_or_toy_transition_evaluations": 302284861,
+      "conditions": 2640,
+      "actions": 0,
+      "peak_reserved_mib": 0.0
+    },
+    {
+      "experiment": "exp-082-gaussian-off_pool",
+      "commit": "0e4e9f3ffa9d45b9e6be03f044836cd66a6a2775",
+      "reward_evaluations": 64880672,
+      "synthetic_reward_evaluations": 0,
+      "actor_or_toy_transition_evaluations": 302284861,
+      "conditions": 2640,
+      "actions": 0,
+      "peak_reserved_mib": 0.0
+    },
+    {
+      "experiment": "exp-082-mixture-in_pool",
+      "commit": "0e4e9f3ffa9d45b9e6be03f044836cd66a6a2775",
+      "reward_evaluations": 68812800,
+      "synthetic_reward_evaluations": 0,
+      "actor_or_toy_transition_evaluations": 319979580,
+      "conditions": 2640,
+      "actions": 0,
+      "peak_reserved_mib": 0.0
+    },
+    {
+      "experiment": "exp-082-mixture-off_pool",
+      "commit": "0e4e9f3ffa9d45b9e6be03f044836cd66a6a2775",
+      "reward_evaluations": 68812800,
+      "synthetic_reward_evaluations": 0,
+      "actor_or_toy_transition_evaluations": 319979580,
+      "conditions": 2640,
+      "actions": 0,
+      "peak_reserved_mib": 0.0
+    },
+    {
+      "experiment": "exp-083-reward-direction-critic-smoke",
+      "commit": "f73ed2e3f00b151655bf067dc63faef3155590bc",
+      "reward_evaluations": 28928,
+      "synthetic_reward_evaluations": 0,
+      "actor_or_toy_transition_evaluations": 181898,
+      "conditions": 72,
+      "actions": 0,
+      "peak_reserved_mib": 48.0
+    },
+    {
+      "experiment": "exp-084-halfcheetah-development",
+      "commit": "0e4e9f3ffa9d45b9e6be03f044836cd66a6a2775",
+      "reward_evaluations": 24379392,
+      "synthetic_reward_evaluations": 0,
+      "actor_or_toy_transition_evaluations": 126615728,
+      "conditions": 1728,
+      "actions": 0,
+      "peak_reserved_mib": 80.0
+    },
+    {
+      "experiment": "exp-084-hopper-development",
+      "commit": "0e4e9f3ffa9d45b9e6be03f044836cd66a6a2775",
+      "reward_evaluations": 24379392,
+      "synthetic_reward_evaluations": 0,
+      "actor_or_toy_transition_evaluations": 126615728,
+      "conditions": 1728,
+      "actions": 0,
+      "peak_reserved_mib": 78.0
+    },
+    {
+      "experiment": "exp-085-gaussian-in_pool-gate-ablation",
+      "commit": "98d4b25673fc7f946e498bb9102ac792f3f7c69a",
+      "reward_evaluations": 11796480,
+      "synthetic_reward_evaluations": 0,
+      "actor_or_toy_transition_evaluations": 11796540,
+      "conditions": 480,
+      "actions": 0,
+      "peak_reserved_mib": 0.0
+    },
+    {
+      "experiment": "exp-085-halfcheetah-development-gate-ablation",
+      "commit": "98d4b25673fc7f946e498bb9102ac792f3f7c69a",
+      "reward_evaluations": 4718592,
+      "synthetic_reward_evaluations": 0,
+      "actor_or_toy_transition_evaluations": 4718768,
+      "conditions": 384,
+      "actions": 0,
+      "peak_reserved_mib": 76.0
+    },
+    {
+      "experiment": "exp-085-hopper-development-gate-ablation",
+      "commit": "98d4b25673fc7f946e498bb9102ac792f3f7c69a",
+      "reward_evaluations": 4718592,
+      "synthetic_reward_evaluations": 0,
+      "actor_or_toy_transition_evaluations": 4718768,
+      "conditions": 384,
+      "actions": 0,
+      "peak_reserved_mib": 76.0
+    },
+    {
+      "experiment": "exp-085-mixture-in_pool-gate-ablation",
+      "commit": "98d4b25673fc7f946e498bb9102ac792f3f7c69a",
+      "reward_evaluations": 11796480,
+      "synthetic_reward_evaluations": 0,
+      "actor_or_toy_transition_evaluations": 11796540,
+      "conditions": 480,
+      "actions": 0,
+      "peak_reserved_mib": 0.0
+    },
+    {
+      "experiment": "exp-086-halfcheetah-confirmation",
+      "commit": "74a99b86cb11f2c0b25c86ead96de2cd0fa78d47",
+      "reward_evaluations": 12582912,
+      "synthetic_reward_evaluations": 0,
+      "actor_or_toy_transition_evaluations": 37749088,
+      "conditions": 384,
+      "actions": 0,
+      "peak_reserved_mib": 78.0
+    },
+    {
+      "experiment": "exp-086-hopper-confirmation",
+      "commit": "74a99b86cb11f2c0b25c86ead96de2cd0fa78d47",
+      "reward_evaluations": 11010048,
+      "synthetic_reward_evaluations": 0,
+      "actor_or_toy_transition_evaluations": 55050592,
+      "conditions": 576,
+      "actions": 0,
+      "peak_reserved_mib": 78.0
+    },
+    {
+      "experiment": "exp-087-reward-direction-endpoint-smoke",
+      "commit": "41dccadb4060e45346e2a3b1c9410d15d3afc381",
+      "reward_evaluations": 373760,
+      "synthetic_reward_evaluations": 0,
+      "actor_or_toy_transition_evaluations": 994388,
+      "conditions": 8,
+      "actions": 1024,
+      "peak_reserved_mib": 90.0
+    },
+    {
+      "experiment": "exp-088-halfcheetah-endpoint",
+      "commit": "41dccadb4060e45346e2a3b1c9410d15d3afc381",
+      "reward_evaluations": 5251072,
+      "synthetic_reward_evaluations": 0,
+      "actor_or_toy_transition_evaluations": 5365760,
+      "conditions": 64,
+      "actions": 8192,
+      "peak_reserved_mib": 82.0
+    },
+    {
+      "experiment": "exp-088-hopper-endpoint",
+      "commit": "41dccadb4060e45346e2a3b1c9410d15d3afc381",
+      "reward_evaluations": 3158016,
+      "synthetic_reward_evaluations": 0,
+      "actor_or_toy_transition_evaluations": 30068736,
+      "conditions": 96,
+      "actions": 12288,
+      "peak_reserved_mib": 82.0
+    }
+  ],
+  "formal_runs": 17,
+  "conditions": 16944,
+  "endpoint_actions_including_smoke": 21504,
+  "reward_evaluations": 382104896,
+  "synthetic_reward_evaluations": 5242880,
+  "actor_or_toy_transition_evaluations": 1662560714
+}

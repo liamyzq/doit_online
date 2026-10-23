@@ -1,0 +1,15 @@
+{
+  "experiment_id": "exp-088-halfcheetah-endpoint",
+  "commit": "41dccadb4060e45346e2a3b1c9410d15d3afc381",
+  "config": "/home/mlw0719/doit_reward_directions/configs/reward_directions/exp-088-halfcheetah-endpoint.json",
+  "machine": "orion",
+  "gpu": 0,
+  "pid": 2567708,
+  "path": "/home/mlw0719/doit_reward_directions_storage/runs/exp-088-halfcheetah-endpoint",
+  "log_path": "/home/mlw0719/doit_reward_directions_storage/artifacts/exp-088-halfcheetah-endpoint.log",
+  "status": "completed",
+  "timestamp": "2026-10-23T21:51:53.792663+00:00",
+  "started_at": "2026-10-23T21:49:23.791957+00:00",
+  "returncode": 0,
+  "finished_at": "2026-10-23T21:51:53.792688+00:00"
+}

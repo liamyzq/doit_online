@@ -1,0 +1,20 @@
+{
+  "conditions": 96,
+  "actions": 12288,
+  "costs": {
+    "reward_queries": 3158016,
+    "reward_seconds": 14.070760876056738,
+    "score_forwards": 30068736,
+    "vjp_seconds": 9.257345718564466
+  },
+  "jacobian_vjps": 0,
+  "original_kernel_vjps": 98304,
+  "jacobian_seconds": 0.0,
+  "checks_passed": 0,
+  "actual_jacobian_vjps_including_checks": 0,
+  "actual_original_kernel_vjps_including_checks": 98304,
+  "actual_jacobian_seconds_including_checks": 0.0,
+  "scope": "Complete action generation and frozen-critic scores; not simulator returns",
+  "peak_allocated_mib": 60.11474609375,
+  "peak_reserved_mib": 82.0
+}

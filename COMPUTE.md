@@ -33,12 +33,17 @@ Both real jobs reserved76MiB peak. Exp-086 uses the same memory allowance
 and concurrency, with the committed fresh-observation confirmation configs.
 Both exp-086 jobs completed at `74a99b8`, with78MiB peak reserved memory,
 and controller1662717 exited. Compact artifacts, aggregate estimates and logs
-are local; raw records remain remote. Exp-087 now measures128-action batch
-memory and checks the new complete-action path before exp-088 is launched.
+are local; raw records remain remote. Exp-087 measured the128-action batch
+and checked the new complete-action path before exp-088 launched.
 Exp-087 passed all26 new batch checks at `41dccad`, with69.516/90MiB peak
 allocated/reserved memory at128 actions. Full smoke artifacts and logs are local;
-controller2483750 exited. Exp-088 runs the two committed endpoints at the same
-execution revision and4096MiB allowance plus2048MiB reserve, one worker/GPU.
+controller2483750 exited. Both exp-088 endpoints completed at `41dccad`,
+with82MiB peak reserved memory, using4096MiB plus2048MiB reserve and one
+worker per physical GPU. Controller2567660 exited. All compact records and
+96 Hopper/64 HalfCheetah final action bundles are local; step NPZs remain
+remote. Neither selected-mean endpoint establishes a gain, so no simulator
+extension or new worker is queued. The execution checkout remains at41dccad;
+later local commits record the results and analysis.
 
 ## Posterior geometry exploration
 

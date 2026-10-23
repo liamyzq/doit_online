@@ -1,0 +1,38 @@
+[
+  {
+    "run": "exp-088-halfcheetah-endpoint",
+    "task": "halfcheetah-medium-v2",
+    "method": "antithetic",
+    "observations": 32,
+    "mean_q": 96.33562064170837,
+    "q10": 95.94388461112976,
+    "mean_pairwise_action_distance": 0.4067387299274835,
+    "selected_mean_q": 96.63082480430603,
+    "selected_q10": 96.44193279743195,
+    "selected_pairwise_action_distance": 0.3426761523850502,
+    "compute_seconds": 1.7680059079939383,
+    "seconds": 2.022030229498341,
+    "reward_queries": 2625536,
+    "actor_forwards": 2682880,
+    "jacobian_vjps": 0,
+    "original_kernel_vjps": 40960
+  },
+  {
+    "run": "exp-088-halfcheetah-endpoint",
+    "task": "halfcheetah-medium-v2",
+    "method": "random_pair",
+    "observations": 32,
+    "mean_q": 96.32992720603943,
+    "q10": 95.9333075761795,
+    "mean_pairwise_action_distance": 0.4094927949229563,
+    "selected_mean_q": 96.63001942634583,
+    "selected_q10": 96.43557376861573,
+    "selected_pairwise_action_distance": 0.339117031183935,
+    "compute_seconds": 1.727723638072348,
+    "seconds": 1.9867026867250388,
+    "reward_queries": 2625536,
+    "actor_forwards": 2682880,
+    "jacobian_vjps": 0,
+    "original_kernel_vjps": 40960
+  }
+]

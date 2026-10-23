@@ -218,3 +218,13 @@ observation, fixed source gamma/selection, and path/estimator seeds88001/88011.
 This endpoint test follows successful exp-087 batch/cost checks and its measured
 128-action peak memory. The two route/task decisions are assessed separately;
 there is no claim that reward-based selection itself is confirmed.
+
+## Closure
+
+All planned checks, development, bounded gate ablation, fresh confirmation and
+conditional complete-action tests are complete. Neither exp-088 construction
+establishes an improvement in the locked selected-mean-Q endpoint against its required controls.
+Hopper's favorable raw mean-Q result is retained as a secondary endpoint.
+No selected-mean threshold, action-selection rule or method is changed after
+these results. The conditional simulator stage does not proceed. See the
+final findings for effects, intervals, costs, limitations and artifact paths.
