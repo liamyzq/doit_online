@@ -174,8 +174,8 @@ Exp-087 uses development row0 of both tasks. It checks batched transition means
 and Jacobians against scalar contexts, per-state pilot scores/selections against
 individual calls, single-VJP mapping against the Jacobian, and repeated-state
 P/F estimates against the established scalar context. Any discrepancy above
-2e-4 blocks endpoint runs. It also generates complete actions for all tested
-layouts and checks exact reward and actor-forward counts. This detects new
+2e-4 blocks endpoint runs. It also generates128 complete actions per method at the intended
+endpoint batch size for all tested layouts and checks exact reward and actor-forward counts. This detects new
 batch coupling, orientation, mapping and cost errors without repeating settled
 fixed-state construction checks.
 
@@ -186,3 +186,10 @@ and selected-action mean/lower-decile Q and mean pairwise action distance.
 Timing distinguishes computation from artifact writing, and actual costs
 include smoke/warm-up evaluations. Scores are frozen-critic endpoints, not
 closed-loop returns.
+
+The complete-action primary comparison is selected mean Q after the fixed
+best-of policy, using paired observation bootstrap intervals. Raw mean Q, both
+lower deciles and action diversity are retained to judge whether any mean gain
+comes with a material quality or diversity loss. No parameter choice is made
+from endpoint results. A simulator extension requires an endpoint gain that
+survives its relevant controls and warrants installing the preserved environment.

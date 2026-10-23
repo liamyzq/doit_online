@@ -34,7 +34,7 @@
   "state_rows": [
     0
   ],
-  "actions": 8,
+  "actions": 128,
   "seed": 87011,
   "path_seed": 87001,
   "pool_seed": 81031,
