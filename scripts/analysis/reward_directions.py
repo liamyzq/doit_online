@@ -37,7 +37,8 @@ def main():
                 continue
             matched = "random_four" if (name.endswith("four") or
                        (row["route"] == "P" and name in {"model", "first", "no_j"})) else "random_pair"
-            controls = ["antithetic", matched] + (["original_gate"] if original_arrays is not None else [])
+            controls = list(dict.fromkeys(["antithetic", "random_pair", matched]))
+            controls += ["original_gate"] if original_arrays is not None else []
             for control in controls:
                 if name == control:
                     continue
