@@ -1,0 +1,14 @@
+{
+  "probe_conditions": 48,
+  "proxy_conditions": 18,
+  "contexts": 2,
+  "reward_queries": 3264,
+  "score_forwards": 4380,
+  "geometry_vjps": 18,
+  "new_response_checks": {
+    "hopper-medium-v2-row24-index9": 0.0033052147079905953,
+    "halfcheetah-medium-v2-row24-index9": 0.0052821211793698175
+  },
+  "seconds": 9.815719308098778,
+  "scope": "Frozen real actor/critic mechanism study, not simulator returns"
+}

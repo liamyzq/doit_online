@@ -103,14 +103,20 @@ class Context:
 
 def reference(context, config, rng, generator):
     n, d = config["reference_samples"], context.dimension
-    # IID references, independent of all estimators and direction-selection pilots.
-    eps = gaussian_probes(rng, 1, n, d)[0]
+    # References remain independent of estimators and direction-selection pilots.
+    # The confirmation uses complete pairs to resolve small antithetic errors.
+    paired = config.get("reference_antithetic", False)
+    eps = gaussian_probes(rng, 1, n, d, antithetic=paired)[0]
+    if paired:
+        half, quarter = n // 2, n // 4
+        parts = [np.r_[0:quarter, half:half + quarter], np.r_[quarter:half, half + quarter:n]]
+    else:
+        parts = [np.arange(n // 2), np.arange(n // 2, n)]
     result = {}
     for proxy in config["proxies"]:
         logs = context.log_weight(eps, proxy, generator)
         ratio = ratio_estimate(eps[None], logs[None])[0]
-        halves = np.stack([ratio_estimate(e[None], w[None])[0]
-                           for e, w in zip(np.split(eps, 2), np.split(logs, 2))])
+        halves = np.stack([ratio_estimate(eps[part][None], logs[part][None])[0] for part in parts])
         weights = np.exp(logs - logs.max()); weights /= weights.sum()
         guidance, split = context.guidance(ratio), context.guidance(halves)
         result[proxy] = {"guidance": guidance.tolist(), "ratio": ratio.tolist(),

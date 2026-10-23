@@ -102,3 +102,25 @@ its kernel-score estimator and Practical frozen-score approximation. Existing
 denoiser-covariance estimation is exemplified by
 [Free Hunch](https://arxiv.org/html/2410.11149v2). The Gaussian strata, antithetic
 construction and low-rank response alone are not novelty claims.
+
+## Locked real-critic confirmation after exp-066
+
+Exp-066 finds a local Hopper rank-one response-proxy signal, concentrated in
+row28/index12, while HalfCheetah favors the isotropic control. A separate
+exp-069 tests rank one on new rows 26/30/34/38, indices 5/9/12 and seeds
+69011/69017. Keep both tasks, including the unfavorable transfer task. Use
+32768 independent reference probes with complete antithetic pairs; divide the
+reference by whole pairs. This change addresses the observed iid reference
+noise in low-variance comparisons. Full-future continuations retain their
+independent later noises and all evaluations are charged.
+
+Hopper is the selected confirmation task. Advance the proxy beyond mechanism
+testing only if it lowers mean M32 continuation-guidance MSE by at least 20%
+against both isotropic and frozen controls, improves at least three of four
+new observation averages, and exceeds the measured reference uncertainty.
+Report the zero-guidance error as an additional interpretation baseline.
+HalfCheetah is a transfer test, not a second chance to select another method.
+Probe stratification retains antithetic and matched random-direction controls;
+its two local discovery gains are not treated as a task-wide result. Code and
+the new config are committed before this fresh-observation wave. Run it only
+after the finite image queue exits, preserving its execution revision.

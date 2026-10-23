@@ -13,7 +13,14 @@ antithetic and matched random controls in all 32 condition averages. Local
 response improves candidate reconstruction, but does not establish a
 finite-query continuation MSE gain over the isotropic control. See the
 [current findings](experiments/posterior_geometry/FINDINGS.md). Real-model
-mechanism verification proceeds within the predeclared bounded plan. Long-running execution is assigned
+mechanism verification proceeds within the predeclared bounded plan.
+Exp-065/066 complete the real-critic smoke and 2520 comparison conditions.
+Spectral strata show only local Hopper candidate-integrand gains. The rank-one
+response proxy lowers Hopper mean M32 continuation error from isotropic
+1.95839 to 0.81975, driven mainly by one state; HalfCheetah favors isotropic.
+Learned Jacobians are strongly nonsymmetric. Exp-069 locks fresh-observation
+confirmation with larger paired references before any RL endpoint expansion.
+Exp-067/068 image verification is assigned to the finite queue monitor. Long-running execution is assigned
 to low-cost monitors. Earlier study closures below remain valid.
 
 ## Completed conditional-reward development
