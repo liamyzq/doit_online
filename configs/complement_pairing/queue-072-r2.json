@@ -1,0 +1,6 @@
+[
+  {
+    "id": "exp-072-r2-complement-critic-smoke",
+    "config": "configs/complement_pairing/exp-072-r2-complement-critic-smoke.json"
+  }
+]

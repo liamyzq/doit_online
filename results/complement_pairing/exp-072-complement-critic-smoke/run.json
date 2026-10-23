@@ -1,0 +1,26 @@
+{
+  "commit": "4c21ae350ccf736f49ab80d6cd8a80f84a415c1e",
+  "config": "/home/mlw0719/doit_geometry/configs/complement_pairing/exp-072-complement-critic-smoke.json",
+  "experiment_id": "exp-072-complement-critic-smoke",
+  "pid": 2124673,
+  "cuda_visible_devices": "0",
+  "started_at": 1792731033.2614233,
+  "status": "failed",
+  "environment": {
+    "python": "3.12.9",
+    "torch": "2.6.0+cu124",
+    "cuda": "12.4",
+    "gpu": "NVIDIA RTX A6000",
+    "packages": {
+      "numpy": "1.26.4",
+      "diffusers": "0.32.2",
+      "transformers": "4.49.0",
+      "torchvision": "0.21.0",
+      "huggingface_hub": "0.36.0",
+      "safetensors": "0.8.0",
+      "h5py": "3.14.0"
+    }
+  },
+  "error": "AssertionError({'candidate_gradient_fd_relative': 0.31158698099772825, 'independent_continuation_adapter_max': 0.0, 'shared_duplicate_continuation_max': 0.0})",
+  "elapsed_seconds": 6.372231483459473
+}

@@ -169,6 +169,8 @@ def main():
         print(json.dumps(metrics), flush=True)
     except Exception as exc:
         metadata.update(status="failed", error=repr(exc), elapsed_seconds=time.time() - started)
+        metadata.update(peak_allocated_mib=torch.cuda.max_memory_allocated() / 2**20,
+                        peak_reserved_mib=torch.cuda.max_memory_reserved() / 2**20)
         if engine is not None:
             metadata.update(reward_queries=engine.reward_queries, score_forwards=engine.score_forwards,
                             vjp_calls=engine.vjp_calls, reward_seconds=engine.reward_seconds,

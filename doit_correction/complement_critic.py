@@ -110,7 +110,10 @@ def references(context, config, seed_words):
 def smoke_checks(context, bases, info, config):
     """Only new reward-gradient orientation and future-coupling paths."""
     model, d = context.model, context.dimension
-    h = 0.001
+    # These FP32 critics have large constant Q offsets. At h=1e-3 the Q
+    # difference is near quantization resolution; exp-072's diagnostic found
+    # h=0.1 resolves the derivative on both tasks without changing the oracle.
+    h = 0.1
     direction = normalized(np.arange(1, d + 1, dtype=float))
     eps = np.stack([h * direction, -h * direction])[None]
     logs = log_weights(context, eps, "candidate", None, 1)[0]
@@ -124,6 +127,9 @@ def smoke_checks(context, bases, info, config):
     shared = continue_group(model, duplicate, context.index + 1, model.generator(72007), 4)
     sharing_error = max(float((shared[:, :2] - shared[:, k:k + 2]).abs().max()) for k in (2, 4, 6))
     errors = {"candidate_gradient_fd_relative": float(derivative_error),
+              "candidate_gradient_fd_step": h,
+              "candidate_gradient_numeric": float(numeric),
+              "candidate_gradient_autograd": float(analytic),
               "independent_continuation_adapter_max": float((actual - expected).abs().max()),
               "shared_duplicate_continuation_max": sharing_error}
     if derivative_error > 0.04 or errors["independent_continuation_adapter_max"] > 2e-6 or sharing_error > 2e-6:

@@ -29,6 +29,13 @@ Use the established4096MiB allowance plus2048MiB reserve and one job per
 physical GPU0--4 for the smoke. No simulator or image job is authorized by
 this toy gate alone; the locked follow-up protocol defines later conditions.
 
+Exp-072 at `4c21ae3` failed its finite-difference validation before discovery;
+exp-073 did not run. Its finite controller exited and all failure outputs
+were retrieved. A bounded precision diagnostic measured46MiB peak reserved
+memory. The revised exp-072-r2 must pass before discovery; retain the same
+4096MiB allowance plus2048MiB reserve. This is an application-level validation
+precision issue, described in the follow-up findings, not a machine failure.
+
 ## Current uncertainty study
 
 Recovery on 2026-10-21 found both Orion and Nebula reachable with no active

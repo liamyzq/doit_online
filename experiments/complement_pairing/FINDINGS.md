@@ -76,3 +76,27 @@ direction study. Preserve the failed paid pilot and noise sensitivity; neither
 is hidden by the favorable oracle result. The
 [complete analysis](../../results/complement_pairing/exp-071-complement-toy/analysis.json)
 contains both budgets, every configured method and the exact gate decisions.
+
+## Exp-072 validation failure and diagnosis
+
+The first critic smoke at `4c21ae3` stops before discovery. Its directional
+finite difference at epsilon step0.001 differs31.16% from autograd on Hopper.
+Independent future rollout matches the preserved adapter exactly, and repeated
+candidates with shared futures remain exactly equal. Failure costs are9 Q
+evaluations,448 actor forwards and7 Jacobian/oracle VJP calls. Peak memory was
+not captured on the old exception path; subsequent failures now retain it.
+
+A bounded diagnostic uses the same contexts and compares absolute derivatives
+across steps. The FP32 Q values have a large constant offset: Hopper log weights
+are about2777.6, while the derivative is-0.18668; small perturbations differ by
+only a few quantization increments and eventually produce identical values.
+At step0.1, numeric/autograd differences are0.99% for Hopper and1.93% for
+HalfCheetah. The diagnostic costs48 Q evaluations,62 actor forwards and20
+Jacobian/oracle VJP calls, with46MiB peak reserved memory. Its full absolute
+values are preserved in exp-072's `gradient-diagnostic.json`.
+
+Exp-072-r2 changes the smoke's finite-difference step to0.1, retaining its4%
+tolerance. It does not change the gradient oracle, finite-difference direction
+pilot (radius0.25), estimator, budget or exp-073 conditions. Discovery remains
+blocked until this corrected smoke completes. This is a validation precision
+failure, not evidence against complement pairing or a change to measured MSE.

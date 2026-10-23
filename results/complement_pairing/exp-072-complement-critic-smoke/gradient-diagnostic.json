@@ -1,0 +1,215 @@
+{
+  "purpose": "Debug the failed exp072 finite-difference check; no estimator performance comparison",
+  "records": [
+    {
+      "task": "hopper-medium-v2",
+      "state_row": 25,
+      "index": 5,
+      "gradient": [
+        0.38371241864318295,
+        -0.13801426514947915,
+        -0.2687276212914975
+      ],
+      "direction": [
+        0.2672612419124244,
+        0.5345224838248488,
+        0.8017837257372732
+      ],
+      "differences": [
+        {
+          "h": 0.1,
+          "log_values": [
+            2777.574044016447,
+            2777.611750807453
+          ],
+          "numeric": -0.18853395503128922,
+          "analytic": -0.18668170367477555,
+          "absolute_difference": 0.001852251356513679,
+          "relative_difference": 0.00992197585544081
+        },
+        {
+          "h": 0.03,
+          "log_values": [
+            2777.587021028936,
+            2777.5982840963793
+          ],
+          "numeric": -0.1877177907241882,
+          "analytic": -0.18668170367477555,
+          "absolute_difference": 0.0010360870494126595,
+          "relative_difference": 0.005550019252115148
+        },
+        {
+          "h": 0.01,
+          "log_values": [
+            2777.5906937683194,
+            2777.5946113569958
+          ],
+          "numeric": -0.19587943381793593,
+          "analytic": -0.18668170367477555,
+          "absolute_difference": 0.009197730143160388,
+          "relative_difference": 0.04926958540717017
+        },
+        {
+          "h": 0.003,
+          "log_values": [
+            2777.592162864073,
+            2777.593142261242
+          ],
+          "numeric": -0.1632328614959988,
+          "analytic": -0.18668170367477555,
+          "absolute_difference": 0.02344884217877674,
+          "relative_difference": 0.12560867892885613
+        },
+        {
+          "h": 0.001,
+          "log_values": [
+            2777.592652562658,
+            2777.593142261242
+          ],
+          "numeric": -0.24484929213031137,
+          "analytic": -0.18668170367477555,
+          "absolute_difference": 0.058167588455535824,
+          "relative_difference": 0.31158698099772825
+        },
+        {
+          "h": 0.0003,
+          "log_values": [
+            2777.592652562658,
+            2777.592652562658
+          ],
+          "numeric": 0.0,
+          "analytic": -0.18668170367477555,
+          "absolute_difference": 0.18668170367477555,
+          "relative_difference": 1.0
+        },
+        {
+          "h": 0.0001,
+          "log_values": [
+            2777.592652562658,
+            2777.592652562658
+          ],
+          "numeric": 0.0,
+          "analytic": -0.18668170367477555,
+          "absolute_difference": 0.18668170367477555,
+          "relative_difference": 1.0
+        }
+      ],
+      "counts": {
+        "reward_queries": 21,
+        "reward_seconds": 0.04666935803834349,
+        "score_forwards": 28,
+        "vjp_seconds": 0.0
+      },
+      "jacobian_and_oracle_vjp_calls": 7
+    },
+    {
+      "task": "halfcheetah-medium-v2",
+      "state_row": 25,
+      "index": 5,
+      "gradient": [
+        -0.022658947966982215,
+        0.0021380930816252363,
+        0.008725213631892634,
+        0.03542448357437764,
+        0.0007128228634527471,
+        0.015671517225963345
+      ],
+      "direction": [
+        0.10482848367219183,
+        0.20965696734438366,
+        0.3144854510165755,
+        0.4193139346887673,
+        0.5241424183609592,
+        0.628970902033151
+      ],
+      "differences": [
+        {
+          "h": 0.1,
+          "log_values": [
+            1315.4786865344236,
+            1315.4734063951214
+          ],
+          "numeric": 0.026400696510791022,
+          "analytic": 0.025901444315894674,
+          "absolute_difference": 0.0004992521948963477,
+          "relative_difference": 0.019275071644942084
+        },
+        {
+          "h": 0.03,
+          "log_values": [
+            1315.4769264879894,
+            1315.4752699736987
+          ],
+          "numeric": 0.027608571512397855,
+          "analytic": 0.025901444315894674,
+          "absolute_difference": 0.001707127196503181,
+          "relative_difference": 0.06590857157164728
+        },
+        {
+          "h": 0.01,
+          "log_values": [
+            1315.4764088272736,
+            1315.4758911665576
+          ],
+          "numeric": 0.025883035800688958,
+          "analytic": 0.025901444315894674,
+          "absolute_difference": 1.8408515205715903e-05,
+          "relative_difference": 0.000710713849822627
+        },
+        {
+          "h": 0.003,
+          "log_values": [
+            1315.476098230844,
+            1315.4759946987008
+          ],
+          "numeric": 0.017255357192880183,
+          "analytic": 0.025901444315894674,
+          "absolute_difference": 0.008646087123014491,
+          "relative_difference": 0.3338071428591623
+        },
+        {
+          "h": 0.001,
+          "log_values": [
+            1315.4762017629873,
+            1315.476098230844
+          ],
+          "numeric": 0.05176607169232739,
+          "analytic": 0.025901444315894674,
+          "absolute_difference": 0.025864627376432713,
+          "relative_difference": 0.9985785758117215
+        },
+        {
+          "h": 0.0003,
+          "log_values": [
+            1315.4762017629873,
+            1315.476098230844
+          ],
+          "numeric": 0.17255357230775797,
+          "analytic": 0.025901444315894674,
+          "absolute_difference": 0.1466521279918633,
+          "relative_difference": 5.661928586039073
+        },
+        {
+          "h": 0.0001,
+          "log_values": [
+            1315.476098230844,
+            1315.476098230844
+          ],
+          "numeric": 0.0,
+          "analytic": 0.025901444315894674,
+          "absolute_difference": 0.025901444315894674,
+          "relative_difference": 1.0
+        }
+      ],
+      "counts": {
+        "reward_queries": 27,
+        "reward_seconds": 0.008741072029806674,
+        "score_forwards": 34,
+        "vjp_seconds": 0.0
+      },
+      "jacobian_and_oracle_vjp_calls": 13
+    }
+  ],
+  "peak_allocated_mib": 40.765625,
+  "peak_reserved_mib": 46.0
+}
