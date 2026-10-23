@@ -1,0 +1,12 @@
+{
+  "id": "exp-077-joint-future-checks",
+  "mode": "joint_future_checks",
+  "purpose": "Validate the new current/future sign maps, full target moments and repeat alignment without repeating the settled analytic reference check.",
+  "methods": [
+    "independent_future",
+    "shared_antithetic",
+    "random_paired_lhs",
+    "joint_antithetic",
+    "cartesian_four"
+  ]
+}

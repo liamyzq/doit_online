@@ -17,3 +17,4 @@ results/recovery/**/fixed.csv
 !results/complement_pairing/*/replay-estimates.npz
 !results/complement_pairing/*/matrices.npz
 !results/future_directions/*/estimates.npz
+!results/joint_future/*/estimates.npz

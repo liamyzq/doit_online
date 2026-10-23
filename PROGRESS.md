@@ -8,8 +8,11 @@ at its locked toy gate. An accurate path-gradient oracle improves M64 rotating-
 direction MSE54.98% in dimension6 but only12.38% in dimension3. Full coordinate
 finite differences and four-query pilots fail after per-future acquisition
 costs. No real-critic extension follows that design. The next distinct question
-is whether coupling future noises themselves reduces variance without spending
-queries on directions. The original exp-073 closure remains in force.
+is whether [coupling future noises](experiments/joint_future/PLAN.md) themselves
+reduces variance without spending queries on directions. Exp-077 checks the new
+sign maps; exp-078 compares joint antithetic and Cartesian four-point coupling
+against shared-future controls at equal M32/M64 budgets. The original exp-073
+closure remains in force.
 
 The complement-cancellation follow-up is complete on the geometry branch. See
 [the protocol](experiments/complement_pairing/PLAN.md) and
