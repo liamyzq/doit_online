@@ -1,0 +1,25 @@
+{
+  "commit": "ea193aba807d29cc75bba2039ffded5f9f217040",
+  "config": "/home/mlw0719/doit_geometry/configs/joint_future/exp-078-joint-future-toy.json",
+  "experiment_id": "exp-078-joint-future-toy",
+  "pid": 3000572,
+  "cuda_visible_devices": "3",
+  "started_at": 1792736304.039586,
+  "status": "completed",
+  "environment": {
+    "python": "3.12.9",
+    "torch": "2.6.0+cu124",
+    "cuda": "12.4",
+    "gpu": "NVIDIA RTX A6000",
+    "packages": {
+      "numpy": "1.26.4",
+      "diffusers": "0.32.2",
+      "transformers": "4.49.0",
+      "torchvision": "0.21.0",
+      "huggingface_hub": "0.36.0",
+      "safetensors": "0.8.0",
+      "h5py": "3.14.0"
+    }
+  },
+  "elapsed_seconds": 5.971864700317383
+}

@@ -1,0 +1,15 @@
+{
+  "experiment_id": "exp-078-joint-future-toy",
+  "commit": "ea193aba807d29cc75bba2039ffded5f9f217040",
+  "config": "/home/mlw0719/doit_geometry/configs/joint_future/exp-078-joint-future-toy.json",
+  "machine": "orion",
+  "gpu": 3,
+  "pid": 3000572,
+  "path": "/home/mlw0719/doit_geometry_storage/runs/exp-078-joint-future-toy",
+  "log_path": "/home/mlw0719/doit_geometry_storage/artifacts/exp-078-joint-future-toy.log",
+  "status": "completed",
+  "timestamp": "2026-10-23T06:18:52.054342+00:00",
+  "started_at": "2026-10-23T06:18:22.054090+00:00",
+  "returncode": 0,
+  "finished_at": "2026-10-23T06:18:52.054365+00:00"
+}

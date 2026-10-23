@@ -1,0 +1,26 @@
+{
+  "errors": {
+    "independent_future_constant_weight_cancellation": 0.0,
+    "independent_future_numerator_max_zscore": 2.059369798476104,
+    "independent_future_denominator_max_zscore": 0.5121014698626916,
+    "shared_antithetic_constant_weight_cancellation": 0.0,
+    "shared_antithetic_numerator_max_zscore": 0.9537753046738098,
+    "shared_antithetic_denominator_max_zscore": 0.8878965215549673,
+    "random_paired_lhs_constant_weight_cancellation": 0.0,
+    "random_paired_lhs_numerator_max_zscore": 1.0588532993113275,
+    "random_paired_lhs_denominator_max_zscore": 0.38680104984465946,
+    "joint_antithetic_constant_weight_cancellation": 0.0,
+    "joint_antithetic_numerator_max_zscore": 0.6662608056303987,
+    "joint_antithetic_denominator_max_zscore": 1.0396534354360418,
+    "cartesian_four_constant_weight_cancellation": 0.0,
+    "cartesian_four_numerator_max_zscore": 1.7283681839439078,
+    "cartesian_four_denominator_max_zscore": 0.9472457210649061,
+    "joint_opposite": 0.0,
+    "cartesian_sign": 0.0,
+    "cartesian_first_two_shared": 0.0,
+    "repeat_prefix": 0.0,
+    "shared_equal": 0.0,
+    "independent_slots": 0.0
+  },
+  "failed": {}
+}

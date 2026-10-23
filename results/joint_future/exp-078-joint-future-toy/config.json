@@ -1,0 +1,33 @@
+{
+  "id": "exp-078-joint-future-toy",
+  "mode": "joint_future_toy",
+  "purpose": "Test whether coupling future Gaussian signs reduces full guidance MSE without any direction-acquisition reward calls.",
+  "dimensions": [
+    3,
+    6
+  ],
+  "angles": [
+    0,
+    60
+  ],
+  "budgets": [
+    32,
+    64
+  ],
+  "seeds": [
+    78011,
+    78017
+  ],
+  "repeats": 4096,
+  "controls": [
+    "shared_antithetic",
+    "random_paired_lhs"
+  ],
+  "methods": [
+    "independent_future",
+    "shared_antithetic",
+    "random_paired_lhs",
+    "joint_antithetic",
+    "cartesian_four"
+  ]
+}

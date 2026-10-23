@@ -10,9 +10,13 @@ finite differences and four-query pilots fail after per-future acquisition
 costs. No real-critic extension follows that design. The next distinct question
 is whether [coupling future noises](experiments/joint_future/PLAN.md) themselves
 reduces variance without spending queries on directions. Exp-077 checks the new
-sign maps; exp-078 compares joint antithetic and Cartesian four-point coupling
-against shared-future controls at equal M32/M64 budgets. The original exp-073
-closure remains in force.
+sign maps and passes21 checks. Exp-078 finds that joint antithetic at M32
+improves the rotating dimension3 target25.68%/24.42% against shared antithetic/
+random paired LHS, while dimension6 misses20%. Cartesian four-point passes
+both dimensions, but the predeclared simpler-pair preference selects only joint
+antithetic and only Hopper. Aligned-direction controls worsen, so the toy gain
+is conditional. Next validate the real future-sign adapter and test fresh Hopper
+observations. The original exp-073 closure remains in force.
 
 The complement-cancellation follow-up is complete on the geometry branch. See
 [the protocol](experiments/complement_pairing/PLAN.md) and

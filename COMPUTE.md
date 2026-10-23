@@ -55,6 +55,17 @@ oracle derivative evaluations (24,510,464 total reward evaluations), with zero
 GPU tensor allocation. No real-critic, image or simulator job was launched;
 await the main agent's toy gate review before any real-critic study.
 
+## Joint future-noise coupling
+
+Exp-077/078 completed on Orion at `ea193ab`, with both finite controllers
+exited and full output trees and logs retrieved. Exp-077 passed all 21 sign-map,
+exact-moment, constant-weight cancellation and repeat-alignment checks; it used
+655,360 toy reward evaluations and zero GPU tensor allocation. Exp-078 completed
+all 80 toy conditions with 15,728,640 reward evaluations and no direction
+acquisition queries; peak allocated/reserved memory was 0/0MiB. No real-critic,
+image or simulator run was launched. Await the main agent's gate review before
+any real-critic phase.
+
 ## Current uncertainty study
 
 Recovery on 2026-10-21 found both Orion and Nebula reachable with no active

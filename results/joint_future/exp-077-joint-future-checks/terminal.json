@@ -1,0 +1,15 @@
+{
+  "experiment_id": "exp-077-joint-future-checks",
+  "commit": "ea193aba807d29cc75bba2039ffded5f9f217040",
+  "config": "/home/mlw0719/doit_geometry/configs/joint_future/exp-077-joint-future-checks.json",
+  "machine": "orion",
+  "gpu": 3,
+  "pid": 2888239,
+  "path": "/home/mlw0719/doit_geometry_storage/runs/exp-077-joint-future-checks",
+  "log_path": "/home/mlw0719/doit_geometry_storage/artifacts/exp-077-joint-future-checks.log",
+  "status": "completed",
+  "timestamp": "2026-10-23T06:17:15.680242+00:00",
+  "started_at": "2026-10-23T06:16:45.679873+00:00",
+  "returncode": 0,
+  "finished_at": "2026-10-23T06:17:15.680268+00:00"
+}

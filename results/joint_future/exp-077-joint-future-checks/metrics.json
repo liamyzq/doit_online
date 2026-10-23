@@ -1,0 +1,7 @@
+{
+  "checks_passed": 21,
+  "toy_reward_evaluations": 655360,
+  "scope": "New current/future sign maps and exact target moments; no repeated reference quadrature",
+  "peak_allocated_mib": 0.0,
+  "peak_reserved_mib": 0.0
+}

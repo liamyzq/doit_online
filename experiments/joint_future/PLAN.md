@@ -76,3 +76,12 @@ Main owns scientific implementation and interpretation. Commit each code/config
 before execution; delegate established Orion queues and quiet monitoring.
 Record every outcome and actual job event. Preserve exp-073 and exp-076 closure
 records and terminal N4 as the practical image baseline.
+
+## Toy selection recorded before real execution
+
+Exp-077 passes21 checks. At M32, exp-078 joint antithetic passes in dimension3
+but misses20% in dimension6. Cartesian four-point passes both dimensions.
+Apply the predeclared simpler-pair preference: select only joint antithetic,
+only Hopper. Its aligned-direction toy control is worse and remains reported.
+The following smoke/discovery configs must not add another selected coupling
+or another physical task after observing this result.
