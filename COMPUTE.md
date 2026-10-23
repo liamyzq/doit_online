@@ -42,6 +42,19 @@ worker or pending queue remains. Zero of six feasible critic comparisons passes
 the locked advance gate, so no confirmation, image or simulator job follows.
 No standalone runtime or simulator-return claim is made.
 
+## Continuation-conditioned directions
+
+Exp-075/076 completed on Orion at `8ac4337`, with their finite controllers
+exited and full output trees and logs retrieved. Exp-075 passed all 19
+conditional Gaussian, joint-moment, complement-contribution, full-score and
+repeat-alignment checks; it used 524,288 toy reward evaluations and 4,096
+reference quadrature evaluations, with zero GPU tensor allocation. Exp-076
+completed all 128 exact toy conditions. It used 16,711,680 main reward
+evaluations, 7,798,784 direction-acquisition reward evaluations and 1,605,632
+oracle derivative evaluations (24,510,464 total reward evaluations), with zero
+GPU tensor allocation. No real-critic, image or simulator job was launched;
+await the main agent's toy gate review before any real-critic study.
+
 ## Current uncertainty study
 
 Recovery on 2026-10-21 found both Orion and Nebula reachable with no active

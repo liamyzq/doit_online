@@ -1,0 +1,24 @@
+{
+  "errors": {
+    "point0_mean": 0.004826763833242287,
+    "point0_covariance": 0.006814232377498095,
+    "point0_future_cross_moment": 0.00741702500395574,
+    "point1_mean": 0.005781253990643556,
+    "point1_covariance": 0.012668912759499218,
+    "point1_future_cross_moment": 0.00741702500395574,
+    "point2_mean": 0.005781253990643556,
+    "point2_covariance": 0.012668912759499218,
+    "point2_future_cross_moment": 0.00741702500395574,
+    "point3_mean": 0.004826763833242287,
+    "point3_covariance": 0.006814232377498095,
+    "point3_future_cross_moment": 0.00741702500395574,
+    "correct_direction_complement_max": 1.6653345369377348e-15,
+    "joint_numerator_max_zscore": 1.5014252098845415,
+    "joint_denominator_max_zscore": 1.3248287948669024,
+    "wrong_direction_retained_component_zscore": 0.7250073068633633,
+    "exact_mass_quadrature": 1.1102230246251565e-16,
+    "exact_moment_quadrature": 5.551115123125783e-17,
+    "repeat_aligned_complement_prefix": 4.440892098500626e-16
+  },
+  "failed": {}
+}

@@ -1,0 +1,8 @@
+{
+  "checks_passed": 19,
+  "toy_reward_evaluations": 524288,
+  "reference_quadrature_integrand_evaluations": 4096,
+  "purpose": "Validate future-conditioned Gaussian marginals, full moments and repeat alignment",
+  "peak_allocated_mib": 0.0,
+  "peak_reserved_mib": 0.0
+}

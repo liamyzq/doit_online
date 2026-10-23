@@ -1,0 +1,75 @@
+{
+  "id": "exp-076-future-direction-toy",
+  "mode": "future_direction_toy",
+  "purpose": "Test whether future-specific directions repay per-block acquisition under fixed total budgets when the continuation active direction rotates with later randomness.",
+  "dimensions": [
+    3,
+    6
+  ],
+  "angles": [
+    0,
+    60
+  ],
+  "budgets": [
+    32,
+    64
+  ],
+  "seeds": [
+    76011,
+    76017
+  ],
+  "repeats": 4096,
+  "controls": [
+    "antithetic",
+    "random_paired_lhs"
+  ],
+  "methods": [
+    {
+      "name": "antithetic",
+      "direction": "none",
+      "group": 2
+    },
+    {
+      "name": "random_paired_lhs",
+      "direction": "random",
+      "group": 2,
+      "lhs": true
+    },
+    {
+      "name": "candidate_fd_four",
+      "direction": "candidate_fd",
+      "group": 4,
+      "lhs": true
+    },
+    {
+      "name": "path_gradient_pair",
+      "direction": "path_gradient",
+      "group": 2,
+      "lhs": true
+    },
+    {
+      "name": "path_gradient_four",
+      "direction": "path_gradient",
+      "group": 4,
+      "lhs": true
+    },
+    {
+      "name": "path_fd_four",
+      "direction": "path_fd",
+      "group": 4,
+      "lhs": true
+    },
+    {
+      "name": "path_pilot4_pair",
+      "direction": "path_pilot4",
+      "group": 2,
+      "lhs": true
+    },
+    {
+      "name": "path_pilot4_four",
+      "direction": "path_pilot4",
+      "group": 4,
+      "lhs": true
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "conditions": 128,
+  "main_reward_evaluations": 16711680,
+  "direction_reward_evaluations": 7798784,
+  "oracle_derivative_evaluations": 1605632,
+  "exact_reference_formulas": 4,
+  "reward_evaluations": 24510464,
+  "seconds": 17.033546465914696,
+  "peak_allocated_mib": 0.0,
+  "peak_reserved_mib": 0.0
+}

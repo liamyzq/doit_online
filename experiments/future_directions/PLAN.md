@@ -103,3 +103,12 @@ sync with active or pending workers. Append every outcome and actual job event
 to the project ledgers. Close this bounded design if its mechanism or practical
 gate fails, preserving favorable and negative evidence. A new idea then requires
 a separately stated hypothesis rather than a parameter sweep of the failed one.
+
+## Recorded decision
+
+Exp-075 passes19 checks. Exp-076 passes the oracle threshold only in dimension6;
+dimension3 improves12.38% against antithetic, below20%. Every paid black-box
+path direction loses under M32/M64 in the rotating condition. Close the stated
+design and do not execute its conditional critic phase. The user's goal remains
+active for a distinct cost-free future-coupling hypothesis, which gets its own
+protocol and experiment IDs; the old gate is not changed.

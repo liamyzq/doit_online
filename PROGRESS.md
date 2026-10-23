@@ -2,14 +2,14 @@
 
 ## Current decision
 
-A new user-started goal continues with [continuation-conditioned directions](experiments/future_directions/PLAN.md).
-The next discriminating question is whether selecting a direction for each
-realized future path improves the actual continuation target enough to repay
-its per-block acquisition cost. The original exp-073 closure remains in force.
-Exp-075 validates the conditional Gaussian construction; exp-076 tests exact
-rotating-direction toys at fixed total M32/M64 budgets before any real-model
-extension. Main noise is independent of all direction acquisition; the future
-may determine the basis without changing the joint Gaussian marginal law.
+The user-started goal remains active. Exp-075 passes19 checks and exp-076
+closes [per-future paid directions](experiments/future_directions/FINDINGS.md)
+at its locked toy gate. An accurate path-gradient oracle improves M64 rotating-
+direction MSE54.98% in dimension6 but only12.38% in dimension3. Full coordinate
+finite differences and four-query pilots fail after per-future acquisition
+costs. No real-critic extension follows that design. The next distinct question
+is whether coupling future noises themselves reduces variance without spending
+queries on directions. The original exp-073 closure remains in force.
 
 The complement-cancellation follow-up is complete on the geometry branch. See
 [the protocol](experiments/complement_pairing/PLAN.md) and

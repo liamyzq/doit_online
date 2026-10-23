@@ -1,0 +1,15 @@
+{
+  "experiment_id": "exp-076-future-direction-toy",
+  "commit": "8ac4337509afda7eb7db87cdf600b54f6842cba0",
+  "config": "/home/mlw0719/doit_geometry/configs/future_directions/exp-076-future-direction-toy.json",
+  "machine": "orion",
+  "gpu": 3,
+  "pid": 2262213,
+  "path": "/home/mlw0719/doit_geometry_storage/runs/exp-076-future-direction-toy",
+  "log_path": "/home/mlw0719/doit_geometry_storage/artifacts/exp-076-future-direction-toy.log",
+  "status": "completed",
+  "timestamp": "2026-10-23T06:05:50.074397+00:00",
+  "started_at": "2026-10-23T06:05:20.074167+00:00",
+  "returncode": 0,
+  "finished_at": "2026-10-23T06:05:50.074418+00:00"
+}
