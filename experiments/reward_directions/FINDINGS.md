@@ -1,7 +1,8 @@
 # Reward-calibrated direction experiments
 
-Development and the bounded gate ablation are complete. Exp-086 is locked
-before using the32-observation confirmation sets.
+Development, the bounded gate ablation and fresh confirmation are complete.
+Two free sampling constructions pass confirmation; the paid candidate remains
+unresolved against its stronger control. Complete-action evaluation is next.
 These findings concern the fixed temperatures, query budgets and frozen
 actors/critics in [the protocol](PLAN.md), not all possible direction estimators.
 
@@ -124,3 +125,26 @@ is selected for one fresh confirmation, with no further gate search.
 Exp-086 also confirms Hopper M32 proxy random pairs/full random four-point
 and HalfCheetah M64 proxy random pairs. These free controls are reported as
 sampling-construction gains, separately from the reward-selection hypothesis.
+
+## Fresh32-observation confirmation
+
+| Locked comparison | MSE reduction | Observation95% interval for MSE difference | Observations improving | Decision |
+|---|---:|---|---:|---|
+| HalfCheetah P64 random pairs vs antithetic |4.984%|[-0.005790,-0.001080]|27/32|Pass|
+| HalfCheetah P64 moments pair vs antithetic |7.873%|[-0.009429,-0.001577]|29/32|Favorable, insufficient alone|
+| HalfCheetah P64 moments pair vs random pairs |3.041%|[-0.004518,0.000692]|22/32|Not confirmed; close at this budget|
+| Hopper P32 random pairs vs antithetic |0.688%|[-0.018015,0.004264]|28/32|Not confirmed|
+| Hopper F32 random four-point vs antithetic |11.415%|[-0.096653,-0.010026]|16/32|Pass, heterogeneous|
+| Hopper F32 random four-point vs random pairs |11.611%|[-0.099264,-0.008923]|13/32|Pass, heterogeneous|
+
+All eight reference-block replacements favor the selected confirmed comparisons
+and HalfCheetah paid pair, but the paid candidate fails the observation-level
+interval criterion against random pairs. Its result is a small favorable mean
+with unresolved generalization, not proof that reward moments cannot help.
+No further direction or gate tuning follows.
+
+HalfCheetah random pairs also reduce error against the full target1.321%, with
+interval[-0.009405,-0.000036]. The primary target remains its proxy. Complete
+actions now test HalfCheetah P64 random pairs and Hopper F32 random four-point
+against their route-matched controls, keeping costs and critic endpoints separate
+from simulator returns.

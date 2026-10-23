@@ -31,6 +31,10 @@ All four exp-085 jobs completed at `98d4b25` and controller1148466 exited.
 Their compact records, estimates and logs are local; raw NPZ remains remote.
 Both real jobs reserved76MiB peak. Exp-086 uses the same memory allowance
 and concurrency, with the committed fresh-observation confirmation configs.
+Both exp-086 jobs completed at `74a99b8`, with78MiB peak reserved memory,
+and controller1662717 exited. Compact artifacts, aggregate estimates and logs
+are local; raw records remain remote. Exp-087 now measures128-action batch
+memory and checks the new complete-action path before exp-088 is launched.
 
 ## Posterior geometry exploration
 

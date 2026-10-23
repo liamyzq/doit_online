@@ -193,3 +193,28 @@ lower deciles and action diversity are retained to judge whether any mean gain
 comes with a material quality or diversity loss. No parameter choice is made
 from endpoint results. A simulator extension requires an endpoint gain that
 survives its relevant controls and warrants installing the preserved environment.
+
+## Confirmation outcomes and locked endpoints
+
+Exp-086 confirms HalfCheetah M64 P random pairs against antithetic:4.984%
+proxy MSE reduction,27/32 improving observations, paired95% interval
+[-0.005790,-0.001080], and eight favorable reference-block signs. Moments-pair
+improves7.873% against antithetic and3.041% against random pairs, but the latter
+interval[-0.004518,0.000692] includes zero. It does not pass the locked paid-method
+confirmation rule and receives no further tuning or endpoint extension.
+
+Hopper M32 F random four-point confirms11.415%/11.611% reductions against
+antithetic/random pairs, with intervals[-0.096653,-0.010026] and
+[-0.099264,-0.008923] and eight favorable reference-block signs. Improvements
+occur in16/32 and13/32 observations, respectively; the aggregate gain remains
+heterogeneous. Hopper P random pairs improve0.688% against antithetic but its
+interval includes zero, so that selected proxy setting does not advance.
+
+Exp-088 tests complete actions for exactly these confirmed constructions:
+Hopper F M32 with antithetic/random-pair/random-four controls, and HalfCheetah
+P M64 with antithetic/random-pair controls. The full route retains its own
+continuation estimand and actor costs. Use128 actions on each reserved
+observation, fixed source gamma/selection, and path/estimator seeds88001/88011.
+This endpoint test follows successful exp-087 batch/cost checks and its measured
+128-action peak memory. The two route/task decisions are assessed separately;
+there is no claim that reward-based selection itself is confirmed.

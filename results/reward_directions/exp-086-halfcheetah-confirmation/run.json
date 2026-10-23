@@ -1,0 +1,25 @@
+{
+  "commit": "74a99b86cb11f2c0b25c86ead96de2cd0fa78d47",
+  "config": "/home/mlw0719/doit_reward_directions/configs/reward_directions/exp-086-halfcheetah-confirmation.json",
+  "experiment_id": "exp-086-halfcheetah-confirmation",
+  "pid": 1663220,
+  "cuda_visible_devices": "4",
+  "started_at": 1792791277.5200157,
+  "status": "completed",
+  "environment": {
+    "python": "3.12.9",
+    "torch": "2.6.0+cu124",
+    "cuda": "12.4",
+    "gpu": "NVIDIA RTX A6000",
+    "packages": {
+      "numpy": "1.26.4",
+      "diffusers": "0.32.2",
+      "transformers": "4.49.0",
+      "torchvision": "0.21.0",
+      "huggingface_hub": "0.36.0",
+      "safetensors": "0.8.0",
+      "h5py": "3.14.0"
+    }
+  },
+  "elapsed_seconds": 354.9143543243408
+}

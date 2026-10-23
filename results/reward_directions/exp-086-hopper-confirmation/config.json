@@ -1,0 +1,112 @@
+{
+  "agreement_threshold": 0.8,
+  "ess_fraction": 0.25,
+  "pool_seed": 81031,
+  "reference_blocks": 8,
+  "reference_block_samples": 4096,
+  "samples": [
+    32
+  ],
+  "controls": [
+    "antithetic",
+    "random_pair",
+    "random_four"
+  ],
+  "id": "exp-086-hopper-confirmation",
+  "mode": "reward_direction_critic",
+  "tasks": [
+    {
+      "name": "hopper-medium-v2",
+      "source": "/home/mlw0719/doob_transform/test/Doob_training_free_adaptation",
+      "states": "/home/mlw0719/doit_reward_directions_storage/data/critic-states/hopper-medium-v2",
+      "actor": "models_rl/hopper-medium-v20large_actor/behavior_ckpt600.pth",
+      "critic": "models_rl/hopper-medium-v20large_actor/critic_ckpt100.pth",
+      "eta": 0.6,
+      "guidance_end_index": 8,
+      "steps": 15,
+      "tau": 0.031159553132296444
+    }
+  ],
+  "batch": 2048,
+  "smoke": false,
+  "state_rows": [
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47
+  ],
+  "indices": [
+    3,
+    5,
+    7
+  ],
+  "path_seed": 86001,
+  "seed": 86011,
+  "reference_seed": 86007,
+  "repeats": 256,
+  "routes": {
+    "P": [
+      {
+        "name": "antithetic",
+        "selector": "none",
+        "layout": "pair"
+      },
+      {
+        "name": "random_pair",
+        "selector": "random",
+        "layout": "pair_lhs"
+      },
+      {
+        "name": "random_four",
+        "selector": "random",
+        "layout": "four_lhs"
+      }
+    ],
+    "F": [
+      {
+        "name": "antithetic",
+        "selector": "none",
+        "layout": "pair"
+      },
+      {
+        "name": "random_pair",
+        "selector": "random",
+        "layout": "pair_lhs"
+      },
+      {
+        "name": "random_four",
+        "selector": "random",
+        "layout": "four_lhs"
+      }
+    ]
+  },
+  "purpose": "Locked fresh-observation confirmation after exp-084/085 development; no holdout-based tuning."
+}

@@ -1,0 +1,10 @@
+[
+  {
+    "id": "exp-088-hopper-endpoint",
+    "config": "configs/reward_directions/exp-088-hopper-endpoint.json"
+  },
+  {
+    "id": "exp-088-halfcheetah-endpoint",
+    "config": "configs/reward_directions/exp-088-halfcheetah-endpoint.json"
+  }
+]

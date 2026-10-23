@@ -21,7 +21,13 @@ heterogeneity. Exp-085 completes its bounded gate ablation: paid moments-four no
 Gaussian shift/narrow proxy MSE31.22%/34.70%, but real-task four-point gains do
 not transfer. HalfCheetah M64 moments-pair improves5.41% against antithetic
 and1.52% against random pairs, the latter still unresolved. Exp-086 locks this
-one paid candidate and the useful free controls before using reserved rows16--47. Historical closures below
+one paid candidate and the useful free controls before using reserved rows16--47.
+Exp-086 completes all32 fresh observations per task. HalfCheetah proxy M64
+random pairs confirms4.984% MSE reduction; Hopper full M32 random four-point
+confirms11.415%/11.611% against antithetic/random pairs. The paid HalfCheetah
+candidate does not pass against random pairs (3.041% favorable mean, interval
+includes zero), and Hopper proxy also remains unconfirmed. Exp-087 will verify
+batched complete actions before exp-088 tests only the two confirmed constructions. Historical closures below
 remain the conclusions for their own methods and budgets.
 
 The continuation-aware follow-up is complete at its stated budgets. Exp-075
