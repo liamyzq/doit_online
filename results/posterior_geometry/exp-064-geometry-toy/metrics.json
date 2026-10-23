@@ -1,0 +1,14 @@
+{
+  "probe_conditions": 960,
+  "proxy_conditions": 144,
+  "costs": {
+    "reward_evaluations": 8552448,
+    "pilot_reward_evaluations": 65536,
+    "reference_integrand_evaluations": 61632,
+    "analytic_component_integrals": 252480
+  },
+  "seconds": 14.320982928969897,
+  "target": "Fixed Gaussian reverse kernel with separate proxy and analytic-continuation integrands",
+  "peak_allocated_mib": 0.0,
+  "peak_reserved_mib": 0.0
+}

@@ -42,7 +42,14 @@ def main():
         torch.set_num_threads(int(os.environ.get("OMP_NUM_THREADS", 2)))
         torch.cuda.reset_peak_memory_stats()
         mode = config.get("mode", "image")
-        if mode == "geometry_critic":
+        if mode == "geometry_image":
+            from .geometry_image import evaluate
+            from .image import ImageEngine
+            engine = ImageEngine(config["image"])
+            metadata["models"] = engine.provenance
+            write_json(output / "run.json", metadata)
+            metrics = evaluate(config, output, engine)
+        elif mode == "geometry_critic":
             from .geometry_critic import evaluate
             metrics = evaluate(config, output)
         elif mode == "geometry_checks":

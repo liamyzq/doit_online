@@ -7,8 +7,13 @@ The user opened a fresh posterior-geometry exploration on 2026-10-22 from
 Gaussian probe stratification and low-rank denoiser-response proxies separately.
 Toy, fixed-state image and real-critic RL verification are authorized. The
 [protocol](experiments/posterior_geometry/PLAN.md) defines baselines, costs and
-endpoint gates. Exp-063/064 implement the initial analytic checks and toy
-comparisons; no new result is claimed yet. Long-running execution is assigned
+endpoint gates. Exp-063 passes all 40 new correctness checks. Exp-064 completes 960 probe and
+144 proxy conditions. Top-two paired spectral strata fail the 20% gain over
+antithetic and matched random controls in all 32 condition averages. Local
+response improves candidate reconstruction, but does not establish a
+finite-query continuation MSE gain over the isotropic control. See the
+[current findings](experiments/posterior_geometry/FINDINGS.md). Real-model
+mechanism verification proceeds within the predeclared bounded plan. Long-running execution is assigned
 to low-cost monitors. Earlier study closures below remain valid.
 
 ## Completed conditional-reward development

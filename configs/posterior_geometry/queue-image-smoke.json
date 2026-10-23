@@ -1,0 +1,6 @@
+[
+  {
+    "id": "exp-067-geometry-image-smoke",
+    "config": "configs/posterior_geometry/exp-067-geometry-image-smoke.json"
+  }
+]

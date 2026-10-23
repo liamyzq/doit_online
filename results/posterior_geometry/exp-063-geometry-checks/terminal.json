@@ -1,0 +1,15 @@
+{
+  "experiment_id": "exp-063-geometry-checks",
+  "commit": "1c413e1002f9f8985c870b4ceb1d2f85e1cbe548",
+  "config": "/home/mlw0719/doit_geometry/configs/posterior_geometry/exp-063-geometry-checks.json",
+  "machine": "orion",
+  "gpu": 3,
+  "pid": 952290,
+  "path": "/home/mlw0719/doit_geometry_storage/runs/exp-063-geometry-checks",
+  "log_path": "/home/mlw0719/doit_geometry_storage/artifacts/exp-063-geometry-checks.log",
+  "status": "completed",
+  "timestamp": "2026-10-23T01:06:02.961848+00:00",
+  "started_at": "2026-10-23T01:05:32.961586+00:00",
+  "returncode": 0,
+  "finished_at": "2026-10-23T01:06:02.961876+00:00"
+}
