@@ -1,0 +1,7 @@
+{
+  "id": "exp-081-reward-direction-checks",
+  "mode": "reward_direction_checks",
+  "repeats": 32768,
+  "agreement_threshold": 0.8,
+  "ess_fraction": 0.25
+}

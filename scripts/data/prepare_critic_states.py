@@ -21,6 +21,11 @@ def main():
             ends = np.flatnonzero(data["terminals"][:] | data["timeouts"][:])
             starts = np.r_[0, ends[:-1] + 1]
             eligible = np.flatnonzero(ends - starts >= 2)
+            excluded = []
+            if "exclude_selection" in task:
+                previous = json.loads(Path(task["exclude_selection"]).read_text())
+                excluded = [row["episode"] for row in previous["rows"]]
+                eligible = eligible[~np.isin(eligible, excluded)]
             count = sum(config["split_sizes"].values())
             episodes = rng.permutation(eligible)[:count]
             assert len(episodes) == count
@@ -43,6 +48,9 @@ def main():
                     "dataset_url": task["dataset_url"], "seed": config["seed"],
                     "normalization": "none", "selection": "one nonterminal observation per distinct complete episode",
                     "split_sizes": config["split_sizes"], "rows": rows}
+        if "exclude_selection" in task:
+            metadata.update(exclude_selection=task["exclude_selection"],
+                            excluded_episodes=excluded)
         (output / "selection.json").write_text(json.dumps(metadata, indent=2) + "\n")
         print(json.dumps({"task": task["name"], "selected": len(rows), "output": str(output)}))
 
