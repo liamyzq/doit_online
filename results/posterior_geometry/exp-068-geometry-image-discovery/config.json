@@ -1,0 +1,83 @@
+{
+  "mode": "geometry_image",
+  "image": {
+    "size": 512,
+    "steps": 20,
+    "proxy": "euler",
+    "reward_batch": 2,
+    "future_batch": 2,
+    "dtype": "float32"
+  },
+  "sketch_rank": 8,
+  "denoiser_batch": 1,
+  "fd_rms_fraction": 0.003,
+  "tau": 0.3,
+  "methods": [
+    {
+      "name": "iid"
+    },
+    {
+      "name": "antithetic",
+      "antithetic": true
+    },
+    {
+      "name": "random_lhs_r4",
+      "rank": 4
+    },
+    {
+      "name": "top_lhs_r4",
+      "rank": 4
+    },
+    {
+      "name": "random_paired_lhs_r4",
+      "rank": 4,
+      "antithetic": true
+    },
+    {
+      "name": "top_paired_lhs_r4",
+      "rank": 4,
+      "antithetic": true
+    },
+    {
+      "name": "pilot_paired_lhs_r1",
+      "rank": 1,
+      "antithetic": true,
+      "pilot_samples": 4
+    }
+  ],
+  "proxies": [
+    "frozen",
+    "center_identity",
+    "center_isotropic",
+    "geometry_2",
+    "geometry_4",
+    "geometry_8",
+    "random_geometry",
+    "candidate"
+  ],
+  "geometry_seed": 68003,
+  "reference_seed": 68007,
+  "id": "exp-068-geometry-image-discovery",
+  "purpose": "Bounded fixed-state SD1.5 verification of Gaussian probe stratification and denoiser-response proxies, with matched controls, uncertain continuation references and complete costs.",
+  "smoke": false,
+  "prompts": [
+    "cafe",
+    "lighthouse"
+  ],
+  "path_seeds": [
+    68011
+  ],
+  "indices": [
+    10,
+    18
+  ],
+  "seeds": [
+    68017
+  ],
+  "repeats": 16,
+  "samples": [
+    16
+  ],
+  "reference_samples": 128,
+  "continuation_samples": 64
+}

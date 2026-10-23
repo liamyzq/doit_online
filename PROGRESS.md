@@ -2,26 +2,35 @@
 
 ## Current decision
 
-The user opened a fresh posterior-geometry exploration on 2026-10-22 from
-`7dda3d6`, on `codex/doit-posterior-geometry`. The latest supplied plan tests
-Gaussian probe stratification and low-rank denoiser-response proxies separately.
-Toy, fixed-state image and real-critic RL verification are authorized. The
-[protocol](experiments/posterior_geometry/PLAN.md) defines baselines, costs and
-endpoint gates. Exp-063 passes all 40 new correctness checks. Exp-064 completes 960 probe and
-144 proxy conditions. Top-two paired spectral strata fail the 20% gain over
-antithetic and matched random controls in all 32 condition averages. Local
-response improves candidate reconstruction, but does not establish a
-finite-query continuation MSE gain over the isotropic control. See the
-[current findings](experiments/posterior_geometry/FINDINGS.md). Real-model
-mechanism verification proceeds within the predeclared bounded plan.
-Exp-065/066 complete the real-critic smoke and 2520 comparison conditions.
-Spectral strata show only local Hopper candidate-integrand gains. The rank-one
-response proxy lowers Hopper mean M32 continuation error from isotropic
-1.95839 to 0.81975, driven mainly by one state; HalfCheetah favors isotropic.
-Learned Jacobians are strongly nonsymmetric. Exp-069 locks fresh-observation
-confirmation with larger paired references before any RL endpoint expansion.
-Exp-067/068 image verification is assigned to the finite queue monitor. Long-running execution is assigned
-to low-cost monitors. Earlier study closures below remain valid.
+The posterior-geometry exploration on `codex/doit-posterior-geometry` is
+complete at its stated budgets. Exp-063--069 implement and verify Gaussian
+spectral stratification and low-rank denoiser-response proxies on analytic
+toys, fixed SD1.5 states and authentic Hopper/HalfCheetah actors and critics.
+See the [protocol](experiments/posterior_geometry/PLAN.md) and
+[complete findings](experiments/posterior_geometry/FINDINGS.md).
+
+All 40 analytic checks pass. Antithetic pairing supplies the dominant toy
+variance reduction; top-two spectral strata never meet the 20% gain over both
+antithetic and matched random controls in the 32 toy condition averages.
+The four image contexts also fail that gate. Isotropic contraction explains
+most proxy reconstruction improvement; rank-eight spectral information adds
+little, costs 33 forwards and 16 VJPs per state, and poorly resolves the early
+image operator. No image guidance-bias ranking is inferred from noise-dominated
+reference vectors. All 128 saved discovery candidates were visually reviewed.
+
+The rank-one Hopper proxy discovery signal fails fresh-observation confirmation:
+M32 continuation error is 5.39962 versus isotropic 5.38995, with improvement
+on only two of four new observations. HalfCheetah has a favorable aggregate
+concentrated in a reference-limited observation and does not justify changing
+the selected task after confirmation. Learned Jacobians are often strongly
+nonsymmetric, limiting the posterior-covariance interpretation.
+
+Close these tested settings without a new endpoint or simulator claim. The
+open question is whether cheap geometry predicts reward-relevant variation
+beyond antithetic sampling and bulk contraction. Terminal N4 from exp-058
+remains the accepted practical image baseline. Every formal outcome and job
+transition is recorded. All finite queues have exited; no new job is queued.
+Long execution was handled by a low-cost agent with terminal/anomaly reports.
 
 ## Completed conditional-reward development
 

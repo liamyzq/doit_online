@@ -1,0 +1,15 @@
+{
+  "experiment_id": "exp-069-geometry-critic-confirmation",
+  "commit": "ccf61a61a6777540957b7c83ad2c0ce94a1424da",
+  "config": "/home/mlw0719/doit_geometry/configs/posterior_geometry/exp-069-geometry-critic-confirmation.json",
+  "machine": "orion",
+  "gpu": 4,
+  "pid": 3009090,
+  "path": "/home/mlw0719/doit_geometry_storage/runs/exp-069-geometry-critic-confirmation",
+  "log_path": "/home/mlw0719/doit_geometry_storage/artifacts/exp-069-geometry-critic-confirmation.log",
+  "status": "completed",
+  "timestamp": "2026-10-23T03:46:17.332950+00:00",
+  "started_at": "2026-10-23T03:44:47.332285+00:00",
+  "returncode": 0,
+  "finished_at": "2026-10-23T03:46:17.332974+00:00"
+}

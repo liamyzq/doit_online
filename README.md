@@ -12,6 +12,12 @@ The active branch is `codex/doit-posterior-geometry`. The latest study tests
 Gaussian probe stratification and denoiser-response proxies; see its
 [protocol](experiments/posterior_geometry/PLAN.md) and [current state](PROGRESS.md).
 It uses a new Orion checkout and retains the previous study as a baseline.
+The exp-063--069 pass is complete: analytic checks pass, spectral strata do
+not establish a robust gain over matched controls, and the selected rank-one
+RL proxy fails fresh-observation confirmation. Image proxy improvements are
+mostly explained by isotropic contraction. See the
+[geometry findings](experiments/posterior_geometry/FINDINGS.md). No new
+endpoint or simulator improvement is claimed and no run remains queued.
 
 The preceding branch is `codex/doit-uncertainty-smc`. The user opened a separate
 study of posterior uncertainty, local FORS sampling and strict particle

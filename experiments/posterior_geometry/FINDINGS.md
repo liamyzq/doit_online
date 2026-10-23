@@ -1,10 +1,13 @@
 # Posterior geometry: current evidence
 
-The initial implementation is correct on its analytic checks. Spectral probe
-stratification has not yet established a benefit beyond antithetic pairing and
-matched random directions. The local response proxy substantially reduces
-candidate reconstruction error, but that does not automatically improve the
-finite-query continuation estimator. Real-model verification remains active.
+The completed exp-063--069 pass implements and verifies both supplied ideas on
+toy, SD1.5 image states, and real Hopper/HalfCheetah actors and critics. The
+analytic implementation is correct. Spectral probe stratification does not
+establish a robust gain over antithetic and matched random controls at these
+budgets. Response proxies improve reconstruction, but most image improvement
+comes from isotropic contraction, and the selected Hopper rank-one advantage
+fails fresh-observation confirmation. No endpoint or simulator expansion is
+justified by the locked criteria. All finite queues have exited.
 
 ## Exp-063 and exp-064
 
@@ -91,4 +94,79 @@ Some low-variance candidate comparisons are also reference-limited despite
 Decision: lock exp-069 on four new observations per task with larger paired
 references, selecting rank one on Hopper and treating HalfCheetah as transfer.
 The apparent local proxy improvement is not a simulator-return result or a
-practical algorithm claim. Image verification remains independent and active.
+practical algorithm claim. The independent image verification follows below.
+
+## Exp-067 and exp-068: image mechanism verification
+
+The FP32 smoke passes with directional half-step discrepancy 0.000596 and
+16288 MiB peak reserved memory. Discovery at `a48c54f` uses an 18336 MiB job
+allowance plus 2048 MiB reserve and peaks at 16284 MiB. Four fixed contexts
+(cafe/lighthouse, indices 10/18) complete all 28 probe and 32 proxy conditions:
+11520 reward queries, 10162 score forwards, 620 VJPs and 128 additional visual
+decodes. Runtime is 8241.3 seconds on a shared GPU, including 65.3 seconds for
+saved visual artifacts. This is not a dedicated-device speed benchmark.
+
+Spectral paired strata improve candidate-guidance MSE relative to matched
+random paired strata by +11.13%, -10.36%, -8.45% and +3.44% respectively.
+No context meets the locked 20% gain over both random and ordinary antithetic
+controls. The reward pilot does not establish an advantage. These are small,
+fixed-state comparisons; they do not support an endpoint claim.
+
+The local response shows substantial early contraction. At index 10,
+isotropic response reduces denoiser reconstruction error from 6491.54 to
+605.82 for cafe and from 6529.57 to 512.89 for lighthouse. Adding rank-eight
+spectral information gives 605.76 and 517.24, respectively. Late reconstruction
+errors likewise barely change with spectral rank. The saved images show
+strong texture corruption in early frozen proxies and similar clean-looking,
+soft outputs from the isotropic and low-rank controls. All 128 candidates were
+reviewed; see the [visual record](../../results/posterior_geometry/exp-068-geometry-image-discovery/visual-review.md).
+
+The sketch costs 33 score forwards and 16 VJPs per state, taking 12.95--22.80
+seconds before it is reused across diagnostic repeats. That setup cost must be
+paid or amortized by an actual algorithm. It is not free because the present
+fixed-state evaluator shares it. Early asymmetry fractions are 0.74--0.81 and
+Ritz residual fractions 0.77--0.90; this rank-eight sketch does not accurately
+resolve the full early operator. Closing this implementation at this budget
+does not reject an accurately measured higher-rank geometry in general.
+
+The image reference vectors remain dominated by sampling noise: their split
+error estimates are comparable to their squared norms, including the full
+continuation references. They cannot support fine guidance-bias rankings.
+Consequently, improvements in decoded proxies are not relabeled as improved
+Doob guidance. No expensive reference escalation or endpoint wave is queued
+without a spectral-specific gain over the simpler controls.
+
+## Exp-069: fresh-observation confirmation and closure
+
+At `ccf61a6`, 24 fresh real-critic contexts complete all 576 probe and 384 proxy
+conditions. Costs are 12976128 Q evaluations, 19464344 actor forwards and 216
+Jacobian VJPs, with 90 MiB peak reserved memory. Larger antithetic references
+resolve many small-error comparisons, while all low-ESS cases remain reported.
+
+The selected Hopper rank-one proxy fails confirmation. Mean M32 continuation
+MSE is 5.39962 versus isotropic 5.38995 (0.18% worse), and only two of four new
+observations improve. Frozen has error 28.96173 and zero guidance 8.11275.
+Thus there is a substantial proxy-contraction benefit over frozen in these
+states, but the distinct rank-one benefit is not confirmed.
+
+HalfCheetah transfer has a favorable aggregate, rank one 29.77456 versus
+isotropic 45.89736. This is concentrated in row26, whose early continuation
+reference ESS is only 6.1/28.7 out of 32768 and whose split-reference error is
+large. Only two of four observations improve. The selected confirmation task
+cannot be replaced after seeing this transfer result, and no robust transfer
+claim follows from it. Candidate references also remain unresolved at Hopper
+row34/index9 (ESS 1.4); all such conditions are retained.
+
+At M32, spectral paired probe MSE is also close to the matched random control:
+Hopper candidate 11.90801 versus 11.84244 and continuation 4.84248 versus
+4.92561; HalfCheetah candidate 9.48853 versus 9.39042 and continuation 60.33658
+versus 60.03004. No consistent spectral advantage is established.
+
+Decision: close the tested spectral-stratification and low-rank-response
+settings at these budgets. Preserve the implementation, exact configs,
+negative outcomes and visual evidence for reproduction. The open question is
+whether inexpensive geometry can predict reward-relevant directions beyond
+ordinary antithetic sampling and bulk contraction. Neither accurate toy
+identities nor better denoiser reconstruction alone answers it. No simulator
+returns or new practical endpoint improvement are claimed; terminal N4 from
+exp-058 remains the accepted image baseline. No project job remains queued.

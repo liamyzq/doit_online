@@ -1,0 +1,25 @@
+{
+  "commit": "ccf61a61a6777540957b7c83ad2c0ce94a1424da",
+  "config": "/home/mlw0719/doit_geometry/configs/posterior_geometry/exp-069-geometry-critic-confirmation.json",
+  "experiment_id": "exp-069-geometry-critic-confirmation",
+  "pid": 3009090,
+  "cuda_visible_devices": "4",
+  "started_at": 1792727093.8400645,
+  "status": "completed",
+  "environment": {
+    "python": "3.12.9",
+    "torch": "2.6.0+cu124",
+    "cuda": "12.4",
+    "gpu": "NVIDIA RTX A6000",
+    "packages": {
+      "numpy": "1.26.4",
+      "diffusers": "0.32.2",
+      "transformers": "4.49.0",
+      "torchvision": "0.21.0",
+      "huggingface_hub": "0.36.0",
+      "safetensors": "0.8.0",
+      "h5py": "3.14.0"
+    }
+  },
+  "elapsed_seconds": 62.53097581863403
+}

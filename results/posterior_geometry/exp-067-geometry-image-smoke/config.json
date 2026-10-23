@@ -1,0 +1,81 @@
+{
+  "mode": "geometry_image",
+  "image": {
+    "size": 512,
+    "steps": 20,
+    "proxy": "euler",
+    "reward_batch": 2,
+    "future_batch": 2,
+    "dtype": "float32"
+  },
+  "sketch_rank": 8,
+  "denoiser_batch": 1,
+  "fd_rms_fraction": 0.003,
+  "tau": 0.3,
+  "methods": [
+    {
+      "name": "iid"
+    },
+    {
+      "name": "antithetic",
+      "antithetic": true
+    },
+    {
+      "name": "random_lhs_r4",
+      "rank": 4
+    },
+    {
+      "name": "top_lhs_r4",
+      "rank": 4
+    },
+    {
+      "name": "random_paired_lhs_r4",
+      "rank": 4,
+      "antithetic": true
+    },
+    {
+      "name": "top_paired_lhs_r4",
+      "rank": 4,
+      "antithetic": true
+    },
+    {
+      "name": "pilot_paired_lhs_r1",
+      "rank": 1,
+      "antithetic": true,
+      "pilot_samples": 4
+    }
+  ],
+  "proxies": [
+    "frozen",
+    "center_identity",
+    "center_isotropic",
+    "geometry_2",
+    "geometry_4",
+    "geometry_8",
+    "random_geometry",
+    "candidate"
+  ],
+  "geometry_seed": 68003,
+  "reference_seed": 68007,
+  "id": "exp-067-geometry-image-smoke",
+  "purpose": "Detect finite-difference instability in the new symmetric response sketch, exercise all proxy paths and measure representative FP32 memory before image discovery.",
+  "smoke": true,
+  "prompts": [
+    "cafe"
+  ],
+  "path_seeds": [
+    67011
+  ],
+  "indices": [
+    18
+  ],
+  "seeds": [
+    67017
+  ],
+  "repeats": 2,
+  "samples": [
+    8
+  ],
+  "reference_samples": 16,
+  "continuation_samples": 8
+}

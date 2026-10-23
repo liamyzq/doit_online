@@ -1,0 +1,14 @@
+{
+  "contexts": 4,
+  "probe_conditions": 28,
+  "proxy_conditions": 32,
+  "seconds": 8241.32510614302,
+  "score_forwards": 10162,
+  "reward_queries": 11520,
+  "vjp_calls": 620,
+  "reward_seconds": 4870.557701799204,
+  "vjp_seconds": 291.10236632754095,
+  "visual_decodes": 128,
+  "visual_artifact_seconds": 65.32548754115123,
+  "scope": "Fixed-state image mechanism evidence; references carry finite-sample uncertainty"
+}

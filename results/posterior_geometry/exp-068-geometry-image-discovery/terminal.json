@@ -1,0 +1,15 @@
+{
+  "experiment_id": "exp-068-geometry-image-discovery",
+  "commit": "a48c54f3d1bf80945d4979a145c3f36bf53a7451",
+  "config": "/home/mlw0719/doit_geometry/configs/posterior_geometry/exp-068-geometry-image-discovery.json",
+  "machine": "orion",
+  "gpu": 3,
+  "pid": 2123779,
+  "path": "/home/mlw0719/doit_geometry_storage/runs/exp-068-geometry-image-discovery",
+  "log_path": "/home/mlw0719/doit_geometry_storage/artifacts/exp-068-geometry-image-discovery.log",
+  "status": "completed",
+  "timestamp": "2026-10-23T03:41:22.364916+00:00",
+  "started_at": "2026-10-23T01:23:22.265472+00:00",
+  "returncode": 0,
+  "finished_at": "2026-10-23T03:41:22.364975+00:00"
+}

@@ -1,0 +1,15 @@
+{
+  "experiment_id": "exp-067-geometry-image-smoke",
+  "commit": "a48c54f3d1bf80945d4979a145c3f36bf53a7451",
+  "config": "/home/mlw0719/doit_geometry/configs/posterior_geometry/exp-067-geometry-image-smoke.json",
+  "machine": "orion",
+  "gpu": 3,
+  "pid": 1769517,
+  "path": "/home/mlw0719/doit_geometry_storage/runs/exp-067-geometry-image-smoke",
+  "log_path": "/home/mlw0719/doit_geometry_storage/artifacts/exp-067-geometry-image-smoke.log",
+  "status": "completed",
+  "timestamp": "2026-10-23T01:21:58.417713+00:00",
+  "started_at": "2026-10-23T01:17:58.414103+00:00",
+  "returncode": 0,
+  "finished_at": "2026-10-23T01:21:58.417743+00:00"
+}

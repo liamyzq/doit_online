@@ -1,0 +1,382 @@
+[
+  {
+    "prompt": "cafe",
+    "path_seed": 68011,
+    "index": 10,
+    "sigma": 0.6731850679332104,
+    "noise_index": 11,
+    "eigenvalues_in_refined_subspace": [
+      2.000363826751709,
+      1.4824082851409912,
+      1.2232553958892822,
+      1.1596659421920776,
+      1.1469844579696655,
+      0.9492192268371582,
+      0.7021225094795227,
+      -0.2036661058664322
+    ],
+    "trace_estimate": 1618.69482421875,
+    "jacobian_asymmetry_fraction": 0.806822381913662,
+    "ritz_residual_fraction": 0.7700873017311096,
+    "fd_half_step_discrepancy": null,
+    "geometry_seconds": 16.49937499302905,
+    "geometry_costs": {
+      "score_forwards": 33,
+      "reward_queries": 0,
+      "vjp_calls": 16,
+      "reward_seconds": 0.0,
+      "vjp_seconds": 7.099029142409563
+    },
+    "visual_decodes": 32,
+    "visual_artifact_seconds": 15.639713591197506,
+    "interpretation": "Symmetric denoiser-response Ritz sketch; learned CFG Jacobian is not assumed to be a posterior covariance",
+    "references": {
+      "frozen": {
+        "samples": 128,
+        "ess": 65.23502611716684,
+        "estimated_reference_mse": 158.44322644594916,
+        "guidance_norm2": 162.80449658994863
+      },
+      "center_identity": {
+        "samples": 128,
+        "ess": 54.68464768147903,
+        "estimated_reference_mse": 240.78711953417093,
+        "guidance_norm2": 250.12555486605663
+      },
+      "center_isotropic": {
+        "samples": 128,
+        "ess": 107.1780833806321,
+        "estimated_reference_mse": 33.59745297527127,
+        "guidance_norm2": 33.440607475457554
+      },
+      "geometry_2": {
+        "samples": 128,
+        "ess": 105.08101216918125,
+        "estimated_reference_mse": 46.35503638838229,
+        "guidance_norm2": 47.21099739229649
+      },
+      "geometry_4": {
+        "samples": 128,
+        "ess": 104.84102248096214,
+        "estimated_reference_mse": 43.76882604575643,
+        "guidance_norm2": 44.114282176538154
+      },
+      "geometry_8": {
+        "samples": 128,
+        "ess": 108.88779217436955,
+        "estimated_reference_mse": 35.30760985847475,
+        "guidance_norm2": 35.808532571922484
+      },
+      "random_geometry": {
+        "samples": 128,
+        "ess": 107.09066899972315,
+        "estimated_reference_mse": 33.8236905374331,
+        "guidance_norm2": 33.74546069013415
+      },
+      "candidate": {
+        "samples": 128,
+        "ess": 97.68360998502136,
+        "estimated_reference_mse": 45.86759979159393,
+        "guidance_norm2": 46.298329536356796
+      },
+      "continuation": {
+        "samples": 64,
+        "ess": 31.594739284528288,
+        "estimated_reference_mse": 275.4163906632068,
+        "guidance_norm2": 287.573266147808
+      }
+    },
+    "state_costs": {
+      "score_forwards": 2787,
+      "reward_queries": 2880,
+      "vjp_calls": 155,
+      "reward_seconds": 1058.8746567280032,
+      "vjp_seconds": 61.534105436177924
+    }
+  },
+  {
+    "prompt": "cafe",
+    "path_seed": 68011,
+    "index": 18,
+    "sigma": 0.028936439542370167,
+    "noise_index": 19,
+    "eigenvalues_in_refined_subspace": [
+      0.9383163452148438,
+      0.9381271600723267,
+      0.9371097683906555,
+      0.935954213142395,
+      0.9356262683868408,
+      0.9342962503433228,
+      0.9342795610427856,
+      0.9329923391342163
+    ],
+    "trace_estimate": 14517.578125,
+    "jacobian_asymmetry_fraction": 0.04198287078179419,
+    "ritz_residual_fraction": 0.1112704798579216,
+    "fd_half_step_discrepancy": null,
+    "geometry_seconds": 12.946170771960169,
+    "geometry_costs": {
+      "score_forwards": 33,
+      "reward_queries": 0,
+      "vjp_calls": 16,
+      "reward_seconds": 0.0,
+      "vjp_seconds": 5.434069857466966
+    },
+    "visual_decodes": 32,
+    "visual_artifact_seconds": 16.9606079129735,
+    "interpretation": "Symmetric denoiser-response Ritz sketch; learned CFG Jacobian is not assumed to be a posterior covariance",
+    "references": {
+      "frozen": {
+        "samples": 128,
+        "ess": 124.18619007716201,
+        "estimated_reference_mse": 2791.1779107804623,
+        "guidance_norm2": 2775.726467303403
+      },
+      "center_identity": {
+        "samples": 128,
+        "ess": 124.67528337719997,
+        "estimated_reference_mse": 2358.1452116097716,
+        "guidance_norm2": 2333.7917856625327
+      },
+      "center_isotropic": {
+        "samples": 128,
+        "ess": 125.39471678484952,
+        "estimated_reference_mse": 1760.1153901964863,
+        "guidance_norm2": 1759.837849320438
+      },
+      "geometry_2": {
+        "samples": 128,
+        "ess": 125.31320229304515,
+        "estimated_reference_mse": 1793.3136549227256,
+        "guidance_norm2": 1787.63690182363
+      },
+      "geometry_4": {
+        "samples": 128,
+        "ess": 125.33376316684131,
+        "estimated_reference_mse": 1770.7437760821333,
+        "guidance_norm2": 1769.754224959935
+      },
+      "geometry_8": {
+        "samples": 128,
+        "ess": 125.35423667018962,
+        "estimated_reference_mse": 1776.4950247384504,
+        "guidance_norm2": 1766.3088206646391
+      },
+      "random_geometry": {
+        "samples": 128,
+        "ess": 125.36938378861718,
+        "estimated_reference_mse": 1777.1758857785699,
+        "guidance_norm2": 1772.0842334661054
+      },
+      "candidate": {
+        "samples": 128,
+        "ess": 125.38157913721713,
+        "estimated_reference_mse": 1792.5889762433414,
+        "guidance_norm2": 1787.5774368816346
+      },
+      "continuation": {
+        "samples": 64,
+        "ess": 62.00414134253703,
+        "estimated_reference_mse": 5483.528059079035,
+        "guidance_norm2": 5548.923217488778
+      }
+    },
+    "state_costs": {
+      "score_forwards": 2275,
+      "reward_queries": 2880,
+      "vjp_calls": 155,
+      "reward_seconds": 1252.8720631940523,
+      "vjp_seconds": 72.50390086253174
+    }
+  },
+  {
+    "prompt": "lighthouse",
+    "path_seed": 68011,
+    "index": 10,
+    "sigma": 0.6731850679332104,
+    "noise_index": 11,
+    "eigenvalues_in_refined_subspace": [
+      1.3467938899993896,
+      0.9771860837936401,
+      0.8775071501731873,
+      0.8435505628585815,
+      0.5910390615463257,
+      0.44101372361183167,
+      -0.28093284368515015,
+      -2.1867473125457764
+    ],
+    "trace_estimate": 1657.0078125,
+    "jacobian_asymmetry_fraction": 0.7390024028718472,
+    "ritz_residual_fraction": 0.9000980854034424,
+    "fd_half_step_discrepancy": null,
+    "geometry_seconds": 18.123858781997114,
+    "geometry_costs": {
+      "score_forwards": 33,
+      "reward_queries": 0,
+      "vjp_calls": 16,
+      "reward_seconds": 0.0,
+      "vjp_seconds": 7.801052765920758
+    },
+    "visual_decodes": 32,
+    "visual_artifact_seconds": 16.83531044598203,
+    "interpretation": "Symmetric denoiser-response Ritz sketch; learned CFG Jacobian is not assumed to be a posterior covariance",
+    "references": {
+      "frozen": {
+        "samples": 128,
+        "ess": 34.83508396857669,
+        "estimated_reference_mse": 309.7525162855815,
+        "guidance_norm2": 380.570211572635
+      },
+      "center_identity": {
+        "samples": 128,
+        "ess": 65.50592725562922,
+        "estimated_reference_mse": 136.36932605785532,
+        "guidance_norm2": 144.7030552594301
+      },
+      "center_isotropic": {
+        "samples": 128,
+        "ess": 120.37471982341518,
+        "estimated_reference_mse": 11.313969873205762,
+        "guidance_norm2": 11.426546228738268
+      },
+      "geometry_2": {
+        "samples": 128,
+        "ess": 120.561829768122,
+        "estimated_reference_mse": 12.48274623942499,
+        "guidance_norm2": 12.400619111946641
+      },
+      "geometry_4": {
+        "samples": 128,
+        "ess": 120.81807763060613,
+        "estimated_reference_mse": 11.902716901892465,
+        "guidance_norm2": 11.859530581586938
+      },
+      "geometry_8": {
+        "samples": 128,
+        "ess": 121.1670231882062,
+        "estimated_reference_mse": 11.216201179737382,
+        "guidance_norm2": 11.15036646342002
+      },
+      "random_geometry": {
+        "samples": 128,
+        "ess": 120.15918576054224,
+        "estimated_reference_mse": 11.343686582627118,
+        "guidance_norm2": 11.47436062060514
+      },
+      "candidate": {
+        "samples": 128,
+        "ess": 92.40957526242171,
+        "estimated_reference_mse": 76.11595741297833,
+        "guidance_norm2": 74.1566946996945
+      },
+      "continuation": {
+        "samples": 64,
+        "ess": 45.31347138863162,
+        "estimated_reference_mse": 144.1078814142502,
+        "guidance_norm2": 139.9314078115882
+      }
+    },
+    "state_costs": {
+      "score_forwards": 2787,
+      "reward_queries": 2880,
+      "vjp_calls": 155,
+      "reward_seconds": 1226.2502375632757,
+      "vjp_seconds": 73.70101108518429
+    }
+  },
+  {
+    "prompt": "lighthouse",
+    "path_seed": 68011,
+    "index": 18,
+    "sigma": 0.028936439542370167,
+    "noise_index": 19,
+    "eigenvalues_in_refined_subspace": [
+      0.939231812953949,
+      0.9389778971672058,
+      0.9385079145431519,
+      0.9383103847503662,
+      0.9366920590400696,
+      0.936660885810852,
+      0.9355475902557373,
+      0.9343194961547852
+    ],
+    "trace_estimate": 13938.4267578125,
+    "jacobian_asymmetry_fraction": 0.04539562598802149,
+    "ritz_residual_fraction": 0.12079881131649017,
+    "fd_half_step_discrepancy": null,
+    "geometry_seconds": 22.796236698050052,
+    "geometry_costs": {
+      "score_forwards": 33,
+      "reward_queries": 0,
+      "vjp_calls": 16,
+      "reward_seconds": 0.0,
+      "vjp_seconds": 9.50076753704343
+    },
+    "visual_decodes": 32,
+    "visual_artifact_seconds": 15.889855590998195,
+    "interpretation": "Symmetric denoiser-response Ritz sketch; learned CFG Jacobian is not assumed to be a posterior covariance",
+    "references": {
+      "frozen": {
+        "samples": 128,
+        "ess": 124.79548775824138,
+        "estimated_reference_mse": 2176.0341122244,
+        "guidance_norm2": 2153.075629660104
+      },
+      "center_identity": {
+        "samples": 128,
+        "ess": 125.06561245406576,
+        "estimated_reference_mse": 2031.7259022007286,
+        "guidance_norm2": 2013.8301893152168
+      },
+      "center_isotropic": {
+        "samples": 128,
+        "ess": 125.80741129753164,
+        "estimated_reference_mse": 1408.1819422450735,
+        "guidance_norm2": 1365.923514517789
+      },
+      "geometry_2": {
+        "samples": 128,
+        "ess": 125.76930213745277,
+        "estimated_reference_mse": 1411.6831294188262,
+        "guidance_norm2": 1378.5120185590736
+      },
+      "geometry_4": {
+        "samples": 128,
+        "ess": 125.7965643584315,
+        "estimated_reference_mse": 1422.3141116199083,
+        "guidance_norm2": 1383.5194667390347
+      },
+      "geometry_8": {
+        "samples": 128,
+        "ess": 125.7395559983179,
+        "estimated_reference_mse": 1454.3223900911048,
+        "guidance_norm2": 1418.796999072588
+      },
+      "random_geometry": {
+        "samples": 128,
+        "ess": 125.78056795948979,
+        "estimated_reference_mse": 1418.9480247147665,
+        "guidance_norm2": 1378.011863791596
+      },
+      "candidate": {
+        "samples": 128,
+        "ess": 125.41883159337428,
+        "estimated_reference_mse": 1703.5120400932208,
+        "guidance_norm2": 1702.1401886783972
+      },
+      "continuation": {
+        "samples": 64,
+        "ess": 63.098882650805784,
+        "estimated_reference_mse": 2143.681639594817,
+        "guidance_norm2": 2205.0135259535155
+      }
+    },
+    "state_costs": {
+      "score_forwards": 2275,
+      "reward_queries": 2880,
+      "vjp_calls": 155,
+      "reward_seconds": 1332.5607443138724,
+      "vjp_seconds": 83.363348943647
+    }
+  }
+]

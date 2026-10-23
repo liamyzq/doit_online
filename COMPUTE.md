@@ -5,12 +5,18 @@
 The new branch `codex/doit-posterior-geometry` uses separate Orion checkout
 `/home/mlw0719/doit_geometry` and storage `/home/mlw0719/doit_geometry_storage`,
 with `scripts/compute/geometry/{env.sh,sync.sh}` and the existing finite queue.
-Share the preserved isolated environment and model cache by symlink. A bounded
-inspection on 2026-10-22 found Orion reachable and no active project queue or
-run. Preserve earlier execution checkouts. Exp-063/064 use CPU analytic code
-without GPU tensors; later critic and FP32 image smokes determine their own
-memory allowances before concurrency. Use physical GPUs 0--4, one project job
-per device and 2048 MiB free reserve.
+Share the preserved isolated environment and model cache by symlink. Preserve
+earlier execution checkouts. Exp-063/064 use CPU analytic code without GPU
+tensors. Exp-065/066 critic smoke/discovery peaks were 46/88 MiB reserved.
+The exp-067 512-pixel FP32 image smoke passed its finite-difference check with
+16,288 MiB peak reserved memory. Use an 18,336 MiB allowance for exp-068,
+physical GPUs 0--4, one project job per device and 2,048 MiB free reserve.
+Exp-068 completed at `a48c54f` with 16,284 MiB peak reserved memory and all
+PNG/vector artifacts retrieved. Exp-069 completed at `ccf61a6` with 90 MiB
+peak reserved memory under a 4096 MiB allowance plus 2048 MiB reserve. All
+geometry finite controllers exited; no worker or pending job remains. The
+remote execution checkout stays at `ccf61a6`; later local commits record the
+analysis. No simulator environment was installed or return evaluation run.
 
 ## Current uncertainty study
 
