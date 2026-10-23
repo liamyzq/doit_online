@@ -1,0 +1,97 @@
+{
+  "id": "exp-087-reward-direction-endpoint-smoke",
+  "mode": "reward_direction_endpoint",
+  "tasks": [
+    {
+      "name": "hopper-medium-v2",
+      "source": "/home/mlw0719/doob_transform/test/Doob_training_free_adaptation",
+      "states": "/home/mlw0719/doit_reward_directions_storage/data/critic-states/hopper-medium-v2",
+      "actor": "models_rl/hopper-medium-v20large_actor/behavior_ckpt600.pth",
+      "critic": "models_rl/hopper-medium-v20large_actor/critic_ckpt100.pth",
+      "eta": 0.6,
+      "guidance_end_index": 8,
+      "steps": 15,
+      "tau": 0.031159553132296444,
+      "gamma": 0.75,
+      "action_candidates": 8
+    },
+    {
+      "name": "halfcheetah-medium-v2",
+      "source": "/home/mlw0719/doob_transform/test/Doob_training_free_adaptation",
+      "states": "/home/mlw0719/doit_reward_directions_storage/data/critic-states/halfcheetah-medium-v2",
+      "actor": "models_rl/halfcheetah-medium-v20large_actor/behavior_ckpt600.pth",
+      "critic": "models_rl/halfcheetah-medium-v20large_actor/critic_ckpt100.pth",
+      "eta": 0.2,
+      "guidance_end_index": 10,
+      "steps": 15,
+      "tau": 0.07369107116716792,
+      "gamma": 0.25,
+      "action_candidates": 4
+    }
+  ],
+  "batch": 2048,
+  "smoke": true,
+  "state_rows": [
+    0
+  ],
+  "actions": 8,
+  "seed": 87011,
+  "path_seed": 87001,
+  "pool_seed": 81031,
+  "agreement_threshold": 0.0,
+  "ess_fraction": 0.25,
+  "smoke_methods": [
+    {
+      "name": "antithetic",
+      "selector": "none",
+      "layout": "pair",
+      "route": "P",
+      "samples": 32
+    },
+    {
+      "name": "random_pair",
+      "selector": "random",
+      "layout": "pair_lhs",
+      "route": "P",
+      "samples": 32
+    },
+    {
+      "name": "moments_pair",
+      "selector": "moments",
+      "layout": "pair_lhs",
+      "route": "P",
+      "samples": 64
+    }
+  ],
+  "methods": [
+    {
+      "name": "antithetic",
+      "selector": "none",
+      "layout": "pair",
+      "route": "P",
+      "samples": 32
+    },
+    {
+      "name": "random_pair",
+      "selector": "random",
+      "layout": "pair_lhs",
+      "route": "P",
+      "samples": 32
+    },
+    {
+      "name": "moments_pair",
+      "selector": "moments",
+      "layout": "pair_lhs",
+      "route": "P",
+      "samples": 64
+    },
+    {
+      "name": "full_random_four",
+      "selector": "random",
+      "layout": "four_lhs",
+      "route": "F",
+      "samples": 32
+    }
+  ],
+  "purpose": "Check batched actor Jacobians, VJP and adaptive pool selection against the established scalar evaluation; smoke complete actions and exact reward counts on development observations."
+}

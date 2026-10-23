@@ -11,10 +11,11 @@ from .geometry import ratio_estimate
 
 def direction_pool(jacobian, seed, random_count=16):
     """Columns live in transition-output/noise space, including nonsymmetric J."""
-    values, vectors = np.linalg.eigh(jacobian @ jacobian.T)
-    random = stream(seed).normal(size=(jacobian.shape[0], random_count))
+    values, vectors = np.linalg.eigh(jacobian @ jacobian.swapaxes(-1, -2))
+    random = stream(seed).normal(size=(jacobian.shape[-1], random_count))
     random /= np.linalg.norm(random, axis=0)
-    return np.column_stack([vectors[:, ::-1], random]), values[::-1]
+    random = np.broadcast_to(random, (*jacobian.shape[:-2], *random.shape))
+    return np.concatenate([vectors[..., ::-1], random], axis=-1), values[..., ::-1]
 
 
 def moments(eps, logs, pool):
@@ -29,7 +30,7 @@ def moments(eps, logs, pool):
 
 def select(eps, logs, pool, jacobian, sigma, selector="moments",
            agreement_threshold=0.8, ess_fraction=0.25):
-    scale = np.square(pool.T @ jacobian).sum(axis=1) / sigma**2
+    scale = np.square(pool.swapaxes(-1, -2) @ jacobian).sum(axis=-1) / sigma**2
     if selector == "no_j":
         scale = np.ones_like(scale)
 
@@ -43,10 +44,13 @@ def select(eps, logs, pool, jacobian, sigma, selector="moments",
     half = count // 2
     parts = [np.r_[0:half, count:count + half], np.r_[half:count, count + half:2 * count]]
     split = [choose(eps[:, part], logs[:, part])[0] for part in parts]
-    agreement = np.abs(np.einsum("dn,dn->n", pool[:, split[0]], pool[:, split[1]]))
+    def selected(indices):
+        return pool[:, indices].T if pool.ndim == 2 else pool[np.arange(len(indices)), :, indices]
+
+    agreement = np.abs(np.einsum("nd,nd->n", selected(split[0]), selected(split[1])))
     enabled = ((agreement >= agreement_threshold) & (ess >= eps.shape[1] * ess_fraction)
                & (score.max(axis=1) > 1e-24))
-    return pool[:, chosen].T[..., None], {
+    return selected(chosen)[..., None], {
         "chosen": chosen, "first_moment": first, "second_moment": second,
         "pilot_ess": ess, "scores": score, "split_chosen": np.stack(split, axis=1),
         "agreement": agreement, "enabled": enabled,
@@ -82,7 +86,7 @@ def estimate(context, method, route, budget, repeats, seed_words, config):
         basis = stream(*seed_words, 13).normal(size=(repeats, d, 1))
         basis /= np.linalg.norm(basis, axis=1, keepdims=True)
     elif selector == "model":
-        basis = context.pool[:, :1]
+        basis = context.pool[..., :1]
     elif selector == "oracle":
         basis = context.oracle[:, None]
     elif selector in {"none", "zero"}:
@@ -105,9 +109,13 @@ def estimate(context, method, route, budget, repeats, seed_words, config):
         all_eps, all_logs = main, logs
     final_weights = np.exp(all_logs - logsumexp(all_logs, axis=1, keepdims=True))
     ratio = ratio_estimate(all_eps, all_logs)
-    guidance = ratio @ context.jmu / context.std
+    def mapped(value):
+        product = value @ context.jmu if context.jmu.ndim == 2 else np.einsum("ni,nij->nj", value, context.jmu)
+        return product / context.std
+
+    guidance = mapped(ratio)
     arrays.update(main_eps=main, main_logs=logs, main_group_ids=groups, final_weights=final_weights,
-                  guidance=guidance, main_only_guidance=ratio_estimate(main, logs) @ context.jmu / context.std,
+                  guidance=guidance, main_only_guidance=mapped(ratio_estimate(main, logs)),
                   selected_direction=np.zeros((repeats, d)) if basis is None else
                   np.broadcast_to(basis, (repeats, d, 1))[..., 0], enabled=enabled)
     independent_groups = np.max(groups, axis=1) + 1

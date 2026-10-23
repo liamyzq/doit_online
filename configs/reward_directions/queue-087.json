@@ -1,0 +1,6 @@
+[
+  {
+    "id": "exp-087-reward-direction-endpoint-smoke",
+    "config": "configs/reward_directions/exp-087-reward-direction-endpoint-smoke.json"
+  }
+]

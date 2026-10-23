@@ -51,6 +51,9 @@ def main():
         elif mode == "reward_direction_critic":
             from .reward_direction_critic import evaluate
             metrics = evaluate(config, output)
+        elif mode == "reward_direction_endpoint":
+            from .reward_direction_endpoint import evaluate
+            metrics = evaluate(config, output)
         elif mode == "joint_future_critic":
             from .joint_future_critic import evaluate
             metrics = evaluate(config, output)

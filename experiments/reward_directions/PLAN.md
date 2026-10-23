@@ -160,3 +160,29 @@ Lock path/estimator/reference seeds86001/86011/86007 before running. No excluded
 low-ESS observations, additional parameter search or reuse of these observations
 for tuning follows. A confirmed proxy construction proceeds to the planned
 complete-action evaluation; full-only success is reported at its own estimand.
+
+## Complete-action implementation and exp-087 smoke
+
+The endpoint sampler generates independent action states in batches and preserves
+the original transition mean, timestep gain, guidance interval and gamma. Free
+controls use one original kernel VJP per state; selected directions compute the
+full small Jacobian and pay its recorded cost. The established estimator now
+accepts either a single fixed-state pool/J or one pool/J per independent action.
+Its scalar path retains the same operations and all pilot/main retention rules.
+
+Exp-087 uses development row0 of both tasks. It checks batched transition means
+and Jacobians against scalar contexts, per-state pilot scores/selections against
+individual calls, single-VJP mapping against the Jacobian, and repeated-state
+P/F estimates against the established scalar context. Any discrepancy above
+2e-4 blocks endpoint runs. It also generates complete actions for all tested
+layouts and checks exact reward and actor-forward counts. This detects new
+batch coupling, orientation, mapping and cost errors without repeating settled
+fixed-state construction checks.
+
+Complete-action records save every transition's probes, rewards, weights and
+correction, plus trajectories, final actions and raw Q. Final selection groups
+use preserved best-of8 for Hopper and best-of4 for HalfCheetah. Report both raw
+and selected-action mean/lower-decile Q and mean pairwise action distance.
+Timing distinguishes computation from artifact writing, and actual costs
+include smoke/warm-up evaluations. Scores are frozen-critic endpoints, not
+closed-loop returns.
