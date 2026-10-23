@@ -1,0 +1,12 @@
+{
+  "id": "exp-070-complement-checks",
+  "mode": "complement_checks",
+  "purpose": "Validate new four-point marginal and moment identities, then reproduce only exp064 top-aligned M32 rows for active/complement decomposition.",
+  "replay_config": "configs/posterior_geometry/exp-064-geometry-toy.json",
+  "replay_results": "results/posterior_geometry/exp-064-geometry-toy/probe-results.json",
+  "replay_methods": [
+    "antithetic",
+    "random_paired_lhs_r2",
+    "top_paired_lhs_r2"
+  ]
+}

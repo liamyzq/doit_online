@@ -1,7 +1,8 @@
 # Posterior geometry: current evidence
 
-The completed exp-063--069 pass implements and verifies both supplied ideas on
-toy, SD1.5 image states, and real Hopper/HalfCheetah actors and critics. The
+The completed exp-063--069 pass tests spectral probe arrangements and local
+response proxies under a fixed Gaussian kernel on toy, SD1.5 image states, and
+real Hopper/HalfCheetah actors and critics. The
 analytic implementation is correct. Spectral probe stratification does not
 establish a robust gain over antithetic and matched random controls at these
 budgets. Response proxies improve reconstruction, but most image improvement
@@ -144,8 +145,9 @@ Jacobian VJPs, with 90 MiB peak reserved memory. Larger antithetic references
 resolve many small-error comparisons, while all low-ESS cases remain reported.
 
 The selected Hopper rank-one proxy fails confirmation. Mean M32 continuation
-MSE is 5.39962 versus isotropic 5.38995 (0.18% worse), and only two of four new
-observations improve. Frozen has error 28.96173 and zero guidance 8.11275.
+MSE is 5.39962 versus isotropic 5.38995, a near-tied point estimate (0.18%
+higher), and only two of four new observations improve. This small aggregate
+difference does not establish significant harm. Frozen has error 28.96173 and zero guidance 8.11275.
 Thus there is a substantial proxy-contraction benefit over frozen in these
 states, but the distinct rank-one benefit is not confirmed.
 
@@ -170,3 +172,60 @@ ordinary antithetic sampling and bulk contraction. Neither accurate toy
 identities nor better denoiser reconstruction alone answers it. No simulator
 returns or new practical endpoint improvement are claimed; terminal N4 from
 exp-058 remains the accepted image baseline. No project job remains queued.
+
+## Review of the closed pass at 8cfecfc
+
+The supplied review preserves the original closure while narrowing its scope.
+The [saved-record reanalysis](../../results/posterior_geometry/review-8cfecfc/report.md)
+confirms the aggregate values. Hopper full-Jacobian reconstruction error is
+0.0002037 versus isotropic 0.0016298, yet continuation guidance MSE is 6.10426
+versus 5.38995. Improved mean reconstruction alone does not establish improved
+conditional exponential-reward values or finite-budget guidance. HalfCheetah
+excluding row26 has rank-one continuation MSE 3.96044 versus isotropic 2.93399.
+This is a concentration sensitivity analysis; row26 remains in formal results.
+
+The sampler applies guidance only at 0 < index <= guidance_end_index: Hopper
+indices 1--8 and HalfCheetah 1--10. Thus only Hopper index5 of the locked 5/9/12
+diagnostics lies in the active interval. At index5 isotropic/rank-one raw MSE
+is 0.69553/5.69486, and unit-gamma transition-mean MSE is 0.28176/2.30701. The
+strong discovery at index12 lies outside the active interval. Preserve all-time
+mechanism aggregates but do not treat them as deployment-weighted results.
+For arbitrary gamma, multiply unit-gamma displacement errors by gamma squared;
+unsampled active indices and trajectory-level error remain unknown.
+
+The toy fixes an isotropic Gaussian transition, then changes joint probes or
+local denoiser proxies. It does not test the covariance-corrected VE transition
+(delta I + delta squared times the log-density Hessian), its altered kernel
+score, or Fisher-metric geodesics. The strongest paired spectral comparison is
+top rank-two; bottom/extreme and other ranks largely used unpaired designs.
+
+Real-model spectra refer to the symmetric part of the actual local Jacobian.
+They are not exact posterior covariance spectra. In images, CFG scale4.5 forms
+(1-s) J_negative + s J_positive, which need not be positive semidefinite even
+for ideal conditional models. CFG indefiniteness does not explain asymmetry.
+The early Ritz residuals0.77/0.90 describe a finite range sketch, not converged
+extreme eigenvectors. The half-step finite-difference smoke covers index18
+only. An early-geometry follow-up would first need an index10 step-size check.
+No higher-rank image escalation is justified by the present evidence.
+
+Each task in exp-069 has four new observations; three time states share each
+observation's base path. Its256 repeats estimate fixed-context Monte Carlo
+error, not256 independent observations. Each random basis was sampled once
+per seed/context/budget and reused across repeats. A split-reference squared
+difference divided by four is a fluctuation diagnostic, not a calibrated
+confidence interval or a bound on self-normalized-reference bias, especially
+at low ESS. Common-reference norm noise cancels from paired MSE differences;
+reference uncertainty should be assessed on the comparison itself.
+
+The old `squared_bias` field estimates the squared distance between a finite
+repeat mean and a finite reference. It is not known true bias. Old per-repeat
+vectors were not saved, so paired-difference intervals cannot be reconstructed
+from those aggregates. Future runs save vectors and name this field
+`estimated_squared_bias`. Old proxy streams seed+row+index collide across some
+contexts, adding correlation without invalidating individual point estimates.
+Future context streams use explicit SeedSequence coordinates.
+
+The review motivates the [complement-pairing follow-up](../complement_pairing/PLAN.md).
+That study first reproduces the top-aligned toy direction decomposition, then
+tests whether four-point sign groups reduce full guidance MSE. The original
+rank-one proxy and image-sketch settings remain closed.

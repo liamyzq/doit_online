@@ -1,0 +1,536 @@
+{
+  "inputs": {
+    "proxy_rows": 384,
+    "contexts": 24,
+    "aggregation": "equal arithmetic mean over saved per-seed proxy rows"
+  },
+  "metrics": {
+    "hopper-medium-v2": {
+      "aggregate": {
+        "center_isotropic": {
+          "mse": 2.5884679710144676,
+          "total_mse_to_continuation": 5.389950581500822,
+          "denoiser_mse": 0.0016297791632951504,
+          "reference_bias2_to_continuation": 4.4317728823214475
+        },
+        "geometry_1": {
+          "mse": 2.314388897412326,
+          "total_mse_to_continuation": 5.399622789059294,
+          "denoiser_mse": 0.0005619008058400687,
+          "reference_bias2_to_continuation": 3.8422193840722936
+        },
+        "full_linear": {
+          "mse": 2.866859386567644,
+          "total_mse_to_continuation": 6.104260507106131,
+          "denoiser_mse": 0.00020371827028865138,
+          "reference_bias2_to_continuation": 4.636461703373668
+        },
+        "continuation": {
+          "mse": 4.968299826157901,
+          "total_mse_to_continuation": 4.968299826157901,
+          "reference_bias2_to_continuation": 0.0
+        }
+      },
+      "by_index": {
+        "5": {
+          "center_isotropic": {
+            "mse": 0.1867887211254309,
+            "total_mse_to_continuation": 0.6955287436069986,
+            "denoiser_mse": 0.0016904964245276681,
+            "reference_bias2_to_continuation": 0.522552319324369
+          },
+          "geometry_1": {
+            "mse": 1.5759539866342873,
+            "total_mse_to_continuation": 5.694858978361921,
+            "denoiser_mse": 0.0008910984536372912,
+            "reference_bias2_to_continuation": 5.812767179407117
+          },
+          "full_linear": {
+            "mse": 1.5962818745164769,
+            "total_mse_to_continuation": 5.924511531926317,
+            "denoiser_mse": 0.0004832902910472635,
+            "reference_bias2_to_continuation": 6.190270471929267
+          },
+          "continuation": {
+            "mse": 3.2432536213305037,
+            "total_mse_to_continuation": 3.2432536213305037,
+            "reference_bias2_to_continuation": 0.0
+          }
+        },
+        "9": {
+          "center_isotropic": {
+            "mse": 0.6030876816373305,
+            "total_mse_to_continuation": 1.4255860949011565,
+            "denoiser_mse": 0.0008342054000841708,
+            "reference_bias2_to_continuation": 0.8217433737434282
+          },
+          "geometry_1": {
+            "mse": 1.1953380600260282,
+            "total_mse_to_continuation": 3.5709210856178046,
+            "denoiser_mse": 0.00022995601864332548,
+            "reference_bias2_to_continuation": 2.806736992560628
+          },
+          "full_linear": {
+            "mse": 1.3995123538331282,
+            "total_mse_to_continuation": 3.515696459218182,
+            "denoiser_mse": 3.348640745512675e-05,
+            "reference_bias2_to_continuation": 2.672876672750786
+          },
+          "continuation": {
+            "mse": 3.9187253287506016,
+            "total_mse_to_continuation": 3.918725328750602,
+            "reference_bias2_to_continuation": 0.0
+          }
+        },
+        "12": {
+          "center_isotropic": {
+            "mse": 6.975527510280641,
+            "total_mse_to_continuation": 14.048736905994312,
+            "denoiser_mse": 0.002364635665273612,
+            "reference_bias2_to_continuation": 11.951022953896546
+          },
+          "geometry_1": {
+            "mse": 4.171874645576663,
+            "total_mse_to_continuation": 6.933088303198157,
+            "denoiser_mse": 0.0005646479452395893,
+            "reference_bias2_to_continuation": 2.9071539802491366
+          },
+          "full_linear": {
+            "mse": 5.604783931353327,
+            "total_mse_to_continuation": 8.872573530173895,
+            "denoiser_mse": 9.437811236356387e-05,
+            "reference_bias2_to_continuation": 5.046237965440951
+          },
+          "continuation": {
+            "mse": 7.742920528392597,
+            "total_mse_to_continuation": 7.742920528392597,
+            "reference_bias2_to_continuation": 0.0
+          }
+        }
+      },
+      "per_observation_geometry1_gain_vs_isotropic": {
+        "26": {
+          "mse": {
+            "center_isotropic": 0.04890638520928148,
+            "geometry_1": 0.10250218429546637,
+            "relative_gain": -1.0958855138615613
+          },
+          "total_mse_to_continuation": {
+            "center_isotropic": 0.08359955150298448,
+            "geometry_1": 0.14338977570705527,
+            "relative_gain": -0.7151979063181493
+          },
+          "denoiser_mse": {
+            "center_isotropic": 0.0004834807987463386,
+            "geometry_1": 0.00015554156132273412,
+            "relative_gain": 0.6782880277230202
+          }
+        },
+        "30": {
+          "mse": {
+            "center_isotropic": 5.222924969287133,
+            "geometry_1": 5.8238035299691875,
+            "relative_gain": -0.11504637041800492
+          },
+          "total_mse_to_continuation": {
+            "center_isotropic": 9.596239356514,
+            "geometry_1": 11.570741974272329,
+            "relative_gain": -0.20575795834208965
+          },
+          "denoiser_mse": {
+            "center_isotropic": 0.0011892062350430785,
+            "geometry_1": 0.0006528893437574421,
+            "relative_gain": 0.4509872850323632
+          }
+        },
+        "34": {
+          "mse": {
+            "center_isotropic": 2.119024208891443,
+            "geometry_1": 1.019981862018574,
+            "relative_gain": 0.5186549272355068
+          },
+          "total_mse_to_continuation": {
+            "center_isotropic": 6.443762388069277,
+            "geometry_1": 5.408513203662948,
+            "relative_gain": 0.16065911839379865
+          },
+          "denoiser_mse": {
+            "center_isotropic": 0.001318319514130968,
+            "geometry_1": 0.000465427489287738,
+            "relative_gain": 0.6469539559273334
+          }
+        },
+        "38": {
+          "mse": {
+            "center_isotropic": 2.9630163206700124,
+            "geometry_1": 2.311268013366077,
+            "relative_gain": 0.21996109260598296
+          },
+          "total_mse_to_continuation": {
+            "center_isotropic": 5.436201029917029,
+            "geometry_1": 4.475846202594846,
+            "relative_gain": 0.17665918203485598
+          },
+          "denoiser_mse": {
+            "center_isotropic": 0.0035281101052602164,
+            "geometry_1": 0.0009737448289923606,
+            "relative_gain": 0.7240038434343188
+          }
+        }
+      }
+    },
+    "halfcheetah-medium-v2": {
+      "aggregate": {
+        "center_isotropic": {
+          "mse": 1.7388173261500743,
+          "total_mse_to_continuation": 45.897361772379,
+          "denoiser_mse": 0.0003087309565800533,
+          "reference_bias2_to_continuation": 43.84244943985477
+        },
+        "geometry_1": {
+          "mse": 7.927728113407235,
+          "total_mse_to_continuation": 29.77455976672971,
+          "denoiser_mse": 0.00019482793565748057,
+          "reference_bias2_to_continuation": 20.220439739856992
+        },
+        "full_linear": {
+          "mse": 9.733745689050266,
+          "total_mse_to_continuation": 30.27376459860017,
+          "denoiser_mse": 9.875825134722828e-06,
+          "reference_bias2_to_continuation": 18.65923456796487
+        },
+        "continuation": {
+          "mse": 61.48144899171458,
+          "total_mse_to_continuation": 61.48144899171459,
+          "reference_bias2_to_continuation": 0.0
+        }
+      },
+      "by_index": {
+        "5": {
+          "center_isotropic": {
+            "mse": 0.08899588676019063,
+            "total_mse_to_continuation": 40.72908174245914,
+            "denoiser_mse": 0.0005693907943237906,
+            "reference_bias2_to_continuation": 40.66115136899376
+          },
+          "geometry_1": {
+            "mse": 1.8740764405705805,
+            "total_mse_to_continuation": 28.002052394822336,
+            "denoiser_mse": 0.00041407094414541837,
+            "reference_bias2_to_continuation": 25.896830325858193
+          },
+          "full_linear": {
+            "mse": 5.592252940190224,
+            "total_mse_to_continuation": 25.391507404838652,
+            "denoiser_mse": 2.4590459555355128e-05,
+            "reference_bias2_to_continuation": 18.680735097764373
+          },
+          "continuation": {
+            "mse": 62.09306019250556,
+            "total_mse_to_continuation": 62.09306019250557,
+            "reference_bias2_to_continuation": 0.0
+          }
+        },
+        "9": {
+          "center_isotropic": {
+            "mse": 0.4633990182836131,
+            "total_mse_to_continuation": 34.99394168122782,
+            "denoiser_mse": 0.00015020588903521463,
+            "reference_bias2_to_continuation": 34.70521625128626
+          },
+          "geometry_1": {
+            "mse": 3.051299452090348,
+            "total_mse_to_continuation": 24.274235848745178,
+            "denoiser_mse": 0.00011110623185838925,
+            "reference_bias2_to_continuation": 21.11704808607736
+          },
+          "full_linear": {
+            "mse": 4.223053781344796,
+            "total_mse_to_continuation": 27.689094517043234,
+            "denoiser_mse": 3.0065467500016393e-06,
+            "reference_bias2_to_continuation": 23.440458810163054
+          },
+          "continuation": {
+            "mse": 53.0676866506828,
+            "total_mse_to_continuation": 53.06768665068281,
+            "reference_bias2_to_continuation": 0.0
+          }
+        },
+        "12": {
+          "center_isotropic": {
+            "mse": 4.664057073406419,
+            "total_mse_to_continuation": 61.96906189345004,
+            "denoiser_mse": 0.00020659618638115462,
+            "reference_bias2_to_continuation": 56.16098069928429
+          },
+          "geometry_1": {
+            "mse": 18.857808447560778,
+            "total_mse_to_continuation": 37.047391056621606,
+            "denoiser_mse": 5.93066309686341e-05,
+            "reference_bias2_to_continuation": 13.647440807635423
+          },
+          "full_linear": {
+            "mse": 19.38593034561578,
+            "total_mse_to_continuation": 37.74069187391862,
+            "denoiser_mse": 2.0304690988117182e-06,
+            "reference_bias2_to_continuation": 13.856509795967183
+          },
+          "continuation": {
+            "mse": 69.28360013195537,
+            "total_mse_to_continuation": 69.2836001319554,
+            "reference_bias2_to_continuation": 0.0
+          }
+        }
+      },
+      "per_observation_geometry1_gain_vs_isotropic": {
+        "26": {
+          "mse": {
+            "center_isotropic": 5.945320569065809,
+            "geometry_1": 29.62758493775554,
+            "relative_gain": -3.9833452365733297
+          },
+          "total_mse_to_continuation": {
+            "center_isotropic": 174.7874641208261,
+            "geometry_1": 107.21692343824195,
+            "relative_gain": 0.38658688151613874
+          },
+          "denoiser_mse": {
+            "center_isotropic": 0.00022417998520778137,
+            "geometry_1": 0.00013015766024507985,
+            "relative_gain": 0.41940552755214466
+          }
+        },
+        "30": {
+          "mse": {
+            "center_isotropic": 0.6993351619440012,
+            "geometry_1": 1.1127208193387461,
+            "relative_gain": -0.5911123591235163
+          },
+          "total_mse_to_continuation": {
+            "center_isotropic": 2.3159458805077775,
+            "geometry_1": 5.663968859209365,
+            "relative_gain": -1.4456395578499115
+          },
+          "denoiser_mse": {
+            "center_isotropic": 0.0002641210711206639,
+            "geometry_1": 0.00011644138617385345,
+            "relative_gain": 0.5591363245658765
+          }
+        },
+        "34": {
+          "mse": {
+            "center_isotropic": 0.1810144362891668,
+            "geometry_1": 0.8664669107696118,
+            "relative_gain": -3.7867282219714724
+          },
+          "total_mse_to_continuation": {
+            "center_isotropic": 6.011009796066251,
+            "geometry_1": 5.639202020877248,
+            "relative_gain": 0.06185446169665576
+          },
+          "denoiser_mse": {
+            "center_isotropic": 0.0005659761098324002,
+            "geometry_1": 0.000424300700268074,
+            "relative_gain": 0.25032047661213086
+          }
+        },
+        "38": {
+          "mse": {
+            "center_isotropic": 0.12959913730132033,
+            "geometry_1": 0.10413978576504368,
+            "relative_gain": 0.1964469213794472
+          },
+          "total_mse_to_continuation": {
+            "center_isotropic": 0.4750272921158696,
+            "geometry_1": 0.5781447485902727,
+            "relative_gain": -0.21707690944471136
+          },
+          "denoiser_mse": {
+            "center_isotropic": 0.00018064666015936773,
+            "geometry_1": 0.00010841199594291499,
+            "relative_gain": 0.39986714480481855
+          }
+        }
+      },
+      "excluding_row26": {
+        "center_isotropic": {
+          "mse": 0.33664957851149613,
+          "total_mse_to_continuation": 2.9339943228966328,
+          "denoiser_mse": 0.00033691461370414393,
+          "reference_bias2_to_continuation": 2.609218064453593
+        },
+        "geometry_1": {
+          "mse": 0.6944425052911338,
+          "total_mse_to_continuation": 3.9604385428922955,
+          "denoiser_mse": 0.0002163846941282808,
+          "reference_bias2_to_continuation": 3.259760144086248
+        },
+        "full_linear": {
+          "mse": 1.387154306521009,
+          "total_mse_to_continuation": 6.124881994351432,
+          "denoiser_mse": 1.1717960174682164e-05,
+          "reference_bias2_to_continuation": 4.7143082068701965
+        },
+        "continuation": {
+          "mse": 3.7859518020952083,
+          "total_mse_to_continuation": 3.7859518020952083,
+          "reference_bias2_to_continuation": 0.0
+        }
+      }
+    }
+  },
+  "guidance_and_gain": {
+    "hopper-medium-v2": {
+      "active_guidance_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "diagnostic_indices": [
+        5,
+        9,
+        12
+      ],
+      "unit_gamma_correction_gain": {
+        "5": {
+          "t_s": 0.6669999957084656,
+          "t_t": 0.6003999710083008,
+          "correction_gain": 0.6364775345483359,
+          "transition_noise_std": 0.44999932335935905
+        },
+        "9": {
+          "t_s": 0.40060001611709595,
+          "t_t": 0.33400002121925354,
+          "correction_gain": 0.35760655253551865,
+          "transition_noise_std": 0.3443876863013067
+        },
+        "12": {
+          "t_s": 0.20080000162124634,
+          "t_t": 0.13420000672340393,
+          "correction_gain": 0.16784847359151203,
+          "transition_noise_std": 0.19364745776525577
+        }
+      }
+    },
+    "halfcheetah-medium-v2": {
+      "active_guidance_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "diagnostic_indices": [
+        5,
+        9,
+        12
+      ],
+      "unit_gamma_correction_gain": {
+        "5": {
+          "t_s": 0.6669999957084656,
+          "t_t": 0.6003999710083008,
+          "correction_gain": 0.5399202457298518,
+          "transition_noise_std": 0.14999977445608267
+        },
+        "9": {
+          "t_s": 0.40060001611709595,
+          "t_t": 0.33400002121925354,
+          "correction_gain": 0.2972462702764487,
+          "transition_noise_std": 0.11479589543764052
+        },
+        "12": {
+          "t_s": 0.20080000162124634,
+          "t_t": 0.13420000672340393,
+          "correction_gain": 0.1429402661456719,
+          "transition_noise_std": 0.06454915259530397
+        }
+      }
+    }
+  },
+  "provenance": {
+    "metric_source": "results/posterior_geometry/exp-069-geometry-critic-confirmation/proxy-results.json and contexts.json",
+    "config_source": "configs/posterior_geometry/exp-069-geometry-critic-confirmation.json",
+    "schedule_source": "read-only SSH: /home/mlw0719/doob_transform/test/Doob_training_free_adaptation/diffusion_SDE/schedule.py",
+    "schedule_formula": "alpha(t)=exp(-0.25*t^2*(20.0-0.1)-0.5*t*0.1); sigma(t)=sqrt(1-alpha(t)^2)",
+    "transition_source": "doit_correction/critic.py:102-117",
+    "gain_formula": "noise2=eta^2*sigma_t^2/sigma_s^2*(1-alpha_s^2/alpha_t^2); a=alpha_t/alpha_s; b=sqrt(sigma_t^2-noise2)-a*sigma_s; correction_gain=-b*sigma_s",
+    "guidance_activation_source": "doit_correction/critic.py:190-200 uses 0 < index <= task.guidance_end_index",
+    "checks_consequence": "A wrong metric target or row weighting would change whether geometry_1 improves reconstruction versus the continuation target; a wrong schedule/gain would change unit-gamma displacement comparisons."
+  },
+  "active_interval_summary": {
+    "hopper-medium-v2": {
+      "frozen": {
+        "contexts": 4,
+        "observations": 4,
+        "raw_guidance_mse": 24.74010416551894,
+        "unit_gamma_displacement_mse": 10.022306547934306
+      },
+      "center_isotropic": {
+        "contexts": 4,
+        "observations": 4,
+        "raw_guidance_mse": 0.6955287436069987,
+        "unit_gamma_displacement_mse": 0.28176123409554477
+      },
+      "geometry_1": {
+        "contexts": 4,
+        "observations": 4,
+        "raw_guidance_mse": 5.694858978361921,
+        "unit_gamma_displacement_mse": 2.3070081696724314
+      },
+      "full_linear": {
+        "contexts": 4,
+        "observations": 4,
+        "raw_guidance_mse": 5.924511531926318,
+        "unit_gamma_displacement_mse": 2.400041257808987
+      },
+      "continuation": {
+        "contexts": 4,
+        "observations": 4,
+        "raw_guidance_mse": 3.243253621330504,
+        "unit_gamma_displacement_mse": 1.3138538863136815
+      }
+    },
+    "halfcheetah-medium-v2": {
+      "frozen": {
+        "contexts": 8,
+        "observations": 4,
+        "raw_guidance_mse": 274.4198286743368,
+        "unit_gamma_displacement_mse": 46.62756058106927
+      },
+      "center_isotropic": {
+        "contexts": 8,
+        "observations": 4,
+        "raw_guidance_mse": 37.861511711843484,
+        "unit_gamma_displacement_mse": 7.4824970542213896
+      },
+      "geometry_1": {
+        "contexts": 8,
+        "observations": 4,
+        "raw_guidance_mse": 26.138144121783757,
+        "unit_gamma_displacement_mse": 5.153872599125516
+      },
+      "full_linear": {
+        "contexts": 8,
+        "observations": 4,
+        "raw_guidance_mse": 26.54030096094094,
+        "unit_gamma_displacement_mse": 4.924228068634823
+      },
+      "continuation": {
+        "contexts": 8,
+        "observations": 4,
+        "raw_guidance_mse": 57.580373421594196,
+        "unit_gamma_displacement_mse": 11.394901079044395
+      }
+    }
+  }
+}

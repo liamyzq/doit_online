@@ -13,3 +13,5 @@ artifacts/
 !results/reliability/quality/*.png
 results/recovery/**/fixed.csv
 !results/uncertainty_smc/quality/*.png
+!results/complement_pairing/*/estimates.npz
+!results/complement_pairing/*/replay-estimates.npz

@@ -42,7 +42,13 @@ def main():
         torch.set_num_threads(int(os.environ.get("OMP_NUM_THREADS", 2)))
         torch.cuda.reset_peak_memory_stats()
         mode = config.get("mode", "image")
-        if mode == "geometry_image":
+        if mode == "complement_checks":
+            from .complement_toy import checks
+            metrics = checks(config, output)
+        elif mode == "complement_toy":
+            from .complement_toy import evaluate
+            metrics = evaluate(config, output)
+        elif mode == "geometry_image":
             from .geometry_image import evaluate
             from .image import ImageEngine
             engine = ImageEngine(config["image"])

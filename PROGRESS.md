@@ -2,6 +2,20 @@
 
 ## Current decision
 
+The supplied review reopens a bounded complement-cancellation study. See
+[the new protocol](experiments/complement_pairing/PLAN.md). Exp-070 will check
+four-point Gaussian sign groups and reproduce the old top-aligned M32 error
+decomposition; exp-071 will test exact/perturbed directions, paid pilots and
+stochastic future coupling at fixed total budgets. Real-critic and image
+expansion remains gated. Existing geometry settings stay closed.
+
+The review confirms that Hopper's selected proxy was not independently
+validated, and identifies a deployment mismatch: only index5 of the old
+5/9/12 diagnostics is actively guided for Hopper. At that index isotropic
+continuation MSE is0.69553 versus rank-one5.69486. Full local Jacobians improve
+reconstruction eightfold but worsen aggregate guidance MSE. Future direction
+selection must use actual correction intervals and displacement error.
+
 The posterior-geometry exploration on `codex/doit-posterior-geometry` is
 complete at its stated budgets. Exp-063--069 implement and verify Gaussian
 spectral stratification and low-rank denoiser-response proxies on analytic
