@@ -1,7 +1,7 @@
 # Reward-calibrated direction experiments
 
-Development is complete for exp-082/084. The single P-route gate ablation
-exp-085 is running. The32-observation confirmation sets remain untouched.
+Development and the bounded gate ablation are complete. Exp-086 is locked
+before using the32-observation confirmation sets.
 These findings concern the fixed temperatures, query budgets and frozen
 actors/critics in [the protocol](PLAN.md), not all possible direction estimators.
 
@@ -104,3 +104,23 @@ under `/home/mlw0719/doit_reward_directions_storage/runs/<experiment>/raw/`.
 The result ledger and job ledger retain exact revision, costs and terminal state.
 No simulator return has been measured. The preserved Python3.12 environment
 has no compatible Gym/D4RL/MuJoCo stack installed.
+
+## Gate ablation and confirmation decision
+
+Exp-085 removes only the agreement threshold. Gaussian M64 shift/narrow
+moments-four proxy improvements rise to31.22%/34.70% against antithetic and
+27.82%/30.17% against random pairs. Mixture shift/narrow gains are20.35%/7.61%
+against antithetic. The gate suppresses useful toy direction information.
+
+This does not resolve the real-task acquisition problem. All Hopper paid
+variants still have higher proxy MSE than random pairs. HalfCheetah M32
+moments-four worsens14.03% against antithetic and all16 observations worsen;
+M64 also worsens0.81%. HalfCheetah M64 moments-pair is the sole paid candidate
+with a favorable mean against random pairs:5.41% against antithetic and1.52%
+against random pairs (11/16 observations improve against the latter, interval
+[-0.00649,0.00242] in displacement MSE units). This small unresolved advantage
+is selected for one fresh confirmation, with no further gate search.
+
+Exp-086 also confirms Hopper M32 proxy random pairs/full random four-point
+and HalfCheetah M64 proxy random pairs. These free controls are reported as
+sampling-construction gains, separately from the reward-selection hypothesis.

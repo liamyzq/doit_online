@@ -1,0 +1,15 @@
+{
+  "experiment_id": "exp-085-halfcheetah-development-gate-ablation",
+  "commit": "98d4b25673fc7f946e498bb9102ac792f3f7c69a",
+  "config": "/home/mlw0719/doit_reward_directions/configs/reward_directions/exp-085-halfcheetah-development-gate-ablation.json",
+  "machine": "orion",
+  "gpu": 3,
+  "pid": 1148746,
+  "path": "/home/mlw0719/doit_reward_directions_storage/runs/exp-085-halfcheetah-development-gate-ablation",
+  "log_path": "/home/mlw0719/doit_reward_directions_storage/artifacts/exp-085-halfcheetah-development-gate-ablation.log",
+  "status": "completed",
+  "timestamp": "2026-10-23T21:29:32.515715+00:00",
+  "started_at": "2026-10-23T21:27:32.512326+00:00",
+  "returncode": 0,
+  "finished_at": "2026-10-23T21:29:32.515745+00:00"
+}

@@ -1,0 +1,72 @@
+{
+  "agreement_threshold": 0.0,
+  "ess_fraction": 0.25,
+  "pool_seed": 81031,
+  "reference_blocks": 8,
+  "reference_block_samples": 4096,
+  "samples": [
+    32,
+    64
+  ],
+  "controls": [
+    "antithetic",
+    "random_pair",
+    "random_four"
+  ],
+  "id": "exp-085-mixture-in_pool-gate-ablation",
+  "mode": "reward_direction_toy",
+  "dimension": 6,
+  "models": [
+    "mixture"
+  ],
+  "alignments": [
+    "in_pool"
+  ],
+  "rewards": [
+    "shift",
+    "narrow",
+    "intervals",
+    "constant",
+    "hermite4"
+  ],
+  "indices": [
+    2,
+    7,
+    12
+  ],
+  "states": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "repeats": 512,
+  "seed": 82011,
+  "reference_seed": 82007,
+  "routes": {
+    "P": [
+      {
+        "name": "first",
+        "selector": "first",
+        "layout": "four_lhs"
+      },
+      {
+        "name": "no_j",
+        "selector": "no_j",
+        "layout": "four_lhs"
+      },
+      {
+        "name": "moments_pair",
+        "selector": "moments",
+        "layout": "pair_lhs"
+      },
+      {
+        "name": "moments_four",
+        "selector": "moments",
+        "layout": "four_lhs"
+      }
+    ]
+  },
+  "purpose": "Remove only the split-direction agreement threshold on development data; retain ESS fallback and all targets, budgets and seeds. Reuse the original independent references.",
+  "reference_source": "/home/mlw0719/doit_reward_directions_storage/runs/exp-082-mixture-in_pool"
+}

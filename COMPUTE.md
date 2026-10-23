@@ -27,6 +27,10 @@ aggregate estimates and logs are local; approximately13GB of raw per-condition
 NPZ artifacts remain in the recorded Orion run directories. Exp-085 retains
 the4096MiB allowance plus2048MiB reserve and one worker per physical GPU.
 It reuses exp-082/084 references without repeating their evaluation costs.
+All four exp-085 jobs completed at `98d4b25` and controller1148466 exited.
+Their compact records, estimates and logs are local; raw NPZ remains remote.
+Both real jobs reserved76MiB peak. Exp-086 uses the same memory allowance
+and concurrency, with the committed fresh-observation confirmation configs.
 
 ## Posterior geometry exploration
 

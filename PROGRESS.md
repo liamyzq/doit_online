@@ -17,9 +17,11 @@ at `f73ed2e`, with48MiB peak reserved memory. All six development jobs completed
 four-point directions work on the Gaussian mechanism controls, but paid pilot
 selection usually falls back. Random paired P improves Hopper, and random
 four-point F improves its aggregate error with substantial observation
-heterogeneity. No reserved confirmation observation has been used. Exp-085
-removes only the split-agreement gate on P development data to resolve whether
-the gate suppresses usable direction information; it reuses existing references. Historical closures below
+heterogeneity. Exp-085 completes its bounded gate ablation: paid moments-four now improves
+Gaussian shift/narrow proxy MSE31.22%/34.70%, but real-task four-point gains do
+not transfer. HalfCheetah M64 moments-pair improves5.41% against antithetic
+and1.52% against random pairs, the latter still unresolved. Exp-086 locks this
+one paid candidate and the useful free controls before using reserved rows16--47. Historical closures below
 remain the conclusions for their own methods and budgets.
 
 The continuation-aware follow-up is complete at its stated budgets. Exp-075

@@ -1,0 +1,10 @@
+[
+  {
+    "id": "exp-086-hopper-confirmation",
+    "config": "configs/reward_directions/exp-086-hopper-confirmation.json"
+  },
+  {
+    "id": "exp-086-halfcheetah-confirmation",
+    "config": "configs/reward_directions/exp-086-halfcheetah-confirmation.json"
+  }
+]

@@ -130,3 +130,33 @@ No new full-continuation tuning or threshold grid is introduced. Select between
 these two development gate settings before touching the32-observation holdout.
 Any apparent paid-direction gain must also compete with the cheaper random
 paired control, even if the layout-matched random-four control is weaker.
+
+## Locked confirmation: exp-086
+
+Exp-085 completes successfully. Removing the agreement gate raises Gaussian
+in-pool M64 shift/narrow moments-four proxy gains to31.22%/34.70% against
+antithetic, versus27.82%/30.17% against random pairs. It does not make the
+Hopper paid methods competitive. HalfCheetah M64 moments-pair is the only
+paid real candidate with a favorable mean against the stronger random-pair
+control:5.41% versus antithetic and1.52% versus random pairs, with the latter
+observation interval still including zero. Its four-point counterpart worsens.
+
+Lock one paid candidate: HalfCheetah P moments-pair at M64, agreement threshold0,
+retaining ESS/zero-score fallback. Confirmation compares it with antithetic,
+random pairs and random four-point, and requires the original positive-mean,
+observation-interval and reference-block rules against both antithetic and
+random pairs. Failure closes this paid setting at this budget.
+
+Also confirm the useful free controls: Hopper P random pairs and F random
+four-point at M32, and HalfCheetah P random pairs at M64. Hopper M32 is chosen
+as the smaller development budget already supporting both routes. A random-pair
+control is tested against antithetic; a random-four candidate must beat both
+antithetic and random pairs. These are gains of the free sampling construction,
+not evidence that reward-based direction selection helps.
+
+Use all reserved rows16--47 (32 disjoint episodes per task), three active indices
+3/5/7,256 repeats, and eight independent4096-sample blocks per reference.
+Lock path/estimator/reference seeds86001/86011/86007 before running. No excluded
+low-ESS observations, additional parameter search or reuse of these observations
+for tuning follows. A confirmed proxy construction proceeds to the planned
+complete-action evaluation; full-only success is reported at its own estimand.
